@@ -1,4 +1,4 @@
-import { html } from "./preact-htm.js";
+import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
@@ -34,7 +34,7 @@ const visList = [
 visList.forEach((vis) => {
   const containerElement = document.getElementById(vis.id);
   if (containerElement) {
-    render(html`<${Vis} ...${vis} />`, containerElement);
+    renderComponent(html`<${Vis} ...${vis} />`, containerElement);
   } else {
     console.error(`Could not find container element for viz with id ${vis.id}`);
   }
