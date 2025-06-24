@@ -26,14 +26,14 @@ export async function Vis4(props) {
   // layout dimensions
   // width
   const groupLabelWidth = 2 / 10;
-  const barWidth = 7 / 10;
-  const valueLabelWidth = 1 / 10;
+  const barWidth = 6 / 10;
+  //   const valueLabelWidth = 2 / 10;
   const width = 633;
   const maxBarWidth = width * barWidth;
 
   // height
-  const barHeight = 50;
-  const barPadding = 10;
+  const barHeight = 195;
+  const barPadding = 28;
   const numRows = dataFiltered.length;
   const height = numRows * (barHeight + barPadding) - barPadding;
 
