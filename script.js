@@ -2,6 +2,7 @@ import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
+import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
 
 const Vis = async (props) => {
@@ -29,23 +30,23 @@ const visList = [
     },
   },
   {
+    id: "vis3",
+    draw: Vis3,
+    labels: {
+      title: "Title Placeholder for Visualization 2",
+      subtitle: "Subtitle Placeholder for Visualization 2",
+    },
+  },
+  {
     id: "vis4a",
     draw: Vis4,
     variation: "a",
-    labels: {
-      title: "Title Placeholder for Visualization 4",
-      subtitle: "Subtitle Placeholder for Visualization 4",
-    },
   },
   {
     id: "vis4b",
     dataSource: "",
     draw: Vis4,
     variation: "b",
-    labels: {
-      title: "Title Placeholder for Visualization 4",
-      subtitle: "Subtitle Placeholder for Visualization 4",
-    },
   },
 ];
 
