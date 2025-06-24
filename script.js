@@ -44,6 +44,8 @@ const visList = [
 visList.forEach((vis) => {
   const containerElement = document.getElementById(vis.id);
   if (containerElement) {
+    // clear existing content before rendering
+    containerElement.innerHTML = "";
     renderComponent(html`<${Vis} ...${vis} />`, containerElement);
   } else {
     console.error(`Could not find container element for viz with id ${vis.id}`);
