@@ -2,6 +2,7 @@ import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
+import { Vis4 } from "./js/vis4.js";
 
 const Vis = (props) => {
   console.log("Rendering Vis component with props:", props);
@@ -27,6 +28,15 @@ const visList = [
     labels: {
       title: "Title Placeholder for Visualization 2",
       subtitle: "Subtitle Placeholder for Visualization 2",
+    },
+  },
+  {
+    id: "vis4a",
+    dataSource: "",
+    draw: Vis4,
+    labels: {
+      title: "Title Placeholder for Visualization 4",
+      subtitle: "Subtitle Placeholder for Visualization 4",
     },
   },
 ];
