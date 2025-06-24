@@ -4,17 +4,16 @@ import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
 import { Vis4 } from "./js/vis4.js";
 
-const Vis = (props) => {
+const Vis = async (props) => {
   console.log("Rendering Vis component with props:", props);
-
-  return html`<div class="vis-container">${props.draw()}</div> `;
+  const component = await props.draw(props);
+  return html`<div class="vis-container">${component}</div> `;
 };
 
 // loop over all visualizations and render them in general Vis component
 const visList = [
   {
     id: "vis1",
-    dataSource: "",
     draw: Vis1,
     labels: {
       title: "Title Placeholder for Visualization 1",
@@ -23,7 +22,6 @@ const visList = [
   },
   {
     id: "vis2",
-    dataSource: "",
     draw: Vis2,
     labels: {
       title: "Title Placeholder for Visualization 2",
@@ -32,8 +30,18 @@ const visList = [
   },
   {
     id: "vis4a",
+    draw: Vis4,
+    variation: "a",
+    labels: {
+      title: "Title Placeholder for Visualization 4",
+      subtitle: "Subtitle Placeholder for Visualization 4",
+    },
+  },
+  {
+    id: "vis4b",
     dataSource: "",
     draw: Vis4,
+    variation: "b",
     labels: {
       title: "Title Placeholder for Visualization 4",
       subtitle: "Subtitle Placeholder for Visualization 4",
@@ -46,7 +54,12 @@ visList.forEach((vis) => {
   if (containerElement) {
     // clear existing content before rendering
     containerElement.innerHTML = "";
-    renderComponent(html`<${Vis} ...${vis} />`, containerElement);
+
+    // wait for async Vis to resolve before rendering
+    (async () => {
+      const rendered = await Vis(vis);
+      renderComponent(rendered, containerElement);
+    })();
   } else {
     console.error(`Could not find container element for viz with id ${vis.id}`);
   }
