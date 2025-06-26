@@ -26,8 +26,7 @@ export async function Vis3(props) {
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
-  console.log("Rendering Vis3 with data:", data);
-
+  // data and scales
   const minROAS = d3.min(data, (d) => d["ROAS"]);
   const maxROAS = d3.max(data, (d) => d["ROAS"]);
   const minSpend = d3.min(data, (d) => d["Spend"]);
