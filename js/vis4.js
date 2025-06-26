@@ -18,12 +18,25 @@ export function Vis4(props) {
     return html`<div>Loading...</div>`;
   }
 
+  console.log("Rendering Vis4 with variation:", props.variation, data);
+
   // variation & data
   const variation = props.variation || "a";
-  const categoriesA = ["Gaming", "Non Gaming"];
-  const categoriesB = ["Gaming", "E-Commerce", "On-Demand", "Entertainment"];
+  const categoriesA = ["Google & Meta", "Gaming", "Consumer"];
+  const categoriesB = [
+    "Google & Meta",
+    "E-Commerce",
+    "On-Demand",
+    "Entertainment",
+  ];
   const categories = variation === "a" ? categoriesA : categoriesB;
   const dataFiltered = data.filter((d) => categories.includes(d["Category"]));
+  // sort by order in categories
+  dataFiltered.sort((a, b) => {
+    return (
+      categories.indexOf(a["Category"]) - categories.indexOf(b["Category"])
+    );
+  });
 
   // layout dimensions
   // width
@@ -45,7 +58,14 @@ export function Vis4(props) {
     .domain([0, maxValue])
     .range([0, maxBarWidth]);
 
+  const barColors = {
+    Gaming: "var(--white)",
+    "Google & Meta": "#5CDEFF",
+  };
+
   const rows = dataFiltered.map((d, index) => {
+    const color = null;
+
     return html`<g
       transform="translate(0, ${index * (barHeight + barPadding)})"
     >
@@ -63,8 +83,8 @@ export function Vis4(props) {
         y="0"
         width="${barScale(d["Growth (%)"])}"
         height="${barHeight}"
-        fill="${d.Category === "Gaming"
-          ? "var(--white)"
+        fill="${barColors[d.Category]
+          ? barColors[d.Category]
           : "var(--blue-medium)"}"
         rx="10"
         ry="10"
