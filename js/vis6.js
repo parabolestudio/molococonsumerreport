@@ -45,8 +45,23 @@ export function Vis6() {
     return html`<div>Loading...</div>`;
   }
 
-  //   const regions = data.map((d) => d.region);
-  //   const uniqueRegions = Array.from(new Set(regions)).sort();
+  const regions = data.map((d) => d.region);
+  const uniqueRegions = Array.from(new Set(regions)).sort();
+
+  let regionDropdown = document.querySelector("#viz6_dropdown_regions");
+  // remove all existing options
+  if (regionDropdown) regionDropdown.innerHTML = "";
+  // add options for each unique region
+  uniqueRegions.forEach((region) => {
+    let option = document.createElement("option");
+    option.text = region;
+    regionDropdown.add(option);
+  });
+  regionDropdown.value = selectedRegion;
+
+  regionDropdown.addEventListener("change", (e) => {
+    setSelectedRegion(e.target.value);
+  });
 
   const filterData = data
     .filter((d) => d.region === selectedRegion)
@@ -112,7 +127,7 @@ export function Vis6() {
       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
       <text
         x="0"
-        y="${innerHeight + 15}"
+        y="${-5}"
         text-anchor="middle"
         class="charts-text-body"
         style="font-size: 12px;"
@@ -123,22 +138,11 @@ export function Vis6() {
     </g>`;
   });
 
-  // <select
-  //   id="viz6_dropdown_regions"
-  //   value=${selectedRegion}
-  //   onChange=${(e) => setSelectedRegion(e.target.value)}
-  //   style="margin-bottom: 16px;"
-  // >
-  //   ${uniqueRegions.map(
-  //     (region) =>
-  //       html`<option value=${region} key=${region}>${region}</option>`
-  //   )}
-  // </select>
   return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; border:1px solid black;"
+      style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <g class="tick-lines">${xTicks}</g>
