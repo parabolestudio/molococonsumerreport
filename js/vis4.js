@@ -64,8 +64,6 @@ export function Vis4(props) {
   };
 
   const rows = dataFiltered.map((d, index) => {
-    const color = null;
-
     return html`<g
       transform="translate(0, ${index * (barHeight + barPadding)})"
     >

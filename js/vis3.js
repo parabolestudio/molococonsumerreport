@@ -25,7 +25,7 @@ export function Vis3() {
   // layout dimensions
   const width = 600;
   const height = 600;
-  const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+  const margin = { top: 5, right: 5, bottom: 20, left: 20 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -34,7 +34,7 @@ export function Vis3() {
   const maxROAS = d3.max(data, (d) => d["ROAS"]);
   const minSpend = d3.min(data, (d) => d["Spend"]);
   const maxSpend = d3.max(data, (d) => d["Spend"]);
-  const testPadding = 50; // padding for the scales for testing purposes
+  const testPadding = 20; // padding for the scales for testing purposes
   const spendScale = d3
     .scaleLinear()
     .domain([minSpend, maxSpend])
@@ -49,7 +49,7 @@ export function Vis3() {
   const legendLineDistance2 = 15;
 
   const categoryColors = {
-    "Majority of spend on Google & Meta": "##03004C",
+    "Majority of spend on Google & Meta": "#03004C",
     "Diversified spend": "var(--blue-medium)",
   };
 
@@ -69,85 +69,45 @@ export function Vis3() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; border:1px solid black;"
+      style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <line
-          x1="0"
-          y1="${innerHeight / 2}"
+          x1="${0}"
+          y1="${innerHeight}"
           x2="${innerWidth}"
-          y2="${innerHeight / 2}"
-          stroke="#000"
-          stroke-width="1"
+          y2="${0}"
+          stroke="#efefef"
         />
         <line
-          x1="${innerWidth / 2}"
-          y1="0"
-          x2="${innerWidth / 2}"
+          x1="${0}"
+          y1="${innerHeight}"
+          x2="${innerWidth}"
           y2="${innerHeight}"
-          stroke="black"
-          stroke-width="1"
+          stroke="#000"
         />
+        <line x1="${0}" y1="0" x2="${0}" y2="${innerHeight}" stroke="#000" />
         <g>${dots}</g>
         <g>
           <text
-            x="${innerWidth / 2}"
+            x="${innerWidth - legendLineDistance1}"
             y="${innerHeight + margin.bottom / 2}"
-            text-anchor="middle"
+            text-anchor="end"
             dominant-baseline="middle"
             class="charts-text-body-bold"
           >
             ROAS
           </text>
-
           <text
-            x="${innerWidth / 2 - legendLineDistance2}"
-            y="${innerHeight - legendLineDistance1}"
+            x="${-margin.left / 2 - legendLineDistance1}"
+            y="${0}"
             text-anchor="end"
             dominant-baseline="middle"
-            class="charts-text-body"
+            transform="rotate(-90, ${-margin.left / 2}, ${0})"
+            class="charts-text-body-bold"
           >
-            ← Worse
+            Spend
           </text>
-          <text
-            x="${innerWidth / 2 + legendLineDistance2}"
-            y="${innerHeight - legendLineDistance1}"
-            text-anchor="start"
-            dominant-baseline="middle"
-            class="charts-text-body"
-          >
-            Better →
-          </text>
-
-          <g transform="rotate(-90, ${-margin.left / 2}, ${innerHeight / 2})">
-            <text
-              x="${-margin.left / 2}"
-              y="${innerHeight / 2}"
-              text-anchor="middle"
-              dominant-baseline="middle"
-              class="charts-text-body-bold"
-            >
-              Spend
-            </text>
-            <text
-              x="${-margin.left / 2 + legendLineDistance2}"
-              y="${innerHeight / 2 + legendLineDistance1 * 2}"
-              text-anchor="start"
-              dominant-baseline="middle"
-              class="charts-text-body"
-            >
-              Worse →
-            </text>
-            <text
-              x="${-margin.left / 2 - legendLineDistance2}"
-              y="${innerHeight / 2 + legendLineDistance1 * 2}"
-              text-anchor="end"
-              dominant-baseline="middle"
-              class="charts-text-body"
-            >
-              ← Better
-            </text>
-          </g>
         </g>
       </g>
     </svg>
