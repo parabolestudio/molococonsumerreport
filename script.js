@@ -1,5 +1,6 @@
 import { html, renderComponent } from "./js/utils/preact-htm.js";
 
+import { Vis2 } from "./js/vis2.js";
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
 import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
@@ -13,6 +14,10 @@ const Vis = async (props) => {
 
 // loop over all visualizations and render them in general Vis component
 const visList = [
+  {
+    id: "vis2_test",
+    component: Vis2,
+  },
   {
     id: "vis3",
     component: Vis3,
