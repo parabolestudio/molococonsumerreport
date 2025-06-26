@@ -68,12 +68,16 @@ export function Vis6() {
     .sort((a, b) => a.value2024 - b.value2024);
 
   // layout dimensions
-  const width = 600;
+  const vis6Container = document.querySelector("#vis6");
+  const width =
+    vis6Container && vis6Container.offsetWidth
+      ? vis6Container.offsetWidth
+      : 600;
   const heightPerCountry = 40;
   const countryPadding = 30;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
-  const margin = { top: 20, right: 120, bottom: 20, left: 140 };
+  const margin = { top: 20, right: 120, bottom: 20, left: 120 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
