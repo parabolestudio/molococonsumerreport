@@ -1,23 +1,25 @@
-import { html } from "./utils/preact-htm.js";
+import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-function parseData() {
-  return d3
-    .csv(
+export function Vis4(props) {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth.csv"
-    )
-    .then((data) => {
+    ).then((data) => {
       data.forEach((d) => {
         d["Growth (%)"] = +d["Growth (%)"];
         d["Growth Text"] = "+" + Math.round(d["Growth (%)"] * 100) + "%";
       });
-      return data;
+      setData(data);
     });
-}
+  }, []);
 
-export async function Vis4(props) {
+  if (data.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
+
   // variation & data
   const variation = props.variation || "a";
-  const data = await parseData();
   const categoriesA = ["Gaming", "Non Gaming"];
   const categoriesB = ["Gaming", "E-Commerce", "On-Demand", "Entertainment"];
   const categories = variation === "a" ? categoriesA : categoriesB;

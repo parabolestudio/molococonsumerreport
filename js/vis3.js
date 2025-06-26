@@ -1,23 +1,26 @@
-import { html } from "./utils/preact-htm.js";
+import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-function parseData() {
-  return d3
-    .csv(
+export function Vis3() {
+  const [data, setData] = useState([]);
+
+  // Fetch data on mount
+  useEffect(() => {
+    d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz3_roas_spend.csv"
-    )
-    .then((data) => {
+    ).then((data) => {
       // parse ROAS and Spend as numbers, e.g. '382,378,781' to 382378781
       data.forEach((d) => {
         d["ROAS"] = +d["ROAS"].replace(/,/g, "");
         d["Spend"] = +d["Spend"].replace(/,/g, "");
       });
 
-      return data;
+      setData(data);
     });
-}
+  }, []);
 
-export async function Vis3(props) {
-  const data = await parseData();
+  if (data.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
 
   // layout dimensions
   const width = 600;

@@ -1,11 +1,14 @@
-import { html } from "./utils/preact-htm.js";
+import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-function parseData() {
-  return d3
-    .csv(
+export function Vis6() {
+  const [data, setData] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState("Europe");
+
+  // Fetch data on mount
+  useEffect(() => {
+    d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile.csv"
-    )
-    .then((data) => {
+    ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
         d["Year"] = +d["Year"];
@@ -34,17 +37,20 @@ function parseData() {
         };
       });
 
-      return groupedArray;
+      setData(groupedArray);
     });
-}
+  }, []);
 
-export async function Vis6() {
-  const data = await parseData();
+  if (data.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
+
+  //   const regions = data.map((d) => d.region);
+  //   const uniqueRegions = Array.from(new Set(regions)).sort();
+
   const filterData = data
-    .filter((d) => d.region === "Europe")
+    .filter((d) => d.region === selectedRegion)
     .sort((a, b) => a.value2024 - b.value2024);
-
-  console.log("Data for Vis6:", data, filterData);
 
   // layout dimensions
   const width = 600;
@@ -117,6 +123,17 @@ export async function Vis6() {
     </g>`;
   });
 
+  // <select
+  //   id="viz6_dropdown_regions"
+  //   value=${selectedRegion}
+  //   onChange=${(e) => setSelectedRegion(e.target.value)}
+  //   style="margin-bottom: 16px;"
+  // >
+  //   ${uniqueRegions.map(
+  //     (region) =>
+  //       html`<option value=${region} key=${region}>${region}</option>`
+  //   )}
+  // </select>
   return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"

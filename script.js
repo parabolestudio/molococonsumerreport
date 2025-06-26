@@ -6,29 +6,30 @@ import { Vis6 } from "./js/vis6.js";
 
 const Vis = async (props) => {
   console.log("Rendering Vis component with props:", props);
-  const component = await props.draw(props);
-  return html`<div class="vis-container">${component}</div> `;
+  return html`<div class="vis-container">
+    <${props.component} ...${props} />
+  </div>`;
 };
 
 // loop over all visualizations and render them in general Vis component
 const visList = [
   {
     id: "vis3",
-    draw: Vis3,
+    component: Vis3,
   },
   {
     id: "vis4a",
-    draw: Vis4,
+    component: Vis4,
     variation: "a",
   },
   {
     id: "vis4b",
-    draw: Vis4,
+    component: Vis4,
     variation: "b",
   },
   {
     id: "vis6",
-    draw: Vis6,
+    component: Vis6,
   },
 ];
 
