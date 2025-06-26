@@ -22,7 +22,7 @@ export function Vis6() {
         const value2023 = values.find((v) => v.Year === 2023)?.Value || 0;
         const value2024 = values.find((v) => v.Year === 2024)?.Value || 0;
         const percentageChange = Math.round(
-          ((value2023 - value2024) / value2023) * 100
+          ((value2024 - value2023) / value2023) * 100
         );
 
         return {
@@ -65,7 +65,7 @@ export function Vis6() {
 
   const filterData = data
     .filter((d) => d.region === selectedRegion)
-    .sort((a, b) => a.value2024 - b.value2024);
+    .sort((a, b) => b.value2024 - a.value2024);
 
   // layout dimensions
   const vis6Container = document.querySelector("#vis6");
@@ -73,8 +73,8 @@ export function Vis6() {
     vis6Container && vis6Container.offsetWidth
       ? vis6Container.offsetWidth
       : 600;
-  const heightPerCountry = 40;
-  const countryPadding = 30;
+  const heightPerCountry = 20;
+  const countryPadding = 20;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
   const margin = { top: 20, right: 120, bottom: 20, left: 120 };
@@ -111,8 +111,18 @@ export function Vis6() {
         height="${circleRadius * 2}"
         fill="#EFEFEF"
       />
-      <circle cx="${x2023}" r="${circleRadius}" fill="#03004C" />
-      <circle cx="${x2024}" r="${circleRadius}" fill="#C368F9" />
+      <circle
+        cx="${x2023}"
+        r="${circleRadius}"
+        fill="#03004C"
+        data-label="value_2023"
+      />
+      <circle
+        cx="${x2024}"
+        r="${circleRadius}"
+        fill="#C368F9"
+        data-label="value_2024"
+      />
       <text
         x="${barEnd + 20}"
         y="${0}"
@@ -135,7 +145,6 @@ export function Vis6() {
         text-anchor="middle"
         class="charts-text-body"
         style="font-size: 12px;"
-        fill="red"
       >
         ${tick}
       </text>
