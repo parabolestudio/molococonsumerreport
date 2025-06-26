@@ -2,7 +2,7 @@ import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
-import { Vis6 } from "./js/vis6.js";
+import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
 
 const Vis = async (props) => {
   console.log("Rendering Vis component with props:", props);
@@ -30,6 +30,10 @@ const visList = [
   {
     id: "vis6",
     component: Vis6,
+  },
+  {
+    id: "vis6-legend-growth",
+    component: Vis6LegendGrowth,
   },
 ];
 

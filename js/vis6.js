@@ -45,23 +45,23 @@ export function Vis6() {
     return html`<div>Loading...</div>`;
   }
 
+  // set values for regions dropdown
   const regions = data.map((d) => d.region);
   const uniqueRegions = Array.from(new Set(regions)).sort();
-
   let regionDropdown = document.querySelector("#viz6_dropdown_regions");
-  // remove all existing options
   if (regionDropdown) regionDropdown.innerHTML = "";
-  // add options for each unique region
   uniqueRegions.forEach((region) => {
     let option = document.createElement("option");
     option.text = region;
     regionDropdown.add(option);
   });
   regionDropdown.value = selectedRegion;
-
   regionDropdown.addEventListener("change", (e) => {
     setSelectedRegion(e.target.value);
   });
+
+  // create custom legend element
+  const legendElement = document.querySelector("#vis6-legend-growth");
 
   const filterData = data
     .filter((d) => d.region === selectedRegion)
@@ -90,7 +90,7 @@ export function Vis6() {
     .domain([minValue, maxValue])
     .range([0, innerWidth]);
 
-  const circleRadius = 14;
+  const circleRadius = 10;
 
   const elements = filterData.map((d, index) => {
     const x2023 = valueScale(d.value2023);
@@ -154,4 +154,66 @@ export function Vis6() {
       </g>
     </svg>
   </div>`;
+}
+
+export function Vis6LegendGrowth() {
+  const width = 140;
+  const height = 30;
+
+  const endX = 65;
+  const circleRadius = 17 / 2;
+  const lineLeftX = endX / 2;
+  const lineHorizontalLength = 70;
+
+  return html`
+    <svg width="${width}" height="${height}">
+      <g transform="translate(${circleRadius}, ${circleRadius + 3})">
+        <rect
+          x="${0}"
+          y="${-circleRadius}"
+          width="${endX}"
+          height="${circleRadius * 2}"
+          fill="#EFEFEF"
+        />
+        <circle cx="${0}" cy="${0}" r="${circleRadius}" fill="#03004C" />
+        <circle cx="${endX}" cy="${0}" r="${circleRadius}" fill="#C368F9" />
+        <text
+          x="${endX + circleRadius + 6}"
+          y="2"
+          dominant-baseline="middle"
+          fill="#03004C"
+          font-size="24"
+          font-weight="bold"
+          font-family="'Spacegrotesk', 'Space Grotesk', sans-serif"
+        >
+          +X%
+        </text>
+
+        <line
+          x1="${lineLeftX}"
+          y1="${circleRadius * 2}"
+          x2="${lineLeftX + lineHorizontalLength}"
+          y2="${circleRadius * 2}"
+          stroke="#000"
+          stroke-linecap="round"
+        />
+        <line
+          x1="${lineLeftX}"
+          y1="${0}"
+          x2="${lineLeftX}"
+          y2="${circleRadius * 2}"
+          stroke="#000"
+          stroke-linecap="round"
+        />
+        <line
+          x1="${lineLeftX + lineHorizontalLength}"
+          y1="${circleRadius + 2}"
+          x2="${lineLeftX + lineHorizontalLength}"
+          y2="${circleRadius * 2}"
+          stroke="#000"
+          stroke-linecap="round"
+        />
+      </g>
+    </svg>
+  `;
 }
