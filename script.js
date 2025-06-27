@@ -1,9 +1,18 @@
 import { html, renderComponent } from "./js/utils/preact-htm.js";
 
+import { Vis1 } from "./js/vis1_todo.js";
 import { Vis2 } from "./js/vis2.js";
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
+import { Vis5 } from "./js/vis5_todo.js";
 import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
+import { Vis7 } from "./js/vis7_todo.js";
+import { Vis8 } from "./js/vis8_todo.js";
+import { Vis9 } from "./js/vis9_todo.js";
+import { Vis10 } from "./js/vis10_todo.js";
+import { Vis11 } from "./js/vis11_todo.js";
+import { Vis12 } from "./js/vis12.js";
+import { Vis13 } from "./js/vis13_todo.js";
 
 const Vis = async (props) => {
   console.log("Rendering Vis component with props:", props);
@@ -14,6 +23,10 @@ const Vis = async (props) => {
 
 // loop over all visualizations and render them in general Vis component
 const visList = [
+  {
+    id: "vis1_test",
+    component: Vis1,
+  },
   {
     id: "vis2_test",
     component: Vis2,
@@ -33,12 +46,44 @@ const visList = [
     variation: "b",
   },
   {
+    id: "vis5_test",
+    component: Vis5,
+  },
+  {
     id: "vis6",
     component: Vis6,
   },
   {
     id: "vis6-legend-growth",
     component: Vis6LegendGrowth,
+  },
+  {
+    id: "vis7_test",
+    component: Vis7,
+  },
+  {
+    id: "vis8_test",
+    component: Vis8,
+  },
+  {
+    id: "vis9_test",
+    component: Vis9,
+  },
+  {
+    id: "vis10_test",
+    component: Vis10,
+  },
+  {
+    id: "vis11_test",
+    component: Vis11,
+  },
+  {
+    id: "vis12_test",
+    component: Vis12,
+  },
+  {
+    id: "vis13_test",
+    component: Vis13,
   },
 ];
 
