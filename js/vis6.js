@@ -60,9 +60,7 @@ export function Vis6() {
     setSelectedRegion(e.target.value);
   });
 
-  // create custom legend element
-  const legendElement = document.querySelector("#vis6-legend-growth");
-
+  // filter and sort data based on selected region
   const filterData = data
     .filter((d) => d.region === selectedRegion)
     .sort((a, b) => b.value2024 - a.value2024);

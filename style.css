@@ -20,3 +20,20 @@
 .charts-text-white {
   fill: #ffffff;
 }
+
+/* 
+color fills for ridge line plot
+first, forth, and seventh row are the same color
+second, fifth, and eighth row are the same color
+third, sixth, and ninth row are the same color
+this is to create a pattern of three colors that repeats every three rows
+*/
+.vis12-row:nth-child(3n + 1) path {
+  fill: #16d2ff;
+}
+.vis12-row:nth-child(3n + 2) path {
+  fill: #c368f9;
+}
+.vis12-row:nth-child(3n + 3) path {
+  fill: #60e2b7;
+}
