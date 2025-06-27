@@ -1,0 +1,697 @@
+Category,Value,hour_of_day
+Art & Design,,0
+Art & Design,,1
+Art & Design,,2
+Art & Design,,3
+Art & Design,,4
+Art & Design,,5
+Art & Design,,6
+Art & Design,,7
+Art & Design,,8
+Art & Design,,9
+Art & Design,,10
+Art & Design,,11
+Art & Design,,12
+Art & Design,,13
+Art & Design,,14
+Art & Design,,15
+Art & Design,,16
+Art & Design,,17
+Art & Design,,18
+Art & Design,,19
+Art & Design,,20
+Art & Design,,21
+Art & Design,,22
+Art & Design,,23
+Automotive,-0.1433,0
+Automotive,-0.8554,1
+Automotive,-1.3042,2
+Automotive,-1.6008,3
+Automotive,-1.7494,4
+Automotive,-1.6513,5
+Automotive,-1.2616,6
+Automotive,-0.7696,7
+Automotive,-0.4211,8
+Automotive,-0.1087,9
+Automotive,0.037,10
+Automotive,0.2455,11
+Automotive,0.379,12
+Automotive,0.221,13
+Automotive,0.2759,14
+Automotive,0.5507,15
+Automotive,0.8833,16
+Automotive,0.6943,17
+Automotive,0.8523,18
+Automotive,1.107,19
+Automotive,1.2427,20
+Automotive,1.5673,21
+Automotive,1.3162,22
+Automotive,0.493,23
+Books & Reference,0.4485,0
+Books & Reference,-0.3475,1
+Books & Reference,-0.987,2
+Books & Reference,-1.6626,3
+Books & Reference,-1.9762,4
+Books & Reference,-1.7511,5
+Books & Reference,-1.2175,6
+Books & Reference,-0.5982,7
+Books & Reference,-0.1591,8
+Books & Reference,-0.2465,9
+Books & Reference,-0.1548,10
+Books & Reference,0.0119,11
+Books & Reference,0.0591,12
+Books & Reference,0.0082,13
+Books & Reference,0.128,14
+Books & Reference,0.3008,15
+Books & Reference,0.4067,16
+Books & Reference,0.4835,17
+Books & Reference,0.6728,18
+Books & Reference,0.8126,19
+Books & Reference,1.3432,20
+Books & Reference,1.4569,21
+Books & Reference,1.6612,22
+Books & Reference,1.3072,23
+Business,-0.9207,0
+Business,-1.3524,1
+Business,-1.4684,2
+Business,-1.5435,3
+Business,-1.5447,4
+Business,-1.2222,5
+Business,-0.3793,6
+Business,0.7105,7
+Business,1.6429,8
+Business,1.5447,9
+Business,0.8083,10
+Business,0.9488,11
+Business,0.7452,12
+Business,0.7831,13
+Business,0.7221,14
+Business,0.6523,15
+Business,0.7979,16
+Business,0.5448,17
+Business,0.4224,18
+Business,0.1828,19
+Business,-0.1712,20
+Business,-0.3806,21
+Business,-0.6516,22
+Business,-0.8708,23
+Education,-0.5411,0
+Education,-1.0161,1
+Education,-1.1759,2
+Education,-1.2742,3
+Education,-1.2582,4
+Education,-1.0812,5
+Education,-0.5714,6
+Education,-0.1585,7
+Education,-0.1268,8
+Education,-0.095,9
+Education,-0.1515,10
+Education,-0.1401,11
+Education,-0.2336,12
+Education,-0.2832,13
+Education,-0.2321,14
+Education,-0.0894,15
+Education,0.1097,16
+Education,0.1544,17
+Education,0.2738,18
+Education,0.5122,19
+Education,1.1382,20
+Education,2.049,21
+Education,2.6663,22
+Education,1.5246,23
+Entertainment,-0.7012,0
+Entertainment,-1.2348,1
+Entertainment,-1.6158,2
+Entertainment,-1.8927,3
+Entertainment,-1.9473,4
+Entertainment,-1.6157,5
+Entertainment,-0.7819,6
+Entertainment,0.0403,7
+Entertainment,0.1761,8
+Entertainment,0.2379,9
+Entertainment,0.3903,10
+Entertainment,0.502,11
+Entertainment,0.6582,12
+Entertainment,0.6978,13
+Entertainment,0.8511,14
+Entertainment,1.0132,15
+Entertainment,0.9941,16
+Entertainment,0.9639,17
+Entertainment,0.9218,18
+Entertainment,0.8216,19
+Entertainment,0.7388,20
+Entertainment,0.6607,21
+Entertainment,0.3614,22
+Entertainment,-0.24,23
+Family & Relationships,-1.5625,0
+Family & Relationships,-1.8245,1
+Family & Relationships,-1.6494,2
+Family & Relationships,-1.4164,3
+Family & Relationships,-1.535,4
+Family & Relationships,-1.058,5
+Family & Relationships,-0.0102,6
+Family & Relationships,0.7384,7
+Family & Relationships,0.6873,8
+Family & Relationships,0.4116,9
+Family & Relationships,0.5991,10
+Family & Relationships,0.4916,11
+Family & Relationships,0.5895,12
+Family & Relationships,0.7356,13
+Family & Relationships,0.464,14
+Family & Relationships,0.504,15
+Family & Relationships,0.5509,16
+Family & Relationships,0.3909,17
+Family & Relationships,0.6942,18
+Family & Relationships,1.1147,19
+Family & Relationships,1.2374,20
+Family & Relationships,0.9727,21
+Family & Relationships,-0.0199,22
+Family & Relationships,-1.1062,23
+Finance,-1.1972,0
+Finance,-1.4716,1
+Finance,-1.5704,2
+Finance,-1.5266,3
+Finance,-1.3008,4
+Finance,-0.7655,5
+Finance,0.3673,6
+Finance,1.1362,7
+Finance,1.3248,8
+Finance,1.7377,9
+Finance,1.4059,10
+Finance,0.8604,11
+Finance,0.6183,12
+Finance,0.5655,13
+Finance,0.485,14
+Finance,0.6466,15
+Finance,0.5264,16
+Finance,0.2999,17
+Finance,0.2011,18
+Finance,-0.0642,19
+Finance,-0.24,20
+Finance,-0.3731,21
+Finance,-0.6627,22
+Finance,-1.0029,23
+Food & Drink,0.2071,0
+Food & Drink,-0.5888,1
+Food & Drink,-1.0503,2
+Food & Drink,-1.4868,3
+Food & Drink,-1.8634,4
+Food & Drink,-1.8187,5
+Food & Drink,-1.4426,6
+Food & Drink,-0.7189,7
+Food & Drink,-0.013,8
+Food & Drink,-0.1731,9
+Food & Drink,-0.3027,10
+Food & Drink,-0.1822,11
+Food & Drink,0.0643,12
+Food & Drink,0.0318,13
+Food & Drink,0.2457,14
+Food & Drink,0.5451,15
+Food & Drink,1.0411,16
+Food & Drink,1.1672,17
+Food & Drink,1.0675,18
+Food & Drink,1.1565,19
+Food & Drink,1.1763,20
+Food & Drink,1.2927,21
+Food & Drink,1.0091,22
+Food & Drink,0.6361,23
+Generative AI,-0.1397,0
+Generative AI,-0.8093,1
+Generative AI,-1.312,2
+Generative AI,-1.6237,3
+Generative AI,-1.7623,4
+Generative AI,-1.6611,5
+Generative AI,-1.0839,6
+Generative AI,-0.6836,7
+Generative AI,-0.4694,8
+Generative AI,-0.1019,9
+Generative AI,0.0667,10
+Generative AI,0.0526,11
+Generative AI,0.0471,12
+Generative AI,0.1816,13
+Generative AI,0.2424,14
+Generative AI,0.5469,15
+Generative AI,0.832,16
+Generative AI,0.8505,17
+Generative AI,0.8218,18
+Generative AI,0.9273,19
+Generative AI,1.2092,20
+Generative AI,1.5975,21
+Generative AI,1.5133,22
+Generative AI,0.7582,23
+Graphic & Design,-0.1078,0
+Graphic & Design,-0.7321,1
+Graphic & Design,-1.1512,2
+Graphic & Design,-1.4296,3
+Graphic & Design,-1.59,4
+Graphic & Design,-1.5883,5
+Graphic & Design,-1.391,6
+Graphic & Design,-0.9649,7
+Graphic & Design,-0.6853,8
+Graphic & Design,-0.4068,9
+Graphic & Design,-0.1294,10
+Graphic & Design,0.0345,11
+Graphic & Design,0.2327,12
+Graphic & Design,0.3315,13
+Graphic & Design,0.436,14
+Graphic & Design,0.6691,15
+Graphic & Design,0.9458,16
+Graphic & Design,1.0063,17
+Graphic & Design,1.1604,18
+Graphic & Design,1.2468,19
+Graphic & Design,1.3878,20
+Graphic & Design,1.368,21
+Graphic & Design,0.9828,22
+Graphic & Design,0.3746,23
+Health & Fitness,-0.8554,0
+Health & Fitness,-1.3865,1
+Health & Fitness,-1.6349,2
+Health & Fitness,-1.7742,3
+Health & Fitness,-1.7992,4
+Health & Fitness,-1.5671,5
+Health & Fitness,-0.7689,6
+Health & Fitness,0.2642,7
+Health & Fitness,0.312,8
+Health & Fitness,0.3144,9
+Health & Fitness,0.2144,10
+Health & Fitness,0.4049,11
+Health & Fitness,0.7505,12
+Health & Fitness,0.4091,13
+Health & Fitness,0.3404,14
+Health & Fitness,0.2676,15
+Health & Fitness,0.3619,16
+Health & Fitness,0.7317,17
+Health & Fitness,1.0537,18
+Health & Fitness,1.1809,19
+Health & Fitness,1.162,20
+Health & Fitness,1.1931,21
+Health & Fitness,0.9426,22
+Health & Fitness,-0.1172,23
+Lifestyle,-1.2214,0
+Lifestyle,-1.492,1
+Lifestyle,-1.7453,2
+Lifestyle,-1.6571,3
+Lifestyle,-1.1939,4
+Lifestyle,-0.9699,5
+Lifestyle,-0.8097,6
+Lifestyle,-0.5013,7
+Lifestyle,-0.3145,8
+Lifestyle,0.1808,9
+Lifestyle,0.4329,10
+Lifestyle,0.4638,11
+Lifestyle,0.8668,12
+Lifestyle,0.7613,13
+Lifestyle,0.8612,14
+Lifestyle,1.1965,15
+Lifestyle,1.1004,16
+Lifestyle,1.049,17
+Lifestyle,1.1805,18
+Lifestyle,0.8226,19
+Lifestyle,0.9102,20
+Lifestyle,0.6986,21
+Lifestyle,0.0701,22
+Lifestyle,-0.6893,23
+Medical,,0
+Medical,,1
+Medical,,2
+Medical,,3
+Medical,,4
+Medical,,5
+Medical,,6
+Medical,,7
+Medical,,8
+Medical,,9
+Medical,,10
+Medical,,11
+Medical,,12
+Medical,,13
+Medical,,14
+Medical,,15
+Medical,,16
+Medical,,17
+Medical,,18
+Medical,,19
+Medical,,20
+Medical,,21
+Medical,,22
+Medical,,23
+Music,,0
+Music,,1
+Music,,2
+Music,,3
+Music,,4
+Music,,5
+Music,,6
+Music,,7
+Music,,8
+Music,,9
+Music,,10
+Music,,11
+Music,,12
+Music,,13
+Music,,14
+Music,,15
+Music,,16
+Music,,17
+Music,,18
+Music,,19
+Music,,20
+Music,,21
+Music,,22
+Music,,23
+News & Magazines,-1.4851,0
+News & Magazines,-1.7324,1
+News & Magazines,-1.82,2
+News & Magazines,-1.7509,3
+News & Magazines,-1.4455,4
+News & Magazines,-0.6617,5
+News & Magazines,0.38,6
+News & Magazines,1.4543,7
+News & Magazines,1.4386,8
+News & Magazines,0.9047,9
+News & Magazines,0.5489,10
+News & Magazines,0.3924,11
+News & Magazines,0.6047,12
+News & Magazines,0.4565,13
+News & Magazines,0.3784,14
+News & Magazines,0.4449,15
+News & Magazines,0.5525,16
+News & Magazines,0.4671,17
+News & Magazines,0.58,18
+News & Magazines,0.5124,19
+News & Magazines,0.4101,20
+News & Magazines,0.379,21
+News & Magazines,-0.0424,22
+News & Magazines,-0.9666,23
+Photo & Video,-0.1135,0
+Photo & Video,-0.8255,1
+Photo & Video,-1.2665,2
+Photo & Video,-1.5509,3
+Photo & Video,-1.7037,4
+Photo & Video,-1.7186,5
+Photo & Video,-1.44,6
+Photo & Video,-0.969,7
+Photo & Video,-0.5557,8
+Photo & Video,-0.2226,9
+Photo & Video,0.0861,10
+Photo & Video,0.3419,11
+Photo & Video,0.5002,12
+Photo & Video,0.574,13
+Photo & Video,0.714,14
+Photo & Video,0.8577,15
+Photo & Video,1.0415,16
+Photo & Video,1.023,17
+Photo & Video,0.9867,18
+Photo & Video,0.9935,19
+Photo & Video,1.0786,20
+Photo & Video,1.0587,21
+Photo & Video,0.8075,22
+Photo & Video,0.3029,23
+Productivity,,0
+Productivity,,1
+Productivity,,2
+Productivity,,3
+Productivity,,4
+Productivity,,5
+Productivity,,6
+Productivity,,7
+Productivity,,8
+Productivity,,9
+Productivity,,10
+Productivity,,11
+Productivity,,12
+Productivity,,13
+Productivity,,14
+Productivity,,15
+Productivity,,16
+Productivity,,17
+Productivity,,18
+Productivity,,19
+Productivity,,20
+Productivity,,21
+Productivity,,22
+Productivity,,23
+Real Estate,,0
+Real Estate,,1
+Real Estate,,2
+Real Estate,,3
+Real Estate,,4
+Real Estate,,5
+Real Estate,,6
+Real Estate,,7
+Real Estate,,8
+Real Estate,,9
+Real Estate,,10
+Real Estate,,11
+Real Estate,,12
+Real Estate,,13
+Real Estate,,14
+Real Estate,,15
+Real Estate,,16
+Real Estate,,17
+Real Estate,,18
+Real Estate,,19
+Real Estate,,20
+Real Estate,,21
+Real Estate,,22
+Real Estate,,23
+RMG,-0.6149,0
+RMG,-1.5184,1
+RMG,-1.9175,2
+RMG,-1.8941,3
+RMG,-1.7618,4
+RMG,-0.9637,5
+RMG,-0.0672,6
+RMG,0.3319,7
+RMG,0.14,8
+RMG,0.0311,9
+RMG,0.0849,10
+RMG,0.0065,11
+RMG,0.1388,12
+RMG,0.1341,13
+RMG,0.2371,14
+RMG,0.2406,15
+RMG,0.4817,16
+RMG,0.4747,17
+RMG,0.7801,18
+RMG,1.157,19
+RMG,1.3501,20
+RMG,1.8089,21
+RMG,1.0751,22
+RMG,0.2652,23
+Shopping,-0.7959,0
+Shopping,-1.2874,1
+Shopping,-1.5593,2
+Shopping,-1.723,3
+Shopping,-1.7284,4
+Shopping,-1.5634,5
+Shopping,-1.0647,6
+Shopping,-0.5334,7
+Shopping,-0.0682,8
+Shopping,0.1771,9
+Shopping,0.4312,10
+Shopping,0.7873,11
+Shopping,0.8815,12
+Shopping,0.6945,13
+Shopping,0.674,14
+Shopping,0.758,15
+Shopping,0.8544,16
+Shopping,0.8155,17
+Shopping,0.856,18
+Shopping,0.922,19
+Shopping,1.0221,20
+Shopping,0.9714,21
+Shopping,0.5919,22
+Shopping,-0.1135,23
+Social,,0
+Social,,1
+Social,,2
+Social,,3
+Social,,4
+Social,,5
+Social,,6
+Social,,7
+Social,,8
+Social,,9
+Social,,10
+Social,,11
+Social,,12
+Social,,13
+Social,,14
+Social,,15
+Social,,16
+Social,,17
+Social,,18
+Social,,19
+Social,,20
+Social,,21
+Social,,22
+Social,,23
+Social Media,0.0586,0
+Social Media,-0.6343,1
+Social Media,-1.2284,2
+Social Media,-1.7028,3
+Social Media,-1.9315,4
+Social Media,-1.8833,5
+Social Media,-1.4658,6
+Social Media,-0.8615,7
+Social Media,-0.3566,8
+Social Media,0.0093,9
+Social Media,0.2431,10
+Social Media,0.408,11
+Social Media,0.5116,12
+Social Media,0.5309,13
+Social Media,0.6291,14
+Social Media,0.7771,15
+Social Media,0.8194,16
+Social Media,0.7947,17
+Social Media,0.7724,18
+Social Media,0.7831,19
+Social Media,0.8863,20
+Social Media,1.1129,21
+Social Media,1.0789,22
+Social Media,0.6487,23
+Sports,-0.8481,0
+Sports,-1.3152,1
+Sports,-1.4964,2
+Sports,-1.5508,3
+Sports,-1.5012,4
+Sports,-1.3352,5
+Sports,-0.9645,6
+Sports,-0.616,7
+Sports,-0.4189,8
+Sports,-0.1545,9
+Sports,0.1469,10
+Sports,0.2885,11
+Sports,0.5892,12
+Sports,0.8665,13
+Sports,0.8823,14
+Sports,1.3065,15
+Sports,1.3854,16
+Sports,0.8798,17
+Sports,0.7694,18
+Sports,0.9499,19
+Sports,1.0998,20
+Sports,1.0252,21
+Sports,0.3409,22
+Sports,-0.3296,23
+Tools,-0.3737,0
+Tools,-1.0807,1
+Tools,-1.5094,2
+Tools,-1.6604,3
+Tools,-1.7277,4
+Tools,-1.6164,5
+Tools,-1.1973,6
+Tools,-0.6761,7
+Tools,-0.2309,8
+Tools,0.0386,9
+Tools,0.3338,10
+Tools,0.2458,11
+Tools,0.4059,12
+Tools,0.3503,13
+Tools,0.4195,14
+Tools,0.7519,15
+Tools,1.1038,16
+Tools,1.1754,17
+Tools,0.9808,18
+Tools,0.9707,19
+Tools,1.2005,20
+Tools,1.1318,21
+Tools,0.8153,22
+Tools,0.1485,23
+Travel,-1.0114,0
+Travel,-1.375,1
+Travel,-1.5785,2
+Travel,-1.6565,3
+Travel,-1.5858,4
+Travel,-1.3703,5
+Travel,-0.9367,6
+Travel,-0.3559,7
+Travel,-0.0422,8
+Travel,0.084,9
+Travel,0.2638,10
+Travel,0.4304,11
+Travel,0.5616,12
+Travel,0.6909,13
+Travel,0.8454,14
+Travel,1.0916,15
+Travel,1.1599,16
+Travel,1.137,17
+Travel,1.0733,18
+Travel,1.0346,19
+Travel,0.8896,20
+Travel,0.7584,21
+Travel,0.3055,22
+Travel,-0.4138,23
+Travel & Navigation,,0
+Travel & Navigation,,1
+Travel & Navigation,,2
+Travel & Navigation,,3
+Travel & Navigation,,4
+Travel & Navigation,,5
+Travel & Navigation,,6
+Travel & Navigation,,7
+Travel & Navigation,,8
+Travel & Navigation,,9
+Travel & Navigation,,10
+Travel & Navigation,,11
+Travel & Navigation,,12
+Travel & Navigation,,13
+Travel & Navigation,,14
+Travel & Navigation,,15
+Travel & Navigation,,16
+Travel & Navigation,,17
+Travel & Navigation,,18
+Travel & Navigation,,19
+Travel & Navigation,,20
+Travel & Navigation,,21
+Travel & Navigation,,22
+Travel & Navigation,,23
+Utility & Productivity,-1.3669,0
+Utility & Productivity,-1.5356,1
+Utility & Productivity,-1.473,2
+Utility & Productivity,-1.191,3
+Utility & Productivity,-0.5054,4
+Utility & Productivity,0.9593,5
+Utility & Productivity,2.1833,6
+Utility & Productivity,1.9376,7
+Utility & Productivity,1.2567,8
+Utility & Productivity,0.8314,9
+Utility & Productivity,0.5419,10
+Utility & Productivity,0.3702,11
+Utility & Productivity,0.2886,12
+Utility & Productivity,0.1626,13
+Utility & Productivity,0.131,14
+Utility & Productivity,0.166,15
+Utility & Productivity,0.2282,16
+Utility & Productivity,0.0956,17
+Utility & Productivity,-0.036,18
+Utility & Productivity,-0.1812,19
+Utility & Productivity,-0.3431,20
+Utility & Productivity,-0.4634,21
+Utility & Productivity,-0.817,22
+Utility & Productivity,-1.24,23
+Weather,,0
+Weather,,1
+Weather,,2
+Weather,,3
+Weather,,4
+Weather,,5
+Weather,,6
+Weather,,7
+Weather,,8
+Weather,,9
+Weather,,10
+Weather,,11
+Weather,,12
+Weather,,13
+Weather,,14
+Weather,,15
+Weather,,16
+Weather,,17
+Weather,,18
+Weather,,19
+Weather,,20
+Weather,,21
+Weather,,22
+Weather,,23
