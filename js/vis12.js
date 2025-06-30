@@ -13,8 +13,6 @@ export function Vis12() {
         d["hour_of_day"] = +d["hour_of_day"];
       });
 
-      console.log("Vis12 data", data);
-
       const groupedData = d3.group(data, (d) => d["Category"]);
 
       // convert grouped data to an array of objects
@@ -41,7 +39,6 @@ export function Vis12() {
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
   }
-  console.log("Vis12 data", data);
 
   const vis12Container = document.querySelector("#vis12_test");
   const width =
@@ -59,8 +56,6 @@ export function Vis12() {
 
   const minValue = d3.min(data, (d) => d3.min(d.values, (v) => v.value));
   const maxValue = d3.max(data, (d) => d3.max(d.values, (v) => v.value));
-  console.log("Vis12 minValue", minValue);
-  console.log("Vis12 maxValue", maxValue);
   const valueScale = d3
     .scaleLinear()
     .domain([minValue, maxValue])
