@@ -2,6 +2,7 @@ import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis1 } from "./js/vis1_todo.js";
 import { Vis2 } from "./js/vis2.js";
+import { Vis2Static } from "./js/vis2_static.js";
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
 import { Vis5 } from "./js/vis5_todo.js";
@@ -30,6 +31,10 @@ const visList = [
   {
     id: "vis2_test",
     component: Vis2,
+  },
+  {
+    id: "vis2_static",
+    component: Vis2Static,
   },
   {
     id: "vis3",

@@ -37,3 +37,106 @@ this is to create a pattern of three colors that repeats every three rows
 .vis12-row:nth-child(3n + 3) path {
   fill: #60e2b7;
 }
+
+/* vis 2 sankey */
+
+:root {
+  --sankey-active-area: #686694;
+  --sankey-inactive-area: #d9d8e2;
+  --sankey-inactive-area-IAE: #5cdeff;
+  --sankey-active-area-IAE: #16d2ff;
+
+  --sankey-active-bar: #03004c;
+  --sankey-inactive-bar: #b5b3ca;
+  --sankey-inactive-bar-IAE: #b4d9fe;
+  --sankey-active-bar-IAE: #0280fb;
+
+  --sankey-labels: #03004c;
+}
+
+.vis2-sankey {
+  path {
+    transition: fill 0.3s ease-in-out;
+  }
+}
+
+.vis2-sankey-Consumer {
+  g.consumer path {
+    fill: var(--sankey-active-area);
+  }
+  path.consumer {
+    fill: var(--sankey-active-area);
+  }
+  path.consumer.IAE {
+    fill: var(--sankey-active-area-IAE);
+  }
+  rect.bar.consumer {
+    fill: var(--sankey-active-bar);
+  }
+  rect.bar.consumer.IAE {
+    fill: var(--sankey-active-bar-IAE);
+  }
+
+  g.gaming path {
+    fill: var(--sankey-inactive-area);
+  }
+  path.gaming {
+    fill: var(--sankey-inactive-area);
+  }
+  path.gaming.IAE {
+    fill: var(--sankey-inactive-area-IAE);
+  }
+  rect.bar.gaming {
+    fill: var(--sankey-inactive-bar);
+  }
+  rect.bar.gaming.IAE {
+    fill: var(--sankey-inactive-bar-IAE);
+  }
+
+  g.consumer.value-labels path {
+    fill: var(--sankey-labels);
+  }
+  g.gaming.value-labels path {
+    opacity: 0;
+  }
+}
+.vis2-sankey-Gaming {
+  g.consumer path {
+    fill: var(--sankey-inactive-area);
+  }
+  path.consumer {
+    fill: var(--sankey-inactive-area);
+  }
+  path.consumer.IAE {
+    fill: var(--sankey-inactive-area-IAE);
+  }
+  rect.bar.consumer {
+    fill: var(--sankey-inactive-bar);
+  }
+  rect.bar.consumer.IAE {
+    fill: var(--sankey-inactive-bar-IAE);
+  }
+
+  g.gaming path {
+    fill: var(--sankey-active-area);
+  }
+  path.gaming {
+    fill: var(--sankey-active-area);
+  }
+  path.gaming.IAE {
+    fill: var(--sankey-active-area-IAE);
+  }
+  rect.bar.gaming {
+    fill: var(--sankey-active-bar);
+  }
+  rect.bar.gaming.IAE {
+    fill: var(--sankey-active-bar-IAE);
+  }
+
+  g.gaming.value-labels path {
+    fill: var(--sankey-labels);
+  }
+  g.consumer.value-labels path {
+    opacity: 0;
+  }
+}
