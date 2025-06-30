@@ -1,0 +1,196 @@
+Country,Country code,Value,Category
+Australia,AUS,-38686616.39,Entertainment
+Australia,AUS,-153236134.9,Social Media
+Australia,AUS,182917971.1,Gaming
+Australia,AUS,9147065.818,Utility & Productivity
+Australia,AUS,31804212.9,Other
+Australia,AUS,31141699.1,Shopping
+Australia,AUS,5151541.401,Finance
+Australia,AUS,-5713350.734,Books & Reference
+Australia,AUS,3601880.786,Education
+Australia,AUS,-3874526.985,News
+Australia,AUS,-4285420.28,Sports
+Australia,AUS,45792539.61,Generative AI
+Australia,AUS,-318769.9703,Health and Fitness
+Brazil,BRA,-299035241,Entertainment
+Brazil,BRA,-318600140.7,Social Media
+Brazil,BRA,1761693827,Gaming
+Brazil,BRA,-26019781.5,Utility & Productivity
+Brazil,BRA,329612555.4,Other
+Brazil,BRA,139237798.9,Shopping
+Brazil,BRA,42941773.59,Finance
+Brazil,BRA,-12858437.1,Books & Reference
+Brazil,BRA,-2608699.075,Education
+Brazil,BRA,-7108048.586,News
+Brazil,BRA,-3713538.434,Sports
+Brazil,BRA,452262415,Generative AI
+Brazil,BRA,47175832.3,Health and Fitness
+Canada,CAN,-3811923.127,Entertainment
+Canada,CAN,-30290250.4,Social Media
+Canada,CAN,271494989.8,Gaming
+Canada,CAN,7811045.298,Utility & Productivity
+Canada,CAN,42037594.02,Other
+Canada,CAN,-4908072.833,Shopping
+Canada,CAN,11012096.96,Finance
+Canada,CAN,-5055389.911,Books & Reference
+Canada,CAN,3648645.865,Education
+Canada,CAN,-7179135.229,News
+Canada,CAN,5624724.279,Sports
+Canada,CAN,112178877.7,Generative AI
+Canada,CAN,7157160.296,Health and Fitness
+Germany,DEU,-56488019.49,Entertainment
+Germany,DEU,303349251.4,Social Media
+Germany,DEU,448074538.5,Gaming
+Germany,DEU,134245851.5,Utility & Productivity
+Germany,DEU,101128414.8,Other
+Germany,DEU,60921072.95,Shopping
+Germany,DEU,40145975.1,Finance
+Germany,DEU,-11512113.82,Books & Reference
+Germany,DEU,26179759.71,Education
+Germany,DEU,-13206128.2,News
+Germany,DEU,-6323028.812,Sports
+Germany,DEU,233221044.6,Generative AI
+Germany,DEU,14290154.66,Health and Fitness
+France,FRA,-202005576.7,Entertainment
+France,FRA,350926697.5,Social Media
+France,FRA,464404623.8,Gaming
+France,FRA,2218548.504,Utility & Productivity
+France,FRA,80578158.5,Other
+France,FRA,32823130.36,Shopping
+France,FRA,25238230.58,Finance
+France,FRA,-20065266.9,Books & Reference
+France,FRA,37969433.97,Education
+France,FRA,-14000030.68,News
+France,FRA,-30037655.62,Sports
+France,FRA,109510784.1,Generative AI
+France,FRA,18139442.45,Health and Fitness
+U.K.,GBR,-158190569,Entertainment
+U.K.,GBR,-353868704.4,Social Media
+U.K.,GBR,358729857.7,Gaming
+U.K.,GBR,68615012.08,Utility & Productivity
+U.K.,GBR,57500530.32,Other
+U.K.,GBR,80686627.77,Shopping
+U.K.,GBR,12698308.12,Finance
+U.K.,GBR,-7169570.498,Books & Reference
+U.K.,GBR,2934560.161,Education
+U.K.,GBR,-12954451.13,News
+U.K.,GBR,-14033719.76,Sports
+U.K.,GBR,214636856.7,Generative AI
+U.K.,GBR,4232696.176,Health and Fitness
+Indonesia,IDN,3280783320,Entertainment
+Indonesia,IDN,3353111684,Social Media
+Indonesia,IDN,1503209541,Gaming
+Indonesia,IDN,430418756,Utility & Productivity
+Indonesia,IDN,-238173501.2,Other
+Indonesia,IDN,540657864,Shopping
+Indonesia,IDN,221139219.7,Finance
+Indonesia,IDN,-226216259.8,Books & Reference
+Indonesia,IDN,14345304.57,Education
+Indonesia,IDN,-4028938.334,News
+Indonesia,IDN,2102443.177,Sports
+Indonesia,IDN,304496783.6,Generative AI
+Indonesia,IDN,3115934.938,Health and Fitness
+India,IND,67537661290,Entertainment
+India,IND,49554321842,Social Media
+India,IND,5282413263,Gaming
+India,IND,1113788350,Utility & Productivity
+India,IND,2651743981,Other
+India,IND,642418157.3,Shopping
+India,IND,1380812695,Finance
+India,IND,63732557.49,Books & Reference
+India,IND,641844849.1,Education
+India,IND,428268406.9,News
+India,IND,-133211856,Sports
+India,IND,317593417.8,Generative AI
+India,IND,55437127.52,Health and Fitness
+Japan,JPN,-986857460.4,Entertainment
+Japan,JPN,-186037722.1,Social Media
+Japan,JPN,681642164.8,Gaming
+Japan,JPN,87785412.83,Utility & Productivity
+Japan,JPN,39081585.45,Other
+Japan,JPN,53726251.47,Shopping
+Japan,JPN,60384960.46,Finance
+Japan,JPN,-155897689.5,Books & Reference
+Japan,JPN,6795022.014,Education
+Japan,JPN,-100190911.7,News
+Japan,JPN,13767731.58,Sports
+Japan,JPN,38204222.08,Generative AI
+Japan,JPN,8223019.553,Health and Fitness
+South Korea,KOR,-777549657,Entertainment
+South Korea,KOR,-590354881.3,Social Media
+South Korea,KOR,-82102875.17,Gaming
+South Korea,KOR,-11393636.01,Utility & Productivity
+South Korea,KOR,-40827465.92,Other
+South Korea,KOR,40414245.41,Shopping
+South Korea,KOR,155599767.9,Finance
+South Korea,KOR,-86580640.26,Books & Reference
+South Korea,KOR,16111045.05,Education
+South Korea,KOR,777399.0381,News
+South Korea,KOR,-8236893.126,Sports
+South Korea,KOR,30548418.07,Generative AI
+South Korea,KOR,2073697.093,Health and Fitness
+Mexico,MEX,435399634.7,Entertainment
+Mexico,MEX,2315994847,Social Media
+Mexico,MEX,1225588340,Gaming
+Mexico,MEX,45597557.43,Utility & Productivity
+Mexico,MEX,230411793.1,Other
+Mexico,MEX,159743696.8,Shopping
+Mexico,MEX,71177033.25,Finance
+Mexico,MEX,-69951879.35,Books & Reference
+Mexico,MEX,12055069.8,Education
+Mexico,MEX,5787794.877,News
+Mexico,MEX,5950683.896,Sports
+Mexico,MEX,299491146.6,Generative AI
+Mexico,MEX,17061915.26,Health and Fitness
+Philippines,PHL,3902068490,Entertainment
+Philippines,PHL,-460890386.1,Social Media
+Philippines,PHL,2438159057,Gaming
+Philippines,PHL,276915364.3,Utility & Productivity
+Philippines,PHL,177750430.3,Other
+Philippines,PHL,140521103.1,Shopping
+Philippines,PHL,108303259.3,Finance
+Philippines,PHL,-39657682.33,Books & Reference
+Philippines,PHL,-9061226.522,Education
+Philippines,PHL,-3039811.374,News
+Philippines,PHL,228493.8214,Sports
+Philippines,PHL,305351663.6,Generative AI
+Philippines,PHL,9582627.006,Health and Fitness
+Thailand,THA,-252904470.8,Entertainment
+Thailand,THA,171363075.6,Social Media
+Thailand,THA,-101333083.3,Gaming
+Thailand,THA,183792655.6,Utility & Productivity
+Thailand,THA,45433699.53,Other
+Thailand,THA,104047410.3,Shopping
+Thailand,THA,22674964.77,Finance
+Thailand,THA,-37479407.02,Books & Reference
+Thailand,THA,-2992422.394,Education
+Thailand,THA,-2674082.738,News
+Thailand,THA,-4857146.275,Sports
+Thailand,THA,31043414.99,Generative AI
+Thailand,THA,-1225558.337,Health and Fitness
+U.S.,USA,-2976252589,Entertainment
+U.S.,USA,-2397753747,Social Media
+U.S.,USA,1203663355,Gaming
+U.S.,USA,-155943312.9,Utility & Productivity
+U.S.,USA,120614753.7,Other
+U.S.,USA,-142631940.6,Shopping
+U.S.,USA,55610925.39,Finance
+U.S.,USA,-93224166.18,Books & Reference
+U.S.,USA,-21464635.52,Education
+U.S.,USA,-78246856.27,News
+U.S.,USA,-10114652.31,Sports
+U.S.,USA,1280289928,Generative AI
+U.S.,USA,56317953.46,Health and Fitness
+Vietnam,VNM,2322436334,Entertainment
+Vietnam,VNM,-1345338887,Social Media
+Vietnam,VNM,637938272.4,Gaming
+Vietnam,VNM,45603778.26,Utility & Productivity
+Vietnam,VNM,55833695.44,Other
+Vietnam,VNM,265286837,Shopping
+Vietnam,VNM,58884300.32,Finance
+Vietnam,VNM,-61866096.6,Books & Reference
+Vietnam,VNM,-32163325.61,Education
+Vietnam,VNM,-13837810.77,News
+Vietnam,VNM,2214689.199,Sports
+Vietnam,VNM,55169550.35,Generative AI
+Vietnam,VNM,-7985370.121,Health and Fitness
