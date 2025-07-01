@@ -142,7 +142,7 @@ export function Vis7() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; border: 1px solid black;"
+      style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">${rows}</g>
     </svg>
