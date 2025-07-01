@@ -18,8 +18,6 @@ export function Vis4(props) {
     return html`<div>Loading...</div>`;
   }
 
-  console.log("Rendering Vis4 with variation:", props.variation, data);
-
   // variation & data
   const variation = props.variation || "a";
   const categoriesA = ["Google & Meta", "Gaming", "Consumer"];

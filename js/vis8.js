@@ -132,8 +132,6 @@ export function Vis8() {
     },
   ];
 
-  console.log("Rendering Vis8 with data:", data);
-
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
   }
@@ -159,16 +157,11 @@ export function Vis8() {
       }),
     };
   });
-  console.log("Grouped Data:", groupedArray);
 
   // get selected country
   const groupedArrayFiltered =
     groupedArray.filter((d) => d.countryCode === selectedCountry)[0]
       ?.categories || [];
-  console.log(
-    "Filtered Grouped Data for selected country:",
-    groupedArrayFiltered
-  );
   const dataFiltered = groupedArrayFiltered;
 
   // set values for country code dropdown
