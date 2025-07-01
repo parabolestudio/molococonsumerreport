@@ -58,7 +58,7 @@ const visList = [
     component: Vis6LegendGrowth,
   },
   {
-    id: "vis7_test",
+    id: "vis7",
     component: Vis7,
   },
   {
