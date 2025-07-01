@@ -2,7 +2,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis6() {
   const [data, setData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("Asia");
+  const [selectedRegion, setSelectedRegion] = useState("Custom Selection");
 
   // Fetch data on mount
   useEffect(() => {
@@ -53,7 +53,7 @@ export function Vis6() {
   const regions = data.map((d) => d.region);
   const uniqueRegions = Array.from(new Set(regions)).sort();
   // add "Default" option
-  // uniqueRegions.unshift("Custom Selection");
+  uniqueRegions.unshift("Custom Selection");
 
   let regionDropdown = document.querySelector("#viz6_dropdown_regions");
   if (regionDropdown) regionDropdown.innerHTML = "";
@@ -68,9 +68,28 @@ export function Vis6() {
   });
 
   // filter and sort data based on selected region
-  const filterData = data
-    .filter((d) => d.region === selectedRegion)
-    .sort((a, b) => b.value2024 - a.value2024);
+  let filterData = data.filter((d) => d.region === selectedRegion);
+  if (selectedRegion === "Custom Selection") {
+    const customCountriesRegion = [
+      "U.S.",
+      "U.K.",
+      "France",
+      "Germany",
+      "South Korea",
+      "Japan",
+      "Brazil",
+      "Mexico",
+      "Indonesia",
+      "India",
+      "Thailand",
+      "Vietnam",
+      "Australia",
+      "Canada",
+    ];
+    filterData = data.filter((d) => customCountriesRegion.includes(d.country));
+  }
+
+  filterData.sort((a, b) => b.value2024 - a.value2024);
 
   // layout dimensions
   const vis6Container = document.querySelector("#vis6");
