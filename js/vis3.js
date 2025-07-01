@@ -35,13 +35,13 @@ export function Vis3() {
   const minSpend = d3.min(data, (d) => d["Spend"]);
   const maxSpend = d3.max(data, (d) => d["Spend"]);
   const testPadding = 20; // padding for the scales for testing purposes
-  const spendScale = d3
-    .scaleLinear()
-    .domain([minSpend, maxSpend])
-    .range([0 + testPadding, innerWidth - testPadding]);
   const roasScale = d3
     .scaleLinear()
     .domain([minROAS, maxROAS])
+    .range([0 + testPadding, innerWidth - testPadding]);
+  const spendScale = d3
+    .scaleLinear()
+    .domain([minSpend, maxSpend])
     .range([innerHeight - testPadding, 0 + testPadding]);
 
   const dotSize = 10;
@@ -49,8 +49,8 @@ export function Vis3() {
   const legendLineDistance2 = 15;
 
   const categoryColors = {
-    "Majority of spend on Google & Meta": "#03004C",
-    "Diversified spend": "var(--blue-medium)",
+    "Majority of spend on Google & Meta": "#5CDEFF",
+    "Diversified spend": "#0280FB",
   };
 
   const dots = data.map((d) => {
@@ -69,24 +69,37 @@ export function Vis3() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%;"
+      style="width:100%; height:100%; background-color:#040078"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <line
           x1="${0}"
           y1="${innerHeight}"
           x2="${innerWidth}"
-          y2="${0}"
-          stroke="#efefef"
+          y2="${innerHeight}"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
         <line
           x1="${0}"
-          y1="${innerHeight}"
-          x2="${innerWidth}"
+          y1="0"
+          x2="${0}"
           y2="${innerHeight}"
-          stroke="#000"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
-        <line x1="${0}" y1="0" x2="${0}" y2="${innerHeight}" stroke="#000" />
+        <line
+          x1="${1}"
+          y1="${innerHeight - 1}"
+          x2="${innerWidth}"
+          y2="${0}"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
         <g>${dots}</g>
         <g>
           <text
@@ -94,9 +107,9 @@ export function Vis3() {
             y="${innerHeight + margin.bottom / 2}"
             text-anchor="end"
             dominant-baseline="middle"
-            class="charts-text-body-bold"
+            class="charts-text-body-bold charts-text-white"
           >
-            ROAS
+            Spend
           </text>
           <text
             x="${-margin.left / 2 - legendLineDistance1}"
@@ -104,9 +117,9 @@ export function Vis3() {
             text-anchor="end"
             dominant-baseline="middle"
             transform="rotate(-90, ${-margin.left / 2}, ${0})"
-            class="charts-text-body-bold"
+            class="charts-text-body-bold charts-text-white"
           >
-            Spend
+            ROAS
           </text>
         </g>
       </g>
