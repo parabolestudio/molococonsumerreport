@@ -88,11 +88,14 @@ export function Vis12() {
       : 600;
   const heightPerCategory = 50;
   const categoryPadding = 10;
+  const valueOvershot = 40;
+  const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =
     (heightPerCategory + categoryPadding) * dataFiltered.length +
-    categoryPadding;
+    categoryPadding +
+    margin.top +
+    margin.bottom;
 
-  const margin = { top: 5, right: 5, bottom: 20, left: 170 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -106,7 +109,7 @@ export function Vis12() {
   const valueScale = d3
     .scaleLinear()
     .domain([minValue, maxValue])
-    .range([0, heightPerCategory + 40]);
+    .range([0, heightPerCategory + valueOvershot]);
 
   const hourScale = d3.scaleLinear().domain([0, 23]).range([0, innerWidth]);
   const areaGenerator = d3
@@ -126,7 +129,7 @@ export function Vis12() {
         y="${heightPerCategory}"
         dominant-baseline="no-change"
         text-anchor="end"
-        class="charts-text-body"
+        class="charts-text-body charts-text-white"
         >${d.category}</text
       >
       <path d=${areaGenerator(d.hour_values)} fill-opacity="0.99" />
@@ -147,7 +150,7 @@ export function Vis12() {
         : `${hour - 12}pm`;
 
     return html` <g
-      transform="translate(${hourScale(d)}, ${0})"
+      transform="translate(${hourScale(d)}, ${-10})"
       class="charts-text-body"
     >
       <text
@@ -156,6 +159,7 @@ export function Vis12() {
         dy="0.5rem"
         dominant-baseline="hanging"
         text-anchor="middle"
+        class="charts-text-body charts-text-white"
         >${ampm}</text
       >
       <line
@@ -173,7 +177,7 @@ export function Vis12() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%;"
+      style="width:100%; height:100%; background-color:#040078"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         ${xTicks}${rows}
