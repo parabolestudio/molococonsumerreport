@@ -21,6 +21,50 @@
   fill: #ffffff;
 }
 
+/* multi select style*/
+.select2-container {
+  border: none;
+
+  .select2-selection--multiple {
+    background-color: transparent !important;
+    border-radius: 10px;
+  }
+
+  .select2-selection__choice {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 10px !important;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+  }
+  .select2-selection--clearable {
+    color: white;
+  }
+  .select2-selection__choice__remove {
+    color: black !important;
+  }
+  &.select2-container--focus .select2-selection--multiple {
+    border-color: white !important;
+  }
+
+  .select2-results__option {
+    color: black;
+    font-size: 14px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    &.select2-results__option--selected {
+      background-color: #efefef;
+    }
+
+    &.select2-results__option--highlighted {
+      background-color: #040078 !important;
+    }
+  }
+}
+
 /* 
 color fills for ridge line plot
 first, forth, and seventh row are the same color
@@ -28,6 +72,7 @@ second, fifth, and eighth row are the same color
 third, sixth, and ninth row are the same color
 this is to create a pattern of three colors that repeats every three rows
 */
+
 .vis12-row:nth-child(3n + 1) path {
   fill: #16d2ff;
 }
