@@ -2,7 +2,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis7() {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("USA");
+  const [selectedCountry, setSelectedCountry] = useState("U.S.");
 
   // Fetch data on mount
   useEffect(() => {
@@ -13,12 +13,12 @@ export function Vis7() {
         d["Value"] = +d["Value"];
       });
 
-      const groupedData = d3.group(data, (d) => d["Country code"]);
+      const groupedData = d3.group(data, (d) => d["Country"]);
 
       // convert grouped data to an array of objects
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         return {
-          countryCode: key,
+          country: key,
           values: values.map((v) => ({
             category: v.Category,
             value: v.Value,
@@ -34,8 +34,8 @@ export function Vis7() {
     return html`<div>Loading...</div>`;
   }
 
-  // set values for country code dropdown
-  const countries = data.map((d) => d.countryCode);
+  // set values for country dropdown
+  const countries = data.map((d) => d.country);
   let countryDropdown = document.querySelector("#viz7_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
@@ -52,7 +52,7 @@ export function Vis7() {
 
   // data and scales
   const countryValues = data
-    .filter((d) => d.countryCode === selectedCountry)
+    .filter((d) => d.country === selectedCountry)
     .flatMap((d) =>
       d.values.map((v) => ({
         value: v.value,
@@ -72,7 +72,7 @@ export function Vis7() {
     (heightPerCategory + categoryPadding) * countryValues.length +
     categoryPadding;
 
-  const margin = { top: 5, right: 75, bottom: 5, left: 75 };
+  const margin = { top: 5, right: 150, bottom: 5, left: 150 };
   const innerWidth = width - margin.left - margin.right;
   // const innerHeight = height - margin.top - margin.bottom;
 
@@ -104,6 +104,8 @@ export function Vis7() {
 
       const y = index * (heightPerCategory + categoryPadding) + categoryPadding;
 
+      const formattedValue = d3.format(".2s")(v.value).replace("G", "B");
+
       return html`<g data-category="${v.category}" data-value="${v.value}">
         <rect
           x="${barX}"
@@ -116,7 +118,7 @@ export function Vis7() {
           ry="2"
         />
         <text
-          x="${v.value > 0 ? barX - 20 : valueScaleNegative(0) + 20}"
+          x="${v.value > 0 ? barX - 10 : valueScaleNegative(0) + 10}"
           y="${y + heightPerCategory / 2}"
           text-anchor="${v.value > 0 ? "end" : "start"}"
           class="charts-text-body charts-text-white"
@@ -124,13 +126,13 @@ export function Vis7() {
           >${v.category}</text
         >
         <text
-          x="${v.value > 0 ? barX + barWidth + 20 : barX - 20}"
+          x="${v.value > 0 ? barX + barWidth + 10 : barX - 10}"
           y="${y + heightPerCategory / 2}"
           class="charts-text-value charts-text-white"
           dominant-baseline="middle"
           text-anchor="${v.value > 0 ? "start" : "end"}"
         >
-          ${v.value > 0 ? "+" : ""}${v.value.toFixed(0)}
+          ${v.value > 0 ? "+" : ""}${formattedValue}
         </text>
       </g>`;
     });

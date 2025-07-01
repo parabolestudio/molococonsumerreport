@@ -42,7 +42,7 @@ export function Vis10() {
     return html`<div>Loading...</div>`;
   }
 
-  console.log("Data for Viz 10:", data);
+  // console.log("Data for Viz 10:", data);
 
   // get data for country (test with USA)
   const selectedCountry = "US";
@@ -55,7 +55,7 @@ export function Vis10() {
   // for now, use USA as example
   const minValue = d3.min(countryData, (d) => d.yearGrowth);
   const maxValue = d3.max(countryData, (d) => d.yearGrowth);
-  console.log("Min/Max Values for Viz 10:", minValue, maxValue);
+  // console.log("Min/Max Values for Viz 10:", minValue, maxValue);
 
   // layout dimensions
   const vis10Container = document.querySelector("#vis10_test");

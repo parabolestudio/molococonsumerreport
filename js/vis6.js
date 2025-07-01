@@ -2,7 +2,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis6() {
   const [data, setData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("Europe");
+  const [selectedRegion, setSelectedRegion] = useState("Asia");
 
   // Fetch data on mount
   useEffect(() => {
@@ -37,7 +37,11 @@ export function Vis6() {
         };
       });
 
-      setData(groupedArray);
+      const filteredData = groupedArray; //.filter((d) => d.country !== "India");
+
+      console.log("Data for Viz 6:", groupedArray);
+
+      setData(filteredData);
     });
   }, []);
 
@@ -83,16 +87,34 @@ export function Vis6() {
   const minValue = d3.min(data, (d) => Math.min(d.value2023, d.value2024));
   const maxValue = d3.max(data, (d) => Math.max(d.value2023, d.value2024));
 
+  // break point
+  const breakPoint = 400 * 1000000000;
+  const maxPoint = 1000 * 1000000000; // 1 trillion
+
   const valueScale = d3
     .scaleLinear()
-    .domain([minValue, maxValue])
+    .domain([0, maxValue])
     .range([0, innerWidth]);
+  const valueScale1 = d3
+    .scaleLinear()
+    .domain([0, breakPoint])
+    .range([0, innerWidth * 0.8]);
+  const valueScale2 = d3
+    .scaleLinear()
+    .domain([breakPoint, maxPoint])
+    .range([innerWidth * 0.8, innerWidth]);
 
   const circleRadius = 10;
 
   const elements = filterData.map((d, index) => {
-    const x2023 = valueScale(d.value2023);
-    const x2024 = valueScale(d.value2024);
+    const x2023 =
+      d.value2023 < breakPoint
+        ? valueScale1(d.value2023)
+        : valueScale2(d.value2023);
+    const x2024 =
+      d.value2024 < breakPoint
+        ? valueScale1(d.value2024)
+        : valueScale2(d.value2024);
     const barStart = Math.min(x2023, x2024);
     const barEnd = Math.max(x2023, x2024);
     const barWidth = Math.abs(x2023 - x2024);
@@ -133,8 +155,12 @@ export function Vis6() {
     </g>`;
   });
 
-  const xTicks = valueScale.ticks().map((tick) => {
-    const x = valueScale(tick);
+  const xTicks1 = valueScale1.ticks().map((tick) => {
+    const x = valueScale1(tick);
+
+    // format tick text (big numbers as integers should be formatted in billions.)
+    const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+
     return html`<g transform="translate(${x}, 0)">
       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
       <text
@@ -144,7 +170,27 @@ export function Vis6() {
         class="charts-text-body"
         style="font-size: 12px;"
       >
-        ${tick}
+        ${formattedTick}
+      </text>
+    </g>`;
+  });
+  const tick2Value = [maxPoint];
+  const xTicks2 = tick2Value.map((tick) => {
+    const x = valueScale2(tick);
+
+    // format tick text (big numbers as integers should be formatted in billions.)
+    const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+
+    return html`<g transform="translate(${x}, 0)">
+      <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
+      <text
+        x="0"
+        y="${-5}"
+        text-anchor="middle"
+        class="charts-text-body"
+        style="font-size: 12px;"
+      >
+        ${formattedTick}
       </text>
     </g>`;
   });
@@ -156,7 +202,7 @@ export function Vis6() {
       style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
-        <g class="tick-lines">${xTicks}</g>
+        <g class="tick-lines">${xTicks1}${xTicks2}</g>
         <g class="country-rows">${elements}</g>
       </g>
     </svg>
