@@ -4,7 +4,7 @@ export function Vis4(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth_updated.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["Growth Text"] = "+" + Math.round(d["Growth (%)"] * 100) + "%";

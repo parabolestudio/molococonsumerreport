@@ -51,6 +51,8 @@ export function Vis10() {
   console.log("Country Data for Viz 10:", countryData);
 
   // data and scales
+  const minValue = d3.min(countryData, (d) => d.yearGrowth);
+  const maxValue = d3.max(countryData, (d) => d.yearGrowth);
 
   // layout dimensions
   const width = 100;
