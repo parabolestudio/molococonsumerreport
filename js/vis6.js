@@ -7,7 +7,7 @@ export function Vis6() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile_updated.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
@@ -52,6 +52,9 @@ export function Vis6() {
   // set values for regions dropdown
   const regions = data.map((d) => d.region);
   const uniqueRegions = Array.from(new Set(regions)).sort();
+  // add "Default" option
+  uniqueRegions.unshift("Custom Selection");
+
   let regionDropdown = document.querySelector("#viz6_dropdown_regions");
   if (regionDropdown) regionDropdown.innerHTML = "";
   uniqueRegions.forEach((region) => {
