@@ -1,13 +1,45 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+function updateMultiSelect(categories, initialCategories, callback) {
+  const selectCategoryData = categories.map((category) => {
+    return {
+      id: category,
+      text: category,
+      defaultSelected: initialCategories.includes(category),
+    };
+  });
+
+  if (typeof window !== "undefined" && window.$) {
+    // create select2 dropdown options with categories of that country
+    window.$("#viz12-select").empty();
+    for (let i = 0; i < selectCategoryData.length; i++) {
+      const item = selectCategoryData[i];
+      const newOption = new Option(
+        item.text,
+        item.id,
+        item.defaultSelected,
+        item.defaultSelected
+      );
+      window.$("#viz12-select").append(newOption).trigger("change");
+    }
+
+    // create event listener to listen for changes
+    window.$("#viz12-select").on("change", function (e) {
+      const selectedCategories = window
+        .$("#viz12-select")
+        .select2("data")
+        .map((d) => d.id);
+      console.log("selectedCategories", selectedCategories);
+      callback(selectedCategories);
+    });
+  }
+}
+
 export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("USA");
-  const [selectedCategories, setSelectedCategories] = useState([
-    "Automotive",
-    "Business",
-    "Entertainment",
-  ]);
+  const initialCategories = ["Automotive", "Business", "Entertainment"];
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   // Fetch data on mount
   useEffect(() => {
@@ -60,41 +92,6 @@ export function Vis12() {
     return html`<div>Loading...</div>`;
   }
 
-  // multi select dropdown for categories
-  // coded separately in HTML with select2
-
-  var categoryData1 = {
-    id: "Category1",
-    text: "Category1",
-  };
-
-  if (typeof window !== "undefined" && window.$) {
-    var newOption = new Option(
-      categoryData1.text,
-      categoryData1.id,
-      true,
-      true
-    );
-    window.$("#viz12-select").append(newOption).trigger("change");
-    var categoryData2 = {
-      id: "Category2",
-      text: "Category2",
-    };
-
-    var newOption = new Option(
-      categoryData2.text,
-      categoryData2.id,
-      true,
-      true
-    );
-    window.$("#viz12-select").append(newOption).trigger("change");
-
-    // create event listener to listen for changes
-    window.$("#viz12-select").on("change", function (e) {
-      console.log("selection items", window.$("#viz12-select").select2("data"));
-    });
-  }
-
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.countryCode).sort();
@@ -115,6 +112,34 @@ export function Vis12() {
   // get selected country
   const dataFiltered =
     data.filter((d) => d.countryCode === selectedCountry)[0]?.categories || [];
+  const categories = dataFiltered.map((d) => d.category);
+
+  // multi select dropdown for categories
+  // coded separately in HTML with select2
+  console.log("Data for Viz 12:dataFiltered", dataFiltered);
+
+  useEffect(() => {
+    updateMultiSelect(
+      categories,
+      initialCategories,
+      (newlySelectedCategories) => {
+        console.log("callback");
+        console.log("newlySelectedCategories", newlySelectedCategories);
+        setSelectedCategories(newlySelectedCategories);
+      }
+    );
+  }, []);
+  useEffect(() => {
+    updateMultiSelect(
+      categories,
+      initialCategories,
+      (newlySelectedCategories) => {
+        console.log("callback");
+        console.log("newlySelectedCategories", newlySelectedCategories);
+        setSelectedCategories(newlySelectedCategories);
+      }
+    );
+  }, [categories]);
 
   // layout dimensions
   const vis12Container = document.querySelector("#vis12");

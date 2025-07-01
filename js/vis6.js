@@ -39,8 +39,6 @@ export function Vis6() {
 
       const filteredData = groupedArray; //.filter((d) => d.country !== "India");
 
-      console.log("Data for Viz 6:", groupedArray);
-
       setData(filteredData);
     });
   }, []);
