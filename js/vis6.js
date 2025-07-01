@@ -182,7 +182,7 @@ export function Vis6LegendGrowth() {
           height="${circleRadius * 2}"
           fill="#EFEFEF"
         />
-        <circle cx="${0}" cy="${0}" r="${circleRadius}" fill="#03004C" />
+        <circle cx="${0}" cy="${0}" r="${circleRadius}" fill="#040078" />
         <circle cx="${endX}" cy="${0}" r="${circleRadius}" fill="#C368F9" />
         <text
           x="${endX + circleRadius + 6}"
