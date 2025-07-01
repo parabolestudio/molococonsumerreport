@@ -54,6 +54,14 @@ this is to create a pattern of three colors that repeats every three rows
   --sankey-labels: #03004c;
 }
 
+.vis2-toggle {
+  cursor: pointer;
+
+  svg g.Handle {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
 .vis2-sankey {
   path {
     transition: fill 0.3s ease-in-out;
