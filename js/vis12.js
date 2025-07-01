@@ -129,17 +129,6 @@ export function Vis12() {
       }
     );
   }, []);
-  useEffect(() => {
-    updateMultiSelect(
-      categories,
-      initialCategories,
-      (newlySelectedCategories) => {
-        console.log("callback");
-        console.log("newlySelectedCategories", newlySelectedCategories);
-        setSelectedCategories(newlySelectedCategories);
-      }
-    );
-  }, [categories]);
 
   // layout dimensions
   const vis12Container = document.querySelector("#vis12");
