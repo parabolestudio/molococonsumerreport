@@ -29,7 +29,6 @@ function updateMultiSelect(categories, initialCategories, callback) {
         .$("#viz12-select")
         .select2("data")
         .map((d) => d.id);
-      console.log("selectedCategories", selectedCategories);
       callback(selectedCategories);
     });
   }
@@ -37,7 +36,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
 
 export function Vis12() {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("USA");
+  const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const initialCategories = ["Automotive", "Business", "Entertainment"];
   const [selectedCategories, setSelectedCategories] = useState([
     "Automotive",
@@ -54,12 +53,12 @@ export function Vis12() {
       data.forEach((d) => {
         d["value"] = +d["value"];
         d["hour_of_day"] = +d["hour_of_day"];
-        d["countryCode"] = d["Country code"];
+        d["country"] = d["Country"];
         d["category"] = d["Category"];
       });
 
       // data group by country code and categories
-      const groupedData = d3.group(data, (d) => d.countryCode);
+      const groupedData = d3.group(data, (d) => d.country);
 
       const groupedArray = Array.from(groupedData, ([key, value]) => {
         const groupedByCategory = d3.group(value, (d) => d.category);
@@ -84,7 +83,7 @@ export function Vis12() {
         );
 
         return {
-          countryCode: key,
+          country: key,
           categories: filteredCategories,
         };
       });
@@ -99,7 +98,7 @@ export function Vis12() {
 
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
-  const countries = data.map((d) => d.countryCode).sort();
+  const countries = data.map((d) => d.country).sort();
   let countryDropdown = document.querySelector("#viz12_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
@@ -117,7 +116,7 @@ export function Vis12() {
   // filter data based on selected country
   // and get categories for that country
   const dataFiltered =
-    data.filter((d) => d.countryCode === selectedCountry)[0]?.categories || [];
+    data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const categories = dataFiltered.map((d) => d.category);
 
   // filter data based on selected categories
