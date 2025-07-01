@@ -9,7 +9,7 @@ import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
 import { Vis7 } from "./js/vis7.js";
 import { Vis8 } from "./js/vis8.js";
 import { Vis9 } from "./js/vis9_todo.js";
-import { Vis10 } from "./js/vis10_todo.js";
+import { Vis10 } from "./js/vis10.js";
 import { Vis11 } from "./js/vis11_todo.js";
 import { Vis12 } from "./js/vis12.js";
 import { Vis13 } from "./js/vis13_todo.js";

@@ -47,8 +47,6 @@ export function Vis12() {
         };
       });
 
-      console.log("Grouped Data for Viz 12:", groupedArray);
-
       setData(groupedArray);
     });
   }, []);
@@ -60,7 +58,6 @@ export function Vis12() {
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.countryCode).sort();
-  console.log("Countries for Viz 12:", countries);
   let countryDropdown = document.querySelector("#viz12_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
@@ -78,7 +75,6 @@ export function Vis12() {
   // get selected country
   const dataFiltered =
     data.filter((d) => d.countryCode === selectedCountry)[0]?.categories || [];
-  console.log("Filtered Data for Viz 12:", dataFiltered);
 
   // layout dimensions
   const vis12Container = document.querySelector("#vis12");

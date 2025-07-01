@@ -7,9 +7,17 @@ export function Vis4(props) {
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth.csv"
     ).then((data) => {
       data.forEach((d) => {
-        d["Growth (%)"] = +d["Growth (%)"];
         d["Growth Text"] = "+" + Math.round(d["Growth (%)"] * 100) + "%";
       });
+      data.forEach((d) => {
+        d["Growth (%)"] = +d["Growth (%)"] + 1.0;
+      });
+      data.push({
+        Category: "Google & Meta",
+        "Growth (%)": 1,
+        "Growth Text": "",
+      });
+
       setData(data);
     });
   }, []);
@@ -20,7 +28,7 @@ export function Vis4(props) {
 
   // variation & data
   const variation = props.variation || "a";
-  const categoriesA = ["Google & Meta", "Gaming", "Consumer"];
+  const categoriesA = ["Google & Meta", "Gaming", "Non Gaming"];
   const categoriesB = [
     "Google & Meta",
     "E-Commerce",
@@ -36,6 +44,8 @@ export function Vis4(props) {
     );
   });
 
+  console.log("Data for Viz 4:", dataFiltered);
+
   // layout dimensions
   // width
   const groupLabelWidth = 2 / 10;
@@ -48,7 +58,13 @@ export function Vis4(props) {
   const barHeight = 195;
   const barPadding = 28;
   const numRows = dataFiltered.length;
-  const height = numRows * (barHeight + barPadding) - barPadding;
+  const margin = { top: 2, right: 0, bottom: 62, left: 2 };
+  const height =
+    numRows * (barHeight + barPadding) -
+    barPadding +
+    margin.bottom +
+    margin.top;
+  const innerHeight = height - margin.top - margin.bottom;
 
   const maxValue = d3.max(data, (d) => d["Growth (%)"]);
   const barScale = d3
@@ -102,7 +118,46 @@ export function Vis4(props) {
       preserveAspectRatio="xMidYMid meet"
       style="width:100%; height:100%; background-color:#040078"
     >
-      ${rows}
+      <g transform="translate(${margin.left}, ${margin.top})">
+        ${rows}
+        ${variation === "a"
+          ? html` <g>
+              <line
+                x1="${width * groupLabelWidth + barScale(1.0)}"
+                y1="0"
+                x2="${width * groupLabelWidth + barScale(1.0)}"
+                y2="${innerHeight + 40}"
+                stroke="#5CDEFF"
+                stroke-width="1"
+                stroke-dasharray="2,2"
+              />
+              <g
+                transform="translate(${width * groupLabelWidth +
+                barScale(1.0)}, ${innerHeight + 40})"
+              >
+                <rect
+                  x="-40"
+                  y="0"
+                  width="80"
+                  height="20"
+                  fill="#5CDEFF"
+                  rx="10"
+                  ry="10"
+                />
+                <text
+                  x="${0}"
+                  y="4"
+                  dominant-baseline="hanging"
+                  text-anchor="middle"
+                  class="charts-text-body"
+                  fill="#040078"
+                >
+                  Baseline
+                </text>
+              </g>
+            </g>`
+          : ""}
+      </g>
     </svg>
   </div>`;
 }
