@@ -104,6 +104,9 @@ this is to create a pattern of three colors that repeats every three rows
   g.consumer.value-labels path {
     fill: var(--sankey-labels);
   }
+  g.consumer.value-labels path.IAE {
+    fill: var(--sankey-active-bar-IAE);
+  }
   g.gaming.value-labels path {
     opacity: 0;
   }
@@ -143,6 +146,9 @@ this is to create a pattern of three colors that repeats every three rows
 
   g.gaming.value-labels path {
     fill: var(--sankey-labels);
+  }
+  g.gaming.value-labels path.IAE {
+    fill: var(--sankey-active-bar-IAE);
   }
   g.consumer.value-labels path {
     opacity: 0;
