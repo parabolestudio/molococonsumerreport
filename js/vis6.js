@@ -7,7 +7,7 @@ export function Vis6() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile_updated.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];

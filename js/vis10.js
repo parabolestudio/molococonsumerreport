@@ -48,18 +48,40 @@ export function Vis10() {
   const selectedCountry = "US";
   const countryData = data.filter((d) => d.countryCode === selectedCountry)[0]
     .values;
-  console.log("Country Data for Viz 10:", countryData);
+  // console.log("Country Data for Viz 10:", countryData);
 
   // data and scales
+  // TODO: make min / max based on all countries
+  // for now, use USA as example
   const minValue = d3.min(countryData, (d) => d.yearGrowth);
   const maxValue = d3.max(countryData, (d) => d.yearGrowth);
+  console.log("Min/Max Values for Viz 10:", minValue, maxValue);
 
   // layout dimensions
-  const width = 100;
-  const height = 15;
-  const margin = { top: 5, right: 5, bottom: 5, left: 5 };
-  const innerWidth = width - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;
+  const vis10Container = document.querySelector("#vis10_test");
+  const width =
+    vis10Container && vis10Container.offsetWidth
+      ? vis10Container.offsetWidth
+      : 600;
+  const height = 300;
+  const outerMargin = { top: 5, right: 5, bottom: 5, left: 5 };
+  const outerWidth = width - outerMargin.left - outerMargin.right;
+  const outerHeight = height - outerMargin.top - outerMargin.bottom;
+
+  const sectionMargin = { top: 0, right: 0, bottom: 0, left: 20 };
+  const exampleCountries = ["USA", "Canada", "Mexico"];
+  const sectionScale = d3
+    .scaleBand()
+    .domain(exampleCountries)
+    .range([0, outerWidth])
+    .padding(0.1);
+  const sectionInnerWidth =
+    sectionScale.bandwidth() - sectionMargin.left - sectionMargin.right;
+
+  const valueScale = d3
+    .scaleLinear()
+    .domain([minValue, maxValue])
+    .range([outerHeight, 0]);
 
   return html`<div class="vis-container-inner">
     <p>Vis10</p>
@@ -68,7 +90,41 @@ export function Vis10() {
       preserveAspectRatio="xMidYMid meet"
       style="width:100%; height:100%; border: 1px solid black;"
     >
-      <g transform="translate(${margin.left}, ${margin.top})"></g>
+      <g transform="translate(${outerMargin.left}, ${outerMargin.top})">
+        <rect
+          x="0"
+          y="0"
+          width="${outerWidth}"
+          height="${outerHeight}"
+          fill="lightgray"
+        />
+        ${exampleCountries.map((country, index) => {
+          return html`<g
+            class="section"
+            transform="translate(${sectionScale(country)}, 0)"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="${sectionScale.bandwidth()}"
+              height="${outerHeight}"
+              fill="pink"
+            />
+            <g
+              transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
+            >
+              <line x1="0" y1="0" x2="0" y2="${outerHeight}" stroke="red" />
+              <line
+                x1="${-sectionMargin.left}"
+                y1="${valueScale(0)}"
+                x2="${sectionInnerWidth}"
+                y2="${valueScale(0)}"
+                stroke="blue"
+              />
+            </g>
+          </g>`;
+        })}
+      </g>
     </svg>
   </div>`;
 }
