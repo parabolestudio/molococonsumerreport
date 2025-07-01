@@ -39,7 +39,12 @@ export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("USA");
   const initialCategories = ["Automotive", "Business", "Entertainment"];
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([
+    "Automotive",
+    "Business",
+    "Entertainment",
+  ]);
+  // const [selectedCategories, setSelectedCategories] = useState([]);
 
   // Fetch data on mount
   useEffect(() => {
@@ -109,22 +114,24 @@ export function Vis12() {
     });
   }
 
-  // get selected country
+  // filter data based on selected country
+  // and get categories for that country
   const dataFiltered =
     data.filter((d) => d.countryCode === selectedCountry)[0]?.categories || [];
   const categories = dataFiltered.map((d) => d.category);
 
+  // filter data based on selected categories
+  const dataFilteredWithSelectedCategories = dataFiltered.filter((d) =>
+    selectedCategories.includes(d.category)
+  );
+
   // multi select dropdown for categories
   // coded separately in HTML with select2
-  console.log("Data for Viz 12:dataFiltered", dataFiltered);
-
   useEffect(() => {
     updateMultiSelect(
       categories,
       initialCategories,
       (newlySelectedCategories) => {
-        console.log("callback");
-        console.log("newlySelectedCategories", newlySelectedCategories);
         setSelectedCategories(newlySelectedCategories);
       }
     );
@@ -141,7 +148,8 @@ export function Vis12() {
   const valueOvershot = 40;
   const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =
-    (heightPerCategory + categoryPadding) * dataFiltered.length +
+    (heightPerCategory + categoryPadding) *
+      dataFilteredWithSelectedCategories.length +
     categoryPadding +
     margin.top +
     margin.bottom;
@@ -169,7 +177,7 @@ export function Vis12() {
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
 
-  const rows = dataFiltered.map((d, index) => {
+  const rows = dataFilteredWithSelectedCategories.map((d, index) => {
     return html`<g
       transform="translate(0, ${index * (heightPerCategory + categoryPadding)})"
       class="vis12-row"
