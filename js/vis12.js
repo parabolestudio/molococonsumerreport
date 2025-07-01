@@ -3,6 +3,11 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("USA");
+  const [selectedCategories, setSelectedCategories] = useState([
+    "Automotive",
+    "Business",
+    "Entertainment",
+  ]);
 
   // Fetch data on mount
   useEffect(() => {
@@ -57,11 +62,38 @@ export function Vis12() {
 
   // multi select dropdown for categories
   // coded separately in HTML with select2
-  // create event listener to listen for changes
-  $("#viz12-select").on("change", function (e) {
-    // Your code here
-    console.log("selection items", $("#viz12-select").select2("data"));
-  });
+
+  var categoryData1 = {
+    id: "Category1",
+    text: "Category1",
+  };
+
+  if (typeof window !== "undefined" && window.$) {
+    var newOption = new Option(
+      categoryData1.text,
+      categoryData1.id,
+      true,
+      true
+    );
+    window.$("#viz12-select").append(newOption).trigger("change");
+    var categoryData2 = {
+      id: "Category2",
+      text: "Category2",
+    };
+
+    var newOption = new Option(
+      categoryData2.text,
+      categoryData2.id,
+      true,
+      true
+    );
+    window.$("#viz12-select").append(newOption).trigger("change");
+
+    // create event listener to listen for changes
+    window.$("#viz12-select").on("change", function (e) {
+      console.log("selection items", window.$("#viz12-select").select2("data"));
+    });
+  }
 
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
