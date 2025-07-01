@@ -91,8 +91,6 @@ export function Vis2() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="vis2-main"
-        width="832"
-        height="1179"
         fill="none"
         viewBox="0 0 832 1179"
       >
