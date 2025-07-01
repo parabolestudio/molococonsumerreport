@@ -55,6 +55,14 @@ export function Vis12() {
     return html`<div>Loading...</div>`;
   }
 
+  // multi select dropdown for categories
+  // coded separately in HTML with select2
+  // create event listener to listen for changes
+  $("#viz12-select").on("change", function (e) {
+    // Your code here
+    console.log("selection items", $("#viz12-select").select2("data"));
+  });
+
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.countryCode).sort();
