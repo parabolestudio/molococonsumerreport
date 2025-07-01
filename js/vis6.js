@@ -53,7 +53,7 @@ export function Vis6() {
   const regions = data.map((d) => d.region);
   const uniqueRegions = Array.from(new Set(regions)).sort();
   // add "Default" option
-  uniqueRegions.unshift("Custom Selection");
+  // uniqueRegions.unshift("Custom Selection");
 
   let regionDropdown = document.querySelector("#viz6_dropdown_regions");
   if (regionDropdown) regionDropdown.innerHTML = "";
