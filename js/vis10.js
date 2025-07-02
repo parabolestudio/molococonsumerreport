@@ -69,6 +69,8 @@ export function Vis10() {
           ? parseFloat(d["2024 vs. 2023 Growth"].replace("%", ""))
           : null;
         delete d["2024 vs. 2023 Growth"];
+
+        d["randomX"] = Math.random();
       });
 
       // Process tooltip data
@@ -127,6 +129,7 @@ export function Vis10() {
             category: v.category,
             share: v.share,
             yearGrowth: v.yearGrowth,
+            randomX: v.randomX,
           })),
         };
       });
@@ -205,6 +208,12 @@ export function Vis10() {
 
         ${exampleCountries.map((country, index) => {
           const countryData = data[0].values;
+          console.log(
+            "Country Data for Section:",
+            country,
+            countryData,
+            data[0]
+          );
 
           return html`<g
             class="section"
@@ -255,8 +264,18 @@ export function Vis10() {
               </g>
               <g class="circles">
                 ${countryData.map((d) => {
+                  // Random placement within sectionInnerWidth for each circle
+                  let x = d.randomX * sectionInnerWidth;
+                  if (x - shareRadiusScale(d.share) < 0) {
+                    x = shareRadiusScale(d.share);
+                  } else if (
+                    x + shareRadiusScale(d.share) >
+                    sectionInnerWidth
+                  ) {
+                    x = sectionInnerWidth - shareRadiusScale(d.share);
+                  }
                   return html` <circle
-                    cx="50"
+                    cx="${x}"
                     cy="${valueScale(d.yearGrowth)}"
                     r="${shareRadiusScale(d.share)}"
                     fill="${hoveredItem && hoveredItem.category === d.category
