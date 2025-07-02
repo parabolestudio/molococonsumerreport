@@ -1,6 +1,6 @@
 import { html, renderComponent } from "./js/utils/preact-htm.js";
 
-import { Vis1 } from "./js/vis1_todo.js";
+import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";

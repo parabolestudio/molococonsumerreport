@@ -208,12 +208,6 @@ export function Vis10() {
 
         ${exampleCountries.map((country, index) => {
           const countryData = data[0].values;
-          console.log(
-            "Country Data for Section:",
-            country,
-            countryData,
-            data[0]
-          );
 
           return html`<g
             class="section"
