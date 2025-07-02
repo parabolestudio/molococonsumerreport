@@ -71,6 +71,22 @@
   }
 }
 
+/*
+VIZ 1
+*/
+#vis1 {
+  .timeline path {
+    transition: all 0.3s ease-in-out;
+  }
+  .timeline-label {
+    transition: all 0.3s ease-in-out;
+  }
+  .categories rect,
+  text {
+    transition: all 0.3s ease-in-out;
+  }
+}
+
 /* 
 VIZ 2
 */

@@ -59,7 +59,7 @@ export function Vis1() {
   const widthTimeline = width * 0.5;
   const widthCategories = width * 0.5;
 
-  const marginTimeline = { top: 5, right: 25, bottom: 25, left: 25 };
+  const marginTimeline = { top: 5, right: 45, bottom: 25, left: 25 };
   const innerHeightTimeline =
     height - marginTimeline.top - marginTimeline.bottom;
   const innerWidthTimeline =
@@ -106,6 +106,11 @@ export function Vis1() {
   const timelineNonGamingLatestItem =
     nonGamingTimelineData[nonGamingTimelineData.length - 1];
 
+  const timelineGamingLegendItem =
+    gamingTimelineData[gamingTimelineData.length - 1];
+  const timelineNonGamingLegendItem =
+    nonGamingTimelineData[nonGamingTimelineData.length - 1];
+
   /*
     CATEGORY 
   */
@@ -148,65 +153,42 @@ export function Vis1() {
       preserveAspectRatio="xMidYMid meet"
       style="width:100%; height:100%;"
     >
-      <g transform="translate(${marginTimeline.left}, ${marginTimeline.top})">
-        <rect
-          x="0"
-          y="0"
-          width="${innerWidthTimeline}"
-          height="${innerHeightTimeline}"
-          fill="transparent"
-        />
-        <line
-          x1="${0}"
-          y1="0"
-          x2="${0}"
-          y2="${innerHeightTimeline}"
-          stroke="#000"
-        />
-        <line
-          x1="${0}"
-          y1="${innerHeightTimeline}"
-          x2="${innerWidthTimeline}"
-          y2="${innerHeightTimeline}"
-          stroke="#000"
-        />
-        <text
-          transform="rotate(-90)"
-          x="${0}"
-          y="${-marginTimeline.left + 15}"
-          text-anchor="end"
-          class="charts-text-body-bold"
-        >
-          Revenue
-        </text>
-        <path
-          d="${lineGenerator(gamingTimelineData)}"
-          fill="none"
-          stroke="#16D2FF"
-          stroke-width="4"
-        />
-        <path
-          d="${lineGenerator(nonGamingTimelineData)}"
-          fill="none"
-          stroke="#0280FB"
-          stroke-width="4"
-        />
-        <text
-          x="${xScaleTimeline(timelineGamingLatestItem.year) + 15}"
-          y="${yScaleTimeline(timelineGamingLatestItem.revenue)}"
-          dominant-baseline="middle"
-          class="charts-text-value-small"
-        >
-          $${timelineGamingLatestItem.revenue.toFixed(1)}B
-        </text>
-        <text
-          x="${xScaleTimeline(timelineNonGamingLatestItem.year) + 15}"
-          y="${yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
-          dominant-baseline="middle"
-          class="charts-text-value-small"
-        >
-          $${timelineNonGamingLatestItem.revenue.toFixed(1)}B
-        </text>
+      <g
+        class="timeline"
+        transform="translate(${marginTimeline.left}, ${marginTimeline.top})"
+      >
+        <g class="axis">
+          <rect
+            x="0"
+            y="0"
+            width="${innerWidthTimeline}"
+            height="${innerHeightTimeline}"
+            fill="transparent"
+          />
+          <line
+            x1="${0}"
+            y1="0"
+            x2="${0}"
+            y2="${innerHeightTimeline}"
+            stroke="#000"
+          />
+          <line
+            x1="${0}"
+            y1="${innerHeightTimeline}"
+            x2="${innerWidthTimeline}"
+            y2="${innerHeightTimeline}"
+            stroke="#000"
+          />
+          <text
+            transform="rotate(-90)"
+            x="${0}"
+            y="${-marginTimeline.left + 15}"
+            text-anchor="end"
+            class="charts-text-body-bold"
+          >
+            Revenue
+          </text>
+        </g>
         <g>
           ${xScaleTimeline.ticks(6).map((tick) => {
             const x = xScaleTimeline(tick);
@@ -228,9 +210,59 @@ export function Vis1() {
             </g>`;
           })}
         </g>
+        <path
+          d="${lineGenerator(gamingTimelineData)}"
+          fill="none"
+          stroke="#16D2FF"
+          stroke-width="4"
+        />
+        <path
+          d="${lineGenerator(nonGamingTimelineData)}"
+          fill="none"
+          stroke="#0280FB"
+          stroke-width="4"
+        />
+        <text
+          transform="translate(${xScaleTimeline(
+            timelineGamingLegendItem.year
+          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 20})"
+          class="charts-text-body-bold"
+          fill="#16D2FF"
+          text-anchor="middle"
+        >
+          Gaming Apps
+        </text>
+        <text
+          transform="translate(${xScaleTimeline(
+            timelineNonGamingLegendItem.year
+          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 20})"
+          class="charts-text-body-bold"
+          fill="#0280FB"
+          text-anchor="middle"
+        >
+          Consumer Apps
+        </text>
+        <text
+          transform="translate(${xScaleTimeline(timelineGamingLatestItem.year) +
+          15}, ${yScaleTimeline(timelineGamingLatestItem.revenue)})"
+          dominant-baseline="middle"
+          class="charts-text-value-small timeline-label"
+        >
+          $${timelineGamingLatestItem.revenue.toFixed(1)}B
+        </text>
+        <text
+          transform="translate(${xScaleTimeline(
+            timelineNonGamingLatestItem.year
+          ) + 15}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue)})"
+          dominant-baseline="middle"
+          class="charts-text-value-small timeline-label"
+        >
+          $${timelineNonGamingLatestItem.revenue.toFixed(1)}B
+        </text>
       </g>
 
       <g
+        class="categories"
         transform="translate(${widthTimeline +
         marginCategories.left}, ${marginCategories.top})"
       >
@@ -241,7 +273,7 @@ export function Vis1() {
           height="${innerHeightCategories}"
           fill="transparent"
         />
-        <g>
+        <g class="rows">
           ${categoryDataByCountry.map((d) => {
             return html`<g
               transform="translate(0, ${yScaleCategories(d.category)})"
@@ -257,8 +289,8 @@ export function Vis1() {
               />
               <${CategoryIcon} category="${d.category}" />
               <text
-                x="${xScaleCategories(d.categoryGrowth) + 10}"
-                y="${yScaleCategories.bandwidth() / 2}"
+                transform="translate(${xScaleCategories(d.categoryGrowth) +
+                10}, ${yScaleCategories.bandwidth() / 2})"
                 dominant-baseline="middle"
               >
                 <tspan class="charts-text-body">${d.category}</tspan>
@@ -269,6 +301,7 @@ export function Vis1() {
             </g>`;
           })}
         </g>
+        <text x="-20" class="charts-text-body-bold">2024 vs. 2023 growth</text>
       </g>
     </svg>
   </div>`;
