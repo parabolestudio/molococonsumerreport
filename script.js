@@ -24,7 +24,7 @@ const Vis = async (props) => {
 // loop over all visualizations and render them in general Vis component
 const visList = [
   {
-    id: "vis1_test",
+    id: "vis1",
     component: Vis1,
   },
   {
