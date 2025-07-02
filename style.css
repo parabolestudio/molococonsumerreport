@@ -16,6 +16,12 @@
   line-height: 1;
   font-family: "Spacegrotesk", "Space Grotesk", sans-serif;
 }
+.charts-text-value-small {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Spacegrotesk", "Space Grotesk", sans-serif;
+}
 
 .charts-text-white {
   fill: #ffffff;
