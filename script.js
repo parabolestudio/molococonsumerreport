@@ -70,7 +70,7 @@ const visList = [
     component: Vis9,
   },
   {
-    id: "vis10_test",
+    id: "vis10",
     component: Vis10,
   },
   {

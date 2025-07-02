@@ -66,25 +66,8 @@
 }
 
 /* 
-color fills for ridge line plot
-first, forth, and seventh row are the same color
-second, fifth, and eighth row are the same color
-third, sixth, and ninth row are the same color
-this is to create a pattern of three colors that repeats every three rows
+VIZ 2
 */
-
-.vis12-row:nth-child(3n + 1) path {
-  fill: #16d2ff;
-}
-.vis12-row:nth-child(3n + 2) path {
-  fill: #c368f9;
-}
-.vis12-row:nth-child(3n + 3) path {
-  fill: #60e2b7;
-}
-
-/* vis 2 sankey */
-
 :root {
   --sankey-active-area: #686694;
   --sankey-inactive-area: #d9d8e2;
@@ -198,4 +181,64 @@ this is to create a pattern of three colors that repeats every three rows
   g.consumer.value-labels path {
     opacity: 0;
   }
+}
+
+/*
+VIZ 10
+*/
+.viz10-container-inner {
+  position: relative;
+
+  .circles circle {
+    cursor: pointer;
+    transition: fill 0.3s ease-in-out;
+  }
+}
+.viz10-tooltip {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px;
+  border: 0.5px solid #000;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  pointer-events: none;
+
+  p {
+    color: black;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  p.tooltip-title {
+    font-weight: 700;
+  }
+  p.tooltip-value {
+    font-weight: 700;
+    font-family: "Spacegrotesk", "Space Grotesk", sans-serif;
+  }
+}
+
+/* 
+VIZ 12
+color fills for ridge line plot
+first, forth, and seventh row are the same color
+second, fifth, and eighth row are the same color
+third, sixth, and ninth row are the same color
+this is to create a pattern of three colors that repeats every three rows
+*/
+.vis12-row:nth-child(3n + 1) path {
+  fill: #16d2ff;
+}
+.vis12-row:nth-child(3n + 2) path {
+  fill: #c368f9;
+}
+.vis12-row:nth-child(3n + 3) path {
+  fill: #60e2b7;
 }
