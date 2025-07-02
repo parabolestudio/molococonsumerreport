@@ -125,6 +125,23 @@ export function Vis1() {
     .range([0, innerHeightCategories])
     .padding(0.5);
 
+  // set values for country code dropdown
+  const countries = timelineData.map((d) => d.country);
+  const uniqueCountries = Array.from(new Set(countries));
+  let countryDropdown = document.querySelector("#viz1_dropdown_countries");
+  if (countryDropdown) {
+    if (countryDropdown) countryDropdown.innerHTML = "";
+    uniqueCountries.forEach((country) => {
+      let option = document.createElement("option");
+      option.text = country;
+      countryDropdown.add(option);
+    });
+    countryDropdown.value = selectedCountry;
+    countryDropdown.addEventListener("change", (e) => {
+      setSelectedCountry(e.target.value);
+    });
+  }
+
   return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
