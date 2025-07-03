@@ -219,7 +219,10 @@ const Vis11Bottom = ({ selectedCountry, selectedCategory }) => {
   );
   const ageTemplateColumns = ageData.map((d) => `${d.value}%`).join(" ");
   const ageGridElements = ageData.map(
-    (d, i) => html`<div style="grid-area: 1 / ${i + 1} / 2 / ${i + 1};">
+    (d, i) => html`<div
+        style="grid-area: 1 / ${i + 1} / 2 / ${i + 1};"
+        class="group"
+      >
         <p class="sublabel">${d.group}</p>
       </div>
       <div style="grid-area: 2 / ${i + 1} / 3 / ${i + 1};" class="bar">

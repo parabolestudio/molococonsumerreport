@@ -335,6 +335,7 @@ VIZ 11
 
   .dots {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
 
     .dot {
@@ -365,7 +366,7 @@ VIZ 11
   .vis-11-grid-age {
     display: grid;
     grid-template-rows: auto 30px;
-    grid-column-gap: 5px;
+    grid-column-gap: 0px;
     grid-row-gap: 5px;
     margin-top: 16px;
     margin-top: 10px;
@@ -374,6 +375,13 @@ VIZ 11
       background-color: #60e2b7;
       border-radius: 5px;
       text-align: center;
+      border-left: 2px solid #ccf5e8;
+      border-right: 2px solid #ccf5e8;
+    }
+    .group {
+      display: flex;
+      justify-content: center;
+      align-items: end;
     }
     .number {
       font-size: 14px;
