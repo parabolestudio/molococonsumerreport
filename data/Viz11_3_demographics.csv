@@ -1,0 +1,456 @@
+Country,Country code,Genre,Demographics (Age),%
+Australia,AUS,RMG,18-24,0.19
+Australia,AUS,RMG,25-34,0.38
+Australia,AUS,RMG,35-44,0.209
+Australia,AUS,RMG,45-54,0.149
+Australia,AUS,RMG,55+,0.072
+Australia,AUS,E-Commerce,18-24,0.126
+Australia,AUS,E-Commerce,25-34,0.304
+Australia,AUS,E-Commerce,35-44,0.415
+Australia,AUS,E-Commerce,45-54,0.131
+Australia,AUS,E-Commerce,55+,0.024
+Australia,AUS,On Demand,18-24,0.274
+Australia,AUS,On Demand,25-34,0.411
+Australia,AUS,On Demand,35-44,0.221
+Australia,AUS,On Demand,45-54,0.083
+Australia,AUS,On Demand,55+,0.011
+Australia,AUS,Travel,18-24,0.194
+Australia,AUS,Travel,25-34,0.386
+Australia,AUS,Travel,35-44,0.209
+Australia,AUS,Travel,45-54,0.168
+Australia,AUS,Travel,55+,0.043
+Australia,AUS,Finance,18-24,0.094
+Australia,AUS,Finance,25-34,0.588
+Australia,AUS,Finance,35-44,0.173
+Australia,AUS,Finance,45-54,0.144
+Australia,AUS,Finance,55+,0
+Australia,AUS,Entertainment,18-24,0.313
+Australia,AUS,Entertainment,25-34,0.323
+Australia,AUS,Entertainment,35-44,0.224
+Australia,AUS,Entertainment,45-54,0.113
+Australia,AUS,Entertainment,55+,0.027
+Australia,AUS,Social,18-24,0.467
+Australia,AUS,Social,25-34,0.306
+Australia,AUS,Social,35-44,0.141
+Australia,AUS,Social,45-54,0.077
+Australia,AUS,Social,55+,0.009
+Brazil,BRA,RMG,18-24,0.125
+Brazil,BRA,RMG,25-34,0.42
+Brazil,BRA,RMG,35-44,0.316
+Brazil,BRA,RMG,45-54,0.115
+Brazil,BRA,RMG,55+,0.024
+Brazil,BRA,E-Commerce,18-24,0.155
+Brazil,BRA,E-Commerce,25-34,0.43
+Brazil,BRA,E-Commerce,35-44,0.292
+Brazil,BRA,E-Commerce,45-54,0.102
+Brazil,BRA,E-Commerce,55+,0.021
+Brazil,BRA,On Demand,18-24,0.322
+Brazil,BRA,On Demand,25-34,0.386
+Brazil,BRA,On Demand,35-44,0.208
+Brazil,BRA,On Demand,45-54,0.073
+Brazil,BRA,On Demand,55+,0.012
+Brazil,BRA,Travel,18-24,0.076
+Brazil,BRA,Travel,25-34,0.359
+Brazil,BRA,Travel,35-44,0.384
+Brazil,BRA,Travel,45-54,0.151
+Brazil,BRA,Travel,55+,0.03
+Brazil,BRA,Finance,18-24,0.185
+Brazil,BRA,Finance,25-34,0.423
+Brazil,BRA,Finance,35-44,0.261
+Brazil,BRA,Finance,45-54,0.106
+Brazil,BRA,Finance,55+,0.025
+Brazil,BRA,Entertainment,18-24,0.427
+Brazil,BRA,Entertainment,25-34,0.364
+Brazil,BRA,Entertainment,35-44,0.138
+Brazil,BRA,Entertainment,45-54,0.057
+Brazil,BRA,Entertainment,55+,0.014
+Brazil,BRA,Social,18-24,0.405
+Brazil,BRA,Social,25-34,0.369
+Brazil,BRA,Social,35-44,0.147
+Brazil,BRA,Social,45-54,0.06
+Brazil,BRA,Social,55+,0.019
+Canada,CAN,RMG,18-24,0.136
+Canada,CAN,RMG,25-34,0.385
+Canada,CAN,RMG,35-44,0.211
+Canada,CAN,RMG,45-54,0.185
+Canada,CAN,RMG,55+,0.083
+Canada,CAN,E-Commerce,18-24,0.099
+Canada,CAN,E-Commerce,25-34,0.302
+Canada,CAN,E-Commerce,35-44,0.286
+Canada,CAN,E-Commerce,45-54,0.21
+Canada,CAN,E-Commerce,55+,0.103
+Canada,CAN,On Demand,18-24,0.192
+Canada,CAN,On Demand,25-34,0.323
+Canada,CAN,On Demand,35-44,0.241
+Canada,CAN,On Demand,45-54,0.138
+Canada,CAN,On Demand,55+,0.106
+Canada,CAN,Travel,18-24,0.063
+Canada,CAN,Travel,25-34,0.34
+Canada,CAN,Travel,35-44,0.31
+Canada,CAN,Travel,45-54,0.168
+Canada,CAN,Travel,55+,0.118
+Canada,CAN,Finance,18-24,0.147
+Canada,CAN,Finance,25-34,0.425
+Canada,CAN,Finance,35-44,0.296
+Canada,CAN,Finance,45-54,0.054
+Canada,CAN,Finance,55+,0.078
+Canada,CAN,Entertainment,18-24,0.278
+Canada,CAN,Entertainment,25-34,0.282
+Canada,CAN,Entertainment,35-44,0.185
+Canada,CAN,Entertainment,45-54,0.228
+Canada,CAN,Entertainment,55+,0.027
+Canada,CAN,Social,18-24,0.355
+Canada,CAN,Social,25-34,0.285
+Canada,CAN,Social,35-44,0.158
+Canada,CAN,Social,45-54,0.086
+Canada,CAN,Social,55+,0.117
+Germany,DEU,RMG,18-24,0.143
+Germany,DEU,RMG,25-34,0.301
+Germany,DEU,RMG,35-44,0.24
+Germany,DEU,RMG,45-54,0.21
+Germany,DEU,RMG,55+,0.106
+Germany,DEU,E-Commerce,18-24,0.079
+Germany,DEU,E-Commerce,25-34,0.282
+Germany,DEU,E-Commerce,35-44,0.31
+Germany,DEU,E-Commerce,45-54,0.199
+Germany,DEU,E-Commerce,55+,0.13
+Germany,DEU,On Demand,18-24,0.256
+Germany,DEU,On Demand,25-34,0.346
+Germany,DEU,On Demand,35-44,0.231
+Germany,DEU,On Demand,45-54,0.117
+Germany,DEU,On Demand,55+,0.05
+Germany,DEU,Travel,18-24,0.196
+Germany,DEU,Travel,25-34,0.434
+Germany,DEU,Travel,35-44,0.167
+Germany,DEU,Travel,45-54,0.137
+Germany,DEU,Travel,55+,0.067
+Germany,DEU,Finance,18-24,0.05
+Germany,DEU,Finance,25-34,0.32
+Germany,DEU,Finance,35-44,0.339
+Germany,DEU,Finance,45-54,0.199
+Germany,DEU,Finance,55+,0.092
+Germany,DEU,Entertainment,18-24,0.28
+Germany,DEU,Entertainment,25-34,0.302
+Germany,DEU,Entertainment,35-44,0.169
+Germany,DEU,Entertainment,45-54,0.168
+Germany,DEU,Entertainment,55+,0.081
+Germany,DEU,Social,18-24,0.339
+Germany,DEU,Social,25-34,0.405
+Germany,DEU,Social,35-44,0.131
+Germany,DEU,Social,45-54,0.069
+Germany,DEU,Social,55+,0.056
+France,FRA,RMG,18-24,0.177
+France,FRA,RMG,25-34,0.281
+France,FRA,RMG,35-44,0.263
+France,FRA,RMG,45-54,0.17
+France,FRA,RMG,55+,0.109
+France,FRA,E-Commerce,18-24,0.1
+France,FRA,E-Commerce,25-34,0.244
+France,FRA,E-Commerce,35-44,0.327
+France,FRA,E-Commerce,45-54,0.208
+France,FRA,E-Commerce,55+,0.122
+France,FRA,On Demand,18-24,0.281
+France,FRA,On Demand,25-34,0.313
+France,FRA,On Demand,35-44,0.288
+France,FRA,On Demand,45-54,0.099
+France,FRA,On Demand,55+,0.018
+France,FRA,Travel,18-24,0.103
+France,FRA,Travel,25-34,0.446
+France,FRA,Travel,35-44,0.237
+France,FRA,Travel,45-54,0.128
+France,FRA,Travel,55+,0.085
+France,FRA,Finance,18-24,0.136
+France,FRA,Finance,25-34,0.335
+France,FRA,Finance,35-44,0.273
+France,FRA,Finance,45-54,0.168
+France,FRA,Finance,55+,0.089
+France,FRA,Entertainment,18-24,0.414
+France,FRA,Entertainment,25-34,0.273
+France,FRA,Entertainment,35-44,0.151
+France,FRA,Entertainment,45-54,0.097
+France,FRA,Entertainment,55+,0.066
+France,FRA,Social,18-24,0.416
+France,FRA,Social,25-34,0.349
+France,FRA,Social,35-44,0.116
+France,FRA,Social,45-54,0.068
+France,FRA,Social,55+,0.051
+U.K.,GBR,RMG,18-24,0.138
+U.K.,GBR,RMG,25-34,0.298
+U.K.,GBR,RMG,35-44,0.307
+U.K.,GBR,RMG,45-54,0.179
+U.K.,GBR,RMG,55+,0.078
+U.K.,GBR,E-Commerce,18-24,0.126
+U.K.,GBR,E-Commerce,25-34,0.259
+U.K.,GBR,E-Commerce,35-44,0.321
+U.K.,GBR,E-Commerce,45-54,0.205
+U.K.,GBR,E-Commerce,55+,0.089
+U.K.,GBR,On Demand,18-24,0.275
+U.K.,GBR,On Demand,25-34,0.34
+U.K.,GBR,On Demand,35-44,0.224
+U.K.,GBR,On Demand,45-54,0.118
+U.K.,GBR,On Demand,55+,0.043
+U.K.,GBR,Travel,18-24,0.154
+U.K.,GBR,Travel,25-34,0.31
+U.K.,GBR,Travel,35-44,0.267
+U.K.,GBR,Travel,45-54,0.201
+U.K.,GBR,Travel,55+,0.068
+U.K.,GBR,Finance,18-24,0.09
+U.K.,GBR,Finance,25-34,0.426
+U.K.,GBR,Finance,35-44,0.292
+U.K.,GBR,Finance,45-54,0.151
+U.K.,GBR,Finance,55+,0.041
+U.K.,GBR,Entertainment,18-24,0.41
+U.K.,GBR,Entertainment,25-34,0.292
+U.K.,GBR,Entertainment,35-44,0.142
+U.K.,GBR,Entertainment,45-54,0.093
+U.K.,GBR,Entertainment,55+,0.063
+U.K.,GBR,Social,18-24,0.445
+U.K.,GBR,Social,25-34,0.312
+U.K.,GBR,Social,35-44,0.134
+U.K.,GBR,Social,45-54,0.063
+U.K.,GBR,Social,55+,0.046
+Indonesia,IDN,RMG,18-24,0.264
+Indonesia,IDN,RMG,25-34,0.341
+Indonesia,IDN,RMG,35-44,0.275
+Indonesia,IDN,RMG,45-54,0.1
+Indonesia,IDN,RMG,55+,0.02
+Indonesia,IDN,E-Commerce,18-24,0.14
+Indonesia,IDN,E-Commerce,25-34,0.41
+Indonesia,IDN,E-Commerce,35-44,0.357
+Indonesia,IDN,E-Commerce,45-54,0.077
+Indonesia,IDN,E-Commerce,55+,0.016
+Indonesia,IDN,On Demand,18-24,0.309
+Indonesia,IDN,On Demand,25-34,0.397
+Indonesia,IDN,On Demand,35-44,0.247
+Indonesia,IDN,On Demand,45-54,0.037
+Indonesia,IDN,On Demand,55+,0.01
+Indonesia,IDN,Travel,18-24,0.145
+Indonesia,IDN,Travel,25-34,0.41
+Indonesia,IDN,Travel,35-44,0.302
+Indonesia,IDN,Travel,45-54,0.112
+Indonesia,IDN,Travel,55+,0.031
+Indonesia,IDN,Finance,18-24,0.079
+Indonesia,IDN,Finance,25-34,0.427
+Indonesia,IDN,Finance,35-44,0.38
+Indonesia,IDN,Finance,45-54,0.111
+Indonesia,IDN,Finance,55+,0.003
+Indonesia,IDN,Entertainment,18-24,0.402
+Indonesia,IDN,Entertainment,25-34,0.394
+Indonesia,IDN,Entertainment,35-44,0.121
+Indonesia,IDN,Entertainment,45-54,0.071
+Indonesia,IDN,Entertainment,55+,0.013
+Indonesia,IDN,Social,18-24,0.365
+Indonesia,IDN,Social,25-34,0.395
+Indonesia,IDN,Social,35-44,0.151
+Indonesia,IDN,Social,45-54,0.065
+Indonesia,IDN,Social,55+,0.024
+India,IND,RMG,18-24,0.245
+India,IND,RMG,25-34,0.462
+India,IND,RMG,35-44,0.243
+India,IND,RMG,45-54,0.045
+India,IND,RMG,55+,0.006
+India,IND,E-Commerce,18-24,0.208
+India,IND,E-Commerce,25-34,0.431
+India,IND,E-Commerce,35-44,0.285
+India,IND,E-Commerce,45-54,0.065
+India,IND,E-Commerce,55+,0.01
+India,IND,On Demand,18-24,0.42
+India,IND,On Demand,25-34,0.366
+India,IND,On Demand,35-44,0.17
+India,IND,On Demand,45-54,0.04
+India,IND,On Demand,55+,0.005
+India,IND,Travel,18-24,0.191
+India,IND,Travel,25-34,0.51
+India,IND,Travel,35-44,0.237
+India,IND,Travel,45-54,0.053
+India,IND,Travel,55+,0.008
+India,IND,Finance,18-24,0.081
+India,IND,Finance,25-34,0.509
+India,IND,Finance,35-44,0.328
+India,IND,Finance,45-54,0.082
+India,IND,Finance,55+,0.001
+India,IND,Entertainment,18-24,0.488
+India,IND,Entertainment,25-34,0.346
+India,IND,Entertainment,35-44,0.126
+India,IND,Entertainment,45-54,0.032
+India,IND,Entertainment,55+,0.007
+India,IND,Social,18-24,0.478
+India,IND,Social,25-34,0.365
+India,IND,Social,35-44,0.112
+India,IND,Social,45-54,0.034
+India,IND,Social,55+,0.011
+Japan,JPN,RMG,18-24,0.065
+Japan,JPN,RMG,25-34,0.222
+Japan,JPN,RMG,35-44,0.214
+Japan,JPN,RMG,45-54,0.163
+Japan,JPN,RMG,55+,0.335
+Japan,JPN,E-Commerce,18-24,0.059
+Japan,JPN,E-Commerce,25-34,0.173
+Japan,JPN,E-Commerce,35-44,0.379
+Japan,JPN,E-Commerce,45-54,0.215
+Japan,JPN,E-Commerce,55+,0.175
+Japan,JPN,On Demand,18-24,0.114
+Japan,JPN,On Demand,25-34,0.292
+Japan,JPN,On Demand,35-44,0.364
+Japan,JPN,On Demand,45-54,0.154
+Japan,JPN,On Demand,55+,0.077
+Japan,JPN,Travel,18-24,0.035
+Japan,JPN,Travel,25-34,0.269
+Japan,JPN,Travel,35-44,0.39
+Japan,JPN,Travel,45-54,0.163
+Japan,JPN,Travel,55+,0.143
+Japan,JPN,Finance,18-24,0.098
+Japan,JPN,Finance,25-34,0.304
+Japan,JPN,Finance,35-44,0.311
+Japan,JPN,Finance,45-54,0.163
+Japan,JPN,Finance,55+,0.123
+Japan,JPN,Entertainment,18-24,0.302
+Japan,JPN,Entertainment,25-34,0.33
+Japan,JPN,Entertainment,35-44,0.195
+Japan,JPN,Entertainment,45-54,0.088
+Japan,JPN,Entertainment,55+,0.084
+Japan,JPN,Social,18-24,0.285
+Japan,JPN,Social,25-34,0.336
+Japan,JPN,Social,35-44,0.195
+Japan,JPN,Social,45-54,0.1
+Japan,JPN,Social,55+,0.084
+South Korea,KOR,RMG,18-24,0.072
+South Korea,KOR,RMG,25-34,0.243
+South Korea,KOR,RMG,35-44,0.304
+South Korea,KOR,RMG,45-54,0.177
+South Korea,KOR,RMG,55+,0.204
+South Korea,KOR,E-Commerce,18-24,0.069
+South Korea,KOR,E-Commerce,25-34,0.172
+South Korea,KOR,E-Commerce,35-44,0.398
+South Korea,KOR,E-Commerce,45-54,0.267
+South Korea,KOR,E-Commerce,55+,0.094
+South Korea,KOR,On Demand,18-24,0.138
+South Korea,KOR,On Demand,25-34,0.372
+South Korea,KOR,On Demand,35-44,0.289
+South Korea,KOR,On Demand,45-54,0.175
+South Korea,KOR,On Demand,55+,0.025
+South Korea,KOR,Travel,18-24,0.019
+South Korea,KOR,Travel,25-34,0.19
+South Korea,KOR,Travel,35-44,0.552
+South Korea,KOR,Travel,45-54,0.192
+South Korea,KOR,Travel,55+,0.047
+South Korea,KOR,Finance,18-24,0.115
+South Korea,KOR,Finance,25-34,0.286
+South Korea,KOR,Finance,35-44,0.256
+South Korea,KOR,Finance,45-54,0.219
+South Korea,KOR,Finance,55+,0.123
+South Korea,KOR,Entertainment,18-24,0.26
+South Korea,KOR,Entertainment,25-34,0.4
+South Korea,KOR,Entertainment,35-44,0.189
+South Korea,KOR,Entertainment,45-54,0.087
+South Korea,KOR,Entertainment,55+,0.064
+South Korea,KOR,Social,18-24,0.215
+South Korea,KOR,Social,25-34,0.338
+South Korea,KOR,Social,35-44,0.223
+South Korea,KOR,Social,45-54,0.133
+South Korea,KOR,Social,55+,0.09
+Mexico,MEX,RMG,18-24,0.218
+Mexico,MEX,RMG,25-34,0.446
+Mexico,MEX,RMG,35-44,0.226
+Mexico,MEX,RMG,45-54,0.088
+Mexico,MEX,RMG,55+,0.022
+Mexico,MEX,E-Commerce,18-24,0.158
+Mexico,MEX,E-Commerce,25-34,0.39
+Mexico,MEX,E-Commerce,35-44,0.292
+Mexico,MEX,E-Commerce,45-54,0.128
+Mexico,MEX,E-Commerce,55+,0.032
+Mexico,MEX,On Demand,18-24,0.26
+Mexico,MEX,On Demand,25-34,0.415
+Mexico,MEX,On Demand,35-44,0.219
+Mexico,MEX,On Demand,45-54,0.098
+Mexico,MEX,On Demand,55+,0.008
+Mexico,MEX,Travel,18-24,0.048
+Mexico,MEX,Travel,25-34,0.402
+Mexico,MEX,Travel,35-44,0.362
+Mexico,MEX,Travel,45-54,0.137
+Mexico,MEX,Travel,55+,0.051
+Mexico,MEX,Finance,18-24,0.233
+Mexico,MEX,Finance,25-34,0.456
+Mexico,MEX,Finance,35-44,0.211
+Mexico,MEX,Finance,45-54,0.075
+Mexico,MEX,Finance,55+,0.026
+Mexico,MEX,Entertainment,18-24,0.45
+Mexico,MEX,Entertainment,25-34,0.332
+Mexico,MEX,Entertainment,35-44,0.11
+Mexico,MEX,Entertainment,45-54,0.075
+Mexico,MEX,Entertainment,55+,0.033
+Mexico,MEX,Social,18-24,0.394
+Mexico,MEX,Social,25-34,0.39
+Mexico,MEX,Social,35-44,0.141
+Mexico,MEX,Social,45-54,0.054
+Mexico,MEX,Social,55+,0.022
+U.S.,USA,RMG,18-24,0.135
+U.S.,USA,RMG,25-34,0.352
+U.S.,USA,RMG,35-44,0.281
+U.S.,USA,RMG,45-54,0.13
+U.S.,USA,RMG,55+,0.102
+U.S.,USA,E-Commerce,18-24,0.079
+U.S.,USA,E-Commerce,25-34,0.297
+U.S.,USA,E-Commerce,35-44,0.308
+U.S.,USA,E-Commerce,45-54,0.178
+U.S.,USA,E-Commerce,55+,0.139
+U.S.,USA,On Demand,18-24,0.216
+U.S.,USA,On Demand,25-34,0.316
+U.S.,USA,On Demand,35-44,0.236
+U.S.,USA,On Demand,45-54,0.149
+U.S.,USA,On Demand,55+,0.084
+U.S.,USA,Travel,18-24,0.045
+U.S.,USA,Travel,25-34,0.282
+U.S.,USA,Travel,35-44,0.316
+U.S.,USA,Travel,45-54,0.226
+U.S.,USA,Travel,55+,0.131
+U.S.,USA,Finance,18-24,0.177
+U.S.,USA,Finance,25-34,0.395
+U.S.,USA,Finance,35-44,0.221
+U.S.,USA,Finance,45-54,0.12
+U.S.,USA,Finance,55+,0.087
+U.S.,USA,Entertainment,18-24,0.381
+U.S.,USA,Entertainment,25-34,0.292
+U.S.,USA,Entertainment,35-44,0.135
+U.S.,USA,Entertainment,45-54,0.102
+U.S.,USA,Entertainment,55+,0.089
+U.S.,USA,Social,18-24,0.391
+U.S.,USA,Social,25-34,0.325
+U.S.,USA,Social,35-44,0.128
+U.S.,USA,Social,45-54,0.072
+U.S.,USA,Social,55+,0.084
+Vietnam,VNM,RMG,18-24,0.062
+Vietnam,VNM,RMG,25-34,0.523
+Vietnam,VNM,RMG,35-44,0.257
+Vietnam,VNM,RMG,45-54,0.104
+Vietnam,VNM,RMG,55+,0.055
+Vietnam,VNM,E-Commerce,18-24,0.236
+Vietnam,VNM,E-Commerce,25-34,0.476
+Vietnam,VNM,E-Commerce,35-44,0.207
+Vietnam,VNM,E-Commerce,45-54,0.075
+Vietnam,VNM,E-Commerce,55+,0.006
+Vietnam,VNM,On Demand,18-24,0.191
+Vietnam,VNM,On Demand,25-34,0.502
+Vietnam,VNM,On Demand,35-44,0.202
+Vietnam,VNM,On Demand,45-54,0.077
+Vietnam,VNM,On Demand,55+,0.028
+Vietnam,VNM,Travel,18-24,0.033
+Vietnam,VNM,Travel,25-34,0.576
+Vietnam,VNM,Travel,35-44,0.274
+Vietnam,VNM,Travel,45-54,0.109
+Vietnam,VNM,Travel,55+,0.009
+Vietnam,VNM,Finance,18-24,0.037
+Vietnam,VNM,Finance,25-34,0.392
+Vietnam,VNM,Finance,35-44,0.264
+Vietnam,VNM,Finance,45-54,0.302
+Vietnam,VNM,Finance,55+,0.005
+Vietnam,VNM,Entertainment,18-24,0.265
+Vietnam,VNM,Entertainment,25-34,0.606
+Vietnam,VNM,Entertainment,35-44,0.106
+Vietnam,VNM,Entertainment,45-54,0.017
+Vietnam,VNM,Entertainment,55+,0.006
+Vietnam,VNM,Social,18-24,0.275
+Vietnam,VNM,Social,25-34,0.414
+Vietnam,VNM,Social,35-44,0.206
+Vietnam,VNM,Social,45-54,0.07
+Vietnam,VNM,Social,55+,0.035

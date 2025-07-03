@@ -1,0 +1,183 @@
+Country,Country code,Genre,Demographics (Gender),%
+Australia,AUS,RMG,Men,0.752
+Australia,AUS,RMG,Women,0.248
+Australia,AUS,E-Commerce,Men,0.358
+Australia,AUS,E-Commerce,Women,0.642
+Australia,AUS,On Demand,Men,0.686
+Australia,AUS,On Demand,Women,0.314
+Australia,AUS,Travel,Men,0.661
+Australia,AUS,Travel,Women,0.339
+Australia,AUS,Finance,Men,0.729
+Australia,AUS,Finance,Women,0.271
+Australia,AUS,Entertainment,Men,0.523
+Australia,AUS,Entertainment,Women,0.477
+Australia,AUS,Social,Men,0.604
+Australia,AUS,Social,Women,0.396
+Brazil,BRA,RMG,Men,0.736
+Brazil,BRA,RMG,Women,0.264
+Brazil,BRA,E-Commerce,Men,0.271
+Brazil,BRA,E-Commerce,Women,0.729
+Brazil,BRA,On Demand,Men,0.469
+Brazil,BRA,On Demand,Women,0.531
+Brazil,BRA,Travel,Men,0.592
+Brazil,BRA,Travel,Women,0.408
+Brazil,BRA,Finance,Men,0.581
+Brazil,BRA,Finance,Women,0.419
+Brazil,BRA,Entertainment,Men,0.506
+Brazil,BRA,Entertainment,Women,0.494
+Brazil,BRA,Social,Men,0.497
+Brazil,BRA,Social,Women,0.503
+Canada,CAN,RMG,Men,0.83
+Canada,CAN,RMG,Women,0.17
+Canada,CAN,E-Commerce,Men,0.37
+Canada,CAN,E-Commerce,Women,0.63
+Canada,CAN,On Demand,Men,0.659
+Canada,CAN,On Demand,Women,0.341
+Canada,CAN,Travel,Men,0.572
+Canada,CAN,Travel,Women,0.428
+Canada,CAN,Finance,Men,0.537
+Canada,CAN,Finance,Women,0.463
+Canada,CAN,Entertainment,Men,0.518
+Canada,CAN,Entertainment,Women,0.482
+Canada,CAN,Social,Men,0.506
+Canada,CAN,Social,Women,0.494
+Germany,DEU,RMG,Men,0.811
+Germany,DEU,RMG,Women,0.189
+Germany,DEU,E-Commerce,Men,0.435
+Germany,DEU,E-Commerce,Women,0.565
+Germany,DEU,On Demand,Men,0.635
+Germany,DEU,On Demand,Women,0.365
+Germany,DEU,Travel,Men,0.578
+Germany,DEU,Travel,Women,0.422
+Germany,DEU,Finance,Men,0.608
+Germany,DEU,Finance,Women,0.392
+Germany,DEU,Entertainment,Men,0.519
+Germany,DEU,Entertainment,Women,0.481
+Germany,DEU,Social,Men,0.561
+Germany,DEU,Social,Women,0.439
+France,FRA,RMG,Men,0.765
+France,FRA,RMG,Women,0.235
+France,FRA,E-Commerce,Men,0.374
+France,FRA,E-Commerce,Women,0.626
+France,FRA,On Demand,Men,0.615
+France,FRA,On Demand,Women,0.385
+France,FRA,Travel,Men,0.571
+France,FRA,Travel,Women,0.429
+France,FRA,Finance,Men,0.691
+France,FRA,Finance,Women,0.309
+France,FRA,Entertainment,Men,0.486
+France,FRA,Entertainment,Women,0.514
+France,FRA,Social,Men,0.575
+France,FRA,Social,Women,0.425
+U.K.,GBR,RMG,Men,0.768
+U.K.,GBR,RMG,Women,0.232
+U.K.,GBR,E-Commerce,Men,0.328
+U.K.,GBR,E-Commerce,Women,0.672
+U.K.,GBR,On Demand,Men,0.569
+U.K.,GBR,On Demand,Women,0.431
+U.K.,GBR,Travel,Men,0.555
+U.K.,GBR,Travel,Women,0.445
+U.K.,GBR,Finance,Men,0.565
+U.K.,GBR,Finance,Women,0.435
+U.K.,GBR,Entertainment,Men,0.554
+U.K.,GBR,Entertainment,Women,0.446
+U.K.,GBR,Social,Men,0.512
+U.K.,GBR,Social,Women,0.488
+Indonesia,IDN,RMG,Men,0.742
+Indonesia,IDN,RMG,Women,0.258
+Indonesia,IDN,E-Commerce,Men,0.506
+Indonesia,IDN,E-Commerce,Women,0.494
+Indonesia,IDN,On Demand,Men,0.679
+Indonesia,IDN,On Demand,Women,0.321
+Indonesia,IDN,Travel,Men,0.739
+Indonesia,IDN,Travel,Women,0.261
+Indonesia,IDN,Finance,Men,0.588
+Indonesia,IDN,Finance,Women,0.412
+Indonesia,IDN,Entertainment,Men,0.627
+Indonesia,IDN,Entertainment,Women,0.373
+Indonesia,IDN,Social,Men,0.511
+Indonesia,IDN,Social,Women,0.489
+India,IND,RMG,Men,0.891
+India,IND,RMG,Women,0.109
+India,IND,E-Commerce,Men,0.472
+India,IND,E-Commerce,Women,0.528
+India,IND,On Demand,Men,0.677
+India,IND,On Demand,Women,0.323
+India,IND,Travel,Men,0.859
+India,IND,Travel,Women,0.141
+India,IND,Finance,Men,0.81
+India,IND,Finance,Women,0.19
+India,IND,Entertainment,Men,0.616
+India,IND,Entertainment,Women,0.384
+India,IND,Social,Men,0.585
+India,IND,Social,Women,0.415
+Japan,JPN,RMG,Men,0.714
+Japan,JPN,RMG,Women,0.286
+Japan,JPN,E-Commerce,Men,0.446
+Japan,JPN,E-Commerce,Women,0.554
+Japan,JPN,On Demand,Men,0.596
+Japan,JPN,On Demand,Women,0.404
+Japan,JPN,Travel,Men,0.697
+Japan,JPN,Travel,Women,0.303
+Japan,JPN,Finance,Men,0.663
+Japan,JPN,Finance,Women,0.337
+Japan,JPN,Entertainment,Men,0.566
+Japan,JPN,Entertainment,Women,0.434
+Japan,JPN,Social,Men,0.584
+Japan,JPN,Social,Women,0.416
+South Korea,KOR,RMG,Men,0.696
+South Korea,KOR,RMG,Women,0.304
+South Korea,KOR,E-Commerce,Men,0.329
+South Korea,KOR,E-Commerce,Women,0.671
+South Korea,KOR,On Demand,Men,0.615
+South Korea,KOR,On Demand,Women,0.385
+South Korea,KOR,Travel,Men,0.591
+South Korea,KOR,Travel,Women,0.409
+South Korea,KOR,Finance,Men,0.503
+South Korea,KOR,Finance,Women,0.497
+South Korea,KOR,Entertainment,Men,0.537
+South Korea,KOR,Entertainment,Women,0.463
+South Korea,KOR,Social,Men,0.533
+South Korea,KOR,Social,Women,0.467
+Mexico,MEX,RMG,Men,0.78
+Mexico,MEX,RMG,Women,0.22
+Mexico,MEX,E-Commerce,Men,0.384
+Mexico,MEX,E-Commerce,Women,0.616
+Mexico,MEX,On Demand,Men,0.594
+Mexico,MEX,On Demand,Women,0.406
+Mexico,MEX,Travel,Men,0.592
+Mexico,MEX,Travel,Women,0.408
+Mexico,MEX,Finance,Men,0.59
+Mexico,MEX,Finance,Women,0.41
+Mexico,MEX,Entertainment,Men,0.481
+Mexico,MEX,Entertainment,Women,0.519
+Mexico,MEX,Social,Men,0.49
+Mexico,MEX,Social,Women,0.51
+U.S.,USA,RMG,Men,0.816
+U.S.,USA,RMG,Women,0.184
+U.S.,USA,E-Commerce,Men,0.348
+U.S.,USA,E-Commerce,Women,0.652
+U.S.,USA,On Demand,Men,0.514
+U.S.,USA,On Demand,Women,0.486
+U.S.,USA,Travel,Men,0.584
+U.S.,USA,Travel,Women,0.416
+U.S.,USA,Finance,Men,0.538
+U.S.,USA,Finance,Women,0.462
+U.S.,USA,Entertainment,Men,0.509
+U.S.,USA,Entertainment,Women,0.491
+U.S.,USA,Social,Men,0.54
+U.S.,USA,Social,Women,0.46
+Vietnam,VNM,RMG,Men,0.849
+Vietnam,VNM,RMG,Women,0.151
+Vietnam,VNM,E-Commerce,Men,0.4
+Vietnam,VNM,E-Commerce,Women,0.6
+Vietnam,VNM,On Demand,Men,0.646
+Vietnam,VNM,On Demand,Women,0.354
+Vietnam,VNM,Travel,Men,0.685
+Vietnam,VNM,Travel,Women,0.315
+Vietnam,VNM,Finance,Men,0.849
+Vietnam,VNM,Finance,Women,0.151
+Vietnam,VNM,Entertainment,Men,0.661
+Vietnam,VNM,Entertainment,Women,0.339
+Vietnam,VNM,Social,Men,0.48
+Vietnam,VNM,Social,Women,0.52

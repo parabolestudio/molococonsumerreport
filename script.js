@@ -4,13 +4,12 @@ import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
 import { Vis3 } from "./js/vis3.js";
 import { Vis4 } from "./js/vis4.js";
-import { Vis5 } from "./js/vis5_todo.js";
 import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
 import { Vis7 } from "./js/vis7.js";
 import { Vis8 } from "./js/vis8.js";
 import { Vis9 } from "./js/vis9_todo.js";
 import { Vis10 } from "./js/vis10.js";
-import { Vis11 } from "./js/vis11_todo.js";
+import { Vis11 } from "./js/vis11.js";
 import { Vis12 } from "./js/vis12.js";
 import { Vis13 } from "./js/vis13_todo.js";
 
@@ -46,10 +45,6 @@ const visList = [
     variation: "b",
   },
   {
-    id: "vis5_test",
-    component: Vis5,
-  },
-  {
     id: "vis6",
     component: Vis6,
   },
@@ -74,7 +69,7 @@ const visList = [
     component: Vis10,
   },
   {
-    id: "vis11_test",
+    id: "vis11",
     component: Vis11,
   },
   {
