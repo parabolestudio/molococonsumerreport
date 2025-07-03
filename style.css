@@ -247,6 +247,144 @@ VIZ 10
   }
 }
 
+/*
+VIZ 11
+*/
+
+#vis11 {
+  .label,
+  .sublabel,
+  .title {
+    font-size: 14px;
+    line-height: 1.25;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    margin: 0;
+  }
+  .label {
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .sublabel {
+    font-weight: 400;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  .number {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 100%;
+    font-family: "Spacegrotesk", "Space Grotesk", sans-serif;
+    color: #000000;
+    margin: 0;
+  }
+  .vis-11-part {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .vis-11-top {
+    background-color: #60e2b7;
+    padding: 60px 30px 30px 30px;
+  }
+  .vis-11-bottom {
+    background-color: #ccf5e8;
+    padding: 30px 30px 30px 30px;
+  }
+
+  .vis-11-top-grid {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+
+    .element1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .element2 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .element3 {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .element4 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .element5 {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+    .element6 {
+      grid-area: 3 / 2 / 4 / 3;
+      display: flex;
+      gap: 4px;
+      flex-wrap: nowrap;
+    }
+
+    .pill {
+      background-color: #ccf5e8;
+      border-radius: 50px;
+      padding: 4px 14px;
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 4px;
+
+    .dot {
+      background-color: #ccf5e8;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+  }
+
+  .vis-11-bottom-top-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 68px;
+
+    .left {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .right {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+  }
+
+  .vis-11-grid-gender,
+  .vis-11-grid-age {
+    display: grid;
+    grid-template-rows: auto 30px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-top: 16px;
+    margin-top: 10px;
+
+    .bar {
+      background-color: #60e2b7;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .number {
+      font-size: 14px;
+      line-height: 30px;
+    }
+    .sublabel {
+      text-align: center;
+    }
+  }
+}
+
 /* 
 VIZ 12
 color fills for ridge line plot

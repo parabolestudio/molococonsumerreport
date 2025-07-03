@@ -1,0 +1,274 @@
+Country,Genre,Segment,Top subcat for time spent,%
+AUS,E-Commerce,Commerce - E-Commerce,Shopping,2K%
+AUS,E-Commerce,,Games / Casino,760%
+AUS,E-Commerce,,Games / Trivia,563%
+AUS,Entertainment,Content - Entertainment,Music,797%
+AUS,Entertainment,,Games / Role Playing,182%
+AUS,Entertainment,,Lifestyle,113%
+AUS,Finance,Finance - Financial Health,Games / Board,204%
+AUS,Finance,,Travel,166%
+AUS,Finance,,News,144%
+AUS,On Demand,Commerce - On-Demand,Games / Music,1.1K%
+AUS,On Demand,,Games / Casino,949%
+AUS,On Demand,,Food & Drink,790%
+AUS,RMG,RMG - RMG (Casino),Sports,1.9K%
+AUS,RMG,,Games / Casino,625%
+AUS,RMG,,Navigation,173%
+AUS,Social,Social - Social Media,Photo & Video,685%
+AUS,Social,,Games / Role Playing,472%
+AUS,Social,,News,444%
+AUS,Travel,Commerce - Travel,Travel,448%
+AUS,Travel,,Medical,156%
+AUS,Travel,,Games / Card,81%
+BRA,E-Commerce,Commerce - E-Commerce,Shopping,1.5K%
+BRA,E-Commerce,,Games / Casino,555%
+BRA,E-Commerce,,Food & Drink,186%
+BRA,Entertainment,Content - Entertainment,Music,615%
+BRA,Entertainment,,Games / Music,128%
+BRA,Entertainment,,News,105%
+BRA,Finance,Finance - Financial Health,Finance,463%
+BRA,Finance,,Games / Casino,340%
+BRA,Finance,,Business,247%
+BRA,On Demand,Commerce - On-Demand,Games / Casino,477%
+BRA,On Demand,,Food & Drink,405%
+BRA,On Demand,,Navigation,178%
+BRA,RMG,RMG - RMG (Casino),Sports,1.7K%
+BRA,RMG,,Games / Casino,1.2K%
+BRA,RMG,,Weather,1.1K%
+BRA,Social,Social - Social Media,News,459%
+BRA,Social,,Photo & Video,365%
+BRA,Social,,Social Networking,211%
+BRA,Travel,Commerce - Travel,Games / Casino,3.3K%
+BRA,Travel,,Travel,1.4K%
+BRA,Travel,,Food & Drink,119%
+CAN,E-Commerce,Commerce - E-Commerce,Shopping,1.9K%
+CAN,E-Commerce,,Food & Drink,301%
+CAN,E-Commerce,,Lifestyle,169%
+CAN,Entertainment,Content - Entertainment,Music,1K%
+CAN,Entertainment,,Games / Trivia,319%
+CAN,Entertainment,,Medical,129%
+CAN,Finance,Finance - Financial Health,Travel,126%
+CAN,Finance,,Books,58%
+CAN,Finance,,Finance,55%
+CAN,On Demand,Commerce - On-Demand,Food & Drink,653%
+CAN,On Demand,,Games / Casino,391%
+CAN,On Demand,,Medical,202%
+CAN,RMG,RMG - RMG (Casino),Sports,2.6K%
+CAN,RMG,,Games / Casino,1.6K%
+CAN,RMG,,Games / Sports,356%
+CAN,Social,Social - Social Media,Photo & Video,663%
+CAN,Social,,News,283%
+CAN,Social,,Social Networking,245%
+CAN,Travel,Commerce - Travel,Travel,636%
+CAN,Travel,,Games / Casino,259%
+CAN,Travel,,Games / Simulation,144%
+DEU,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
+DEU,E-Commerce,,Food & Drink,294%
+DEU,E-Commerce,,Lifestyle,197%
+DEU,Entertainment,Content - Entertainment,Music,942%
+DEU,Entertainment,,Graphics & Design,239%
+DEU,Entertainment,,Games / Role Playing,112%
+DEU,Finance,Finance - Financial Health,Finance,391%
+DEU,Finance,,Weather,202%
+DEU,Finance,,News,186%
+DEU,On Demand,Commerce - On-Demand,Games / Casino,479%
+DEU,On Demand,,Food & Drink,323%
+DEU,On Demand,,Games / Card,160%
+DEU,RMG,RMG - RMG (Casino),Sports,815%
+DEU,RMG,,Games / Casino,691%
+DEU,RMG,,Games / Sports,558%
+DEU,Social,Social - Social Media,Photo & Video,559%
+DEU,Social,,Graphics & Design,382%
+DEU,Social,,News,375%
+DEU,Travel,Commerce - Travel,Travel,307%
+DEU,Travel,,Business,148%
+DEU,Travel,,Finance,124%
+FRA,E-Commerce,Commerce - E-Commerce,Shopping,1.9K%
+FRA,E-Commerce,,Food & Drink,292%
+FRA,E-Commerce,,Lifestyle,254%
+FRA,Entertainment,Content - Entertainment,Music,598%
+FRA,Entertainment,,Games / Racing,165%
+FRA,Entertainment,,Lifestyle,112%
+FRA,Finance,Finance - Financial Health,Finance,627%
+FRA,Finance,,Games / Casino,491%
+FRA,Finance,,Sports,252%
+FRA,On Demand,Commerce - On-Demand,Food & Drink,628%
+FRA,On Demand,,Games / Casino,501%
+FRA,On Demand,,Games / Role Playing,327%
+FRA,RMG,RMG - RMG (Casino),Games / Casino,4.1K%
+FRA,RMG,,Sports,2.4K%
+FRA,RMG,,News,296%
+FRA,Social,Social - Social Media,Photo & Video,596%
+FRA,Social,,News,509%
+FRA,Social,,Social Networking,359%
+FRA,Travel,Commerce - Travel,Travel,331%
+FRA,Travel,,Food & Drink,179%
+FRA,Travel,,Business,167%
+GBR,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
+GBR,E-Commerce,,Food & Drink,304%
+GBR,E-Commerce,,Lifestyle,235%
+GBR,Entertainment,Content - Entertainment,Music,869%
+GBR,Entertainment,,Education,155%
+GBR,Entertainment,,Entertainment,130%
+GBR,Finance,Finance - Financial Health,Finance,499%
+GBR,Finance,,Games / Casino,379%
+GBR,Finance,,Medical,349%
+GBR,On Demand,Commerce - On-Demand,Food & Drink,617%
+GBR,On Demand,,Business,167%
+GBR,On Demand,,Shopping,155%
+GBR,RMG,RMG - RMG (Casino),Games / Casino,4K%
+GBR,RMG,,Sports,1.7K%
+GBR,RMG,,Finance,303%
+GBR,Social,Social - Social Media,Photo & Video,585%
+GBR,Social,,News,310%
+GBR,Social,,Social Networking,277%
+GBR,Travel,Commerce - Travel,Travel,463%
+GBR,Travel,,Medical,198%
+GBR,Travel,,Games / Card,113%
+IDN,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
+IDN,E-Commerce,,Medical,204%
+IDN,E-Commerce,,Weather,183%
+IDN,Entertainment,Content - Entertainment,Weather,1K%
+IDN,Entertainment,,Music,780%
+IDN,Entertainment,,News,238%
+IDN,Finance,Finance - Financial Health,Weather,403%
+IDN,Finance,,Games / Trivia,384%
+IDN,Finance,,Travel,359%
+IDN,On Demand,Commerce - On-Demand,Food & Drink,1.4K%
+IDN,On Demand,,Travel,306%
+IDN,On Demand,,Games / Card,258%
+IDN,RMG,RMG - RMG (Casino),Sports,1.2K%
+IDN,RMG,,Games / Casino,433%
+IDN,RMG,,Finance,231%
+IDN,Social,Social - Social Media,News,318%
+IDN,Social,,Photo & Video,298%
+IDN,Social,,Sports,218%
+IDN,Travel,Commerce - Travel,Travel,350%
+IDN,Travel,,Weather,227%
+IDN,Travel,,Sports,195%
+IND,E-Commerce,Commerce - E-Commerce,Shopping,1.4K%
+IND,E-Commerce,,Food & Drink,273%
+IND,E-Commerce,,Lifestyle,201%
+IND,Entertainment,Content - Entertainment,Music,707%
+IND,Entertainment,,Lifestyle,162%
+IND,Entertainment,,Games / Role Playing,123%
+IND,Finance,Finance - Financial Health,Health & Fitness,352%
+IND,Finance,,Navigation,255%
+IND,Finance,,Weather,226%
+IND,On Demand,Commerce - On-Demand,Food & Drink,587%
+IND,On Demand,,Navigation,184%
+IND,On Demand,,Games / Strategy,153%
+IND,RMG,RMG - RMG (Casino),Games / Card,2K%
+IND,RMG,,Games / Sports,2K%
+IND,RMG,,Games / Casino,974%
+IND,Social,Social - Social Media,News,320%
+IND,Social,,Photo & Video,294%
+IND,Social,,Social Networking,228%
+IND,Travel,Commerce - Travel,Travel,395%
+IND,Travel,,Navigation,261%
+IND,Travel,,Food & Drink,202%
+JPN,E-Commerce,Commerce - E-Commerce,Shopping,1.8K%
+JPN,E-Commerce,,Lifestyle,1.3K%
+JPN,E-Commerce,,Health & Fitness,337%
+JPN,Entertainment,Content - Entertainment,Music,874%
+JPN,Entertainment,,Education,117%
+JPN,Entertainment,,Games / Trivia,105%
+JPN,Finance,Finance - Financial Health,Finance,486%
+JPN,Finance,,Travel,403%
+JPN,Finance,,Medical,286%
+JPN,On Demand,Commerce - On-Demand,Food & Drink,690%
+JPN,On Demand,,Finance,196%
+JPN,On Demand,,Weather,176%
+JPN,RMG,RMG - RMG (Casino),Sports,826%
+JPN,RMG,,Games / Casino,653%
+JPN,RMG,,Finance,221%
+JPN,Social,Social - Social Media,Photo & Video,520%
+JPN,Social,,News,317%
+JPN,Social,,Entertainment,231%
+JPN,Travel,Commerce - Travel,Travel,1.2K%
+JPN,Travel,,Finance,289%
+JPN,Travel,,Business,215%
+KOR,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
+KOR,E-Commerce,,Lifestyle,630%
+KOR,E-Commerce,,Weather,615%
+KOR,Entertainment,Content - Entertainment,Music,1.9K%
+KOR,Entertainment,,Medical,138%
+KOR,Entertainment,,Weather,130%
+KOR,Finance,Finance - Financial Health,Finance,1.5K%
+KOR,Finance,,Medical,677%
+KOR,Finance,,Health & Fitness,605%
+KOR,On Demand,Commerce - On-Demand,Food & Drink,447%
+KOR,On Demand,,Finance,225%
+KOR,On Demand,,Travel,191%
+KOR,RMG,RMG - RMG (Casino),Weather,1.1K%
+KOR,RMG,,Games / Casino,552%
+KOR,RMG,,Games / Word,421%
+KOR,Social,Social - Social Media,News,524%
+KOR,Social,,Photo & Video,489%
+KOR,Social,,Entertainment,301%
+KOR,Travel,Commerce - Travel,Business,499%
+KOR,Travel,,Travel,417%
+KOR,Travel,,Sports,321%
+MEX,E-Commerce,Commerce - E-Commerce,Shopping,1.8K%
+MEX,E-Commerce,,Medical,423%
+MEX,E-Commerce,,Food & Drink,338%
+MEX,Entertainment,Content - Entertainment,Music,460%
+MEX,Entertainment,,Games / Casino,151%
+MEX,Entertainment,,Books,117%
+MEX,Finance,Finance - Financial Health,Finance,612%
+MEX,Finance,,Games / Casino,551%
+MEX,Finance,,Medical,536%
+MEX,On Demand,Commerce - On-Demand,Food & Drink,846%
+MEX,On Demand,,Games / Card,260%
+MEX,On Demand,,Navigation,249%
+MEX,RMG,RMG - RMG (Casino),Games / Casino,8.7K%
+MEX,RMG,,Sports,3.5K%
+MEX,RMG,,Games / Card,375%
+MEX,Social,Social - Social Media,News,597%
+MEX,Social,,Photo & Video,420%
+MEX,Social,,Games / Music,214%
+MEX,Travel,Commerce - Travel,Travel,1.4K%
+MEX,Travel,,Games / Word,326%
+MEX,Travel,,Weather,286%
+USA,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
+USA,E-Commerce,,Games / Casino,787%
+USA,E-Commerce,,Medical,304%
+USA,Entertainment,Content - Entertainment,Music,641%
+USA,Entertainment,,Weather,206%
+USA,Entertainment,,Productivity,103%
+USA,Finance,Finance - Financial Health,Games / Casino,498%
+USA,Finance,,Finance,386%
+USA,Finance,,Navigation,187%
+USA,On Demand,Commerce - On-Demand,Food & Drink,740%
+USA,On Demand,,Games / Casino,332%
+USA,On Demand,,Shopping,216%
+USA,RMG,RMG - RMG (Casino),Sports,2.2K%
+USA,RMG,,Games / Casino,2K%
+USA,RMG,,Games / Sports,602%
+USA,Social,Social - Social Media,Photo & Video,633%
+USA,Social,,News,299%
+USA,Social,,Graphics & Design,279%
+USA,Travel,Commerce - Travel,Travel,855%
+USA,Travel,,Games / Casino,321%
+USA,Travel,,Navigation,187%
+VNM,E-Commerce,Commerce - E-Commerce,Shopping,2.1K%
+VNM,E-Commerce,,Games / Puzzle,283%
+VNM,E-Commerce,,Food & Drink,258%
+VNM,Entertainment,Content - Entertainment,Music,1.2K%
+VNM,Entertainment,,Games / Trivia,168%
+VNM,Entertainment,,Productivity,161%
+VNM,Finance,Finance - Financial Health,Travel,726%
+VNM,Finance,,Health & Fitness,530%
+VNM,Finance,,Games / Word,332%
+VNM,On Demand,Commerce - On-Demand,Food & Drink,940%
+VNM,On Demand,,Sports,911%
+VNM,On Demand,,Health & Fitness,407%
+VNM,RMG,RMG - RMG (Casino),Sports,847%
+VNM,RMG,,Games / Casino,469%
+VNM,RMG,,Weather,404%
+VNM,Social,Social - Social Media,Navigation,716%
+VNM,Social,,Photo & Video,371%
+VNM,Social,,Weather,350%
+VNM,Travel,Commerce - Travel,Travel,1.1K%
+VNM,Travel,,Games / Trivia,871%
+VNM,Travel,,Sports,355%
