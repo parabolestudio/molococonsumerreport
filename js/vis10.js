@@ -47,17 +47,20 @@ function Tooltip({ hoveredItem, tooltipData }) {
 
 export function Vis10() {
   const [data, setData] = useState([]);
+  const initialCountries = ["United States", "Australia", "India"];
+  const [selectedCountries, setSelectedCountries] = useState(initialCountries);
+
   const [tooltipData, setTooltipData] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz10_share_time_growth_last_year.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz10_share_time_growth_last_year_updated.csv"
     ).then((data) => {
       data.forEach((d) => {
-        d["app"] = d["App"];
-        delete d["App"];
+        // d["app"] = d["App"];
+        // delete d["App"];
         d["country"] = d["Country"];
         delete d["Country"];
         d["category"] = d["Category"];
@@ -73,59 +76,60 @@ export function Vis10() {
         d["randomX"] = Math.random();
       });
 
-      // Process tooltip data
-      const copyOfData = data.map((d) => ({ ...d }));
-      const tooltipProcessedData = [];
+      // Process tooltip data CURRENTLY NO REAL DATA FOR APPS
+      // const copyOfData = data.map((d) => ({ ...d }));
+      // const tooltipProcessedData = [];
 
-      // Group by country and category
-      const grouped = d3.group(
-        copyOfData,
-        (d) => d.country,
-        (d) => d.category
-      );
+      // // Group by country and category
+      // const grouped = d3.group(
+      //   copyOfData,
+      //   (d) => d.Country,
+      //   (d) => d.ategory
+      // );
 
-      grouped.forEach((categories, country) => {
-        categories.forEach((apps, category) => {
-          let categoryData = {
-            country: country,
-            category: category,
-            share: 0,
-            yearGrowth: null,
-            apps: [],
-          };
+      // grouped.forEach((categories, country) => {
+      //   categories.forEach((apps, category) => {
+      //     let categoryData = {
+      //       country: country,
+      //       category: category,
+      //       share: 0,
+      //       yearGrowth: null,
+      //       apps: [],
+      //     };
 
-          apps.forEach((app) => {
-            if (app.app === "Total") {
-              // Set the total share and growth from the "Total" row
-              categoryData.share = app.share;
-              categoryData.yearGrowth = app.yearGrowth;
-            } else {
-              // Add individual apps
-              categoryData.apps.push({
-                appName: app.app,
-                appShare: app.share,
-              });
-            }
-          });
+      //     apps.forEach((app) => {
+      //       if (app.app === "Total") {
+      //         // Set the total share and growth from the "Total" row
+      //         categoryData.share = app.share;
+      //         categoryData.yearGrowth = app.yearGrowth;
+      //       } else {
+      //         // Add individual apps
+      //         categoryData.apps.push({
+      //           appName: app.app,
+      //           appShare: app.share,
+      //         });
+      //       }
+      //     });
 
-          // Sort apps by share in descending order
-          categoryData.apps.sort((a, b) => b.appShare - a.appShare);
+      //     // Sort apps by share in descending order
+      //     categoryData.apps.sort((a, b) => b.appShare - a.appShare);
 
-          tooltipProcessedData.push(categoryData);
-        });
-      });
+      //     tooltipProcessedData.push(categoryData);
+      //   });
+      // });
 
-      setTooltipData(tooltipProcessedData);
+      // setTooltipData(tooltipProcessedData);
 
       // filter out total values only
-      data = data.filter((d) => d["app"] === "Total");
+      // data = data.filter((d) => d["app"] === "Total");
 
       // data group by country
       const groupedData = d3.group(data, (d) => d.country);
-      const groupedArray = Array.from(groupedData, ([key, values]) => {
+      console.log("Grouped Data:", groupedData);
+      const groupedArray = Array.from(groupedData, ([key, value]) => {
         return {
-          countryCode: key,
-          values: values.map((v) => ({
+          country: key,
+          values: value.map((v) => ({
             category: v.category,
             share: v.share,
             yearGrowth: v.yearGrowth,
@@ -133,6 +137,7 @@ export function Vis10() {
           })),
         };
       });
+      console.log("Grouped Array:", groupedArray);
 
       setData(groupedArray);
     });
@@ -142,26 +147,25 @@ export function Vis10() {
     return html`<div>Loading...</div>`;
   }
 
-  // console.log("Data for Viz 10:", data);
-
-  // get data for country (test with USA)
-  const selectedCountry = "US";
-  const countryData = data.filter((d) => d.countryCode === selectedCountry)[0]
-    .values;
-  // console.log("Country Data for Viz 10:", countryData);
+  console.log("Right after loading data for Viz 10:", data);
 
   // data and scales
-  // TODO: make min / max based on all countries
-  // for now, use USA as example
-  const shareMinValue = d3.min(countryData, (d) => d.share);
-  const shareMaxValue = d3.max(countryData, (d) => d.share);
+  const shareMinValue = d3.min(data, (d) => d3.min(d.values, (v) => v.share));
+  const shareMaxValue = d3.max(data, (d) => d3.max(d.values, (v) => v.share));
+  console.log("Share Min/Max Values:", shareMinValue, shareMaxValue);
+
   const shareRadiusScale = d3
     .scaleSqrt()
     .domain([shareMinValue, shareMaxValue])
-    .range([5, 40]); // radius range for circles
+    .range([5, 40]);
 
-  const growthMinValue = d3.min(countryData, (d) => d.yearGrowth);
-  const growthMaxValue = d3.max(countryData, (d) => d.yearGrowth);
+  const growthMinValue = d3.min(data, (d) =>
+    d3.min(d.values, (v) => v.yearGrowth)
+  );
+  const growthMaxValue = d3.max(data, (d) =>
+    d3.max(d.values, (v) => v.yearGrowth)
+  );
+  console.log("Growth Min/Max Values:", growthMinValue, growthMaxValue);
 
   // layout dimensions
   const vis10Container = document.querySelector("#vis10");
@@ -169,16 +173,15 @@ export function Vis10() {
     vis10Container && vis10Container.offsetWidth
       ? vis10Container.offsetWidth
       : 600;
-  const height = 300;
+  const height = 600;
   const outerMargin = { top: 5, right: 5, bottom: 5, left: 5 };
   const outerWidth = width - outerMargin.left - outerMargin.right;
   const outerHeight = height - outerMargin.top - outerMargin.bottom;
 
   const sectionMargin = { top: 0, right: 0, bottom: 20, left: 20 };
-  const exampleCountries = ["US", "Canada", "Mexico"];
   const sectionScale = d3
     .scaleBand()
-    .domain(exampleCountries)
+    .domain(selectedCountries)
     .range([0, outerWidth])
     .padding(0.05);
   const sectionInnerWidth =
@@ -187,9 +190,15 @@ export function Vis10() {
     outerHeight - sectionMargin.top - sectionMargin.bottom;
 
   const valueScale = d3
-    .scaleLinear()
-    .domain([growthMinValue, growthMaxValue])
+    // .scaleLinear()
+    .scaleLog()
+    .domain([
+      growthMinValue + Math.abs(growthMinValue) + 1,
+      growthMaxValue + Math.abs(growthMinValue) + 1,
+    ])
+    // .domain([growthMinValue, 0.5])
     .range([sectionInnerHeight, 0]);
+  console.log("Value Scale Domain:", valueScale.domain());
 
   return html`<div class="vis-container-inner viz10-container-inner">
     <svg
@@ -206,8 +215,10 @@ export function Vis10() {
           fill="transparent"
         />
 
-        ${exampleCountries.map((country, index) => {
-          const countryData = data[0].values;
+        ${selectedCountries.map((country, index) => {
+          const countryData = data.filter((d) => d.country === country)[0]
+            .values;
+          console.log("Filtered Country Data:", countryData);
 
           return html`<g
             class="section"
@@ -227,9 +238,10 @@ export function Vis10() {
               <g>
                 <rect
                   x="0"
-                  y="${valueScale(0)}"
+                  y="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
                   width="${sectionInnerWidth}"
-                  height="${sectionInnerHeight - valueScale(0)}"
+                  height="${sectionInnerHeight -
+                  valueScale(0 + Math.abs(growthMinValue) + 1)}"
                   fill="#F2F2F2"
                 />
                 <line
@@ -241,9 +253,9 @@ export function Vis10() {
                 />
                 <line
                   x1="${-sectionMargin.left}"
-                  y1="${valueScale(0)}"
+                  y1="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
                   x2="${sectionInnerWidth}"
-                  y2="${valueScale(0)}"
+                  y2="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
                   stroke="black"
                 />
                 <text
@@ -270,9 +282,11 @@ export function Vis10() {
                   }
                   return html` <circle
                     cx="${x}"
-                    cy="${valueScale(d.yearGrowth)}"
+                    cy="${valueScale(
+                      d.yearGrowth + Math.abs(growthMinValue) + 1
+                    )}"
                     r="${shareRadiusScale(d.share)}"
-                    fill="${hoveredItem && hoveredItem.category === d.category
+                    fill="${hoveredItem && hoveredItem.Category === d.Category
                       ? "#C368F9"
                       : "#03004C"}"
                     data-category="${d.category}"

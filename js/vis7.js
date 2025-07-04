@@ -66,8 +66,8 @@ export function Vis7() {
     vis7Container && vis7Container.offsetWidth
       ? vis7Container.offsetWidth
       : 600;
-  const heightPerCategory = 20;
-  const categoryPadding = 20;
+  const heightPerCategory = 30;
+  const categoryPadding = 8;
   const height =
     (heightPerCategory + categoryPadding) * countryValues.length +
     categoryPadding;
@@ -114,8 +114,8 @@ export function Vis7() {
           height="${heightPerCategory}"
           fill="${v.value > 0 ? "#c368f9" : "white"}"
           title="${v.category}: ${v.value}"
-          rx="2"
-          ry="2"
+          rx="10"
+          ry="10"
         />
         <text
           x="${v.value > 0 ? barX - 10 : valueScaleNegative(0) + 10}"

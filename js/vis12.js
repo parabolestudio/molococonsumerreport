@@ -38,12 +38,8 @@ export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const initialCategories = ["Automotive", "Business", "Entertainment"];
-  const [selectedCategories, setSelectedCategories] = useState([
-    "Automotive",
-    "Business",
-    "Entertainment",
-  ]);
-  // const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] =
+    useState(initialCategories);
 
   // Fetch data on mount
   useEffect(() => {
