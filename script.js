@@ -64,14 +64,14 @@ const visList = [
     id: "vis9",
     component: Vis9,
   },
-  // {
-  //   id: "vis10",
-  //   component: Vis10,
-  // },
-  // {
-  //   id: "vis11",
-  //   component: Vis11,
-  // },
+  {
+    id: "vis10",
+    component: Vis10,
+  },
+  {
+    id: "vis11",
+    component: Vis11,
+  },
   {
     id: "vis12",
     component: Vis12,
