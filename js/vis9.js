@@ -71,16 +71,17 @@ export function Vis9() {
     "Threads",
   ];
   const appScale = d3
-    .scaleBand()
+    .scalePoint()
     .domain(appList)
     .range([0, innerWidth])
-    .paddingInner(0)
-    .paddingOuter(0.5);
+    .padding(0.5);
 
+  const minDau = d3.min(dataFiltered, (d) => d.DAU);
+  const maxDau = d3.max(dataFiltered, (d) => d.DAU);
   const dauScale = d3
     .scaleSqrt()
-    .domain([0, d3.max(dataFiltered, (d) => d.DAU)])
-    .range([4, appScale.bandwidth() / 2]);
+    .domain([minDau, maxDau])
+    .range([appScale.step() * 0.1, appScale.step() * 0.34]);
 
   return html`<div class="vis-container-inner">
     <svg
