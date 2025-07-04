@@ -178,10 +178,45 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   const filteredTimeData = timeData.filter(
     (d) => d.Country === selectedCountry && d.Genre === selectedCategory
   );
+  filteredTimeData.forEach((d) => {
+    d["value"] = parseFloat(d["%"].replace("%", ""));
+  });
+  filteredTimeData.sort((a, b) => b.value - a.value);
   console.log(filteredTimeData);
+
+  const maxValue = Math.max(...filteredTimeData.map((d) => d.value));
+  console.log("maxValue", maxValue);
+
+  useEffect(() => {
+    const container = document.querySelector(".vis-11-time-grid");
+    console.log("container", container);
+    const containerWidth =
+      container && container.offsetWidth ? container.offsetWidth : 50;
+    const maxBarWidth = (containerWidth - 5) * 0.7 - 90;
+    console.log("maxBarWidth", maxBarWidth);
+
+    filteredTimeData.map((d) => {
+      const barWidth = (d.value / maxValue) * maxBarWidth;
+      d["barWidth"] = barWidth;
+    });
+    console.log("filteredTimeData with barWidth", filteredTimeData);
+  }, []);
+
   return html`<div class="vis-11-time left">
     <p class="label">Where people spend their time</p>
     <p class="sublabel">Time spent vs general population</p>
+    <div class="vis-11-time-grid">
+      ${filteredTimeData.map((d, index) => {
+        console.log("d", d, d["barWidth"], d.barWidth);
+        return html`<div class="element${index * 2 + 1} sublabel">
+            ${d["Top subcat for time spent"]}
+          </div>
+          <div class="element${index * 2 + 2} bar-container">
+            <div class="bar" style="width: ${d.barWidth || 50}px;"></div>
+            <span class="number">+${d["value"]}%</span>
+          </div>`;
+      })}
+    </div>
   </div>`;
 };
 
