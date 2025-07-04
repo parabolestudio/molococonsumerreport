@@ -176,7 +176,6 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   if (!timeData || timeData.length === 0) {
     return html`<div>Loading...</div>`;
   }
-  console.log("timeData", timeData);
   const filteredTimeData = timeData.filter(
     (d) => d.Country === selectedCountry && d.Genre === selectedCategory
   );
@@ -184,10 +183,8 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
     d["value"] = parseFloat(d["%"].replace("%", ""));
   });
   filteredTimeData.sort((a, b) => b.value - a.value);
-  console.log(filteredTimeData);
 
   const maxValue = Math.max(...filteredTimeData.map((d) => d.value));
-  console.log("maxValue", maxValue);
 
   useEffect(() => {
     if (filteredTimeData.length === 0) return;
@@ -195,7 +192,6 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
     // Add a small delay to ensure the DOM is fully rendered
     const calculateWidths = () => {
       const container = document.querySelector(".vis-11-time-grid");
-      console.log("container", container);
 
       if (container) {
         const containerWidth = container.offsetWidth;
