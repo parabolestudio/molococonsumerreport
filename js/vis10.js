@@ -123,6 +123,9 @@ export function Vis10() {
       // filter out total values only
       // data = data.filter((d) => d["app"] === "Total");
 
+      // filter GenAI due to outlier
+      data = data.filter((d) => d.category !== "Generative AI");
+
       // data group by country
       const groupedData = d3.group(data, (d) => d.country);
       console.log("Grouped Data:", groupedData);
@@ -190,15 +193,9 @@ export function Vis10() {
     outerHeight - sectionMargin.top - sectionMargin.bottom;
 
   const valueScale = d3
-    // .scaleLinear()
-    .scaleLog()
-    .domain([
-      growthMinValue + Math.abs(growthMinValue) + 1,
-      growthMaxValue + Math.abs(growthMinValue) + 1,
-    ])
-    // .domain([growthMinValue, 0.5])
+    .scaleLinear()
+    .domain([growthMinValue, growthMaxValue])
     .range([sectionInnerHeight, 0]);
-  console.log("Value Scale Domain:", valueScale.domain());
 
   return html`<div class="vis-container-inner viz10-container-inner">
     <svg
@@ -238,10 +235,9 @@ export function Vis10() {
               <g>
                 <rect
                   x="0"
-                  y="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
+                  y="${valueScale(0)}"
                   width="${sectionInnerWidth}"
-                  height="${sectionInnerHeight -
-                  valueScale(0 + Math.abs(growthMinValue) + 1)}"
+                  height="${sectionInnerHeight - valueScale(0)}"
                   fill="#F2F2F2"
                 />
                 <line
@@ -253,9 +249,9 @@ export function Vis10() {
                 />
                 <line
                   x1="${-sectionMargin.left}"
-                  y1="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
+                  y1="${valueScale(0)}"
                   x2="${sectionInnerWidth}"
-                  y2="${valueScale(0 + Math.abs(growthMinValue) + 1)}"
+                  y2="${valueScale(0)}"
                   stroke="black"
                 />
                 <text
@@ -282,9 +278,7 @@ export function Vis10() {
                   }
                   return html` <circle
                     cx="${x}"
-                    cy="${valueScale(
-                      d.yearGrowth + Math.abs(growthMinValue) + 1
-                    )}"
+                    cy="${valueScale(d.yearGrowth)}"
                     r="${shareRadiusScale(d.share)}"
                     fill="${hoveredItem && hoveredItem.Category === d.Category
                       ? "#C368F9"

@@ -74,7 +74,6 @@ export function Vis7() {
 
   const margin = { top: 5, right: 150, bottom: 5, left: 150 };
   const innerWidth = width - margin.left - margin.right;
-  // const innerHeight = height - margin.top - margin.bottom;
 
   const minValue = d3.min(countryValues, (d) => d.value);
   const maxValue = d3.max(countryValues, (d) => d.value);
