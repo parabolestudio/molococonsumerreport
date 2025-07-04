@@ -14,8 +14,6 @@ export function Vis9() {
         d["Hours"] = parseFloat(d["Hours"].replaceAll(",", ""));
       });
 
-      console.log("Data for Vis9:", data);
-
       setData(data);
     });
   }, []);
@@ -50,13 +48,12 @@ export function Vis9() {
       : 600;
 
   const height = 400;
-  const margin = { top: 55, right: 55, bottom: 55, left: 55 };
+  const margin = { top: 65, right: 55, bottom: 55, left: 55 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
   // data and scales
   const dataFiltered = data.filter((d) => d.Country === selectedCountry);
-  console.log("Filtered Data for Vis9:", dataFiltered);
 
   const hourScale = d3
     .scaleLinear()
@@ -132,12 +129,14 @@ export function Vis9() {
                   y2="${innerHeight}"
                   stroke="${color}"
                   stroke-width="2"
+                  style="transition: y1 0.3s ease;"
                 />
                 <circle
                   cx="0"
                   cy="${hourScale(d.Hours)}"
                   r="${dauScale(d.DAU)}"
                   fill="${color}"
+                  style="transition: all 0.3s ease;"
                 />
                 <text
                   y="${innerHeight + 35}"
