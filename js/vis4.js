@@ -46,33 +46,32 @@ export function Vis4(props) {
 
   // layout dimensions
   // width
-  const groupLabelWidth = 2 / 10;
-  const barWidth = 6 / 10;
-  //   const valueLabelWidth = 2 / 10;
-  const width = 633;
-  const maxBarWidth = width * barWidth;
+  const vis4Container = document.querySelector("#vis4a"); // same as vis4b
+  const width =
+    vis4Container && vis4Container.offsetWidth
+      ? vis4Container.offsetWidth
+      : 633;
 
   // height
-  const barHeight = 195;
-  const barPadding = 28;
-  const numRows = dataFiltered.length;
-  const margin = { top: 2, right: 0, bottom: 62, left: 2 };
+  const barHeight = 60;
+  const barPadding = 65;
+  const margin = { top: 40, right: 160, bottom: 62, left: 2 };
   const height =
-    numRows * (barHeight + barPadding) -
+    dataFiltered.length * (barHeight + barPadding) -
     barPadding +
     margin.bottom +
     margin.top;
   const innerHeight = height - margin.top - margin.bottom;
+  const innerWidth = width - margin.left - margin.right;
 
-  const maxValue = d3.max(data, (d) => d["Growth (%)"]);
   const barScale = d3
     .scaleLinear()
-    .domain([0, maxValue])
-    .range([0, maxBarWidth]);
+    .domain([0, d3.max(data, (d) => d["Growth (%)"])])
+    .range([0, innerWidth]);
 
   const barColors = {
-    Gaming: "var(--white)",
-    "Google & Meta": "#5CDEFF",
+    "Google & Meta": "var(--white)",
+    Gaming: "#5CDEFF",
   };
 
   const rows = dataFiltered.map((d, index) => {
@@ -80,17 +79,20 @@ export function Vis4(props) {
       transform="translate(0, ${index * (barHeight + barPadding)})"
     >
       <text
-        x="0"
-        y="${barHeight / 2}"
-        dominant-baseline="central"
+        y="-23"
+        dominant-baseline="middle"
         class="charts-text-body charts-text-white"
       >
         ${d["Category"]}
       </text>
-
       <rect
-        x="${width * groupLabelWidth}"
-        y="0"
+        width="${barScale(d["Growth (%)"]) / 2}"
+        height="${barHeight}"
+        fill="${barColors[d.Category]
+          ? barColors[d.Category]
+          : "var(--blue-medium)"}"
+      />
+      <rect
         width="${barScale(d["Growth (%)"])}"
         height="${barHeight}"
         fill="${barColors[d.Category]
@@ -100,9 +102,9 @@ export function Vis4(props) {
         ry="10"
       />
       <text
-        x="${width * groupLabelWidth + barScale(d["Growth (%)"]) + 10}"
+        x="${barScale(d["Growth (%)"]) + 10}"
         y="${barHeight / 2}"
-        dominant-baseline="central"
+        dominant-baseline="middle"
         class="charts-text-value charts-text-white"
       >
         ${d["Growth Text"]}
@@ -118,43 +120,38 @@ export function Vis4(props) {
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         ${rows}
-        ${variation === "a"
-          ? html` <g>
-              <line
-                x1="${width * groupLabelWidth + barScale(1.0)}"
-                y1="0"
-                x2="${width * groupLabelWidth + barScale(1.0)}"
-                y2="${innerHeight + 40}"
-                stroke="#5CDEFF"
-                stroke-width="1"
-                stroke-dasharray="2,2"
-              />
-              <g
-                transform="translate(${width * groupLabelWidth +
-                barScale(1.0)}, ${innerHeight + 40})"
-              >
-                <rect
-                  x="-40"
-                  y="0"
-                  width="80"
-                  height="20"
-                  fill="#5CDEFF"
-                  rx="10"
-                  ry="10"
-                />
-                <text
-                  x="${0}"
-                  y="4"
-                  dominant-baseline="hanging"
-                  text-anchor="middle"
-                  class="charts-text-body"
-                  fill="#040078"
-                >
-                  Baseline
-                </text>
-              </g>
-            </g>`
-          : ""}
+        <g>
+          <line
+            x1="${barScale(1.0)}"
+            y1="0"
+            x2="${barScale(1.0)}"
+            y2="${innerHeight + 40}"
+            stroke="white"
+            stroke-width="1"
+            stroke-dasharray="2,2"
+          />
+          <g transform="translate(${barScale(1.0)}, ${innerHeight + 40})">
+            <rect
+              x="-40"
+              y="0"
+              width="80"
+              height="20"
+              fill="white"
+              rx="10"
+              ry="10"
+            />
+            <text
+              x="${0}"
+              y="4"
+              dominant-baseline="hanging"
+              text-anchor="middle"
+              class="charts-text-body"
+              fill="#040078"
+            >
+              Baseline
+            </text>
+          </g>
+        </g>
       </g>
     </svg>
   </div>`;
