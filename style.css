@@ -362,6 +362,33 @@ VIZ 11
     }
   }
 
+  .vis-11-app {
+    .app-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+
+      .app-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .position {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: #60e2b7;
+          margin: 0;
+        }
+        .number {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
   .vis-11-grid-gender,
   .vis-11-grid-age {
     display: grid;

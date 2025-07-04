@@ -42,11 +42,19 @@ export function Vis11() {
   const [selectedCountry, setSelectedCountry] = useState("Australia");
   const [selectedCategory, setSelectedCategory] = useState("Travel");
   const [genreData, setGenreData] = useState([]);
+  const [timeData, setTimeData] = useState([]);
+  const [appData, setAppData] = useState([]);
 
   useEffect(() => {
-    Promise.all([d3.csv(URL + "Viz11_1_genre_overview.csv")]).then((files) => {
-      const [genreDataFile] = files;
+    Promise.all([
+      d3.csv(URL + "Viz11_1_genre_overview.csv"),
+      d3.csv(URL + "Viz11_4_time_spent.csv"),
+      d3.csv(URL + "Viz11_5_top_apps.csv"),
+    ]).then((files) => {
+      const [genreDataFile, timeDataFile, appData] = files;
       setGenreData(genreDataFile);
+      setTimeData(timeDataFile);
+      setAppData(appData);
 
       // update country dropdown options
       const uniqueCountries = Array.from(
@@ -72,10 +80,24 @@ export function Vis11() {
       selectedCountry="${selectedCountry}"
       selectedCategory="${selectedCategory}"
     />
-    <${Vis11Bottom}
-      selectedCountry="${selectedCountry}"
-      selectedCategory="${selectedCategory}"
-    />
+    <div class="vis-11-part vis-11-bottom">
+      <div class="vis-11-bottom-top-grid">
+        <${Vis11Time}
+          timeData="${timeData}"
+          selectedCountry="${selectedCountry}"
+          selectedCategory="${selectedCategory}"
+        />
+        <${Vis11App}
+          appData="${appData}"
+          selectedCountry="${selectedCountry}"
+          selectedCategory="${selectedCategory}"
+        />
+      </div>
+      <${Vis11GenderAge}
+        selectedCountry="${selectedCountry}"
+        selectedCategory="${selectedCategory}"
+      />
+    </div>
   </div>`;
 }
 
@@ -133,7 +155,53 @@ const DotSection = ({ dotCount }) => {
   </div>`;
 };
 
-const Vis11Bottom = ({ selectedCountry, selectedCategory }) => {
+const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
+  if (!timeData || timeData.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
+  console.log("timeData", timeData);
+  const filteredTimeData = timeData.filter(
+    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+  );
+  console.log(filteredTimeData);
+  return html`<div class="vis-11-time left">
+    <p class="label">Where people spend their time</p>
+    <p class="sublabel">Time spent vs general population</p>
+  </div>`;
+};
+
+const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
+  if (!appData || appData.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
+  console.log("appData", appData);
+  const filteredAppData = appData.filter(
+    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+  );
+  filteredAppData.forEach((d) => {
+    d["Position"] = +d["Position"];
+  });
+  filteredAppData.sort((a, b) => a.Position - b.Position);
+  console.log(filteredAppData);
+
+  return html`<div class="vis-11-app right">
+    <p class="label">Which apps are trending</p>
+    <p class="sublabel">Top 3 ad supported apps</p>
+    <div class="app-list">
+      ${filteredAppData.map(
+        (d) => html`
+          <div class="app-item">
+            <p class="position"></p>
+            <p class="sublabel">${d["Top Growing App #1"]}</p>
+            <p class="number">+${d["Growth"]}</p>
+          </div>
+        `
+      )}
+    </div>
+  </div>`;
+};
+
+const Vis11GenderAge = ({ selectedCountry, selectedCategory }) => {
   const [rawGenderData, setRawGenderData] = useState([]);
   const [rawAgeData, setRawAgeData] = useState([]);
   const [genderData, setGenderData] = useState([]);
@@ -230,33 +298,19 @@ const Vis11Bottom = ({ selectedCountry, selectedCategory }) => {
       </div>`
   );
 
-  return html`<div class="vis-11-part vis-11-bottom">
-    <div class="vis-11-bottom-top-grid">
-      <div class="left">
-        <p class="label">Where people spend their time</p>
-        <p class="sublabel">Time spent vs general population</p>
-      </div>
-      <div class="right">
-        <p class="label">Which apps are trending</p>
-        <p class="sublabel">Top 3 ad supported apps</p>
-      </div>
+  return html`<div>
+    <p class="label">Who uses the apps</p>
+    <div
+      class="vis-11-grid-gender"
+      style="grid-template-columns: ${genderTemplateColumns};"
+    >
+      ${genderGridElements}
     </div>
-    <div>
-      <p class="label">
-        Who uses the apps ${selectedCountry} ${selectedCategory}
-      </p>
-      <div
-        class="vis-11-grid-gender"
-        style="grid-template-columns: ${genderTemplateColumns};"
-      >
-        ${genderGridElements}
-      </div>
-      <div
-        class="vis-11-grid-age"
-        style="grid-template-columns: ${ageTemplateColumns};"
-      >
-        ${ageGridElements}
-      </div>
+    <div
+      class="vis-11-grid-age"
+      style="grid-template-columns: ${ageTemplateColumns};"
+    >
+      ${ageGridElements}
     </div>
   </div>`;
 };
