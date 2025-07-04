@@ -130,7 +130,6 @@ export function Vis1() {
     .range([0, innerHeightCategories])
     .padding(0.3);
   const heightBar = yScaleCategories.bandwidth();
-  console.log("heightBar", heightBar);
 
   // set values for country code dropdown
   const countries = timelineData.map((d) => d.country);
