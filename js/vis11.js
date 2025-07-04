@@ -42,17 +42,30 @@ export function Vis11() {
   const [selectedCountry, setSelectedCountry] = useState("Australia");
   const [selectedCategory, setSelectedCategory] = useState("Travel");
   const [genreData, setGenreData] = useState([]);
+  const [genderData, setGenderData] = useState([]);
+  const [ageData, setAgeData] = useState([]);
+
   const [timeData, setTimeData] = useState([]);
   const [appData, setAppData] = useState([]);
 
   useEffect(() => {
     Promise.all([
       d3.csv(URL + "Viz11_1_genre_overview.csv"),
+      d3.csv(URL + "Viz11_2_gender.csv"),
+      d3.csv(URL + "Viz11_3_demographics.csv"),
       d3.csv(URL + "Viz11_4_time_spent.csv"),
       d3.csv(URL + "Viz11_5_top_apps.csv"),
     ]).then((files) => {
-      const [genreDataFile, timeDataFile, appData] = files;
+      const [
+        genreDataFile,
+        genderDataFile,
+        ageDataFile,
+        timeDataFile,
+        appData,
+      ] = files;
       setGenreData(genreDataFile);
+      setGenderData(genderDataFile);
+      setAgeData(ageDataFile);
       setTimeData(timeDataFile);
       setAppData(appData);
 
@@ -94,6 +107,8 @@ export function Vis11() {
         />
       </div>
       <${Vis11GenderAge}
+        genderData="${genderData}"
+        ageData="${ageData}"
         selectedCountry="${selectedCountry}"
         selectedCategory="${selectedCategory}"
       />
@@ -174,7 +189,6 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
   if (!appData || appData.length === 0) {
     return html`<div>Loading...</div>`;
   }
-  console.log("appData", appData);
   const filteredAppData = appData.filter(
     (d) => d.Country === selectedCountry && d.Genre === selectedCategory
   );
@@ -182,7 +196,6 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
     d["Position"] = +d["Position"];
   });
   filteredAppData.sort((a, b) => a.Position - b.Position);
-  console.log(filteredAppData);
 
   return html`<div class="vis-11-app right">
     <p class="label">Which apps are trending</p>
@@ -201,72 +214,12 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
   </div>`;
 };
 
-const Vis11GenderAge = ({ selectedCountry, selectedCategory }) => {
-  const [rawGenderData, setRawGenderData] = useState([]);
-  const [rawAgeData, setRawAgeData] = useState([]);
-  const [genderData, setGenderData] = useState([]);
-  const [ageData, setAgeData] = useState([]);
-
-  function prepData() {
-    // prep gender data
-    const copyRawGenderData = JSON.parse(JSON.stringify(rawGenderData));
-    let preppedGenderData = copyRawGenderData.filter(
-      (d) => d.Country === selectedCountry && d.Genre === selectedCategory
-    );
-    preppedGenderData.forEach((d) => {
-      d["group"] = d["Demographics (Gender)"];
-      delete d["Demographics (Gender)"];
-
-      d["value"] = +d["%"] * 100;
-      delete d["%"];
-      delete d["Country"];
-      delete d["Country code"];
-      delete d["Genre"];
-    });
-    setGenderData(preppedGenderData);
-
-    // prep age data
-    const copyRawAgeData = JSON.parse(JSON.stringify(rawAgeData));
-    let preppedAgeData = copyRawAgeData.filter(
-      (d) => d.Country === selectedCountry && d.Genre === selectedCategory
-    );
-    preppedAgeData.forEach((d) => {
-      d["group"] = d["Demographics (Age)"];
-      delete d["Demographics (Age)"];
-
-      d["value"] = +d["%"] * 100;
-      delete d["%"];
-      delete d["Country"];
-      delete d["Country code"];
-      delete d["Genre"];
-    });
-    setAgeData(preppedAgeData);
-  }
-
-  useEffect(() => {
-    const fileName2 = "Viz11_2_gender.csv";
-    const fileName3 = "Viz11_3_demographics.csv";
-    Promise.all([d3.csv(URL + fileName2), d3.csv(URL + fileName3)]).then(
-      (files) => {
-        let [genderDataFile, ageDataFile] = files;
-
-        setRawGenderData(genderDataFile);
-        setRawAgeData(ageDataFile);
-      }
-    );
-  }, []);
-
-  useEffect(() => {
-    if (
-      rawGenderData.length > 0 &&
-      rawAgeData.length > 0 &&
-      selectedCountry &&
-      selectedCategory
-    ) {
-      prepData();
-    }
-  }, [rawGenderData, rawAgeData, selectedCountry, selectedCategory]);
-
+const Vis11GenderAge = ({
+  selectedCountry,
+  selectedCategory,
+  ageData,
+  genderData,
+}) => {
   if (
     !genderData ||
     !ageData ||
@@ -276,8 +229,27 @@ const Vis11GenderAge = ({ selectedCountry, selectedCategory }) => {
     return html`<div>Loading...</div>`;
   }
 
-  const genderTemplateColumns = genderData.map((d) => `${d.value}%`).join(" ");
-  const genderGridElements = genderData.map(
+  const filteredGenderData = genderData.filter(
+    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+  );
+  const filteredAgeData = ageData.filter(
+    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+  );
+
+  filteredGenderData.forEach((d) => {
+    d["group"] = d["Demographics (Gender)"];
+
+    d["value"] = +d["%"] * 100;
+  });
+  filteredAgeData.forEach((d) => {
+    d["group"] = d["Demographics (Age)"];
+    d["value"] = +d["%"] * 100;
+  });
+
+  const genderTemplateColumns = filteredGenderData
+    .map((d) => `${d.value}%`)
+    .join(" ");
+  const genderGridElements = filteredGenderData.map(
     (d, i) => html`<div style="grid-area: 1 / ${i + 1} / 2 / ${i + 1};">
         <p class="sublabel">${d.group}</p>
       </div>
@@ -285,8 +257,11 @@ const Vis11GenderAge = ({ selectedCountry, selectedCategory }) => {
         <p class="number">${Math.round(d.value)}%</p>
       </div>`
   );
-  const ageTemplateColumns = ageData.map((d) => `${d.value}%`).join(" ");
-  const ageGridElements = ageData.map(
+
+  const ageTemplateColumns = filteredAgeData
+    .map((d) => `${d.value}%`)
+    .join(" ");
+  const ageGridElements = filteredAgeData.map(
     (d, i) => html`<div
         style="grid-area: 1 / ${i + 1} / 2 / ${i + 1};"
         class="group"
