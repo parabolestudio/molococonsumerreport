@@ -101,6 +101,15 @@ export function Vis4(props) {
         rx="10"
         ry="10"
       />
+      <line
+        x1="${barScale(1.0)}"
+        y1="0"
+        x2="${barScale(1.0)}"
+        y2="${barHeight}"
+        stroke="${d.Category === "Google & Meta" ? "transparent" : "white"}"
+        stroke-width="1"
+        stroke-dasharray="2,2"
+      />
       <text
         x="${barScale(d["Growth (%)"]) + 10}"
         y="${barHeight / 2}"
@@ -123,7 +132,7 @@ export function Vis4(props) {
         <g>
           <line
             x1="${barScale(1.0)}"
-            y1="0"
+            y1="${(dataFiltered.length - 1) * (barHeight + barPadding)}"
             x2="${barScale(1.0)}"
             y2="${innerHeight + 40}"
             stroke="white"
