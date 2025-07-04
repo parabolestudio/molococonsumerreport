@@ -153,19 +153,30 @@ export function Vis10() {
   console.log("Right after loading data for Viz 10:", data);
 
   // data and scales
-  const shareMinValue = d3.min(data, (d) => d3.min(d.values, (v) => v.share));
-  const shareMaxValue = d3.max(data, (d) => d3.max(d.values, (v) => v.share));
+
+  // filter data by selected countries
+  const filteredData = data.filter((d) =>
+    selectedCountries.includes(d.country)
+  );
+  console.log("Filtered Data:", filteredData);
+
+  const shareMinValue = d3.min(filteredData, (d) =>
+    d3.min(d.values, (v) => v.share)
+  );
+  const shareMaxValue = d3.max(filteredData, (d) =>
+    d3.max(d.values, (v) => v.share)
+  );
   console.log("Share Min/Max Values:", shareMinValue, shareMaxValue);
 
   const shareRadiusScale = d3
     .scaleSqrt()
     .domain([shareMinValue, shareMaxValue])
-    .range([5, 40]);
+    .range([5, 50]);
 
-  const growthMinValue = d3.min(data, (d) =>
+  const growthMinValue = d3.min(filteredData, (d) =>
     d3.min(d.values, (v) => v.yearGrowth)
   );
-  const growthMaxValue = d3.max(data, (d) =>
+  const growthMaxValue = d3.max(filteredData, (d) =>
     d3.max(d.values, (v) => v.yearGrowth)
   );
   console.log("Growth Min/Max Values:", growthMinValue, growthMaxValue);
@@ -195,7 +206,13 @@ export function Vis10() {
   const valueScale = d3
     .scaleLinear()
     .domain([growthMinValue, growthMaxValue])
-    .range([sectionInnerHeight, 0]);
+    .range([sectionInnerHeight, 0])
+    .nice();
+
+  const xScale = d3
+    .scalePoint()
+    .domain(filteredData[0].values.map((d) => d.category))
+    .range([0, sectionInnerWidth]);
 
   return html`<div class="vis-container-inner viz10-container-inner">
     <svg
@@ -213,9 +230,12 @@ export function Vis10() {
         />
 
         ${selectedCountries.map((country, index) => {
-          const countryData = data.filter((d) => d.country === country)[0]
-            .values;
+          const countryData = filteredData.filter(
+            (d) => d.country === country
+          )[0].values;
           console.log("Filtered Country Data:", countryData);
+          // sort values by share in descending order to have larger circles below
+          countryData.sort((a, b) => b.share - a.share);
 
           return html`<g
             class="section"
@@ -246,6 +266,7 @@ export function Vis10() {
                   x2="0"
                   y2="${sectionInnerHeight}"
                   stroke="black"
+                  stroke-width="0.5"
                 />
                 <line
                   x1="${-sectionMargin.left}"
@@ -253,6 +274,7 @@ export function Vis10() {
                   x2="${sectionInnerWidth}"
                   y2="${valueScale(0)}"
                   stroke="black"
+                  stroke-width="0.5"
                 />
                 <text
                   x="${sectionInnerWidth / 2}"
@@ -263,11 +285,27 @@ export function Vis10() {
                 >
                   ${country}
                 </text>
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[0])}"
+                  dy="-10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                  >${valueScale.domain()[0].toFixed(2)}%</text
+                >
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[1])}"
+                  dy="10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                  >${valueScale.domain()[1].toFixed(2)}%</text
+                >
               </g>
               <g class="circles">
                 ${countryData.map((d) => {
                   // Random placement within sectionInnerWidth for each circle
-                  let x = d.randomX * sectionInnerWidth;
+                  let x = xScale(d.category);
                   if (x - shareRadiusScale(d.share) < 0) {
                     x = shareRadiusScale(d.share);
                   } else if (
