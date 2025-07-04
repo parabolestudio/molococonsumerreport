@@ -171,6 +171,8 @@ const DotSection = ({ dotCount }) => {
 };
 
 const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
+  const [barWidths, setBarWidths] = useState({});
+
   if (!timeData || timeData.length === 0) {
     return html`<div>Loading...</div>`;
   }
@@ -188,34 +190,48 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   console.log("maxValue", maxValue);
 
   useEffect(() => {
-    const container = document.querySelector(".vis-11-time-grid");
-    console.log("container", container);
-    const containerWidth =
-      container && container.offsetWidth ? container.offsetWidth : 50;
-    const maxBarWidth = (containerWidth - 5) * 0.7 - 90;
-    console.log("maxBarWidth", maxBarWidth);
+    if (filteredTimeData.length === 0) return;
 
-    filteredTimeData.map((d) => {
-      const barWidth = (d.value / maxValue) * maxBarWidth;
-      d["barWidth"] = barWidth;
-    });
-    console.log("filteredTimeData with barWidth", filteredTimeData);
-  }, []);
+    // Add a small delay to ensure the DOM is fully rendered
+    const calculateWidths = () => {
+      const container = document.querySelector(".vis-11-time-grid");
+      console.log("container", container);
+
+      if (container) {
+        const containerWidth = container.offsetWidth;
+        // container width - gap * percentage bar-span (as 70%) minus 90px for value span
+        const maxBarWidth = (containerWidth - 5) * 0.7 - 90;
+
+        const newBarWidths = {};
+        filteredTimeData.forEach((d, index) => {
+          const barWidth = (d.value / maxValue) * maxBarWidth;
+          newBarWidths[index] = barWidth;
+        });
+
+        setBarWidths(newBarWidths);
+      }
+    };
+
+    // Try immediately and also with a small delay for safety
+    calculateWidths();
+    const timeoutId = setTimeout(calculateWidths, 10);
+
+    return () => clearTimeout(timeoutId);
+  }, [selectedCountry, selectedCategory, timeData]);
 
   return html`<div class="vis-11-time left">
     <p class="label">Where people spend their time</p>
     <p class="sublabel">Time spent vs general population</p>
     <div class="vis-11-time-grid">
-      ${filteredTimeData.map((d, index) => {
-        console.log("d", d, d["barWidth"], d.barWidth);
-        return html`<div class="element${index * 2 + 1} sublabel">
+      ${filteredTimeData.map(
+        (d, index) => html`<div class="element${index * 2 + 1} sublabel">
             ${d["Top subcat for time spent"]}
           </div>
           <div class="element${index * 2 + 2} bar-container">
-            <div class="bar" style="width: ${d.barWidth || 50}px;"></div>
+            <div class="bar" style="width: ${barWidths[index] || 50}px;"></div>
             <span class="number">+${d["value"]}%</span>
-          </div>`;
-      })}
+          </div>`
+      )}
     </div>
   </div>`;
 };
