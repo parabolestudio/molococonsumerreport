@@ -218,7 +218,7 @@ export function Vis10() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; border: 1px solid black;"
+      style="width:100%; height:100%;"
     >
       <g transform="translate(${outerMargin.left}, ${outerMargin.top})">
         <rect
@@ -229,7 +229,7 @@ export function Vis10() {
           fill="transparent"
         />
 
-        ${selectedCountries.map((country, index) => {
+        ${selectedCountries.map((country, countryIndex) => {
           const countryData = filteredData.filter(
             (d) => d.country === country
           )[0].values;
@@ -242,28 +242,17 @@ export function Vis10() {
             transform="translate(${sectionScale(country) +
             sectionMargin.left}, ${sectionMargin.top})"
           >
-            <rect
-              x="0"
-              y="0"
-              width="${sectionScale.bandwidth()}"
-              height="${sectionInnerHeight}"
-              fill="white"
-            />
             <g
               transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
             >
               <g>
                 <rect
-                  x="0"
                   y="${valueScale(0)}"
                   width="${sectionInnerWidth}"
                   height="${sectionInnerHeight - valueScale(0)}"
                   fill="#F2F2F2"
                 />
                 <line
-                  x1="0"
-                  y1="0"
-                  x2="0"
                   y2="${sectionInnerHeight}"
                   stroke="black"
                   stroke-width="0.5"
@@ -276,6 +265,35 @@ export function Vis10() {
                   stroke="black"
                   stroke-width="0.5"
                 />
+
+                ${countryIndex === 0
+                  ? html`<text
+                        transform="translate(${-sectionMargin.left +
+                        5}, ${valueScale(0) - 10}) rotate(-90)"
+                        class="charts-text-body"
+                        dominant-baseline="middle"
+                      >
+                        Growing →
+                      </text>
+                      <text
+                        transform="translate(${-sectionMargin.left +
+                        5}, ${valueScale(0) + 10}) rotate(-90)"
+                        class="charts-text-body"
+                        dominant-baseline="middle"
+                        text-anchor="end"
+                      >
+                        ← Decreasing
+                      </text>
+                      <text
+                        transform="translate(${-sectionMargin.left -
+                        25}, ${valueScale(0)}) rotate(-90)"
+                        class="charts-text-body-bold"
+                        dominant-baseline="middle"
+                        text-anchor="middle"
+                      >
+                        Time spent in 2024 vs 2023
+                      </text>`
+                  : ""}
                 <text
                   x="${sectionInnerWidth / 2}"
                   y="${sectionInnerHeight + 15}"
