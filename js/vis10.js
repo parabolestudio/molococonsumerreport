@@ -162,7 +162,6 @@ export function Vis10() {
 
       // data group by country
       const groupedData = d3.group(data, (d) => d.country);
-      console.log("Grouped Data:", groupedData);
       const groupedArray = Array.from(groupedData, ([key, value]) => {
         return {
           country: key,
@@ -174,7 +173,6 @@ export function Vis10() {
           })),
         };
       });
-      console.log("Grouped Array:", groupedArray);
 
       setData(groupedArray);
     });
@@ -184,11 +182,8 @@ export function Vis10() {
     return html`<div>Loading...</div>`;
   }
 
-  console.log("Right after loading data for Viz 10:", data);
-
   // data and scales
   const countries = data.map((d) => d.country);
-  console.log("Countries:", countries);
 
   // multi select dropdown for countries
   // coded separately in HTML with select2
@@ -198,11 +193,12 @@ export function Vis10() {
     });
   }, []);
 
+  const NUMBER_COUNTRIES = 3;
+
   // filter data by selected countries
   const filteredData = data.filter((d) =>
     selectedCountries.includes(d.country)
   );
-  console.log("Filtered Data:", filteredData);
 
   const shareMinValue = d3.min(filteredData, (d) =>
     d3.min(d.values, (v) => v.share)
@@ -210,7 +206,7 @@ export function Vis10() {
   const shareMaxValue = d3.max(filteredData, (d) =>
     d3.max(d.values, (v) => v.share)
   );
-  console.log("Share Min/Max Values:", shareMinValue, shareMaxValue);
+  // console.log("Share Min/Max Values:", shareMinValue, shareMaxValue);
 
   const shareRadiusScale = d3
     .scaleSqrt()
@@ -223,7 +219,7 @@ export function Vis10() {
   const growthMaxValue = d3.max(filteredData, (d) =>
     d3.max(d.values, (v) => v.yearGrowth)
   );
-  console.log("Growth Min/Max Values:", growthMinValue, growthMaxValue);
+  // console.log("Growth Min/Max Values:", growthMinValue, growthMaxValue);
 
   // layout dimensions
   const vis10Container = document.querySelector("#vis10");
@@ -239,7 +235,7 @@ export function Vis10() {
   const sectionMargin = { top: 0, right: 0, bottom: 20, left: 20 };
   const sectionScale = d3
     .scaleBand()
-    .domain(selectedCountries)
+    .domain([0, 1, 2])
     .range([0, outerWidth])
     .padding(0.05);
   const sectionInnerWidth =
@@ -255,7 +251,9 @@ export function Vis10() {
 
   const xScale = d3
     .scalePoint()
-    .domain(filteredData[0].values.map((d) => d.category))
+    .domain(
+      filteredData[0] ? filteredData[0].values.map((d) => d.category) : []
+    )
     .range([0, sectionInnerWidth]);
 
   return html`<div class="vis-container-inner viz10-container-inner">
@@ -273,17 +271,58 @@ export function Vis10() {
           fill="transparent"
         />
 
-        ${selectedCountries.map((country, countryIndex) => {
+        ${Array.from({ length: NUMBER_COUNTRIES }, (_, index) => {
+          const country = selectedCountries[index];
+          if (!country) {
+            return html` <g
+              class="section"
+              transform="translate(${sectionScale(index) +
+              sectionMargin.left}, ${sectionMargin.top})"
+            >
+              <g
+                transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
+              >
+                <g>
+                  <rect
+                    y="0"
+                    width="${sectionInnerWidth}"
+                    height="${sectionInnerHeight}"
+                    fill="#F2F2F2"
+                    rx="10"
+                    ry="10"
+                  />
+                  <foreignObject
+                    x="0"
+                    y="0"
+                    width="${sectionInnerWidth}"
+                    height="${sectionInnerHeight}"
+                    class="viz10-empty-section"
+                  >
+                    <div
+                      xmlns="http://www.w3.org/1999/xhtml"
+                      style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"
+                    >
+                      <p
+                        style="color: #000; line-height: 1.25; text-align: center; margin: 0;"
+                      >
+                        Choose another country to compare
+                      </p>
+                    </div>
+                  </foreignObject>
+                </g>
+              </g>
+            </g>`;
+          }
+
           const countryData = filteredData.filter(
             (d) => d.country === country
           )[0].values;
-          console.log("Filtered Country Data:", countryData);
           // sort values by share in descending order to have larger circles below
           countryData.sort((a, b) => b.share - a.share);
 
           return html`<g
             class="section"
-            transform="translate(${sectionScale(country) +
+            transform="translate(${sectionScale(index) +
             sectionMargin.left}, ${sectionMargin.top})"
           >
             <g
@@ -310,7 +349,7 @@ export function Vis10() {
                   stroke-width="0.5"
                 />
 
-                ${countryIndex === 0
+                ${index === 0
                   ? html`<text
                         transform="translate(${-sectionMargin.left +
                         5}, ${valueScale(0) - 10}) rotate(-90)"
