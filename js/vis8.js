@@ -85,8 +85,8 @@ export function Vis8() {
     vis8Container && vis8Container.offsetWidth
       ? vis8Container.offsetWidth
       : 600;
-  const heightPerCategory = 20;
-  const categoryPadding = 5;
+  const heightPerCategory = 30;
+  const categoryPadding = 15;
   const margin = { top: 25, right: 5, bottom: 5, left: 115 };
   const height =
     (heightPerCategory + categoryPadding) * categories.length +
@@ -160,6 +160,15 @@ export function Vis8() {
       >
         ${d.category}
       </text>
+      <line
+        x1="${-margin.left + 10}"
+        y1="${heightPerCategory + categoryPadding / 2}"
+        x2="${width - margin.right}"
+        y2="${heightPerCategory + categoryPadding / 2}"
+        stroke="#D9D9D9"
+        stroke-width="2"
+        stroke-dasharray="2,2"
+      />
       ${d.groups.map((group) => {
         const value = group.value;
 
@@ -173,14 +182,14 @@ export function Vis8() {
           barWidth = valueScaleNegative(0) - valueScaleNegative(value);
           barX = valueScaleNegative(0) - barWidth + groupScale(group.group);
         }
-        return html` <rect
+        return html`<rect
           x="${barX}"
           y="${0}"
           width="${barWidth}"
           height="${heightPerCategory}"
           fill="${value > 0 ? "#C368F9" : "#040078"}"
-          rx="2"
-          ry="2"
+          rx="10"
+          ry="10"
         />`;
       })}
     </g> `;
@@ -193,7 +202,7 @@ export function Vis8() {
       style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
-        ${groupSections} ${rows}
+        ${rows} ${groupSections}
       </g>
     </svg>
   </div>`;
