@@ -9,7 +9,7 @@ import { Vis7 } from "./js/vis7.js";
 import { Vis8 } from "./js/vis8.js";
 import { Vis9 } from "./js/vis9.js";
 import { Vis10 } from "./js/vis10.js";
-import { Vis11 } from "./js/vis11.js";
+import { Vis11, Vis11Categories } from "./js/vis11.js";
 import { Vis12 } from "./js/vis12.js";
 import { Vis13 } from "./js/vis13_todo.js";
 
@@ -71,6 +71,10 @@ const visList = [
   {
     id: "vis11",
     component: Vis11,
+  },
+  {
+    id: "vis11-categories",
+    component: Vis11Categories,
   },
   {
     id: "vis12",

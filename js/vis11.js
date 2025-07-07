@@ -21,22 +21,6 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
     });
   }
 }
-function setCategoryDropdownOptions(categories, selectedCategory, callback) {
-  const uniqueCategories = Array.from(new Set(categories));
-  let categoryDropdown = document.querySelector("#viz11_dropdown_categories");
-  if (categoryDropdown) {
-    if (categoryDropdown) categoryDropdown.innerHTML = "";
-    uniqueCategories.forEach((country) => {
-      let option = document.createElement("option");
-      option.text = country;
-      categoryDropdown.add(option);
-    });
-    categoryDropdown.value = selectedCategory;
-    categoryDropdown.addEventListener("change", (e) => {
-      callback(e);
-    });
-  }
-}
 
 export function Vis11() {
   const [selectedCountry, setSelectedCountry] = useState("Australia");
@@ -76,16 +60,24 @@ export function Vis11() {
       setCountryDropdownOptions(uniqueCountries, selectedCountry, (e) => {
         setSelectedCountry(e.target.value);
       });
-
-      // update category dropdown options
-      const uniqueCategories = Array.from(
-        new Set(genreDataFile.map((d) => d.Genre))
-      );
-      setCategoryDropdownOptions(uniqueCategories, selectedCategory, (e) => {
-        setSelectedCategory(e.target.value);
-      });
     });
-  }, []);
+
+    // Listen for custom category change events
+    const handleCategoryChange = (e) => {
+      const newCategory = e.detail.selectedCategory;
+      if (newCategory && newCategory !== selectedCategory) {
+        setSelectedCategory(newCategory);
+      }
+    };
+    document.addEventListener("viz11CategoryChanged", handleCategoryChange);
+
+    return () => {
+      document.removeEventListener(
+        "viz11CategoryChanged",
+        handleCategoryChange
+      );
+    };
+  }, [selectedCategory]);
 
   return html`<div class="vis-container-inner">
     <${Vis11Top}
@@ -336,3 +328,44 @@ const Vis11GenderAge = ({
     </div>
   </div>`;
 };
+
+export function Vis11Categories() {
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
+
+  // get categories
+  useEffect(() => {
+    Promise.all([d3.csv(URL + "Viz11_1_genre_overview.csv")]).then((files) => {
+      const uniqueCategories = Array.from(
+        new Set(files[0].map((d) => d.Genre))
+      ).sort();
+      setCategories(uniqueCategories);
+    });
+  }, []);
+
+  const categoryItems = categories.map(
+    (category) =>
+      html`<li
+        class="category-item ${selectedCategory === category
+          ? "active"
+          : "inactive"}"
+        onClick="${() => {
+          setSelectedCategory(category);
+
+          // Dispatch custom event to notify other components
+          const categoryChangeEvent = new CustomEvent("viz11CategoryChanged", {
+            detail: { selectedCategory: category },
+          });
+          document.dispatchEvent(categoryChangeEvent);
+        }}"
+      >
+        ${category}
+      </li>`
+  );
+
+  return html`
+    <ul data-active-category="${selectedCategory}" class="category-list">
+      ${categoryItems}
+    </ul>
+  `;
+}
