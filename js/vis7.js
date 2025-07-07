@@ -105,16 +105,45 @@ export function Vis7() {
 
       const formattedValue = d3.format(".2s")(v.value).replace("G", "B");
 
+      // Create path for selective rounded corners
+      const baseRadius = 10;
+      const radius = Math.min(baseRadius, barWidth / 2); // Ensure radius doesn't exceed half the bar width
+      let pathData = "";
+
+      if (v.value > 0) {
+        // Positive: round top-right and bottom-right corners
+        pathData = `
+          M ${barX} ${y}
+          L ${barX + barWidth - radius} ${y}
+          Q ${barX + barWidth} ${y} ${barX + barWidth} ${y + radius}
+          L ${barX + barWidth} ${y + heightPerCategory - radius}
+          Q ${barX + barWidth} ${y + heightPerCategory} ${
+          barX + barWidth - radius
+        } ${y + heightPerCategory}
+          L ${barX} ${y + heightPerCategory}
+          Z
+        `;
+      } else {
+        // Negative: round top-left and bottom-left corners
+        pathData = `
+          M ${barX + radius} ${y}
+          L ${barX + barWidth} ${y}
+          L ${barX + barWidth} ${y + heightPerCategory}
+          L ${barX + radius} ${y + heightPerCategory}
+          Q ${barX} ${y + heightPerCategory} ${barX} ${
+          y + heightPerCategory - radius
+        }
+          L ${barX} ${y + radius}
+          Q ${barX} ${y} ${barX + radius} ${y}
+          Z
+        `;
+      }
+
       return html`<g data-category="${v.category}" data-value="${v.value}">
-        <rect
-          x="${barX}"
-          y="${y}"
-          width="${barWidth}"
-          height="${heightPerCategory}"
+        <path
+          d="${pathData}"
           fill="${v.value > 0 ? "#c368f9" : "white"}"
           title="${v.category}: ${v.value}"
-          rx="10"
-          ry="10"
         />
         <text
           x="${v.value > 0 ? barX - 10 : valueScaleNegative(0) + 10}"
