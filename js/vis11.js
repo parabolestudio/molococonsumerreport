@@ -5,6 +5,20 @@ const URL =
 const ASSETS_URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/";
 
+// Map categories to their corresponding icons
+function getCategoryIcon(category) {
+  const iconMap = {
+    "E-Commerce": "shopping.svg",
+    Entertainment: "entertainment.svg",
+    Finance: "finance.svg",
+    RMG: "sport betting.svg",
+    Travel: "travel.svg",
+    "On Demand": "on demand transportation.svg",
+    Social: "social.svg",
+  };
+  return iconMap[category] || "travel.svg";
+}
+
 function setCountryDropdownOptions(countries, selectedCountry, callback) {
   // set values for country code dropdown
   // const countries = ["Australia", "Germany"];
@@ -33,6 +47,24 @@ export function Vis11() {
 
   const [timeData, setTimeData] = useState([]);
   const [appData, setAppData] = useState([]);
+  const [svgCache, setSvgCache] = useState({});
+
+  // Fetch and cache SVG content
+  const fetchSvgContent = async (iconPath) => {
+    if (svgCache[iconPath]) {
+      return svgCache[iconPath];
+    }
+
+    try {
+      const response = await fetch(ASSETS_URL + iconPath);
+      const svgText = await response.text();
+      setSvgCache((prev) => ({ ...prev, [iconPath]: svgText }));
+      return svgText;
+    } catch (error) {
+      console.error("Error fetching SVG:", error);
+      return null;
+    }
+  };
 
   useEffect(() => {
     Promise.all([
@@ -41,7 +73,7 @@ export function Vis11() {
       d3.csv(URL + "Viz11_3_demographics.csv"),
       d3.csv(URL + "Viz11_4_time_spent.csv"),
       d3.csv(URL + "Viz11_5_top_apps.csv"),
-    ]).then((files) => {
+    ]).then(async (files) => {
       const [
         genreDataFile,
         genderDataFile,
@@ -62,8 +94,21 @@ export function Vis11() {
       setCountryDropdownOptions(uniqueCountries, selectedCountry, (e) => {
         setSelectedCountry(e.target.value);
       });
-    });
 
+      // Pre-fetch all SVG icons
+      const uniqueCategories = Array.from(
+        new Set(files[0].map((d) => d.Genre))
+      ).sort();
+      const iconPaths = uniqueCategories.map((cat) => getCategoryIcon(cat));
+      const uniqueIcons = [...new Set(iconPaths)];
+
+      for (const iconPath of uniqueIcons) {
+        await fetchSvgContent(iconPath);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     // Listen for custom category change events
     const handleCategoryChange = (e) => {
       const newCategory = e.detail.selectedCategory;
@@ -81,7 +126,14 @@ export function Vis11() {
     };
   }, [selectedCategory]);
 
+  const iconPath = getCategoryIcon(selectedCategory);
+  const svgContent = svgCache[iconPath];
+
   return html`<div class="vis-container-inner">
+    <div
+      class="vis-11-main-category-icon"
+      dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
+    ></div>
     <${Vis11Top}
       genreData=${genreData}
       selectedCountry="${selectedCountry}"
@@ -335,20 +387,6 @@ export function Vis11Categories() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
   const [svgCache, setSvgCache] = useState({});
-
-  // Map categories to their corresponding icons
-  const getCategoryIcon = (category) => {
-    const iconMap = {
-      "E-Commerce": "shopping.svg",
-      Entertainment: "entertainment.svg",
-      Finance: "finance.svg",
-      RMG: "sport betting.svg",
-      Travel: "travel.svg",
-      "On Demand": "on demand transportation.svg",
-      Social: "social.svg",
-    };
-    return iconMap[category] || "travel.svg";
-  };
 
   // Fetch and cache SVG content
   const fetchSvgContent = async (iconPath) => {
