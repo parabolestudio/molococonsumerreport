@@ -6,6 +6,7 @@ export function Vis8() {
   const [categories, setCategories] = useState([]);
   const [groups, setGroups] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
@@ -214,12 +215,23 @@ export function Vis8() {
         return html`<path
           d="${pathData}"
           fill="${value > 0 ? "#C368F9" : "#040078"}"
+          onmouseover="${() => {
+            setHoveredItem({
+              country: selectedCountry,
+              category: d.category,
+              group: group.group,
+              value: value,
+            });
+          }}"
+          onmouseout="${() => {
+            setHoveredItem(null);
+          }}"
         />`;
       })}
     </g> `;
   });
 
-  return html`<div class="vis-container-inner">
+  return html`<div class="vis-container-inner viz8-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
@@ -229,5 +241,31 @@ export function Vis8() {
         ${rows} ${groupSections}
       </g>
     </svg>
+    <${Tooltip} hoveredItem=${hoveredItem} />
+  </div>`;
+}
+
+function Tooltip({ hoveredItem }) {
+  if (!hoveredItem) return null;
+
+  const formatGrowth = (growth) => {
+    if (growth === null || growth === undefined) return "N/A";
+    return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
+  };
+
+  return html`<div class="tooltip">
+    <p class="tooltip-title">${hoveredItem.category}</p>
+    <div>
+      <p class="tooltip-label">Country</p>
+      <p class="tooltip-value">${hoveredItem.country}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Age range</p>
+      <p class="tooltip-value">${hoveredItem.group}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Time spent vs. general population</p>
+      <p class="tooltip-value">${formatGrowth(hoveredItem.value)}</p>
+    </div>
   </div>`;
 }

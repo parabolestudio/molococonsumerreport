@@ -212,6 +212,10 @@ VIZ 2
 VIZ 8
 */
 #vis8 {
+  .viz8-container-inner {
+    position: relative;
+  }
+
   .category-label div {
     display: flex;
     align-items: center;
@@ -226,6 +230,10 @@ VIZ 8
       padding: 8px 16px;
       white-space: nowrap;
     }
+  }
+
+  path {
+    cursor: pointer;
   }
 }
 
@@ -257,7 +265,7 @@ VIZ 10
     }
   }
 }
-.viz10-tooltip {
+.tooltip {
   position: absolute;
   background-color: white;
   border-radius: 10px;
