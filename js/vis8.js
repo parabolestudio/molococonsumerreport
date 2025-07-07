@@ -47,6 +47,9 @@ export function Vis8() {
                 };
               }),
             };
+          }).sort((a, b) => {
+            // Sort categories alphabetically
+            return a.category.localeCompare(b.category);
           }),
         };
       });
@@ -178,14 +181,39 @@ export function Vis8() {
           barWidth = valueScaleNegative(0) - valueScaleNegative(value);
           barX = valueScaleNegative(0) - barWidth + groupScale(group.group);
         }
-        return html`<rect
-          x="${barX}"
-          y="${0}"
-          width="${barWidth}"
-          height="${heightPerCategory}"
+        const radius = 10;
+        let pathData;
+
+        if (value > 0) {
+          // Positive values: round top-right and bottom-right corners
+          pathData = `
+            M ${barX} ${0}
+            L ${barX + barWidth - radius} ${0}
+            Q ${barX + barWidth} ${0} ${barX + barWidth} ${radius}
+            L ${barX + barWidth} ${heightPerCategory - radius}
+            Q ${barX + barWidth} ${heightPerCategory} ${
+            barX + barWidth - radius
+          } ${heightPerCategory}
+            L ${barX} ${heightPerCategory}
+            Z
+          `;
+        } else {
+          // Negative values: round top-left and bottom-left corners
+          pathData = `
+            M ${barX + radius} ${0}
+            L ${barX + barWidth} ${0}
+            L ${barX + barWidth} ${heightPerCategory}
+            L ${barX + radius} ${heightPerCategory}
+            Q ${barX} ${heightPerCategory} ${barX} ${heightPerCategory - radius}
+            L ${barX} ${radius}
+            Q ${barX} ${0} ${barX + radius} ${0}
+            Z
+          `;
+        }
+
+        return html`<path
+          d="${pathData}"
           fill="${value > 0 ? "#C368F9" : "#040078"}"
-          rx="10"
-          ry="10"
         />`;
       })}
     </g> `;
