@@ -112,21 +112,17 @@ export function Vis8() {
         y1="0"
         x2="${groupScale(group) + bandwidth / 2}"
         y2="${innerHeight}"
-        stroke="#03004C"
+        stroke="#000"
       />
       <foreignObject
         x="${groupScale(group)}"
         y="${-24}"
         width="${bandwidth}"
         height="24"
-        style="display: flex; align-items: center; justify-content: center;"
+        class="category-label"
       >
-        <div
-          xmlns="http://www.w3.org/1999/xhtml"
-          class="charts-text-body"
-          style="text-align: center; line-height: 24px; font-size: 14px; background-color: #F2F2F2; border-radius: 15px; padding: 0 10px; display: inline-block; margin: 0 auto;"
-        >
-          ${group}
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <span> ${group} </span>
         </div>
       </foreignObject>
     </g>`;
