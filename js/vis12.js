@@ -37,7 +37,12 @@ function updateMultiSelect(categories, initialCategories, callback) {
 export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
-  const initialCategories = ["Automotive", "Business", "Entertainment"];
+  const initialCategories = [
+    "Education",
+    "Business",
+    "Entertainment",
+    "Social Media",
+  ];
   const [selectedCategories, setSelectedCategories] =
     useState(initialCategories);
 
@@ -141,10 +146,11 @@ export function Vis12() {
   const heightPerCategory = 50;
   const categoryPadding = 10;
   const valueOvershot = 40;
+  const NUMBER_CATEGORIES = 4;
+
   const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =
-    (heightPerCategory + categoryPadding) *
-      dataFilteredWithSelectedCategories.length +
+    (heightPerCategory + categoryPadding) * NUMBER_CATEGORIES +
     categoryPadding +
     margin.top +
     margin.bottom;
@@ -172,24 +178,47 @@ export function Vis12() {
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
 
-  const rows = dataFilteredWithSelectedCategories.map((d, index) => {
-    return html`<g
-      transform="translate(0, ${index * (heightPerCategory + categoryPadding)})"
-      class="vis12-row"
-    >
-      <text
-        x="${-10}"
-        y="${heightPerCategory}"
-        dominant-baseline="no-change"
-        text-anchor="end"
-        class="charts-text-body charts-text-white"
-        >${d.category}</text
+  // Dynamically determine the number of categories to display (up to 4)
+  const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
+    const d = dataFilteredWithSelectedCategories[index];
+    console.log("d", d);
+    if (d) {
+      return html`<g
+        transform="translate(0, ${index *
+        (heightPerCategory + categoryPadding)})"
+        class="vis12-row"
       >
-      <path d=${areaGenerator(d.hour_values)} fill-opacity="0.99" />
-    </g>`;
+        <text
+          x="${-10}"
+          y="${heightPerCategory}"
+          dominant-baseline="no-change"
+          text-anchor="end"
+          class="charts-text-body charts-text-white"
+          >${d.category}</text
+        >
+        <path d=${areaGenerator(d.hour_values)} fill-opacity="0.99" />
+      </g>`;
+    }
+    return html`
+      <g
+        transform="translate(0, ${index *
+        (heightPerCategory + categoryPadding)})"
+        class="vis12-row"
+      >
+        <rect
+          x="${0 - margin.left + margin.right}"
+          y="0"
+          width="${innerWidth + margin.left - margin.right}"
+          height="${heightPerCategory}"
+          fill="rgba(242, 242, 242, 0.3)"
+          rx="10"
+          ry="10"
+        />
+      </g>
+    `;
   });
 
-  const tickHours = [3, 6, 9, 12, 15, 18, 21];
+  const tickHours = [5, 8, 11, 14, 17, 20];
   const xTicks = tickHours.map((d) => {
     // Format hour to am/pm
     const hour = d % 24;
@@ -233,7 +262,8 @@ export function Vis12() {
       style="width:100%; height:100%; background-color:#040078"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
-        ${xTicks}${rows}
+        <g class="x-axis">${xTicks}</g>
+        <g class="rows">${rows}</g>
       </g>
     </svg>
   </div>`;
