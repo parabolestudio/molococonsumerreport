@@ -8,7 +8,7 @@ function Tooltip({ hoveredItem, tooltipData }) {
     (d) =>
       d.country === hoveredItem.country && d.category === hoveredItem.category
   );
-  console.log("Category Data in Tooltip:", categoryData);
+  // console.log("Category Data in Tooltip:", categoryData);
 
   if (!categoryData) return null;
 
@@ -419,7 +419,7 @@ export function Vis10() {
                     cx="${x}"
                     cy="${valueScale(d.yearGrowth)}"
                     r="${shareRadiusScale(d.share)}"
-                    fill="${hoveredItem && hoveredItem.Category === d.Category
+                    fill="${hoveredItem && hoveredItem.category === d.category
                       ? "#C368F9"
                       : "#040078"}"
                     data-category="${d.category}"
