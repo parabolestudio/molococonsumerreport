@@ -583,3 +583,6 @@ this is to create a pattern of three colors that repeats every three rows
 .vis12-row:nth-child(3n + 3) path {
   fill: #60e2b7;
 }
+.vis12-row:nth-child(3n + 4) path {
+  fill: #0280fb;
+}
