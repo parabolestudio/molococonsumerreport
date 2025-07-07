@@ -45,6 +45,40 @@ function Tooltip({ hoveredItem, tooltipData }) {
   </div>`;
 }
 
+function updateMultiSelect(categories, initialCategories, callback) {
+  const selectCategoryData = categories.map((category) => {
+    return {
+      id: category,
+      text: category,
+      defaultSelected: initialCategories.includes(category),
+    };
+  });
+
+  if (typeof window !== "undefined" && window.$) {
+    // create select2 dropdown options with categories of that country
+    window.$("#viz10-select").empty();
+    for (let i = 0; i < selectCategoryData.length; i++) {
+      const item = selectCategoryData[i];
+      const newOption = new Option(
+        item.text,
+        item.id,
+        item.defaultSelected,
+        item.defaultSelected
+      );
+      window.$("#viz10-select").append(newOption).trigger("change");
+    }
+
+    // create event listener to listen for changes
+    window.$("#viz10-select").on("change", function (e) {
+      const selectedCategories = window
+        .$("#viz10-select")
+        .select2("data")
+        .map((d) => d.id);
+      callback(selectedCategories);
+    });
+  }
+}
+
 export function Vis10() {
   const [data, setData] = useState([]);
   const initialCountries = ["United States", "Australia", "India"];
@@ -153,6 +187,16 @@ export function Vis10() {
   console.log("Right after loading data for Viz 10:", data);
 
   // data and scales
+  const countries = data.map((d) => d.country);
+  console.log("Countries:", countries);
+
+  // multi select dropdown for countries
+  // coded separately in HTML with select2
+  useEffect(() => {
+    updateMultiSelect(countries, initialCountries, (newlySelectedCountries) => {
+      setSelectedCountries(newlySelectedCountries);
+    });
+  }, []);
 
   // filter data by selected countries
   const filteredData = data.filter((d) =>
@@ -338,7 +382,7 @@ export function Vis10() {
                     r="${shareRadiusScale(d.share)}"
                     fill="${hoveredItem && hoveredItem.Category === d.Category
                       ? "#C368F9"
-                      : "#03004C"}"
+                      : "#040078"}"
                     data-category="${d.category}"
                     onmouseover="${() => {
                       setHoveredItem({ category: d.category, country });

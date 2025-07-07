@@ -181,7 +181,6 @@ export function Vis12() {
   // Dynamically determine the number of categories to display (up to 4)
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
-    console.log("d", d);
     if (d) {
       return html`<g
         transform="translate(0, ${index *
