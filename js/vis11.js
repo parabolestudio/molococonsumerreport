@@ -2,6 +2,8 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 const URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/";
+const ASSETS_URL =
+  "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/";
 
 function setCountryDropdownOptions(countries, selectedCountry, callback) {
   // set values for country code dropdown
@@ -332,36 +334,84 @@ const Vis11GenderAge = ({
 export function Vis11Categories() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
+  const [svgCache, setSvgCache] = useState({});
+
+  // Map categories to their corresponding icons
+  const getCategoryIcon = (category) => {
+    const iconMap = {
+      "E-Commerce": "shopping.svg",
+      Entertainment: "entertainment.svg",
+      Finance: "finance.svg",
+      RMG: "sport betting.svg",
+      Travel: "travel.svg",
+      "On Demand": "on demand transportation.svg",
+      Social: "social.svg",
+    };
+    return iconMap[category] || "travel.svg";
+  };
+
+  // Fetch and cache SVG content
+  const fetchSvgContent = async (iconPath) => {
+    if (svgCache[iconPath]) {
+      return svgCache[iconPath];
+    }
+
+    try {
+      const response = await fetch(ASSETS_URL + iconPath);
+      const svgText = await response.text();
+      setSvgCache((prev) => ({ ...prev, [iconPath]: svgText }));
+      return svgText;
+    } catch (error) {
+      console.error("Error fetching SVG:", error);
+      return null;
+    }
+  };
 
   // get categories
   useEffect(() => {
-    Promise.all([d3.csv(URL + "Viz11_1_genre_overview.csv")]).then((files) => {
-      const uniqueCategories = Array.from(
-        new Set(files[0].map((d) => d.Genre))
-      ).sort();
-      setCategories(uniqueCategories);
-    });
+    Promise.all([d3.csv(URL + "Viz11_1_genre_overview.csv")]).then(
+      async (files) => {
+        const uniqueCategories = Array.from(
+          new Set(files[0].map((d) => d.Genre))
+        ).sort();
+        setCategories(uniqueCategories);
+
+        // Pre-fetch all SVG icons
+        const iconPaths = uniqueCategories.map((cat) => getCategoryIcon(cat));
+        const uniqueIcons = [...new Set(iconPaths)];
+
+        for (const iconPath of uniqueIcons) {
+          await fetchSvgContent(iconPath);
+        }
+      }
+    );
   }, []);
 
-  const categoryItems = categories.map(
-    (category) =>
-      html`<li
-        class="category-item ${selectedCategory === category
-          ? "active"
-          : "inactive"}"
-        onClick="${() => {
-          setSelectedCategory(category);
+  const categoryItems = categories.map((category) => {
+    const iconPath = getCategoryIcon(category);
+    const svgContent = svgCache[iconPath];
 
-          // Dispatch custom event to notify other components
-          const categoryChangeEvent = new CustomEvent("viz11CategoryChanged", {
-            detail: { selectedCategory: category },
-          });
-          document.dispatchEvent(categoryChangeEvent);
-        }}"
-      >
-        ${category}
-      </li>`
-  );
+    return html`<li
+      class="category-item ${selectedCategory === category
+        ? "active"
+        : "inactive"}"
+      onClick="${() => {
+        setSelectedCategory(category);
+
+        // Dispatch custom event to notify other components
+        const categoryChangeEvent = new CustomEvent("viz11CategoryChanged", {
+          detail: { selectedCategory: category },
+        });
+        document.dispatchEvent(categoryChangeEvent);
+      }}"
+    >
+      <div
+        class="category-icon"
+        dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
+      ></div>
+      <span>${category}</span>
+    </li>`;
+  });
 
   return html`
     <ul data-active-category="${selectedCategory}" class="category-list">

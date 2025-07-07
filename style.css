@@ -500,33 +500,43 @@ VIZ 11
     align-items: center;
     gap: 8px;
     background-color: #f2f2f2;
-    padding: 6px 12px;
-
     color: #000000;
     font-size: 16px;
     line-height: 1.25;
     border-radius: 20px;
     cursor: pointer;
     white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+
+    .category-icon {
+      width: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        /* fill: #666666; */
+        circle {
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+    }
+
+    span {
+      padding: 6px 12px 6px 0;
+    }
 
     &.active {
       background-color: #60e2b7;
       font-weight: 700;
-    }
 
-    /* .category-icon {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: #60e2b7;
-        margin: 0;
-        flex-shrink: 0;
+      .category-icon svg circle {
+        fill: #60e2b7;
       }
-      .category-name {
-        font-size: 14px;
-        font-weight: 700;
-        margin: 0;
-      } */
+    }
   }
 }
 
