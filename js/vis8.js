@@ -1,172 +1,70 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis8() {
-  // const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("USA");
+  const [data, setData] = useState([]);
+  const [countries, setCountries] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [groups, setGroups] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("U.S.");
 
-  // // Fetch data on mount
-  // useEffect(() => {
-  //   d3.csv(
-  //     "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz12_time_spent_during_day.csv"
-  //   ).then((data) => {
-  //     //   data.forEach((d) => {
-  //     //     d["Value"] = +d["Value"];
-  //     //     d["Year"] = +d["Year"];
-  //     //   });
+  // Fetch data on mount
+  useEffect(() => {
+    d3.csv(
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change.csv"
+    ).then((data) => {
+      data.forEach((d) => {
+        d["value"] = +d["TIme spent change (%)"];
+        d["group"] = d["Age group"].trim();
+      });
 
-  //     setData(data);
-  //   });
-  // }, []);
+      const countries = data.map((d) => d.Country);
+      const uniqueCountries = Array.from(new Set(countries));
+      setCountries(uniqueCountries);
 
-  const categories = ["Category1", "Category2", "Category3"];
-  const groups = ["18-24 year old", "25-45", "45+"];
+      const categories = data.map((d) => d.Category);
+      const uniqueCategories = Array.from(new Set(categories));
+      setCategories(uniqueCategories);
 
-  const data = [
-    {
-      countryCode: "USA",
-      group: "18-24 year old",
-      category: "Category1",
-      value: Math.random() * 150 - 50, // Random value between -50 and 100
-    },
-    {
-      countryCode: "USA",
-      group: "18-24 year old",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "18-24 year old",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "25-45",
-      category: "Category1",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "25-45",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "25-45",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "45+",
-      category: "Category1",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "45+",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "USA",
-      group: "45+",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "18-24 year old",
-      category: "Category1",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "18-24 year old",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "18-24 year old",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "25-45",
-      category: "Category1",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "25-45",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "25-45",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "45+",
-      category: "Category1",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "45+",
-      category: "Category2",
-      value: Math.random() * 150 - 50,
-    },
-    {
-      countryCode: "Canada",
-      group: "45+",
-      category: "Category3",
-      value: Math.random() * 150 - 50,
-    },
-  ];
+      const groups = data.map((d) => d.group);
+      const uniqueGroups = Array.from(new Set(groups));
+      setGroups(uniqueGroups);
+
+      // data group by country code and categories
+      const groupedData = d3.group(data, (d) => d.Country);
+
+      const groupedArray = Array.from(groupedData, ([key, values]) => {
+        const groupedByCategory = d3.group(values, (d) => d.Category);
+        return {
+          country: key,
+          categories: Array.from(groupedByCategory, ([catKey, catValues]) => {
+            const groupedByGroup = d3.group(catValues, (d) => d.group);
+            return {
+              category: catKey,
+              groups: Array.from(groupedByGroup, ([grpKey, grpValues]) => {
+                return {
+                  group: grpKey,
+                  value: d3.sum(grpValues, (d) => d.value),
+                };
+              }),
+            };
+          }),
+        };
+      });
+
+      setData(groupedArray);
+    });
+  }, []);
 
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
   }
 
-  // data group by country code and categories
-  const groupedData = d3.group(data, (d) => d.countryCode);
-
-  const groupedArray = Array.from(groupedData, ([key, values]) => {
-    const groupedByCategory = d3.group(values, (d) => d.category);
-    return {
-      countryCode: key,
-      categories: Array.from(groupedByCategory, ([catKey, catValues]) => {
-        const groupedByGroup = d3.group(catValues, (d) => d.group);
-        return {
-          category: catKey,
-          groups: Array.from(groupedByGroup, ([grpKey, grpValues]) => {
-            return {
-              group: grpKey,
-              value: d3.sum(grpValues, (d) => d.value),
-            };
-          }),
-        };
-      }),
-    };
-  });
-
   // get selected country
   const groupedArrayFiltered =
-    groupedArray.filter((d) => d.countryCode === selectedCountry)[0]
-      ?.categories || [];
+    data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const dataFiltered = groupedArrayFiltered;
 
   // set values for country code dropdown
-  // const countries = data.map((d) => d.countryCode);
-  const countries = ["USA", "Canada"];
   let countryDropdown = document.querySelector("#viz8_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
@@ -226,7 +124,7 @@ export function Vis8() {
         <div
           xmlns="http://www.w3.org/1999/xhtml"
           class="charts-text-body"
-          style="text-align: center; line-height: 24px; font-size: 14px; background-color: #E8C4FD; border-radius: 15px; padding: 0 10px; display: inline-block; margin: 0 auto;"
+          style="text-align: center; line-height: 24px; font-size: 14px; background-color: #F2F2F2; border-radius: 15px; padding: 0 10px; display: inline-block; margin: 0 auto;"
         >
           ${group}
         </div>
