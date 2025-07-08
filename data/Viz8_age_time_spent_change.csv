@@ -1,61 +1,76 @@
 Country,Category,TIme spent change (%),Age group
-U.S.,Social Media,1.169,18-24
-U.S.,Entertainment,1.364,18-24
-U.S.,Utilities,1.144,18-24
-U.S.,Productivity,0.868,18-24
-U.S.,Lifestyle,1.089,18-24
-U.S.,News,0.879,18-24
-U.S.,Books & Reference,0.83,18-24
-U.S.,Graphics & Design,1.766,18-24
-U.S.,Games (Strategy),1.121,18-24
-U.S.,Games (Puzzle),0.783,18-24
-U.S.,Games (Casino),0.181,18-24
-U.S.,Education,1.222,18-24
-U.S.,Sports,0.66,18-24
-U.S.,Music,1.242,18-24
-U.S.,Business,0.55,18-24
-U.S.,Shopping,0.56,18-24
-U.S.,Health and Fitness,0.64,18-24
-U.S.,Travel,0.44,18-24
-U.S.,Finance,0.52,18-24
-U.S.,Weather,0.44,18-24
-U.S.,Social Media,1.02,25-45
-U.S.,Entertainment,0.94,25-45
-U.S.,Utilities,1.01,25-45
-U.S.,Productivity,1.05,25-45
-U.S.,Lifestyle,1.06,25-45
-U.S.,News,1.06,25-45
-U.S.,Books & Reference,1.11,25-45
-U.S.,Graphics & Design,0.76,25-45
-U.S.,Games (Strategy),1.03,25-45
-U.S.,Games (Puzzle),1.05,25-45
-U.S.,Games (Casino),0.97,25-45
-U.S.,Education,0.97,25-45
-U.S.,Sports,1.21,25-45
-U.S.,Music,0.99,25-45
-U.S.,Business,1.27,25-45
-U.S.,Shopping,1.25,25-45
-U.S.,Health and Fitness,1.22,25-45
-U.S.,Travel,1.16,25-45
-U.S.,Finance,1.25,25-45
-U.S.,Weather,1.03,25-45
-U.S.,Social Media,0.79,45+
-U.S.,Entertainment,0.71,45+
-U.S.,Utilities,0.76,45+
-U.S.,Productivity,1.45,45+
-U.S.,Lifestyle,0.96,45+
-U.S.,News,1.5,45+
-U.S.,Books & Reference,1.42,45+
-U.S.,Graphics & Design,0.53,45+
-U.S.,Games (Strategy),0.96,45+
-U.S.,Games (Puzzle),1.94,45+
-U.S.,Games (Casino),3.55,45+
-U.S.,Education,0.9,45+
-U.S.,Sports,1.4,45+
-U.S.,Music,0.85,45+
-U.S.,Business,1.36,45+
-U.S.,Shopping,1.46,45+
-U.S.,Health and Fitness,1.55,45+
-U.S.,Travel,1.51,45+
-U.S.,Finance,1.42,45+
-U.S.,Weather,3.12,45+
+U.S.,Graphics & Design,0.727,18-24
+U.S.,Graphics & Design,-0.205,25-55
+U.S.,Graphics & Design,-0.467,55+
+U.S.,Entertainment,0.36,18-24
+U.S.,Entertainment,-0.048,25-55
+U.S.,Entertainment,-0.29,55+
+U.S.,Photo & Video,0.337,18-24
+U.S.,Photo & Video,-0.041,25-55
+U.S.,Photo & Video,-0.261,55+
+U.S.,Games (RPG),0.246,18-24
+U.S.,Games (RPG),0.021,25-55
+U.S.,Games (RPG),-0.306,55+
+U.S.,Music,0.239,18-24
+U.S.,Music,-0.002,25-55
+U.S.,Music,-0.137,55+
+U.S.,Education,0.188,18-24
+U.S.,Education,-0.009,25-55
+U.S.,Education,-0.065,55+
+U.S.,Social Networking,0.174,18-24
+U.S.,Social Networking,0.028,25-55
+U.S.,Social Networking,-0.195,55+
+U.S.,Games (Simulation),0.154,18-24
+U.S.,Games (Simulation),0.031,25-55
+U.S.,Games (Simulation),-0.191,55+
+U.S.,Utilities,0.144,18-24
+U.S.,Utilities,0.019,25-55
+U.S.,Utilities,-0.24,55+
+U.S.,Games (Strategy),0.129,18-24
+U.S.,Games (Strategy),0.033,25-55
+U.S.,Games (Strategy),-0.015,55+
+U.S.,Lifestyle,0.088,18-24
+U.S.,Lifestyle,0.072,25-55
+U.S.,Lifestyle,-0.027,55+
+U.S.,News,-0.122,18-24
+U.S.,News,0.059,25-55
+U.S.,News,0.531,55+
+U.S.,Productivity,-0.126,18-24
+U.S.,Productivity,0.057,25-55
+U.S.,Productivity,0.449,55+
+U.S.,Books,-0.159,18-24
+U.S.,Books,0.111,25-55
+U.S.,Books,0.437,55+
+U.S.,Games (Puzzle),-0.249,18-24
+U.S.,Games (Puzzle),0.061,25-55
+U.S.,Games (Puzzle),0.996,55+
+U.S.,Food & Drink,-0.266,18-24
+U.S.,Food & Drink,0.248,25-55
+U.S.,Food & Drink,0.053,55+
+U.S.,Sports,-0.351,18-24
+U.S.,Sports,0.201,25-55
+U.S.,Sports,0.482,55+
+U.S.,Health & Fitness,-0.356,18-24
+U.S.,Health & Fitness,0.223,25-55
+U.S.,Health & Fitness,0.556,55+
+U.S.,Shopping,-0.436,18-24
+U.S.,Shopping,0.256,25-55
+U.S.,Shopping,0.457,55+
+U.S.,Business,-0.44,18-24
+U.S.,Business,0.262,25-55
+U.S.,Business,0.369,55+
+U.S.,Medical,-0.458,18-24
+U.S.,Medical,0.245,25-55
+U.S.,Medical,0.664,55+
+U.S.,Finance,-0.464,18-24
+U.S.,Finance,0.244,25-55
+U.S.,Finance,0.447,55+
+U.S.,Weather,-0.547,18-24
+U.S.,Weather,0.019,25-55
+U.S.,Weather,2.166,55+
+U.S.,Travel,-0.557,18-24
+U.S.,Travel,0.153,25-55
+U.S.,Travel,0.596,55+
+U.S.,Games (Casino),-0.807,18-24
+U.S.,Games (Casino),-0.031,25-55
+U.S.,Games (Casino),2.46,55+
