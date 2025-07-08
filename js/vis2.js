@@ -90,11 +90,10 @@ export function Vis2() {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="838"
-        height="1196"
         fill="none"
         viewBox="0 0 838 1196"
         class="vis2-main"
+        style="max-width: 838px; max-height: 1196px"
       >
         <g class="main">
           <g class="gaming value-labels">
