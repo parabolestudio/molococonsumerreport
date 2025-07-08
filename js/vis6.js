@@ -2,7 +2,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis6() {
   const [data, setData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("Custom Selection");
+  const [selectedRegion, setSelectedRegion] = useState("High-income countries");
 
   // Fetch data on mount
   useEffect(() => {
@@ -37,9 +37,7 @@ export function Vis6() {
         };
       });
 
-      const filteredData = groupedArray; //.filter((d) => d.country !== "India");
-
-      setData(filteredData);
+      setData(groupedArray);
     });
   }, []);
 
@@ -50,8 +48,7 @@ export function Vis6() {
   // set values for regions dropdown
   const regions = data.map((d) => d.region);
   const uniqueRegions = Array.from(new Set(regions)).sort();
-  // add "Default" option
-  uniqueRegions.unshift("Custom Selection");
+  uniqueRegions.unshift("High-income countries");
 
   let regionDropdown = document.querySelector("#viz6_dropdown_regions");
   if (regionDropdown) regionDropdown.innerHTML = "";
@@ -67,7 +64,7 @@ export function Vis6() {
 
   // filter and sort data based on selected region
   let filterData = data.filter((d) => d.region === selectedRegion);
-  if (selectedRegion === "Custom Selection") {
+  if (selectedRegion === "High-income countries") {
     const customCountriesRegion = [
       "U.S.",
       "U.K.",

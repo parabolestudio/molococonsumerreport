@@ -182,34 +182,60 @@ export function Vis8() {
           barWidth = valueScaleNegative(0) - valueScaleNegative(value);
           barX = valueScaleNegative(0) - barWidth + groupScale(group.group);
         }
-        const radius = 10;
+        // Make the corner radius adaptive to the bar width
+        const maxRadius = 10;
+        const radius = Math.min(maxRadius, barWidth / 2);
         let pathData;
 
         if (value > 0) {
-          // Positive values: round top-right and bottom-right corners
-          pathData = `
-            M ${barX} ${0}
-            L ${barX + barWidth - radius} ${0}
-            Q ${barX + barWidth} ${0} ${barX + barWidth} ${radius}
-            L ${barX + barWidth} ${heightPerCategory - radius}
-            Q ${barX + barWidth} ${heightPerCategory} ${
-            barX + barWidth - radius
-          } ${heightPerCategory}
-            L ${barX} ${heightPerCategory}
-            Z
-          `;
+          if (barWidth < 2) {
+            // For very small bars, use a simple rectangle
+            pathData = `
+              M ${barX} ${0}
+              L ${barX + barWidth} ${0}
+              L ${barX + barWidth} ${heightPerCategory}
+              L ${barX} ${heightPerCategory}
+              Z
+            `;
+          } else {
+            // Positive values: round top-right and bottom-right corners
+            pathData = `
+              M ${barX} ${0}
+              L ${barX + barWidth - radius} ${0}
+              Q ${barX + barWidth} ${0} ${barX + barWidth} ${radius}
+              L ${barX + barWidth} ${heightPerCategory - radius}
+              Q ${barX + barWidth} ${heightPerCategory} ${
+              barX + barWidth - radius
+            } ${heightPerCategory}
+              L ${barX} ${heightPerCategory}
+              Z
+            `;
+          }
         } else {
-          // Negative values: round top-left and bottom-left corners
-          pathData = `
-            M ${barX + radius} ${0}
-            L ${barX + barWidth} ${0}
-            L ${barX + barWidth} ${heightPerCategory}
-            L ${barX + radius} ${heightPerCategory}
-            Q ${barX} ${heightPerCategory} ${barX} ${heightPerCategory - radius}
-            L ${barX} ${radius}
-            Q ${barX} ${0} ${barX + radius} ${0}
-            Z
-          `;
+          if (barWidth < 2) {
+            // For very small bars, use a simple rectangle
+            pathData = `
+              M ${barX} ${0}
+              L ${barX + barWidth} ${0}
+              L ${barX + barWidth} ${heightPerCategory}
+              L ${barX} ${heightPerCategory}
+              Z
+            `;
+          } else {
+            // Negative values: round top-left and bottom-left corners
+            pathData = `
+              M ${barX + radius} ${0}
+              L ${barX + barWidth} ${0}
+              L ${barX + barWidth} ${heightPerCategory}
+              L ${barX + radius} ${heightPerCategory}
+              Q ${barX} ${heightPerCategory} ${barX} ${
+              heightPerCategory - radius
+            }
+              L ${barX} ${radius}
+              Q ${barX} ${0} ${barX + radius} ${0}
+              Z
+            `;
+          }
         }
 
         return html`<path
