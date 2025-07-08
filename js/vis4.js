@@ -47,8 +47,6 @@ export function Vis4Combined() {
     return html`<div>Loading...</div>`;
   }
 
-  console.log("Vis4Combined data:", data);
-
   // layout dimensions
   const vis4Container = document.querySelector("#vis4");
   const width =
@@ -57,7 +55,7 @@ export function Vis4Combined() {
       : 633;
 
   const height = 400;
-  const margin = { top: 50, right: 80, bottom: 40, left: 10 };
+  const margin = { top: 50, right: 100, bottom: 40, left: 10 };
 
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
@@ -71,7 +69,25 @@ export function Vis4Combined() {
     .scaleBand()
     .domain(data.map((d) => d["Category"]))
     .range([0, innerWidth])
-    .padding(0.5);
+    .padding(0.3)
+    .paddingOuter(0.6);
+
+  const extraGap = 40; // spacing between 3rd and 4th column
+
+  // Calculate rectangle for columns 4-7 (index 3 to 6)
+  const rectPadding = 15;
+  const firstIdx = 3;
+  const lastIdx = 6;
+  let rectX1 = columnXScale(data[firstIdx]["Category"]);
+  let rectX2 = columnXScale(data[lastIdx]["Category"]);
+  // Account for extraGap if present after 3rd column
+  if (firstIdx > 2) rectX1 += extraGap;
+  if (lastIdx > 2) rectX2 += extraGap;
+  const rectWidth =
+    rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 100;
+  const rectX = rectX1 - rectPadding - 10;
+  const rectY = -rectPadding - 20;
+  const rectHeight = innerHeight + 2 * rectPadding + 40;
 
   return html`<div class="vis-container-inner">
     <svg
@@ -85,12 +101,14 @@ export function Vis4Combined() {
           y="0"
           width="${innerWidth}"
           height="${innerHeight}"
-          stroke="white"
+          stroke="transparent"
           fill="#040078"
         />
         <g class="columns">
-          ${data.map((d) => {
-            const x = columnXScale(d["Category"]);
+          ${data.map((d, i) => {
+            let x = columnXScale(d["Category"]);
+            // Add extra gap after the third column (i > 2)
+            if (i > 2) x += extraGap;
             const y = columnHeightScale(d["Growth (%)"]);
             const height = innerHeight - y;
             const width = columnXScale.bandwidth();
@@ -136,11 +154,12 @@ export function Vis4Combined() {
         </g>
         <g>
           <line
-            x1="${columnXScale(data[data.length - 1]["Category"])}"
+            x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
             y1="${columnHeightScale(1.0)}"
             x2="${columnXScale(data[data.length - 1]["Category"]) +
             columnXScale.bandwidth() +
-            60}"
+            60 +
+            extraGap}"
             y2="${columnHeightScale(1.0)}"
             stroke="white"
             stroke-width="1"
@@ -151,7 +170,8 @@ export function Vis4Combined() {
               data[data.length - 1]["Category"]
             ) +
             columnXScale.bandwidth() +
-            60}, ${columnHeightScale(1.0) - 10})"
+            60 +
+            extraGap}, ${columnHeightScale(1.0) - 10})"
           >
             <rect
               x="-40"
@@ -174,6 +194,29 @@ export function Vis4Combined() {
             </text>
           </g>
         </g>
+        <rect
+          x="${rectX}"
+          y="${rectY}"
+          width="${rectWidth}"
+          height="${rectHeight}"
+          fill="none"
+          stroke="#0280FB"
+          stroke-width="2"
+          stroke-dasharray="2,2"
+          rx="10"
+          ry="10"
+        />
+        <line
+          x1="${columnXScale(data[2]["Category"]) + columnXScale.bandwidth()}"
+          y1="${columnHeightScale(data[2]["Growth (%)"]) +
+          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.33}"
+          x2="${rectX}"
+          y2="${columnHeightScale(data[2]["Growth (%)"]) +
+          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.33}"
+          stroke="#0280FB"
+          stroke-width="2"
+          stroke-dasharray="2,2"
+        />
       </g>
     </svg>
   </div>`;
