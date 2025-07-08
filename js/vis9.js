@@ -151,6 +151,14 @@ export function Vis9() {
           })}
         </g>
       </g>
+      <text
+        class="charts-text-body-bold"
+        dominant-baseline="hanging"
+        dx="15"
+        y="${margin.top - 35}"
+      >
+        Hours spent
+      </text>
     </svg>
   </div>`;
 }
