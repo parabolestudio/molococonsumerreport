@@ -1,6 +1,7 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis10() {
+  const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
   const initialCountries = ["United States", "Australia", "India"];
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
@@ -78,6 +79,8 @@ export function Vis10() {
       // filter out total values only
       // data = data.filter((d) => d["app"] === "Total");
 
+      setRawData(data);
+
       // filter GenAI due to outlier
       data = data.filter((d) => d.category !== "Generative AI");
 
@@ -148,8 +151,8 @@ export function Vis10() {
     vis10Container && vis10Container.offsetWidth
       ? vis10Container.offsetWidth
       : 600;
-  const height = 600;
-  const outerMargin = { top: 5, right: 5, bottom: 5, left: 5 };
+  const height = 700;
+  const outerMargin = { top: 100, right: 5, bottom: 5, left: 5 };
   const outerWidth = width - outerMargin.left - outerMargin.right;
   const outerHeight = height - outerMargin.top - outerMargin.bottom;
 
@@ -323,6 +326,27 @@ export function Vis10() {
                   dominant-baseline="middle"
                   >${valueScale.domain()[1].toFixed(0)}%</text
                 >
+                <line
+                  x1="20"
+                  y1="${valueScale(valueScale.domain()[1]) - 20}"
+                  x2="${sectionInnerWidth}"
+                  y2="${valueScale(valueScale.domain()[1]) - 20}"
+                  stroke="#000"
+                  stroke-width="1"
+                  stroke-dasharray="2,2"
+                />
+                <g
+                  transform="translate(${-15 / 2}, ${valueScale(
+                    valueScale.domain()[1]
+                  ) - 26})"
+                >
+                  <path
+                    fill="none"
+                    stroke="#000"
+                    stroke-width=".5"
+                    d="M7.901 15v-3.374l-6.9-2.815 13.801-2.613-6.9-2.814V0"
+                  />
+                </g>
               </g>
               <g class="circles">
                 ${countryData.map((d) => {
@@ -351,6 +375,54 @@ export function Vis10() {
                       setHoveredItem(null);
                     }}"
                   />`;
+                })}
+                ${["Generative AI"].map((categoryName) => {
+                  //get share and yearGrowth for Generative AI from rawData
+                  const d = rawData.find(
+                    (d) => d.country === country && d.category === categoryName
+                  );
+                  console.log("Generative AI Data:", d);
+                  if (!d) return null; // Skip if no data for Generative AI
+
+                  let x = 0.5;
+                  if (x - shareRadiusScale(d.share) < 0) {
+                    x = shareRadiusScale(d.share);
+                  } else if (
+                    x + shareRadiusScale(d.share) >
+                    sectionInnerWidth
+                  ) {
+                    x = sectionInnerWidth - shareRadiusScale(d.share);
+                  }
+                  return html`
+                    <g transform="translate(${sectionInnerWidth / 2}, ${-50})">
+                      <circle
+                        r="${shareRadiusScale(d.share)}"
+                        fill="${hoveredItem &&
+                        hoveredItem.category === d.category
+                          ? "#C368F9"
+                          : "#040078"}"
+                        data-category="${d.category}"
+                        onmouseover="${() => {
+                          setHoveredItem({ category: d.category, country });
+                        }}"
+                        onmouseout="${() => {
+                          setHoveredItem(null);
+                        }}"
+                      />
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${-5}"
+                        class="charts-text-body"
+                        >Gen AI
+                      </text>
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${10}"
+                        class="charts-text-value-small"
+                        >+${d.yearGrowth.toFixed(0)}%
+                      </text>
+                    </g>
+                  `;
                 })}
               </g>
             </g>
