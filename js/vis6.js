@@ -19,7 +19,7 @@ export function Vis6() {
 
       // convert grouped data to an array of objects
       const groupedArray = Array.from(groupedData, ([key, values]) => {
-        const value2023 = values.find((v) => v.Year === 2023)?.Value || 0;
+        const value2023 = values.find((v) => v.Year === 2021)?.Value || 0;
         const value2024 = values.find((v) => v.Year === 2024)?.Value || 0;
         const percentageChange = Math.round(
           ((value2024 - value2023) / value2023) * 100
@@ -123,7 +123,7 @@ export function Vis6() {
   //   .domain([breakPoint, maxPoint])
   //   .range([innerWidth * 0.85, innerWidth]);
 
-  const circleRadius = 6;
+  const circleRadius = 19 / 2;
 
   const elements = filterData.map((d, index) => {
     // const x2023 =
