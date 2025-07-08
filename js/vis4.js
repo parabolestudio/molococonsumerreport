@@ -1,5 +1,184 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const barColors = {
+  "Google & Meta": "var(--white)",
+  Gaming: "#5CDEFF",
+};
+
+export function Vis4Combined() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    d3.csv(
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth.csv"
+    ).then((data) => {
+      data.forEach((d) => {
+        d["Growth Text"] = "+" + Math.round(d["Growth (%)"] * 100) + "%";
+      });
+      data.forEach((d) => {
+        d["Growth (%)"] = +d["Growth (%)"] + 1.0;
+      });
+      data.push({
+        Category: "Google & Meta",
+        "Growth (%)": 1,
+        "Growth Text": "",
+      });
+
+      const categoryOrder = [
+        "Google & Meta",
+        "Gaming",
+        "Consumer",
+        "Entertainment",
+        "Category 4",
+        "On-Demand",
+        "E-Commerce",
+      ];
+      data.sort((a, b) => {
+        return (
+          categoryOrder.indexOf(a["Category"]) -
+          categoryOrder.indexOf(b["Category"])
+        );
+      });
+
+      setData(data);
+    });
+  }, []);
+
+  if (data.length === 0) {
+    return html`<div>Loading...</div>`;
+  }
+
+  console.log("Vis4Combined data:", data);
+
+  // layout dimensions
+  const vis4Container = document.querySelector("#vis4");
+  const width =
+    vis4Container && vis4Container.offsetWidth
+      ? vis4Container.offsetWidth
+      : 633;
+
+  const height = 400;
+  const margin = { top: 50, right: 80, bottom: 40, left: 10 };
+
+  const innerHeight = height - margin.top - margin.bottom;
+  const innerWidth = width - margin.left - margin.right;
+
+  // data and scales
+  const columnHeightScale = d3
+    .scaleLinear()
+    .domain([0, d3.max(data, (d) => d["Growth (%)"])])
+    .range([innerHeight, 0]);
+  const columnXScale = d3
+    .scaleBand()
+    .domain(data.map((d) => d["Category"]))
+    .range([0, innerWidth])
+    .padding(0.5);
+
+  return html`<div class="vis-container-inner">
+    <svg
+      viewBox="0 0 ${width} ${height}"
+      preserveAspectRatio="xMidYMid meet"
+      style="width:100%; height:100%; background-color:#040078"
+    >
+      <g transform="translate(${margin.left}, ${margin.top})">
+        <rect
+          x="0"
+          y="0"
+          width="${innerWidth}"
+          height="${innerHeight}"
+          stroke="white"
+          fill="#040078"
+        />
+        <g class="columns">
+          ${data.map((d) => {
+            const x = columnXScale(d["Category"]);
+            const y = columnHeightScale(d["Growth (%)"]);
+            const height = innerHeight - y;
+            const width = columnXScale.bandwidth();
+            return html`<g transform="translate(${x}, ${y})">
+                <rect
+                  width="${width}"
+                  height="${height}"
+                  fill="${barColors[d.Category]
+                    ? barColors[d.Category]
+                    : "var(--blue-medium)"}"
+                  rx="10"
+                  ry="10"
+                />
+
+                <text
+                  x="${width / 2}"
+                  y="${-10}"
+                  text-anchor="middle"
+                  class="charts-text-value charts-text-white"
+                >
+                  ${d["Growth Text"]}
+                </text>
+                <text
+                  x="${width / 2}"
+                  y="${height + 20}"
+                  text-anchor="middle"
+                  class="charts-text-body charts-text-white"
+                >
+                  ${d["Category"]}
+                </text> </g
+              ><line
+                x1="${x}"
+                y1="${columnHeightScale(1.0)}"
+                x2="${x + width}"
+                y2="${columnHeightScale(1.0)}"
+                stroke="${d.Category === "Google & Meta"
+                  ? "transparent"
+                  : "white"}"
+                stroke-width="1"
+                stroke-dasharray="2,2"
+              />`;
+          })}
+        </g>
+        <g>
+          <line
+            x1="${columnXScale(data[data.length - 1]["Category"])}"
+            y1="${columnHeightScale(1.0)}"
+            x2="${columnXScale(data[data.length - 1]["Category"]) +
+            columnXScale.bandwidth() +
+            60}"
+            y2="${columnHeightScale(1.0)}"
+            stroke="white"
+            stroke-width="1"
+            stroke-dasharray="2,2"
+          />
+          <g
+            transform="translate(${columnXScale(
+              data[data.length - 1]["Category"]
+            ) +
+            columnXScale.bandwidth() +
+            60}, ${columnHeightScale(1.0) - 10})"
+          >
+            <rect
+              x="-40"
+              y="0"
+              width="80"
+              height="20"
+              fill="white"
+              rx="10"
+              ry="10"
+            />
+            <text
+              x="${0}"
+              y="4"
+              dominant-baseline="hanging"
+              text-anchor="middle"
+              class="charts-text-body"
+              fill="#040078"
+            >
+              Baseline
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>`;
+}
+
 export function Vis4(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -68,11 +247,6 @@ export function Vis4(props) {
     .scaleLinear()
     .domain([0, d3.max(data, (d) => d["Growth (%)"])])
     .range([0, innerWidth]);
-
-  const barColors = {
-    "Google & Meta": "var(--white)",
-    Gaming: "#5CDEFF",
-  };
 
   const rows = dataFiltered.map((d, index) => {
     return html`<g
