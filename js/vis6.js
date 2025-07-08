@@ -1,9 +1,33 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const CUSTOM_COUNTRY_REGION = [
+  "U.S.",
+  "U.K.",
+  "Germany",
+  "South Korea",
+  "Japan",
+  "Australia",
+  "Canada",
+];
+
+const CIRCLE_RADIUS = 19 / 2;
+
 export function Vis6() {
   const [data, setData] = useState([]);
+  const [filterData, setFilteredData] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("High-income countries");
+  const [axisBreak, setAxisBreak] = useState(null);
 
+  function filterDataByRegion() {
+    let filterData = data.sort((a, b) => b.value2024 - a.value2024);
+    filterData = filterData.filter((d) => d.region === selectedRegion);
+    if (selectedRegion === "High-income countries") {
+      filterData = data.filter((d) =>
+        CUSTOM_COUNTRY_REGION.includes(d.country)
+      );
+    }
+    setFilteredData(filterData);
+  }
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
@@ -38,46 +62,44 @@ export function Vis6() {
       });
 
       setData(groupedArray);
+
+      // set values for regions dropdown
+      const regions = groupedArray.map((d) => d.region);
+      const uniqueRegions = Array.from(new Set(regions)).sort();
+      uniqueRegions.unshift("High-income countries");
+
+      let regionDropdown = document.querySelector("#viz6_dropdown_regions");
+      if (regionDropdown) regionDropdown.innerHTML = "";
+      uniqueRegions.forEach((region) => {
+        let option = document.createElement("option");
+        option.text = region;
+        regionDropdown.add(option);
+      });
+      regionDropdown.value = selectedRegion;
+      regionDropdown.addEventListener("change", (e) => {
+        setSelectedRegion(e.target.value);
+      });
     });
   }, []);
 
-  if (data.length === 0) {
+  // filter and sort data based on selected region
+  useEffect(() => {
+    filterDataByRegion();
+
+    // Set a breakpoint for Asia region
+    if (selectedRegion === "Asia") {
+      setAxisBreak({
+        breakPoint: 340 * 1000000000, // 350 billion
+        maxPoint: 1000 * 1000000000,
+      });
+    } else {
+      setAxisBreak(null);
+    }
+  }, [data, selectedRegion]);
+
+  if (data.length === 0 || filterData.length === 0) {
     return html`<div>Loading...</div>`;
   }
-
-  // set values for regions dropdown
-  const regions = data.map((d) => d.region);
-  const uniqueRegions = Array.from(new Set(regions)).sort();
-  uniqueRegions.unshift("High-income countries");
-
-  let regionDropdown = document.querySelector("#viz6_dropdown_regions");
-  if (regionDropdown) regionDropdown.innerHTML = "";
-  uniqueRegions.forEach((region) => {
-    let option = document.createElement("option");
-    option.text = region;
-    regionDropdown.add(option);
-  });
-  regionDropdown.value = selectedRegion;
-  regionDropdown.addEventListener("change", (e) => {
-    setSelectedRegion(e.target.value);
-  });
-
-  // filter and sort data based on selected region
-  let filterData = data.filter((d) => d.region === selectedRegion);
-  if (selectedRegion === "High-income countries") {
-    const customCountriesRegion = [
-      "U.S.",
-      "U.K.",
-      "Germany",
-      "South Korea",
-      "Japan",
-      "Australia",
-      "Canada",
-    ];
-    filterData = data.filter((d) => customCountriesRegion.includes(d.country));
-  }
-
-  filterData.sort((a, b) => b.value2024 - a.value2024);
 
   // layout dimensions
   const vis6Container = document.querySelector("#vis6");
@@ -94,47 +116,46 @@ export function Vis6() {
   const innerHeight = height - margin.top - margin.bottom;
 
   // data and scales
-  const minValue = d3.min(filterData, (d) =>
-    Math.min(d.value2023, d.value2024)
-  );
-  const maxValue = d3.max(filterData, (d) =>
-    Math.max(d.value2023, d.value2024)
-  );
-
   // normal value scale
-  const valueScale = d3
+  let valueScale = d3
     .scaleLinear()
-    .domain([0, maxValue])
+    .domain([0, d3.max(filterData, (d) => Math.max(d.value2023, d.value2024))])
     .range([0, innerWidth])
     .nice();
+  let valueScale2 = null;
 
-  // break point
-  // const breakPoint = 350 * 1000000000;
-  // const maxPoint = 1000 * 1000000000; // 1 trillion
+  if (axisBreak) {
+    // if axisBreakpoint is set, adjust the scale to use the breakpoint
+    valueScale = d3
+      .scaleLinear()
+      .domain([0, axisBreak.breakPoint])
+      .range([0, innerWidth * 0.85])
+      .nice();
 
-  // const valueScale1 = d3
-  //   .scaleLinear()
-  //   .domain([0, breakPoint])
-  //   .range([0, innerWidth * 0.85]);
-  // const valueScale2 = d3
-  //   .scaleLinear()
-  //   .domain([breakPoint, maxPoint])
-  //   .range([innerWidth * 0.85, innerWidth]);
-
-  const circleRadius = 19 / 2;
+    valueScale2 = d3
+      .scaleLinear()
+      .domain([axisBreak.breakPoint, axisBreak.maxPoint])
+      .range([innerWidth * 0.85, innerWidth]);
+  }
 
   const elements = filterData.map((d, index) => {
-    // const x2023 =
-    //   d.value2023 < breakPoint
-    //     ? valueScale1(d.value2023)
-    //     : valueScale2(d.value2023);
-    // const x2024 =
-    //   d.value2024 < breakPoint
-    //     ? valueScale1(d.value2024)
-    //     : valueScale2(d.value2024);
+    let x2023, x2024;
 
-    const x2023 = valueScale(d.value2023);
-    const x2024 = valueScale(d.value2024);
+    if (axisBreak) {
+      x2023 =
+        d.value2023 < axisBreak.breakPoint
+          ? valueScale(d.value2023)
+          : valueScale2(d.value2023);
+      x2024 =
+        d.value2024 < axisBreak.breakPoint
+          ? valueScale(d.value2024)
+          : valueScale2(d.value2024);
+    } else {
+      // if no axisBreakpoint, use the normal valueScale
+      x2023 = valueScale(d.value2023);
+      x2024 = valueScale(d.value2024);
+    }
+
     const barStart = Math.min(x2023, x2024);
     const barEnd = Math.max(x2023, x2024);
     const barWidth = Math.abs(x2023 - x2024);
@@ -146,20 +167,20 @@ export function Vis6() {
       <text x="${-120}" y="5" class="charts-text-body"> ${d.country} </text>
       <rect
         x="${barStart}"
-        y="${-circleRadius}"
+        y="${-CIRCLE_RADIUS}"
         width="${barWidth}"
-        height="${circleRadius * 2}"
+        height="${CIRCLE_RADIUS * 2}"
         fill="#EFEFEF"
       />
       <circle
         cx="${x2023}"
-        r="${circleRadius}"
+        r="${CIRCLE_RADIUS}"
         fill="#03004C"
         data-label="value_2023"
       />
       <circle
         cx="${x2024}"
-        r="${circleRadius}"
+        r="${CIRCLE_RADIUS}"
         fill="#C368F9"
         data-label="value_2024"
       />
@@ -197,40 +218,52 @@ export function Vis6() {
         : ""}
     </g>`;
   });
-  // const tick2Value = [breakPoint + (maxPoint - breakPoint) / 2, maxPoint];
-  const xTicks2 = [];
-  // const xTicks2 = tick2Value.map((tick, index) => {
-  //   const x = valueScale2(tick);
 
-  //   // format tick text (big numbers as integers should be formatted in billions.)
-  //   const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+  let xTicks2 = [];
+  if (axisBreak) {
+    const tick2Value = [
+      axisBreak.breakPoint + (axisBreak.maxPoint - axisBreak.breakPoint) / 2,
+      axisBreak.maxPoint,
+    ];
+    xTicks2 = tick2Value.map((tick, index) => {
+      const x = valueScale2(tick);
 
-  //   if (tick === maxPoint) {
-  //     return html`<g transform="translate(${x}, 0)">
-  //       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
-  //       <text
-  //         x="0"
-  //         y="${-5}"
-  //         text-anchor="middle"
-  //         class="charts-text-body"
-  //         style="font-size: 12px;"
-  //       >
-  //         ${formattedTick}
-  //       </text>
-  //     </g>`;
-  //   } else {
-  //     return html`<g transform="translate(${x}, 0)">
-  //       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
-  //       <path
-  //         transform="translate(-11, -23)"
-  //         stroke="#000"
-  //         stroke-width=".75"
-  //         fill="none"
-  //         d="M0 11h5.175l4.316-9 4.005 18 4.316-9H23"
-  //       />
-  //     </g>`;
-  //   }
-  // });
+      // format tick text (big numbers as integers should be formatted in billions.)
+      const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+
+      if (tick === axisBreak.maxPoint) {
+        return html`<g transform="translate(${x}, 0)">
+          <line y1="0" y2="${innerHeight}" stroke="#D9D9D9" />
+          <text
+            x="0"
+            y="${-5}"
+            text-anchor="middle"
+            class="charts-text-body"
+            style="font-size: 12px;"
+          >
+            ${formattedTick}
+          </text>
+        </g>`;
+      } else {
+        return html`<g transform="translate(${x}, 0)">
+          <line
+            y1="0"
+            y2="${innerHeight}"
+            stroke="#D9D9D9"
+            stroke-dasharray="2,2"
+            stroke-width="2"
+          />
+          <path
+            transform="translate(-11, -23)"
+            stroke="#000"
+            stroke-width=".75"
+            fill="none"
+            d="M0 11h5.175l4.316-9 4.005 18 4.316-9H23"
+          />
+        </g>`;
+      }
+    });
+  }
 
   return html`<div class="vis-container-inner">
     <svg
@@ -248,27 +281,26 @@ export function Vis6() {
 
 export function Vis6LegendGrowth() {
   const width = 140;
-  const height = 30;
+  const height = 35;
 
   const endX = 65;
-  const circleRadius = 17 / 2;
   const lineLeftX = endX / 2;
   const lineHorizontalLength = 70;
 
   return html`
     <svg width="${width}" height="${height}">
-      <g transform="translate(${circleRadius}, ${circleRadius + 3})">
+      <g transform="translate(${CIRCLE_RADIUS}, ${CIRCLE_RADIUS + 3})">
         <rect
           x="${0}"
-          y="${-circleRadius}"
+          y="${-CIRCLE_RADIUS}"
           width="${endX}"
-          height="${circleRadius * 2}"
+          height="${CIRCLE_RADIUS * 2}"
           fill="#EFEFEF"
         />
-        <circle cx="${0}" cy="${0}" r="${circleRadius}" fill="#040078" />
-        <circle cx="${endX}" cy="${0}" r="${circleRadius}" fill="#C368F9" />
+        <circle cx="${0}" cy="${0}" r="${CIRCLE_RADIUS}" fill="#040078" />
+        <circle cx="${endX}" cy="${0}" r="${CIRCLE_RADIUS}" fill="#C368F9" />
         <text
-          x="${endX + circleRadius + 6}"
+          x="${endX + CIRCLE_RADIUS + 6}"
           y="2"
           dominant-baseline="middle"
           fill="#03004C"
@@ -281,9 +313,9 @@ export function Vis6LegendGrowth() {
 
         <line
           x1="${lineLeftX}"
-          y1="${circleRadius * 2}"
+          y1="${CIRCLE_RADIUS * 2}"
           x2="${lineLeftX + lineHorizontalLength}"
-          y2="${circleRadius * 2}"
+          y2="${CIRCLE_RADIUS * 2}"
           stroke="#000"
           stroke-linecap="round"
         />
@@ -291,15 +323,15 @@ export function Vis6LegendGrowth() {
           x1="${lineLeftX}"
           y1="${0}"
           x2="${lineLeftX}"
-          y2="${circleRadius * 2}"
+          y2="${CIRCLE_RADIUS * 2}"
           stroke="#000"
           stroke-linecap="round"
         />
         <line
           x1="${lineLeftX + lineHorizontalLength}"
-          y1="${circleRadius + 2}"
+          y1="${CIRCLE_RADIUS + 2}"
           x2="${lineLeftX + lineHorizontalLength}"
-          y2="${circleRadius * 2}"
+          y2="${CIRCLE_RADIUS * 2}"
           stroke="#000"
           stroke-linecap="round"
         />
