@@ -131,13 +131,15 @@ VIZ 2
 :root {
   --sankey-active-area: #040078;
   --sankey-inactive-area: #c5c4dc;
-  --sankey-inactive-area-IAE: #c4def6;
-  --sankey-active-area-IAE: #0280fb;
+  --sankey-inactive-area-IAE: #dff9f1;
+  --sankey-active-area-IAE: #60e2b7;
 
   --sankey-inactive-bar: #040078;
   --sankey-active-bar: #fff;
   --sankey-inactive-bar-IAE: #68a6ef;
   --sankey-active-bar-IAE: #fff;
+
+  --sankey-text-IAE: #12976b;
 
   --sankey-labels: #03004c;
 }
