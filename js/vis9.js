@@ -3,6 +3,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 export function Vis9() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
@@ -83,7 +84,7 @@ export function Vis9() {
     .domain([minDau, maxDau])
     .range([appScale.step() * 0.1, appScale.step() * 0.34]);
 
-  return html`<div class="vis-container-inner">
+  return html`<div class="vis-container-inner viz9-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
@@ -133,11 +134,26 @@ export function Vis9() {
                   style="transition: y1 0.3s ease;"
                 />
                 <circle
+                  class="lollipop-circle"
                   cx="0"
                   cy="${hourScale(d.Hours)}"
                   r="${dauScale(d.DAU)}"
                   fill="${color}"
-                  style="transition: all 0.3s ease;"
+                  style="transition: all 0.3s ease; cursor: pointer;"
+                  onmouseover="${() => {
+                    setHoveredItem({
+                      dau: d.DAU,
+                      hours: d.Hours,
+                      country: d.Country,
+                      app: d.App,
+                      x: appScale(d.App),
+                      y: hourScale(d.Hours),
+                      r: dauScale(d.DAU),
+                    });
+                  }}"
+                  onmouseout="${() => {
+                    setHoveredItem(null);
+                  }}"
                 />
                 <text
                   y="${innerHeight + 35}"
@@ -160,5 +176,36 @@ export function Vis9() {
         Hours spent
       </text>
     </svg>
+    <${Tooltip} hoveredItem=${hoveredItem} />
+  </div>`;
+}
+
+function Tooltip({ hoveredItem }) {
+  if (!hoveredItem) return null;
+
+  return html`<div
+    class="tooltip"
+    style="left: ${hoveredItem.x}px; top: ${hoveredItem.y}px;"
+  >
+    <div>
+      <p class="tooltip-label">Country</p>
+      <p class="tooltip-value">${hoveredItem.country}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">App</p>
+      <p class="tooltip-value">${hoveredItem.app}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Daily Active Users (DAU)</p>
+      <p class="tooltip-value">
+        ${d3.format(".2s")(hoveredItem.dau).replace("G", "B")}
+      </p>
+    </div>
+    <div>
+      <p class="tooltip-label">Hours</p>
+      <p class="tooltip-value">
+        ${d3.format(".2s")(hoveredItem.hours).replace("G", "B")}
+      </p>
+    </div>
   </div>`;
 }
