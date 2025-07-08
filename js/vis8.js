@@ -126,7 +126,7 @@ export function Vis8() {
         class="category-label"
       >
         <div xmlns="http://www.w3.org/1999/xhtml">
-          <span> ${group} </span>
+          <span> ${group} years old</span>
         </div>
       </foreignObject>
     </g>`;

@@ -77,8 +77,8 @@ export function Vis1() {
   const xScaleTimeline = d3
     .scaleLinear()
     .domain([
-      d3.min(timelineData, (d) => d.year) - 0.5,
-      d3.max(timelineData, (d) => d.year) + 0.5,
+      d3.min(timelineData, (d) => d.year),
+      d3.max(timelineData, (d) => d.year) + 0.25,
     ])
     .range([0, innerWidthTimeline]);
   const yScaleTimeline = d3

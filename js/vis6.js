@@ -222,7 +222,6 @@ export function Vis6() {
             y="${-5}"
             text-anchor="middle"
             class="charts-text-body"
-            style="font-size: 12px;"
           >
             ${formattedTick}
           </text>`
