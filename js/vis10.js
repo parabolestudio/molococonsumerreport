@@ -1,84 +1,5 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-function Tooltip({ hoveredItem, tooltipData }) {
-  if (!hoveredItem || !tooltipData) return null;
-
-  // Find the category data in the array
-  const categoryData = tooltipData.find(
-    (d) =>
-      d.country === hoveredItem.country && d.category === hoveredItem.category
-  );
-  // console.log("Category Data in Tooltip:", categoryData);
-
-  if (!categoryData) return null;
-
-  const formatGrowth = (growth) => {
-    if (growth === null || growth === undefined) return "N/A";
-    return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
-  };
-
-  return html`<div class="viz10-tooltip">
-    <p class="tooltip-title">${categoryData.category}</p>
-    <div>
-      <p class="tooltip-label">Total time spent</p>
-      <p class="tooltip-value">${categoryData.share.toFixed(2)}%</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Growth (2024 vs 2023)</p>
-      <p class="tooltip-value">${formatGrowth(categoryData.yearGrowth)}</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Number of apps</p>
-      <p class="tooltip-value">${categoryData.apps.length}</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Apps</p>
-      <div class="tooltip-apps">
-        ${categoryData.apps.map(
-          (app) =>
-            html`<p class="tooltip-app">
-              ${app.appName} (${app.appShare.toFixed(2)}%)
-            </p>`
-        )}
-      </div>
-    </div>
-  </div>`;
-}
-
-function updateMultiSelect(categories, initialCategories, callback) {
-  const selectCategoryData = categories.map((category) => {
-    return {
-      id: category,
-      text: category,
-      defaultSelected: initialCategories.includes(category),
-    };
-  });
-
-  if (typeof window !== "undefined" && window.$) {
-    // create select2 dropdown options with categories of that country
-    window.$("#viz10-select").empty();
-    for (let i = 0; i < selectCategoryData.length; i++) {
-      const item = selectCategoryData[i];
-      const newOption = new Option(
-        item.text,
-        item.id,
-        item.defaultSelected,
-        item.defaultSelected
-      );
-      window.$("#viz10-select").append(newOption).trigger("change");
-    }
-
-    // create event listener to listen for changes
-    window.$("#viz10-select").on("change", function (e) {
-      const selectedCategories = window
-        .$("#viz10-select")
-        .select2("data")
-        .map((d) => d.id);
-      callback(selectedCategories);
-    });
-  }
-}
-
 export function Vis10() {
   const [data, setData] = useState([]);
   const initialCountries = ["United States", "Australia", "India"];
@@ -103,7 +24,7 @@ export function Vis10() {
         d["share"] = parseFloat(d["Share"].replace("%", ""));
         delete d["Share"];
         d["yearGrowth"] = d["2024 vs. 2023 Growth"]
-          ? parseFloat(d["2024 vs. 2023 Growth"].replace("%", ""))
+          ? parseFloat(d["2024 vs. 2023 Growth"].replace("%", "") * 100)
           : null;
         delete d["2024 vs. 2023 Growth"];
 
@@ -392,7 +313,7 @@ export function Vis10() {
                   dy="-10"
                   class="charts-text-body"
                   dominant-baseline="middle"
-                  >${valueScale.domain()[0].toFixed(2)}%</text
+                  >${valueScale.domain()[0].toFixed(0)}%</text
                 >
                 <text
                   dx="5"
@@ -400,7 +321,7 @@ export function Vis10() {
                   dy="10"
                   class="charts-text-body"
                   dominant-baseline="middle"
-                  >${valueScale.domain()[1].toFixed(2)}%</text
+                  >${valueScale.domain()[1].toFixed(0)}%</text
                 >
               </g>
               <g class="circles">
@@ -438,5 +359,84 @@ export function Vis10() {
       </g>
     </svg>
     <${Tooltip} hoveredItem=${hoveredItem} tooltipData=${tooltipData} />
+  </div>`;
+}
+
+function updateMultiSelect(categories, initialCategories, callback) {
+  const selectCategoryData = categories.map((category) => {
+    return {
+      id: category,
+      text: category,
+      defaultSelected: initialCategories.includes(category),
+    };
+  });
+
+  if (typeof window !== "undefined" && window.$) {
+    // create select2 dropdown options with categories of that country
+    window.$("#viz10-select").empty();
+    for (let i = 0; i < selectCategoryData.length; i++) {
+      const item = selectCategoryData[i];
+      const newOption = new Option(
+        item.text,
+        item.id,
+        item.defaultSelected,
+        item.defaultSelected
+      );
+      window.$("#viz10-select").append(newOption).trigger("change");
+    }
+
+    // create event listener to listen for changes
+    window.$("#viz10-select").on("change", function (e) {
+      const selectedCategories = window
+        .$("#viz10-select")
+        .select2("data")
+        .map((d) => d.id);
+      callback(selectedCategories);
+    });
+  }
+}
+
+function Tooltip({ hoveredItem, tooltipData }) {
+  if (!hoveredItem || !tooltipData) return null;
+
+  // Find the category data in the array
+  const categoryData = tooltipData.find(
+    (d) =>
+      d.country === hoveredItem.country && d.category === hoveredItem.category
+  );
+  // console.log("Category Data in Tooltip:", categoryData);
+
+  if (!categoryData) return null;
+
+  const formatGrowth = (growth) => {
+    if (growth === null || growth === undefined) return "N/A";
+    return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
+  };
+
+  return html`<div class="viz10-tooltip">
+    <p class="tooltip-title">${categoryData.category}</p>
+    <div>
+      <p class="tooltip-label">Total time spent</p>
+      <p class="tooltip-value">${categoryData.share.toFixed(2)}%</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Growth (2024 vs 2023)</p>
+      <p class="tooltip-value">${formatGrowth(categoryData.yearGrowth)}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Number of apps</p>
+      <p class="tooltip-value">${categoryData.apps.length}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Apps</p>
+      <div class="tooltip-apps">
+        ${categoryData.apps.map(
+          (app) =>
+            html`<p class="tooltip-app">
+              ${app.appName} (${app.appShare.toFixed(2)}%)
+            </p>`
+        )}
+      </div>
+    </div>
   </div>`;
 }
