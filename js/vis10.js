@@ -130,7 +130,6 @@ export function Vis10() {
   const shareMaxValue = d3.max(filteredData, (d) =>
     d3.max(d.values, (v) => v.share)
   );
-  // console.log("Share Min/Max Values:", shareMinValue, shareMaxValue);
 
   const shareRadiusScale = d3
     .scaleSqrt()
@@ -143,7 +142,6 @@ export function Vis10() {
   const growthMaxValue = d3.max(filteredData, (d) =>
     d3.max(d.values, (v) => v.yearGrowth)
   );
-  // console.log("Growth Min/Max Values:", growthMinValue, growthMaxValue);
 
   // layout dimensions
   const vis10Container = document.querySelector("#vis10");
@@ -381,7 +379,6 @@ export function Vis10() {
                   const d = rawData.find(
                     (d) => d.country === country && d.category === categoryName
                   );
-                  console.log("Generative AI Data:", d);
                   if (!d) return null; // Skip if no data for Generative AI
 
                   let x = 0.5;

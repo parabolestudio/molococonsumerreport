@@ -348,6 +348,12 @@ VIZ 10
 VIZ 11
 */
 
+/* set via JS, here just for fallback */
+:root {
+  --vis11-main-color: #60e2b7;
+  --vis11-secondary-color: #ccf5e8;
+}
+
 #vis11 {
   max-width: 736px;
 
@@ -393,11 +399,11 @@ VIZ 11
     border-radius: 20px;
   }
   .vis-11-top {
-    background-color: #60e2b7;
+    background-color: var(--vis11-main-color);
     padding: 60px 30px 30px 30px;
   }
   .vis-11-bottom {
-    background-color: #ccf5e8;
+    background-color: var(--vis11-secondary-color);
     padding: 30px 30px 30px 30px;
   }
 
@@ -413,10 +419,10 @@ VIZ 11
       height: 100%;
 
       circle {
-        fill: #ccf5e8;
+        fill: var(--vis11-secondary-color);
       }
       path {
-        fill: #60e2b7;
+        fill: var(--vis11-main-color);
       }
     }
   }
@@ -433,8 +439,8 @@ VIZ 11
       aspect-ratio: 1 / 1;
       width: 100%;
       height: auto;
-      /* Keep the red border for visibility */
-      border: 1px solid red;
+      border: 1px solid white;
+      border-radius: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -463,7 +469,7 @@ VIZ 11
     }
 
     .pill {
-      background-color: #ccf5e8;
+      background-color: var(--vis11-secondary-color);
       border-radius: 50px;
       padding: 4px 14px;
       text-align: center;
@@ -479,7 +485,7 @@ VIZ 11
     gap: 4px;
 
     .dot {
-      background-color: #ccf5e8;
+      background-color: var(--vis11-secondary-color);
       width: 13px;
       height: 13px;
       border-radius: 50%;
@@ -542,7 +548,7 @@ VIZ 11
           width: 90px;
         }
         .bar {
-          background-color: #60e2b7;
+          background-color: var(--vis11-main-color);
           display: block;
           height: 30px;
           border-radius: 5px;
@@ -571,7 +577,7 @@ VIZ 11
           width: 35px;
           height: 35px;
           border-radius: 50%;
-          background-color: #60e2b7;
+          background-color: var(--vis11-main-color);
           margin: 0;
           flex-shrink: 0;
         }
@@ -594,11 +600,11 @@ VIZ 11
     transition: all 0.4s ease-in-out;
 
     .bar {
-      background-color: #60e2b7;
+      background-color: var(--vis11-main-color);
       border-radius: 5px;
       text-align: center;
-      border-left: 2px solid #ccf5e8;
-      border-right: 2px solid #ccf5e8;
+      border-left: 2px solid var(--vis11-secondary-color);
+      border-right: 2px solid var(--vis11-secondary-color);
     }
     .group {
       display: flex;
@@ -660,11 +666,11 @@ VIZ 11
     }
 
     &.active {
-      background-color: #60e2b7;
+      background-color: var(--vis11-main-color);
       font-weight: 700;
 
       .category-icon svg circle {
-        fill: #60e2b7;
+        fill: var(--vis11-main-color);
       }
     }
   }

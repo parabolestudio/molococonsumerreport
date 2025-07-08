@@ -40,7 +40,7 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
 
 export function Vis11() {
   const [selectedCountry, setSelectedCountry] = useState("Australia");
-  const [selectedCategory, setSelectedCategory] = useState("Travel");
+  const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
   const [genreData, setGenreData] = useState([]);
   const [genderData, setGenderData] = useState([]);
   const [ageData, setAgeData] = useState([]);
@@ -124,6 +124,29 @@ export function Vis11() {
         handleCategoryChange
       );
     };
+  }, [selectedCategory]);
+
+  useEffect(() => {
+    // set color variables in css based on selected category, red for first category, green for second
+    // and blue for third category
+    const colors = {
+      "E-Commerce": { main: "#60e2b7", secondary: "#ccf5e8" },
+      Entertainment: { main: "#C368F9", secondary: "#E8C4FD" },
+      Finance: { main: "#0280FB", secondary: "#ADEFFF" },
+      "On Demand": { main: "#876AFF", secondary: "#CDC2FF" },
+      RMG: { main: "#60e2b7", secondary: "#ccf5e8" },
+      Social: { main: "#C368F9", secondary: "#E8C4FD" },
+      Travel: { main: "#0280FB", secondary: "#ADEFFF" },
+    };
+    const selectedColor = colors[selectedCategory] || colors["E-Commerce"];
+    document.documentElement.style.setProperty(
+      "--vis11-main-color",
+      selectedColor.main
+    );
+    document.documentElement.style.setProperty(
+      "--vis11-secondary-color",
+      selectedColor.secondary
+    );
   }, [selectedCategory]);
 
   const iconPath = getCategoryIcon(selectedCategory);
