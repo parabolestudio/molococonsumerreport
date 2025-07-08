@@ -185,6 +185,30 @@ export function Vis11() {
   </div>`;
 }
 
+const DOTS_PER_CIRCLE = 28;
+const RADII_CONCENTRIC_CIRCLES = [65, 65 + 12, 65 + 12 * 2, 65 + 12 * 3];
+
+const getDotPositions = (numDots, center) => {
+  const dots = [];
+  let dotsPlaced = 0;
+  let circleIdx = 0;
+  while (dotsPlaced < numDots) {
+    const dotsThisCircle = Math.min(DOTS_PER_CIRCLE, numDots - dotsPlaced);
+    const r =
+      RADII_CONCENTRIC_CIRCLES[circleIdx] ||
+      RADII_CONCENTRIC_CIRCLES[RADII_CONCENTRIC_CIRCLES.length - 1];
+    for (let i = 0; i < dotsThisCircle; i++) {
+      const angle = (2 * Math.PI * i) / DOTS_PER_CIRCLE;
+      const x = center + r * Math.cos(angle - Math.PI / 2);
+      const y = center + r * Math.sin(angle - Math.PI / 2);
+      dots.push({ x, y });
+    }
+    dotsPlaced += dotsThisCircle;
+    circleIdx++;
+  }
+  return dots;
+};
+
 const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
   if (!genreData || genreData.length === 0) {
     return html`<div>Loading...</div>`;
@@ -203,20 +227,43 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
     filteredGenreData[0]["Top Ad Opportunity #3"],
   ];
 
+  const sizeDotSvg = 200;
+  const dotRadius = 5;
+  const dots1 = getDotPositions(numberApps, sizeDotSvg / 2);
+  const dots2 = getDotPositions(numberAdOpportunities, sizeDotSvg / 2);
+
   return html`<div class="vis-11-part vis-11-top">
     <p class="title">${selectedCategory}</p>
     <div class="vis-11-top-grid">
       <div class="element1">
+        <svg viewBox="0 0 ${sizeDotSvg} ${sizeDotSvg}">
+          ${dots1.map(
+            (dot) => html`<circle
+              class="dot"
+              cx="${dot.x}"
+              cy="${dot.y}"
+              r="${dotRadius}"
+            />`
+          )}
+        </svg>
         <p class="number">${numberApps}</p>
         <p class="label">IAE apps used</p>
         <p class="sublabel">in the past 30 days</p>
-        <${DotSection} dotCount="${numberApps}" />
       </div>
       <div class="element2">
+        <svg viewBox="0 0 200 200">
+          ${dots2.map(
+            (dot) => html`<circle
+              class="dot"
+              cx="${dot.x}"
+              cy="${dot.y}"
+              r="${dotRadius}"
+            />`
+          )}
+        </svg>
         <p class="number">${numberAdOpportunities}</p>
         <p class="label">Ad opportunities</p>
         <p class="sublabel">in the past 24 hours</p>
-        <${DotSection} dotCount="${numberAdOpportunities}" />
       </div>
       <div class="element3">
         <p class="label">Top ad opportunities</p>
@@ -225,15 +272,6 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
         </div>
       </div>
     </div>
-  </div>`;
-};
-
-const DotSection = ({ dotCount }) => {
-  return html`<div class="dots">
-    ${Array.from(
-      { length: dotCount },
-      (_, i) => html`<div class="dot" key=${i}></div>`
-    )}
   </div>`;
 };
 
