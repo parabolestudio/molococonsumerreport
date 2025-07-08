@@ -187,21 +187,19 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
         <p class="number">${numberApps}</p>
         <p class="label">IAE apps used</p>
         <p class="sublabel">in the past 30 days</p>
+        <${DotSection} dotCount="${numberApps}" />
       </div>
-      <div class="element2"><${DotSection} dotCount="${numberApps}" /></div>
-      <div class="element3">
+      <div class="element2">
         <p class="number">${numberAdOpportunities}</p>
         <p class="label">Ad opportunities</p>
         <p class="sublabel">in the past 24 hours</p>
-      </div>
-      <div class="element4">
         <${DotSection} dotCount="${numberAdOpportunities}" />
       </div>
-      <div class="element5">
+      <div class="element3">
         <p class="label">Top ad opportunities</p>
-      </div>
-      <div class="element6">
-        ${pillList.map((pill) => html`<div class="pill label">${pill}</div>`)}
+        <div class="pill-list">
+          ${pillList.map((pill) => html`<div class="pill label">${pill}</div>`)}
+        </div>
       </div>
     </div>
   </div>`;

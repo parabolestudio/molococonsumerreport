@@ -343,7 +343,7 @@ VIZ 11
 */
 
 #vis11 {
-  max-width: 600px;
+  max-width: 736px;
 
   .vis-container-inner {
     position: relative;
@@ -417,11 +417,23 @@ VIZ 11
 
   .vis-11-top-grid {
     display: grid;
-    grid-template-columns: 40% 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 30px;
     grid-row-gap: 30px;
 
+    .element1,
+    .element2 {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      height: auto;
+      /* Keep the red border for visibility */
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .element1 {
       grid-area: 1 / 1 / 2 / 2;
     }
@@ -429,15 +441,15 @@ VIZ 11
       grid-area: 1 / 2 / 2 / 3;
     }
     .element3 {
-      grid-area: 2 / 1 / 3 / 2;
+      grid-area: 2 / 1 / 3 / 3;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .element4 {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-    .element5 {
-      grid-area: 3 / 1 / 4 / 2;
-    }
-    .element6 {
+
+    .pill-list {
       grid-area: 3 / 2 / 4 / 3;
       display: flex;
       gap: 4px;
