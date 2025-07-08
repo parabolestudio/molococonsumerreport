@@ -71,16 +71,9 @@ export function Vis6() {
     const customCountriesRegion = [
       "U.S.",
       "U.K.",
-      "France",
       "Germany",
       "South Korea",
       "Japan",
-      "Brazil",
-      "Mexico",
-      "Indonesia",
-      "India",
-      "Thailand",
-      "Vietnam",
       "Australia",
       "Canada",
     ];
@@ -104,33 +97,46 @@ export function Vis6() {
   const innerHeight = height - margin.top - margin.bottom;
 
   // data and scales
-  // const minValue = d3.min(data, (d) => Math.min(d.value2023, d.value2024));
-  // const maxValue = d3.max(data, (d) => Math.max(d.value2023, d.value2024));
+  const minValue = d3.min(filterData, (d) =>
+    Math.min(d.value2023, d.value2024)
+  );
+  const maxValue = d3.max(filterData, (d) =>
+    Math.max(d.value2023, d.value2024)
+  );
+
+  // normal value scale
+  const valueScale = d3
+    .scaleLinear()
+    .domain([0, maxValue])
+    .range([0, innerWidth]);
 
   // break point
-  const breakPoint = 350 * 1000000000;
-  const maxPoint = 1000 * 1000000000; // 1 trillion
+  // const breakPoint = 350 * 1000000000;
+  // const maxPoint = 1000 * 1000000000; // 1 trillion
 
-  const valueScale1 = d3
-    .scaleLinear()
-    .domain([0, breakPoint])
-    .range([0, innerWidth * 0.85]);
-  const valueScale2 = d3
-    .scaleLinear()
-    .domain([breakPoint, maxPoint])
-    .range([innerWidth * 0.85, innerWidth]);
+  // const valueScale1 = d3
+  //   .scaleLinear()
+  //   .domain([0, breakPoint])
+  //   .range([0, innerWidth * 0.85]);
+  // const valueScale2 = d3
+  //   .scaleLinear()
+  //   .domain([breakPoint, maxPoint])
+  //   .range([innerWidth * 0.85, innerWidth]);
 
-  const circleRadius = 10;
+  const circleRadius = 6;
 
   const elements = filterData.map((d, index) => {
-    const x2023 =
-      d.value2023 < breakPoint
-        ? valueScale1(d.value2023)
-        : valueScale2(d.value2023);
-    const x2024 =
-      d.value2024 < breakPoint
-        ? valueScale1(d.value2024)
-        : valueScale2(d.value2024);
+    // const x2023 =
+    //   d.value2023 < breakPoint
+    //     ? valueScale1(d.value2023)
+    //     : valueScale2(d.value2023);
+    // const x2024 =
+    //   d.value2024 < breakPoint
+    //     ? valueScale1(d.value2024)
+    //     : valueScale2(d.value2024);
+
+    const x2023 = valueScale(d.value2023);
+    const x2024 = valueScale(d.value2024);
     const barStart = Math.min(x2023, x2024);
     const barEnd = Math.max(x2023, x2024);
     const barWidth = Math.abs(x2023 - x2024);
@@ -159,20 +165,20 @@ export function Vis6() {
         fill="#C368F9"
         data-label="value_2024"
       />
-      <text
-        x="${barEnd + 20}"
-        y="${0}"
-        class="charts-text-value"
-        dominant-baseline="middle"
-        fill="#03004C"
-      >
-        ${d.percentageChangeFormatted}
-      </text>
     </g>`;
   });
+  // <text
+  //   x="${barEnd + 20}"
+  //   y="${0}"
+  //   class="charts-text-value"
+  //   dominant-baseline="middle"
+  //   fill="#03004C"
+  // >
+  //   ${d.percentageChangeFormatted}
+  // </text>
 
-  const xTicks1 = valueScale1.ticks().map((tick, index) => {
-    const x = valueScale1(tick);
+  const xTicks1 = valueScale.ticks().map((tick, index) => {
+    const x = valueScale(tick);
 
     // format tick text (big numbers as integers should be formatted in billions.)
     const formattedTick = d3.format(".2s")(tick).replace("G", "B");
@@ -192,39 +198,40 @@ export function Vis6() {
         : ""}
     </g>`;
   });
-  const tick2Value = [breakPoint + (maxPoint - breakPoint) / 2, maxPoint];
-  const xTicks2 = tick2Value.map((tick, index) => {
-    const x = valueScale2(tick);
+  // const tick2Value = [breakPoint + (maxPoint - breakPoint) / 2, maxPoint];
+  const xTicks2 = [];
+  // const xTicks2 = tick2Value.map((tick, index) => {
+  //   const x = valueScale2(tick);
 
-    // format tick text (big numbers as integers should be formatted in billions.)
-    const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+  //   // format tick text (big numbers as integers should be formatted in billions.)
+  //   const formattedTick = d3.format(".2s")(tick).replace("G", "B");
 
-    if (tick === maxPoint) {
-      return html`<g transform="translate(${x}, 0)">
-        <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
-        <text
-          x="0"
-          y="${-5}"
-          text-anchor="middle"
-          class="charts-text-body"
-          style="font-size: 12px;"
-        >
-          ${formattedTick}
-        </text>
-      </g>`;
-    } else {
-      return html`<g transform="translate(${x}, 0)">
-        <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
-        <path
-          transform="translate(-11, -23)"
-          stroke="#000"
-          stroke-width=".75"
-          fill="none"
-          d="M0 11h5.175l4.316-9 4.005 18 4.316-9H23"
-        />
-      </g>`;
-    }
-  });
+  //   if (tick === maxPoint) {
+  //     return html`<g transform="translate(${x}, 0)">
+  //       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
+  //       <text
+  //         x="0"
+  //         y="${-5}"
+  //         text-anchor="middle"
+  //         class="charts-text-body"
+  //         style="font-size: 12px;"
+  //       >
+  //         ${formattedTick}
+  //       </text>
+  //     </g>`;
+  //   } else {
+  //     return html`<g transform="translate(${x}, 0)">
+  //       <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
+  //       <path
+  //         transform="translate(-11, -23)"
+  //         stroke="#000"
+  //         stroke-width=".75"
+  //         fill="none"
+  //         d="M0 11h5.175l4.316-9 4.005 18 4.316-9H23"
+  //       />
+  //     </g>`;
+  //   }
+  // });
 
   return html`<div class="vis-container-inner">
     <svg
