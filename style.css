@@ -129,14 +129,14 @@ VIZ 1
 VIZ 2
 */
 :root {
-  --sankey-active-area: #686694;
-  --sankey-inactive-area: #d9d8e2;
-  --sankey-inactive-area-IAE: #5cdeff;
-  --sankey-active-area-IAE: #16d2ff;
+  --sankey-active-area: #040078;
+  --sankey-inactive-area: #c5c4dc;
+  --sankey-inactive-area-IAE: #c4def6;
+  --sankey-active-area-IAE: #0280fb;
 
-  --sankey-active-bar: #03004c;
-  --sankey-inactive-bar: #b5b3ca;
-  --sankey-inactive-bar-IAE: #b4d9fe;
+  --sankey-active-bar: #040078;
+  --sankey-inactive-bar: #c5c4dc;
+  --sankey-inactive-bar-IAE: #c4def6;
   --sankey-active-bar-IAE: #0280fb;
 
   --sankey-labels: #03004c;

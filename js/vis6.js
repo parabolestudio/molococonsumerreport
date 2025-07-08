@@ -92,7 +92,7 @@ export function Vis6() {
   const countryPadding = 20;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
-  const margin = { top: 20, right: 120, bottom: 20, left: 120 };
+  const margin = { top: 20, right: 25, bottom: 20, left: 120 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -108,7 +108,8 @@ export function Vis6() {
   const valueScale = d3
     .scaleLinear()
     .domain([0, maxValue])
-    .range([0, innerWidth]);
+    .range([0, innerWidth])
+    .nice();
 
   // break point
   // const breakPoint = 350 * 1000000000;
@@ -181,10 +182,11 @@ export function Vis6() {
     const x = valueScale(tick);
 
     // format tick text (big numbers as integers should be formatted in billions.)
-    const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+    const formattedTick =
+      tick === 0 ? "0" : d3.format(".2s")(tick).replace("G", "B");
 
     return html`<g transform="translate(${x}, 0)">
-      <line y1="0" y2="${innerHeight}" stroke="#000" stroke-width="0.5" />
+      <line y1="0" y2="${innerHeight}" stroke="#D9D9D9" />
       ${index % 2 == 0
         ? html`<text
             x="0"
