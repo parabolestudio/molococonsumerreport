@@ -8,6 +8,7 @@ const CUSTOM_COUNTRY_REGION = [
   "Japan",
   "Australia",
   "Canada",
+  "France",
 ];
 
 const CIRCLE_RADIUS = 19 / 2;
