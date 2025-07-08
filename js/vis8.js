@@ -221,6 +221,8 @@ export function Vis8() {
               category: d.category,
               group: group.group,
               value: value,
+              x: barX + barWidth / 2,
+              y: y + heightPerCategory / 2,
             });
           }}"
           onmouseout="${() => {
@@ -253,7 +255,10 @@ function Tooltip({ hoveredItem }) {
     return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
   };
 
-  return html`<div class="tooltip">
+  return html`<div
+    class="tooltip"
+    style="left: ${hoveredItem.x}px; top: ${hoveredItem.y}px;"
+  >
     <p class="tooltip-title">${hoveredItem.category}</p>
     <div>
       <p class="tooltip-label">Country</p>
