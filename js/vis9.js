@@ -119,52 +119,55 @@ export function Vis9() {
           })}
         </g>
         <g class="lollipops">
-          ${dataFiltered.map((d) => {
-            const color =
-              d.App === "Independent App Ecosystem" ? "#60E2B7" : "#040078";
-            return html`
-              <g transform="translate(${appScale(d.App)}, 0)">
-                <line
-                  x1="0"
-                  y1="${hourScale(d.Hours)}"
-                  x2="0"
-                  y2="${innerHeight}"
-                  stroke="${color}"
-                  stroke-width="2"
-                  style="transition: y1 0.3s ease;"
-                />
-                <circle
-                  class="lollipop-circle"
-                  cx="0"
-                  cy="${hourScale(d.Hours)}"
-                  r="${dauScale(d.DAU)}"
-                  fill="${color}"
-                  style="transition: all 0.3s ease; cursor: pointer;"
-                  onmouseover="${() => {
-                    setHoveredItem({
-                      dau: d.DAU,
-                      hours: d.Hours,
-                      country: d.Country,
-                      app: d.App,
-                      x: appScale(d.App),
-                      y: hourScale(d.Hours),
-                      r: dauScale(d.DAU),
-                    });
-                  }}"
-                  onmouseout="${() => {
-                    setHoveredItem(null);
-                  }}"
-                />
-                <text
-                  y="${innerHeight + 35}"
-                  text-anchor="middle"
-                  class="charts-text-body"
-                >
-                  ${d.App === "Independent App Ecosystem" ? "IAE" : d.App}
-                </text>
-              </g>
-            `;
-          })}
+          ${dataFiltered
+            .sort((a, b) => appScale(a.App) - appScale(b.App))
+            .map((d, index) => {
+              const color =
+                d.App === "Independent App Ecosystem" ? "#60E2B7" : "#040078";
+              return html`
+                <g transform="translate(${appScale(d.App)}, 0)">
+                  <line
+                    x1="0"
+                    y1="${hourScale(d.Hours)}"
+                    x2="0"
+                    y2="${innerHeight}"
+                    stroke="${color}"
+                    stroke-width="2"
+                    style="transition: y1 0.3s ease;"
+                  />
+                  <circle
+                    class="lollipop-circle"
+                    cx="0"
+                    cy="${hourScale(d.Hours)}"
+                    r="${dauScale(d.DAU)}"
+                    fill="${color}"
+                    style="transition: all 0.3s ease; cursor: pointer;"
+                    onmouseover="${() => {
+                      setHoveredItem({
+                        dau: d.DAU,
+                        hours: d.Hours,
+                        country: d.Country,
+                        app: d.App,
+                        x: appScale(d.App),
+                        y: hourScale(d.Hours),
+                        r: dauScale(d.DAU),
+                      });
+                    }}"
+                    onmouseout="${() => {
+                      setHoveredItem(null);
+                    }}"
+                  />
+                  <text
+                    y="${innerHeight + 20}"
+                    dy="${index % 2 === 0 ? "0" : "20"}"
+                    text-anchor="middle"
+                    class="charts-text-body"
+                  >
+                    ${d.App === "Independent App Ecosystem" ? "IAE" : d.App}
+                  </text>
+                </g>
+              `;
+            })}
         </g>
       </g>
       <text
