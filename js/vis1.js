@@ -245,7 +245,7 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(timelineGamingLatestItem.year) +
-          15}, ${yScaleTimeline(timelineGamingLatestItem.revenue)})"
+          10}, ${yScaleTimeline(timelineGamingLatestItem.revenue)})"
           dominant-baseline="middle"
           class="charts-text-value-small timeline-label"
         >
@@ -254,7 +254,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLatestItem.year
-          ) + 15}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue)})"
+          ) + 10}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue)})"
           dominant-baseline="middle"
           class="charts-text-value-small timeline-label"
         >
