@@ -111,7 +111,7 @@ export function Vis6() {
   const countryPadding = 20;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
-  const margin = { top: 20, right: 25, bottom: 20, left: 120 };
+  const margin = { top: 20, right: 90, bottom: 20, left: 120 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -184,17 +184,28 @@ export function Vis6() {
         fill="#C368F9"
         data-label="value_2024"
       />
+      ${d.percentageChange > 0
+        ? html` <text
+            x="${barEnd + 20}"
+            dy="2"
+            class="charts-text-value"
+            dominant-baseline="middle"
+            fill="#03004C"
+          >
+            ${d.percentageChangeFormatted}
+          </text>`
+        : html` <text
+            x="${barStart - 20}"
+            dy="2"
+            class="charts-text-value"
+            dominant-baseline="middle"
+            text-anchor="end"
+            fill="#03004C"
+          >
+            ${d.percentageChangeFormatted}
+          </text>`}
     </g>`;
   });
-  // <text
-  //   x="${barEnd + 20}"
-  //   y="${0}"
-  //   class="charts-text-value"
-  //   dominant-baseline="middle"
-  //   fill="#03004C"
-  // >
-  //   ${d.percentageChangeFormatted}
-  // </text>
 
   const xTicks1 = valueScale.ticks().map((tick, index) => {
     const x = valueScale(tick);
