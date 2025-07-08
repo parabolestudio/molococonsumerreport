@@ -134,10 +134,10 @@ VIZ 2
   --sankey-inactive-area-IAE: #c4def6;
   --sankey-active-area-IAE: #0280fb;
 
-  --sankey-active-bar: #040078;
-  --sankey-inactive-bar: #c5c4dc;
-  --sankey-inactive-bar-IAE: #c4def6;
-  --sankey-active-bar-IAE: #0280fb;
+  --sankey-inactive-bar: #040078;
+  --sankey-active-bar: #fff;
+  --sankey-inactive-bar-IAE: #68a6ef;
+  --sankey-active-bar-IAE: #fff;
 
   --sankey-labels: #03004c;
 }
@@ -166,11 +166,19 @@ VIZ 2
   path.consumer.IAE {
     fill: var(--sankey-active-area-IAE);
   }
-  rect.bar.consumer {
-    fill: var(--sankey-active-bar);
+  path.bar.consumer {
+    stroke: var(--sankey-active-bar);
   }
-  rect.bar.consumer.IAE {
-    fill: var(--sankey-active-bar-IAE);
+  path.bar.consumer.IAE {
+    stroke: var(--sankey-active-bar-IAE);
+  }
+  rect.bar.level-3.inactive,
+  path.bar.level-3.inactive {
+    fill: var(--sankey-inactive-area);
+  }
+  rect.bar.level-3.inactive.IAE,
+  path.bar.level-3.inactive.IAE {
+    fill: var(--sankey-inactive-area-IAE);
   }
 
   g.gaming path {
@@ -182,20 +190,26 @@ VIZ 2
   path.gaming.IAE {
     fill: var(--sankey-inactive-area-IAE);
   }
-  rect.bar.gaming {
-    fill: var(--sankey-inactive-bar);
+  path.bar.gaming {
+    stroke: var(--sankey-inactive-bar);
   }
-  rect.bar.gaming.IAE {
-    fill: var(--sankey-inactive-bar-IAE);
+  path.bar.gaming.IAE {
+    stroke: var(--sankey-inactive-bar-IAE);
   }
 
   g.consumer.value-labels path {
     fill: var(--sankey-labels);
   }
   g.consumer.value-labels path.IAE {
-    fill: var(--sankey-active-bar-IAE);
+    fill: var(--sankey-active-area-IAE);
   }
   g.gaming.value-labels path {
+    opacity: 0;
+  }
+  path.text-label.consumer {
+    fill: white;
+  }
+  path.text-label.gaming {
     opacity: 0;
   }
 }
@@ -209,11 +223,19 @@ VIZ 2
   path.consumer.IAE {
     fill: var(--sankey-inactive-area-IAE);
   }
-  rect.bar.consumer {
-    fill: var(--sankey-inactive-bar);
+  path.bar.consumer {
+    stroke: var(--sankey-inactive-bar);
   }
-  rect.bar.consumer.IAE {
-    fill: var(--sankey-inactive-bar-IAE);
+  path.bar.consumer.IAE {
+    stroke: var(--sankey-inactive-bar-IAE);
+  }
+  rect.bar.level-3.inactive,
+  path.bar.level-3.inactive {
+    fill: var(--sankey-inactive-area);
+  }
+  rect.bar.level-3.inactive.IAE,
+  path.bar.level-3.inactive.IAE {
+    fill: var(--sankey-inactive-area-IAE);
   }
 
   g.gaming path {
@@ -225,20 +247,26 @@ VIZ 2
   path.gaming.IAE {
     fill: var(--sankey-active-area-IAE);
   }
-  rect.bar.gaming {
-    fill: var(--sankey-active-bar);
+  path.bar.gaming {
+    stroke: var(--sankey-active-bar);
   }
-  rect.bar.gaming.IAE {
-    fill: var(--sankey-active-bar-IAE);
+  path.bar.gaming.IAE {
+    stroke: var(--sankey-active-bar-IAE);
   }
 
   g.gaming.value-labels path {
     fill: var(--sankey-labels);
   }
   g.gaming.value-labels path.IAE {
-    fill: var(--sankey-active-bar-IAE);
+    fill: var(--sankey-active-area-IAE);
   }
   g.consumer.value-labels path {
+    opacity: 0;
+  }
+  path.text-label.gaming {
+    fill: white;
+  }
+  path.text-label.consumer {
     opacity: 0;
   }
 }
