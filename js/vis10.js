@@ -5,7 +5,7 @@ export function Vis10() {
   const [data, setData] = useState([]);
   const initialCountries = ["United States", "Australia", "India"];
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
-
+  const [categories, setCategories] = useState([]);
   const [tooltipData, setTooltipData] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
@@ -28,9 +28,13 @@ export function Vis10() {
           ? parseFloat(d["2024 vs. 2023 Growth"].replace("%", "") * 100)
           : null;
         delete d["2024 vs. 2023 Growth"];
-
-        d["randomX"] = Math.random();
       });
+
+      // get unique categories
+      const uniqueCategories = Array.from(
+        new Set(data.map((d) => d.category))
+      ).sort();
+      setCategories(uniqueCategories);
 
       // Process tooltip data CURRENTLY NO REAL DATA FOR APPS
       // const copyOfData = data.map((d) => ({ ...d }));
@@ -93,7 +97,6 @@ export function Vis10() {
             category: v.category,
             share: v.share,
             yearGrowth: v.yearGrowth,
-            randomX: v.randomX,
           })),
         };
       });
@@ -173,9 +176,7 @@ export function Vis10() {
 
   const xScale = d3
     .scalePoint()
-    .domain(
-      filteredData[0] ? filteredData[0].values.map((d) => d.category) : []
-    )
+    .domain(categories)
     .range([0, sectionInnerWidth]);
 
   return html`<div class="vis-container-inner viz10-container-inner">
@@ -367,7 +368,14 @@ export function Vis10() {
                       : "#040078"}"
                     data-category="${d.category}"
                     onmouseover="${() => {
-                      setHoveredItem({ category: d.category, country });
+                      setHoveredItem({
+                        category: d.category,
+                        country,
+                        share: d.share,
+                        yearGrowth: d.yearGrowth,
+                        x: sectionScale(index) + sectionMargin.left + x,
+                        y: valueScale(d.yearGrowth),
+                      });
                     }}"
                     onmouseout="${() => {
                       setHoveredItem(null);
@@ -400,7 +408,17 @@ export function Vis10() {
                           : "#040078"}"
                         data-category="${d.category}"
                         onmouseover="${() => {
-                          setHoveredItem({ category: d.category, country });
+                          setHoveredItem({
+                            category: d.category,
+                            country,
+                            share: d.share,
+                            yearGrowth: d.yearGrowth,
+                            x:
+                              sectionScale(index) +
+                              sectionInnerWidth / 2 +
+                              sectionMargin.left,
+                            y: 0, //valueScale(d.yearGrowth) + 200,
+                          });
                         }}"
                         onmouseout="${() => {
                           setHoveredItem(null);
@@ -466,46 +484,63 @@ function updateMultiSelect(categories, initialCategories, callback) {
 }
 
 function Tooltip({ hoveredItem, tooltipData }) {
-  if (!hoveredItem || !tooltipData) return null;
-
-  // Find the category data in the array
-  const categoryData = tooltipData.find(
-    (d) =>
-      d.country === hoveredItem.country && d.category === hoveredItem.category
-  );
-  // console.log("Category Data in Tooltip:", categoryData);
-
-  if (!categoryData) return null;
-
   const formatGrowth = (growth) => {
     if (growth === null || growth === undefined) return "N/A";
-    return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
+    return growth > 0 ? `+${growth.toFixed(0)}%` : `${growth.toFixed(0)}%`;
   };
 
-  return html`<div class="viz10-tooltip">
-    <p class="tooltip-title">${categoryData.category}</p>
-    <div>
-      <p class="tooltip-label">Total time spent</p>
-      <p class="tooltip-value">${categoryData.share.toFixed(2)}%</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Growth (2024 vs 2023)</p>
-      <p class="tooltip-value">${formatGrowth(categoryData.yearGrowth)}</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Number of apps</p>
-      <p class="tooltip-value">${categoryData.apps.length}</p>
-    </div>
-    <div>
-      <p class="tooltip-label">Apps</p>
-      <div class="tooltip-apps">
-        ${categoryData.apps.map(
-          (app) =>
-            html`<p class="tooltip-app">
-              ${app.appName} (${app.appShare.toFixed(2)}%)
-            </p>`
-        )}
+  // Temporary tooltip while waiting for real data
+  if (hoveredItem) {
+    return html`<div
+      class="tooltip"
+      style="left: ${hoveredItem.x}px; top: ${hoveredItem.y}px;"
+    >
+      <p class="tooltip-title">${hoveredItem.category}</p>
+      <div>
+        <p class="tooltip-label">Total time spent</p>
+        <p class="tooltip-value">${hoveredItem.share.toFixed(2)}%</p>
       </div>
-    </div>
-  </div>`;
+      <div>
+        <p class="tooltip-label">Growth (2024 vs 2023)</p>
+        <p class="tooltip-value">${formatGrowth(hoveredItem.yearGrowth)}</p>
+      </div>
+    </div>`;
+  }
+
+  // if (!hoveredItem || !tooltipData) return null;
+
+  // // Find the category data in the array
+  // const categoryData = tooltipData.find(
+  //   (d) =>
+  //     d.country === hoveredItem.country && d.category === hoveredItem.category
+  // );
+
+  // if (!categoryData) return null;
+
+  // return html`<div class="tooltip">
+  //   <p class="tooltip-title">${categoryData.category}</p>
+  //   <div>
+  //     <p class="tooltip-label">Total time spent</p>
+  //     <p class="tooltip-value">${categoryData.share.toFixed(2)}%</p>
+  //   </div>
+  //   <div>
+  //     <p class="tooltip-label">Growth (2024 vs 2023)</p>
+  //     <p class="tooltip-value">${formatGrowth(categoryData.yearGrowth)}</p>
+  //   </div>
+  //   <div>
+  //     <p class="tooltip-label">Number of apps</p>
+  //     <p class="tooltip-value">${categoryData.apps.length}</p>
+  //   </div>
+  //   <div>
+  //     <p class="tooltip-label">Apps</p>
+  //     <div class="tooltip-apps">
+  //       ${categoryData.apps.map(
+  //         (app) =>
+  //           html`<p class="tooltip-app">
+  //             ${app.appName} (${app.appShare.toFixed(2)}%)
+  //           </p>`
+  //       )}
+  //     </div>
+  //   </div>
+  // </div>`;
 }
