@@ -382,7 +382,7 @@ VIZ 11
     font-weight: 700;
     font-size: 26px;
     line-height: 1.1;
-    margin-bottom: 45px;
+    margin-bottom: -5px;
     text-align: center;
   }
   .number {
@@ -431,8 +431,8 @@ VIZ 11
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr auto;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
 
     .element1,
     .element2 {
@@ -514,7 +514,7 @@ VIZ 11
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin-bottom: 68px;
+    margin-bottom: 34px;
 
     .left {
       grid-area: 1 / 1 / 2 / 2;
