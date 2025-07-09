@@ -1,0 +1,937 @@
+Country code,Country,Category,Demographic Group,Rank,Time Spent/User,Formatted,TIme spent change (%)
+AUS,Australia,Sports,Male (18+),1,1.39x,1.39,0.39
+AUS,Australia,Games / Strategy,Male (18+),2,1.39x,1.39,0.39
+AUS,Australia,Games / Racing,Male (18+),3,1.38x,1.38,0.38
+AUS,Australia,Games / Action,Male (18+),4,1.38x,1.38,0.38
+AUS,Australia,Games / Sports,Male (18+),5,1.33x,1.33,0.33
+AUS,Australia,Navigation,Male (18+),6,1.30x,1.30,0.3
+AUS,Australia,Business,Male (18+),7,1.17x,1.17,0.17
+AUS,Australia,News,Male (18+),8,1.13x,1.13,0.13
+AUS,Australia,Games / Board,Male (18+),9,1.11x,1.11,0.11
+AUS,Australia,Productivity,Male (18+),10,1.09x,1.09,0.09
+AUS,Australia,Games / Card,Male (18+),11,1.09x,1.09,0.09
+AUS,Australia,Finance,Male (18+),12,1.08x,1.08,0.08
+AUS,Australia,Photo & Video,Male (18+),13,1.07x,1.07,0.07
+AUS,Australia,Utilities,Male (18+),14,1.05x,1.05,0.05
+AUS,Australia,Games / Role Playing,Male (18+),15,1.05x,1.05,0.05
+AUS,Australia,Food & Drink,Male (18+),16,1.04x,1.04,0.04
+AUS,Australia,Health & Fitness,Male (18+),17,1.00x,1.00,0
+AUS,Australia,Music,Male (18+),18,0.99x,0.99,-0.01
+AUS,Australia,Education,Male (18+),19,0.98x,0.98,-0.02
+AUS,Australia,Social Networking,Male (18+),20,0.98x,0.98,-0.02
+AUS,Australia,Medical,Male (18+),21,0.95x,0.95,-0.05
+AUS,Australia,Travel,Male (18+),22,0.93x,0.93,-0.07
+AUS,Australia,Weather,Male (18+),23,0.90x,0.90,-0.1
+AUS,Australia,Games / Adventure,Male (18+),24,0.87x,0.87,-0.13
+AUS,Australia,Games / Simulation,Male (18+),25,0.85x,0.85,-0.15
+AUS,Australia,Games / Word,Male (18+),26,0.83x,0.83,-0.17
+AUS,Australia,Entertainment,Male (18+),27,0.83x,0.83,-0.17
+AUS,Australia,Books,Male (18+),28,0.82x,0.82,-0.18
+AUS,Australia,Games / Casino,Male (18+),29,0.75x,0.75,-0.25
+AUS,Australia,Shopping,Male (18+),30,0.71x,0.71,-0.29
+AUS,Australia,Games / Casual,Male (18+),31,0.71x,0.71,-0.29
+AUS,Australia,Games / Music,Male (18+),32,0.68x,0.68,-0.32
+AUS,Australia,Lifestyle,Male (18+),33,0.65x,0.65,-0.35
+AUS,Australia,Games / Puzzle,Male (18+),34,0.54x,0.54,-0.46
+AUS,Australia,Games / Trivia,Male (18+),35,0.54x,0.54,-0.46
+AUS,Australia,Graphics & Design,Male (18+),36,0.52x,0.52,-0.48
+AUS,Australia,Games / Puzzle,Female (18+),1,1.94x,1.94,0.94
+AUS,Australia,Graphics & Design,Female (18+),2,1.92x,1.92,0.92
+AUS,Australia,Games / Music,Female (18+),3,1.77x,1.77,0.77
+AUS,Australia,Lifestyle,Female (18+),4,1.71x,1.71,0.71
+AUS,Australia,Games / Casino,Female (18+),5,1.61x,1.61,0.61
+AUS,Australia,Shopping,Female (18+),6,1.57x,1.57,0.57
+AUS,Australia,Games / Casual,Female (18+),7,1.55x,1.55,0.55
+AUS,Australia,Games / Adventure,Female (18+),8,1.43x,1.43,0.43
+AUS,Australia,Games / Simulation,Female (18+),9,1.42x,1.42,0.42
+AUS,Australia,Entertainment,Female (18+),10,1.38x,1.38,0.38
+AUS,Australia,Games / Word,Female (18+),11,1.37x,1.37,0.37
+AUS,Australia,Games / Trivia,Female (18+),12,1.37x,1.37,0.37
+AUS,Australia,Medical,Female (18+),13,1.33x,1.33,0.33
+AUS,Australia,Books,Female (18+),14,1.32x,1.32,0.32
+AUS,Australia,Weather,Female (18+),15,1.30x,1.30,0.3
+AUS,Australia,Health & Fitness,Female (18+),16,1.15x,1.15,0.15
+AUS,Australia,Music,Female (18+),17,1.13x,1.13,0.13
+AUS,Australia,Social Networking,Female (18+),18,1.12x,1.12,0.12
+AUS,Australia,Education,Female (18+),19,1.10x,1.10,0.1
+AUS,Australia,Games / Role Playing,Female (18+),20,1.10x,1.10,0.1
+AUS,Australia,Food & Drink,Female (18+),21,1.06x,1.06,0.06
+AUS,Australia,Travel,Female (18+),22,0.96x,0.96,-0.04
+AUS,Australia,Photo & Video,Female (18+),23,0.95x,0.95,-0.05
+AUS,Australia,Utilities,Female (18+),24,0.94x,0.94,-0.06
+AUS,Australia,Productivity,Female (18+),25,0.93x,0.93,-0.07
+AUS,Australia,Finance,Female (18+),26,0.91x,0.91,-0.09
+AUS,Australia,Games / Card,Female (18+),27,0.83x,0.83,-0.17
+AUS,Australia,News,Female (18+),28,0.83x,0.83,-0.17
+AUS,Australia,Games / Board,Female (18+),29,0.80x,0.80,-0.2
+AUS,Australia,Business,Female (18+),30,0.76x,0.76,-0.24
+AUS,Australia,Navigation,Female (18+),31,0.59x,0.59,-0.41
+AUS,Australia,Games / Sports,Female (18+),32,0.51x,0.51,-0.49
+AUS,Australia,Sports,Female (18+),33,0.49x,0.49,-0.51
+AUS,Australia,Games / Action,Female (18+),34,0.45x,0.45,-0.55
+AUS,Australia,Games / Strategy,Female (18+),35,0.45x,0.45,-0.55
+AUS,Australia,Games / Racing,Female (18+),36,0.35x,0.35,-0.65
+BRA,Brazil,Sports,Male (18+),1,1.54x,1.54,0.54
+BRA,Brazil,Games / Sports,Male (18+),2,1.54x,1.54,0.54
+BRA,Brazil,Games / Strategy,Male (18+),3,1.44x,1.44,0.44
+BRA,Brazil,Games / Racing,Male (18+),4,1.38x,1.38,0.38
+BRA,Brazil,Games / Action,Male (18+),5,1.38x,1.38,0.38
+BRA,Brazil,Games / Casino,Male (18+),6,1.31x,1.31,0.31
+BRA,Brazil,Business,Male (18+),7,1.24x,1.24,0.24
+BRA,Brazil,Games / Card,Male (18+),8,1.22x,1.22,0.22
+BRA,Brazil,Games / Board,Male (18+),9,1.20x,1.20,0.2
+BRA,Brazil,Games / Adventure,Male (18+),10,1.12x,1.12,0.12
+BRA,Brazil,Photo & Video,Male (18+),11,1.10x,1.10,0.1
+BRA,Brazil,Games / Role Playing,Male (18+),12,1.07x,1.07,0.07
+BRA,Brazil,Finance,Male (18+),13,1.07x,1.07,0.07
+BRA,Brazil,Productivity,Male (18+),14,1.07x,1.07,0.07
+BRA,Brazil,Navigation,Male (18+),15,1.06x,1.06,0.06
+BRA,Brazil,Weather,Male (18+),16,1.03x,1.03,0.03
+BRA,Brazil,Music,Male (18+),17,0.98x,0.98,-0.02
+BRA,Brazil,Travel,Male (18+),18,0.96x,0.96,-0.04
+BRA,Brazil,Utilities,Male (18+),19,0.96x,0.96,-0.04
+BRA,Brazil,News,Male (18+),20,0.94x,0.94,-0.06
+BRA,Brazil,Health & Fitness,Male (18+),21,0.94x,0.94,-0.06
+BRA,Brazil,Education,Male (18+),22,0.93x,0.93,-0.07
+BRA,Brazil,Games / Simulation,Male (18+),23,0.92x,0.92,-0.08
+BRA,Brazil,Social Networking,Male (18+),24,0.90x,0.90,-0.1
+BRA,Brazil,Food & Drink,Male (18+),25,0.88x,0.88,-0.12
+BRA,Brazil,Entertainment,Male (18+),26,0.86x,0.86,-0.14
+BRA,Brazil,Games / Trivia,Male (18+),27,0.84x,0.84,-0.16
+BRA,Brazil,Games / Music,Male (18+),28,0.82x,0.82,-0.18
+BRA,Brazil,Medical,Male (18+),29,0.78x,0.78,-0.22
+BRA,Brazil,Shopping,Male (18+),30,0.73x,0.73,-0.27
+BRA,Brazil,Graphics & Design,Male (18+),31,0.71x,0.71,-0.29
+BRA,Brazil,Books,Male (18+),32,0.70x,0.70,-0.3
+BRA,Brazil,Games / Word,Male (18+),33,0.68x,0.68,-0.32
+BRA,Brazil,Games / Casual,Male (18+),34,0.65x,0.65,-0.35
+BRA,Brazil,Games / Puzzle,Male (18+),35,0.57x,0.57,-0.43
+BRA,Brazil,Lifestyle,Male (18+),36,0.54x,0.54,-0.46
+BRA,Brazil,Lifestyle,Female (18+),1,1.69x,1.69,0.69
+BRA,Brazil,Games / Puzzle,Female (18+),2,1.60x,1.60,0.6
+BRA,Brazil,Games / Casual,Female (18+),3,1.47x,1.47,0.47
+BRA,Brazil,Books,Female (18+),4,1.46x,1.46,0.46
+BRA,Brazil,Graphics & Design,Female (18+),5,1.46x,1.46,0.46
+BRA,Brazil,Games / Word,Female (18+),6,1.45x,1.45,0.45
+BRA,Brazil,Shopping,Female (18+),7,1.39x,1.39,0.39
+BRA,Brazil,Medical,Female (18+),8,1.32x,1.32,0.32
+BRA,Brazil,Games / Music,Female (18+),9,1.27x,1.27,0.27
+BRA,Brazil,Entertainment,Female (18+),10,1.21x,1.21,0.21
+BRA,Brazil,Games / Trivia,Female (18+),11,1.20x,1.20,0.2
+BRA,Brazil,Food & Drink,Female (18+),12,1.16x,1.16,0.16
+BRA,Brazil,Social Networking,Female (18+),13,1.15x,1.15,0.15
+BRA,Brazil,Games / Simulation,Female (18+),14,1.14x,1.14,0.14
+BRA,Brazil,Education,Female (18+),15,1.09x,1.09,0.09
+BRA,Brazil,News,Female (18+),16,1.09x,1.09,0.09
+BRA,Brazil,Health & Fitness,Female (18+),17,1.09x,1.09,0.09
+BRA,Brazil,Utilities,Female (18+),18,1.06x,1.06,0.06
+BRA,Brazil,Music,Female (18+),19,1.04x,1.04,0.04
+BRA,Brazil,Travel,Female (18+),20,0.96x,0.96,-0.04
+BRA,Brazil,Weather,Female (18+),21,0.93x,0.93,-0.07
+BRA,Brazil,Productivity,Female (18+),22,0.89x,0.89,-0.11
+BRA,Brazil,Games / Role Playing,Female (18+),23,0.89x,0.89,-0.11
+BRA,Brazil,Navigation,Female (18+),24,0.88x,0.88,-0.12
+BRA,Brazil,Finance,Female (18+),25,0.87x,0.87,-0.13
+BRA,Brazil,Photo & Video,Female (18+),26,0.85x,0.85,-0.15
+BRA,Brazil,Games / Adventure,Female (18+),27,0.85x,0.85,-0.15
+BRA,Brazil,Games / Card,Female (18+),28,0.68x,0.68,-0.32
+BRA,Brazil,Games / Board,Female (18+),29,0.66x,0.66,-0.34
+BRA,Brazil,Business,Female (18+),30,0.60x,0.60,-0.4
+BRA,Brazil,Games / Casino,Female (18+),31,0.54x,0.54,-0.46
+BRA,Brazil,Games / Action,Female (18+),32,0.45x,0.45,-0.55
+BRA,Brazil,Games / Racing,Female (18+),33,0.44x,0.44,-0.56
+BRA,Brazil,Games / Strategy,Female (18+),34,0.35x,0.35,-0.65
+BRA,Brazil,Games / Sports,Female (18+),35,0.20x,0.20,-0.8
+BRA,Brazil,Sports,Female (18+),36,0.18x,0.18,-0.82
+CAN,Canada,Games / Sports,Male (18+),1,1.56x,1.56,0.56
+CAN,Canada,Games / Action,Male (18+),2,1.55x,1.55,0.55
+CAN,Canada,Sports,Male (18+),3,1.55x,1.55,0.55
+CAN,Canada,Games / Strategy,Male (18+),4,1.44x,1.44,0.44
+CAN,Canada,Games / Racing,Male (18+),5,1.44x,1.44,0.44
+CAN,Canada,News,Male (18+),6,1.36x,1.36,0.36
+CAN,Canada,Games / Card,Male (18+),7,1.28x,1.28,0.28
+CAN,Canada,Finance,Male (18+),8,1.24x,1.24,0.24
+CAN,Canada,Games / Role Playing,Male (18+),9,1.18x,1.18,0.18
+CAN,Canada,Productivity,Male (18+),10,1.17x,1.17,0.17
+CAN,Canada,Business,Male (18+),11,1.17x,1.17,0.17
+CAN,Canada,Games / Board,Male (18+),12,1.13x,1.13,0.13
+CAN,Canada,Navigation,Male (18+),13,1.10x,1.10,0.1
+CAN,Canada,Photo & Video,Male (18+),14,1.09x,1.09,0.09
+CAN,Canada,Utilities,Male (18+),15,1.04x,1.04,0.04
+CAN,Canada,Education,Male (18+),16,0.99x,0.99,-0.01
+CAN,Canada,Food & Drink,Male (18+),17,0.99x,0.99,-0.01
+CAN,Canada,Travel,Male (18+),18,0.97x,0.97,-0.03
+CAN,Canada,Games / Music,Male (18+),19,0.97x,0.97,-0.03
+CAN,Canada,Social Networking,Male (18+),20,0.96x,0.96,-0.04
+CAN,Canada,Music,Male (18+),21,0.96x,0.96,-0.04
+CAN,Canada,Weather,Male (18+),22,0.93x,0.93,-0.07
+CAN,Canada,Games / Adventure,Male (18+),23,0.92x,0.92,-0.08
+CAN,Canada,Games / Simulation,Male (18+),24,0.92x,0.92,-0.08
+CAN,Canada,Health & Fitness,Male (18+),25,0.91x,0.91,-0.09
+CAN,Canada,Games / Casino,Male (18+),26,0.85x,0.85,-0.15
+CAN,Canada,Entertainment,Male (18+),27,0.79x,0.79,-0.21
+CAN,Canada,Shopping,Male (18+),28,0.79x,0.79,-0.21
+CAN,Canada,Medical,Male (18+),29,0.78x,0.78,-0.22
+CAN,Canada,Books,Male (18+),30,0.77x,0.77,-0.23
+CAN,Canada,Games / Word,Male (18+),31,0.65x,0.65,-0.35
+CAN,Canada,Games / Casual,Male (18+),32,0.64x,0.64,-0.36
+CAN,Canada,Games / Trivia,Male (18+),33,0.61x,0.61,-0.39
+CAN,Canada,Games / Puzzle,Male (18+),34,0.58x,0.58,-0.42
+CAN,Canada,Lifestyle,Male (18+),35,0.58x,0.58,-0.42
+CAN,Canada,Graphics & Design,Male (18+),36,0.57x,0.57,-0.43
+CAN,Canada,Lifestyle,Female (18+),1,1.77x,1.77,0.77
+CAN,Canada,Graphics & Design,Female (18+),2,1.76x,1.76,0.76
+CAN,Canada,Games / Puzzle,Female (18+),3,1.74x,1.74,0.74
+CAN,Canada,Games / Trivia,Female (18+),4,1.70x,1.70,0.7
+CAN,Canada,Games / Word,Female (18+),5,1.64x,1.64,0.64
+CAN,Canada,Games / Casual,Female (18+),6,1.55x,1.55,0.55
+CAN,Canada,Medical,Female (18+),7,1.47x,1.47,0.47
+CAN,Canada,Books,Female (18+),8,1.41x,1.41,0.41
+CAN,Canada,Entertainment,Female (18+),9,1.41x,1.41,0.41
+CAN,Canada,Games / Casino,Female (18+),10,1.37x,1.37,0.37
+CAN,Canada,Shopping,Female (18+),11,1.37x,1.37,0.37
+CAN,Canada,Games / Simulation,Female (18+),12,1.30x,1.30,0.3
+CAN,Canada,Games / Adventure,Female (18+),13,1.28x,1.28,0.28
+CAN,Canada,Health & Fitness,Female (18+),14,1.24x,1.24,0.24
+CAN,Canada,Games / Music,Female (18+),15,1.23x,1.23,0.23
+CAN,Canada,Weather,Female (18+),16,1.19x,1.19,0.19
+CAN,Canada,Music,Female (18+),17,1.17x,1.17,0.17
+CAN,Canada,Social Networking,Female (18+),18,1.17x,1.17,0.17
+CAN,Canada,Education,Female (18+),19,1.10x,1.10,0.1
+CAN,Canada,Food & Drink,Female (18+),20,1.10x,1.10,0.1
+CAN,Canada,Utilities,Female (18+),21,0.99x,0.99,-0.01
+CAN,Canada,Photo & Video,Female (18+),22,0.97x,0.97,-0.03
+CAN,Canada,Travel,Female (18+),23,0.97x,0.97,-0.03
+CAN,Canada,Navigation,Female (18+),24,0.86x,0.86,-0.14
+CAN,Canada,Games / Board,Female (18+),25,0.86x,0.86,-0.14
+CAN,Canada,Games / Role Playing,Female (18+),26,0.85x,0.85,-0.15
+CAN,Canada,Productivity,Female (18+),27,0.82x,0.82,-0.18
+CAN,Canada,Business,Female (18+),28,0.77x,0.77,-0.23
+CAN,Canada,Games / Card,Female (18+),29,0.70x,0.70,-0.3
+CAN,Canada,Finance,Female (18+),30,0.69x,0.69,-0.31
+CAN,Canada,News,Female (18+),31,0.54x,0.54,-0.46
+CAN,Canada,Games / Strategy,Female (18+),32,0.44x,0.44,-0.56
+CAN,Canada,Games / Racing,Female (18+),33,0.43x,0.43,-0.57
+CAN,Canada,Games / Action,Female (18+),34,0.34x,0.34,-0.66
+CAN,Canada,Games / Sports,Female (18+),35,0.30x,0.30,-0.7
+CAN,Canada,Sports,Female (18+),36,0.28x,0.28,-0.72
+DEU,Germany,Games / Sports,Male (18+),1,1.71x,1.71,0.71
+DEU,Germany,Games / Strategy,Male (18+),2,1.64x,1.64,0.64
+DEU,Germany,Games / Action,Male (18+),3,1.64x,1.64,0.64
+DEU,Germany,Sports,Male (18+),4,1.61x,1.61,0.61
+DEU,Germany,Games / Racing,Male (18+),5,1.59x,1.59,0.59
+DEU,Germany,Games / Casino,Male (18+),6,1.58x,1.58,0.58
+DEU,Germany,News,Male (18+),7,1.40x,1.40,0.4
+DEU,Germany,Finance,Male (18+),8,1.37x,1.37,0.37
+DEU,Germany,Games / Card,Male (18+),9,1.27x,1.27,0.27
+DEU,Germany,Games / Role Playing,Male (18+),10,1.22x,1.22,0.22
+DEU,Germany,Navigation,Male (18+),11,1.22x,1.22,0.22
+DEU,Germany,Games / Board,Male (18+),12,1.22x,1.22,0.22
+DEU,Germany,Photo & Video,Male (18+),13,1.18x,1.18,0.18
+DEU,Germany,Business,Male (18+),14,1.18x,1.18,0.18
+DEU,Germany,Productivity,Male (18+),15,1.18x,1.18,0.18
+DEU,Germany,Weather,Male (18+),16,1.14x,1.14,0.14
+DEU,Germany,Games / Adventure,Male (18+),17,1.11x,1.11,0.11
+DEU,Germany,Health & Fitness,Male (18+),18,1.06x,1.06,0.06
+DEU,Germany,Social Networking,Male (18+),19,1.04x,1.04,0.04
+DEU,Germany,Travel,Male (18+),20,1.04x,1.04,0.04
+DEU,Germany,Games / Simulation,Male (18+),21,1.03x,1.03,0.03
+DEU,Germany,Games / Trivia,Male (18+),22,1.03x,1.03,0.03
+DEU,Germany,Utilities,Male (18+),23,1.03x,1.03,0.03
+DEU,Germany,Music,Male (18+),24,1.01x,1.01,0.01
+DEU,Germany,Education,Male (18+),25,1.00x,1.00,0
+DEU,Germany,Medical,Male (18+),26,0.95x,0.95,-0.05
+DEU,Germany,Shopping,Male (18+),27,0.93x,0.93,-0.07
+DEU,Germany,Entertainment,Male (18+),28,0.92x,0.92,-0.08
+DEU,Germany,Food & Drink,Male (18+),29,0.87x,0.87,-0.13
+DEU,Germany,Books,Male (18+),30,0.76x,0.76,-0.24
+DEU,Germany,Games / Casual,Male (18+),31,0.64x,0.64,-0.36
+DEU,Germany,Graphics & Design,Male (18+),32,0.63x,0.63,-0.37
+DEU,Germany,Games / Puzzle,Male (18+),33,0.63x,0.63,-0.37
+DEU,Germany,Games / Music,Male (18+),34,0.62x,0.62,-0.38
+DEU,Germany,Games / Word,Male (18+),35,0.62x,0.62,-0.38
+DEU,Germany,Lifestyle,Male (18+),36,0.55x,0.55,-0.45
+DEU,Germany,Lifestyle,Female (18+),1,1.87x,1.87,0.87
+DEU,Germany,Games / Puzzle,Female (18+),2,1.78x,1.78,0.78
+DEU,Germany,Graphics & Design,Female (18+),3,1.76x,1.76,0.76
+DEU,Germany,Games / Casual,Female (18+),4,1.75x,1.75,0.75
+DEU,Germany,Games / Word,Female (18+),5,1.72x,1.72,0.72
+DEU,Germany,Games / Music,Female (18+),6,1.70x,1.70,0.7
+DEU,Germany,Books,Female (18+),7,1.57x,1.57,0.57
+DEU,Germany,Food & Drink,Female (18+),8,1.41x,1.41,0.41
+DEU,Germany,Entertainment,Female (18+),9,1.36x,1.36,0.36
+DEU,Germany,Shopping,Female (18+),10,1.33x,1.33,0.33
+DEU,Germany,Medical,Female (18+),11,1.28x,1.28,0.28
+DEU,Germany,Games / Simulation,Female (18+),12,1.23x,1.23,0.23
+DEU,Germany,Education,Female (18+),13,1.21x,1.21,0.21
+DEU,Germany,Music,Female (18+),14,1.20x,1.20,0.2
+DEU,Germany,Games / Trivia,Female (18+),15,1.18x,1.18,0.18
+DEU,Germany,Social Networking,Female (18+),16,1.16x,1.16,0.16
+DEU,Germany,Utilities,Female (18+),17,1.16x,1.16,0.16
+DEU,Germany,Games / Adventure,Female (18+),18,1.16x,1.16,0.16
+DEU,Germany,Health & Fitness,Female (18+),19,1.10x,1.10,0.1
+DEU,Germany,Travel,Female (18+),20,1.03x,1.03,0.03
+DEU,Germany,Photo & Video,Female (18+),21,0.98x,0.98,-0.02
+DEU,Germany,Weather,Female (18+),22,0.98x,0.98,-0.02
+DEU,Germany,Games / Role Playing,Female (18+),23,0.95x,0.95,-0.05
+DEU,Germany,Productivity,Female (18+),24,0.95x,0.95,-0.05
+DEU,Germany,Games / Board,Female (18+),25,0.88x,0.88,-0.12
+DEU,Germany,Business,Female (18+),26,0.88x,0.88,-0.12
+DEU,Germany,Games / Card,Female (18+),27,0.86x,0.86,-0.14
+DEU,Germany,Navigation,Female (18+),28,0.72x,0.72,-0.28
+DEU,Germany,Finance,Female (18+),29,0.65x,0.65,-0.35
+DEU,Germany,News,Female (18+),30,0.58x,0.58,-0.42
+DEU,Germany,Games / Casino,Female (18+),31,0.58x,0.58,-0.42
+DEU,Germany,Games / Racing,Female (18+),32,0.42x,0.42,-0.58
+DEU,Germany,Games / Action,Female (18+),33,0.37x,0.37,-0.63
+DEU,Germany,Games / Strategy,Female (18+),34,0.32x,0.32,-0.68
+DEU,Germany,Sports,Female (18+),35,0.28x,0.28,-0.72
+DEU,Germany,Games / Sports,Female (18+),36,0.23x,0.23,-0.77
+FRA,France,Games / Action,Male (18+),1,1.74x,1.74,0.74
+FRA,France,Games / Sports,Male (18+),2,1.72x,1.72,0.72
+FRA,France,Games / Strategy,Male (18+),3,1.70x,1.70,0.7
+FRA,France,Sports,Male (18+),4,1.67x,1.67,0.67
+FRA,France,Games / Racing,Male (18+),5,1.64x,1.64,0.64
+FRA,France,Games / Board,Male (18+),6,1.60x,1.60,0.6
+FRA,France,News,Male (18+),7,1.52x,1.52,0.52
+FRA,France,Games / Role Playing,Male (18+),8,1.42x,1.42,0.42
+FRA,France,Games / Card,Male (18+),9,1.39x,1.39,0.39
+FRA,France,Finance,Male (18+),10,1.28x,1.28,0.28
+FRA,France,Photo & Video,Male (18+),11,1.25x,1.25,0.25
+FRA,France,Productivity,Male (18+),12,1.24x,1.24,0.24
+FRA,France,Business,Male (18+),13,1.24x,1.24,0.24
+FRA,France,Navigation,Male (18+),14,1.22x,1.22,0.22
+FRA,France,Games / Trivia,Male (18+),15,1.21x,1.21,0.21
+FRA,France,Games / Adventure,Male (18+),16,1.18x,1.18,0.18
+FRA,France,Health & Fitness,Male (18+),17,1.15x,1.15,0.15
+FRA,France,Utilities,Male (18+),18,1.14x,1.14,0.14
+FRA,France,Games / Casino,Male (18+),19,1.13x,1.13,0.13
+FRA,France,Music,Male (18+),20,1.13x,1.13,0.13
+FRA,France,Games / Simulation,Male (18+),21,1.10x,1.10,0.1
+FRA,France,Weather,Male (18+),22,1.10x,1.10,0.1
+FRA,France,Education,Male (18+),23,1.10x,1.10,0.1
+FRA,France,Social Networking,Male (18+),24,1.07x,1.07,0.07
+FRA,France,Travel,Male (18+),25,1.01x,1.01,0.01
+FRA,France,Entertainment,Male (18+),26,0.99x,0.99,-0.01
+FRA,France,Food & Drink,Male (18+),27,0.97x,0.97,-0.03
+FRA,France,Games / Music,Male (18+),28,0.92x,0.92,-0.08
+FRA,France,Shopping,Male (18+),29,0.84x,0.84,-0.16
+FRA,France,Medical,Male (18+),30,0.84x,0.84,-0.16
+FRA,France,Games / Word,Male (18+),31,0.74x,0.74,-0.26
+FRA,France,Games / Casual,Male (18+),32,0.73x,0.73,-0.27
+FRA,France,Books,Male (18+),33,0.73x,0.73,-0.27
+FRA,France,Games / Puzzle,Male (18+),34,0.70x,0.70,-0.3
+FRA,France,Graphics & Design,Male (18+),35,0.70x,0.70,-0.3
+FRA,France,Lifestyle,Male (18+),36,0.62x,0.62,-0.38
+FRA,France,Lifestyle,Female (18+),1,1.94x,1.94,0.94
+FRA,France,Graphics & Design,Female (18+),2,1.84x,1.84,0.84
+FRA,France,Games / Puzzle,Female (18+),3,1.83x,1.83,0.83
+FRA,France,Games / Casual,Female (18+),4,1.79x,1.79,0.79
+FRA,France,Games / Word,Female (18+),5,1.76x,1.76,0.76
+FRA,France,Books,Female (18+),6,1.73x,1.73,0.73
+FRA,France,Shopping,Female (18+),7,1.60x,1.60,0.6
+FRA,France,Games / Music,Female (18+),8,1.60x,1.60,0.6
+FRA,France,Medical,Female (18+),9,1.52x,1.52,0.52
+FRA,France,Entertainment,Female (18+),10,1.40x,1.40,0.4
+FRA,France,Food & Drink,Female (18+),11,1.39x,1.39,0.39
+FRA,France,Games / Casino,Female (18+),12,1.27x,1.27,0.27
+FRA,France,Education,Female (18+),13,1.26x,1.26,0.26
+FRA,France,Social Networking,Female (18+),14,1.26x,1.26,0.26
+FRA,France,Games / Simulation,Female (18+),15,1.25x,1.25,0.25
+FRA,France,Music,Female (18+),16,1.18x,1.18,0.18
+FRA,France,Health & Fitness,Female (18+),17,1.14x,1.14,0.14
+FRA,France,Games / Trivia,Female (18+),18,1.14x,1.14,0.14
+FRA,France,Weather,Female (18+),19,1.13x,1.13,0.13
+FRA,France,Games / Adventure,Female (18+),20,1.13x,1.13,0.13
+FRA,France,Travel,Female (18+),21,1.13x,1.13,0.13
+FRA,France,Utilities,Female (18+),22,1.12x,1.12,0.12
+FRA,France,Photo & Video,Female (18+),23,1.01x,1.01,0.01
+FRA,France,Navigation,Female (18+),24,0.99x,0.99,-0.01
+FRA,France,Productivity,Female (18+),25,0.98x,0.98,-0.02
+FRA,France,Business,Female (18+),26,0.91x,0.91,-0.09
+FRA,France,Finance,Female (18+),27,0.87x,0.87,-0.13
+FRA,France,Games / Card,Female (18+),28,0.83x,0.83,-0.17
+FRA,France,Games / Role Playing,Female (18+),29,0.80x,0.80,-0.2
+FRA,France,News,Female (18+),30,0.57x,0.57,-0.43
+FRA,France,Games / Racing,Female (18+),31,0.51x,0.51,-0.49
+FRA,France,Games / Board,Female (18+),32,0.51x,0.51,-0.49
+FRA,France,Games / Strategy,Female (18+),33,0.35x,0.35,-0.65
+FRA,France,Games / Action,Female (18+),34,0.34x,0.34,-0.66
+FRA,France,Sports,Female (18+),35,0.32x,0.32,-0.68
+FRA,France,Games / Sports,Female (18+),36,0.29x,0.29,-0.71
+KOR,South Korea,Games / Sports,Male (18+),1,1.65x,1.65,0.65
+KOR,South Korea,Games / Strategy,Male (18+),2,1.51x,1.51,0.51
+KOR,South Korea,Games / Racing,Male (18+),3,1.49x,1.49,0.49
+KOR,South Korea,Games / Action,Male (18+),4,1.47x,1.47,0.47
+KOR,South Korea,Sports,Male (18+),5,1.32x,1.32,0.32
+KOR,South Korea,Games / Card,Male (18+),6,1.25x,1.25,0.25
+KOR,South Korea,Games / Board,Male (18+),7,1.24x,1.24,0.24
+KOR,South Korea,Games / Role Playing,Male (18+),8,1.17x,1.17,0.17
+KOR,South Korea,Games / Casino,Male (18+),9,1.14x,1.14,0.14
+KOR,South Korea,Finance,Male (18+),10,1.06x,1.06,0.06
+KOR,South Korea,Games / Adventure,Male (18+),11,1.05x,1.05,0.05
+KOR,South Korea,Photo & Video,Male (18+),12,1.04x,1.04,0.04
+KOR,South Korea,Navigation,Male (18+),13,1.01x,1.01,0.01
+KOR,South Korea,Business,Male (18+),14,0.98x,0.98,-0.02
+KOR,South Korea,Games / Trivia,Male (18+),15,0.95x,0.95,-0.05
+KOR,South Korea,Productivity,Male (18+),16,0.95x,0.95,-0.05
+KOR,South Korea,Travel,Male (18+),17,0.94x,0.94,-0.06
+KOR,South Korea,Games / Casual,Male (18+),18,0.94x,0.94,-0.06
+KOR,South Korea,Games / Simulation,Male (18+),19,0.93x,0.93,-0.07
+KOR,South Korea,Music,Male (18+),20,0.91x,0.91,-0.09
+KOR,South Korea,Utilities,Male (18+),21,0.91x,0.91,-0.09
+KOR,South Korea,Social Networking,Male (18+),22,0.90x,0.90,-0.1
+KOR,South Korea,Education,Male (18+),23,0.88x,0.88,-0.12
+KOR,South Korea,Medical,Male (18+),24,0.88x,0.88,-0.12
+KOR,South Korea,Entertainment,Male (18+),25,0.85x,0.85,-0.15
+KOR,South Korea,Books,Male (18+),26,0.79x,0.79,-0.21
+KOR,South Korea,Food & Drink,Male (18+),27,0.79x,0.79,-0.21
+KOR,South Korea,Weather,Male (18+),28,0.77x,0.77,-0.23
+KOR,South Korea,Lifestyle,Male (18+),29,0.75x,0.75,-0.25
+KOR,South Korea,Games / Word,Male (18+),30,0.71x,0.71,-0.29
+KOR,South Korea,Health & Fitness,Male (18+),31,0.68x,0.68,-0.32
+KOR,South Korea,Games / Puzzle,Male (18+),32,0.61x,0.61,-0.39
+KOR,South Korea,Shopping,Male (18+),33,0.58x,0.58,-0.42
+KOR,South Korea,Games / Music,Male (18+),34,0.45x,0.45,-0.55
+KOR,South Korea,Graphics & Design,Male (18+),35,0.35x,0.35,-0.65
+KOR,South Korea,News,Male (18+),36,0.23x,0.23,-0.77
+KOR,South Korea,News,Female (18+),1,2.07x,2.07,1.07
+KOR,South Korea,Graphics & Design,Female (18+),2,1.93x,1.93,0.93
+KOR,South Korea,Games / Music,Female (18+),3,1.80x,1.80,0.8
+KOR,South Korea,Shopping,Female (18+),4,1.59x,1.59,0.59
+KOR,South Korea,Games / Puzzle,Female (18+),5,1.55x,1.55,0.55
+KOR,South Korea,Health & Fitness,Female (18+),6,1.43x,1.43,0.43
+KOR,South Korea,Lifestyle,Female (18+),7,1.35x,1.35,0.35
+KOR,South Korea,Food & Drink,Female (18+),8,1.30x,1.30,0.3
+KOR,South Korea,Books,Female (18+),9,1.30x,1.30,0.3
+KOR,South Korea,Games / Word,Female (18+),10,1.27x,1.27,0.27
+KOR,South Korea,Weather,Female (18+),11,1.27x,1.27,0.27
+KOR,South Korea,Entertainment,Female (18+),12,1.23x,1.23,0.23
+KOR,South Korea,Education,Female (18+),13,1.19x,1.19,0.19
+KOR,South Korea,Games / Simulation,Female (18+),14,1.15x,1.15,0.15
+KOR,South Korea,Social Networking,Female (18+),15,1.14x,1.14,0.14
+KOR,South Korea,Utilities,Female (18+),16,1.12x,1.12,0.12
+KOR,South Korea,Music,Female (18+),17,1.11x,1.11,0.11
+KOR,South Korea,Games / Casual,Female (18+),18,1.10x,1.10,0.1
+KOR,South Korea,Productivity,Female (18+),19,1.09x,1.09,0.09
+KOR,South Korea,Medical,Female (18+),20,1.04x,1.04,0.04
+KOR,South Korea,Travel,Female (18+),21,1.03x,1.03,0.03
+KOR,South Korea,Business,Female (18+),22,1.02x,1.02,0.02
+KOR,South Korea,Games / Trivia,Female (18+),23,1.00x,1.00,0
+KOR,South Korea,Navigation,Female (18+),24,0.98x,0.98,-0.02
+KOR,South Korea,Photo & Video,Female (18+),25,0.97x,0.97,-0.03
+KOR,South Korea,Games / Adventure,Female (18+),26,0.96x,0.96,-0.04
+KOR,South Korea,Finance,Female (18+),27,0.95x,0.95,-0.05
+KOR,South Korea,Games / Casino,Female (18+),28,0.85x,0.85,-0.15
+KOR,South Korea,Games / Role Playing,Female (18+),29,0.82x,0.82,-0.18
+KOR,South Korea,Games / Board,Female (18+),30,0.70x,0.70,-0.3
+KOR,South Korea,Games / Card,Female (18+),31,0.67x,0.67,-0.33
+KOR,South Korea,Sports,Female (18+),32,0.57x,0.57,-0.43
+KOR,South Korea,Games / Racing,Female (18+),33,0.42x,0.42,-0.58
+KOR,South Korea,Games / Action,Female (18+),34,0.39x,0.39,-0.61
+KOR,South Korea,Games / Strategy,Female (18+),35,0.31x,0.31,-0.69
+KOR,South Korea,Games / Sports,Female (18+),36,0.14x,0.14,-0.86
+JPN,Japan,Games / Sports,Male (18+),1,1.61x,1.61,0.61
+JPN,Japan,Games / Action,Male (18+),2,1.54x,1.54,0.54
+JPN,Japan,Games / Racing,Male (18+),3,1.48x,1.48,0.48
+JPN,Japan,Sports,Male (18+),4,1.44x,1.44,0.44
+JPN,Japan,Games / Trivia,Male (18+),5,1.39x,1.39,0.39
+JPN,Japan,Games / Strategy,Male (18+),6,1.38x,1.38,0.38
+JPN,Japan,Games / Card,Male (18+),7,1.37x,1.37,0.37
+JPN,Japan,Games / Casino,Male (18+),8,1.31x,1.31,0.31
+JPN,Japan,Games / Role Playing,Male (18+),9,1.24x,1.24,0.24
+JPN,Japan,Games / Board,Male (18+),10,1.23x,1.23,0.23
+JPN,Japan,Finance,Male (18+),11,1.13x,1.13,0.13
+JPN,Japan,Navigation,Male (18+),12,1.08x,1.08,0.08
+JPN,Japan,Photo & Video,Male (18+),13,1.07x,1.07,0.07
+JPN,Japan,Games / Casual,Male (18+),14,1.07x,1.07,0.07
+JPN,Japan,Utilities,Male (18+),15,1.07x,1.07,0.07
+JPN,Japan,Business,Male (18+),16,1.07x,1.07,0.07
+JPN,Japan,Books,Male (18+),17,1.05x,1.05,0.05
+JPN,Japan,Productivity,Male (18+),18,1.02x,1.02,0.02
+JPN,Japan,Music,Male (18+),19,1.01x,1.01,0.01
+JPN,Japan,Weather,Male (18+),20,0.97x,0.97,-0.03
+JPN,Japan,Games / Adventure,Male (18+),21,0.96x,0.96,-0.04
+JPN,Japan,Education,Male (18+),22,0.95x,0.95,-0.05
+JPN,Japan,Games / Simulation,Male (18+),23,0.94x,0.94,-0.06
+JPN,Japan,Entertainment,Male (18+),24,0.94x,0.94,-0.06
+JPN,Japan,News,Male (18+),25,0.94x,0.94,-0.06
+JPN,Japan,Health & Fitness,Male (18+),26,0.94x,0.94,-0.06
+JPN,Japan,Games / Word,Male (18+),27,0.92x,0.92,-0.08
+JPN,Japan,Travel,Male (18+),28,0.91x,0.91,-0.09
+JPN,Japan,Social Networking,Male (18+),29,0.83x,0.83,-0.17
+JPN,Japan,Games / Puzzle,Male (18+),30,0.83x,0.83,-0.17
+JPN,Japan,Shopping,Male (18+),31,0.82x,0.82,-0.18
+JPN,Japan,Medical,Male (18+),32,0.82x,0.82,-0.18
+JPN,Japan,Lifestyle,Male (18+),33,0.79x,0.79,-0.21
+JPN,Japan,Food & Drink,Male (18+),34,0.78x,0.78,-0.22
+JPN,Japan,Games / Music,Male (18+),35,0.68x,0.68,-0.32
+JPN,Japan,Graphics & Design,Male (18+),36,0.39x,0.39,-0.61
+JPN,Japan,Graphics & Design,Female (18+),1,1.99x,1.99,0.99
+JPN,Japan,Games / Music,Female (18+),2,1.54x,1.54,0.54
+JPN,Japan,Food & Drink,Female (18+),3,1.35x,1.35,0.35
+JPN,Japan,Lifestyle,Female (18+),4,1.33x,1.33,0.33
+JPN,Japan,Shopping,Female (18+),5,1.29x,1.29,0.29
+JPN,Japan,Games / Puzzle,Female (18+),6,1.25x,1.25,0.25
+JPN,Japan,Medical,Female (18+),7,1.24x,1.24,0.24
+JPN,Japan,Social Networking,Female (18+),8,1.24x,1.24,0.24
+JPN,Japan,Entertainment,Female (18+),9,1.14x,1.14,0.14
+JPN,Japan,Games / Simulation,Female (18+),10,1.13x,1.13,0.13
+JPN,Japan,News,Female (18+),11,1.12x,1.12,0.12
+JPN,Japan,Games / Adventure,Female (18+),12,1.11x,1.11,0.11
+JPN,Japan,Education,Female (18+),13,1.10x,1.10,0.1
+JPN,Japan,Health & Fitness,Female (18+),14,1.08x,1.08,0.08
+JPN,Japan,Weather,Female (18+),15,1.02x,1.02,0.02
+JPN,Japan,Music,Female (18+),16,1.02x,1.02,0.02
+JPN,Japan,Productivity,Female (18+),17,1.01x,1.01,0.01
+JPN,Japan,Photo & Video,Female (18+),18,0.96x,0.96,-0.04
+JPN,Japan,Books,Female (18+),19,0.96x,0.96,-0.04
+JPN,Japan,Games / Word,Female (18+),20,0.94x,0.94,-0.06
+JPN,Japan,Games / Casual,Female (18+),21,0.92x,0.92,-0.08
+JPN,Japan,Utilities,Female (18+),22,0.91x,0.91,-0.09
+JPN,Japan,Business,Female (18+),23,0.90x,0.90,-0.1
+JPN,Japan,Travel,Female (18+),24,0.87x,0.87,-0.13
+JPN,Japan,Navigation,Female (18+),25,0.84x,0.84,-0.16
+JPN,Japan,Finance,Female (18+),26,0.80x,0.80,-0.2
+JPN,Japan,Games / Role Playing,Female (18+),27,0.73x,0.73,-0.27
+JPN,Japan,Games / Board,Female (18+),28,0.59x,0.59,-0.41
+JPN,Japan,Games / Card,Female (18+),29,0.51x,0.51,-0.49
+JPN,Japan,Games / Trivia,Female (18+),30,0.49x,0.49,-0.51
+JPN,Japan,Games / Strategy,Female (18+),31,0.42x,0.42,-0.58
+JPN,Japan,Games / Casino,Female (18+),32,0.37x,0.37,-0.63
+JPN,Japan,Games / Racing,Female (18+),33,0.34x,0.34,-0.66
+JPN,Japan,Sports,Female (18+),34,0.27x,0.27,-0.73
+JPN,Japan,Games / Action,Female (18+),35,0.26x,0.26,-0.74
+JPN,Japan,Games / Sports,Female (18+),36,0.13x,0.13,-0.87
+USA,U.S.,Games / Sports,Male (18+),1,1.62x,1.62,0.62
+USA,U.S.,Games / Action,Male (18+),2,1.57x,1.57,0.57
+USA,U.S.,Sports,Male (18+),3,1.54x,1.54,0.54
+USA,U.S.,Games / Strategy,Male (18+),4,1.50x,1.50,0.5
+USA,U.S.,Games / Racing,Male (18+),5,1.49x,1.49,0.49
+USA,U.S.,News,Male (18+),6,1.28x,1.28,0.28
+USA,U.S.,Games / Card,Male (18+),7,1.26x,1.26,0.26
+USA,U.S.,Finance,Male (18+),8,1.21x,1.21,0.21
+USA,U.S.,Business,Male (18+),9,1.19x,1.19,0.19
+USA,U.S.,Photo & Video,Male (18+),10,1.13x,1.13,0.13
+USA,U.S.,Navigation,Male (18+),11,1.13x,1.13,0.13
+USA,U.S.,Productivity,Male (18+),12,1.13x,1.13,0.13
+USA,U.S.,Games / Role Playing,Male (18+),13,1.11x,1.11,0.11
+USA,U.S.,Utilities,Male (18+),14,1.08x,1.08,0.08
+USA,U.S.,Games / Casino,Male (18+),15,1.07x,1.07,0.07
+USA,U.S.,Games / Board,Male (18+),16,1.05x,1.05,0.05
+USA,U.S.,Weather,Male (18+),17,1.03x,1.03,0.03
+USA,U.S.,Games / Adventure,Male (18+),18,1.01x,1.01,0.01
+USA,U.S.,Music,Male (18+),19,1.00x,1.00,0
+USA,U.S.,Games / Trivia,Male (18+),20,0.97x,0.97,-0.03
+USA,U.S.,Social Networking,Male (18+),21,0.94x,0.94,-0.06
+USA,U.S.,Education,Male (18+),22,0.92x,0.92,-0.08
+USA,U.S.,Travel,Male (18+),23,0.91x,0.91,-0.09
+USA,U.S.,Food & Drink,Male (18+),24,0.89x,0.89,-0.11
+USA,U.S.,Games / Simulation,Male (18+),25,0.88x,0.88,-0.12
+USA,U.S.,Health & Fitness,Male (18+),26,0.84x,0.84,-0.16
+USA,U.S.,Entertainment,Male (18+),27,0.83x,0.83,-0.17
+USA,U.S.,Games / Music,Male (18+),28,0.83x,0.83,-0.17
+USA,U.S.,Shopping,Male (18+),29,0.76x,0.76,-0.24
+USA,U.S.,Medical,Male (18+),30,0.76x,0.76,-0.24
+USA,U.S.,Books,Male (18+),31,0.74x,0.74,-0.26
+USA,U.S.,Games / Word,Male (18+),32,0.73x,0.73,-0.27
+USA,U.S.,Games / Casual,Male (18+),33,0.62x,0.62,-0.38
+USA,U.S.,Lifestyle,Male (18+),34,0.60x,0.60,-0.4
+USA,U.S.,Games / Puzzle,Male (18+),35,0.56x,0.56,-0.44
+USA,U.S.,Graphics & Design,Male (18+),36,0.52x,0.52,-0.48
+USA,U.S.,Graphics & Design,Female (18+),1,1.82x,1.82,0.82
+USA,U.S.,Games / Puzzle,Female (18+),2,1.71x,1.71,0.71
+USA,U.S.,Lifestyle,Female (18+),3,1.69x,1.69,0.69
+USA,U.S.,Games / Casual,Female (18+),4,1.56x,1.56,0.56
+USA,U.S.,Games / Word,Female (18+),5,1.49x,1.49,0.49
+USA,U.S.,Books,Female (18+),6,1.47x,1.47,0.47
+USA,U.S.,Medical,Female (18+),7,1.45x,1.45,0.45
+USA,U.S.,Games / Music,Female (18+),8,1.43x,1.43,0.43
+USA,U.S.,Shopping,Female (18+),9,1.42x,1.42,0.42
+USA,U.S.,Health & Fitness,Female (18+),10,1.36x,1.36,0.36
+USA,U.S.,Entertainment,Female (18+),11,1.36x,1.36,0.36
+USA,U.S.,Food & Drink,Female (18+),12,1.27x,1.27,0.27
+USA,U.S.,Games / Simulation,Female (18+),13,1.25x,1.25,0.25
+USA,U.S.,Education,Female (18+),14,1.22x,1.22,0.22
+USA,U.S.,Social Networking,Female (18+),15,1.20x,1.20,0.2
+USA,U.S.,Games / Trivia,Female (18+),16,1.17x,1.17,0.17
+USA,U.S.,Games / Adventure,Female (18+),17,1.15x,1.15,0.15
+USA,U.S.,Music,Female (18+),18,1.13x,1.13,0.13
+USA,U.S.,Weather,Female (18+),19,1.07x,1.07,0.07
+USA,U.S.,Games / Board,Female (18+),20,1.05x,1.05,0.05
+USA,U.S.,Travel,Female (18+),21,1.01x,1.01,0.01
+USA,U.S.,Games / Role Playing,Female (18+),22,0.99x,0.99,-0.01
+USA,U.S.,Utilities,Female (18+),23,0.96x,0.96,-0.04
+USA,U.S.,Photo & Video,Female (18+),24,0.95x,0.95,-0.05
+USA,U.S.,Productivity,Female (18+),25,0.91x,0.91,-0.09
+USA,U.S.,Navigation,Female (18+),26,0.87x,0.87,-0.13
+USA,U.S.,Games / Casino,Female (18+),27,0.84x,0.84,-0.16
+USA,U.S.,Business,Female (18+),28,0.82x,0.82,-0.18
+USA,U.S.,Games / Card,Female (18+),29,0.78x,0.78,-0.22
+USA,U.S.,Finance,Female (18+),30,0.77x,0.77,-0.23
+USA,U.S.,News,Female (18+),31,0.72x,0.72,-0.28
+USA,U.S.,Games / Strategy,Female (18+),32,0.44x,0.44,-0.56
+USA,U.S.,Games / Racing,Female (18+),33,0.40x,0.40,-0.6
+USA,U.S.,Sports,Female (18+),34,0.37x,0.37,-0.63
+USA,U.S.,Games / Action,Female (18+),35,0.35x,0.35,-0.65
+USA,U.S.,Games / Sports,Female (18+),36,0.23x,0.23,-0.77
+VNM,Vietnam,Games / Sports,Male (18+),1,1.61x,1.61,0.61
+VNM,Vietnam,Games / Strategy,Male (18+),2,1.59x,1.59,0.59
+VNM,Vietnam,Games / Casino,Male (18+),3,1.58x,1.58,0.58
+VNM,Vietnam,Sports,Male (18+),4,1.41x,1.41,0.41
+VNM,Vietnam,Games / Card,Male (18+),5,1.38x,1.38,0.38
+VNM,Vietnam,Games / Action,Male (18+),6,1.37x,1.37,0.37
+VNM,Vietnam,Games / Board,Male (18+),7,1.33x,1.33,0.33
+VNM,Vietnam,Games / Racing,Male (18+),8,1.33x,1.33,0.33
+VNM,Vietnam,Games / Simulation,Male (18+),9,1.24x,1.24,0.24
+VNM,Vietnam,Weather,Male (18+),10,1.23x,1.23,0.23
+VNM,Vietnam,Games / Role Playing,Male (18+),11,1.22x,1.22,0.22
+VNM,Vietnam,Games / Adventure,Male (18+),12,1.22x,1.22,0.22
+VNM,Vietnam,Finance,Male (18+),13,1.17x,1.17,0.17
+VNM,Vietnam,Medical,Male (18+),14,1.17x,1.17,0.17
+VNM,Vietnam,Health & Fitness,Male (18+),15,1.14x,1.14,0.14
+VNM,Vietnam,Navigation,Male (18+),16,1.13x,1.13,0.13
+VNM,Vietnam,News,Male (18+),17,1.10x,1.10,0.1
+VNM,Vietnam,Business,Male (18+),18,1.08x,1.08,0.08
+VNM,Vietnam,Productivity,Male (18+),19,1.02x,1.02,0.02
+VNM,Vietnam,Music,Male (18+),20,1.01x,1.01,0.01
+VNM,Vietnam,Utilities,Male (18+),21,1.00x,1.00,0
+VNM,Vietnam,Photo & Video,Male (18+),22,0.97x,0.97,-0.03
+VNM,Vietnam,Social Networking,Male (18+),23,0.93x,0.93,-0.07
+VNM,Vietnam,Games / Casual,Male (18+),24,0.91x,0.91,-0.09
+VNM,Vietnam,Games / Trivia,Male (18+),25,0.88x,0.88,-0.12
+VNM,Vietnam,Food & Drink,Male (18+),26,0.87x,0.87,-0.13
+VNM,Vietnam,Education,Male (18+),27,0.87x,0.87,-0.13
+VNM,Vietnam,Books,Male (18+),28,0.80x,0.80,-0.2
+VNM,Vietnam,Games / Word,Male (18+),29,0.78x,0.78,-0.22
+VNM,Vietnam,Games / Music,Male (18+),30,0.76x,0.76,-0.24
+VNM,Vietnam,Entertainment,Male (18+),31,0.75x,0.75,-0.25
+VNM,Vietnam,Shopping,Male (18+),32,0.73x,0.73,-0.27
+VNM,Vietnam,Lifestyle,Male (18+),33,0.72x,0.72,-0.28
+VNM,Vietnam,Travel,Male (18+),34,0.70x,0.70,-0.3
+VNM,Vietnam,Games / Puzzle,Male (18+),35,0.69x,0.69,-0.31
+VNM,Vietnam,Graphics & Design,Male (18+),36,0.45x,0.45,-0.55
+VNM,Vietnam,Graphics & Design,Female (18+),1,2.06x,2.06,1.06
+VNM,Vietnam,Games / Puzzle,Female (18+),2,1.61x,1.61,0.61
+VNM,Vietnam,Shopping,Female (18+),3,1.58x,1.58,0.58
+VNM,Vietnam,Games / Music,Female (18+),4,1.56x,1.56,0.56
+VNM,Vietnam,Lifestyle,Female (18+),5,1.56x,1.56,0.56
+VNM,Vietnam,Entertainment,Female (18+),6,1.48x,1.48,0.48
+VNM,Vietnam,Books,Female (18+),7,1.41x,1.41,0.41
+VNM,Vietnam,Education,Female (18+),8,1.35x,1.35,0.35
+VNM,Vietnam,Games / Casual,Female (18+),9,1.27x,1.27,0.27
+VNM,Vietnam,Games / Word,Female (18+),10,1.23x,1.23,0.23
+VNM,Vietnam,Social Networking,Female (18+),11,1.20x,1.20,0.2
+VNM,Vietnam,Photo & Video,Female (18+),12,1.19x,1.19,0.19
+VNM,Vietnam,Food & Drink,Female (18+),13,1.15x,1.15,0.15
+VNM,Vietnam,Games / Trivia,Female (18+),14,1.14x,1.14,0.14
+VNM,Vietnam,Productivity,Female (18+),15,1.09x,1.09,0.09
+VNM,Vietnam,Utilities,Female (18+),16,1.07x,1.07,0.07
+VNM,Vietnam,Music,Female (18+),17,1.04x,1.04,0.04
+VNM,Vietnam,Navigation,Female (18+),18,0.92x,0.92,-0.08
+VNM,Vietnam,Business,Female (18+),19,0.92x,0.92,-0.08
+VNM,Vietnam,Health & Fitness,Female (18+),20,0.82x,0.82,-0.18
+VNM,Vietnam,Games / Role Playing,Female (18+),21,0.80x,0.80,-0.2
+VNM,Vietnam,Medical,Female (18+),22,0.78x,0.78,-0.22
+VNM,Vietnam,Finance,Female (18+),23,0.77x,0.77,-0.23
+VNM,Vietnam,Games / Simulation,Female (18+),24,0.77x,0.77,-0.23
+VNM,Vietnam,News,Female (18+),25,0.74x,0.74,-0.26
+VNM,Vietnam,Games / Adventure,Female (18+),26,0.72x,0.72,-0.28
+VNM,Vietnam,Travel,Female (18+),27,0.71x,0.71,-0.29
+VNM,Vietnam,Weather,Female (18+),28,0.59x,0.59,-0.41
+VNM,Vietnam,Games / Action,Female (18+),29,0.57x,0.57,-0.43
+VNM,Vietnam,Games / Board,Female (18+),30,0.50x,0.50,-0.5
+VNM,Vietnam,Games / Racing,Female (18+),31,0.38x,0.38,-0.62
+VNM,Vietnam,Games / Card,Female (18+),32,0.36x,0.36,-0.64
+VNM,Vietnam,Games / Casino,Female (18+),33,0.34x,0.34,-0.66
+VNM,Vietnam,Sports,Female (18+),34,0.25x,0.25,-0.75
+VNM,Vietnam,Games / Strategy,Female (18+),35,0.23x,0.23,-0.77
+VNM,Vietnam,Games / Sports,Female (18+),36,0.15x,0.15,-0.85
+IDN,Indonesia,Games / Sports,Male (18+),1,1.46x,1.46,0.46
+IDN,Indonesia,Games / Strategy,Male (18+),2,1.44x,1.44,0.44
+IDN,Indonesia,Sports,Male (18+),3,1.43x,1.43,0.43
+IDN,Indonesia,Games / Action,Male (18+),4,1.34x,1.34,0.34
+IDN,Indonesia,Games / Racing,Male (18+),5,1.25x,1.25,0.25
+IDN,Indonesia,Games / Board,Male (18+),6,1.25x,1.25,0.25
+IDN,Indonesia,Games / Card,Male (18+),7,1.24x,1.24,0.24
+IDN,Indonesia,Navigation,Male (18+),8,1.21x,1.21,0.21
+IDN,Indonesia,Finance,Male (18+),9,1.17x,1.17,0.17
+IDN,Indonesia,Games / Role Playing,Male (18+),10,1.15x,1.15,0.15
+IDN,Indonesia,Games / Casino,Male (18+),11,1.13x,1.13,0.13
+IDN,Indonesia,Productivity,Male (18+),12,1.12x,1.12,0.12
+IDN,Indonesia,Games / Trivia,Male (18+),13,1.11x,1.11,0.11
+IDN,Indonesia,Food & Drink,Male (18+),14,1.09x,1.09,0.09
+IDN,Indonesia,Health & Fitness,Male (18+),15,1.09x,1.09,0.09
+IDN,Indonesia,Weather,Male (18+),16,1.06x,1.06,0.06
+IDN,Indonesia,Games / Adventure,Male (18+),17,1.05x,1.05,0.05
+IDN,Indonesia,Social Networking,Male (18+),18,1.03x,1.03,0.03
+IDN,Indonesia,Business,Male (18+),19,1.01x,1.01,0.01
+IDN,Indonesia,Photo & Video,Male (18+),20,0.98x,0.98,-0.02
+IDN,Indonesia,Travel,Male (18+),21,0.96x,0.96,-0.04
+IDN,Indonesia,Utilities,Male (18+),22,0.96x,0.96,-0.04
+IDN,Indonesia,Education,Male (18+),23,0.95x,0.95,-0.05
+IDN,Indonesia,Music,Male (18+),24,0.94x,0.94,-0.06
+IDN,Indonesia,Medical,Male (18+),25,0.94x,0.94,-0.06
+IDN,Indonesia,Games / Simulation,Male (18+),26,0.93x,0.93,-0.07
+IDN,Indonesia,Games / Word,Male (18+),27,0.91x,0.91,-0.09
+IDN,Indonesia,Shopping,Male (18+),28,0.88x,0.88,-0.12
+IDN,Indonesia,Entertainment,Male (18+),29,0.87x,0.87,-0.13
+IDN,Indonesia,Games / Music,Male (18+),30,0.86x,0.86,-0.14
+IDN,Indonesia,News,Male (18+),31,0.84x,0.84,-0.16
+IDN,Indonesia,Games / Puzzle,Male (18+),32,0.78x,0.78,-0.22
+IDN,Indonesia,Games / Casual,Male (18+),33,0.76x,0.76,-0.24
+IDN,Indonesia,Lifestyle,Male (18+),34,0.71x,0.71,-0.29
+IDN,Indonesia,Graphics & Design,Male (18+),35,0.69x,0.69,-0.31
+IDN,Indonesia,Books,Male (18+),36,0.61x,0.61,-0.39
+IDN,Indonesia,Books,Female (18+),1,1.80x,1.80,0.8
+IDN,Indonesia,Graphics & Design,Female (18+),2,1.65x,1.65,0.65
+IDN,Indonesia,Lifestyle,Female (18+),3,1.58x,1.58,0.58
+IDN,Indonesia,Games / Casual,Female (18+),4,1.43x,1.43,0.43
+IDN,Indonesia,Games / Puzzle,Female (18+),5,1.41x,1.41,0.41
+IDN,Indonesia,Games / Music,Female (18+),6,1.36x,1.36,0.36
+IDN,Indonesia,News,Female (18+),7,1.35x,1.35,0.35
+IDN,Indonesia,Entertainment,Female (18+),8,1.28x,1.28,0.28
+IDN,Indonesia,Shopping,Female (18+),9,1.28x,1.28,0.28
+IDN,Indonesia,Games / Simulation,Female (18+),10,1.18x,1.18,0.18
+IDN,Indonesia,Education,Female (18+),11,1.17x,1.17,0.17
+IDN,Indonesia,Medical,Female (18+),12,1.15x,1.15,0.15
+IDN,Indonesia,Music,Female (18+),13,1.13x,1.13,0.13
+IDN,Indonesia,Utilities,Female (18+),14,1.11x,1.11,0.11
+IDN,Indonesia,Photo & Video,Female (18+),15,1.08x,1.08,0.08
+IDN,Indonesia,Games / Word,Female (18+),16,1.05x,1.05,0.05
+IDN,Indonesia,Travel,Female (18+),17,1.04x,1.04,0.04
+IDN,Indonesia,Business,Female (18+),18,1.01x,1.01,0.01
+IDN,Indonesia,Social Networking,Female (18+),19,0.98x,0.98,-0.02
+IDN,Indonesia,Games / Adventure,Female (18+),20,0.96x,0.96,-0.04
+IDN,Indonesia,Food & Drink,Female (18+),21,0.92x,0.92,-0.08
+IDN,Indonesia,Health & Fitness,Female (18+),22,0.86x,0.86,-0.14
+IDN,Indonesia,Games / Trivia,Female (18+),23,0.82x,0.82,-0.18
+IDN,Indonesia,Productivity,Female (18+),24,0.81x,0.81,-0.19
+IDN,Indonesia,Games / Role Playing,Female (18+),25,0.81x,0.81,-0.19
+IDN,Indonesia,Navigation,Female (18+),26,0.75x,0.75,-0.25
+IDN,Indonesia,Finance,Female (18+),27,0.71x,0.71,-0.29
+IDN,Indonesia,Weather,Female (18+),28,0.63x,0.63,-0.37
+IDN,Indonesia,Games / Racing,Female (18+),29,0.62x,0.62,-0.38
+IDN,Indonesia,Games / Board,Female (18+),30,0.55x,0.55,-0.45
+IDN,Indonesia,Games / Casino,Female (18+),31,0.52x,0.52,-0.48
+IDN,Indonesia,Games / Card,Female (18+),32,0.49x,0.49,-0.51
+IDN,Indonesia,Games / Action,Female (18+),33,0.45x,0.45,-0.55
+IDN,Indonesia,Games / Strategy,Female (18+),34,0.26x,0.26,-0.74
+IDN,Indonesia,Games / Sports,Female (18+),35,0.20x,0.20,-0.8
+IDN,Indonesia,Sports,Female (18+),36,0.19x,0.19,-0.81
+GBR,U.K.,Games / Sports,Male (18+),1,1.72x,1.72,0.72
+GBR,U.K.,Sports,Male (18+),2,1.67x,1.67,0.67
+GBR,U.K.,Games / Strategy,Male (18+),3,1.56x,1.56,0.56
+GBR,U.K.,Games / Action,Male (18+),4,1.49x,1.49,0.49
+GBR,U.K.,Games / Racing,Male (18+),5,1.41x,1.41,0.41
+GBR,U.K.,News,Male (18+),6,1.38x,1.38,0.38
+GBR,U.K.,Finance,Male (18+),7,1.29x,1.29,0.29
+GBR,U.K.,Games / Card,Male (18+),8,1.26x,1.26,0.26
+GBR,U.K.,Navigation,Male (18+),9,1.25x,1.25,0.25
+GBR,U.K.,Business,Male (18+),10,1.24x,1.24,0.24
+GBR,U.K.,Games / Board,Male (18+),11,1.23x,1.23,0.23
+GBR,U.K.,Games / Casino,Male (18+),12,1.23x,1.23,0.23
+GBR,U.K.,Productivity,Male (18+),13,1.21x,1.21,0.21
+GBR,U.K.,Photo & Video,Male (18+),14,1.18x,1.18,0.18
+GBR,U.K.,Weather,Male (18+),15,1.13x,1.13,0.13
+GBR,U.K.,Games / Role Playing,Male (18+),16,1.13x,1.13,0.13
+GBR,U.K.,Utilities,Male (18+),17,1.07x,1.07,0.07
+GBR,U.K.,Music,Male (18+),18,1.06x,1.06,0.06
+GBR,U.K.,Health & Fitness,Male (18+),19,1.05x,1.05,0.05
+GBR,U.K.,Food & Drink,Male (18+),20,1.05x,1.05,0.05
+GBR,U.K.,Games / Trivia,Male (18+),21,1.03x,1.03,0.03
+GBR,U.K.,Social Networking,Male (18+),22,1.01x,1.01,0.01
+GBR,U.K.,Games / Adventure,Male (18+),23,0.99x,0.99,-0.01
+GBR,U.K.,Travel,Male (18+),24,0.98x,0.98,-0.02
+GBR,U.K.,Education,Male (18+),25,0.97x,0.97,-0.03
+GBR,U.K.,Entertainment,Male (18+),26,0.87x,0.87,-0.13
+GBR,U.K.,Games / Simulation,Male (18+),27,0.87x,0.87,-0.13
+GBR,U.K.,Medical,Male (18+),28,0.86x,0.86,-0.14
+GBR,U.K.,Books,Male (18+),29,0.82x,0.82,-0.18
+GBR,U.K.,Shopping,Male (18+),30,0.81x,0.81,-0.19
+GBR,U.K.,Games / Word,Male (18+),31,0.76x,0.76,-0.24
+GBR,U.K.,Games / Music,Male (18+),32,0.76x,0.76,-0.24
+GBR,U.K.,Graphics & Design,Male (18+),33,0.73x,0.73,-0.27
+GBR,U.K.,Games / Casual,Male (18+),34,0.65x,0.65,-0.35
+GBR,U.K.,Games / Puzzle,Male (18+),35,0.63x,0.63,-0.37
+GBR,U.K.,Lifestyle,Male (18+),36,0.61x,0.61,-0.39
+GBR,U.K.,Lifestyle,Female (18+),1,1.80x,1.80,0.8
+GBR,U.K.,Games / Casual,Female (18+),2,1.73x,1.73,0.73
+GBR,U.K.,Games / Music,Female (18+),3,1.72x,1.72,0.72
+GBR,U.K.,Games / Puzzle,Female (18+),4,1.71x,1.71,0.71
+GBR,U.K.,Graphics & Design,Female (18+),5,1.64x,1.64,0.64
+GBR,U.K.,Games / Word,Female (18+),6,1.52x,1.52,0.52
+GBR,U.K.,Shopping,Female (18+),7,1.51x,1.51,0.51
+GBR,U.K.,Books,Female (18+),8,1.47x,1.47,0.47
+GBR,U.K.,Entertainment,Female (18+),9,1.42x,1.42,0.42
+GBR,U.K.,Medical,Female (18+),10,1.40x,1.40,0.4
+GBR,U.K.,Games / Simulation,Female (18+),11,1.40x,1.40,0.4
+GBR,U.K.,Games / Adventure,Female (18+),12,1.34x,1.34,0.34
+GBR,U.K.,Education,Female (18+),13,1.24x,1.24,0.24
+GBR,U.K.,Social Networking,Female (18+),14,1.21x,1.21,0.21
+GBR,U.K.,Health & Fitness,Female (18+),15,1.14x,1.14,0.14
+GBR,U.K.,Food & Drink,Female (18+),16,1.14x,1.14,0.14
+GBR,U.K.,Music,Female (18+),17,1.13x,1.13,0.13
+GBR,U.K.,Games / Trivia,Female (18+),18,1.11x,1.11,0.11
+GBR,U.K.,Utilities,Female (18+),19,1.09x,1.09,0.09
+GBR,U.K.,Games / Role Playing,Female (18+),20,1.07x,1.07,0.07
+GBR,U.K.,Travel,Female (18+),21,1.00x,1.00,0
+GBR,U.K.,Weather,Female (18+),22,0.99x,0.99,-0.01
+GBR,U.K.,Photo & Video,Female (18+),23,0.97x,0.97,-0.03
+GBR,U.K.,Games / Casino,Female (18+),24,0.91x,0.91,-0.09
+GBR,U.K.,Productivity,Female (18+),25,0.90x,0.90,-0.1
+GBR,U.K.,Games / Board,Female (18+),26,0.85x,0.85,-0.15
+GBR,U.K.,Navigation,Female (18+),27,0.83x,0.83,-0.17
+GBR,U.K.,Business,Female (18+),28,0.80x,0.80,-0.2
+GBR,U.K.,Games / Card,Female (18+),29,0.77x,0.77,-0.23
+GBR,U.K.,Finance,Female (18+),30,0.74x,0.74,-0.26
+GBR,U.K.,News,Female (18+),31,0.69x,0.69,-0.31
+GBR,U.K.,Games / Racing,Female (18+),32,0.61x,0.61,-0.39
+GBR,U.K.,Games / Action,Female (18+),33,0.44x,0.44,-0.56
+GBR,U.K.,Games / Strategy,Female (18+),34,0.43x,0.43,-0.57
+GBR,U.K.,Sports,Female (18+),35,0.24x,0.24,-0.76
+GBR,U.K.,Games / Sports,Female (18+),36,0.21x,0.21,-0.79
+MEX,Mexico,Games / Sports,Male (18+),1,1.45x,1.45,0.45
+MEX,Mexico,Games / Casino,Male (18+),2,1.44x,1.44,0.44
+MEX,Mexico,Sports,Male (18+),3,1.43x,1.43,0.43
+MEX,Mexico,Games / Strategy,Male (18+),4,1.39x,1.39,0.39
+MEX,Mexico,Games / Racing,Male (18+),5,1.36x,1.36,0.36
+MEX,Mexico,Games / Action,Male (18+),6,1.31x,1.31,0.31
+MEX,Mexico,Games / Card,Male (18+),7,1.30x,1.30,0.3
+MEX,Mexico,Games / Board,Male (18+),8,1.26x,1.26,0.26
+MEX,Mexico,News,Male (18+),9,1.16x,1.16,0.16
+MEX,Mexico,Finance,Male (18+),10,1.13x,1.13,0.13
+MEX,Mexico,Games / Role Playing,Male (18+),11,1.11x,1.11,0.11
+MEX,Mexico,Photo & Video,Male (18+),12,1.10x,1.10,0.1
+MEX,Mexico,Games / Trivia,Male (18+),13,1.09x,1.09,0.09
+MEX,Mexico,Business,Male (18+),14,1.08x,1.08,0.08
+MEX,Mexico,Productivity,Male (18+),15,1.08x,1.08,0.08
+MEX,Mexico,Food & Drink,Male (18+),16,1.07x,1.07,0.07
+MEX,Mexico,Games / Adventure,Male (18+),17,1.05x,1.05,0.05
+MEX,Mexico,Music,Male (18+),18,1.04x,1.04,0.04
+MEX,Mexico,Navigation,Male (18+),19,1.04x,1.04,0.04
+MEX,Mexico,Health & Fitness,Male (18+),20,1.03x,1.03,0.03
+MEX,Mexico,Utilities,Male (18+),21,1.00x,1.00,0
+MEX,Mexico,Social Networking,Male (18+),22,0.98x,0.98,-0.02
+MEX,Mexico,Education,Male (18+),23,0.96x,0.96,-0.04
+MEX,Mexico,Medical,Male (18+),24,0.96x,0.96,-0.04
+MEX,Mexico,Games / Simulation,Male (18+),25,0.93x,0.93,-0.07
+MEX,Mexico,Shopping,Male (18+),26,0.91x,0.91,-0.09
+MEX,Mexico,Games / Casual,Male (18+),27,0.91x,0.91,-0.09
+MEX,Mexico,Games / Music,Male (18+),28,0.89x,0.89,-0.11
+MEX,Mexico,Weather,Male (18+),29,0.87x,0.87,-0.13
+MEX,Mexico,Travel,Male (18+),30,0.83x,0.83,-0.17
+MEX,Mexico,Entertainment,Male (18+),31,0.82x,0.82,-0.18
+MEX,Mexico,Games / Puzzle,Male (18+),32,0.74x,0.74,-0.26
+MEX,Mexico,Games / Word,Male (18+),33,0.74x,0.74,-0.26
+MEX,Mexico,Graphics & Design,Male (18+),34,0.73x,0.73,-0.27
+MEX,Mexico,Books,Male (18+),35,0.69x,0.69,-0.31
+MEX,Mexico,Lifestyle,Male (18+),36,0.62x,0.62,-0.38
+MEX,Mexico,Lifestyle,Female (18+),1,1.88x,1.88,0.88
+MEX,Mexico,Books,Female (18+),2,1.72x,1.72,0.72
+MEX,Mexico,Graphics & Design,Female (18+),3,1.67x,1.67,0.67
+MEX,Mexico,Games / Puzzle,Female (18+),4,1.57x,1.57,0.57
+MEX,Mexico,Entertainment,Female (18+),5,1.45x,1.45,0.45
+MEX,Mexico,Games / Music,Female (18+),6,1.32x,1.32,0.32
+MEX,Mexico,Games / Casual,Female (18+),7,1.30x,1.30,0.3
+MEX,Mexico,Games / Word,Female (18+),8,1.29x,1.29,0.29
+MEX,Mexico,Games / Simulation,Female (18+),9,1.24x,1.24,0.24
+MEX,Mexico,Weather,Female (18+),10,1.24x,1.24,0.24
+MEX,Mexico,Shopping,Female (18+),11,1.24x,1.24,0.24
+MEX,Mexico,Education,Female (18+),12,1.15x,1.15,0.15
+MEX,Mexico,Social Networking,Female (18+),13,1.15x,1.15,0.15
+MEX,Mexico,Utilities,Female (18+),14,1.08x,1.08,0.08
+MEX,Mexico,Games / Adventure,Female (18+),15,1.05x,1.05,0.05
+MEX,Mexico,Music,Female (18+),16,1.02x,1.02,0.02
+MEX,Mexico,Health & Fitness,Female (18+),17,0.99x,0.99,-0.01
+MEX,Mexico,Productivity,Female (18+),18,0.95x,0.95,-0.05
+MEX,Mexico,Games / Role Playing,Female (18+),19,0.95x,0.95,-0.05
+MEX,Mexico,Games / Trivia,Female (18+),20,0.94x,0.94,-0.06
+MEX,Mexico,Medical,Female (18+),21,0.93x,0.93,-0.07
+MEX,Mexico,Business,Female (18+),22,0.92x,0.92,-0.08
+MEX,Mexico,Photo & Video,Female (18+),23,0.91x,0.91,-0.09
+MEX,Mexico,Navigation,Female (18+),24,0.91x,0.91,-0.09
+MEX,Mexico,Food & Drink,Female (18+),25,0.90x,0.90,-0.1
+MEX,Mexico,Finance,Female (18+),26,0.78x,0.78,-0.22
+MEX,Mexico,News,Female (18+),27,0.74x,0.74,-0.26
+MEX,Mexico,Travel,Female (18+),28,0.71x,0.71,-0.29
+MEX,Mexico,Games / Board,Female (18+),29,0.54x,0.54,-0.46
+MEX,Mexico,Games / Action,Female (18+),30,0.50x,0.50,-0.5
+MEX,Mexico,Games / Card,Female (18+),31,0.48x,0.48,-0.52
+MEX,Mexico,Games / Racing,Female (18+),32,0.47x,0.47,-0.53
+MEX,Mexico,Games / Strategy,Female (18+),33,0.34x,0.34,-0.66
+MEX,Mexico,Games / Casino,Female (18+),34,0.24x,0.24,-0.76
+MEX,Mexico,Games / Sports,Female (18+),35,0.24x,0.24,-0.76
+MEX,Mexico,Sports,Female (18+),36,0.23x,0.23,-0.77
+IND,India,Sports,Male (18+),1,1.28x,1.28,0.28
+IND,India,Games / Sports,Male (18+),2,1.26x,1.26,0.26
+IND,India,Games / Strategy,Male (18+),3,1.23x,1.23,0.23
+IND,India,Games / Action,Male (18+),4,1.22x,1.22,0.22
+IND,India,Finance,Male (18+),5,1.20x,1.20,0.2
+IND,India,News,Male (18+),6,1.19x,1.19,0.19
+IND,India,Travel,Male (18+),7,1.16x,1.16,0.16
+IND,India,Games / Racing,Male (18+),8,1.14x,1.14,0.14
+IND,India,Games / Card,Male (18+),9,1.11x,1.11,0.11
+IND,India,Games / Casino,Male (18+),10,1.11x,1.11,0.11
+IND,India,Weather,Male (18+),11,1.09x,1.09,0.09
+IND,India,Games / Board,Male (18+),12,1.09x,1.09,0.09
+IND,India,Games / Role Playing,Male (18+),13,1.07x,1.07,0.07
+IND,India,Business,Male (18+),14,1.06x,1.06,0.06
+IND,India,Entertainment,Male (18+),15,1.04x,1.04,0.04
+IND,India,Navigation,Male (18+),16,1.03x,1.03,0.03
+IND,India,Productivity,Male (18+),17,1.03x,1.03,0.03
+IND,India,Education,Male (18+),18,1.01x,1.01,0.01
+IND,India,Photo & Video,Male (18+),19,1.00x,1.00,0
+IND,India,Health & Fitness,Male (18+),20,1.00x,1.00,0
+IND,India,Games / Adventure,Male (18+),21,0.99x,0.99,-0.01
+IND,India,Games / Simulation,Male (18+),22,0.98x,0.98,-0.02
+IND,India,Social Networking,Male (18+),23,0.97x,0.97,-0.03
+IND,India,Utilities,Male (18+),24,0.96x,0.96,-0.04
+IND,India,Food & Drink,Male (18+),25,0.95x,0.95,-0.05
+IND,India,Music,Male (18+),26,0.94x,0.94,-0.06
+IND,India,Medical,Male (18+),27,0.93x,0.93,-0.07
+IND,India,Graphics & Design,Male (18+),28,0.89x,0.89,-0.11
+IND,India,Games / Trivia,Male (18+),29,0.86x,0.86,-0.14
+IND,India,Games / Casual,Male (18+),30,0.85x,0.85,-0.15
+IND,India,Games / Music,Male (18+),31,0.84x,0.84,-0.16
+IND,India,Shopping,Male (18+),32,0.84x,0.84,-0.16
+IND,India,Games / Puzzle,Male (18+),33,0.79x,0.79,-0.21
+IND,India,Games / Word,Male (18+),34,0.73x,0.73,-0.27
+IND,India,Books,Male (18+),35,0.69x,0.69,-0.31
+IND,India,Lifestyle,Male (18+),36,0.67x,0.67,-0.33
+IND,India,Lifestyle,Female (18+),1,2.03x,2.03,1.03
+IND,India,Books,Female (18+),2,1.97x,1.97,0.97
+IND,India,Games / Word,Female (18+),3,1.82x,1.82,0.82
+IND,India,Games / Puzzle,Female (18+),4,1.63x,1.63,0.63
+IND,India,Shopping,Female (18+),5,1.50x,1.50,0.5
+IND,India,Games / Trivia,Female (18+),6,1.49x,1.49,0.49
+IND,India,Games / Music,Female (18+),7,1.46x,1.46,0.46
+IND,India,Games / Casual,Female (18+),8,1.44x,1.44,0.44
+IND,India,Graphics & Design,Female (18+),9,1.35x,1.35,0.35
+IND,India,Medical,Female (18+),10,1.24x,1.24,0.24
+IND,India,Music,Female (18+),11,1.22x,1.22,0.22
+IND,India,Food & Drink,Female (18+),12,1.15x,1.15,0.15
+IND,India,Utilities,Female (18+),13,1.13x,1.13,0.13
+IND,India,Social Networking,Female (18+),14,1.11x,1.11,0.11
+IND,India,Games / Simulation,Female (18+),15,1.08x,1.08,0.08
+IND,India,Games / Adventure,Female (18+),16,1.05x,1.05,0.05
+IND,India,Education,Female (18+),17,1.04x,1.04,0.04
+IND,India,Health & Fitness,Female (18+),18,1.03x,1.03,0.03
+IND,India,Photo & Video,Female (18+),19,1.02x,1.02,0.02
+IND,India,Productivity,Female (18+),20,0.93x,0.93,-0.07
+IND,India,Entertainment,Female (18+),21,0.91x,0.91,-0.09
+IND,India,Navigation,Female (18+),22,0.87x,0.87,-0.13
+IND,India,Games / Role Playing,Female (18+),23,0.79x,0.79,-0.21
+IND,India,Business,Female (18+),24,0.77x,0.77,-0.23
+IND,India,Games / Board,Female (18+),25,0.73x,0.73,-0.27
+IND,India,Weather,Female (18+),26,0.63x,0.63,-0.37
+IND,India,Games / Racing,Female (18+),27,0.62x,0.62,-0.38
+IND,India,Games / Card,Female (18+),28,0.57x,0.57,-0.43
+IND,India,Travel,Female (18+),29,0.50x,0.50,-0.5
+IND,India,News,Female (18+),30,0.38x,0.38,-0.62
+IND,India,Finance,Female (18+),31,0.37x,0.37,-0.63
+IND,India,Games / Action,Female (18+),32,0.35x,0.35,-0.65
+IND,India,Games / Strategy,Female (18+),33,0.29x,0.29,-0.71
+IND,India,Games / Sports,Female (18+),34,0.23x,0.23,-0.77
+IND,India,Games / Casino,Female (18+),35,0.18x,0.18,-0.82
+IND,India,Sports,Female (18+),36,0.14x,0.14,-0.86

@@ -659,7 +659,7 @@ VIZ 11
   }
 }
 
-#vis11-categories .category-list {
+#vis11_categories .category-list {
   max-width: 736px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
