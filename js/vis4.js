@@ -54,8 +54,8 @@ export function Vis4Combined() {
       ? vis4Container.offsetWidth
       : 633;
 
-  const height = 400;
-  const margin = { top: 50, right: 100, bottom: 40, left: 10 };
+  const height = 500;
+  const margin = { top: 50, right: 100, bottom: 40, left: -55 };
 
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
@@ -84,10 +84,10 @@ export function Vis4Combined() {
   if (firstIdx > 2) rectX1 += extraGap;
   if (lastIdx > 2) rectX2 += extraGap;
   const rectWidth =
-    rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 100;
+    rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 110;
   const rectX = rectX1 - rectPadding - 10;
-  const rectY = -rectPadding - 20;
-  const rectHeight = innerHeight + 2 * rectPadding + 40;
+  const rectY = -rectPadding - 30;
+  const rectHeight = innerHeight + 2 * rectPadding + 50;
 
   return html`<div class="vis-container-inner">
     <svg
@@ -121,6 +121,14 @@ export function Vis4Combined() {
                     : "var(--blue-medium)"}"
                   rx="10"
                   ry="10"
+                />
+                <rect
+                  y="${height / 2}"
+                  width="${width}"
+                  height="${height / 2}"
+                  fill="${barColors[d.Category]
+                    ? barColors[d.Category]
+                    : "var(--blue-medium)"}"
                 />
 
                 <text
