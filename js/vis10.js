@@ -179,7 +179,7 @@ export function Vis10() {
     .domain(categories)
     .range([0, sectionInnerWidth]);
 
-  return html`<div class="vis-container-inner viz10-container-inner">
+  return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"

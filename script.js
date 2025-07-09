@@ -71,7 +71,7 @@ const visList = [
     component: Vis11,
   },
   {
-    id: "vis11-categories",
+    id: "vis11_categories",
     component: Vis11Categories,
   },
   {

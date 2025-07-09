@@ -84,7 +84,7 @@ export function Vis9() {
     .domain([minDau, maxDau])
     .range([appScale.step() * 0.1, appScale.step() * 0.34]);
 
-  return html`<div class="vis-container-inner viz9-container-inner">
+  return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"

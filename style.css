@@ -323,8 +323,8 @@ VIZ 8
 /*
 VIZ 9
 */
-#viz9 {
-  .viz9-container-inner {
+#vis9 {
+  .vis-container-inner {
     position: relative;
   }
 }
@@ -332,28 +332,30 @@ VIZ 9
 /*
 VIZ 10
 */
-.viz10-container-inner {
-  position: relative;
+#vis10 {
+  .vis-container-inner {
+    position: relative;
 
-  .circles circle {
-    cursor: pointer;
-    transition: fill 0.3s ease-in-out;
-    stroke: #f2f2f2;
-    stroke-width: 0.25px;
-  }
+    .circles circle {
+      cursor: pointer;
+      transition: fill 0.3s ease-in-out;
+      stroke: #f2f2f2;
+      stroke-width: 0.25px;
+    }
 
-  .viz10-empty-section {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    .viz10-empty-section {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
 
-    p {
-      color: #000;
-      line-height: 1.25;
-      text-align: center;
-      margin: 0;
+      p {
+        color: #000;
+        line-height: 1.25;
+        text-align: center;
+        margin: 0;
+      }
     }
   }
 }
