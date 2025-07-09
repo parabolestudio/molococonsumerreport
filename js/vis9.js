@@ -110,9 +110,9 @@ export function Vis9() {
                 stroke="#D9D9D9"
               />
               <text
-                x="-10"
+                x="${-margin.left + 12}"
                 y="${y + 4}"
-                text-anchor="end"
+                text-anchor="start"
                 class="charts-text-body"
                 >${tick !== 0 ? formattedTick : ""}</text
               >`;
@@ -173,7 +173,7 @@ export function Vis9() {
       <text
         class="charts-text-body-bold"
         dominant-baseline="hanging"
-        dx="15"
+        dx="12"
         y="${margin.top - 35}"
       >
         Hours spent
