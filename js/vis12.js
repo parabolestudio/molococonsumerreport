@@ -1,13 +1,15 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 function updateMultiSelect(categories, initialCategories, callback) {
-  const selectCategoryData = categories.map((category) => {
-    return {
-      id: category,
-      text: category,
-      defaultSelected: initialCategories.includes(category),
-    };
-  });
+  const selectCategoryData = categories
+    .filter((d) => d !== "Social Media")
+    .map((category) => {
+      return {
+        id: category,
+        text: category,
+        defaultSelected: initialCategories.includes(category),
+      };
+    });
 
   if (typeof window !== "undefined" && window.$) {
     // create select2 dropdown options with categories of that country
@@ -38,10 +40,10 @@ export function Vis12() {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const initialCategories = [
-    "Education",
-    "Business",
-    "Entertainment",
-    "Social Media",
+    "News & Magazines",
+    "Finance",
+    "Sports",
+    // "Education",
   ];
   const [selectedCategories, setSelectedCategories] =
     useState(initialCategories);
@@ -121,8 +123,21 @@ export function Vis12() {
   const categories = dataFiltered.map((d) => d.category);
 
   // filter data based on selected categories
-  const dataFilteredWithSelectedCategories = dataFiltered.filter((d) =>
-    selectedCategories.includes(d.category)
+  const dataFilteredWithSelectedCategories = dataFiltered
+    .filter(
+      (d) =>
+        selectedCategories.includes(d.category) || d.category === "Social Media"
+    )
+    .sort((a, b) => {
+      // sort that social media is always first
+      if (a.category === "Social Media") return -1;
+      if (b.category === "Social Media") return 1;
+      // rest like in initial order
+      return categories.indexOf(a.category) - categories.indexOf(b.category);
+    });
+  console.log(
+    "dataFilteredWithSelectedCategories",
+    dataFilteredWithSelectedCategories
   );
 
   // multi select dropdown for categories
@@ -143,10 +158,10 @@ export function Vis12() {
     vis12Container && vis12Container.offsetWidth
       ? vis12Container.offsetWidth
       : 600;
-  const heightPerCategory = 50;
+  const heightPerCategory = 70;
   const categoryPadding = 10;
   const valueOvershot = 40;
-  const NUMBER_CATEGORIES = 4;
+  const NUMBER_CATEGORIES = 5;
 
   const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =
@@ -178,7 +193,6 @@ export function Vis12() {
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
 
-  // Dynamically determine the number of categories to display (up to 4)
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
     if (d) {
@@ -195,7 +209,8 @@ export function Vis12() {
           class="charts-text-body charts-text-white"
           >${d.category}</text
         >
-        <path d=${areaGenerator(d.hour_values)} fill-opacity="0.99" />
+
+        <path d=${areaGenerator(d.hour_values)} />
       </g>`;
     }
     return html`
@@ -213,6 +228,15 @@ export function Vis12() {
           rx="10"
           ry="10"
         />
+        <text
+          x="${innerWidth / 2}"
+          y="${heightPerCategory / 2}"
+          dy="2"
+          dominant-baseline="middle"
+          text-anchor="middle"
+          class="charts-text-body charts-text-white"
+          >Choose another category to compare</text
+        >
       </g>
     `;
   });

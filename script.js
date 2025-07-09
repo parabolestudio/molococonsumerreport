@@ -38,16 +38,16 @@ const visList = [
     id: "vis4",
     component: Vis4Combined,
   },
-  {
-    id: "vis4a",
-    component: Vis4,
-    variation: "a",
-  },
-  {
-    id: "vis4b",
-    component: Vis4,
-    variation: "b",
-  },
+  // {
+  //   id: "vis4a",
+  //   component: Vis4,
+  //   variation: "a",
+  // },
+  // {
+  //   id: "vis4b",
+  //   component: Vis4,
+  //   variation: "b",
+  // },
   {
     id: "vis6",
     component: Vis6,

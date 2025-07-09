@@ -714,6 +714,5 @@ this is to create a pattern of three colors that repeats every three rows
 }
 
 .vis12-row path {
-  /* stroke: #040078;
-  stroke-width: 2; */
+  filter: drop-shadow(0 -2px 1px #040078);
 }
