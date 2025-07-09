@@ -33,11 +33,13 @@
 
   .select2-selection--multiple {
     background-color: transparent !important;
-    border-radius: 10px;
+    border-radius: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   .select2-selection__choice {
-    background-color: white !important;
+    background-color: #f2f2f2 !important;
+    border-color: #f2f2f2 !important;
     color: black !important;
     border-radius: 10px !important;
     font-size: 14px;
@@ -50,6 +52,7 @@
   }
   .select2-selection__choice__remove {
     color: black !important;
+    border-right-width: 0px !important;
   }
 
   .select2-results__option {
