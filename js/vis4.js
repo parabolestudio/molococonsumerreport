@@ -52,13 +52,14 @@ export function Vis4Combined() {
   const width =
     vis4Container && vis4Container.offsetWidth
       ? vis4Container.offsetWidth
-      : 633;
+      : 600;
 
-  const height = 500;
-  const margin = { top: 50, right: 100, bottom: 40, left: -55 };
+  const height = 600;
+  const margin = { top: 50, right: 112, bottom: 40, left: 20 };
+  const extraGap = 80; // spacing between 3rd and 4th column
 
   const innerHeight = height - margin.top - margin.bottom;
-  const innerWidth = width - margin.left - margin.right;
+  const innerWidth = width - margin.left - margin.right - extraGap;
 
   // data and scales
   const columnHeightScale = d3
@@ -69,10 +70,8 @@ export function Vis4Combined() {
     .scaleBand()
     .domain(data.map((d) => d["Category"]))
     .range([0, innerWidth])
-    .padding(0.3)
-    .paddingOuter(0.6);
-
-  const extraGap = 40; // spacing between 3rd and 4th column
+    .paddingInner(0.5)
+    .paddingOuter(0);
 
   // Calculate rectangle for columns 4-7 (index 3 to 6)
   const rectPadding = 15;
@@ -85,7 +84,7 @@ export function Vis4Combined() {
   if (lastIdx > 2) rectX2 += extraGap;
   const rectWidth =
     rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 110;
-  const rectX = rectX1 - rectPadding - 10;
+  const rectX = rectX1 - rectPadding - 15;
   const rectY = -rectPadding - 30;
   const rectHeight = innerHeight + 2 * rectPadding + 50;
 
