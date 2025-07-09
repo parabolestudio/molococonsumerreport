@@ -1,7 +1,7 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis8() {
-  const [data, setData] = useState([]);
+  const [ageData, setAgeData] = useState([]);
   const [countries, setCountries] = useState([]);
   const [categories, setCategories] = useState([]);
   const [groups, setGroups] = useState([]);
@@ -10,15 +10,23 @@ export function Vis8() {
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change_updated.csv"
-    ).then((data) => {
-      data.forEach((d) => {
+    Promise.all([
+      d3.csv(
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change_updated.csv"
+      ),
+      d3.csv(
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_gender_time_spent_change.csv"
+      ),
+    ])
+    .then((files) => {
+      const [ageData, genderData] = files;
+
+      ageData.forEach((d) => {
         d["value"] = +d["TIme spent change (%)"];
         d["group"] = d["Demographic Group"].trim();
       });
 
-      const countries = data.map((d) => d.Country);
+      const countries = ageData.map((d) => d.Country);
       const uniqueCountries = Array.from(new Set(countries)).sort((a, b) => {
         // Sort countries alphabetically
         return a.localeCompare(b);
@@ -26,16 +34,16 @@ export function Vis8() {
       // Set the default selected country to the first one in the sorted list
       setCountries(uniqueCountries);
 
-      const categories = data.map((d) => d.Category);
+      const categories = ageData.map((d) => d.Category);
       const uniqueCategories = Array.from(new Set(categories));
       setCategories(uniqueCategories);
 
-      const groups = data.map((d) => d.group);
+      const groups = ageData.map((d) => d.group);
       const uniqueGroups = Array.from(new Set(groups));
       setGroups(uniqueGroups);
 
-      // data group by country code and categories
-      const groupedData = d3.group(data, (d) => d.Country);
+      // age data group by country code and categories
+      const groupedData = d3.group(ageData, (d) => d.Country);
 
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         const groupedByCategory = d3.group(values, (d) => d.Category);
@@ -59,17 +67,17 @@ export function Vis8() {
         };
       });
 
-      setData(groupedArray);
+      setAgeData(groupedArray);
     });
   }, []);
 
-  if (data.length === 0) {
+  if (ageData.length === 0) {
     return html`<div>Loading...</div>`;
   }
 
   // get selected country
   const groupedArrayFiltered =
-    data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
+    ageData.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const dataFiltered = groupedArrayFiltered;
 
   // set values for country code dropdown
