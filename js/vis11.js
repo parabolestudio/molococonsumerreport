@@ -356,7 +356,7 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
       ${filteredAppData.map(
         (d) => html`
           <div class="app-item">
-            <p class="position"></p>
+            <p class="position">${d["Position"]}</p>
             <p class="sublabel">${d["Top Growing App #1"]}</p>
             <p class="number">+${d["Growth"]}</p>
           </div>

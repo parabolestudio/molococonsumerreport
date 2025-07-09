@@ -596,6 +596,13 @@ VIZ 11
           background-color: var(--vis11-main-color);
           margin: 0;
           flex-shrink: 0;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          font-family: "Spacegrotesk", "Space Grotesk", sans-serif;
+          font-weight: 700;
         }
         .number {
           font-size: 14px;
