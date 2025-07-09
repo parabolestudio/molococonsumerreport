@@ -191,15 +191,11 @@ export function Vis1() {
           </text>
         </g>
         <g>
-          ${xScaleTimeline.ticks(6).map((tick) => {
+          ${xScaleTimeline.ticks(6).map((tick, index) => {
+            if (index === 0) return html``;
             const x = xScaleTimeline(tick);
             return html`<g transform="translate(${x}, 0)">
-              <line
-                y1="0"
-                y2="${innerHeightTimeline}"
-                stroke="#000"
-                stroke-opacity="0.5"
-              />
+              <line y1="0" y2="${innerHeightTimeline}" stroke=" #D9D9D9" />
               <text
                 x="0"
                 y="${innerHeightTimeline + 20}"
