@@ -14,17 +14,21 @@ export function Vis8() {
       d3.csv(
         "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change_updated.csv"
       ),
-      d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_gender_time_spent_change.csv"
-      ),
-    ])
-    .then((files) => {
-      const [ageData, genderData] = files;
+      // d3.csv(
+      //   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_gender_time_spent_change.csv"
+      // ),
+    ]).then((files) => {
+      const [ageData] = files;
 
       ageData.forEach((d) => {
         d["value"] = +d["TIme spent change (%)"];
         d["group"] = d["Demographic Group"].trim();
       });
+
+      // genderData.forEach((d) => {
+      //   d["value"] = +d["TIme spent change (%)"];
+      //   d["group"] = d["Demographic Group"].trim();
+      // });
 
       const countries = ageData.map((d) => d.Country);
       const uniqueCountries = Array.from(new Set(countries)).sort((a, b) => {
@@ -177,9 +181,7 @@ export function Vis8() {
         y1="${heightPerCategory + categoryPadding / 2}"
         x2="${width - margin.right}"
         y2="${heightPerCategory + categoryPadding / 2}"
-        stroke="#D9D9D9"
-        stroke-width="2"
-        stroke-dasharray="2,2"
+        class="charts-line-dashed"
       />
       ${d.groups.map((group) => {
         const value = group.value;

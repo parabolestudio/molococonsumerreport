@@ -151,11 +151,12 @@ export function Vis4Combined() {
                 y1="${columnHeightScale(1.0)}"
                 x2="${x + width}"
                 y2="${columnHeightScale(1.0)}"
+                class="${d.Category === "Google & Meta"
+                  ? ""
+                  : "charts-line-dashed charts-line-dashed-white"}"
                 stroke="${d.Category === "Google & Meta"
                   ? "transparent"
                   : "white"}"
-                stroke-width="1"
-                stroke-dasharray="2,2"
               />`;
           })}
         </g>
@@ -168,9 +169,7 @@ export function Vis4Combined() {
             60 +
             extraGap}"
             y2="${columnHeightScale(1.0)}"
-            stroke="white"
-            stroke-width="1"
-            stroke-dasharray="2,2"
+            class="charts-line-dashed charts-line-dashed-white"
           />
           <g
             transform="translate(${columnXScale(
@@ -207,22 +206,18 @@ export function Vis4Combined() {
           width="${rectWidth}"
           height="${rectHeight}"
           fill="none"
-          stroke="#0280FB"
-          stroke-width="2"
-          stroke-dasharray="2,2"
+          class="charts-line-dashed charts-line-dashed-blue"
           rx="10"
           ry="10"
         />
         <line
           x1="${columnXScale(data[2]["Category"]) + columnXScale.bandwidth()}"
           y1="${columnHeightScale(data[2]["Growth (%)"]) +
-          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.33}"
+          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
           x2="${rectX}"
           y2="${columnHeightScale(data[2]["Growth (%)"]) +
-          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.33}"
-          stroke="#0280FB"
-          stroke-width="2"
-          stroke-dasharray="2,2"
+          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
+          class="charts-line-dashed charts-line-dashed-blue"
         />
       </g>
     </svg>

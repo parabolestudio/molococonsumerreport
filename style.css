@@ -27,6 +27,20 @@
   fill: #ffffff;
 }
 
+.charts-line-dashed {
+  stroke: #d9d9d9;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0.1 5;
+
+  &.charts-line-dashed-white {
+    stroke: #fff;
+  }
+  &.charts-line-dashed-blue {
+    stroke: #0280fb;
+  }
+}
+
 /* multi select style*/
 .select2-container {
   border: none;

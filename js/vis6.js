@@ -257,13 +257,7 @@ export function Vis6() {
         </g>`;
       } else {
         return html`<g transform="translate(${x}, 0)">
-          <line
-            y1="0"
-            y2="${innerHeight}"
-            stroke="#D9D9D9"
-            stroke-dasharray="2,2"
-            stroke-width="2"
-          />
+          <line y1="0" y2="${innerHeight}" class="charts-line-dashed" />
           <path
             transform="translate(-11, -23)"
             stroke="#000"

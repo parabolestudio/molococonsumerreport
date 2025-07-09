@@ -330,9 +330,7 @@ export function Vis10() {
                   y1="${valueScale(valueScale.domain()[1]) - 20}"
                   x2="${sectionInnerWidth}"
                   y2="${valueScale(valueScale.domain()[1]) - 20}"
-                  stroke="#000"
-                  stroke-width="1"
-                  stroke-dasharray="2,2"
+                  class="charts-line-dashed"
                 />
                 <g
                   transform="translate(${-15 / 2}, ${valueScale(
