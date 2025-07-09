@@ -49,7 +49,7 @@ export function Vis9() {
       : 600;
 
   const height = 400;
-  const margin = { top: 65, right: 55, bottom: 55, left: 55 };
+  const margin = { top: 65, right: 5, bottom: 55, left: 55 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 

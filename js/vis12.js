@@ -43,7 +43,7 @@ export function Vis12() {
     "News & Magazines",
     "Finance",
     "Sports",
-    // "Education",
+    "Education",
   ];
   const [selectedCategories, setSelectedCategories] =
     useState(initialCategories);
@@ -135,10 +135,6 @@ export function Vis12() {
       // rest like in initial order
       return categories.indexOf(a.category) - categories.indexOf(b.category);
     });
-  console.log(
-    "dataFilteredWithSelectedCategories",
-    dataFilteredWithSelectedCategories
-  );
 
   // multi select dropdown for categories
   // coded separately in HTML with select2

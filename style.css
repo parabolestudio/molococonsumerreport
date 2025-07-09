@@ -51,9 +51,6 @@
   .select2-selection__choice__remove {
     color: black !important;
   }
-  &.select2-container--focus .select2-selection--multiple {
-    border-color: white !important;
-  }
 
   .select2-results__option {
     color: black;
@@ -69,6 +66,20 @@
       background-color: #040078 !important;
     }
   }
+}
+/* viz 10*/
+.form-block-4
+  .select2-container
+  .select2-container--focus
+  .select2-selection--multiple {
+  border-color: black !important;
+}
+/* viz 12*/
+.form-block-3
+  .select2-container
+  .select2-container--focus
+  .select2-selection--multiple {
+  border-color: white !important;
 }
 /*
 Tooltip for multiple visualizations
