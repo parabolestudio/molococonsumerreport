@@ -317,6 +317,7 @@ VIZ 8
 
   path {
     cursor: pointer;
+    transition: all 0.3s ease;
   }
 }
 

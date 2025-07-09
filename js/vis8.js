@@ -11,15 +11,19 @@ export function Vis8() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change_updated.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["value"] = +d["TIme spent change (%)"];
-        d["group"] = d["Age group"].trim();
+        d["group"] = d["Demographic Group"].trim();
       });
 
       const countries = data.map((d) => d.Country);
-      const uniqueCountries = Array.from(new Set(countries));
+      const uniqueCountries = Array.from(new Set(countries)).sort((a, b) => {
+        // Sort countries alphabetically
+        return a.localeCompare(b);
+      });
+      // Set the default selected country to the first one in the sorted list
       setCountries(uniqueCountries);
 
       const categories = data.map((d) => d.Category);
