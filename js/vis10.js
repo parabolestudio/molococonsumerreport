@@ -460,7 +460,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
 
   if (typeof window !== "undefined" && window.$) {
     // create select2 dropdown options with categories of that country
-    window.$("#viz10-select").empty();
+    window.$("#vis10-select").empty();
     for (let i = 0; i < selectCategoryData.length; i++) {
       const item = selectCategoryData[i];
       const newOption = new Option(
@@ -469,13 +469,13 @@ function updateMultiSelect(categories, initialCategories, callback) {
         item.defaultSelected,
         item.defaultSelected
       );
-      window.$("#viz10-select").append(newOption).trigger("change");
+      window.$("#vis10-select").append(newOption).trigger("change");
     }
 
     // create event listener to listen for changes
-    window.$("#viz10-select").on("change", function (e) {
+    window.$("#vis10-select").on("change", function (e) {
       const selectedCategories = window
-        .$("#viz10-select")
+        .$("#vis10-select")
         .select2("data")
         .map((d) => d.id);
       callback(selectedCategories);

@@ -36,7 +36,7 @@ export function Vis7() {
 
   // set values for country dropdown
   const countries = data.map((d) => d.country);
-  let countryDropdown = document.querySelector("#viz7_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis7_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     countries.forEach((country) => {

@@ -13,7 +13,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
 
   if (typeof window !== "undefined" && window.$) {
     // create select2 dropdown options with categories of that country
-    window.$("#viz12-select").empty();
+    window.$("#vis12-select").empty();
     for (let i = 0; i < selectCategoryData.length; i++) {
       const item = selectCategoryData[i];
       const newOption = new Option(
@@ -22,13 +22,13 @@ function updateMultiSelect(categories, initialCategories, callback) {
         item.defaultSelected,
         item.defaultSelected
       );
-      window.$("#viz12-select").append(newOption).trigger("change");
+      window.$("#vis12-select").append(newOption).trigger("change");
     }
 
     // create event listener to listen for changes
-    window.$("#viz12-select").on("change", function (e) {
+    window.$("#vis12-select").on("change", function (e) {
       const selectedCategories = window
-        .$("#viz12-select")
+        .$("#vis12-select")
         .select2("data")
         .map((d) => d.id);
       callback(selectedCategories);
@@ -102,7 +102,7 @@ export function Vis12() {
   // set values for country code dropdown
   // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.country).sort();
-  let countryDropdown = document.querySelector("#viz12_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis12_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     countries.forEach((country) => {

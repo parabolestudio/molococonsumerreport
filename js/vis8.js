@@ -69,7 +69,7 @@ export function Vis8() {
   const dataFiltered = groupedArrayFiltered;
 
   // set values for country code dropdown
-  let countryDropdown = document.querySelector("#viz8_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis8_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     countries.forEach((country) => {

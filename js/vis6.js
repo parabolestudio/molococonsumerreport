@@ -69,7 +69,7 @@ export function Vis6() {
       const uniqueRegions = Array.from(new Set(regions)).sort();
       uniqueRegions.unshift("High-income countries");
 
-      let regionDropdown = document.querySelector("#viz6_dropdown_regions");
+      let regionDropdown = document.querySelector("#vis6_dropdown_regions");
       if (regionDropdown) regionDropdown.innerHTML = "";
       uniqueRegions.forEach((region) => {
         let option = document.createElement("option");

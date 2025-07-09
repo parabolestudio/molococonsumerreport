@@ -27,7 +27,7 @@ export function Vis9() {
   // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.Country);
   const uniqueCountries = Array.from(new Set(countries)).sort();
-  let countryDropdown = document.querySelector("#viz9_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis9_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     uniqueCountries.forEach((country) => {

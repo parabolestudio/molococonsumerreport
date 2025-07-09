@@ -23,7 +23,7 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
   // set values for country code dropdown
   // const countries = ["Australia", "Germany"];
   const uniqueCountries = Array.from(new Set(countries));
-  let countryDropdown = document.querySelector("#viz11_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis11_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     uniqueCountries.forEach((country) => {
@@ -112,9 +112,8 @@ export function Vis11() {
     // Listen for custom category change events
     const handleCategoryChange = (e) => {
       const newCategory = e.detail.selectedCategory;
-      if (newCategory && newCategory !== selectedCategory) {
+      if (newCategory && newCategory !== selectedCategory)
         setSelectedCategory(newCategory);
-      }
     };
     document.addEventListener("viz11CategoryChanged", handleCategoryChange);
 
@@ -496,10 +495,11 @@ export function Vis11Categories() {
         setSelectedCategory(category);
 
         // Dispatch custom event to notify other components
-        const categoryChangeEvent = new CustomEvent("viz11CategoryChanged", {
-          detail: { selectedCategory: category },
-        });
-        document.dispatchEvent(categoryChangeEvent);
+        document.dispatchEvent(
+          new CustomEvent("viz11CategoryChanged", {
+            detail: { selectedCategory: category },
+          })
+        );
       }}"
     >
       <div

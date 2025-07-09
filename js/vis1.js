@@ -134,7 +134,7 @@ export function Vis1() {
   // set values for country code dropdown
   const countries = timelineData.map((d) => d.country);
   const uniqueCountries = Array.from(new Set(countries));
-  let countryDropdown = document.querySelector("#viz1_dropdown_countries");
+  let countryDropdown = document.querySelector("#vis1_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     uniqueCountries.forEach((country) => {
