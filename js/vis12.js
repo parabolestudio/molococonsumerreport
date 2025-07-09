@@ -158,7 +158,7 @@ export function Vis12() {
     vis12Container && vis12Container.offsetWidth
       ? vis12Container.offsetWidth
       : 600;
-  const heightPerCategory = 70;
+  const heightPerCategory = 80;
   const categoryPadding = 10;
   const valueOvershot = 40;
   const NUMBER_CATEGORIES = 5;
@@ -224,7 +224,7 @@ export function Vis12() {
           y="0"
           width="${innerWidth + margin.left - margin.right}"
           height="${heightPerCategory}"
-          fill="rgba(242, 242, 242, 0.3)"
+          fill="#4B499D"
           rx="10"
           ry="10"
         />
