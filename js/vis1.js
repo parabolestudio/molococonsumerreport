@@ -258,6 +258,23 @@ export function Vis1() {
         </text>
       </g>
 
+      <g>
+        <line
+          x1="${marginTimeline.left +xScaleTimeline(timelineNonGamingLegendItem.year)}"
+          y1="${marginTimeline.top + yScaleTimeline(timelineNonGamingLegendItem.revenue)}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginTimeline.top + yScaleTimeline(timelineNonGamingLegendItem.revenue)}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
+        <line
+          x1="${marginTimeline.left + widthTimeline - 20}"
+          y1="${marginCategories.top + innerHeightCategories}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginCategories.top}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
+      </g>
+
       <g
         class="categories"
         transform="translate(${widthTimeline +
