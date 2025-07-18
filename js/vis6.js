@@ -32,11 +32,12 @@ export function Vis6() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile.csv"
+      // "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6_time_on_mobile.csv"
+      "./data/Viz6_time_on_mobile.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
-        d["Year"] = +d["Year"];
+        d["Year"] = d["Year"] === "CAGR" ? d["Year"] : +d["Year"];
       });
 
       // group data by Country
@@ -46,9 +47,7 @@ export function Vis6() {
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         const value2023 = values.find((v) => v.Year === 2021)?.Value || 0;
         const value2024 = values.find((v) => v.Year === 2024)?.Value || 0;
-        const percentageChange = Math.round(
-          ((value2024 - value2023) / value2023) * 100
-        );
+        const percentageChange = values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
 
         return {
           country: key,
@@ -58,7 +57,7 @@ export function Vis6() {
           percentageChange,
           percentageChangeFormatted: `${
             percentageChange > 0 ? "+" : ""
-          }${percentageChange}%`,
+          }${percentageChange.toFixed(1)}%`,
         };
       });
 
