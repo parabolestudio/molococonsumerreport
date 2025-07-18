@@ -66,8 +66,6 @@ export function Vis12() {
         d["category"] = d["Category"];
       });
 
-      console.log(data)
-
       // data group by country code and categories
       const groupedData = d3.group(data, (d) => d.country);
 
