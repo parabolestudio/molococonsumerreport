@@ -288,7 +288,6 @@ export function Vis6LegendGrowth() {
   const height = 45;
 
   const endX = 65;
-  const lineLeftX = endX / 2;
   const lineHorizontalLength = 20;
 
   return html`
