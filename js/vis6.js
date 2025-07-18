@@ -2,13 +2,15 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 const CUSTOM_COUNTRY_REGION = [
   "U.S.",
-  "U.K.",
-  "Germany",
-  "South Korea",
   "Japan",
-  "Australia",
+  "South Korea",
+  "Germany",
+  "U.K.",
+  "Taiwan",
   "Canada",
   "France",
+  "Australia",
+  "Brazil"
 ];
 
 const CIRCLE_RADIUS = 19 / 2;
@@ -16,13 +18,13 @@ const CIRCLE_RADIUS = 19 / 2;
 export function Vis6() {
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("High-income countries");
+  const [selectedRegion, setSelectedRegion] = useState("Top 10 mobile app markets");
   const [axisBreak, setAxisBreak] = useState(null);
 
   function filterDataByRegion() {
     let filterData = data.sort((a, b) => b.value2024 - a.value2024);
     filterData = filterData.filter((d) => d.region === selectedRegion);
-    if (selectedRegion === "High-income countries") {
+    if (selectedRegion === "Top 10 mobile app markets") {
       filterData = data.filter((d) =>
         CUSTOM_COUNTRY_REGION.includes(d.country)
       );
@@ -36,7 +38,7 @@ export function Vis6() {
     ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
-        d["Year"] = +d["Year"];
+        d["Year"] = d["Year"] === "CAGR" ? d["Year"] : +d["Year"];
       });
 
       // group data by Country
@@ -46,19 +48,17 @@ export function Vis6() {
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         const value2023 = values.find((v) => v.Year === 2021)?.Value || 0;
         const value2024 = values.find((v) => v.Year === 2024)?.Value || 0;
-        const percentageChange = Math.round(
-          ((value2024 - value2023) / value2023) * 100
-        );
+        const percentageChange = values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
 
         return {
-          country: key,
+          country: key === 'Dominican Republic' ? 'Dom. Republic' : key,
           region: values[0]["Region"],
           value2023,
           value2024,
           percentageChange,
           percentageChangeFormatted: `${
             percentageChange > 0 ? "+" : ""
-          }${percentageChange}%`,
+          }${percentageChange.toFixed(1)}%`,
         };
       });
 
@@ -67,7 +67,7 @@ export function Vis6() {
       // set values for regions dropdown
       const regions = groupedArray.map((d) => d.region);
       const uniqueRegions = Array.from(new Set(regions)).sort();
-      uniqueRegions.unshift("High-income countries");
+      uniqueRegions.unshift("Top 10 mobile app markets");
 
       let regionDropdown = document.querySelector("#vis6_dropdown_regions");
       if (regionDropdown) regionDropdown.innerHTML = "";
@@ -285,12 +285,11 @@ export function Vis6() {
 }
 
 export function Vis6LegendGrowth() {
-  const width = 140;
-  const height = 35;
+  const width = 340;
+  const height = 45;
 
   const endX = 65;
-  const lineLeftX = endX / 2;
-  const lineHorizontalLength = 70;
+  const lineHorizontalLength = 20;
 
   return html`
     <svg width="${width}" height="${height}">
@@ -317,29 +316,37 @@ export function Vis6LegendGrowth() {
         </text>
 
         <line
-          x1="${lineLeftX}"
-          y1="${CIRCLE_RADIUS * 2}"
-          x2="${lineLeftX + lineHorizontalLength}"
-          y2="${CIRCLE_RADIUS * 2}"
-          stroke="#000"
-          stroke-linecap="round"
-        />
-        <line
-          x1="${lineLeftX}"
+          x1="${endX + 75}"
           y1="${0}"
-          x2="${lineLeftX}"
-          y2="${CIRCLE_RADIUS * 2}"
+          x2="${endX + 75 + lineHorizontalLength}"
+          y2="${0}"
           stroke="#000"
           stroke-linecap="round"
         />
-        <line
-          x1="${lineLeftX + lineHorizontalLength}"
-          y1="${CIRCLE_RADIUS + 2}"
-          x2="${lineLeftX + lineHorizontalLength}"
-          y2="${CIRCLE_RADIUS * 2}"
-          stroke="#000"
-          stroke-linecap="round"
-        />
+        <text
+          x="${endX + 75 + lineHorizontalLength + 10}"
+          y="2"
+          dominant-baseline="middle"
+          text-anchor="left"
+          fill="#000"
+          font-size="14"
+          font-weight="400"
+          font-family="'Montserrat', sans-serif"
+        >
+          <tspan
+            x="${endX + 75 + lineHorizontalLength + 10}"
+            dy="0"
+          >
+            Compound Annual
+          </tspan>
+          <tspan
+            x="${endX + 75 + lineHorizontalLength + 10}"
+            dy="1.23rem"
+          >
+            Growth Rate (CAGR)
+          </tspan>
+        </text>
+        
       </g>
     </svg>
   `;
