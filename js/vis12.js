@@ -47,6 +47,11 @@ export function Vis12() {
   ];
   const [selectedCategories, setSelectedCategories] =
     useState(initialCategories);
+  const startTime = 5;
+
+  const shiftHour = (hour) => {
+    return hour < startTime ? 24 + (hour - startTime) : hour - startTime
+  }
 
   // Fetch data on mount
   useEffect(() => {
@@ -56,9 +61,12 @@ export function Vis12() {
       data.forEach((d) => {
         d["value"] = +d["value"];
         d["hour_of_day"] = +d["hour_of_day"];
+        d["shifted_hour_of_day"] = shiftHour(d["hour_of_day"]);
         d["country"] = d["Country"];
         d["category"] = d["Category"];
       });
+
+      console.log(data)
 
       // data group by country code and categories
       const groupedData = d3.group(data, (d) => d.country);
@@ -73,6 +81,7 @@ export function Vis12() {
               category: catKey,
               hour_values: catValues.map((v) => ({
                 hour_of_day: v.hour_of_day,
+                shifted_hour_of_day: v.shifted_hour_of_day,
                 value: v.value,
               })),
             };
@@ -184,13 +193,15 @@ export function Vis12() {
   const hourScale = d3.scaleLinear().domain([0, 23]).range([0, innerWidth]);
   const areaGenerator = d3
     .area()
-    .x((d) => hourScale(d.hour_of_day))
+    .x((d) => hourScale(d.shifted_hour_of_day))
     .y0(heightPerCategory)
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
 
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
+    const hourValues = d.hour_values.sort((a,b) => a.shifted_hour_of_day - b.shifted_hour_of_day);
+    
     if (d) {
       return html`<g
         transform="translate(0, ${index *
@@ -206,7 +217,7 @@ export function Vis12() {
           >${d.category}</text
         >
 
-        <path d=${areaGenerator(d.hour_values)} />
+        <path d=${areaGenerator(hourValues)} />
       </g>`;
     }
     return html`
@@ -237,8 +248,9 @@ export function Vis12() {
     `;
   });
 
-  const tickHours = [5, 8, 11, 14, 17, 20];
+  const tickHours = [5, 8, 11, 14, 17, 20, 23, 2];
   const xTicks = tickHours.map((d) => {
+    const shiftedHour = shiftHour(d);
     // Format hour to am/pm
     const hour = d % 24;
     const ampm =
@@ -251,7 +263,7 @@ export function Vis12() {
         : `${hour - 12}pm`;
 
     return html` <g
-      transform="translate(${hourScale(d)}, ${-10})"
+      transform="translate(${hourScale(shiftedHour)}, ${-10})"
       class="charts-text-body"
     >
       <text
