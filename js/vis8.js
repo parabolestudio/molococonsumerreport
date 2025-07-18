@@ -292,7 +292,7 @@ function Tooltip({ hoveredItem }) {
 
   const formatGrowth = (growth) => {
     if (growth === null || growth === undefined) return "N/A";
-    return growth > 0 ? `+${growth.toFixed(2)}%` : `${growth.toFixed(2)}%`;
+    return growth > 0 ? `+${growth.toFixed(0)}%` : `${growth.toFixed(0)}%`;
   };
 
   return html`<div
@@ -310,7 +310,7 @@ function Tooltip({ hoveredItem }) {
     </div>
     <div>
       <p class="tooltip-label">Time spent vs. general population</p>
-      <p class="tooltip-value">${formatGrowth(hoveredItem.value)}</p>
+      <p class="tooltip-value">${formatGrowth(hoveredItem.value * 100)}</p>
     </div>
   </div>`;
 }
