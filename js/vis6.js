@@ -2,13 +2,15 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 const CUSTOM_COUNTRY_REGION = [
   "U.S.",
-  "U.K.",
-  "Germany",
-  "South Korea",
   "Japan",
-  "Australia",
+  "South Korea",
+  "Germany",
+  "U.K.",
+  "Taiwan",
   "Canada",
   "France",
+  "Australia",
+  "Brazil"
 ];
 
 const CIRCLE_RADIUS = 19 / 2;
@@ -16,13 +18,13 @@ const CIRCLE_RADIUS = 19 / 2;
 export function Vis6() {
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("High-income countries");
+  const [selectedRegion, setSelectedRegion] = useState("Top 10 mobile app markets");
   const [axisBreak, setAxisBreak] = useState(null);
 
   function filterDataByRegion() {
     let filterData = data.sort((a, b) => b.value2024 - a.value2024);
     filterData = filterData.filter((d) => d.region === selectedRegion);
-    if (selectedRegion === "High-income countries") {
+    if (selectedRegion === "Top 10 mobile app markets") {
       filterData = data.filter((d) =>
         CUSTOM_COUNTRY_REGION.includes(d.country)
       );
@@ -50,7 +52,7 @@ export function Vis6() {
         const percentageChange = values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
 
         return {
-          country: key,
+          country: key === 'Dominican Republic' ? 'Dom. Republic' : key,
           region: values[0]["Region"],
           value2023,
           value2024,
@@ -66,7 +68,7 @@ export function Vis6() {
       // set values for regions dropdown
       const regions = groupedArray.map((d) => d.region);
       const uniqueRegions = Array.from(new Set(regions)).sort();
-      uniqueRegions.unshift("High-income countries");
+      uniqueRegions.unshift("Top 10 mobile app markets");
 
       let regionDropdown = document.querySelector("#vis6_dropdown_regions");
       if (regionDropdown) regionDropdown.innerHTML = "";
