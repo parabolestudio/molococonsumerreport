@@ -284,12 +284,12 @@ export function Vis6() {
 }
 
 export function Vis6LegendGrowth() {
-  const width = 140;
-  const height = 35;
+  const width = 340;
+  const height = 45;
 
   const endX = 65;
   const lineLeftX = endX / 2;
-  const lineHorizontalLength = 70;
+  const lineHorizontalLength = 20;
 
   return html`
     <svg width="${width}" height="${height}">
@@ -316,29 +316,37 @@ export function Vis6LegendGrowth() {
         </text>
 
         <line
-          x1="${lineLeftX}"
-          y1="${CIRCLE_RADIUS * 2}"
-          x2="${lineLeftX + lineHorizontalLength}"
-          y2="${CIRCLE_RADIUS * 2}"
-          stroke="#000"
-          stroke-linecap="round"
-        />
-        <line
-          x1="${lineLeftX}"
+          x1="${endX + 75}"
           y1="${0}"
-          x2="${lineLeftX}"
-          y2="${CIRCLE_RADIUS * 2}"
+          x2="${endX + 75 + lineHorizontalLength}"
+          y2="${0}"
           stroke="#000"
           stroke-linecap="round"
         />
-        <line
-          x1="${lineLeftX + lineHorizontalLength}"
-          y1="${CIRCLE_RADIUS + 2}"
-          x2="${lineLeftX + lineHorizontalLength}"
-          y2="${CIRCLE_RADIUS * 2}"
-          stroke="#000"
-          stroke-linecap="round"
-        />
+        <text
+          x="${endX + 75 + lineHorizontalLength + 10}"
+          y="2"
+          dominant-baseline="middle"
+          text-anchor="left"
+          fill="#000"
+          font-size="14"
+          font-weight="400"
+          font-family="'Montserrat', sans-serif"
+        >
+          <tspan
+            x="${endX + 75 + lineHorizontalLength + 10}"
+            dy="0"
+          >
+            Compound Annual
+          </tspan>
+          <tspan
+            x="${endX + 75 + lineHorizontalLength + 10}"
+            dy="1.23rem"
+          >
+            Growth Rate (CAGR)
+          </tspan>
+        </text>
+        
       </g>
     </svg>
   `;
