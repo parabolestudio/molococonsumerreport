@@ -7,6 +7,9 @@ export function Vis8() {
   const [groups, setGroups] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [showMore, setShowMore] = useState(false);
+
+  const nCategories = 10;
 
   // Fetch data on mount
   useEffect(() => {
@@ -82,7 +85,9 @@ export function Vis8() {
   // get selected country
   const groupedArrayFiltered =
     ageData.filter((d) => d.country === selectedCountry)[0]?.categories || [];
-  const dataFiltered = groupedArrayFiltered;
+  const dataFiltered = showMore === true
+    ? groupedArrayFiltered 
+    : groupedArrayFiltered.slice(0, nCategories);
 
   // set values for country code dropdown
   let countryDropdown = document.querySelector("#vis8_dropdown_countries");
@@ -109,7 +114,7 @@ export function Vis8() {
   const categoryPadding = 15;
   const margin = { top: 25, right: 5, bottom: 5, left: 115 };
   const height =
-    (heightPerCategory + categoryPadding) * categories.length +
+    (heightPerCategory + categoryPadding) * dataFiltered.length +
     categoryPadding +
     margin.top +
     margin.bottom;
