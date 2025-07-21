@@ -288,6 +288,12 @@ export function Vis8() {
         ${rows} ${groupSections}
       </g>
     </svg>
+    <div
+      class="show-more"
+      onClick="${() => setShowMore(!showMore)}"
+    >
+      ${showMore === true ? "SHOW LESS" : "SHOW MORE"}
+    </div>
     <${Tooltip} hoveredItem=${hoveredItem} />
   </div>`;
 }
