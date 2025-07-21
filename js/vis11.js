@@ -19,6 +19,19 @@ function getCategoryIcon(category) {
   return iconMap[category] || "travel.svg";
 }
 
+function getCategoryLabel(category) {
+  const labelMap = {
+    "E-Commerce": "E-Commerce",
+    Entertainment: "Entertainment",
+    Finance: "Finance",
+    RMG: "Real Money Gaming",
+    Travel: "Travel",
+    "On Demand": "On Demand",
+    Social: "Social",
+  };
+  return labelMap[category] || category;
+}
+
 function setCountryDropdownOptions(countries, selectedCountry, callback) {
   // set values for country code dropdown
   // const countries = ["Australia", "Germany"];
@@ -232,7 +245,7 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
   const dots2 = getDotPositions(numberAdOpportunities, sizeDotSvg / 2);
 
   return html`<div class="vis-11-part vis-11-top">
-    <p class="title">${selectedCategory}</p>
+    <p class="title">${getCategoryLabel(selectedCategory)}</p>
     <div class="vis-11-top-grid">
       <div class="element1">
         <svg viewBox="0 0 ${sizeDotSvg} ${sizeDotSvg}">
@@ -506,7 +519,7 @@ export function Vis11Categories() {
         class="category-icon"
         dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
       ></div>
-      <span>${category}</span>
+      <span>${getCategoryLabel(category)}</span>
     </li>`;
   });
 
