@@ -333,6 +333,26 @@ VIZ 8
     cursor: pointer;
     transition: all 0.3s ease;
   }
+
+  .show-more {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    border: 1px solid black;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    svg {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: bottom;
+    }
+  }
 }
 
 /*

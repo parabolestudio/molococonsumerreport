@@ -292,7 +292,20 @@ export function Vis8() {
       class="show-more"
       onClick="${() => setShowMore(!showMore)}"
     >
-      ${showMore === true ? "SHOW LESS" : "SHOW MORE"}
+      <span>
+        ${showMore === true ? "View less" : "View more"}
+      </span>
+     
+      ${showMore === true
+        ? `-` 
+        : html`<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_1495_406" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+        <rect width="18" height="18" fill="#D9D9D9"/>
+        </mask>
+        <g mask="url(#mask0_1495_406)">
+        <path d="M8.625 9.875H4.5V9.125H8.625V5H9.375V9.125H13.5V9.875H9.375V14H8.625V9.875Z" fill="#1C1B1F"/>
+        </g>
+        </svg>`}
     </div>
     <${Tooltip} hoveredItem=${hoveredItem} />
   </div>`;
