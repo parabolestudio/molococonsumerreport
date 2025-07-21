@@ -107,9 +107,9 @@ export function Vis1() {
     nonGamingTimelineData[nonGamingTimelineData.length - 1];
 
   const timelineGamingLegendItem =
-    gamingTimelineData[gamingTimelineData.length - 1];
+    gamingTimelineData[1];
   const timelineNonGamingLegendItem =
-    nonGamingTimelineData[nonGamingTimelineData.length - 1];
+    nonGamingTimelineData[1];
 
   /*
     CATEGORY 
@@ -222,7 +222,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 20})"
+          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#03004C"
           text-anchor="middle"
@@ -232,7 +232,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 20})"
+          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#0280FB"
           text-anchor="middle"
@@ -240,9 +240,10 @@ export function Vis1() {
           Consumer Apps
         </text>
         <text
-          transform="translate(${xScaleTimeline(timelineGamingLatestItem.year) +
-          10}, ${yScaleTimeline(timelineGamingLatestItem.revenue)})"
-          dominant-baseline="middle"
+          transform="translate(${xScaleTimeline(
+            timelineGamingLatestItem.year
+          )}, ${yScaleTimeline(timelineGamingLatestItem.revenue) - 10})"
+          text-anchor="middle"
           class="charts-text-value-small timeline-label"
         >
           $${timelineGamingLatestItem.revenue.toFixed(1)}B
@@ -250,12 +251,29 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLatestItem.year
-          ) + 10}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue)})"
-          dominant-baseline="middle"
+          )}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue) - 10})"
+          text-anchor="middle"
           class="charts-text-value-small timeline-label"
         >
           $${timelineNonGamingLatestItem.revenue.toFixed(1)}B
         </text>
+      </g>
+
+      <g>
+        <line
+          x1="${marginTimeline.left +xScaleTimeline(timelineNonGamingLatestItem.year)}"
+          y1="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
+        <line
+          x1="${marginTimeline.left + widthTimeline - 20}"
+          y1="${marginCategories.top + innerHeightCategories}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginCategories.top}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
       </g>
 
       <g
