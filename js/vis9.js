@@ -49,7 +49,7 @@ export function Vis9() {
       : 600;
 
   const height = 400;
-  const margin = { top: 65, right: 5, bottom: 55, left: 55 };
+  const margin = { top: 65, right: 5, bottom: 55, left: 90 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -59,7 +59,7 @@ export function Vis9() {
   const hourScale = d3
     .scaleLinear()
     .domain([0, d3.max(dataFiltered, (d) => d.Hours)])
-    .range([innerHeight, 0])
+    .range([0, innerWidth])
     .nice();
 
   const appList = [
@@ -77,12 +77,13 @@ export function Vis9() {
     .range([0, innerWidth])
     .padding(0.5);
 
-  const minDau = d3.min(dataFiltered, (d) => d.DAU);
-  const maxDau = d3.max(dataFiltered, (d) => d.DAU);
+  const [minDau, maxDau] = d3.extent(dataFiltered, (d) => d.DAU);
   const dauScale = d3
-    .scaleSqrt()
-    .domain([minDau, maxDau])
-    .range([appScale.step() * 0.1, appScale.step() * 0.34]);
+    .scaleLinear()
+    .domain([0, maxDau])
+    .range([innerHeight, 0]);
+  
+  const circleRadius = 8;
 
   return html`<div class="vis-container-inner">
     <svg
@@ -98,48 +99,85 @@ export function Vis9() {
           height="${innerHeight}"
           fill="transparent"
         />
-        <g class="hour-ticks">
-          ${hourScale.ticks(5).map((tick) => {
-            const y = hourScale(tick);
-            const formattedTick = d3.format(".2s")(tick).replace("G", "B");
-            return html`<line
-                x1="0"
-                y1="${y}"
-                x2="${innerWidth}"
-                y2="${y}"
-                stroke="#D9D9D9"
-              />
-              <text
-                x="${-margin.left + 12}"
-                y="${y + 4}"
-                text-anchor="start"
-                class="charts-text-body"
-                >${tick !== 0 ? formattedTick : ""}</text
-              >`;
-          })}
+        <g class="x-axis">
+          <line
+            x1="${0}"
+            x2="${innerWidth}"
+            y1="${innerHeight}"
+            y2="${innerHeight}"
+            stroke="#D9D9D9"
+          />
+          <text
+            class="charts-text-body-bold"
+            dominant-baseline="hanging"
+            dx="12"
+            text-anchor="middle"
+            x="${innerWidth/2}"
+            y="${innerHeight + 22}"
+          >
+            Hours spent
+          </text>
+          <g class="dau-ticks">
+            ${dauScale.ticks(5).map((tick) => {
+              const y = dauScale(tick);
+              const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+              return html`
+                <text
+                  x="${- 50}"
+                  y="${y + 4}"
+                  text-anchor="start"
+                  class="charts-text-body"
+                  >${tick !== 0 ? formattedTick : ""}</text
+                >`;
+            })}
+          </g>
+        </g>
+        <g class="y-axis">
+          <line
+            x1="${0}"
+            x2="${0}"
+            y1="${0}"
+            y2="${innerHeight}"
+            stroke="#D9D9D9"
+          />
+          <text
+            class="charts-text-body-bold"
+            dominant-baseline="hanging"
+            dx="12"
+            text-anchor="middle"
+            x="${-75}"
+            y="${innerHeight/2}"
+            transform="rotate(-90 ${-75} ${innerHeight/2})"
+          >
+            DAU
+          </text>
+          <g class="hour-ticks">
+            ${hourScale.ticks(5).map((tick) => {
+              const x = hourScale(tick);
+              const formattedTick = d3.format(".2s")(tick).replace("G", "B");
+              return html`
+                <text
+                  x="${x}"
+                  y="${innerHeight + 12}"
+                  text-anchor="middle"
+                  class="charts-text-body"
+                  >${tick !== 0 ? formattedTick : ""}</text
+                >`;
+            })}
+          </g>
         </g>
         <g class="lollipops">
           ${dataFiltered
-            .sort((a, b) => appScale(a.App) - appScale(b.App))
             .map((d, index) => {
               const color =
                 d.App === "Independent App Ecosystem" ? "#60E2B7" : "#040078";
               return html`
-                <g transform="translate(${appScale(d.App)}, 0)">
-                  <line
-                    x1="0"
-                    y1="${hourScale(d.Hours)}"
-                    x2="0"
-                    y2="${innerHeight}"
-                    stroke="${color}"
-                    stroke-width="2"
-                    style="transition: y1 0.3s ease;"
-                  />
+                <g transform="translate(0, 0)">
                   <circle
                     class="lollipop-circle"
-                    cx="0"
-                    cy="${hourScale(d.Hours)}"
-                    r="${dauScale(d.DAU)}"
+                    cx="${hourScale(d.Hours)}"
+                    cy="${dauScale(d.DAU)}"
+                    r="${circleRadius}"
                     fill="${color}"
                     style="transition: all 0.3s ease; cursor: pointer;"
                     onmouseover="${() => {
@@ -148,9 +186,9 @@ export function Vis9() {
                         hours: d.Hours,
                         country: d.Country,
                         app: d.App,
-                        x: appScale(d.App),
-                        y: hourScale(d.Hours),
-                        r: dauScale(d.DAU),
+                        x: hourScale(d.Hours),
+                        y: dauScale(d.DAU),
+                        r: circleRadius,
                       });
                     }}"
                     onmouseout="${() => {
@@ -158,9 +196,10 @@ export function Vis9() {
                     }}"
                   />
                   <text
-                    y="${innerHeight + 20}"
-                    dy="${index % 2 === 0 ? "0" : "20"}"
-                    text-anchor="middle"
+                    x="${hourScale(d.Hours) + 12}"
+                    y="${dauScale(d.DAU) + 4}"
+                    dy="0"
+                    text-anchor="left"
                     class="charts-text-body"
                   >
                     ${d.App === "Independent App Ecosystem" ? "IAE" : d.App}
@@ -170,14 +209,6 @@ export function Vis9() {
             })}
         </g>
       </g>
-      <text
-        class="charts-text-body-bold"
-        dominant-baseline="hanging"
-        dx="12"
-        y="${margin.top - 35}"
-      >
-        Hours spent
-      </text>
     </svg>
     <${Tooltip} hoveredItem=${hoveredItem} />
   </div>`;
