@@ -1,5 +1,16 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const colors = {
+  "Books & Reference": "#73e4ff",
+  Entertainment: "#c368f9",
+  Gaming: "#0280f8",
+  "Health & Fitness": "#60e2b7",
+  "Other Consumer Pubs": "#876AFF",
+  "Photo & Video": "#60e2b7",
+  "Social Media": "#876aff",
+  "Utility & Productivity": "#c368f9"
+};
+
 const getCategoryIcon = (category) => {
   const categoryMapping = {
     "Books & Reference": "books",
@@ -119,7 +130,7 @@ export function Vis13() {
 
   const [minROAS, maxROAS] = d3.extent(data, d => d["Indexed D7 ROAS"]);
   const xScale = d3.scaleLinear()
-    .domain([minROAS, maxROAS])
+    .domain([40, 160])
     .range([0, innerWidth])
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
@@ -132,12 +143,12 @@ export function Vis13() {
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <g class="x-axis">
-          ${xScale.ticks(6).map((tick, index) => {
+          ${xScale.ticks(7).map((tick, index) => {
             const x = xScale(tick);
             return html`<g transform="translate(${x}, 0)">
               <text
                 x="0"
-                y="${innerHeight + 20}"
+                y="${innerHeight + 50}"
                 text-anchor="middle"
                 class="charts-text-body"
               >
@@ -172,6 +183,23 @@ export function Vis13() {
                 stroke="#f2f2f2"
                 stroke-width="1.6"
               />
+            </g>`;
+          })}
+        </g>
+        <g class="dots">
+          ${advertisers.map(adv => {
+            const advertiserData = data.filter(d => d["Advertiser Genre"] === adv);
+            return html`<g>
+              ${advertiserData.map(datum => {
+                return html`
+                  <circle
+                    cx="${xScale(datum["Indexed D7 ROAS"])}"
+                    cy="${yScale(adv)}"
+                    r="9.5"
+                    fill="${colors[datum["Publisher Genre"]]}"
+                  />
+                `;
+              })}
             </g>`;
           })}
         </g>
