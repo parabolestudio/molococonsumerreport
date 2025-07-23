@@ -179,6 +179,8 @@ export function Vis10() {
     .domain(categories)
     .range([0, sectionInnerWidth]);
 
+  const formatShare = (share) => `${(share * 100).toFixed(1)}%`;
+
   return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
@@ -357,6 +359,8 @@ export function Vis10() {
                   ) {
                     x = sectionInnerWidth - shareRadiusScale(d.share);
                   }
+                  const isCircleBigEnough = shareRadiusScale(d.share) > 45;
+                  const isCircleNotTooSmall = shareRadiusScale(d.share) > 25;
                   return html` <circle
                     cx="${x}"
                     cy="${valueScale(d.yearGrowth)}"
@@ -378,7 +382,55 @@ export function Vis10() {
                     onmouseout="${() => {
                       setHoveredItem(null);
                     }}"
-                  />`;
+                  />
+                  ${isCircleBigEnough
+                    ? html`
+                    <text
+                      x="${x}"
+                      y="${valueScale(d.yearGrowth) - 6}"
+                      text-anchor="middle"
+                      fill="#fff"
+                      font-family="Montserrat"
+                      font-size="14px"
+                      font-style="normal"
+                      font-weight="400"
+                      line-height="125%"
+                    >
+                      ${d.category}
+                    </text>
+                    <text
+                      x="${x}"
+                      y="${valueScale(d.yearGrowth) + 14}"
+                      text-anchor="middle"
+                      fill="#fff"
+                      font-family="Spacegrotesk"
+                      font-size="14px"
+                      font-style="normal"
+                      font-weight="700"
+                      line-height="100%"
+                    >
+                      ${formatShare(d.share)}
+                    </text>
+                    `
+                    : (
+                    isCircleNotTooSmall ?
+                    html`
+                    <text
+                      x="${x}"
+                      y="${valueScale(d.yearGrowth) + 4}"
+                      text-anchor="middle"
+                      fill="#fff"
+                      font-family="Spacegrotesk"
+                      font-size="14px"
+                      font-style="normal"
+                      font-weight="700"
+                      line-height="100%"
+                    >
+                      ${formatShare(d.share)}
+                    </text>
+                    `
+                    : null)
+                  }`;
                 })}
                 ${["Generative AI"].map((categoryName) => {
                   //get share and yearGrowth for Generative AI from rawData
