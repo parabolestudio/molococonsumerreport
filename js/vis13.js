@@ -94,7 +94,6 @@ export function Vis13() {
     d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv"
     ).then((data) => {
-      console.log(data)
         data.forEach((d) => {
           d["Indexed D7 ROAS"] = +d["Indexed D7 ROAS"];
           d["Percentile"] = +d["Percentile"];
@@ -108,11 +107,21 @@ export function Vis13() {
     return html`<div>Loading...</div>`;
   }
 
-  const width = 100;
-  const height = 15;
-  const margin = { top: 5, right: 5, bottom: 5, left: 5 };
+  const width = 900;
+  const height = 500;
+  const margin = { top: 10, right: 10, bottom: 50, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
+
+  const advertisers = Array.from(
+    new Set(data.map((d) => d["Advertiser Genre"]))
+  );
+
+  const [minROAS, maxROAS] = d3.extent(data, d => d["Indexed D7 ROAS"]);
+  const xScale = d3.scaleLinear()
+    .domain([minROAS, maxROAS])
+    .range([0, innerWidth])
+  const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
     <p>Vis13</p>
@@ -121,7 +130,52 @@ export function Vis13() {
       preserveAspectRatio="xMidYMid meet"
       style="width:100%; height:100%; border: 1px solid black;"
     >
-      <g transform="translate(${margin.left}, ${margin.top})"></g>
+      <g transform="translate(${margin.left}, ${margin.top})">
+        <g class="x-axis">
+          ${xScale.ticks(6).map((tick, index) => {
+            const x = xScale(tick);
+            return html`<g transform="translate(${x}, 0)">
+              <text
+                x="0"
+                y="${innerHeight + 20}"
+                text-anchor="middle"
+                class="charts-text-body"
+              >
+                ${tick}%
+              </text>
+            </g>`;
+          })}
+        </g>
+        <g class="y-axis">
+          ${advertisers.map((adv, index) => {
+            const y = yScale(adv);
+            return html`<g transform="translate(0, ${y})">
+              <text
+                x="-10"
+                y="5"
+                text-anchor="end"
+                class="charts-text-body"
+                fill="#000)"
+                font-family="Montserrat"
+                font-size="14px"
+                font-style="normal"
+                font-weight="400"
+                line-height="125%"
+              >
+                ${adv}
+              </text>
+              <line
+                x1="0"
+                x2="${innerWidth}"
+                y1="0"
+                y2="0"
+                stroke="#f2f2f2"
+                stroke-width="1.6"
+              />
+            </g>`;
+          })}
+        </g>
+      </g>
     </svg>
   </div>`;
 }
