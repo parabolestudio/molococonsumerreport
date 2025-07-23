@@ -49,7 +49,7 @@ export function Vis9() {
       : 600;
 
   const height = 400;
-  const margin = { top: 65, right: 5, bottom: 55, left: 90 };
+  const margin = { top: 65, right: 10, bottom: 55, left: 90 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -113,19 +113,19 @@ export function Vis9() {
             dx="12"
             text-anchor="middle"
             x="${innerWidth/2}"
-            y="${innerHeight + 22}"
+            y="${innerHeight + 39}"
           >
-            Hours spent
+            Time spent
           </text>
-          <g class="dau-ticks">
-            ${dauScale.ticks(5).map((tick) => {
-              const y = dauScale(tick);
+          <g class="hour-ticks">
+            ${hourScale.ticks(5).map((tick) => {
+              const x = hourScale(tick);
               const formattedTick = d3.format(".2s")(tick).replace("G", "B");
               return html`
                 <text
-                  x="${- 50}"
-                  y="${y + 4}"
-                  text-anchor="start"
+                  x="${x}"
+                  y="${innerHeight + 29}"
+                  text-anchor="middle"
                   class="charts-text-body"
                   >${tick !== 0 ? formattedTick : ""}</text
                 >`;
@@ -151,15 +151,15 @@ export function Vis9() {
           >
             DAU
           </text>
-          <g class="hour-ticks">
-            ${hourScale.ticks(5).map((tick) => {
-              const x = hourScale(tick);
+          <g class="dau-ticks">
+            ${dauScale.ticks(5).map((tick) => {
+              const y = dauScale(tick);
               const formattedTick = d3.format(".2s")(tick).replace("G", "B");
               return html`
                 <text
-                  x="${x}"
-                  y="${innerHeight + 12}"
-                  text-anchor="middle"
+                  x="${- 50}"
+                  y="${y + 4}"
+                  text-anchor="start"
                   class="charts-text-body"
                   >${tick !== 0 ? formattedTick : ""}</text
                 >`;
@@ -168,9 +168,10 @@ export function Vis9() {
         </g>
         <g class="lollipops">
           ${dataFiltered
-            .map((d, index) => {
-              const color =
-                d.App === "Independent App Ecosystem" ? "#60E2B7" : "#040078";
+            .map((d) => {
+              const isTextTooWide = hourScale(d.Hours) + 100 > innerWidth;
+              const xText = isTextTooWide ? 17.5 : -17.5;
+              const textAnchor = isTextTooWide ? 'end' : 'begin';
               return html`
                 <g
                   transform="translate(${hourScale(d.Hours)}, ${dauScale(d.DAU)})"
@@ -192,15 +193,35 @@ export function Vis9() {
                   <${SocialMediaIcon}
                     category="${d.App}"
                   />
-                  <text
-                    x="26"
-                    y="4"
-                    dy="0"
-                    text-anchor="left"
-                    class="charts-text-body"
-                  >
-                    ${d.App === "Independent App Ecosystem" ? "IAE" : d.App}
-                  </text>
+                  ${d.App === "Independent App Ecosystem" ?
+                    html`
+                    <text
+                      x="${xText}"
+                      y="40.5"
+                      dy="0"
+                      text-anchor="${textAnchor}"
+                      class="charts-text-body"
+                    >
+                      <tspan
+                        x="${xText}"
+                        dy="0"
+                        fill="#12976B"
+                        font-size="14"
+                        font-weight="700"
+                      >
+                        Independent
+                      </tspan>
+                      <tspan
+                        x="${xText}"
+                        dy="1.25rem"
+                        fill="#12976B"
+                        font-size="14"
+                        font-weight="700"
+                      >
+                        App Ecosystem
+                      </tspan>
+                    </text>`
+                  : null}
                 </g>
               `;
             })}
@@ -301,8 +322,8 @@ function SocialMediaIcon({ category }) {
       </g>`;
     case "Independent App Ecosystem":
       return html`
-      <g transform="translate(-22.5, -22.5)">
-        <circle cx="22.5" cy="22.5" r="22.5" fill="#60E2B7"/>
+      <g transform="translate(${iconOffsetX}, ${iconOffsetY})">
+        <circle cx="17.5" cy="17.5" r="17.5" fill="#60E2B7"/>
       </g>`;
     default:
       return null;
