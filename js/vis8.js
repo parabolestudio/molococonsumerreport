@@ -297,7 +297,14 @@ export function Vis8() {
       </span>
      
       ${showMore === true
-        ? `-` 
+        ? html`<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_1748_8045" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+            <rect width="18" height="18" fill="#D9D9D9"/>
+          </mask>
+          <g mask="url(#mask0_1748_8045)">
+            <path d="M5.25 9.375V8.625H12.75V9.375H5.25Z" fill="#1C1B1F"/>
+          </g>
+        </svg>` 
         : html`<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0_1495_406" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
         <rect width="18" height="18" fill="#D9D9D9"/>
