@@ -118,8 +118,8 @@ export function Vis13() {
     return html`<div>Loading...</div>`;
   }
 
-  const width = 900;
-  const height = 500;
+  const width = 1000;
+  const height = 800;
   const margin = { top: 20, right: 10, bottom: 50, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
@@ -135,7 +135,6 @@ export function Vis13() {
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
-    <p>Vis13</p>
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
@@ -232,6 +231,14 @@ export function Vis13Categories() {
       }
     );
   }, []);
+
+  useEffect(() => {
+    const selectedColor = colors[selectedCategory] || colors["Books & Reference"];
+    document.documentElement.style.setProperty(
+      "--vis13-main-color",
+      selectedColor
+    );
+  }, [selectedCategory]);
 
   const categoryItems = categories.map((category) => {
     const svgContent = getCategoryIcon(category);

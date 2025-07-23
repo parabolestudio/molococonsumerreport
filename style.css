@@ -827,11 +827,11 @@ VIZ 13
     }
 
     &.active {
-      background-color: var(--vis11-main-color);
+      background-color: var(--vis13-main-color);
       font-weight: 700;
 
       .category-icon svg circle {
-        fill: var(--vis11-main-color);
+        fill: var(--vis13-main-color);
       }
     }
   }
