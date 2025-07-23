@@ -115,7 +115,7 @@ export function Vis9() {
             x="${innerWidth/2}"
             y="${innerHeight + 39}"
           >
-            Hours spent
+            Time spent
           </text>
           <g class="hour-ticks">
             ${hourScale.ticks(5).map((tick) => {
