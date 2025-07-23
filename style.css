@@ -776,3 +776,69 @@ this is to create a pattern of three colors that repeats every three rows
 .vis12-row path {
   filter: drop-shadow(0 -2px 1px #040078);
 }
+
+
+/*
+VIZ 13
+*/
+
+#visX {
+  .vis-container-inner {
+    position: relative;
+  }
+}
+
+#vis13_categories .category-list  {
+  max-width: 736px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .category-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f2f2f2;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.25;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+
+    .category-icon {
+      width: auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        /* fill: #666666; */
+        circle {
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+    }
+
+    span {
+      padding: 6px 12px 6px 0;
+    }
+
+    &.active {
+      background-color: var(--vis13-main-color);
+      font-weight: 700;
+
+      .category-icon svg circle {
+        fill: var(--vis13-main-color);
+      }
+    }
+  }
+}
