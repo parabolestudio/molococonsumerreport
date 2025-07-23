@@ -301,8 +301,8 @@ function SocialMediaIcon({ category }) {
       </g>`;
     case "Independent App Ecosystem":
       return html`
-      <g transform="translate(-22.5, -22.5)">
-        <circle cx="22.5" cy="22.5" r="22.5" fill="#60E2B7"/>
+      <g transform="translate(${iconOffsetX}, ${iconOffsetY})">
+        <circle cx="17.5" cy="17.5" r="17.5" fill="#60E2B7"/>
       </g>`;
     default:
       return null;
