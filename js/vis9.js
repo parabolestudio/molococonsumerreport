@@ -192,15 +192,35 @@ export function Vis9() {
                   <${SocialMediaIcon}
                     category="${d.App}"
                   />
-                  <text
-                    x="26"
-                    y="4"
-                    dy="0"
-                    text-anchor="left"
-                    class="charts-text-body"
-                  >
-                    ${d.App === "Independent App Ecosystem" ? "IAE" : d.App}
-                  </text>
+                  ${d.App === "Independent App Ecosystem" ?
+                    html`
+                    <text
+                      x="-17.5"
+                      y="40.5"
+                      dy="0"
+                      text-anchor="left"
+                      class="charts-text-body"
+                    >
+                      <tspan
+                        x="-17.5"
+                        dy="0"
+                        fill="#12976B"
+                        font-size="14"
+                        font-weight="700"
+                      >
+                        Independent
+                      </tspan>
+                      <tspan
+                        x="-17.5"
+                        dy="1.25rem"
+                        fill="#12976B"
+                        font-size="14"
+                        font-weight="700"
+                      >
+                        App Ecosystem
+                      </tspan>
+                    </text>`
+                  : null}
                 </g>
               `;
             })}
