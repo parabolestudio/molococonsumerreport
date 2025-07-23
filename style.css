@@ -782,6 +782,12 @@ this is to create a pattern of three colors that repeats every three rows
 VIZ 13
 */
 
+#visX {
+  .vis-container-inner {
+    position: relative;
+  }
+}
+
 #vis13_categories .category-list  {
   max-width: 736px;
   display: grid;

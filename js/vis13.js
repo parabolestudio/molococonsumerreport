@@ -100,6 +100,7 @@ const getCategoryIcon = (category) => {
 export function Vis13() {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Books & Reference");
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
@@ -138,7 +139,7 @@ export function Vis13() {
 
   const width = 1000;
   const height = 800;
-  const margin = { top: 20, right: 10, bottom: 50, left: 160 };
+  const margin = { top: 20, right: 20, bottom: 50, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -224,6 +225,19 @@ export function Vis13() {
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
                     opacity="${datum["Publisher Genre"] === selectedCategory ? 1 : 0.2}"
+                    onmouseover="${() => {
+                      console.log('here')
+                      setHoveredItem({
+                        advertiser: datum["Advertiser Genre"],
+                        publisher: datum["Publisher Genre"],
+                        roas: datum["Indexed D7 ROAS"],
+                        x: (margin.left + xScale(datum["Indexed D7 ROAS"]) + 9.5 + 20) / width * 100,
+                        y: (margin.top + yScale(adv)) / height * 100,
+                      });
+                    }}"
+                    onmouseout="${() => {
+                      setHoveredItem(null);
+                    }}"
                   />
                 `;
               })}
@@ -232,6 +246,32 @@ export function Vis13() {
         </g>
       </g>
     </svg>
+    <${Tooltip} hoveredItem=${hoveredItem} />
+  </div>`;
+}
+
+function Tooltip({ hoveredItem }) {
+  console.log(hoveredItem)
+  if (!hoveredItem) return null;
+
+  return html`<div
+    class="tooltip"
+    style="left: ${hoveredItem.x}%; top: ${hoveredItem.y}%;"
+  >
+    <div>
+      <p class="tooltip-label">Advertiser Genre</p>
+      <p class="tooltip-value">${hoveredItem.advertiser}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">Publisher Genre</p>
+      <p class="tooltip-value">${hoveredItem.publisher}</p>
+    </div>
+    <div>
+      <p class="tooltip-label">D7 ROAS</p>
+      <p class="tooltip-value">
+        ${hoveredItem.roas}%
+      </p>
+    </div>
   </div>`;
 }
 
