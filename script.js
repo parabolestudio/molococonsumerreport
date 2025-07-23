@@ -11,7 +11,7 @@ import { Vis9 } from "./js/vis9.js";
 import { Vis10 } from "./js/vis10.js";
 import { Vis11, Vis11Categories } from "./js/vis11.js";
 import { Vis12 } from "./js/vis12.js";
-// import { Vis13 } from "./js/vis13_todo.js";
+import { Vis13, Vis13Categories } from "./js/vis13.js";
 
 const Vis = async (props) => {
   console.log("Rendering Vis component with props:", props);
@@ -74,10 +74,14 @@ const visList = [
     id: "vis12",
     component: Vis12,
   },
-  // {
-  //   id: "vis13_test",
-  //   component: Vis13,
-  // },
+  {
+    id: "vis13_categories",
+    component: Vis13Categories,
+  },
+  {
+    id: "visX",
+    component: Vis13,
+  },
 ];
 
 visList.forEach((vis) => {
