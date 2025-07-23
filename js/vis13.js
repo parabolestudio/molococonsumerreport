@@ -120,7 +120,7 @@ export function Vis13() {
 
   const width = 900;
   const height = 500;
-  const margin = { top: 10, right: 10, bottom: 50, left: 160 };
+  const margin = { top: 20, right: 10, bottom: 50, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -139,7 +139,7 @@ export function Vis13() {
     <svg
       viewBox="0 0 ${width} ${height}"
       preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; border: 1px solid black;"
+      style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <g class="x-axis">
@@ -156,6 +156,15 @@ export function Vis13() {
               </text>
             </g>`;
           })}
+          <line
+            x1="${xScale(100)}"
+            x2="${xScale(100)}"
+            y1="${-20}"
+            y2="${innerHeight + 20}"
+            stroke="#d9d9d9"
+            stroke-width="2"
+            stroke-dasharray="2 5"
+          />
         </g>
         <g class="y-axis">
           ${advertisers.map((adv, index) => {
