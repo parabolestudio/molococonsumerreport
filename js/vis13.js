@@ -139,7 +139,7 @@ export function Vis13() {
 
   const width = 1000;
   const height = 800;
-  const margin = { top: 20, right: 20, bottom: 50, left: 160 };
+  const margin = { top: 20, right: 20, bottom: 60, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
