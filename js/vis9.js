@@ -49,7 +49,7 @@ export function Vis9() {
       : 600;
 
   const height = 400;
-  const margin = { top: 65, right: 5, bottom: 55, left: 90 };
+  const margin = { top: 65, right: 10, bottom: 55, left: 90 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -168,9 +168,10 @@ export function Vis9() {
         </g>
         <g class="lollipops">
           ${dataFiltered
-            .map((d, index) => {
-              const color =
-                d.App === "Independent App Ecosystem" ? "#60E2B7" : "#040078";
+            .map((d) => {
+              const isTextTooWide = hourScale(d.Hours) + 100 > innerWidth;
+              const xText = isTextTooWide ? 17.5 : -17.5;
+              const textAnchor = isTextTooWide ? 'end' : 'begin';
               return html`
                 <g
                   transform="translate(${hourScale(d.Hours)}, ${dauScale(d.DAU)})"
@@ -195,14 +196,14 @@ export function Vis9() {
                   ${d.App === "Independent App Ecosystem" ?
                     html`
                     <text
-                      x="-17.5"
+                      x="${xText}"
                       y="40.5"
                       dy="0"
-                      text-anchor="left"
+                      text-anchor="${textAnchor}"
                       class="charts-text-body"
                     >
                       <tspan
-                        x="-17.5"
+                        x="${xText}"
                         dy="0"
                         fill="#12976B"
                         font-size="14"
@@ -211,7 +212,7 @@ export function Vis9() {
                         Independent
                       </tspan>
                       <tspan
-                        x="-17.5"
+                        x="${xText}"
                         dy="1.25rem"
                         fill="#12976B"
                         font-size="14"
