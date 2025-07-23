@@ -112,7 +112,7 @@ export function Vis6() {
   const countryPadding = 20;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
-  const margin = { top: 20, right: 90, bottom: 20, left: 120 };
+  const margin = { top: 20, right: 100, bottom: 20, left: 120 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
