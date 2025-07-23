@@ -222,7 +222,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 25})"
+          ) - 10}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 35})"
           class="charts-text-body-bold"
           fill="#03004C"
           text-anchor="middle"
@@ -232,7 +232,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 25})"
+          ) - 10}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 35})"
           class="charts-text-body-bold"
           fill="#0280FB"
           text-anchor="middle"
