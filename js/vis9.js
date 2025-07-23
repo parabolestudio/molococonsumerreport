@@ -113,19 +113,19 @@ export function Vis9() {
             dx="12"
             text-anchor="middle"
             x="${innerWidth/2}"
-            y="${innerHeight + 22}"
+            y="${innerHeight + 39}"
           >
             Hours spent
           </text>
-          <g class="dau-ticks">
-            ${dauScale.ticks(5).map((tick) => {
-              const y = dauScale(tick);
+          <g class="hour-ticks">
+            ${hourScale.ticks(5).map((tick) => {
+              const x = hourScale(tick);
               const formattedTick = d3.format(".2s")(tick).replace("G", "B");
               return html`
                 <text
-                  x="${- 50}"
-                  y="${y + 4}"
-                  text-anchor="start"
+                  x="${x}"
+                  y="${innerHeight + 29}"
+                  text-anchor="middle"
                   class="charts-text-body"
                   >${tick !== 0 ? formattedTick : ""}</text
                 >`;
@@ -151,15 +151,15 @@ export function Vis9() {
           >
             DAU
           </text>
-          <g class="hour-ticks">
-            ${hourScale.ticks(5).map((tick) => {
-              const x = hourScale(tick);
+          <g class="dau-ticks">
+            ${dauScale.ticks(5).map((tick) => {
+              const y = dauScale(tick);
               const formattedTick = d3.format(".2s")(tick).replace("G", "B");
               return html`
                 <text
-                  x="${x}"
-                  y="${innerHeight + 12}"
-                  text-anchor="middle"
+                  x="${- 50}"
+                  y="${y + 4}"
+                  text-anchor="start"
                   class="charts-text-body"
                   >${tick !== 0 ? formattedTick : ""}</text
                 >`;
