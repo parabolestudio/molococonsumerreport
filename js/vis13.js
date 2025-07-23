@@ -99,6 +99,7 @@ const getCategoryIcon = (category) => {
 
 export function Vis13() {
   const [data, setData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("Books & Reference");
 
   // Fetch data on mount
   useEffect(() => {
@@ -113,6 +114,23 @@ export function Vis13() {
       setData(data);
     });
   }, []);
+
+  useEffect(() => {
+    // Listen for custom category change events
+    const handleCategoryChange = (e) => {
+      const newCategory = e.detail.selectedCategory;
+      if (newCategory && newCategory !== selectedCategory)
+        setSelectedCategory(newCategory);
+    };
+    document.addEventListener("viz13CategoryChanged", handleCategoryChange);
+
+    return () => {
+      document.removeEventListener(
+        "viz13CategoryChanged",
+        handleCategoryChange
+      );
+    };
+  }, [selectedCategory]);
 
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
@@ -205,6 +223,7 @@ export function Vis13() {
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
+                    opacity="${datum["Publisher Genre"] === selectedCategory ? 1 : 0.2}"
                   />
                 `;
               })}
