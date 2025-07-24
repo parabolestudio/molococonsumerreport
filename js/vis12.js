@@ -128,6 +128,7 @@ export function Vis12() {
   const dataFiltered =
     data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const categories = dataFiltered.map((d) => d.category);
+  console.log(dataFiltered, selectedCategories)
 
   // filter data based on selected categories
   const dataFilteredWithSelectedCategories = dataFiltered
@@ -198,9 +199,10 @@ export function Vis12() {
 
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
-    const hourValues = d.hour_values.sort((a,b) => a.shifted_hour_of_day - b.shifted_hour_of_day);
-    
+
     if (d) {
+      const hourValues = d.hour_values.sort((a,b) => a.shifted_hour_of_day - b.shifted_hour_of_day);
+
       return html`<g
         transform="translate(0, ${index *
         (heightPerCategory + categoryPadding)})"
