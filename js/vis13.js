@@ -1,5 +1,7 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const all = 'All categories';
+
 const colors = {
   "Books & Reference": "#73e4ff",
   Entertainment: "#c368f9",
@@ -99,7 +101,7 @@ const getCategoryIcon = (category) => {
 
 export function Vis13() {
   const [data, setData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("Books & Reference");
+  const [selectedCategory, setSelectedCategory] = useState(all);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
@@ -216,6 +218,7 @@ export function Vis13() {
         <g class="dots">
           ${advertisers.map(adv => {
             const advertiserData = data.filter(d => d["Advertiser Genre"] === adv);
+            console.log(selectedCategory)
             return html`<g>
               ${advertiserData.map(datum => {
                 return html`
@@ -224,20 +227,23 @@ export function Vis13() {
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
-                    opacity="${datum["Publisher Genre"] === selectedCategory ? 1 : 0.2}"
+                    opacity="${selectedCategory === all ? 1
+                      : (datum["Publisher Genre"] === selectedCategory ? 1 : 0.2)}"
                     onmouseover="${() => {
-                      console.log('here')
-                      setHoveredItem({
-                        advertiser: datum["Advertiser Genre"],
-                        publisher: datum["Publisher Genre"],
-                        roas: datum["Indexed D7 ROAS"],
-                        x: (margin.left + xScale(datum["Indexed D7 ROAS"]) + 9.5 + 20) / width * 100,
-                        y: (margin.top + yScale(adv)) / height * 100,
-                      });
+                      if (selectedCategory === all || datum["Publisher Genre"] === selectedCategory) {
+                        setHoveredItem({
+                          advertiser: datum["Advertiser Genre"],
+                          publisher: datum["Publisher Genre"],
+                          roas: datum["Indexed D7 ROAS"],
+                          x: (margin.left + xScale(datum["Indexed D7 ROAS"]) + 9.5 + 20) / width * 100,
+                          y: (margin.top + yScale(adv)) / height * 100,
+                        });
+                      }
                     }}"
                     onmouseout="${() => {
                       setHoveredItem(null);
                     }}"
+                    class="${(selectedCategory === all || datum["Publisher Genre"] === selectedCategory) ? 'active' : 'inactive'}"
                   />
                 `;
               })}
@@ -277,7 +283,7 @@ function Tooltip({ hoveredItem }) {
 
 export function Vis13Categories() {
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("Books & Reference");
+  const [selectedCategory, setSelectedCategory] = useState(all);
 
   // get categories
   useEffect(() => {
@@ -286,7 +292,7 @@ export function Vis13Categories() {
         const uniqueCategories = Array.from(
           new Set(files[0].map((d) => d["Publisher Genre"]))
         ).sort();
-        setCategories(uniqueCategories);
+        setCategories([all, ...uniqueCategories]);
       }
     );
   }, []);

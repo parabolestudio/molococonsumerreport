@@ -786,6 +786,10 @@ VIZ 13
   .vis-container-inner {
     position: relative;
   }
+
+  .inactive {
+    pointer-events: none;
+  }
 }
 
 #vis13_categories .category-list  {
