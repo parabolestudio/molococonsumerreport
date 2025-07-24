@@ -27,10 +27,9 @@ export function Vis4Combined() {
         "Google & Meta",
         "Gaming",
         "Consumer",
-        "Entertainment",
-        "Category 4",
-        "On-Demand",
-        "E-Commerce",
+        "Health & Fitness",
+        "Education",
+        "Shopping",
       ];
       data.sort((a, b) => {
         return (
@@ -252,12 +251,12 @@ export function Vis4(props) {
 
   // variation & data
   const variation = props.variation || "a";
-  const categoriesA = ["Google & Meta", "Gaming", "Non Gaming"];
+  const categoriesA = ["Google & Meta", "Gaming", "Consumer"];
   const categoriesB = [
     "Google & Meta",
-    "E-Commerce",
-    "On-Demand",
-    "Entertainment",
+    "Health & Fitness",
+    "Education",
+    "Shopping",
   ];
   const categories = variation === "a" ? categoriesA : categoriesB;
   const dataFiltered = data.filter((d) => categories.includes(d["Category"]));
