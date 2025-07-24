@@ -75,7 +75,7 @@ export function Vis4Combined() {
   // Calculate rectangle for columns 4-7 (index 3 to 6)
   const rectPadding = 15;
   const firstIdx = 3;
-  const lastIdx = 6;
+  const lastIdx = 5; // less categories
   let rectX1 = columnXScale(data[firstIdx]["Category"]);
   let rectX2 = columnXScale(data[lastIdx]["Category"]);
   // Account for extraGap if present after 3rd column
