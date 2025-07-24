@@ -128,9 +128,9 @@ export function Vis1() {
     nonGamingTimelineData[nonGamingTimelineData.length - 1];
 
   const timelineGamingLegendItem =
-    gamingTimelineData[1];
+    gamingTimelineData[4];
   const timelineNonGamingLegendItem =
-    nonGamingTimelineData[1];
+    nonGamingTimelineData[4];
 
   /**
   * TIMELINE
