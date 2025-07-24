@@ -1,9 +1,25 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const quarterMap = {
+  'Q1': '1',
+  'Q2': '4',
+  'Q3': '7',
+  'Q4': '10'
+}
+
+// const formatRevenue = (value) => `$${(value/1e9).toFixed(1)}B`;
+const formatRevenue = (value) => {
+  return (value > 1e9)
+    ? `$${d3.format(".3s")(value).replace('G', 'B')}`
+    : `$${d3.format(".4s")(value)}`
+};
+
 export function Vis1() {
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("All Countries");
+  const [selectedCountry, setSelectedCountry] = useState("Australia");
+
+  const parseTime = d3.utcParse("%Y-%m");
 
   // Fetch data on mount
   useEffect(() => {
@@ -18,30 +34,58 @@ export function Vis1() {
       const timelineData = files[0];
 
       timelineData.forEach((d) => {
-        d["revenue"] = +d["Yearly Worldwide IAP and Subscription Revenue ($B)"];
-        d["year"] = +d["Year"];
+        d["revenue"] = +d["Revenue"];
+        const [year, quarter] = d['Quarter'].split('-');
+        d["date"] = parseTime(`${year}-${quarterMap[quarter]}`)
         d["category"] = d["Category"];
         d["country"] = d["Country"];
-        delete d["Yearly Worldwide IAP and Subscription Revenue ($B)"];
+        delete d["Revenue"];
         delete d["Year"];
         delete d["Category"];
         delete d["Country"];
+        delete d["Quarter"];
       });
 
       setTimelineData(timelineData);
 
-      const categoryData = files[1];
+      const categoryData = files[1].filter(d => d.category !== '');
       categoryData.forEach((d) => {
-        d["categoryGrowth"] = +d["Growth ($B)"];
-        d["category"] = d["Category"];
+        d["revenue"] = +d["revenue"];
         d["country"] = d["Country"];
+        d["year"] = +d["year"];
         delete d["Share of Total Revenue (%)"];
         delete d["Growth ($B)"];
         delete d["Category"];
         delete d["Country"];
       });
 
-      setCategoryData(categoryData);
+      const countries = Array.from(
+        new Set(categoryData.map((d) => d.country))
+      );
+
+      const processedData = countries.flatMap(country => {
+        const filteredData = categoryData.filter(
+          d => d.country === country && d.category2 !== 'Gaming' && (d.year === 2024 || d.year === 2023)
+        );
+        const categories = Array.from(
+          new Set(filteredData.map((d) => d.category))
+        );
+
+        return categories.flatMap(category => {
+          const value2024 = filteredData.filter(d => d.category === category && d.year === 2024);
+          const value2023 = filteredData.filter(d => d.category === category && d.year === 2023);
+
+          if (value2023.length === 1 && value2024.length === 1) {
+            return {
+              country: country,
+              category: category,
+              categoryGrowth: value2024[0].revenue - value2023[0].revenue
+            }
+          }
+        })
+      })
+
+      setCategoryData(processedData.filter(d => d !== undefined));
     });
   }, []);
 
@@ -59,48 +103,25 @@ export function Vis1() {
   const widthTimeline = width * 0.6;
   const widthCategories = width * 0.4;
 
-  const marginTimeline = { top: 5, right: 60, bottom: 25, left: 25 };
+  const marginTimeline = { top: 20, right: 60, bottom: 25, left: 25 };
   const innerHeightTimeline =
     height - marginTimeline.top - marginTimeline.bottom;
   const innerWidthTimeline =
     widthTimeline - marginTimeline.left - marginTimeline.right;
 
-  const marginCategories = { top: 50, right: 5, bottom: 5, left: 35 };
+  const marginCategories = { top: 50, right: 15, bottom: 5, left: 35 };
   const innerHeightCategories =
     height - marginCategories.top - marginCategories.bottom;
   const innerWidthCategories =
     widthCategories - marginCategories.left - marginCategories.right;
 
-  /**
-   * TIMELINE
-   */
-  const xScaleTimeline = d3
-    .scaleLinear()
-    .domain([
-      d3.min(timelineData, (d) => d.year),
-      d3.max(timelineData, (d) => d.year) + 0.25,
-    ])
-    .range([0, innerWidthTimeline]);
-  const yScaleTimeline = d3
-    .scaleLinear()
-    .domain([
-      0, // d3.min(timelineData, (d) => d.revenue),
-      d3.max(timelineData, (d) => d.revenue),
-    ])
-    .range([innerHeightTimeline, 0])
-    .nice();
-  const lineGenerator = d3
-    .line()
-    .x((d) => xScaleTimeline(d.year))
-    .y((d) => yScaleTimeline(d.revenue))
-    .curve(d3.curveCatmullRom);
 
   const gamingTimelineData = timelineData.filter(
-    (d) => d.category === "Gaming Apps" && d.country === selectedCountry
-  );
+    (d) => d.category === "Gaming" && d.country === selectedCountry
+  ).sort((a,b) => a.date - b.date);
   const nonGamingTimelineData = timelineData.filter(
-    (d) => d.category !== "Gaming Apps" && d.country === selectedCountry
-  );
+    (d) => d.category !== "Gaming" && d.country === selectedCountry
+  ).sort((a,b) => a.date - b.date);
   const timelineGamingLatestItem =
     gamingTimelineData[gamingTimelineData.length - 1];
   const timelineNonGamingLatestItem =
@@ -111,13 +132,36 @@ export function Vis1() {
   const timelineNonGamingLegendItem =
     nonGamingTimelineData[1];
 
+  /**
+  * TIMELINE
+  */
+  const yMax = Math.max(d3.max(gamingTimelineData, d => d.revenue), d3.max(nonGamingTimelineData, d => d.revenue))
+  const xScaleTimeline = d3
+    .scaleTime()
+    .domain(d3.extent(timelineData, d => d.date))
+    .range([0, innerWidthTimeline]);
+  const yScaleTimeline = d3
+    .scaleLinear()
+    .domain([
+      0, // d3.min(timelineData, (d) => d.revenue),
+      yMax,
+    ])
+    .range([innerHeightTimeline, 0])
+    .nice();
+  const lineGenerator = d3
+    .line()
+    .x((d) => xScaleTimeline(d.date))
+    .y((d) => yScaleTimeline(d.revenue))
+    .curve(d3.curveCatmullRom);
+
   /*
     CATEGORY 
   */
 
   const categoryDataByCountry = categoryData.filter(
     (d) => d.country === selectedCountry
-  );
+  ).sort((a,b) => b.categoryGrowth - a.categoryGrowth).slice(0, 10);
+  console.log(categoryDataByCountry)
 
   const xScaleCategories = d3
     .scaleLinear()
@@ -221,7 +265,7 @@ export function Vis1() {
         />
         <text
           transform="translate(${xScaleTimeline(
-            timelineGamingLegendItem.year
+            timelineGamingLegendItem.date
           )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#03004C"
@@ -231,7 +275,7 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineNonGamingLegendItem.year
+            timelineNonGamingLegendItem.date
           )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#0280FB"
@@ -241,27 +285,27 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineGamingLatestItem.year
+            timelineGamingLatestItem.date
           )}, ${yScaleTimeline(timelineGamingLatestItem.revenue) - 10})"
           text-anchor="middle"
           class="charts-text-value-small timeline-label"
         >
-          $${timelineGamingLatestItem.revenue.toFixed(1)}B
+          ${formatRevenue(timelineGamingLatestItem.revenue)}
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineNonGamingLatestItem.year
+            timelineNonGamingLatestItem.date
           )}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue) - 10})"
           text-anchor="middle"
           class="charts-text-value-small timeline-label"
         >
-          $${timelineNonGamingLatestItem.revenue.toFixed(1)}B
+          ${formatRevenue(timelineNonGamingLatestItem.revenue)}
         </text>
       </g>
 
       <g>
         <line
-          x1="${marginTimeline.left +xScaleTimeline(timelineNonGamingLatestItem.year)}"
+          x1="${marginTimeline.left +xScaleTimeline(timelineNonGamingLatestItem.date)}"
           y1="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
           x2="${marginTimeline.left + widthTimeline - 20}"
           y2="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
@@ -313,7 +357,7 @@ export function Vis1() {
               >
                 <tspan class="charts-text-body">${d.category}</tspan>
                 <tspan dx="10" dy="1" class="charts-text-value-small"
-                  >$${d.categoryGrowth.toFixed(1)}B</tspan
+                  >${formatRevenue(d.categoryGrowth)}</tspan
                 >
               </text>
             </g>`;
