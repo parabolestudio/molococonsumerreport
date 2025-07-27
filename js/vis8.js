@@ -336,7 +336,7 @@ function Tooltip({ hoveredItem }) {
       <p class="tooltip-value">${hoveredItem.country}</p>
     </div>
     <div>
-      <p class="tooltip-label">Age range</p>
+      <p class="tooltip-label">Age group</p>
       <p class="tooltip-value">${hoveredItem.group}</p>
     </div>
     <div>
