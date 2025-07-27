@@ -281,7 +281,7 @@ export function Vis10() {
                         class="charts-text-body"
                         dominant-baseline="middle"
                       >
-                        Growing →
+                        Increasing →
                       </text>
                       <text
                         transform="translate(${-sectionMargin.left +
