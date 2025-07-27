@@ -248,13 +248,13 @@ function Tooltip({ hoveredItem }) {
       <p class="tooltip-value">${hoveredItem.app}</p>
     </div>
     <div>
-      <p class="tooltip-label">Daily Active Users (DAU)</p>
+      <p class="tooltip-label">Daily active users</p>
       <p class="tooltip-value">
         ${d3.format(".2s")(hoveredItem.dau).replace("G", "B")}
       </p>
     </div>
     <div>
-      <p class="tooltip-label">Hours</p>
+      <p class="tooltip-label">Time spent (in hours)</p>
       <p class="tooltip-value">
         ${d3.format(".2s")(hoveredItem.hours).replace("G", "B")}
       </p>
