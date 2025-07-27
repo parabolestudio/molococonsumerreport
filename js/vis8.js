@@ -293,7 +293,7 @@ export function Vis8() {
       onClick="${() => setShowMore(!showMore)}"
     >
       <span>
-        ${showMore === true ? "View less" : "View more"}
+        ${showMore === true ? "Show less" : "Show more"}
       </span>
      
       ${showMore === true
