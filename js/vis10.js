@@ -551,7 +551,7 @@ function Tooltip({ hoveredItem, tooltipData }) {
         <p class="tooltip-value">${hoveredItem.share.toFixed(2)}%</p>
       </div>
       <div>
-        <p class="tooltip-label">Growth (2024 vs 2023)</p>
+        <p class="tooltip-label">Growth (2023-2024)</p>
         <p class="tooltip-value">${formatGrowth(hoveredItem.yearGrowth)}</p>
       </div>
     </div>`;
