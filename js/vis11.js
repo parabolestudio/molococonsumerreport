@@ -333,8 +333,8 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   }, [selectedCountry, selectedCategory, timeData]);
 
   return html`<div class="vis-11-time left">
-    <p class="label">Where people spend their time</p>
-    <p class="sublabel">Time spent vs general population</p>
+    <p class="label">Where the users spend their time</p>
+    <p class="sublabel">Time spent vs. general population</p>
     <div class="vis-11-time-grid">
       ${filteredTimeData.map(
         (d, index) => html`<div class="element${index * 2 + 1} sublabel">
@@ -363,7 +363,7 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
 
   return html`<div class="vis-11-app right">
     <p class="label">Which apps are trending</p>
-    <p class="sublabel">Top 3 ad supported apps</p>
+    <p class="sublabel">Top 3 ad-supported apps</p>
     <div class="app-list">
       ${filteredAppData.map(
         (d) => html`
@@ -438,7 +438,7 @@ const Vis11GenderAge = ({
   );
 
   return html`<div>
-    <p class="label">Who uses the apps</p>
+    <p class="label">Age and gender split</p>
     <div
       class="vis-11-grid-gender"
       style="grid-template-columns: ${genderTemplateColumns};"
