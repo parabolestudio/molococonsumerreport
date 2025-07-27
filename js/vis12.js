@@ -242,7 +242,7 @@ export function Vis12() {
           dominant-baseline="middle"
           text-anchor="middle"
           class="charts-text-body charts-text-white"
-          >Choose another category to compare</text
+          >Add another category to compare</text
         >
       </g>
     `;
