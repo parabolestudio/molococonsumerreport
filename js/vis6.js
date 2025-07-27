@@ -312,7 +312,7 @@ export function Vis6LegendGrowth() {
           font-weight="bold"
           font-family="'Spacegrotesk', 'Space Grotesk', sans-serif"
         >
-          +X%
+          +/-X%
         </text>
 
         <line
