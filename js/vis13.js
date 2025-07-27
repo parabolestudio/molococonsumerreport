@@ -265,15 +265,15 @@ function Tooltip({ hoveredItem }) {
     style="left: ${hoveredItem.x}%; top: ${hoveredItem.y}%;"
   >
     <div>
-      <p class="tooltip-label">Advertiser Genre</p>
+      <p class="tooltip-label">Advertiser category</p>
       <p class="tooltip-value">${hoveredItem.advertiser}</p>
     </div>
     <div>
-      <p class="tooltip-label">Publisher Genre</p>
+      <p class="tooltip-label">Publisher category</p>
       <p class="tooltip-value">${hoveredItem.publisher}</p>
     </div>
     <div>
-      <p class="tooltip-label">D7 ROAS</p>
+      <p class="tooltip-label">Indexed Cost Per Payer (CPP)</p> 
       <p class="tooltip-value">
         ${hoveredItem.roas}%
       </p>
