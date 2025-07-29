@@ -34,7 +34,7 @@ export function Vis1() {
       const timelineData = files[0];
 
       timelineData.forEach((d) => {
-        d["revenue"] = +d["Revenue"];
+        d["revenue"] = +d["Revenue"].replace(/,/g, "");
         const [year, quarter] = d["Quarter"].split("-");
         d["date"] = parseTime(`${year}-${quarterMap[quarter]}`);
         d["category"] = d["Category"];
