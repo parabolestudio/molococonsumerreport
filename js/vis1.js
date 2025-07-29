@@ -43,7 +43,9 @@ function CategoryIcon({ category, heightBar }) {
       setSvgContent(null);
       return;
     }
-    fetch(`assets/viz1-icons/${svgFile}`)
+    fetch(
+      `https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/viz1-icons/${svgFile}`
+    )
       .then((res) => res.text())
       .then((svg) => setSvgContent(svg))
       .catch(() => setSvgContent(null));
