@@ -52,7 +52,7 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
 }
 
 export function Vis11() {
-  const [selectedCountry, setSelectedCountry] = useState("Australia");
+  const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
   const [genreData, setGenreData] = useState([]);
   const [genderData, setGenderData] = useState([]);
