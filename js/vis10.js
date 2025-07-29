@@ -137,7 +137,7 @@ export function Vis10() {
   const shareRadiusScale = d3
     .scaleSqrt()
     .domain([shareMinValue, shareMaxValue])
-    .range([5, 50]);
+    .range([5, 55]);
 
   const growthMinValue = d3.min(filteredData, (d) =>
     d3.min(d.values, (v) => v.yearGrowth)
@@ -360,7 +360,7 @@ export function Vis10() {
                     x = sectionInnerWidth - shareRadiusScale(d.share);
                   }
                   const isCircleBigEnough = shareRadiusScale(d.share) > 45;
-                  const isCircleNotTooSmall = shareRadiusScale(d.share) > 25;
+                  const isCircleNotTooSmall = shareRadiusScale(d.share) > 20;
                   return html` <circle
                       cx="${x}"
                       cy="${valueScale(d.yearGrowth)}"
