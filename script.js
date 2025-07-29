@@ -79,7 +79,7 @@ const visList = [
     component: Vis13Categories,
   },
   {
-    id: "visX",
+    id: "vis13",
     component: Vis13,
   },
 ];
