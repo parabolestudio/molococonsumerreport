@@ -1,17 +1,17 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 const quarterMap = {
-  'Q1': '1',
-  'Q2': '4',
-  'Q3': '7',
-  'Q4': '10'
-}
+  Q1: "1",
+  Q2: "4",
+  Q3: "7",
+  Q4: "10",
+};
 
 // const formatRevenue = (value) => `$${(value/1e9).toFixed(1)}B`;
 const formatRevenue = (value) => {
-  return (value > 1e9)
-    ? `$${d3.format(".3s")(value).replace('G', 'B')}`
-    : `$${d3.format(".4s")(value)}`
+  return value > 1e9
+    ? `$${d3.format(".3s")(value).replace("G", "B")}`
+    : `$${d3.format(".4s")(value)}`;
 };
 
 export function Vis1() {
@@ -25,18 +25,18 @@ export function Vis1() {
   useEffect(() => {
     Promise.all([
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1_growth_overview.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1_growth_overview_updated.csv"
       ),
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2_growth_categories.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2_growth_categories_updated.csv"
       ),
     ]).then(function (files) {
       const timelineData = files[0];
 
       timelineData.forEach((d) => {
         d["revenue"] = +d["Revenue"];
-        const [year, quarter] = d['Quarter'].split('-');
-        d["date"] = parseTime(`${year}-${quarterMap[quarter]}`)
+        const [year, quarter] = d["Quarter"].split("-");
+        d["date"] = parseTime(`${year}-${quarterMap[quarter]}`);
         d["category"] = d["Category"];
         d["country"] = d["Country"];
         delete d["Revenue"];
@@ -48,7 +48,7 @@ export function Vis1() {
 
       setTimelineData(timelineData);
 
-      const categoryData = files[1].filter(d => d.category !== '');
+      const categoryData = files[1].filter((d) => d.category !== "");
       categoryData.forEach((d) => {
         d["revenue"] = +d["revenue"];
         d["country"] = d["Country"];
@@ -59,33 +59,38 @@ export function Vis1() {
         delete d["Country"];
       });
 
-      const countries = Array.from(
-        new Set(categoryData.map((d) => d.country))
-      );
+      const countries = Array.from(new Set(categoryData.map((d) => d.country)));
 
-      const processedData = countries.flatMap(country => {
+      const processedData = countries.flatMap((country) => {
         const filteredData = categoryData.filter(
-          d => d.country === country && d.category2 !== 'Gaming' && (d.year === 2024 || d.year === 2023)
+          (d) =>
+            d.country === country &&
+            d.category2 !== "Gaming" &&
+            (d.year === 2024 || d.year === 2023)
         );
         const categories = Array.from(
           new Set(filteredData.map((d) => d.category))
         );
 
-        return categories.flatMap(category => {
-          const value2024 = filteredData.filter(d => d.category === category && d.year === 2024);
-          const value2023 = filteredData.filter(d => d.category === category && d.year === 2023);
+        return categories.flatMap((category) => {
+          const value2024 = filteredData.filter(
+            (d) => d.category === category && d.year === 2024
+          );
+          const value2023 = filteredData.filter(
+            (d) => d.category === category && d.year === 2023
+          );
 
           if (value2023.length === 1 && value2024.length === 1) {
             return {
               country: country,
               category: category,
-              categoryGrowth: value2024[0].revenue - value2023[0].revenue
-            }
+              categoryGrowth: value2024[0].revenue - value2023[0].revenue,
+            };
           }
-        })
-      })
+        });
+      });
 
-      setCategoryData(processedData.filter(d => d !== undefined));
+      setCategoryData(processedData.filter((d) => d !== undefined));
     });
   }, []);
 
@@ -115,30 +120,30 @@ export function Vis1() {
   const innerWidthCategories =
     widthCategories - marginCategories.left - marginCategories.right;
 
-
-  const gamingTimelineData = timelineData.filter(
-    (d) => d.category === "Gaming" && d.country === selectedCountry
-  ).sort((a,b) => a.date - b.date);
-  const nonGamingTimelineData = timelineData.filter(
-    (d) => d.category !== "Gaming" && d.country === selectedCountry
-  ).sort((a,b) => a.date - b.date);
+  const gamingTimelineData = timelineData
+    .filter((d) => d.category === "Gaming" && d.country === selectedCountry)
+    .sort((a, b) => a.date - b.date);
+  const nonGamingTimelineData = timelineData
+    .filter((d) => d.category !== "Gaming" && d.country === selectedCountry)
+    .sort((a, b) => a.date - b.date);
   const timelineGamingLatestItem =
     gamingTimelineData[gamingTimelineData.length - 1];
   const timelineNonGamingLatestItem =
     nonGamingTimelineData[nonGamingTimelineData.length - 1];
 
-  const timelineGamingLegendItem =
-    gamingTimelineData[4];
-  const timelineNonGamingLegendItem =
-    nonGamingTimelineData[4];
+  const timelineGamingLegendItem = gamingTimelineData[4];
+  const timelineNonGamingLegendItem = nonGamingTimelineData[4];
 
   /**
-  * TIMELINE
-  */
-  const yMax = Math.max(d3.max(gamingTimelineData, d => d.revenue), d3.max(nonGamingTimelineData, d => d.revenue))
+   * TIMELINE
+   */
+  const yMax = Math.max(
+    d3.max(gamingTimelineData, (d) => d.revenue),
+    d3.max(nonGamingTimelineData, (d) => d.revenue)
+  );
   const xScaleTimeline = d3
     .scaleTime()
-    .domain(d3.extent(timelineData, d => d.date))
+    .domain(d3.extent(timelineData, (d) => d.date))
     .range([0, innerWidthTimeline]);
   const yScaleTimeline = d3
     .scaleLinear()
@@ -158,10 +163,11 @@ export function Vis1() {
     CATEGORY 
   */
 
-  const categoryDataByCountry = categoryData.filter(
-    (d) => d.country === selectedCountry
-  ).sort((a,b) => b.categoryGrowth - a.categoryGrowth).slice(0, 10);
-  console.log(categoryDataByCountry)
+  const categoryDataByCountry = categoryData
+    .filter((d) => d.country === selectedCountry)
+    .sort((a, b) => b.categoryGrowth - a.categoryGrowth)
+    .slice(0, 10);
+  console.log(categoryDataByCountry);
 
   const xScaleCategories = d3
     .scaleLinear()
@@ -305,10 +311,13 @@ export function Vis1() {
 
       <g>
         <line
-          x1="${marginTimeline.left +xScaleTimeline(timelineNonGamingLatestItem.date)}"
-          y1="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          x1="${marginTimeline.left +
+          xScaleTimeline(timelineNonGamingLatestItem.date)}"
+          y1="${marginTimeline.top +
+          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
           x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginTimeline.top + yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          y2="${marginTimeline.top +
+          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
           class="charts-line-dashed charts-line-dashed-blue"
         />
         <line
