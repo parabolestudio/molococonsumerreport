@@ -10,7 +10,7 @@ U.S.,USA,2021,15228753618,Non-gaming
 U.S.,USA,2022,19628411468,Non-gaming
 U.S.,USA,2023,23998904575,Non-gaming
 U.S.,USA,2024,29627609755,Non-gaming
-Japan,JPN,2014,"$612,136,389",Non-gaming
+Japan,JPN,2014,612136389,Non-gaming
 Japan,JPN,2015,743991171.9,Non-gaming
 Japan,JPN,2016,948527813,Non-gaming
 Japan,JPN,2017,1227449387,Non-gaming
@@ -21,7 +21,7 @@ Japan,JPN,2021,4976552769,Non-gaming
 Japan,JPN,2022,4782413598,Non-gaming
 Japan,JPN,2023,5071984926,Non-gaming
 Japan,JPN,2024,5402310635,Non-gaming
-U.K.,GBR,2014,"$254,671,356",Non-gaming
+U.K.,GBR,2014,254671356,Non-gaming
 U.K.,GBR,2015,284875899.6,Non-gaming
 U.K.,GBR,2016,316753108.3,Non-gaming
 U.K.,GBR,2017,393175845.2,Non-gaming
@@ -32,7 +32,7 @@ U.K.,GBR,2021,1630295066,Non-gaming
 U.K.,GBR,2022,1768134302,Non-gaming
 U.K.,GBR,2023,2247917231,Non-gaming
 U.K.,GBR,2024,2947096773,Non-gaming
-Germany,DEU,2014,"$166,026,866",Non-gaming
+Germany,DEU,2014,166026866,Non-gaming
 Germany,DEU,2015,158484740.7,Non-gaming
 Germany,DEU,2016,178588624,Non-gaming
 Germany,DEU,2017,238903001.2,Non-gaming
@@ -43,7 +43,7 @@ Germany,DEU,2021,1044827173,Non-gaming
 Germany,DEU,2022,1258130486,Non-gaming
 Germany,DEU,2023,1651262690,Non-gaming
 Germany,DEU,2024,2289272087,Non-gaming
-Canada,CAN,2014,"$99,247,615",Non-gaming
+Canada,CAN,2014,99247615,Non-gaming
 Canada,CAN,2015,107704968.5,Non-gaming
 Canada,CAN,2016,145549629.7,Non-gaming
 Canada,CAN,2017,213564067.9,Non-gaming
@@ -54,7 +54,7 @@ Canada,CAN,2021,1047580722,Non-gaming
 Canada,CAN,2022,1230767376,Non-gaming
 Canada,CAN,2023,1395937591,Non-gaming
 Canada,CAN,2024,1669551221,Non-gaming
-Australia,AUS,2014,"$126,679,860",Non-gaming
+Australia,AUS,2014,126679860,Non-gaming
 Australia,AUS,2015,136594951.4,Non-gaming
 Australia,AUS,2016,175193826,Non-gaming
 Australia,AUS,2017,235590710.1,Non-gaming
@@ -65,7 +65,7 @@ Australia,AUS,2021,977205087.2,Non-gaming
 Australia,AUS,2022,1106216315,Non-gaming
 Australia,AUS,2023,1270163025,Non-gaming
 Australia,AUS,2024,1528315583,Non-gaming
-South Korea,KOR,2014,"$90,818,744",Non-gaming
+South Korea,KOR,2014,90818744,Non-gaming
 South Korea,KOR,2015,135533061.1,Non-gaming
 South Korea,KOR,2016,226440204.5,Non-gaming
 South Korea,KOR,2017,326910663.3,Non-gaming
@@ -76,7 +76,7 @@ South Korea,KOR,2021,817614499.8,Non-gaming
 South Korea,KOR,2022,944658985.3,Non-gaming
 South Korea,KOR,2023,1292291823,Non-gaming
 South Korea,KOR,2024,1535677383,Non-gaming
-France,FRA,2014,"$119,783,195",Non-gaming
+France,FRA,2014,119783195,Non-gaming
 France,FRA,2015,123381893.3,Non-gaming
 France,FRA,2016,155805766.2,Non-gaming
 France,FRA,2017,214951742.4,Non-gaming
@@ -87,7 +87,7 @@ France,FRA,2021,811920418.5,Non-gaming
 France,FRA,2022,934690727.4,Non-gaming
 France,FRA,2023,1169823152,Non-gaming
 France,FRA,2024,1636727727,Non-gaming
-Brazil,BRA,2014,"$59,564,332",Non-gaming
+Brazil,BRA,2014,59564332,Non-gaming
 Brazil,BRA,2015,76681342.84,Non-gaming
 Brazil,BRA,2016,88438137.67,Non-gaming
 Brazil,BRA,2017,142953380.2,Non-gaming
@@ -98,7 +98,7 @@ Brazil,BRA,2021,467131268.4,Non-gaming
 Brazil,BRA,2022,758739884.1,Non-gaming
 Brazil,BRA,2023,1085616945,Non-gaming
 Brazil,BRA,2024,1341909994,Non-gaming
-Mexico,MEX,2014,"$29,840,534",Non-gaming
+Mexico,MEX,2014,29840534,Non-gaming
 Mexico,MEX,2015,39257679.29,Non-gaming
 Mexico,MEX,2016,54702815.4,Non-gaming
 Mexico,MEX,2017,86730770.67,Non-gaming
@@ -109,7 +109,7 @@ Mexico,MEX,2021,275010019.6,Non-gaming
 Mexico,MEX,2022,382097243.9,Non-gaming
 Mexico,MEX,2023,652599087.4,Non-gaming
 Mexico,MEX,2024,923863438,Non-gaming
-India,IND,2014,"$8,267,856",Non-gaming
+India,IND,2014,8267856,Non-gaming
 India,IND,2015,14702083.32,Non-gaming
 India,IND,2016,30474113.78,Non-gaming
 India,IND,2017,70812066.59,Non-gaming
@@ -120,7 +120,7 @@ India,IND,2021,263852112,Non-gaming
 India,IND,2022,289767304.3,Non-gaming
 India,IND,2023,365159095.1,Non-gaming
 India,IND,2024,482704910.6,Non-gaming
-Indonesia,IDN,2014,"$9,336,280",Non-gaming
+Indonesia,IDN,2014,9336280,Non-gaming
 Indonesia,IDN,2015,12904471.52,Non-gaming
 Indonesia,IDN,2016,29039849.36,Non-gaming
 Indonesia,IDN,2017,51975798.26,Non-gaming
@@ -131,7 +131,7 @@ Indonesia,IDN,2021,183241220.3,Non-gaming
 Indonesia,IDN,2022,235827801.4,Non-gaming
 Indonesia,IDN,2023,348470802,Non-gaming
 Indonesia,IDN,2024,545525737.9,Non-gaming
-Vietnam,VNM,2014,"$2,985,369",Non-gaming
+Vietnam,VNM,2014,2985369,Non-gaming
 Vietnam,VNM,2015,4292707.9,Non-gaming
 Vietnam,VNM,2016,4720721.57,Non-gaming
 Vietnam,VNM,2017,10246394.35,Non-gaming

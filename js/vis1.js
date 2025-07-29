@@ -90,7 +90,7 @@ export function Vis1() {
   useEffect(() => {
     Promise.all([
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1_growth_overview_updated.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1_growth_overview_updated_yearly.csv"
       ),
       d3.csv(
         "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2_growth_categories_updated.csv"
@@ -99,16 +99,17 @@ export function Vis1() {
       const timelineData = files[0];
 
       timelineData.forEach((d) => {
-        d["revenue"] = +d["Revenue"].replace(/,/g, "");
-        const [year, quarter] = d["Quarter"].split("-");
-        d["date"] = parseTime(`${year}-${quarterMap[quarter]}`);
+        d["revenue"] = +d["Revenue"]; //.replace(/,/g, "");
+        // const [year, quarter] = d["Quarter"].split("-");
+        d["year"] = +d["Year"];
+        // d["date"] = parseTime(`${year}-${quarterMap[quarter]}`);
         d["category"] = d["Category"];
         d["country"] = d["Country"];
         delete d["Revenue"];
         delete d["Year"];
         delete d["Category"];
         delete d["Country"];
-        delete d["Quarter"];
+        // delete d["Quarter"];
       });
 
       setTimelineData(timelineData);
@@ -163,6 +164,8 @@ export function Vis1() {
     return html`<div>Loading...</div>`;
   }
 
+  console.log("Rendering Vis1 with data:", timelineData);
+
   const vis1Container = document.querySelector("#vis1");
   const width =
     vis1Container && vis1Container.offsetWidth
@@ -187,10 +190,11 @@ export function Vis1() {
 
   const gamingTimelineData = timelineData
     .filter((d) => d.category === "Gaming" && d.country === selectedCountry)
-    .sort((a, b) => a.date - b.date);
+    .sort((a, b) => a.year - b.year);
   const nonGamingTimelineData = timelineData
     .filter((d) => d.category !== "Gaming" && d.country === selectedCountry)
-    .sort((a, b) => a.date - b.date);
+    .sort((a, b) => a.year - b.year);
+  console.log("nonGamingTimelineData:", nonGamingTimelineData);
   const timelineGamingLatestItem =
     gamingTimelineData[gamingTimelineData.length - 1];
   const timelineNonGamingLatestItem =
@@ -208,7 +212,7 @@ export function Vis1() {
   );
   const xScaleTimeline = d3
     .scaleTime()
-    .domain(d3.extent(timelineData, (d) => d.date))
+    .domain(d3.extent(timelineData, (d) => d.year))
     .range([0, innerWidthTimeline]);
   const yScaleTimeline = d3
     .scaleLinear()
@@ -220,7 +224,7 @@ export function Vis1() {
     .nice();
   const lineGenerator = d3
     .line()
-    .x((d) => xScaleTimeline(d.date))
+    .x((d) => xScaleTimeline(d.year))
     .y((d) => yScaleTimeline(d.revenue))
     .curve(d3.curveCatmullRom);
 
@@ -335,7 +339,7 @@ export function Vis1() {
         />
         <text
           transform="translate(${xScaleTimeline(
-            timelineGamingLegendItem.date
+            timelineGamingLegendItem.year
           )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#03004C"
@@ -345,7 +349,7 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineNonGamingLegendItem.date
+            timelineNonGamingLegendItem.year
           )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 25})"
           class="charts-text-body-bold"
           fill="#0280FB"
@@ -355,7 +359,7 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineGamingLatestItem.date
+            timelineGamingLatestItem.year
           )}, ${yScaleTimeline(timelineGamingLatestItem.revenue) - 10})"
           text-anchor="middle"
           class="charts-text-value-small timeline-label"
@@ -364,7 +368,7 @@ export function Vis1() {
         </text>
         <text
           transform="translate(${xScaleTimeline(
-            timelineNonGamingLatestItem.date
+            timelineNonGamingLatestItem.year
           )}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue) - 10})"
           text-anchor="middle"
           class="charts-text-value-small timeline-label"
@@ -376,7 +380,7 @@ export function Vis1() {
       <g>
         <line
           x1="${marginTimeline.left +
-          xScaleTimeline(timelineNonGamingLatestItem.date)}"
+          xScaleTimeline(timelineNonGamingLatestItem.year)}"
           y1="${marginTimeline.top +
           yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
           x2="${marginTimeline.left + widthTimeline - 20}"
