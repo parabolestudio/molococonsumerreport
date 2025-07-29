@@ -3,7 +3,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 export function Vis10() {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
-  const initialCountries = ["United States", "Australia", "India"];
+  const initialCountries = ["U.S.", "Germany", "South Korea"];
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
   const [categories, setCategories] = useState([]);
   const [tooltipData, setTooltipData] = useState([]);
@@ -12,7 +12,7 @@ export function Vis10() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz10_share_time_growth_last_year_updated.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz10_share_time_growth_last_year_updated2.csv"
     ).then((data) => {
       data.forEach((d) => {
         // d["app"] = d["App"];
@@ -362,75 +362,73 @@ export function Vis10() {
                   const isCircleBigEnough = shareRadiusScale(d.share) > 45;
                   const isCircleNotTooSmall = shareRadiusScale(d.share) > 25;
                   return html` <circle
-                    cx="${x}"
-                    cy="${valueScale(d.yearGrowth)}"
-                    r="${shareRadiusScale(d.share)}"
-                    fill="${hoveredItem && hoveredItem.category === d.category
-                      ? "#C368F9"
-                      : "#040078"}"
-                    data-category="${d.category}"
-                    onmouseover="${() => {
-                      setHoveredItem({
-                        category: d.category,
-                        country,
-                        share: d.share,
-                        yearGrowth: d.yearGrowth,
-                        x: sectionScale(index) + sectionMargin.left + x,
-                        y: valueScale(d.yearGrowth),
-                      });
-                    }}"
-                    onmouseout="${() => {
-                      setHoveredItem(null);
-                    }}"
-                  />
-                  ${isCircleBigEnough
-                    ? html`
-                    <text
-                      x="${x}"
-                      y="${valueScale(d.yearGrowth) - 6}"
-                      text-anchor="middle"
-                      fill="#fff"
-                      font-family="Montserrat"
-                      font-size="14px"
-                      font-style="normal"
-                      font-weight="400"
-                      line-height="125%"
-                    >
-                      ${d.category}
-                    </text>
-                    <text
-                      x="${x}"
-                      y="${valueScale(d.yearGrowth) + 14}"
-                      text-anchor="middle"
-                      fill="#fff"
-                      font-family="Spacegrotesk"
-                      font-size="14px"
-                      font-style="normal"
-                      font-weight="700"
-                      line-height="100%"
-                    >
-                      ${formatShare(d.share)}
-                    </text>
-                    `
-                    : (
-                    isCircleNotTooSmall ?
-                    html`
-                    <text
-                      x="${x}"
-                      y="${valueScale(d.yearGrowth) + 4}"
-                      text-anchor="middle"
-                      fill="#fff"
-                      font-family="Spacegrotesk"
-                      font-size="14px"
-                      font-style="normal"
-                      font-weight="700"
-                      line-height="100%"
-                    >
-                      ${formatShare(d.share)}
-                    </text>
-                    `
-                    : null)
-                  }`;
+                      cx="${x}"
+                      cy="${valueScale(d.yearGrowth)}"
+                      r="${shareRadiusScale(d.share)}"
+                      fill="${hoveredItem && hoveredItem.category === d.category
+                        ? "#C368F9"
+                        : "#040078"}"
+                      data-category="${d.category}"
+                      onmouseover="${() => {
+                        setHoveredItem({
+                          category: d.category,
+                          country,
+                          share: d.share,
+                          yearGrowth: d.yearGrowth,
+                          x: sectionScale(index) + sectionMargin.left + x,
+                          y: valueScale(d.yearGrowth),
+                        });
+                      }}"
+                      onmouseout="${() => {
+                        setHoveredItem(null);
+                      }}"
+                    />
+                    ${isCircleBigEnough
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) - 6}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Montserrat"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="400"
+                            line-height="125%"
+                          >
+                            ${d.category}
+                          </text>
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 14}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : isCircleNotTooSmall
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 4}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : null}`;
                 })}
                 ${["Generative AI"].map((categoryName) => {
                   //get share and yearGrowth for Generative AI from rawData
