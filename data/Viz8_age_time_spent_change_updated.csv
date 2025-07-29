@@ -1,35 +1,18 @@
 Country code,Country,Category,Demographic Group,Rank,Time Spent/User,Formatted,TIme spent change (%)
-AUS,Australia,Games / Music,18-24,1,2.18x,2.18,1.18
-AUS,Australia,Games / Sports,18-24,2,1.67x,1.67,0.67
-AUS,Australia,Games / Action,18-24,3,1.60x,1.60,0.6
-AUS,Australia,Games / Role Playing,18-24,4,1.53x,1.53,0.53
 AUS,Australia,Games / Strategy,18-24,5,1.51x,1.51,0.51
 AUS,Australia,Graphics & Design,18-24,6,1.41x,1.41,0.41
 AUS,Australia,Entertainment,18-24,7,1.30x,1.30,0.3
-AUS,Australia,Games / Simulation,18-24,8,1.24x,1.24,0.24
 AUS,Australia,Social Networking,18-24,9,1.24x,1.24,0.24
-AUS,Australia,Photo & Video,18-24,10,1.22x,1.22,0.22
 AUS,Australia,Music,18-24,11,1.15x,1.15,0.15
 AUS,Australia,Education,18-24,12,1.12x,1.12,0.12
-AUS,Australia,Games / Adventure,18-24,13,1.06x,1.06,0.06
-AUS,Australia,Games / Racing,18-24,14,1.06x,1.06,0.06
 AUS,Australia,News,18-24,15,1.04x,1.04,0.04
-AUS,Australia,Games / Casual,18-24,16,1.00x,1.00,0
 AUS,Australia,Utilities,18-24,17,0.99x,0.99,-0.01
-AUS,Australia,Games / Card,18-24,18,0.97x,0.97,-0.03
-AUS,Australia,Navigation,18-24,19,0.95x,0.95,-0.05
-AUS,Australia,Lifestyle,18-24,20,0.94x,0.94,-0.06
-AUS,Australia,Medical,18-24,21,0.88x,0.88,-0.12
 AUS,Australia,Sports,18-24,22,0.88x,0.88,-0.12
-AUS,Australia,Books,18-24,23,0.85x,0.85,-0.15
 AUS,Australia,Food & Drink,18-24,24,0.84x,0.84,-0.16
-AUS,Australia,Games / Board,18-24,25,0.82x,0.82,-0.18
 AUS,Australia,Travel,18-24,26,0.82x,0.82,-0.18
 AUS,Australia,Productivity,18-24,27,0.80x,0.80,-0.2
-AUS,Australia,Games / Trivia,18-24,28,0.79x,0.79,-0.21
 AUS,Australia,Games / Puzzle,18-24,29,0.79x,0.79,-0.21
 AUS,Australia,Health & Fitness,18-24,30,0.78x,0.78,-0.22
-AUS,Australia,Games / Word,18-24,31,0.73x,0.73,-0.27
 AUS,Australia,Shopping,18-24,32,0.63x,0.63,-0.37
 AUS,Australia,Finance,18-24,33,0.58x,0.58,-0.42
 AUS,Australia,Business,18-24,34,0.52x,0.52,-0.48
@@ -42,217 +25,114 @@ AUS,Australia,Food & Drink,25-44,4,1.21x,1.21,0.21
 AUS,Australia,Finance,25-44,5,1.21x,1.21,0.21
 AUS,Australia,Health & Fitness,25-44,6,1.16x,1.16,0.16
 AUS,Australia,Sports,25-44,7,1.13x,1.13,0.13
-AUS,Australia,Lifestyle,25-44,8,1.12x,1.12,0.12
 AUS,Australia,Productivity,25-44,9,1.11x,1.11,0.11
-AUS,Australia,Navigation,25-44,10,1.09x,1.09,0.09
-AUS,Australia,Games / Racing,25-44,11,1.08x,1.08,0.08
-AUS,Australia,Games / Adventure,25-44,12,1.08x,1.08,0.08
-AUS,Australia,Games / Simulation,25-44,13,1.08x,1.08,0.08
 AUS,Australia,Weather,25-44,14,1.07x,1.07,0.07
-AUS,Australia,Games / Word,25-44,15,1.05x,1.05,0.05
 AUS,Australia,Games / Puzzle,25-44,16,1.04x,1.04,0.04
-AUS,Australia,Games / Card,25-44,17,1.04x,1.04,0.04
 AUS,Australia,Utilities,25-44,18,1.04x,1.04,0.04
 AUS,Australia,Music,25-44,19,1.03x,1.03,0.03
-AUS,Australia,Books,25-44,20,1.01x,1.01,0.01
-AUS,Australia,Games / Board,25-44,21,1.00x,1.00,0
 AUS,Australia,Travel,25-44,22,0.98x,0.98,-0.02
 AUS,Australia,Education,25-44,23,0.98x,0.98,-0.02
-AUS,Australia,Medical,25-44,24,0.98x,0.98,-0.02
 AUS,Australia,Social Networking,25-44,25,0.98x,0.98,-0.02
 AUS,Australia,Entertainment,25-44,26,0.96x,0.96,-0.04
-AUS,Australia,Photo & Video,25-44,27,0.96x,0.96,-0.04
 AUS,Australia,News,25-44,28,0.94x,0.94,-0.06
-AUS,Australia,Games / Casual,25-44,29,0.89x,0.89,-0.11
 AUS,Australia,Graphics & Design,25-44,30,0.89x,0.89,-0.11
 AUS,Australia,Games / Strategy,25-44,31,0.87x,0.87,-0.13
-AUS,Australia,Games / Role Playing,25-44,32,0.82x,0.82,-0.18
-AUS,Australia,Games / Trivia,25-44,33,0.80x,0.80,-0.2
-AUS,Australia,Games / Action,25-44,34,0.77x,0.77,-0.23
-AUS,Australia,Games / Sports,25-44,35,0.66x,0.66,-0.34
-AUS,Australia,Games / Music,25-44,36,0.63x,0.63,-0.37
 AUS,Australia,Weather,45+,1,2.65x,2.65,1.65
-AUS,Australia,Medical,45+,2,2.39x,2.39,1.39
 AUS,Australia,Games / Puzzle,45+,3,1.97x,1.97,0.97
-AUS,Australia,Games / Word,45+,4,1.84x,1.84,0.84
-AUS,Australia,Games / Casual,45+,5,1.84x,1.84,0.84
 AUS,Australia,Games / Casino,45+,6,1.76x,1.76,0.76
-AUS,Australia,Games / Board,45+,7,1.51x,1.51,0.51
-AUS,Australia,Books,45+,8,1.49x,1.49,0.49
 AUS,Australia,News,45+,9,1.45x,1.45,0.45
-AUS,Australia,Games / Sports,45+,10,1.28x,1.28,0.28
-AUS,Australia,Games / Trivia,45+,11,1.25x,1.25,0.25
 AUS,Australia,Productivity,45+,12,1.25x,1.25,0.25
 AUS,Australia,Health & Fitness,45+,13,1.23x,1.23,0.23
 AUS,Australia,Finance,45+,14,1.19x,1.19,0.19
 AUS,Australia,Sports,45+,15,1.17x,1.17,0.17
-AUS,Australia,Games / Role Playing,45+,16,1.12x,1.12,0.12
-AUS,Australia,Games / Adventure,45+,17,1.08x,1.08,0.08
 AUS,Australia,Shopping,45+,18,1.08x,1.08,0.08
 AUS,Australia,Travel,45+,19,1.05x,1.05,0.05
 AUS,Australia,Business,45+,20,0.98x,0.98,-0.02
 AUS,Australia,Education,45+,21,0.98x,0.98,-0.02
-AUS,Australia,Navigation,45+,22,0.94x,0.94,-0.06
 AUS,Australia,Utilities,45+,23,0.92x,0.92,-0.08
-AUS,Australia,Games / Action,45+,24,0.91x,0.91,-0.09
-AUS,Australia,Lifestyle,45+,25,0.89x,0.89,-0.11
-AUS,Australia,Photo & Video,45+,26,0.85x,0.85,-0.15
 AUS,Australia,Music,45+,27,0.81x,0.81,-0.19
 AUS,Australia,Graphics & Design,45+,28,0.80x,0.80,-0.2
-AUS,Australia,Games / Card,45+,29,0.78x,0.78,-0.22
 AUS,Australia,Social Networking,45+,30,0.70x,0.70,-0.3
 AUS,Australia,Food & Drink,45+,31,0.70x,0.70,-0.3
 AUS,Australia,Entertainment,45+,32,0.69x,0.69,-0.31
 AUS,Australia,Games / Strategy,45+,33,0.62x,0.62,-0.38
-AUS,Australia,Games / Music,45+,34,0.49x,0.49,-0.51
-AUS,Australia,Games / Simulation,45+,35,0.40x,0.40,-0.6
-AUS,Australia,Games / Racing,45+,36,0.36x,0.36,-0.64
 BRA,Brazil,Graphics & Design,18-24,1,1.32x,1.32,0.32
 BRA,Brazil,News,18-24,2,1.29x,1.29,0.29
-BRA,Brazil,Games / Action,18-24,3,1.28x,1.28,0.28
-BRA,Brazil,Lifestyle,18-24,4,1.24x,1.24,0.24
-BRA,Brazil,Games / Sports,18-24,5,1.22x,1.22,0.22
 BRA,Brazil,Music,18-24,6,1.19x,1.19,0.19
 BRA,Brazil,Entertainment,18-24,7,1.19x,1.19,0.19
 BRA,Brazil,Games / Strategy,18-24,8,1.17x,1.17,0.17
-BRA,Brazil,Games / Music,18-24,9,1.16x,1.16,0.16
-BRA,Brazil,Games / Racing,18-24,10,1.15x,1.15,0.15
-BRA,Brazil,Books,18-24,11,1.15x,1.15,0.15
-BRA,Brazil,Games / Role Playing,18-24,12,1.11x,1.11,0.11
-BRA,Brazil,Photo & Video,18-24,13,1.11x,1.11,0.11
-BRA,Brazil,Games / Trivia,18-24,14,1.09x,1.09,0.09
 BRA,Brazil,Social Networking,18-24,15,1.09x,1.09,0.09
-BRA,Brazil,Games / Simulation,18-24,16,1.07x,1.07,0.07
 BRA,Brazil,Education,18-24,17,1.07x,1.07,0.07
 BRA,Brazil,Productivity,18-24,18,1.06x,1.06,0.06
-BRA,Brazil,Games / Adventure,18-24,19,1.02x,1.02,0.02
 BRA,Brazil,Utilities,18-24,20,0.98x,0.98,-0.02
-BRA,Brazil,Games / Board,18-24,21,0.94x,0.94,-0.06
 BRA,Brazil,Sports,18-24,22,0.93x,0.93,-0.07
-BRA,Brazil,Games / Word,18-24,23,0.92x,0.92,-0.08
-BRA,Brazil,Games / Card,18-24,24,0.91x,0.91,-0.09
 BRA,Brazil,Health & Fitness,18-24,25,0.89x,0.89,-0.11
 BRA,Brazil,Games / Casino,18-24,26,0.85x,0.85,-0.15
 BRA,Brazil,Shopping,18-24,27,0.82x,0.82,-0.18
 BRA,Brazil,Food & Drink,18-24,28,0.82x,0.82,-0.18
-BRA,Brazil,Games / Casual,18-24,29,0.80x,0.80,-0.2
-BRA,Brazil,Navigation,18-24,30,0.76x,0.76,-0.24
 BRA,Brazil,Finance,18-24,31,0.74x,0.74,-0.26
 BRA,Brazil,Games / Puzzle,18-24,32,0.71x,0.71,-0.29
-BRA,Brazil,Medical,18-24,33,0.68x,0.68,-0.32
 BRA,Brazil,Business,18-24,34,0.64x,0.64,-0.36
 BRA,Brazil,Travel,18-24,35,0.51x,0.51,-0.49
 BRA,Brazil,Weather,18-24,36,0.38x,0.38,-0.62
 BRA,Brazil,Weather,25-44,1,1.39x,1.39,0.39
 BRA,Brazil,Travel,25-44,2,1.36x,1.36,0.36
 BRA,Brazil,Business,25-44,3,1.32x,1.32,0.32
-BRA,Brazil,Medical,25-44,4,1.29x,1.29,0.29
 BRA,Brazil,Food & Drink,25-44,5,1.21x,1.21,0.21
 BRA,Brazil,Finance,25-44,6,1.20x,1.20,0.2
-BRA,Brazil,Navigation,25-44,7,1.20x,1.20,0.2
 BRA,Brazil,Shopping,25-44,8,1.17x,1.17,0.17
 BRA,Brazil,Games / Casino,25-44,9,1.16x,1.16,0.16
 BRA,Brazil,Games / Puzzle,25-44,10,1.16x,1.16,0.16
-BRA,Brazil,Games / Casual,25-44,11,1.13x,1.13,0.13
 BRA,Brazil,Health & Fitness,25-44,12,1.10x,1.10,0.1
-BRA,Brazil,Games / Card,25-44,13,1.09x,1.09,0.09
 BRA,Brazil,Sports,25-44,14,1.07x,1.07,0.07
 BRA,Brazil,Utilities,25-44,15,1.01x,1.01,0.01
-BRA,Brazil,Games / Adventure,25-44,16,1.00x,1.00,0
-BRA,Brazil,Games / Board,25-44,17,0.98x,0.98,-0.02
-BRA,Brazil,Games / Simulation,25-44,18,0.98x,0.98,-0.02
 BRA,Brazil,Productivity,25-44,19,0.96x,0.96,-0.04
-BRA,Brazil,Games / Word,25-44,20,0.95x,0.95,-0.05
 BRA,Brazil,Education,25-44,21,0.94x,0.94,-0.06
-BRA,Brazil,Games / Role Playing,25-44,22,0.94x,0.94,-0.06
 BRA,Brazil,Social Networking,25-44,23,0.94x,0.94,-0.06
-BRA,Brazil,Games / Trivia,25-44,24,0.91x,0.91,-0.09
-BRA,Brazil,Photo & Video,25-44,25,0.91x,0.91,-0.09
-BRA,Brazil,Games / Racing,25-44,26,0.91x,0.91,-0.09
-BRA,Brazil,Games / Music,25-44,27,0.90x,0.90,-0.1
-BRA,Brazil,Books,25-44,28,0.88x,0.88,-0.12
 BRA,Brazil,Games / Strategy,25-44,29,0.87x,0.87,-0.13
 BRA,Brazil,Entertainment,25-44,30,0.86x,0.86,-0.14
 BRA,Brazil,Music,25-44,31,0.85x,0.85,-0.15
-BRA,Brazil,Games / Sports,25-44,32,0.83x,0.83,-0.17
-BRA,Brazil,Lifestyle,25-44,33,0.80x,0.80,-0.2
-BRA,Brazil,Games / Action,25-44,34,0.78x,0.78,-0.22
 BRA,Brazil,News,25-44,35,0.76x,0.76,-0.24
 BRA,Brazil,Graphics & Design,25-44,36,0.76x,0.76,-0.24
 BRA,Brazil,Weather,45+,1,3.01x,3.01,2.01
 BRA,Brazil,Games / Puzzle,45+,2,1.97x,1.97,0.97
-BRA,Brazil,Games / Word,45+,3,1.94x,1.94,0.94
 BRA,Brazil,Travel,45+,4,1.57x,1.57,0.57
-BRA,Brazil,Games / Board,45+,5,1.53x,1.53,0.53
 BRA,Brazil,Finance,45+,6,1.41x,1.41,0.41
-BRA,Brazil,Games / Casual,45+,7,1.30x,1.30,0.3
-BRA,Brazil,Navigation,45+,8,1.23x,1.23,0.23
-BRA,Brazil,Medical,45+,9,1.22x,1.22,0.22
 BRA,Brazil,Business,45+,10,1.14x,1.14,0.14
 BRA,Brazil,Utilities,45+,11,1.06x,1.06,0.06
 BRA,Brazil,Shopping,45+,12,1.03x,1.03,0.03
 BRA,Brazil,Health & Fitness,45+,13,1.03x,1.03,0.03
-BRA,Brazil,Games / Card,45+,14,1.02x,1.02,0.02
-BRA,Brazil,Games / Adventure,45+,15,1.01x,1.01,0.01
 BRA,Brazil,Sports,45+,16,0.98x,0.98,-0.02
 BRA,Brazil,Games / Casino,45+,17,0.95x,0.95,-0.05
-BRA,Brazil,Photo & Video,45+,18,0.84x,0.84,-0.16
-BRA,Brazil,Books,45+,19,0.82x,0.82,-0.18
 BRA,Brazil,Education,45+,20,0.82x,0.82,-0.18
 BRA,Brazil,Productivity,45+,21,0.78x,0.78,-0.22
 BRA,Brazil,Social Networking,45+,22,0.72x,0.72,-0.28
-BRA,Brazil,Games / Simulation,45+,23,0.70x,0.70,-0.3
 BRA,Brazil,Food & Drink,45+,24,0.65x,0.65,-0.35
 BRA,Brazil,Games / Strategy,45+,25,0.63x,0.63,-0.37
-BRA,Brazil,Games / Trivia,45+,26,0.63x,0.63,-0.37
 BRA,Brazil,Music,45+,27,0.61x,0.61,-0.39
 BRA,Brazil,Entertainment,45+,28,0.61x,0.61,-0.39
-BRA,Brazil,Games / Racing,45+,29,0.61x,0.61,-0.39
-BRA,Brazil,Lifestyle,45+,30,0.60x,0.60,-0.4
-BRA,Brazil,Games / Sports,45+,31,0.57x,0.57,-0.43
-BRA,Brazil,Games / Action,45+,32,0.51x,0.51,-0.49
-BRA,Brazil,Games / Music,45+,33,0.48x,0.48,-0.52
 BRA,Brazil,Graphics & Design,45+,34,0.48x,0.48,-0.52
-BRA,Brazil,Games / Role Playing,45+,35,0.45x,0.45,-0.55
 BRA,Brazil,News,45+,36,0.45x,0.45,-0.55
-CAN,Canada,Games / Sports,18-24,1,1.82x,1.82,0.82
-CAN,Canada,Games / Action,18-24,2,1.59x,1.59,0.59
 CAN,Canada,Graphics & Design,18-24,3,1.48x,1.48,0.48
-CAN,Canada,Games / Music,18-24,4,1.46x,1.46,0.46
-CAN,Canada,Games / Simulation,18-24,5,1.35x,1.35,0.35
 CAN,Canada,Games / Strategy,18-24,6,1.31x,1.31,0.31
-CAN,Canada,Games / Role Playing,18-24,7,1.28x,1.28,0.28
-CAN,Canada,Games / Adventure,18-24,8,1.27x,1.27,0.27
 CAN,Canada,Entertainment,18-24,9,1.26x,1.26,0.26
-CAN,Canada,Photo & Video,18-24,10,1.23x,1.23,0.23
 CAN,Canada,Education,18-24,11,1.22x,1.22,0.22
-CAN,Canada,Games / Racing,18-24,12,1.22x,1.22,0.22
 CAN,Canada,Social Networking,18-24,13,1.21x,1.21,0.21
-CAN,Canada,Lifestyle,18-24,14,1.14x,1.14,0.14
 CAN,Canada,Music,18-24,15,1.14x,1.14,0.14
-CAN,Canada,Games / Card,18-24,16,1.13x,1.13,0.13
-CAN,Canada,Games / Trivia,18-24,17,1.08x,1.08,0.08
 CAN,Canada,Utilities,18-24,18,1.02x,1.02,0.02
 CAN,Canada,Productivity,18-24,19,0.90x,0.90,-0.1
-CAN,Canada,Books,18-24,20,0.90x,0.90,-0.1
-CAN,Canada,Games / Board,18-24,21,0.89x,0.89,-0.11
-CAN,Canada,Games / Casual,18-24,22,0.86x,0.86,-0.14
-CAN,Canada,Navigation,18-24,23,0.84x,0.84,-0.16
 CAN,Canada,Games / Puzzle,18-24,24,0.83x,0.83,-0.17
 CAN,Canada,Sports,18-24,25,0.77x,0.77,-0.23
 CAN,Canada,Food & Drink,18-24,26,0.76x,0.76,-0.24
 CAN,Canada,News,18-24,27,0.73x,0.73,-0.27
-CAN,Canada,Games / Word,18-24,28,0.65x,0.65,-0.35
 CAN,Canada,Health & Fitness,18-24,29,0.63x,0.63,-0.37
 CAN,Canada,Shopping,18-24,30,0.61x,0.61,-0.39
 CAN,Canada,Business,18-24,31,0.61x,0.61,-0.39
 CAN,Canada,Finance,18-24,32,0.58x,0.58,-0.42
-CAN,Canada,Medical,18-24,33,0.50x,0.50,-0.5
 CAN,Canada,Travel,18-24,34,0.50x,0.50,-0.5
 CAN,Canada,Games / Casino,18-24,35,0.49x,0.49,-0.51
 CAN,Canada,Weather,18-24,36,0.43x,0.43,-0.57
 CAN,Canada,Health & Fitness,25-44,1,1.25x,1.25,0.25
-CAN,Canada,Medical,25-44,2,1.23x,1.23,0.23
 CAN,Canada,Business,25-44,3,1.21x,1.21,0.21
 CAN,Canada,Shopping,25-44,4,1.21x,1.21,0.21
 CAN,Canada,Finance,25-44,5,1.21x,1.21,0.21
@@ -262,102 +142,52 @@ CAN,Canada,Weather,25-44,8,1.18x,1.18,0.18
 CAN,Canada,News,25-44,9,1.09x,1.09,0.09
 CAN,Canada,Sports,25-44,10,1.08x,1.08,0.08
 CAN,Canada,Productivity,25-44,11,1.06x,1.06,0.06
-CAN,Canada,Navigation,25-44,12,1.06x,1.06,0.06
-CAN,Canada,Lifestyle,25-44,13,1.05x,1.05,0.05
 CAN,Canada,Utilities,25-44,14,1.05x,1.05,0.05
-CAN,Canada,Books,25-44,15,1.04x,1.04,0.04
-CAN,Canada,Games / Board,25-44,16,1.03x,1.03,0.03
-CAN,Canada,Games / Casual,25-44,17,1.02x,1.02,0.02
-CAN,Canada,Games / Card,25-44,18,1.02x,1.02,0.02
 CAN,Canada,Music,25-44,19,1.00x,1.00,0
 CAN,Canada,Social Networking,25-44,20,1.00x,1.00,0
 CAN,Canada,Games / Puzzle,25-44,21,1.00x,1.00,0
-CAN,Canada,Games / Word,25-44,22,1.00x,1.00,0
-CAN,Canada,Games / Music,25-44,23,0.98x,0.98,-0.02
-CAN,Canada,Games / Adventure,25-44,24,0.98x,0.98,-0.02
-CAN,Canada,Photo & Video,25-44,25,0.97x,0.97,-0.03
 CAN,Canada,Entertainment,25-44,26,0.95x,0.95,-0.05
-CAN,Canada,Games / Role Playing,25-44,27,0.95x,0.95,-0.05
 CAN,Canada,Education,25-44,28,0.93x,0.93,-0.07
 CAN,Canada,Games / Strategy,25-44,29,0.91x,0.91,-0.09
-CAN,Canada,Games / Simulation,25-44,30,0.89x,0.89,-0.11
 CAN,Canada,Graphics & Design,25-44,31,0.88x,0.88,-0.12
-CAN,Canada,Games / Trivia,25-44,32,0.86x,0.86,-0.14
-CAN,Canada,Games / Action,25-44,33,0.82x,0.82,-0.18
-CAN,Canada,Games / Racing,25-44,34,0.78x,0.78,-0.22
 CAN,Canada,Games / Casino,25-44,35,0.71x,0.71,-0.29
-CAN,Canada,Games / Sports,25-44,36,0.69x,0.69,-0.31
 CAN,Canada,Games / Casino,45+,1,5.28x,5.28,4.28
-CAN,Canada,Games / Word,45+,2,2.81x,2.81,1.81
 CAN,Canada,Weather,45+,3,2.26x,2.26,1.26
 CAN,Canada,Games / Puzzle,45+,4,2.14x,2.14,1.14
-CAN,Canada,Games / Trivia,45+,5,2.13x,2.13,1.13
-CAN,Canada,Games / Racing,45+,6,1.93x,1.93,0.93
-CAN,Canada,Medical,45+,7,1.88x,1.88,0.88
 CAN,Canada,Sports,45+,8,1.65x,1.65,0.65
 CAN,Canada,News,45+,9,1.64x,1.64,0.64
-CAN,Canada,Games / Casual,45+,10,1.43x,1.43,0.43
-CAN,Canada,Books,45+,11,1.41x,1.41,0.41
-CAN,Canada,Games / Board,45+,12,1.39x,1.39,0.39
 CAN,Canada,Finance,45+,13,1.32x,1.32,0.32
 CAN,Canada,Shopping,45+,14,1.30x,1.30,0.3
-CAN,Canada,Games / Simulation,45+,15,1.29x,1.29,0.29
 CAN,Canada,Productivity,45+,16,1.25x,1.25,0.25
-CAN,Canada,Navigation,45+,17,1.24x,1.24,0.24
 CAN,Canada,Travel,45+,18,1.23x,1.23,0.23
 CAN,Canada,Health & Fitness,45+,19,1.19x,1.19,0.19
 CAN,Canada,Business,45+,20,1.11x,1.11,0.11
 CAN,Canada,Education,45+,21,1.08x,1.08,0.08
 CAN,Canada,Food & Drink,45+,22,0.98x,0.98,-0.02
 CAN,Canada,Music,45+,23,0.97x,0.97,-0.03
-CAN,Canada,Games / Adventure,45+,24,0.92x,0.92,-0.08
-CAN,Canada,Lifestyle,45+,25,0.89x,0.89,-0.11
 CAN,Canada,Games / Strategy,45+,26,0.88x,0.88,-0.12
-CAN,Canada,Games / Card,45+,27,0.88x,0.88,-0.12
 CAN,Canada,Utilities,45+,28,0.86x,0.86,-0.14
-CAN,Canada,Games / Role Playing,45+,29,0.86x,0.86,-0.14
 CAN,Canada,Entertainment,45+,30,0.83x,0.83,-0.17
-CAN,Canada,Photo & Video,45+,31,0.83x,0.83,-0.17
 CAN,Canada,Social Networking,45+,32,0.76x,0.76,-0.24
-CAN,Canada,Games / Action,45+,33,0.72x,0.72,-0.28
 CAN,Canada,Graphics & Design,45+,34,0.66x,0.66,-0.34
-CAN,Canada,Games / Sports,45+,35,0.62x,0.62,-0.38
-CAN,Canada,Games / Music,45+,36,0.35x,0.35,-0.65
-DEU,Germany,Games / Music,18-24,1,1.74x,1.74,0.74
 DEU,Germany,Games / Strategy,18-24,2,1.50x,1.50,0.5
 DEU,Germany,Entertainment,18-24,3,1.44x,1.44,0.44
 DEU,Germany,Graphics & Design,18-24,4,1.43x,1.43,0.43
 DEU,Germany,Social Networking,18-24,5,1.43x,1.43,0.43
-DEU,Germany,Games / Action,18-24,6,1.38x,1.38,0.38
-DEU,Germany,Games / Racing,18-24,7,1.36x,1.36,0.36
-DEU,Germany,Games / Sports,18-24,8,1.35x,1.35,0.35
-DEU,Germany,Games / Role Playing,18-24,9,1.34x,1.34,0.34
-DEU,Germany,Photo & Video,18-24,10,1.33x,1.33,0.33
 DEU,Germany,Education,18-24,11,1.31x,1.31,0.31
 DEU,Germany,Music,18-24,12,1.28x,1.28,0.28
-DEU,Germany,Lifestyle,18-24,13,1.27x,1.27,0.27
-DEU,Germany,Games / Simulation,18-24,14,1.25x,1.25,0.25
-DEU,Germany,Games / Adventure,18-24,15,1.23x,1.23,0.23
-DEU,Germany,Games / Trivia,18-24,16,1.19x,1.19,0.19
 DEU,Germany,Utilities,18-24,17,1.15x,1.15,0.15
-DEU,Germany,Books,18-24,18,1.14x,1.14,0.14
 DEU,Germany,Sports,18-24,19,1.12x,1.12,0.12
 DEU,Germany,Productivity,18-24,20,1.08x,1.08,0.08
-DEU,Germany,Games / Casual,18-24,21,1.04x,1.04,0.04
-DEU,Germany,Games / Board,18-24,22,0.94x,0.94,-0.06
 DEU,Germany,Games / Puzzle,18-24,23,0.94x,0.94,-0.06
 DEU,Germany,Travel,18-24,24,0.92x,0.92,-0.08
-DEU,Germany,Games / Card,18-24,25,0.92x,0.92,-0.08
 DEU,Germany,Games / Casino,18-24,26,0.91x,0.91,-0.09
 DEU,Germany,Health & Fitness,18-24,27,0.87x,0.87,-0.13
-DEU,Germany,Navigation,18-24,28,0.86x,0.86,-0.14
-DEU,Germany,Games / Word,18-24,29,0.84x,0.84,-0.16
 DEU,Germany,Finance,18-24,30,0.76x,0.76,-0.24
 DEU,Germany,News,18-24,31,0.73x,0.73,-0.27
 DEU,Germany,Shopping,18-24,32,0.72x,0.72,-0.28
 DEU,Germany,Food & Drink,18-24,33,0.71x,0.71,-0.29
 DEU,Germany,Business,18-24,34,0.69x,0.69,-0.31
-DEU,Germany,Medical,18-24,35,0.64x,0.64,-0.36
 DEU,Germany,Weather,18-24,36,0.54x,0.54,-0.46
 DEU,Germany,Food & Drink,25-44,1,1.37x,1.37,0.37
 DEU,Germany,Business,25-44,2,1.35x,1.35,0.35
@@ -365,251 +195,132 @@ DEU,Germany,Shopping,25-44,3,1.35x,1.35,0.35
 DEU,Germany,Finance,25-44,4,1.29x,1.29,0.29
 DEU,Germany,Health & Fitness,25-44,5,1.22x,1.22,0.22
 DEU,Germany,Games / Casino,25-44,6,1.19x,1.19,0.19
-DEU,Germany,Games / Card,25-44,7,1.15x,1.15,0.15
 DEU,Germany,Travel,25-44,8,1.13x,1.13,0.13
 DEU,Germany,Productivity,25-44,9,1.12x,1.12,0.12
-DEU,Germany,Games / Adventure,25-44,10,1.09x,1.09,0.09
 DEU,Germany,Utilities,25-44,11,1.09x,1.09,0.09
-DEU,Germany,Games / Board,25-44,12,1.09x,1.09,0.09
 DEU,Germany,News,25-44,13,1.08x,1.08,0.08
-DEU,Germany,Medical,25-44,14,1.08x,1.08,0.08
-DEU,Germany,Books,25-44,15,1.08x,1.08,0.08
 DEU,Germany,Weather,25-44,16,1.07x,1.07,0.07
-DEU,Germany,Games / Simulation,25-44,17,1.07x,1.07,0.07
-DEU,Germany,Navigation,25-44,18,1.07x,1.07,0.07
-DEU,Germany,Games / Role Playing,25-44,19,1.03x,1.03,0.03
 DEU,Germany,Sports,25-44,20,1.03x,1.03,0.03
-DEU,Germany,Photo & Video,25-44,21,1.02x,1.02,0.02
 DEU,Germany,Music,25-44,22,1.01x,1.01,0.01
-DEU,Germany,Lifestyle,25-44,23,1.01x,1.01,0.01
-DEU,Germany,Games / Casual,25-44,24,0.99x,0.99,-0.01
 DEU,Germany,Social Networking,25-44,25,0.97x,0.97,-0.03
-DEU,Germany,Games / Sports,25-44,26,0.96x,0.96,-0.04
 DEU,Germany,Games / Puzzle,25-44,27,0.96x,0.96,-0.04
-DEU,Germany,Games / Action,25-44,28,0.95x,0.95,-0.05
 DEU,Germany,Education,25-44,29,0.95x,0.95,-0.05
 DEU,Germany,Entertainment,25-44,30,0.94x,0.94,-0.06
 DEU,Germany,Graphics & Design,25-44,31,0.92x,0.92,-0.08
 DEU,Germany,Games / Strategy,25-44,32,0.87x,0.87,-0.13
-DEU,Germany,Games / Trivia,25-44,33,0.86x,0.86,-0.14
-DEU,Germany,Games / Word,25-44,34,0.84x,0.84,-0.16
-DEU,Germany,Games / Racing,25-44,35,0.80x,0.80,-0.2
-DEU,Germany,Games / Music,25-44,36,0.71x,0.71,-0.29
 DEU,Germany,Weather,45+,1,2.69x,2.69,1.69
-DEU,Germany,Games / Word,45+,2,2.69x,2.69,1.69
-DEU,Germany,Medical,45+,3,2.47x,2.47,1.47
 DEU,Germany,Games / Puzzle,45+,4,2.17x,2.17,1.17
 DEU,Germany,News,45+,5,1.98x,1.98,0.98
 DEU,Germany,Games / Casino,45+,6,1.85x,1.85,0.85
-DEU,Germany,Games / Trivia,45+,7,1.65x,1.65,0.65
-DEU,Germany,Games / Casual,45+,8,1.65x,1.65,0.65
-DEU,Germany,Games / Card,45+,9,1.50x,1.50,0.5
-DEU,Germany,Games / Board,45+,10,1.46x,1.46,0.46
-DEU,Germany,Games / Racing,45+,11,1.43x,1.43,0.43
 DEU,Germany,Shopping,45+,12,1.32x,1.32,0.32
-DEU,Germany,Navigation,45+,13,1.26x,1.26,0.26
 DEU,Germany,Finance,45+,14,1.25x,1.25,0.25
 DEU,Germany,Food & Drink,45+,15,1.21x,1.21,0.21
 DEU,Germany,Health & Fitness,45+,16,1.19x,1.19,0.19
 DEU,Germany,Business,45+,17,1.12x,1.12,0.12
 DEU,Germany,Sports,45+,18,1.03x,1.03,0.03
-DEU,Germany,Books,45+,19,1.01x,1.01,0.01
 DEU,Germany,Travel,45+,20,1.00x,1.00,0
 DEU,Germany,Productivity,45+,21,0.96x,0.96,-0.04
-DEU,Germany,Games / Adventure,45+,22,0.95x,0.95,-0.05
 DEU,Germany,Education,45+,23,0.90x,0.90,-0.1
-DEU,Germany,Lifestyle,45+,24,0.89x,0.89,-0.11
-DEU,Germany,Games / Action,45+,25,0.88x,0.88,-0.12
-DEU,Germany,Games / Simulation,45+,26,0.86x,0.86,-0.14
 DEU,Germany,Utilities,45+,27,0.84x,0.84,-0.16
-DEU,Germany,Games / Sports,45+,28,0.81x,0.81,-0.19
 DEU,Germany,Music,45+,29,0.78x,0.78,-0.22
 DEU,Germany,Graphics & Design,45+,30,0.76x,0.76,-0.24
-DEU,Germany,Games / Role Playing,45+,31,0.70x,0.70,-0.3
-DEU,Germany,Photo & Video,45+,32,0.69x,0.69,-0.31
 DEU,Germany,Games / Strategy,45+,33,0.67x,0.67,-0.33
 DEU,Germany,Entertainment,45+,34,0.65x,0.65,-0.35
 DEU,Germany,Social Networking,45+,35,0.51x,0.51,-0.49
-DEU,Germany,Games / Music,45+,36,0.34x,0.34,-0.66
-FRA,France,Games / Music,18-24,1,1.63x,1.63,0.63
 FRA,France,Graphics & Design,18-24,2,1.60x,1.60,0.6
-FRA,France,Games / Action,18-24,3,1.57x,1.57,0.57
-FRA,France,Games / Racing,18-24,4,1.51x,1.51,0.51
 FRA,France,Social Networking,18-24,5,1.50x,1.50,0.5
 FRA,France,Games / Strategy,18-24,6,1.45x,1.45,0.45
 FRA,France,Entertainment,18-24,7,1.45x,1.45,0.45
-FRA,France,Games / Role Playing,18-24,8,1.45x,1.45,0.45
-FRA,France,Games / Sports,18-24,9,1.42x,1.42,0.42
 FRA,France,Education,18-24,10,1.42x,1.42,0.42
-FRA,France,Games / Trivia,18-24,11,1.40x,1.40,0.4
-FRA,France,Games / Simulation,18-24,12,1.39x,1.39,0.39
-FRA,France,Photo & Video,18-24,13,1.36x,1.36,0.36
-FRA,France,Games / Adventure,18-24,14,1.33x,1.33,0.33
 FRA,France,Music,18-24,15,1.33x,1.33,0.33
-FRA,France,Books,18-24,16,1.32x,1.32,0.32
-FRA,France,Games / Card,18-24,17,1.30x,1.30,0.3
-FRA,France,Games / Board,18-24,18,1.29x,1.29,0.29
-FRA,France,Lifestyle,18-24,19,1.22x,1.22,0.22
 FRA,France,Utilities,18-24,20,1.20x,1.20,0.2
 FRA,France,News,18-24,21,1.13x,1.13,0.13
 FRA,France,Productivity,18-24,22,1.12x,1.12,0.12
-FRA,France,Games / Casual,18-24,23,1.07x,1.07,0.07
 FRA,France,Games / Puzzle,18-24,24,0.98x,0.98,-0.02
 FRA,France,Sports,18-24,25,0.93x,0.93,-0.07
 FRA,France,Health & Fitness,18-24,26,0.92x,0.92,-0.08
 FRA,France,Food & Drink,18-24,27,0.83x,0.83,-0.17
-FRA,France,Navigation,18-24,28,0.80x,0.80,-0.2
 FRA,France,Travel,18-24,29,0.78x,0.78,-0.22
 FRA,France,Finance,18-24,30,0.77x,0.77,-0.23
 FRA,France,Shopping,18-24,31,0.73x,0.73,-0.27
-FRA,France,Medical,18-24,32,0.64x,0.64,-0.36
 FRA,France,Business,18-24,33,0.63x,0.63,-0.37
-FRA,France,Games / Word,18-24,34,0.47x,0.47,-0.53
 FRA,France,Weather,18-24,35,0.47x,0.47,-0.53
 FRA,France,Games / Casino,18-24,36,0.24x,0.24,-0.76
 FRA,France,Business,25-44,1,1.51x,1.51,0.51
 FRA,France,Food & Drink,25-44,2,1.51x,1.51,0.51
 FRA,France,Games / Casino,25-44,3,1.48x,1.48,0.48
 FRA,France,Shopping,25-44,4,1.44x,1.44,0.44
-FRA,France,Medical,25-44,5,1.39x,1.39,0.39
-FRA,France,Navigation,25-44,6,1.38x,1.38,0.38
 FRA,France,Finance,25-44,7,1.33x,1.33,0.33
 FRA,France,Health & Fitness,25-44,8,1.30x,1.30,0.3
 FRA,France,Sports,25-44,9,1.28x,1.28,0.28
 FRA,France,Weather,25-44,10,1.24x,1.24,0.24
 FRA,France,Travel,25-44,11,1.22x,1.22,0.22
-FRA,France,Lifestyle,25-44,12,1.17x,1.17,0.17
 FRA,France,Productivity,25-44,13,1.17x,1.17,0.17
 FRA,France,Utilities,25-44,14,1.14x,1.14,0.14
 FRA,France,News,25-44,15,1.13x,1.13,0.13
-FRA,France,Games / Simulation,25-44,16,1.10x,1.10,0.1
-FRA,France,Photo & Video,25-44,17,1.09x,1.09,0.09
 FRA,France,Music,25-44,18,1.07x,1.07,0.07
 FRA,France,Games / Puzzle,25-44,19,1.07x,1.07,0.07
-FRA,France,Games / Music,25-44,20,1.05x,1.05,0.05
-FRA,France,Games / Adventure,25-44,21,1.05x,1.05,0.05
-FRA,France,Books,25-44,22,1.03x,1.03,0.03
-FRA,France,Games / Board,25-44,23,1.03x,1.03,0.03
-FRA,France,Games / Card,25-44,24,1.02x,1.02,0.02
-FRA,France,Games / Trivia,25-44,25,1.01x,1.01,0.01
 FRA,France,Graphics & Design,25-44,26,1.00x,1.00,0
-FRA,France,Games / Role Playing,25-44,27,1.00x,1.00,0
 FRA,France,Entertainment,25-44,28,1.00x,1.00,0
 FRA,France,Social Networking,25-44,29,0.99x,0.99,-0.01
 FRA,France,Games / Strategy,25-44,30,0.97x,0.97,-0.03
-FRA,France,Games / Sports,25-44,31,0.96x,0.96,-0.04
-FRA,France,Games / Casual,25-44,32,0.96x,0.96,-0.04
 FRA,France,Education,25-44,33,0.95x,0.95,-0.05
-FRA,France,Games / Action,25-44,34,0.90x,0.90,-0.1
-FRA,France,Games / Racing,25-44,35,0.88x,0.88,-0.12
-FRA,France,Games / Word,25-44,36,0.86x,0.86,-0.14
-FRA,France,Games / Word,45+,1,4.33x,4.33,3.33
 FRA,France,Games / Casino,45+,2,3.11x,3.11,2.11
 FRA,France,Weather,45+,3,2.70x,2.70,1.7
-FRA,France,Games / Casual,45+,4,2.19x,2.19,1.19
 FRA,France,Games / Puzzle,45+,5,2.07x,2.07,1.07
-FRA,France,Medical,45+,6,1.66x,1.66,0.66
 FRA,France,Shopping,45+,7,1.47x,1.47,0.47
 FRA,France,Finance,45+,8,1.42x,1.42,0.42
 FRA,France,Travel,45+,9,1.39x,1.39,0.39
 FRA,France,Health & Fitness,45+,10,1.31x,1.31,0.31
-FRA,France,Navigation,45+,11,1.31x,1.31,0.31
-FRA,France,Games / Card,45+,12,1.21x,1.21,0.21
 FRA,France,Business,45+,13,1.20x,1.20,0.2
 FRA,France,Sports,45+,14,1.14x,1.14,0.14
 FRA,France,News,45+,15,1.13x,1.13,0.13
-FRA,France,Games / Board,45+,16,1.12x,1.12,0.12
 FRA,France,Education,45+,17,1.11x,1.11,0.11
-FRA,France,Games / Racing,45+,18,1.11x,1.11,0.11
-FRA,France,Games / Trivia,45+,19,1.08x,1.08,0.08
 FRA,France,Productivity,45+,20,1.07x,1.07,0.07
-FRA,France,Games / Adventure,45+,21,1.00x,1.00,0
-FRA,France,Books,45+,22,0.96x,0.96,-0.04
-FRA,France,Lifestyle,45+,23,0.94x,0.94,-0.06
 FRA,France,Food & Drink,45+,24,0.89x,0.89,-0.11
 FRA,France,Utilities,45+,25,0.89x,0.89,-0.11
 FRA,France,Music,45+,26,0.85x,0.85,-0.15
-FRA,France,Games / Role Playing,45+,27,0.84x,0.84,-0.16
 FRA,France,Entertainment,45+,28,0.81x,0.81,-0.19
 FRA,France,Games / Strategy,45+,29,0.81x,0.81,-0.19
-FRA,France,Games / Sports,45+,30,0.81x,0.81,-0.19
-FRA,France,Games / Action,45+,31,0.79x,0.79,-0.21
-FRA,France,Games / Simulation,45+,32,0.69x,0.69,-0.31
-FRA,France,Photo & Video,45+,33,0.69x,0.69,-0.31
 FRA,France,Social Networking,45+,34,0.62x,0.62,-0.38
 FRA,France,Graphics & Design,45+,35,0.37x,0.37,-0.63
-FRA,France,Games / Music,45+,36,0.35x,0.35,-0.65
 KOR,South Korea,News,18-24,1,1.72x,1.72,0.72
 KOR,South Korea,Education,18-24,2,1.42x,1.42,0.42
-KOR,South Korea,Games / Music,18-24,3,1.38x,1.38,0.38
 KOR,South Korea,Social Networking,18-24,4,1.31x,1.31,0.31
-KOR,South Korea,Games / Sports,18-24,5,1.30x,1.30,0.3
 KOR,South Korea,Music,18-24,6,1.28x,1.28,0.28
 KOR,South Korea,Games / Strategy,18-24,7,1.26x,1.26,0.26
-KOR,South Korea,Games / Board,18-24,8,1.23x,1.23,0.23
 KOR,South Korea,Graphics & Design,18-24,9,1.23x,1.23,0.23
-KOR,South Korea,Games / Role Playing,18-24,10,1.19x,1.19,0.19
 KOR,South Korea,Productivity,18-24,11,1.18x,1.18,0.18
 KOR,South Korea,Entertainment,18-24,12,1.14x,1.14,0.14
-KOR,South Korea,Photo & Video,18-24,13,1.11x,1.11,0.11
-KOR,South Korea,Games / Action,18-24,14,1.09x,1.09,0.09
-KOR,South Korea,Games / Simulation,18-24,15,1.08x,1.08,0.08
-KOR,South Korea,Games / Card,18-24,16,1.04x,1.04,0.04
-KOR,South Korea,Games / Racing,18-24,17,1.02x,1.02,0.02
 KOR,South Korea,Utilities,18-24,18,0.90x,0.90,-0.1
-KOR,South Korea,Games / Trivia,18-24,19,0.87x,0.87,-0.13
-KOR,South Korea,Lifestyle,18-24,20,0.87x,0.87,-0.13
-KOR,South Korea,Books,18-24,21,0.85x,0.85,-0.15
 KOR,South Korea,Food & Drink,18-24,22,0.85x,0.85,-0.15
-KOR,South Korea,Games / Casual,18-24,23,0.84x,0.84,-0.16
 KOR,South Korea,Sports,18-24,24,0.83x,0.83,-0.17
 KOR,South Korea,Games / Puzzle,18-24,25,0.80x,0.80,-0.2
 KOR,South Korea,Travel,18-24,26,0.78x,0.78,-0.22
-KOR,South Korea,Games / Adventure,18-24,27,0.71x,0.71,-0.29
 KOR,South Korea,Shopping,18-24,28,0.71x,0.71,-0.29
-KOR,South Korea,Games / Word,18-24,29,0.64x,0.64,-0.36
 KOR,South Korea,Health & Fitness,18-24,30,0.64x,0.64,-0.36
 KOR,South Korea,Business,18-24,31,0.56x,0.56,-0.44
-KOR,South Korea,Navigation,18-24,32,0.56x,0.56,-0.44
-KOR,South Korea,Medical,18-24,33,0.55x,0.55,-0.45
 KOR,South Korea,Finance,18-24,34,0.52x,0.52,-0.48
 KOR,South Korea,Weather,18-24,35,0.50x,0.50,-0.5
 KOR,South Korea,Games / Casino,18-24,36,0.39x,0.39,-0.61
 KOR,South Korea,Business,25-44,1,1.33x,1.33,0.33
-KOR,South Korea,Games / Word,25-44,2,1.27x,1.27,0.27
-KOR,South Korea,Games / Adventure,25-44,3,1.21x,1.21,0.21
 KOR,South Korea,Food & Drink,25-44,4,1.20x,1.20,0.2
-KOR,South Korea,Navigation,25-44,5,1.19x,1.19,0.19
 KOR,South Korea,Sports,25-44,6,1.18x,1.18,0.18
-KOR,South Korea,Games / Simulation,25-44,7,1.17x,1.17,0.17
 KOR,South Korea,Travel,25-44,8,1.15x,1.15,0.15
 KOR,South Korea,Finance,25-44,9,1.13x,1.13,0.13
-KOR,South Korea,Games / Trivia,25-44,10,1.11x,1.11,0.11
-KOR,South Korea,Games / Casual,25-44,11,1.09x,1.09,0.09
 KOR,South Korea,Shopping,25-44,12,1.08x,1.08,0.08
-KOR,South Korea,Medical,25-44,13,1.07x,1.07,0.07
-KOR,South Korea,Lifestyle,25-44,14,1.06x,1.06,0.06
-KOR,South Korea,Games / Racing,25-44,15,1.05x,1.05,0.05
 KOR,South Korea,Utilities,25-44,16,1.05x,1.05,0.05
-KOR,South Korea,Games / Role Playing,25-44,17,1.03x,1.03,0.03
 KOR,South Korea,Health & Fitness,25-44,18,1.02x,1.02,0.02
-KOR,South Korea,Books,25-44,19,1.01x,1.01,0.01
 KOR,South Korea,Productivity,25-44,20,1.00x,1.00,0
 KOR,South Korea,Weather,25-44,21,0.99x,0.99,-0.01
 KOR,South Korea,Entertainment,25-44,22,0.99x,0.99,-0.01
-KOR,South Korea,Photo & Video,25-44,23,0.95x,0.95,-0.05
-KOR,South Korea,Games / Action,25-44,24,0.95x,0.95,-0.05
 KOR,South Korea,Graphics & Design,25-44,25,0.94x,0.94,-0.06
 KOR,South Korea,Games / Puzzle,25-44,26,0.93x,0.93,-0.07
 KOR,South Korea,Social Networking,25-44,27,0.93x,0.93,-0.07
 KOR,South Korea,Games / Casino,25-44,28,0.92x,0.92,-0.08
-KOR,South Korea,Games / Card,25-44,29,0.90x,0.90,-0.1
-KOR,South Korea,Games / Music,25-44,30,0.89x,0.89,-0.11
 KOR,South Korea,Music,25-44,31,0.87x,0.87,-0.13
 KOR,South Korea,Games / Strategy,25-44,32,0.87x,0.87,-0.13
-KOR,South Korea,Games / Sports,25-44,33,0.86x,0.86,-0.14
 KOR,South Korea,Education,25-44,34,0.80x,0.80,-0.2
-KOR,South Korea,Games / Board,25-44,35,0.80x,0.80,-0.2
 KOR,South Korea,News,25-44,36,0.76x,0.76,-0.24
 KOR,South Korea,Games / Casino,45+,1,2.73x,2.73,1.73
 KOR,South Korea,Weather,45+,2,2.10x,2.10,1.1
@@ -617,128 +328,67 @@ KOR,South Korea,Finance,45+,3,1.81x,1.81,0.81
 KOR,South Korea,Health & Fitness,45+,4,1.80x,1.80,0.8
 KOR,South Korea,Games / Puzzle,45+,5,1.71x,1.71,0.71
 KOR,South Korea,Shopping,45+,6,1.51x,1.51,0.51
-KOR,South Korea,Medical,45+,7,1.49x,1.49,0.49
-KOR,South Korea,Navigation,45+,8,1.42x,1.42,0.42
-KOR,South Korea,Books,45+,9,1.35x,1.35,0.35
-KOR,South Korea,Games / Card,45+,10,1.21x,1.21,0.21
-KOR,South Korea,Games / Casual,45+,11,1.17x,1.17,0.17
-KOR,South Korea,Games / Adventure,45+,12,1.15x,1.15,0.15
-KOR,South Korea,Lifestyle,45+,13,1.15x,1.15,0.15
-KOR,South Korea,Games / Board,45+,14,1.07x,1.07,0.07
 KOR,South Korea,Utilities,45+,15,1.06x,1.06,0.06
 KOR,South Korea,Business,45+,16,1.03x,1.03,0.03
-KOR,South Korea,Games / Action,45+,17,1.01x,1.01,0.01
-KOR,South Korea,Games / Racing,45+,18,1.00x,1.00,0
 KOR,South Korea,Travel,45+,19,0.95x,0.95,-0.05
-KOR,South Korea,Photo & Video,45+,20,0.94x,0.94,-0.06
 KOR,South Korea,Sports,45+,21,0.88x,0.88,-0.12
 KOR,South Korea,Food & Drink,45+,22,0.82x,0.82,-0.18
-KOR,South Korea,Games / Trivia,45+,23,0.81x,0.81,-0.19
-KOR,South Korea,Games / Sports,45+,24,0.77x,0.77,-0.23
 KOR,South Korea,Entertainment,45+,25,0.77x,0.77,-0.23
 KOR,South Korea,Games / Strategy,45+,26,0.77x,0.77,-0.23
 KOR,South Korea,Graphics & Design,45+,27,0.76x,0.76,-0.24
-KOR,South Korea,Games / Word,45+,28,0.73x,0.73,-0.27
 KOR,South Korea,Music,45+,29,0.71x,0.71,-0.29
 KOR,South Korea,Education,45+,30,0.66x,0.66,-0.34
 KOR,South Korea,Productivity,45+,31,0.64x,0.64,-0.36
-KOR,South Korea,Games / Role Playing,45+,32,0.61x,0.61,-0.39
-KOR,South Korea,Games / Music,45+,33,0.59x,0.59,-0.41
 KOR,South Korea,Social Networking,45+,34,0.52x,0.52,-0.48
-KOR,South Korea,Games / Simulation,45+,35,0.48x,0.48,-0.52
 KOR,South Korea,News,45+,36,0.13x,0.13,-0.87
-JPN,Japan,Games / Trivia,18-24,1,1.65x,1.65,0.65
-JPN,Japan,Games / Sports,18-24,2,1.51x,1.51,0.51
-JPN,Japan,Games / Music,18-24,3,1.48x,1.48,0.48
-JPN,Japan,Games / Action,18-24,4,1.43x,1.43,0.43
 JPN,Japan,Education,18-24,5,1.41x,1.41,0.41
 JPN,Japan,Graphics & Design,18-24,6,1.40x,1.40,0.4
 JPN,Japan,Music,18-24,7,1.33x,1.33,0.33
-JPN,Japan,Games / Card,18-24,8,1.32x,1.32,0.32
-JPN,Japan,Photo & Video,18-24,9,1.31x,1.31,0.31
-JPN,Japan,Games / Racing,18-24,10,1.25x,1.25,0.25
 JPN,Japan,Social Networking,18-24,11,1.23x,1.23,0.23
-JPN,Japan,Games / Role Playing,18-24,12,1.20x,1.20,0.2
 JPN,Japan,Entertainment,18-24,13,1.19x,1.19,0.19
-JPN,Japan,Games / Simulation,18-24,14,1.18x,1.18,0.18
 JPN,Japan,Utilities,18-24,15,1.15x,1.15,0.15
 JPN,Japan,Business,18-24,16,1.15x,1.15,0.15
 JPN,Japan,News,18-24,17,1.12x,1.12,0.12
 JPN,Japan,Games / Strategy,18-24,18,1.10x,1.10,0.1
 JPN,Japan,Productivity,18-24,19,1.03x,1.03,0.03
-JPN,Japan,Games / Adventure,18-24,20,1.03x,1.03,0.03
-JPN,Japan,Navigation,18-24,21,1.02x,1.02,0.02
-JPN,Japan,Games / Word,18-24,22,1.01x,1.01,0.01
 JPN,Japan,Sports,18-24,23,0.88x,0.88,-0.12
-JPN,Japan,Games / Board,18-24,24,0.87x,0.87,-0.13
-JPN,Japan,Lifestyle,18-24,25,0.84x,0.84,-0.16
-JPN,Japan,Games / Casual,18-24,26,0.84x,0.84,-0.16
 JPN,Japan,Games / Casino,18-24,27,0.83x,0.83,-0.17
 JPN,Japan,Games / Puzzle,18-24,28,0.79x,0.79,-0.21
-JPN,Japan,Books,18-24,29,0.77x,0.77,-0.23
 JPN,Japan,Travel,18-24,30,0.71x,0.71,-0.29
 JPN,Japan,Health & Fitness,18-24,31,0.70x,0.70,-0.3
 JPN,Japan,Shopping,18-24,32,0.64x,0.64,-0.36
 JPN,Japan,Food & Drink,18-24,33,0.64x,0.64,-0.36
 JPN,Japan,Finance,18-24,34,0.55x,0.55,-0.45
 JPN,Japan,Weather,18-24,35,0.51x,0.51,-0.49
-JPN,Japan,Medical,18-24,36,0.49x,0.49,-0.51
-JPN,Japan,Books,25-44,1,1.31x,1.31,0.31
-JPN,Japan,Medical,25-44,2,1.19x,1.19,0.19
 JPN,Japan,Finance,25-44,3,1.16x,1.16,0.16
 JPN,Japan,Food & Drink,25-44,4,1.16x,1.16,0.16
 JPN,Japan,Shopping,25-44,5,1.13x,1.13,0.13
-JPN,Japan,Games / Simulation,25-44,6,1.13x,1.13,0.13
 JPN,Japan,Productivity,25-44,7,1.12x,1.12,0.12
-JPN,Japan,Games / Adventure,25-44,8,1.06x,1.06,0.06
 JPN,Japan,Health & Fitness,25-44,9,1.05x,1.05,0.05
-JPN,Japan,Lifestyle,25-44,10,1.04x,1.04,0.04
-JPN,Japan,Games / Card,25-44,11,1.03x,1.03,0.03
-JPN,Japan,Games / Casual,25-44,12,1.03x,1.03,0.03
 JPN,Japan,News,25-44,13,1.02x,1.02,0.02
 JPN,Japan,Business,25-44,14,1.02x,1.02,0.02
 JPN,Japan,Entertainment,25-44,15,1.00x,1.00,0
 JPN,Japan,Utilities,25-44,16,0.98x,0.98,-0.02
-JPN,Japan,Photo & Video,25-44,17,0.97x,0.97,-0.03
-JPN,Japan,Games / Role Playing,25-44,18,0.97x,0.97,-0.03
 JPN,Japan,Games / Strategy,25-44,19,0.96x,0.96,-0.04
 JPN,Japan,Graphics & Design,25-44,20,0.95x,0.95,-0.05
 JPN,Japan,Travel,25-44,21,0.94x,0.94,-0.06
-JPN,Japan,Games / Action,25-44,22,0.93x,0.93,-0.07
 JPN,Japan,Social Networking,25-44,23,0.93x,0.93,-0.07
-JPN,Japan,Navigation,25-44,24,0.90x,0.90,-0.1
-JPN,Japan,Games / Music,25-44,25,0.90x,0.90,-0.1
 JPN,Japan,Music,25-44,26,0.88x,0.88,-0.12
-JPN,Japan,Games / Racing,25-44,27,0.88x,0.88,-0.12
 JPN,Japan,Weather,25-44,28,0.85x,0.85,-0.15
-JPN,Japan,Games / Sports,25-44,29,0.84x,0.84,-0.16
 JPN,Japan,Education,25-44,30,0.84x,0.84,-0.16
 JPN,Japan,Sports,25-44,31,0.84x,0.84,-0.16
 JPN,Japan,Games / Puzzle,25-44,32,0.80x,0.80,-0.2
 JPN,Japan,Games / Casino,25-44,33,0.80x,0.80,-0.2
-JPN,Japan,Games / Board,25-44,34,0.78x,0.78,-0.22
-JPN,Japan,Games / Word,25-44,35,0.75x,0.75,-0.25
-JPN,Japan,Games / Trivia,25-44,36,0.73x,0.73,-0.27
 JPN,Japan,Weather,45+,1,2.13x,2.13,1.13
 JPN,Japan,Games / Puzzle,45+,2,1.75x,1.75,0.75
-JPN,Japan,Games / Board,45+,3,1.57x,1.57,0.57
 JPN,Japan,Finance,45+,4,1.49x,1.49,0.49
-JPN,Japan,Medical,45+,5,1.46x,1.46,0.46
 JPN,Japan,Sports,45+,6,1.41x,1.41,0.41
 JPN,Japan,Shopping,45+,7,1.41x,1.41,0.41
 JPN,Japan,Games / Casino,45+,8,1.40x,1.40,0.4
 JPN,Japan,Health & Fitness,45+,9,1.40x,1.40,0.4
 JPN,Japan,Food & Drink,45+,10,1.35x,1.35,0.35
-JPN,Japan,Games / Casual,45+,11,1.28x,1.28,0.28
-JPN,Japan,Lifestyle,45+,12,1.24x,1.24,0.24
-JPN,Japan,Games / Word,45+,13,1.15x,1.15,0.15
 JPN,Japan,Travel,45+,14,1.12x,1.12,0.12
-JPN,Japan,Navigation,45+,15,1.10x,1.10,0.1
-JPN,Japan,Games / Adventure,45+,16,0.94x,0.94,-0.06
-JPN,Japan,Games / Racing,45+,17,0.90x,0.90,-0.1
 JPN,Japan,Games / Strategy,45+,18,0.89x,0.89,-0.11
-JPN,Japan,Games / Role Playing,45+,19,0.86x,0.86,-0.14
-JPN,Japan,Books,45+,20,0.83x,0.83,-0.17
 JPN,Japan,News,45+,21,0.81x,0.81,-0.19
 JPN,Japan,Utilities,45+,22,0.79x,0.79,-0.21
 JPN,Japan,Entertainment,45+,23,0.78x,0.78,-0.22
@@ -747,45 +397,21 @@ JPN,Japan,Music,45+,25,0.72x,0.72,-0.28
 JPN,Japan,Business,45+,26,0.71x,0.71,-0.29
 JPN,Japan,Social Networking,45+,27,0.69x,0.69,-0.31
 JPN,Japan,Education,45+,28,0.65x,0.65,-0.35
-JPN,Japan,Photo & Video,45+,29,0.64x,0.64,-0.36
-JPN,Japan,Games / Trivia,45+,30,0.55x,0.55,-0.45
-JPN,Japan,Games / Action,45+,31,0.53x,0.53,-0.47
 JPN,Japan,Graphics & Design,45+,32,0.53x,0.53,-0.47
-JPN,Japan,Games / Simulation,45+,33,0.53x,0.53,-0.47
-JPN,Japan,Games / Sports,45+,34,0.52x,0.52,-0.48
-JPN,Japan,Games / Card,45+,35,0.49x,0.49,-0.51
-JPN,Japan,Games / Music,45+,36,0.44x,0.44,-0.56
-USA,U.S.,Games / Music,18-24,1,1.81x,1.81,0.81
 USA,U.S.,Graphics & Design,18-24,2,1.72x,1.72,0.72
-USA,U.S.,Games / Action,18-24,3,1.60x,1.60,0.6
-USA,U.S.,Games / Sports,18-24,4,1.45x,1.45,0.45
-USA,U.S.,Games / Racing,18-24,5,1.34x,1.34,0.34
 USA,U.S.,Entertainment,18-24,6,1.32x,1.32,0.32
-USA,U.S.,Photo & Video,18-24,7,1.32x,1.32,0.32
-USA,U.S.,Games / Role Playing,18-24,8,1.24x,1.24,0.24
 USA,U.S.,Music,18-24,9,1.23x,1.23,0.23
 USA,U.S.,Education,18-24,10,1.20x,1.20,0.2
 USA,U.S.,Social Networking,18-24,11,1.17x,1.17,0.17
-USA,U.S.,Games / Adventure,18-24,12,1.17x,1.17,0.17
-USA,U.S.,Games / Simulation,18-24,13,1.16x,1.16,0.16
 USA,U.S.,Utilities,18-24,14,1.13x,1.13,0.13
 USA,U.S.,Games / Strategy,18-24,15,1.13x,1.13,0.13
-USA,U.S.,Lifestyle,18-24,16,1.07x,1.07,0.07
 USA,U.S.,Productivity,18-24,17,0.87x,0.87,-0.13
 USA,U.S.,News,18-24,18,0.87x,0.87,-0.13
-USA,U.S.,Books,18-24,19,0.84x,0.84,-0.16
-USA,U.S.,Games / Card,18-24,20,0.84x,0.84,-0.16
-USA,U.S.,Games / Casual,18-24,21,0.81x,0.81,-0.19
-USA,U.S.,Games / Trivia,18-24,22,0.81x,0.81,-0.19
 USA,U.S.,Food & Drink,18-24,23,0.74x,0.74,-0.26
 USA,U.S.,Games / Puzzle,18-24,24,0.73x,0.73,-0.27
-USA,U.S.,Navigation,18-24,25,0.67x,0.67,-0.33
 USA,U.S.,Sports,18-24,26,0.65x,0.65,-0.35
 USA,U.S.,Health & Fitness,18-24,27,0.64x,0.64,-0.36
-USA,U.S.,Games / Board,18-24,28,0.63x,0.63,-0.37
-USA,U.S.,Games / Word,18-24,29,0.58x,0.58,-0.42
 USA,U.S.,Business,18-24,30,0.56x,0.56,-0.44
-USA,U.S.,Medical,18-24,31,0.56x,0.56,-0.44
 USA,U.S.,Shopping,18-24,32,0.55x,0.55,-0.45
 USA,U.S.,Finance,18-24,33,0.53x,0.53,-0.47
 USA,U.S.,Weather,18-24,34,0.46x,0.46,-0.54
@@ -793,613 +419,324 @@ USA,U.S.,Travel,18-24,35,0.45x,0.45,-0.55
 USA,U.S.,Games / Casino,18-24,36,0.21x,0.21,-0.79
 USA,U.S.,Shopping,25-44,1,1.26x,1.26,0.26
 USA,U.S.,Business,25-44,2,1.25x,1.25,0.25
-USA,U.S.,Medical,25-44,3,1.24x,1.24,0.24
 USA,U.S.,Food & Drink,25-44,4,1.24x,1.24,0.24
 USA,U.S.,Finance,25-44,5,1.23x,1.23,0.23
 USA,U.S.,Health & Fitness,25-44,6,1.22x,1.22,0.22
 USA,U.S.,Sports,25-44,7,1.18x,1.18,0.18
-USA,U.S.,Games / Card,25-44,8,1.16x,1.16,0.16
 USA,U.S.,Travel,25-44,9,1.14x,1.14,0.14
-USA,U.S.,Games / Board,25-44,10,1.12x,1.12,0.12
-USA,U.S.,Books,25-44,11,1.10x,1.10,0.1
-USA,U.S.,Navigation,25-44,12,1.10x,1.10,0.1
-USA,U.S.,Games / Word,25-44,13,1.09x,1.09,0.09
-USA,U.S.,Lifestyle,25-44,14,1.07x,1.07,0.07
-USA,U.S.,Games / Adventure,25-44,15,1.07x,1.07,0.07
 USA,U.S.,Games / Puzzle,25-44,16,1.06x,1.06,0.06
 USA,U.S.,News,25-44,17,1.05x,1.05,0.05
 USA,U.S.,Productivity,25-44,18,1.05x,1.05,0.05
 USA,U.S.,Weather,25-44,19,1.03x,1.03,0.03
-USA,U.S.,Games / Casual,25-44,20,1.03x,1.03,0.03
-USA,U.S.,Games / Role Playing,25-44,21,1.02x,1.02,0.02
 USA,U.S.,Social Networking,25-44,22,1.02x,1.02,0.02
 USA,U.S.,Utilities,25-44,23,1.02x,1.02,0.02
-USA,U.S.,Games / Trivia,25-44,24,1.01x,1.01,0.01
 USA,U.S.,Games / Strategy,25-44,25,1.01x,1.01,0.01
-USA,U.S.,Games / Simulation,25-44,26,1.01x,1.01,0.01
 USA,U.S.,Music,25-44,27,0.99x,0.99,-0.01
 USA,U.S.,Education,25-44,28,0.97x,0.97,-0.03
-USA,U.S.,Photo & Video,25-44,29,0.96x,0.96,-0.04
 USA,U.S.,Entertainment,25-44,30,0.96x,0.96,-0.04
 USA,U.S.,Games / Casino,25-44,31,0.92x,0.92,-0.08
-USA,U.S.,Games / Action,25-44,32,0.82x,0.82,-0.18
-USA,U.S.,Games / Racing,25-44,33,0.81x,0.81,-0.19
-USA,U.S.,Games / Music,25-44,34,0.81x,0.81,-0.19
-USA,U.S.,Games / Sports,25-44,35,0.79x,0.79,-0.21
 USA,U.S.,Graphics & Design,25-44,36,0.78x,0.78,-0.22
 USA,U.S.,Games / Casino,45+,1,3.70x,3.70,2.7
 USA,U.S.,Weather,45+,2,3.00x,3.00,2
-USA,U.S.,Games / Word,45+,3,2.33x,2.33,1.33
-USA,U.S.,Games / Board,45+,4,2.03x,2.03,1.03
 USA,U.S.,Games / Puzzle,45+,5,2.01x,2.01,1.01
-USA,U.S.,Games / Trivia,45+,6,2.00x,2.00,1
-USA,U.S.,Navigation,45+,7,1.70x,1.70,0.7
-USA,U.S.,Medical,45+,8,1.64x,1.64,0.64
-USA,U.S.,Games / Casual,45+,9,1.62x,1.62,0.62
 USA,U.S.,Travel,45+,10,1.59x,1.59,0.59
 USA,U.S.,Sports,45+,11,1.56x,1.56,0.56
 USA,U.S.,Health & Fitness,45+,12,1.53x,1.53,0.53
 USA,U.S.,News,45+,13,1.52x,1.52,0.52
 USA,U.S.,Finance,45+,14,1.49x,1.49,0.49
 USA,U.S.,Shopping,45+,15,1.48x,1.48,0.48
-USA,U.S.,Books,45+,16,1.45x,1.45,0.45
 USA,U.S.,Productivity,45+,17,1.44x,1.44,0.44
 USA,U.S.,Business,45+,18,1.39x,1.39,0.39
-USA,U.S.,Games / Racing,45+,19,1.16x,1.16,0.16
-USA,U.S.,Games / Card,45+,20,1.15x,1.15,0.15
 USA,U.S.,Food & Drink,45+,21,1.04x,1.04,0.04
 USA,U.S.,Games / Strategy,45+,22,0.99x,0.99,-0.01
-USA,U.S.,Lifestyle,45+,23,0.97x,0.97,-0.03
-USA,U.S.,Games / Sports,45+,24,0.94x,0.94,-0.06
 USA,U.S.,Education,45+,25,0.93x,0.93,-0.07
 USA,U.S.,Music,45+,26,0.86x,0.86,-0.14
-USA,U.S.,Games / Simulation,45+,27,0.82x,0.82,-0.18
 USA,U.S.,Social Networking,45+,28,0.81x,0.81,-0.19
 USA,U.S.,Utilities,45+,29,0.76x,0.76,-0.24
-USA,U.S.,Games / Adventure,45+,30,0.75x,0.75,-0.25
-USA,U.S.,Photo & Video,45+,31,0.74x,0.74,-0.26
 USA,U.S.,Entertainment,45+,32,0.71x,0.71,-0.29
-USA,U.S.,Games / Role Playing,45+,33,0.68x,0.68,-0.32
 USA,U.S.,Graphics & Design,45+,34,0.57x,0.57,-0.43
-USA,U.S.,Games / Action,45+,35,0.53x,0.53,-0.47
-USA,U.S.,Games / Music,45+,36,0.25x,0.25,-0.75
-VNM,Vietnam,Games / Music,18-24,1,1.53x,1.53,0.53
 VNM,Vietnam,Games / Strategy,18-24,2,1.24x,1.24,0.24
 VNM,Vietnam,Education,18-24,3,1.20x,1.20,0.2
-VNM,Vietnam,Games / Action,18-24,4,1.18x,1.18,0.18
-VNM,Vietnam,Books,18-24,5,1.18x,1.18,0.18
 VNM,Vietnam,Graphics & Design,18-24,6,1.18x,1.18,0.18
-VNM,Vietnam,Games / Role Playing,18-24,7,1.17x,1.17,0.17
-VNM,Vietnam,Games / Sports,18-24,8,1.16x,1.16,0.16
-VNM,Vietnam,Photo & Video,18-24,9,1.16x,1.16,0.16
 VNM,Vietnam,Productivity,18-24,10,1.16x,1.16,0.16
 VNM,Vietnam,Shopping,18-24,11,1.15x,1.15,0.15
 VNM,Vietnam,Games / Puzzle,18-24,12,1.13x,1.13,0.13
-VNM,Vietnam,Games / Adventure,18-24,13,1.12x,1.12,0.12
 VNM,Vietnam,Social Networking,18-24,14,1.12x,1.12,0.12
 VNM,Vietnam,Entertainment,18-24,15,1.11x,1.11,0.11
 VNM,Vietnam,Music,18-24,16,1.11x,1.11,0.11
-VNM,Vietnam,Games / Trivia,18-24,17,1.09x,1.09,0.09
 VNM,Vietnam,Utilities,18-24,18,1.09x,1.09,0.09
-VNM,Vietnam,Games / Casual,18-24,19,1.08x,1.08,0.08
-VNM,Vietnam,Games / Simulation,18-24,20,1.06x,1.06,0.06
-VNM,Vietnam,Games / Card,18-24,21,1.05x,1.05,0.05
-VNM,Vietnam,Lifestyle,18-24,22,1.04x,1.04,0.04
 VNM,Vietnam,Food & Drink,18-24,23,1.02x,1.02,0.02
-VNM,Vietnam,Navigation,18-24,24,1.01x,1.01,0.01
-VNM,Vietnam,Games / Word,18-24,25,1.01x,1.01,0.01
 VNM,Vietnam,Sports,18-24,26,0.98x,0.98,-0.02
 VNM,Vietnam,Health & Fitness,18-24,27,0.95x,0.95,-0.05
 VNM,Vietnam,News,18-24,28,0.94x,0.94,-0.06
 VNM,Vietnam,Business,18-24,29,0.93x,0.93,-0.07
 VNM,Vietnam,Finance,18-24,30,0.91x,0.91,-0.09
-VNM,Vietnam,Games / Board,18-24,31,0.91x,0.91,-0.09
-VNM,Vietnam,Games / Racing,18-24,32,0.89x,0.89,-0.11
-VNM,Vietnam,Medical,18-24,33,0.83x,0.83,-0.17
 VNM,Vietnam,Travel,18-24,34,0.60x,0.60,-0.4
 VNM,Vietnam,Games / Casino,18-24,35,0.46x,0.46,-0.54
 VNM,Vietnam,Weather,18-24,36,0.16x,0.16,-0.84
 VNM,Vietnam,Weather,25-44,1,2.27x,2.27,1.27
 VNM,Vietnam,Games / Casino,25-44,2,1.76x,1.76,0.76
-VNM,Vietnam,Medical,25-44,3,1.34x,1.34,0.34
 VNM,Vietnam,Finance,25-44,4,1.19x,1.19,0.19
 VNM,Vietnam,Business,25-44,5,1.19x,1.19,0.19
-VNM,Vietnam,Games / Board,25-44,6,1.15x,1.15,0.15
-VNM,Vietnam,Games / Racing,25-44,7,1.12x,1.12,0.12
 VNM,Vietnam,Health & Fitness,25-44,8,1.11x,1.11,0.11
-VNM,Vietnam,Games / Simulation,25-44,9,1.09x,1.09,0.09
-VNM,Vietnam,Lifestyle,25-44,10,1.06x,1.06,0.06
-VNM,Vietnam,Navigation,25-44,11,1.05x,1.05,0.05
-VNM,Vietnam,Games / Casual,25-44,12,1.03x,1.03,0.03
 VNM,Vietnam,Graphics & Design,25-44,13,0.96x,0.96,-0.04
 VNM,Vietnam,News,25-44,14,0.96x,0.96,-0.04
 VNM,Vietnam,Food & Drink,25-44,15,0.96x,0.96,-0.04
 VNM,Vietnam,Games / Puzzle,25-44,16,0.95x,0.95,-0.05
 VNM,Vietnam,Shopping,25-44,17,0.94x,0.94,-0.06
 VNM,Vietnam,Utilities,25-44,18,0.94x,0.94,-0.06
-VNM,Vietnam,Games / Role Playing,25-44,19,0.92x,0.92,-0.08
 VNM,Vietnam,Music,25-44,20,0.92x,0.92,-0.08
 VNM,Vietnam,Entertainment,25-44,21,0.92x,0.92,-0.08
-VNM,Vietnam,Games / Sports,25-44,22,0.92x,0.92,-0.08
 VNM,Vietnam,Productivity,25-44,23,0.91x,0.91,-0.09
-VNM,Vietnam,Games / Action,25-44,24,0.91x,0.91,-0.09
-VNM,Vietnam,Games / Adventure,25-44,25,0.91x,0.91,-0.09
-VNM,Vietnam,Photo & Video,25-44,26,0.90x,0.90,-0.1
 VNM,Vietnam,Social Networking,25-44,27,0.90x,0.90,-0.1
 VNM,Vietnam,Education,25-44,28,0.86x,0.86,-0.14
 VNM,Vietnam,Travel,25-44,29,0.86x,0.86,-0.14
-VNM,Vietnam,Games / Trivia,25-44,30,0.84x,0.84,-0.16
 VNM,Vietnam,Games / Strategy,25-44,31,0.84x,0.84,-0.16
-VNM,Vietnam,Games / Card,25-44,32,0.83x,0.83,-0.17
-VNM,Vietnam,Games / Word,25-44,33,0.83x,0.83,-0.17
-VNM,Vietnam,Books,25-44,34,0.82x,0.82,-0.18
 VNM,Vietnam,Sports,25-44,35,0.67x,0.67,-0.33
-VNM,Vietnam,Games / Music,25-44,36,0.40x,0.40,-0.6
 VNM,Vietnam,Games / Casino,45+,1,6.45x,6.45,5.45
 VNM,Vietnam,Sports,45+,2,5.32x,5.32,4.32
-VNM,Vietnam,Navigation,45+,3,2.17x,2.17,1.17
-VNM,Vietnam,Games / Card,45+,4,1.95x,1.95,0.95
-VNM,Vietnam,Games / Word,45+,5,1.71x,1.71,0.71
 VNM,Vietnam,News,45+,6,1.41x,1.41,0.41
-VNM,Vietnam,Games / Board,45+,7,1.15x,1.15,0.15
 VNM,Vietnam,Health & Fitness,45+,8,1.05x,1.05,0.05
 VNM,Vietnam,Social Networking,45+,9,0.94x,0.94,-0.06
 VNM,Vietnam,Finance,45+,10,0.91x,0.91,-0.09
-VNM,Vietnam,Books,45+,11,0.88x,0.88,-0.12
 VNM,Vietnam,Utilities,45+,12,0.85x,0.85,-0.15
 VNM,Vietnam,Entertainment,45+,13,0.83x,0.83,-0.17
 VNM,Vietnam,Education,45+,14,0.78x,0.78,-0.22
-VNM,Vietnam,Photo & Video,45+,15,0.77x,0.77,-0.23
-VNM,Vietnam,Lifestyle,45+,16,0.77x,0.77,-0.23
 VNM,Vietnam,Travel,45+,17,0.77x,0.77,-0.23
-VNM,Vietnam,Games / Casual,45+,18,0.75x,0.75,-0.25
-VNM,Vietnam,Games / Adventure,45+,19,0.71x,0.71,-0.29
 VNM,Vietnam,Weather,45+,20,0.67x,0.67,-0.33
-VNM,Vietnam,Games / Role Playing,45+,21,0.64x,0.64,-0.36
-VNM,Vietnam,Games / Simulation,45+,22,0.60x,0.60,-0.4
 VNM,Vietnam,Shopping,45+,23,0.57x,0.57,-0.43
-VNM,Vietnam,Games / Action,45+,24,0.57x,0.57,-0.43
 VNM,Vietnam,Games / Strategy,45+,25,0.52x,0.52,-0.48
 VNM,Vietnam,Music,45+,26,0.51x,0.51,-0.49
 VNM,Vietnam,Productivity,45+,27,0.51x,0.51,-0.49
 VNM,Vietnam,Business,45+,28,0.48x,0.48,-0.52
 VNM,Vietnam,Food & Drink,45+,29,0.42x,0.42,-0.58
-VNM,Vietnam,Games / Sports,45+,30,0.40x,0.40,-0.6
-VNM,Vietnam,Games / Trivia,45+,31,0.40x,0.40,-0.6
 VNM,Vietnam,Games / Puzzle,45+,32,0.39x,0.39,-0.61
-VNM,Vietnam,Medical,45+,33,0.34x,0.34,-0.66
-VNM,Vietnam,Games / Music,45+,34,0.22x,0.22,-0.78
-VNM,Vietnam,Games / Racing,45+,35,0.20x,0.20,-0.8
 VNM,Vietnam,Graphics & Design,45+,36,0.14x,0.14,-0.86
 IDN,Indonesia,Education,18-24,1,1.33x,1.33,0.33
 IDN,Indonesia,Graphics & Design,18-24,2,1.31x,1.31,0.31
-IDN,Indonesia,Games / Action,18-24,3,1.26x,1.26,0.26
 IDN,Indonesia,Music,18-24,4,1.23x,1.23,0.23
 IDN,Indonesia,Games / Strategy,18-24,5,1.23x,1.23,0.23
 IDN,Indonesia,Entertainment,18-24,6,1.20x,1.20,0.2
-IDN,Indonesia,Games / Trivia,18-24,7,1.18x,1.18,0.18
-IDN,Indonesia,Games / Role Playing,18-24,8,1.17x,1.17,0.17
 IDN,Indonesia,News,18-24,9,1.17x,1.17,0.17
-IDN,Indonesia,Games / Sports,18-24,10,1.17x,1.17,0.17
-IDN,Indonesia,Games / Music,18-24,11,1.16x,1.16,0.16
-IDN,Indonesia,Lifestyle,18-24,12,1.13x,1.13,0.13
 IDN,Indonesia,Productivity,18-24,13,1.13x,1.13,0.13
-IDN,Indonesia,Photo & Video,18-24,14,1.12x,1.12,0.12
 IDN,Indonesia,Utilities,18-24,15,1.09x,1.09,0.09
-IDN,Indonesia,Books,18-24,16,1.09x,1.09,0.09
 IDN,Indonesia,Social Networking,18-24,17,1.08x,1.08,0.08
-IDN,Indonesia,Games / Racing,18-24,18,1.08x,1.08,0.08
 IDN,Indonesia,Games / Puzzle,18-24,19,1.05x,1.05,0.05
-IDN,Indonesia,Games / Simulation,18-24,20,1.03x,1.03,0.03
-IDN,Indonesia,Games / Board,18-24,21,1.02x,1.02,0.02
 IDN,Indonesia,Health & Fitness,18-24,22,1.01x,1.01,0.01
 IDN,Indonesia,Business,18-24,23,0.97x,0.97,-0.03
-IDN,Indonesia,Games / Card,18-24,24,0.95x,0.95,-0.05
-IDN,Indonesia,Games / Adventure,18-24,25,0.94x,0.94,-0.06
-IDN,Indonesia,Games / Word,18-24,26,0.92x,0.92,-0.08
 IDN,Indonesia,Shopping,18-24,27,0.90x,0.90,-0.1
 IDN,Indonesia,Finance,18-24,28,0.89x,0.89,-0.11
 IDN,Indonesia,Travel,18-24,29,0.87x,0.87,-0.13
-IDN,Indonesia,Games / Casual,18-24,30,0.86x,0.86,-0.14
 IDN,Indonesia,Sports,18-24,31,0.83x,0.83,-0.17
-IDN,Indonesia,Medical,18-24,32,0.80x,0.80,-0.2
-IDN,Indonesia,Navigation,18-24,33,0.78x,0.78,-0.22
 IDN,Indonesia,Weather,18-24,34,0.73x,0.73,-0.27
 IDN,Indonesia,Food & Drink,18-24,35,0.55x,0.55,-0.45
 IDN,Indonesia,Games / Casino,18-24,36,0.45x,0.45,-0.55
 IDN,Indonesia,Food & Drink,25-44,1,1.61x,1.61,0.61
-IDN,Indonesia,Navigation,25-44,2,1.32x,1.32,0.32
-IDN,Indonesia,Medical,25-44,3,1.24x,1.24,0.24
 IDN,Indonesia,Sports,25-44,4,1.22x,1.22,0.22
 IDN,Indonesia,Shopping,25-44,5,1.18x,1.18,0.18
 IDN,Indonesia,Finance,25-44,6,1.16x,1.16,0.16
 IDN,Indonesia,Games / Casino,25-44,7,1.15x,1.15,0.15
-IDN,Indonesia,Games / Casual,25-44,8,1.15x,1.15,0.15
 IDN,Indonesia,Travel,25-44,9,1.12x,1.12,0.12
-IDN,Indonesia,Games / Adventure,25-44,10,1.11x,1.11,0.11
 IDN,Indonesia,Business,25-44,11,1.09x,1.09,0.09
 IDN,Indonesia,Health & Fitness,25-44,12,1.06x,1.06,0.06
-IDN,Indonesia,Games / Card,25-44,13,1.02x,1.02,0.02
 IDN,Indonesia,Weather,25-44,14,1.02x,1.02,0.02
-IDN,Indonesia,Games / Simulation,25-44,15,1.02x,1.02,0.02
-IDN,Indonesia,Games / Racing,25-44,16,1.00x,1.00,0
-IDN,Indonesia,Games / Music,25-44,17,0.96x,0.96,-0.04
 IDN,Indonesia,Social Networking,25-44,18,0.96x,0.96,-0.04
 IDN,Indonesia,Utilities,25-44,19,0.94x,0.94,-0.06
-IDN,Indonesia,Games / Role Playing,25-44,20,0.93x,0.93,-0.07
-IDN,Indonesia,Books,25-44,21,0.93x,0.93,-0.07
 IDN,Indonesia,Productivity,25-44,22,0.92x,0.92,-0.08
-IDN,Indonesia,Lifestyle,25-44,23,0.92x,0.92,-0.08
-IDN,Indonesia,Games / Word,25-44,24,0.92x,0.92,-0.08
 IDN,Indonesia,News,25-44,25,0.91x,0.91,-0.09
 IDN,Indonesia,Games / Puzzle,25-44,26,0.91x,0.91,-0.09
-IDN,Indonesia,Photo & Video,25-44,27,0.91x,0.91,-0.09
-IDN,Indonesia,Games / Sports,25-44,28,0.90x,0.90,-0.1
-IDN,Indonesia,Games / Board,25-44,29,0.88x,0.88,-0.12
 IDN,Indonesia,Games / Strategy,25-44,30,0.87x,0.87,-0.13
-IDN,Indonesia,Games / Trivia,25-44,31,0.86x,0.86,-0.14
 IDN,Indonesia,Entertainment,25-44,32,0.85x,0.85,-0.15
-IDN,Indonesia,Games / Action,25-44,33,0.81x,0.81,-0.19
 IDN,Indonesia,Music,25-44,34,0.81x,0.81,-0.19
 IDN,Indonesia,Graphics & Design,25-44,35,0.76x,0.76,-0.24
 IDN,Indonesia,Education,25-44,36,0.73x,0.73,-0.27
 IDN,Indonesia,Games / Casino,45+,1,3.94x,3.94,2.94
-IDN,Indonesia,Games / Board,45+,2,2.00x,2.00,1
 IDN,Indonesia,Weather,45+,3,1.82x,1.82,0.82
-IDN,Indonesia,Games / Word,45+,4,1.76x,1.76,0.76
-IDN,Indonesia,Navigation,45+,5,1.43x,1.43,0.43
 IDN,Indonesia,Games / Puzzle,45+,6,1.37x,1.37,0.37
-IDN,Indonesia,Books,45+,7,1.34x,1.34,0.34
-IDN,Indonesia,Medical,45+,8,1.22x,1.22,0.22
 IDN,Indonesia,Travel,45+,9,1.04x,1.04,0.04
-IDN,Indonesia,Games / Casual,45+,10,1.00x,1.00,0
-IDN,Indonesia,Games / Adventure,45+,11,0.98x,0.98,-0.02
 IDN,Indonesia,Finance,45+,12,0.95x,0.95,-0.05
 IDN,Indonesia,Shopping,45+,13,0.89x,0.89,-0.11
 IDN,Indonesia,Food & Drink,45+,14,0.87x,0.87,-0.13
-IDN,Indonesia,Photo & Video,45+,15,0.87x,0.87,-0.13
 IDN,Indonesia,Utilities,45+,16,0.83x,0.83,-0.17
-IDN,Indonesia,Games / Racing,45+,17,0.82x,0.82,-0.18
-IDN,Indonesia,Games / Card,45+,18,0.80x,0.80,-0.2
-IDN,Indonesia,Games / Simulation,45+,19,0.80x,0.80,-0.2
 IDN,Indonesia,Business,45+,20,0.77x,0.77,-0.23
 IDN,Indonesia,Social Networking,45+,21,0.73x,0.73,-0.27
-IDN,Indonesia,Lifestyle,45+,22,0.63x,0.63,-0.37
 IDN,Indonesia,Health & Fitness,45+,23,0.58x,0.58,-0.42
 IDN,Indonesia,Sports,45+,24,0.58x,0.58,-0.42
 IDN,Indonesia,Productivity,45+,25,0.56x,0.56,-0.44
 IDN,Indonesia,Music,45+,26,0.53x,0.53,-0.47
 IDN,Indonesia,Education,45+,27,0.51x,0.51,-0.49
-IDN,Indonesia,Games / Trivia,45+,28,0.49x,0.49,-0.51
-IDN,Indonesia,Games / Action,45+,29,0.49x,0.49,-0.51
 IDN,Indonesia,Graphics & Design,45+,30,0.47x,0.47,-0.53
-IDN,Indonesia,Games / Sports,45+,31,0.45x,0.45,-0.55
 IDN,Indonesia,Entertainment,45+,32,0.42x,0.42,-0.58
-IDN,Indonesia,Games / Role Playing,45+,33,0.40x,0.40,-0.6
-IDN,Indonesia,Games / Music,45+,34,0.35x,0.35,-0.65
 IDN,Indonesia,News,45+,35,0.31x,0.31,-0.69
 IDN,Indonesia,Games / Strategy,45+,36,0.30x,0.30,-0.7
 GBR,U.K.,Graphics & Design,18-24,1,1.80x,1.80,0.8
-GBR,U.K.,Games / Music,18-24,2,1.67x,1.67,0.67
-GBR,U.K.,Games / Sports,18-24,3,1.67x,1.67,0.67
-GBR,U.K.,Games / Role Playing,18-24,4,1.62x,1.62,0.62
 GBR,U.K.,Games / Strategy,18-24,5,1.50x,1.50,0.5
-GBR,U.K.,Games / Action,18-24,6,1.48x,1.48,0.48
 GBR,U.K.,Entertainment,18-24,7,1.45x,1.45,0.45
-GBR,U.K.,Games / Simulation,18-24,8,1.38x,1.38,0.38
 GBR,U.K.,Education,18-24,9,1.38x,1.38,0.38
-GBR,U.K.,Games / Adventure,18-24,10,1.36x,1.36,0.36
-GBR,U.K.,Games / Racing,18-24,11,1.34x,1.34,0.34
-GBR,U.K.,Photo & Video,18-24,12,1.34x,1.34,0.34
 GBR,U.K.,Social Networking,18-24,13,1.34x,1.34,0.34
 GBR,U.K.,Music,18-24,14,1.27x,1.27,0.27
-GBR,U.K.,Lifestyle,18-24,15,1.25x,1.25,0.25
 GBR,U.K.,Utilities,18-24,16,1.17x,1.17,0.17
-GBR,U.K.,Games / Card,18-24,17,1.08x,1.08,0.08
-GBR,U.K.,Games / Casual,18-24,18,1.03x,1.03,0.03
 GBR,U.K.,Productivity,18-24,19,1.00x,1.00,0
 GBR,U.K.,Food & Drink,18-24,20,0.97x,0.97,-0.03
-GBR,U.K.,Books,18-24,21,0.96x,0.96,-0.04
 GBR,U.K.,Games / Puzzle,18-24,22,0.90x,0.90,-0.1
-GBR,U.K.,Games / Trivia,18-24,23,0.89x,0.89,-0.11
 GBR,U.K.,News,18-24,24,0.83x,0.83,-0.17
-GBR,U.K.,Navigation,18-24,25,0.83x,0.83,-0.17
-GBR,U.K.,Games / Board,18-24,26,0.82x,0.82,-0.18
 GBR,U.K.,Sports,18-24,27,0.81x,0.81,-0.19
 GBR,U.K.,Shopping,18-24,28,0.74x,0.74,-0.26
 GBR,U.K.,Health & Fitness,18-24,29,0.73x,0.73,-0.27
-GBR,U.K.,Games / Word,18-24,30,0.72x,0.72,-0.28
 GBR,U.K.,Business,18-24,31,0.67x,0.67,-0.33
 GBR,U.K.,Travel,18-24,32,0.65x,0.65,-0.35
 GBR,U.K.,Finance,18-24,33,0.57x,0.57,-0.43
 GBR,U.K.,Games / Casino,18-24,34,0.56x,0.56,-0.44
-GBR,U.K.,Medical,18-24,35,0.49x,0.49,-0.51
 GBR,U.K.,Weather,18-24,36,0.44x,0.44,-0.56
-GBR,U.K.,Medical,25-44,1,1.40x,1.40,0.4
 GBR,U.K.,Finance,25-44,2,1.31x,1.31,0.31
 GBR,U.K.,Business,25-44,3,1.31x,1.31,0.31
 GBR,U.K.,Health & Fitness,25-44,4,1.28x,1.28,0.28
 GBR,U.K.,Food & Drink,25-44,5,1.25x,1.25,0.25
 GBR,U.K.,Shopping,25-44,6,1.25x,1.25,0.25
-GBR,U.K.,Navigation,25-44,7,1.24x,1.24,0.24
 GBR,U.K.,Sports,25-44,8,1.16x,1.16,0.16
-GBR,U.K.,Games / Board,25-44,9,1.16x,1.16,0.16
 GBR,U.K.,Travel,25-44,10,1.15x,1.15,0.15
 GBR,U.K.,News,25-44,11,1.11x,1.11,0.11
-GBR,U.K.,Books,25-44,12,1.11x,1.11,0.11
 GBR,U.K.,Weather,25-44,13,1.09x,1.09,0.09
 GBR,U.K.,Productivity,25-44,14,1.09x,1.09,0.09
 GBR,U.K.,Utilities,25-44,15,1.06x,1.06,0.06
-GBR,U.K.,Games / Word,25-44,16,1.05x,1.05,0.05
-GBR,U.K.,Games / Card,25-44,17,1.03x,1.03,0.03
 GBR,U.K.,Games / Casino,25-44,18,1.03x,1.03,0.03
-GBR,U.K.,Lifestyle,25-44,19,1.02x,1.02,0.02
-GBR,U.K.,Games / Trivia,25-44,20,1.02x,1.02,0.02
-GBR,U.K.,Games / Music,25-44,21,1.01x,1.01,0.01
 GBR,U.K.,Social Networking,25-44,22,1.01x,1.01,0.01
 GBR,U.K.,Music,25-44,23,1.01x,1.01,0.01
-GBR,U.K.,Games / Adventure,25-44,24,1.01x,1.01,0.01
-GBR,U.K.,Games / Casual,25-44,25,1.00x,1.00,0
-GBR,U.K.,Photo & Video,25-44,26,1.00x,1.00,0
-GBR,U.K.,Games / Simulation,25-44,27,0.99x,0.99,-0.01
 GBR,U.K.,Games / Puzzle,25-44,28,0.99x,0.99,-0.01
 GBR,U.K.,Education,25-44,29,0.96x,0.96,-0.04
 GBR,U.K.,Entertainment,25-44,30,0.95x,0.95,-0.05
-GBR,U.K.,Games / Racing,25-44,31,0.94x,0.94,-0.06
-GBR,U.K.,Games / Role Playing,25-44,32,0.93x,0.93,-0.07
 GBR,U.K.,Games / Strategy,25-44,33,0.88x,0.88,-0.12
-GBR,U.K.,Games / Action,25-44,34,0.86x,0.86,-0.14
-GBR,U.K.,Games / Sports,25-44,35,0.82x,0.82,-0.18
 GBR,U.K.,Graphics & Design,25-44,36,0.80x,0.80,-0.2
 GBR,U.K.,Games / Casino,45+,1,2.89x,2.89,1.89
 GBR,U.K.,Weather,45+,2,2.76x,2.76,1.76
-GBR,U.K.,Games / Word,45+,3,2.21x,2.21,1.21
 GBR,U.K.,Games / Puzzle,45+,4,1.97x,1.97,0.97
-GBR,U.K.,Games / Trivia,45+,5,1.74x,1.74,0.74
 GBR,U.K.,News,45+,6,1.72x,1.72,0.72
-GBR,U.K.,Games / Casual,45+,7,1.67x,1.67,0.67
 GBR,U.K.,Shopping,45+,8,1.52x,1.52,0.52
-GBR,U.K.,Medical,45+,9,1.48x,1.48,0.48
 GBR,U.K.,Sports,45+,10,1.46x,1.46,0.46
-GBR,U.K.,Games / Board,45+,11,1.45x,1.45,0.45
 GBR,U.K.,Finance,45+,12,1.38x,1.38,0.38
-GBR,U.K.,Books,45+,13,1.36x,1.36,0.36
 GBR,U.K.,Health & Fitness,45+,14,1.29x,1.29,0.29
 GBR,U.K.,Travel,45+,15,1.25x,1.25,0.25
 GBR,U.K.,Productivity,45+,16,1.24x,1.24,0.24
-GBR,U.K.,Games / Card,45+,17,1.10x,1.10,0.1
 GBR,U.K.,Business,45+,18,1.09x,1.09,0.09
-GBR,U.K.,Games / Adventure,45+,19,1.06x,1.06,0.06
-GBR,U.K.,Navigation,45+,20,1.05x,1.05,0.05
-GBR,U.K.,Lifestyle,45+,21,1.05x,1.05,0.05
 GBR,U.K.,Music,45+,22,0.94x,0.94,-0.06
-GBR,U.K.,Games / Racing,45+,23,0.91x,0.91,-0.09
 GBR,U.K.,Utilities,45+,24,0.90x,0.90,-0.1
 GBR,U.K.,Games / Strategy,45+,25,0.84x,0.84,-0.16
 GBR,U.K.,Education,45+,26,0.81x,0.81,-0.19
-GBR,U.K.,Photo & Video,45+,27,0.79x,0.79,-0.21
 GBR,U.K.,Entertainment,45+,28,0.77x,0.77,-0.23
 GBR,U.K.,Social Networking,45+,29,0.75x,0.75,-0.25
 GBR,U.K.,Food & Drink,45+,30,0.72x,0.72,-0.28
-GBR,U.K.,Games / Simulation,45+,31,0.72x,0.72,-0.28
-GBR,U.K.,Games / Action,45+,32,0.65x,0.65,-0.35
-GBR,U.K.,Games / Sports,45+,33,0.63x,0.63,-0.37
 GBR,U.K.,Graphics & Design,45+,34,0.47x,0.47,-0.53
-GBR,U.K.,Games / Role Playing,45+,35,0.39x,0.39,-0.61
-GBR,U.K.,Games / Music,45+,36,0.34x,0.34,-0.66
 MEX,Mexico,Graphics & Design,18-24,1,1.31x,1.31,0.31
 MEX,Mexico,Games / Strategy,18-24,2,1.28x,1.28,0.28
-MEX,Mexico,Games / Action,18-24,3,1.27x,1.27,0.27
-MEX,Mexico,Games / Sports,18-24,4,1.25x,1.25,0.25
-MEX,Mexico,Games / Racing,18-24,5,1.23x,1.23,0.23
-MEX,Mexico,Games / Role Playing,18-24,6,1.22x,1.22,0.22
-MEX,Mexico,Books,18-24,7,1.20x,1.20,0.2
 MEX,Mexico,Education,18-24,8,1.19x,1.19,0.19
 MEX,Mexico,Music,18-24,9,1.19x,1.19,0.19
-MEX,Mexico,Lifestyle,18-24,10,1.18x,1.18,0.18
 MEX,Mexico,Entertainment,18-24,11,1.15x,1.15,0.15
 MEX,Mexico,Social Networking,18-24,12,1.15x,1.15,0.15
-MEX,Mexico,Photo & Video,18-24,13,1.14x,1.14,0.14
 MEX,Mexico,Productivity,18-24,14,1.12x,1.12,0.12
-MEX,Mexico,Games / Music,18-24,15,1.06x,1.06,0.06
 MEX,Mexico,Utilities,18-24,16,1.05x,1.05,0.05
-MEX,Mexico,Games / Adventure,18-24,17,1.04x,1.04,0.04
-MEX,Mexico,Games / Trivia,18-24,18,1.04x,1.04,0.04
 MEX,Mexico,News,18-24,19,1.03x,1.03,0.03
-MEX,Mexico,Games / Simulation,18-24,20,1.00x,1.00,0
-MEX,Mexico,Games / Casual,18-24,21,0.99x,0.99,-0.01
-MEX,Mexico,Games / Board,18-24,22,0.98x,0.98,-0.02
 MEX,Mexico,Sports,18-24,23,0.97x,0.97,-0.03
 MEX,Mexico,Health & Fitness,18-24,24,0.91x,0.91,-0.09
 MEX,Mexico,Games / Casino,18-24,25,0.87x,0.87,-0.13
-MEX,Mexico,Games / Card,18-24,26,0.87x,0.87,-0.13
 MEX,Mexico,Games / Puzzle,18-24,27,0.86x,0.86,-0.14
 MEX,Mexico,Shopping,18-24,28,0.81x,0.81,-0.19
-MEX,Mexico,Games / Word,18-24,29,0.79x,0.79,-0.21
 MEX,Mexico,Business,18-24,30,0.77x,0.77,-0.23
 MEX,Mexico,Food & Drink,18-24,31,0.72x,0.72,-0.28
-MEX,Mexico,Navigation,18-24,32,0.70x,0.70,-0.3
 MEX,Mexico,Finance,18-24,33,0.64x,0.64,-0.36
-MEX,Mexico,Medical,18-24,34,0.62x,0.62,-0.38
 MEX,Mexico,Weather,18-24,35,0.44x,0.44,-0.56
 MEX,Mexico,Travel,18-24,36,0.43x,0.43,-0.57
 MEX,Mexico,Weather,25-44,1,1.50x,1.50,0.5
 MEX,Mexico,Finance,25-44,2,1.42x,1.42,0.42
 MEX,Mexico,Food & Drink,25-44,3,1.37x,1.37,0.37
-MEX,Mexico,Navigation,25-44,4,1.33x,1.33,0.33
 MEX,Mexico,Games / Casino,25-44,5,1.30x,1.30,0.3
-MEX,Mexico,Medical,25-44,6,1.30x,1.30,0.3
 MEX,Mexico,Business,25-44,7,1.29x,1.29,0.29
 MEX,Mexico,Shopping,25-44,8,1.25x,1.25,0.25
-MEX,Mexico,Games / Card,25-44,9,1.24x,1.24,0.24
 MEX,Mexico,Travel,25-44,10,1.20x,1.20,0.2
 MEX,Mexico,Health & Fitness,25-44,11,1.16x,1.16,0.16
 MEX,Mexico,Sports,25-44,12,1.16x,1.16,0.16
 MEX,Mexico,Games / Puzzle,25-44,13,1.11x,1.11,0.11
-MEX,Mexico,Games / Adventure,25-44,14,1.10x,1.10,0.1
-MEX,Mexico,Games / Simulation,25-44,15,1.10x,1.10,0.1
-MEX,Mexico,Games / Music,25-44,16,1.06x,1.06,0.06
 MEX,Mexico,News,25-44,17,1.04x,1.04,0.04
-MEX,Mexico,Games / Casual,25-44,18,1.03x,1.03,0.03
 MEX,Mexico,Utilities,25-44,19,1.01x,1.01,0.01
-MEX,Mexico,Games / Trivia,25-44,20,0.98x,0.98,-0.02
-MEX,Mexico,Games / Board,25-44,21,0.97x,0.97,-0.03
 MEX,Mexico,Productivity,25-44,22,0.96x,0.96,-0.04
-MEX,Mexico,Games / Role Playing,25-44,23,0.94x,0.94,-0.06
 MEX,Mexico,Social Networking,25-44,24,0.94x,0.94,-0.06
 MEX,Mexico,Entertainment,25-44,25,0.93x,0.93,-0.07
-MEX,Mexico,Photo & Video,25-44,26,0.91x,0.91,-0.09
-MEX,Mexico,Lifestyle,25-44,27,0.90x,0.90,-0.1
 MEX,Mexico,Music,25-44,28,0.89x,0.89,-0.11
-MEX,Mexico,Games / Racing,25-44,29,0.88x,0.88,-0.12
-MEX,Mexico,Games / Sports,25-44,30,0.87x,0.87,-0.13
 MEX,Mexico,Education,25-44,31,0.86x,0.86,-0.14
-MEX,Mexico,Books,25-44,32,0.84x,0.84,-0.16
-MEX,Mexico,Games / Action,25-44,33,0.84x,0.84,-0.16
 MEX,Mexico,Games / Strategy,25-44,34,0.80x,0.80,-0.2
 MEX,Mexico,Graphics & Design,25-44,35,0.80x,0.80,-0.2
-MEX,Mexico,Games / Word,25-44,36,0.77x,0.77,-0.23
-MEX,Mexico,Games / Word,45+,1,4.15x,4.15,3.15
 MEX,Mexico,Weather,45+,2,2.72x,2.72,1.72
-MEX,Mexico,Games / Board,45+,3,2.16x,2.16,1.16
 MEX,Mexico,Games / Puzzle,45+,4,2.00x,2.00,1
-MEX,Mexico,Games / Trivia,45+,5,1.69x,1.69,0.69
-MEX,Mexico,Games / Casual,45+,6,1.67x,1.67,0.67
 MEX,Mexico,Business,45+,7,1.52x,1.52,0.52
 MEX,Mexico,Finance,45+,8,1.50x,1.50,0.5
-MEX,Mexico,Medical,45+,9,1.44x,1.44,0.44
-MEX,Mexico,Navigation,45+,10,1.25x,1.25,0.25
 MEX,Mexico,Shopping,45+,11,1.20x,1.20,0.2
 MEX,Mexico,Travel,45+,12,1.11x,1.11,0.11
 MEX,Mexico,Food & Drink,45+,13,1.03x,1.03,0.03
-MEX,Mexico,Games / Racing,45+,14,1.03x,1.03,0.03
 MEX,Mexico,Health & Fitness,45+,15,1.01x,1.01,0.01
-MEX,Mexico,Photo & Video,45+,16,0.99x,0.99,-0.01
 MEX,Mexico,Utilities,45+,17,0.98x,0.98,-0.02
-MEX,Mexico,Books,45+,18,0.94x,0.94,-0.06
-MEX,Mexico,Games / Card,45+,19,0.83x,0.83,-0.17
-MEX,Mexico,Games / Simulation,45+,20,0.83x,0.83,-0.17
 MEX,Mexico,News,45+,21,0.81x,0.81,-0.19
 MEX,Mexico,Productivity,45+,22,0.76x,0.76,-0.24
-MEX,Mexico,Lifestyle,45+,23,0.73x,0.73,-0.27
 MEX,Mexico,Education,45+,24,0.70x,0.70,-0.3
 MEX,Mexico,Social Networking,45+,25,0.67x,0.67,-0.33
-MEX,Mexico,Games / Adventure,45+,26,0.61x,0.61,-0.39
 MEX,Mexico,Music,45+,27,0.60x,0.60,-0.4
 MEX,Mexico,Entertainment,45+,28,0.57x,0.57,-0.43
 MEX,Mexico,Games / Casino,45+,29,0.56x,0.56,-0.44
 MEX,Mexico,Sports,45+,30,0.53x,0.53,-0.47
 MEX,Mexico,Games / Strategy,45+,31,0.52x,0.52,-0.48
-MEX,Mexico,Games / Sports,45+,32,0.47x,0.47,-0.53
-MEX,Mexico,Games / Music,45+,33,0.34x,0.34,-0.66
-MEX,Mexico,Games / Action,45+,34,0.33x,0.33,-0.67
 MEX,Mexico,Graphics & Design,45+,35,0.31x,0.31,-0.69
-MEX,Mexico,Games / Role Playing,45+,36,0.23x,0.23,-0.77
-IND,India,Games / Action,18-24,1,1.37x,1.37,0.37
 IND,India,Education,18-24,2,1.33x,1.33,0.33
 IND,India,Games / Strategy,18-24,3,1.24x,1.24,0.24
-IND,India,Games / Racing,18-24,4,1.24x,1.24,0.24
 IND,India,Music,18-24,5,1.21x,1.21,0.21
-IND,India,Games / Role Playing,18-24,6,1.18x,1.18,0.18
 IND,India,Productivity,18-24,7,1.13x,1.13,0.13
-IND,India,Games / Sports,18-24,8,1.12x,1.12,0.12
 IND,India,Social Networking,18-24,9,1.12x,1.12,0.12
 IND,India,Graphics & Design,18-24,10,1.12x,1.12,0.12
-IND,India,Games / Simulation,18-24,11,1.06x,1.06,0.06
-IND,India,Books,18-24,12,1.05x,1.05,0.05
-IND,India,Lifestyle,18-24,13,1.05x,1.05,0.05
-IND,India,Photo & Video,18-24,14,1.04x,1.04,0.04
-IND,India,Games / Adventure,18-24,15,1.02x,1.02,0.02
-IND,India,Games / Board,18-24,16,1.01x,1.01,0.01
 IND,India,Utilities,18-24,17,1.01x,1.01,0.01
-IND,India,Games / Trivia,18-24,18,1.00x,1.00,0
 IND,India,Entertainment,18-24,19,0.94x,0.94,-0.06
 IND,India,Sports,18-24,20,0.93x,0.93,-0.07
 IND,India,Health & Fitness,18-24,21,0.90x,0.90,-0.1
-IND,India,Games / Casual,18-24,22,0.87x,0.87,-0.13
 IND,India,Shopping,18-24,23,0.84x,0.84,-0.16
-IND,India,Games / Music,18-24,24,0.84x,0.84,-0.16
 IND,India,Food & Drink,18-24,25,0.84x,0.84,-0.16
 IND,India,Games / Puzzle,18-24,26,0.81x,0.81,-0.19
-IND,India,Games / Word,18-24,27,0.79x,0.79,-0.21
-IND,India,Navigation,18-24,28,0.73x,0.73,-0.27
-IND,India,Medical,18-24,29,0.72x,0.72,-0.28
 IND,India,Travel,18-24,30,0.72x,0.72,-0.28
-IND,India,Games / Card,18-24,31,0.69x,0.69,-0.31
 IND,India,News,18-24,32,0.65x,0.65,-0.35
 IND,India,Business,18-24,33,0.63x,0.63,-0.37
 IND,India,Finance,18-24,34,0.60x,0.60,-0.4
 IND,India,Weather,18-24,35,0.51x,0.51,-0.49
 IND,India,Games / Casino,18-24,36,0.49x,0.49,-0.51
 IND,India,Finance,25-44,1,1.41x,1.41,0.41
-IND,India,Medical,25-44,2,1.40x,1.40,0.4
 IND,India,Weather,25-44,3,1.39x,1.39,0.39
 IND,India,Business,25-44,4,1.38x,1.38,0.38
 IND,India,News,25-44,5,1.35x,1.35,0.35
 IND,India,Travel,25-44,6,1.32x,1.32,0.32
-IND,India,Navigation,25-44,7,1.29x,1.29,0.29
 IND,India,Food & Drink,25-44,8,1.22x,1.22,0.22
 IND,India,Shopping,25-44,9,1.21x,1.21,0.21
-IND,India,Games / Music,25-44,10,1.16x,1.16,0.16
 IND,India,Sports,25-44,11,1.14x,1.14,0.14
 IND,India,Entertainment,25-44,12,1.11x,1.11,0.11
 IND,India,Health & Fitness,25-44,13,1.10x,1.10,0.1
-IND,India,Games / Card,25-44,14,1.09x,1.09,0.09
 IND,India,Games / Puzzle,25-44,15,1.04x,1.04,0.04
-IND,India,Games / Casual,25-44,16,1.04x,1.04,0.04
-IND,India,Games / Trivia,25-44,17,1.03x,1.03,0.03
-IND,India,Games / Word,25-44,18,1.03x,1.03,0.03
 IND,India,Games / Casino,25-44,19,1.01x,1.01,0.01
 IND,India,Utilities,25-44,20,1.00x,1.00,0
-IND,India,Photo & Video,25-44,21,0.98x,0.98,-0.02
-IND,India,Games / Board,25-44,22,0.98x,0.98,-0.02
-IND,India,Lifestyle,25-44,23,0.97x,0.97,-0.03
-IND,India,Games / Adventure,25-44,24,0.96x,0.96,-0.04
-IND,India,Games / Simulation,25-44,25,0.95x,0.95,-0.05
-IND,India,Books,25-44,26,0.93x,0.93,-0.07
-IND,India,Games / Sports,25-44,27,0.92x,0.92,-0.08
 IND,India,Productivity,25-44,28,0.91x,0.91,-0.09
 IND,India,Social Networking,25-44,29,0.90x,0.90,-0.1
 IND,India,Graphics & Design,25-44,30,0.90x,0.90,-0.1
-IND,India,Games / Role Playing,25-44,31,0.84x,0.84,-0.16
 IND,India,Music,25-44,32,0.81x,0.81,-0.19
 IND,India,Games / Strategy,25-44,33,0.80x,0.80,-0.2
-IND,India,Games / Racing,25-44,34,0.79x,0.79,-0.21
 IND,India,Education,25-44,35,0.75x,0.75,-0.25
-IND,India,Games / Action,25-44,36,0.66x,0.66,-0.34
 IND,India,Games / Casino,45+,1,3.74x,3.74,2.74
-IND,India,Games / Card,45+,2,2.95x,2.95,1.95
-IND,India,Games / Word,45+,3,2.73x,2.73,1.73
 IND,India,Games / Puzzle,45+,4,2.45x,2.45,1.45
 IND,India,Weather,45+,5,1.94x,1.94,0.94
-IND,India,Games / Casual,45+,6,1.93x,1.93,0.93
 IND,India,Finance,45+,7,1.34x,1.34,0.34
-IND,India,Games / Adventure,45+,8,1.32x,1.32,0.32
 IND,India,News,45+,9,1.26x,1.26,0.26
-IND,India,Books,45+,10,1.15x,1.15,0.15
 IND,India,Health & Fitness,45+,11,1.13x,1.13,0.13
-IND,India,Games / Music,45+,12,1.13x,1.13,0.13
 IND,India,Business,45+,13,1.09x,1.09,0.09
-IND,India,Games / Board,45+,14,1.05x,1.05,0.05
-IND,India,Navigation,45+,15,1.01x,1.01,0.01
-IND,India,Games / Simulation,45+,16,0.98x,0.98,-0.02
 IND,India,Utilities,45+,17,0.97x,0.97,-0.03
-IND,India,Games / Trivia,45+,18,0.97x,0.97,-0.03
 IND,India,Travel,45+,19,0.93x,0.93,-0.07
-IND,India,Photo & Video,45+,20,0.88x,0.88,-0.12
-IND,India,Lifestyle,45+,21,0.87x,0.87,-0.13
 IND,India,Shopping,45+,22,0.83x,0.83,-0.17
 IND,India,Graphics & Design,45+,23,0.82x,0.82,-0.18
 IND,India,Social Networking,45+,24,0.75x,0.75,-0.25
 IND,India,Music,45+,25,0.74x,0.74,-0.26
-IND,India,Games / Racing,45+,26,0.69x,0.69,-0.31
-IND,India,Games / Sports,45+,27,0.67x,0.67,-0.33
 IND,India,Entertainment,45+,28,0.66x,0.66,-0.34
 IND,India,Food & Drink,45+,29,0.64x,0.64,-0.36
 IND,India,Productivity,45+,30,0.61x,0.61,-0.39
 IND,India,Sports,45+,31,0.57x,0.57,-0.43
-IND,India,Games / Role Playing,45+,32,0.56x,0.56,-0.44
-IND,India,Games / Action,45+,33,0.52x,0.52,-0.48
 IND,India,Games / Strategy,45+,34,0.35x,0.35,-0.65
-IND,India,Medical,45+,35,0.32x,0.32,-0.68
 IND,India,Education,45+,36,0.26x,0.26,-0.74
