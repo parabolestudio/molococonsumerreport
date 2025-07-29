@@ -244,7 +244,7 @@ function Tooltip({ hoveredItem }) {
       <p class="tooltip-value">${hoveredItem.country}</p>
     </div>
     <div>
-      <p class="tooltip-label">App</p>
+      <p class="tooltip-label">Platform</p>
       <p class="tooltip-value">${hoveredItem.app}</p>
     </div>
     <div>
