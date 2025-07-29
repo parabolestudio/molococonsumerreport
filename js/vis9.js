@@ -2,7 +2,7 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 
 export function Vis9() {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [selectedCountry, setSelectedCountry] = useState("All countries");
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
