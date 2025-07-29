@@ -55,27 +55,18 @@ export function Vis9() {
 
   // data and scales
   const dataFiltered = data.filter((d) => d.Country === selectedCountry);
+  // sort so "Independent App Ecosystem" is always last
+  dataFiltered.sort((a, b) => {
+    if (a.App === "Independent App Ecosystem") return 1;
+    if (b.App === "Independent App Ecosystem") return -1;
+    return a.App.localeCompare(b.App);
+  });
 
   const hourScale = d3
     .scaleLinear()
     .domain([0, d3.max(dataFiltered, (d) => d.Hours)])
     .range([0, innerWidth])
     .nice();
-
-  const appList = [
-    "Independent App Ecosystem",
-    "Instagram",
-    "Facebook",
-    "TikTok",
-    "YouTube",
-    "Reddit",
-    "Threads",
-  ];
-  const appScale = d3
-    .scalePoint()
-    .domain(appList)
-    .range([0, innerWidth])
-    .padding(0.5);
 
   const [minDau, maxDau] = d3.extent(dataFiltered, (d) => d.DAU);
   const dauScale = d3.scaleLinear().domain([0, maxDau]).range([innerHeight, 0]);
@@ -152,9 +143,9 @@ export function Vis9() {
               const y = dauScale(tick);
               const formattedTick = d3.format(".2s")(tick).replace("G", "B");
               return html` <text
-                x="${-50}"
+                x="${-16}"
                 y="${y + 4}"
-                text-anchor="start"
+                text-anchor="end"
                 class="charts-text-body"
                 >${tick !== 0 ? formattedTick : ""}</text
               >`;
