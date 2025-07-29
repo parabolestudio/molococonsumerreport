@@ -483,7 +483,7 @@ VIZ 11
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr auto;
     grid-column-gap: 20px;
-    grid-row-gap: 10px;
+    /* grid-row-gap: 10px;  -> not set after top ad category line was hidden */
 
     .element1,
     .element2 {
@@ -520,6 +520,8 @@ VIZ 11
       grid-area: 1 / 2 / 2 / 3;
     }
     .element3 {
+      display: none; /* just hidden for now in case we need it again */
+
       grid-area: 2 / 1 / 3 / 3;
       text-align: center;
       display: flex;
@@ -777,7 +779,6 @@ this is to create a pattern of three colors that repeats every three rows
   filter: drop-shadow(0 -2px 1px #040078);
 }
 
-
 /*
 VIZ 13
 */
@@ -792,7 +793,7 @@ VIZ 13
   }
 }
 
-#vis13_categories .category-list  {
+#vis13_categories .category-list {
   max-width: 736px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
