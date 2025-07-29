@@ -337,7 +337,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 25})"
+          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 30})"
           class="charts-text-body-bold"
           fill="#03004C"
           text-anchor="middle"
@@ -347,7 +347,7 @@ export function Vis1() {
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 25})"
+          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 30})"
           class="charts-text-body-bold"
           fill="#0280FB"
           text-anchor="middle"
@@ -387,9 +387,14 @@ export function Vis1() {
         />
         <line
           x1="${marginTimeline.left + widthTimeline - 20}"
-          y1="${marginCategories.top + innerHeightCategories}"
+          y1="${marginTimeline.top + innerHeightTimeline}"
           x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginCategories.top}"
+          y2="${marginTimeline.top +
+            yScaleTimeline(timelineNonGamingLatestItem.revenue) <
+          marginTimeline.top
+            ? marginTimeline.top +
+              yScaleTimeline(timelineNonGamingLatestItem.revenue)
+            : marginTimeline.top}"
           class="charts-line-dashed charts-line-dashed-blue"
         />
       </g>
