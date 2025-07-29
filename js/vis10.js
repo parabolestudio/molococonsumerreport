@@ -179,7 +179,7 @@ export function Vis10() {
     .domain(categories)
     .range([0, sectionInnerWidth]);
 
-  const formatShare = (share) => `${(share * 100).toFixed(1)}%`;
+  const formatShare = (share) => `${(share * 100).toFixed(0)}%`;
 
   return html`<div class="vis-container-inner">
     <svg
