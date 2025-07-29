@@ -1,0 +1,81 @@
+Advertiser Genre,Publisher Genre,CPP
+Entertainment,Books & Reference,26.00
+Entertainment,Entertainment,22.00
+Entertainment,Gaming,23.00
+Entertainment,Health & Fitness,12.00
+Entertainment,Other Consumer Publishers,18.00
+Entertainment,Photo & Video,16.00
+Entertainment,Social Media,33.00
+Entertainment,Utility & Productivity,19.00
+Finance,Books & Reference,49.00
+Finance,Entertainment,78.00
+Finance,Gaming,104.00
+Finance,Health & Fitness,104.00
+Finance,Other Consumer Publishers,58.00
+Finance,Photo & Video,12.00
+Finance,Social Media,53.00
+Finance,Utility & Productivity,48.00
+Food & Drink,Books & Reference,18.00
+Food & Drink,Entertainment,11.00
+Food & Drink,Gaming,17.00
+Food & Drink,Health & Fitness,26.00
+Food & Drink,Other Consumer Publishers,12.00
+Food & Drink,Photo & Video,9.00
+Food & Drink,Social Media,26.00
+Food & Drink,Utility & Productivity,7.00
+Gaming,Books & Reference,32.00
+Gaming,Entertainment,23.00
+Gaming,Gaming,21.00
+Gaming,Health & Fitness,23.00
+Gaming,Other Consumer Publishers,15.00
+Gaming,Photo & Video,3.00
+Gaming,Social Media,30.00
+Gaming,Utility & Productivity,16.00
+Other Consumer Advertisers,Books & Reference,34.00
+Other Consumer Advertisers,Entertainment,23.00
+Other Consumer Advertisers,Gaming,44.00
+Other Consumer Advertisers,Health & Fitness,24.00
+Other Consumer Advertisers,Other Consumer Publishers,29.00
+Other Consumer Advertisers,Photo & Video,6.00
+Other Consumer Advertisers,Social Media,41.00
+Other Consumer Advertisers,Utility & Productivity,21.00
+RMG,Books & Reference,78.00
+RMG,Entertainment,94.00
+RMG,Gaming,102.00
+RMG,Health & Fitness,145.00
+RMG,Other Consumer Publishers,90.00
+RMG,Photo & Video,67.00
+RMG,Social Media,68.00
+RMG,Utility & Productivity,83.00
+Shopping,Books & Reference,35.00
+Shopping,Entertainment,26.00
+Shopping,Gaming,30.00
+Shopping,Health & Fitness,28.00
+Shopping,Other Consumer Publishers,20.00
+Shopping,Photo & Video,43.00
+Shopping,Social Media,31.00
+Shopping,Utility & Productivity,33.00
+Social Media,Books & Reference,54.00
+Social Media,Entertainment,31.00
+Social Media,Gaming,42.00
+Social Media,Health & Fitness,48.00
+Social Media,Other Consumer Publishers,37.00
+Social Media,Photo & Video,19.00
+Social Media,Social Media,19.00
+Social Media,Utility & Productivity,14.00
+Travel,Books & Reference,9.00
+Travel,Entertainment,9.00
+Travel,Gaming,15.00
+Travel,Health & Fitness,18.00
+Travel,Other Consumer Publishers,11.00
+Travel,Photo & Video,2.00
+Travel,Social Media,10.00
+Travel,Utility & Productivity,5.00
+Utility & Productivity,Books & Reference,9.00
+Utility & Productivity,Entertainment,9.00
+Utility & Productivity,Gaming,14.00
+Utility & Productivity,Health & Fitness,6.00
+Utility & Productivity,Other Consumer Publishers,6.00
+Utility & Productivity,Photo & Video,1.00
+Utility & Productivity,Social Media,4.00
+Utility & Productivity,Utility & Productivity,3.00
