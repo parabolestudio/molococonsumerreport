@@ -1,6 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-const all = 'All categories';
+const all = "All categories";
 
 const colors = {
   "Books & Reference": "#73e4ff",
@@ -10,7 +10,8 @@ const colors = {
   "Other Consumer Pubs": "#876AFF",
   "Photo & Video": "#60e2b7",
   "Social Media": "#876aff",
-  "Utility & Productivity": "#c368f9"
+  "Utility & Productivity": "#c368f9",
+  "All categories": "#D9D9D9",
 };
 
 const getCategoryIcon = (category) => {
@@ -22,7 +23,7 @@ const getCategoryIcon = (category) => {
     "Other Consumer Pubs": "data",
     "Photo & Video": "photo_video",
     "Social Media": "social",
-    "Utility & Productivity": "utility"
+    "Utility & Productivity": "utility",
   };
 
   const iconHeight = 34;
@@ -97,7 +98,7 @@ const getCategoryIcon = (category) => {
     default:
       return null;
   }
-}
+};
 
 export function Vis13() {
   const [data, setData] = useState([]);
@@ -109,10 +110,10 @@ export function Vis13() {
     d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv"
     ).then((data) => {
-        data.forEach((d) => {
-          d["Indexed D7 ROAS"] = +d["Indexed D7 ROAS"];
-          d["Percentile"] = +d["Percentile"];
-        });
+      data.forEach((d) => {
+        d["Indexed D7 ROAS"] = +d["Indexed D7 ROAS"];
+        d["Percentile"] = +d["Percentile"];
+      });
 
       setData(data);
     });
@@ -149,10 +150,8 @@ export function Vis13() {
     new Set(data.map((d) => d["Advertiser Genre"]))
   );
 
-  const [minROAS, maxROAS] = d3.extent(data, d => d["Indexed D7 ROAS"]);
-  const xScale = d3.scaleLinear()
-    .domain([40, 160])
-    .range([0, innerWidth])
+  const [minROAS, maxROAS] = d3.extent(data, (d) => d["Indexed D7 ROAS"]);
+  const xScale = d3.scaleLinear().domain([40, 160]).range([0, innerWidth]);
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
@@ -216,34 +215,51 @@ export function Vis13() {
           })}
         </g>
         <g class="dots">
-          ${advertisers.map(adv => {
-            const advertiserData = data.filter(d => d["Advertiser Genre"] === adv);
-            console.log(selectedCategory)
+          ${advertisers.map((adv) => {
+            const advertiserData = data.filter(
+              (d) => d["Advertiser Genre"] === adv
+            );
+            console.log(selectedCategory);
             return html`<g>
-              ${advertiserData.map(datum => {
+              ${advertiserData.map((datum) => {
                 return html`
                   <circle
                     cx="${xScale(datum["Indexed D7 ROAS"])}"
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
-                    opacity="${selectedCategory === all ? 1
-                      : (datum["Publisher Genre"] === selectedCategory ? 1 : 0.2)}"
+                    opacity="${selectedCategory === all
+                      ? 1
+                      : datum["Publisher Genre"] === selectedCategory
+                      ? 1
+                      : 0.2}"
                     onmouseover="${() => {
-                      if (selectedCategory === all || datum["Publisher Genre"] === selectedCategory) {
+                      if (
+                        selectedCategory === all ||
+                        datum["Publisher Genre"] === selectedCategory
+                      ) {
                         setHoveredItem({
                           advertiser: datum["Advertiser Genre"],
                           publisher: datum["Publisher Genre"],
                           roas: datum["Indexed D7 ROAS"],
-                          x: (margin.left + xScale(datum["Indexed D7 ROAS"]) + 9.5 + 20) / width * 100,
-                          y: (margin.top + yScale(adv)) / height * 100,
+                          x:
+                            ((margin.left +
+                              xScale(datum["Indexed D7 ROAS"]) +
+                              9.5 +
+                              20) /
+                              width) *
+                            100,
+                          y: ((margin.top + yScale(adv)) / height) * 100,
                         });
                       }
                     }}"
                     onmouseout="${() => {
                       setHoveredItem(null);
                     }}"
-                    class="${(selectedCategory === all || datum["Publisher Genre"] === selectedCategory) ? 'active' : 'inactive'}"
+                    class="${selectedCategory === all ||
+                    datum["Publisher Genre"] === selectedCategory
+                      ? "active"
+                      : "inactive"}"
                   />
                 `;
               })}
@@ -257,7 +273,7 @@ export function Vis13() {
 }
 
 function Tooltip({ hoveredItem }) {
-  console.log(hoveredItem)
+  console.log(hoveredItem);
   if (!hoveredItem) return null;
 
   return html`<div
@@ -273,10 +289,8 @@ function Tooltip({ hoveredItem }) {
       <p class="tooltip-value">${hoveredItem.publisher}</p>
     </div>
     <div>
-      <p class="tooltip-label">Indexed cost per payer</p> 
-      <p class="tooltip-value">
-        ${hoveredItem.roas}%
-      </p>
+      <p class="tooltip-label">Indexed cost per payer</p>
+      <p class="tooltip-value">${hoveredItem.roas}%</p>
     </div>
   </div>`;
 }
@@ -287,18 +301,21 @@ export function Vis13Categories() {
 
   // get categories
   useEffect(() => {
-    Promise.all([d3.csv("https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv")]).then(
-      async (files) => {
-        const uniqueCategories = Array.from(
-          new Set(files[0].map((d) => d["Publisher Genre"]))
-        ).sort();
-        setCategories([all, ...uniqueCategories]);
-      }
-    );
+    Promise.all([
+      d3.csv(
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv"
+      ),
+    ]).then(async (files) => {
+      const uniqueCategories = Array.from(
+        new Set(files[0].map((d) => d["Publisher Genre"]))
+      ).sort();
+      setCategories([all, ...uniqueCategories]);
+    });
   }, []);
 
   useEffect(() => {
-    const selectedColor = colors[selectedCategory] || colors["Books & Reference"];
+    const selectedColor =
+      colors[selectedCategory] || colors["Books & Reference"];
     document.documentElement.style.setProperty(
       "--vis13-main-color",
       selectedColor
