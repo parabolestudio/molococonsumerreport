@@ -273,7 +273,7 @@ function Tooltip({ hoveredItem }) {
       <p class="tooltip-value">${hoveredItem.publisher}</p>
     </div>
     <div>
-      <p class="tooltip-label">Indexed Cost Per Payer (CPP)</p> 
+      <p class="tooltip-label">Indexed cost per payer</p> 
       <p class="tooltip-value">
         ${hoveredItem.roas}%
       </p>
