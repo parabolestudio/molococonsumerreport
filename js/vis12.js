@@ -33,6 +33,10 @@ function updateMultiSelect(categories, initialCategories, callback) {
         .map((d) => d.id);
       callback(selectedCategories);
     });
+
+    document.querySelector(
+      "#select2-vis12-select-results > li.select2-results__message"
+    ).innerText = "You can only select 3 categories";
   }
 }
 
@@ -50,8 +54,8 @@ export function Vis12() {
   const startTime = 5;
 
   const shiftHour = (hour) => {
-    return hour < startTime ? 24 + (hour - startTime) : hour - startTime
-  }
+    return hour < startTime ? 24 + (hour - startTime) : hour - startTime;
+  };
 
   // Fetch data on mount
   useEffect(() => {
@@ -128,7 +132,7 @@ export function Vis12() {
   const dataFiltered =
     data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const categories = dataFiltered.map((d) => d.category);
-  console.log(dataFiltered, selectedCategories)
+  console.log(dataFiltered, selectedCategories);
 
   // filter data based on selected categories
   const dataFilteredWithSelectedCategories = dataFiltered
@@ -201,7 +205,9 @@ export function Vis12() {
     const d = dataFilteredWithSelectedCategories[index];
 
     if (d) {
-      const hourValues = d.hour_values.sort((a,b) => a.shifted_hour_of_day - b.shifted_hour_of_day);
+      const hourValues = d.hour_values.sort(
+        (a, b) => a.shifted_hour_of_day - b.shifted_hour_of_day
+      );
 
       return html`<g
         transform="translate(0, ${index *
