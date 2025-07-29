@@ -164,8 +164,6 @@ export function Vis1() {
     return html`<div>Loading...</div>`;
   }
 
-  console.log("Rendering Vis1 with data:", timelineData);
-
   const vis1Container = document.querySelector("#vis1");
   const width =
     vis1Container && vis1Container.offsetWidth
@@ -194,7 +192,6 @@ export function Vis1() {
   const nonGamingTimelineData = timelineData
     .filter((d) => d.category !== "Gaming" && d.country === selectedCountry)
     .sort((a, b) => a.year - b.year);
-  console.log("nonGamingTimelineData:", nonGamingTimelineData);
   const timelineGamingLatestItem =
     gamingTimelineData[gamingTimelineData.length - 1];
   const timelineNonGamingLatestItem =
@@ -211,7 +208,7 @@ export function Vis1() {
     d3.max(nonGamingTimelineData, (d) => d.revenue)
   );
   const xScaleTimeline = d3
-    .scaleTime()
+    .scaleLinear()
     .domain(d3.extent(timelineData, (d) => d.year))
     .range([0, innerWidthTimeline]);
   const yScaleTimeline = d3
@@ -250,7 +247,7 @@ export function Vis1() {
   const heightBar = yScaleCategories.bandwidth();
 
   // set values for country code dropdown
-  const countries = timelineData.map((d) => d.country);
+  const countries = timelineData.map((d) => d.country).sort();
   const uniqueCountries = Array.from(new Set(countries));
   let countryDropdown = document.querySelector("#vis1_dropdown_countries");
   if (countryDropdown) {
