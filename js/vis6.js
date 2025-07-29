@@ -316,15 +316,15 @@ export function Vis6LegendGrowth() {
         </text>
 
         <line
-          x1="${endX + 75}"
+          x1="${endX + 90}"
           y1="${0}"
-          x2="${endX + 75 + lineHorizontalLength}"
+          x2="${endX + 90 + lineHorizontalLength}"
           y2="${0}"
           stroke="#000"
           stroke-linecap="round"
         />
         <text
-          x="${endX + 75 + lineHorizontalLength + 10}"
+          x="${endX + 90 + lineHorizontalLength + 10}"
           y="2"
           dominant-baseline="middle"
           text-anchor="left"
@@ -334,13 +334,13 @@ export function Vis6LegendGrowth() {
           font-family="'Montserrat', sans-serif"
         >
           <tspan
-            x="${endX + 75 + lineHorizontalLength + 10}"
+            x="${endX + 90 + lineHorizontalLength + 10}"
             dy="0"
           >
             Compound Annual
           </tspan>
           <tspan
-            x="${endX + 75 + lineHorizontalLength + 10}"
+            x="${endX + 90 + lineHorizontalLength + 10}"
             dy="1.23rem"
           >
             Growth Rate (CAGR)
