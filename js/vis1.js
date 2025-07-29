@@ -82,7 +82,7 @@ const formatRevenue = (value) => {
 export function Vis1() {
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("Australia");
+  const [selectedCountry, setSelectedCountry] = useState("All countries");
 
   const parseTime = d3.utcParse("%Y-%m");
 
