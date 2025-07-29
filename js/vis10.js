@@ -395,6 +395,7 @@ export function Vis10() {
                             font-style="normal"
                             font-weight="400"
                             line-height="125%"
+                            style="pointer-events: none;"
                           >
                             ${d.category}
                           </text>
@@ -408,6 +409,7 @@ export function Vis10() {
                             font-style="normal"
                             font-weight="700"
                             line-height="100%"
+                            style="pointer-events: none;"
                           >
                             ${formatShare(d.share)}
                           </text>
@@ -424,6 +426,7 @@ export function Vis10() {
                             font-style="normal"
                             font-weight="700"
                             line-height="100%"
+                            style="pointer-events: none;"
                           >
                             ${formatShare(d.share)}
                           </text>
@@ -539,6 +542,10 @@ function Tooltip({ hoveredItem, tooltipData }) {
 
   // Temporary tooltip while waiting for real data
   if (hoveredItem) {
+    let shareLabel = hoveredItem.share.toFixed(2);
+    if (shareLabel < 1) {
+      shareLabel = "<1";
+    }
     return html`<div
       class="tooltip"
       style="left: ${hoveredItem.x}px; top: ${hoveredItem.y}px;"
@@ -546,7 +553,7 @@ function Tooltip({ hoveredItem, tooltipData }) {
       <p class="tooltip-title">${hoveredItem.category}</p>
       <div>
         <p class="tooltip-label">Total time spent</p>
-        <p class="tooltip-value">${hoveredItem.share.toFixed(2)}%</p>
+        <p class="tooltip-value">${shareLabel}%</p>
       </div>
       <div>
         <p class="tooltip-label">Growth (2023-2024)</p>
