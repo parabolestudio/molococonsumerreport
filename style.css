@@ -181,6 +181,8 @@ VIZ 2
 }
 
 .vis2-sankey {
+  margin-bottom: -80px; /* reduce space at the bottom of the sankey to show source closer to sankey */
+
   path {
     transition: fill 0.3s ease-in-out;
   }
