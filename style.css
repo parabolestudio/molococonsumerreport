@@ -344,7 +344,7 @@ VIZ 8
     line-height: 125%;
     border: 1px solid black;
     width: fit-content;
-    margin: 0 auto;
+    margin: 24px auto 0 auto;
     padding: 8px 16px;
     border-radius: 10px;
     cursor: pointer;
