@@ -108,11 +108,10 @@ export function Vis13() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13-CPP.csv"
     ).then((data) => {
       data.forEach((d) => {
-        d["Indexed D7 ROAS"] = +d["Indexed D7 ROAS"];
-        d["Percentile"] = +d["Percentile"];
+        d["value"] = +d["CPP"];
       });
 
       setData(data);
@@ -150,8 +149,8 @@ export function Vis13() {
     new Set(data.map((d) => d["Advertiser Genre"]))
   );
 
-  const [minROAS, maxROAS] = d3.extent(data, (d) => d["Indexed D7 ROAS"]);
-  const xScale = d3.scaleLinear().domain([40, 160]).range([0, innerWidth]);
+  // const [minValue, maxValue] = d3.extent(data, (d) => d["value"]);
+  const xScale = d3.scaleLinear().domain([0, 150]).range([0, innerWidth]);
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
@@ -219,12 +218,11 @@ export function Vis13() {
             const advertiserData = data.filter(
               (d) => d["Advertiser Genre"] === adv
             );
-            console.log(selectedCategory);
             return html`<g>
               ${advertiserData.map((datum) => {
                 return html`
                   <circle
-                    cx="${xScale(datum["Indexed D7 ROAS"])}"
+                    cx="${xScale(datum["value"])}"
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
@@ -241,12 +239,9 @@ export function Vis13() {
                         setHoveredItem({
                           advertiser: datum["Advertiser Genre"],
                           publisher: datum["Publisher Genre"],
-                          roas: datum["Indexed D7 ROAS"],
+                          roas: datum["value"],
                           x:
-                            ((margin.left +
-                              xScale(datum["Indexed D7 ROAS"]) +
-                              9.5 +
-                              20) /
+                            ((margin.left + xScale(datum["value"]) + 9.5 + 20) /
                               width) *
                             100,
                           y: ((margin.top + yScale(adv)) / height) * 100,
@@ -273,7 +268,6 @@ export function Vis13() {
 }
 
 function Tooltip({ hoveredItem }) {
-  console.log(hoveredItem);
   if (!hoveredItem) return null;
 
   return html`<div
