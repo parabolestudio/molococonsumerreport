@@ -151,7 +151,7 @@ export function Vis13() {
 
   // const [minValue, maxValue] = d3.extent(data, (d) => d["value"]);
   // const xScale = d3.scaleLinear().domain([0, 150]).range([0, innerWidth]);
-  const xScale = d3.scaleLinear().domain([30, 150]).range([0, innerWidth]);
+  const xScale = d3.scaleLinear().domain([40, 150]).range([0, innerWidth]);
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
