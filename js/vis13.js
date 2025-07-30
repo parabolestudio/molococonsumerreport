@@ -170,7 +170,7 @@ export function Vis13() {
                 text-anchor="middle"
                 class="charts-text-body"
               >
-                ${tick}%
+                ${tick}
               </text>
             </g>`;
           })}
@@ -284,7 +284,7 @@ function Tooltip({ hoveredItem }) {
     </div>
     <div>
       <p class="tooltip-label">Indexed cost per payer</p>
-      <p class="tooltip-value">${hoveredItem.roas}%</p>
+      <p class="tooltip-value">${hoveredItem.roas}</p>
     </div>
   </div>`;
 }
