@@ -325,7 +325,7 @@ export function Vis1() {
         <path
           d="${lineGenerator(gamingTimelineData)}"
           fill="none"
-          stroke="#03004C"
+          stroke="#040078"
           stroke-width="4"
         />
         <path
