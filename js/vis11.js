@@ -260,7 +260,7 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
         </svg>
         <p class="number">${numberApps}</p>
         <p class="label">IAE apps used</p>
-        <p class="sublabel">in the past 30 days</p>
+        <p class="sublabel">in a month</p>
       </div>
       <div class="element2">
         <svg viewBox="0 0 200 200">
@@ -275,7 +275,7 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
         </svg>
         <p class="number">${numberAdOpportunities}</p>
         <p class="label">Ad opportunities</p>
-        <p class="sublabel">in the past 24 hours</p>
+        <p class="sublabel">in 24 hours</p>
       </div>
       <div class="element3">
         <p class="label">Top ad opportunities</p>
@@ -333,7 +333,7 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   }, [selectedCountry, selectedCategory, timeData]);
 
   return html`<div class="vis-11-time left">
-    <p class="label">Where the users spend their time</p>
+    <p class="label">Where users spend their time</p>
     <p class="sublabel">Time spent vs. general population</p>
     <div class="vis-11-time-grid">
       ${filteredTimeData.map(
