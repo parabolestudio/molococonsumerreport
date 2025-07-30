@@ -8,7 +8,7 @@ function CategoryIcon({ category, heightBar }) {
     Utilities: "utility.svg",
     Entertainment: "entertainment.svg",
     "Photo & Video": "photo and video.svg",
-    Productivity: "utility.svg",
+    Productivity: "productivity.svg",
     Lifestyle: "lifestyle.svg",
     Education: "education.svg",
     "Health & Fitness": "health and fitness.svg",
