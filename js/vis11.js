@@ -26,7 +26,8 @@ function getCategoryLabel(category) {
     Finance: "Finance",
     RMG: "Real Money Gaming",
     Travel: "Travel",
-    "On Demand": "On Demand",
+    // "On Demand": "On Demand",
+    "On Demand": "Delivery & Food",
     Social: "Social",
   };
   return labelMap[category] || category;
