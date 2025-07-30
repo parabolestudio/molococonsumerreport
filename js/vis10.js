@@ -485,7 +485,7 @@ export function Vis10() {
                         x="${shareRadiusScale(d.share) + 10}"
                         y="${10}"
                         class="charts-text-value-small"
-                        >+${d.yearGrowth.toFixed(0)}%
+                        >${d.yearGrowth.toFixed(0)}%
                       </text>
                     </g>
                   `;
