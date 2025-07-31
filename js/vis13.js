@@ -148,9 +148,19 @@ export function Vis13() {
   const advertisers = Array.from(
     new Set(data.map((d) => d["Advertiser Genre"]))
   );
+  const advertisersMapping = {
+    Entertainment: "Entertainment",
+    Finance: "Finance",
+    "Food & Drink": "Food & Delivery",
+    Gaming: "Gaming",
+    "Other Consumer Advertisers": "Other",
+    RMG: "RMG",
+    Shopping: "Shopping",
+    "Social Media": "Social Media",
+    Travel: "Travel",
+    "Utility & Productivity": "Utility & Productivity",
+  };
 
-  // const [minValue, maxValue] = d3.extent(data, (d) => d["value"]);
-  // const xScale = d3.scaleLinear().domain([0, 150]).range([0, innerWidth]);
   const xScale = d3.scaleLinear().domain([40, 200]).range([0, innerWidth]);
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
@@ -186,9 +196,8 @@ export function Vis13() {
           />
         </g>
         <g class="y-axis">
-          ${advertisers.map((adv, index) => {
-            const y = yScale(adv);
-            return html`<g transform="translate(0, ${y})">
+          ${advertisers.map((adv) => {
+            return html`<g transform="translate(0, ${yScale(adv)})">
               <text
                 x="-10"
                 y="5"
@@ -201,7 +210,7 @@ export function Vis13() {
                 font-weight="400"
                 line-height="125%"
               >
-                ${adv}
+                ${advertisersMapping[adv]}
               </text>
               <line
                 x1="0"
@@ -317,6 +326,18 @@ export function Vis13Categories() {
     );
   }, [selectedCategory]);
 
+  const categoriesMapping = {
+    "All categories": "All categories",
+    "Books & Reference": "Books & Reference",
+    Entertainment: "Entertainment",
+    Gaming: "Gaming",
+    "Health & Fitness": "Health & Fitness",
+    "Other Consumer Pubs": "Other Consumer",
+    "Photo & Video": "Photo & Video",
+    "Social Media": "Social Media",
+    "Utility & Productivity": "Utility & Productivity",
+  };
+
   const categoryItems = categories.map((category) => {
     const svgContent = getCategoryIcon(category);
 
@@ -339,7 +360,7 @@ export function Vis13Categories() {
         class="category-icon"
         dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
       ></div>
-      <span>${category}</span>
+      <span>${categoriesMapping[category]}</span>
     </li>`;
   });
 
