@@ -135,7 +135,6 @@ export function Vis12() {
   const dataFiltered =
     data.filter((d) => d.country === selectedCountry)[0]?.categories || [];
   const categories = dataFiltered.map((d) => d.category);
-  console.log(dataFiltered, selectedCategories);
 
   // filter data based on selected categories
   const dataFilteredWithSelectedCategories = dataFiltered

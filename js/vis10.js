@@ -34,9 +34,6 @@ export function Vis10() {
       const uniqueCategories = Array.from(
         new Set(data.map((d) => d.category))
       ).sort();
-      console.log("Unique categories:", uniqueCategories);
-
-      //
 
       setCategories(uniqueCategories);
 
