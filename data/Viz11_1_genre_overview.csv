@@ -1,92 +1,92 @@
 Country,Country code,Genre,Apps used in the past 30 days,Ad opportunity every 24h,Top Ad Opportunity #1,Top Ad Opportunity #2,Top Ad Opportunity #3
-Australia,AUS,RMG,41,47,Gaming,Social,Utility and Productivity
-Australia,AUS,E-Commerce,17,13,Gaming,Utility and Productivity,Content
-Australia,AUS,On Demand,21,19,Gaming,Utility and Productivity,Social
-Australia,AUS,Travel,13,9,Gaming,Utility and Productivity,Finance
-Australia,AUS,Finance,38,51,Finance,Social,Gaming
-Australia,AUS,Entertainment,35,28,Gaming,Utility and Productivity,Commerce
-Australia,AUS,Social,21,14,Social,Gaming,Utility and Productivity
-Brazil,BRA,RMG,18,9,Social,RMG,Finance
-Brazil,BRA,E-Commerce,22,10,Gaming,Utility and Productivity,Social
-Brazil,BRA,On Demand,16,11,Gaming,Utility and Productivity,Commerce
-Brazil,BRA,Travel,28,14,Utility and Productivity,Finance,Gaming
-Brazil,BRA,Finance,38,11,Utility and Productivity,Gaming,Commerce
-Brazil,BRA,Entertainment,43,20,Gaming,Utility and Productivity,Commerce
-Brazil,BRA,Social,41,18,Social,Utility and Productivity,Gaming
-Canada,CAN,RMG,18,26,Gaming,Utility and Productivity,Social
-Canada,CAN,E-Commerce,15,16,Gaming,Utility and Productivity,Content
-Canada,CAN,On Demand,22,25,Utility and Productivity,Gaming,Social
-Canada,CAN,Travel,16,15,Utility and Productivity,Gaming,Finance
-Canada,CAN,Finance,21,24,Finance,Social,Gaming
-Canada,CAN,Entertainment,35,40,Gaming,Utility and Productivity,Social
-Canada,CAN,Social,15,18,Social,Utility and Productivity,Gaming
-Germany,DEU,RMG,18,18,Gaming,Utility and Productivity,Social
-Germany,DEU,E-Commerce,13,19,Gaming,Utility and Productivity,Social
-Germany,DEU,On Demand,9,16,Gaming,Utility and Productivity,Social
-Germany,DEU,Travel,16,13,Utility and Productivity,Social,Gaming
-Germany,DEU,Finance,31,41,Gaming,Finance,Social
-Germany,DEU,Entertainment,33,27,Gaming,Utility and Productivity,Social
-Germany,DEU,Social,19,11,Social,Utility and Productivity,Gaming
-France,FRA,RMG,16,18,Gaming,Social,Utility and Productivity
-France,FRA,E-Commerce,14,18,Gaming,Utility and Productivity,Commerce
-France,FRA,On Demand,16,25,Gaming,Utility and Productivity,Social
-France,FRA,Travel,18,14,Utility and Productivity,Gaming,Social
-France,FRA,Finance,27,21,Finance,Gaming,Social
-France,FRA,Entertainment,32,25,Gaming,Utility and Productivity,Commerce
-France,FRA,Social,17,14,Social,Utility and Productivity,Gaming
-U.K.,GBR,RMG,15,24,Gaming,Utility and Productivity,Social
-U.K.,GBR,E-Commerce,11,22,Gaming,Utility and Productivity,Commerce
-U.K.,GBR,On Demand,10,16,Gaming,Utility and Productivity,Social
-U.K.,GBR,Travel,15,12,Social,Utility and Productivity,Gaming
-U.K.,GBR,Finance,26,31,Finance,Gaming,Social
-U.K.,GBR,Entertainment,30,32,Gaming,Utility and Productivity,Social
-U.K.,GBR,Social,14,11,Social,Utility and Productivity,Gaming
-Indonesia,IDN,RMG,17,12,Social,Finance,Utility and Productivity
-Indonesia,IDN,E-Commerce,55,8,Utility and Productivity,Gaming,Social
-Indonesia,IDN,On Demand,36,11,Gaming,Utility and Productivity,Social
-Indonesia,IDN,Travel,52,10,Utility and Productivity,Gaming,Social
-Indonesia,IDN,Finance,60,10,Utility and Productivity,Gaming,Social
-Indonesia,IDN,Entertainment,62,15,Gaming,Utility and Productivity,Social
-Indonesia,IDN,Social,52,10,Social,Utility and Productivity,Gaming
-India,IND,RMG,54,14,Social,Finance,Utility and Productivity
-India,IND,E-Commerce,31,10,Utility and Productivity,Social,Gaming
-India,IND,On Demand,28,11,Social,Utility and Productivity,Gaming
-India,IND,Travel,23,9,Social,Utility and Productivity,Finance
-India,IND,Finance,19,15,Finance,Social,Utility and Productivity
-India,IND,Entertainment,35,11,Utility and Productivity,Social,Gaming
-India,IND,Social,47,13,Social,Utility and Productivity,Finance
-Japan,JPN,RMG,23,12,Social,RMG,Gaming
-Japan,JPN,E-Commerce,21,37,Gaming,Utility and Productivity,Commerce
-Japan,JPN,On Demand,23,40,Gaming,Utility and Productivity,Commerce
-Japan,JPN,Travel,19,19,Finance,Gaming,Utility and Productivity
-Japan,JPN,Finance,30,28,Finance,Social,Utility and Productivity
-Japan,JPN,Entertainment,40,56,Gaming,Utility and Productivity,Commerce
-Japan,JPN,Social,34,50,Gaming,Utility and Productivity,Social
-South Korea,KOR,RMG,89,20,Finance,Social,Gaming
-South Korea,KOR,E-Commerce,83,22,Gaming,Utility and Productivity,Commerce
-South Korea,KOR,On Demand,75,20,Gaming,Utility and Productivity,Commerce
-South Korea,KOR,Travel,83,22,Gaming,Utility and Productivity,Commerce
-South Korea,KOR,Finance,96,25,Gaming,Utility and Productivity,Finance
-South Korea,KOR,Entertainment,108,27,Gaming,Utility and Productivity,Commerce
-South Korea,KOR,Social,108,23,Social,Finance,Gaming
-Mexico,MEX,RMG,13,13,Utility and Productivity,Gaming,Social
-Mexico,MEX,E-Commerce,16,11,Gaming,Utility and Productivity,Social
-Mexico,MEX,On Demand,8,10,Gaming,Utility and Productivity,Commerce
-Mexico,MEX,Travel,9,7,Finance,Utility and Productivity,Social
-Mexico,MEX,Finance,34,20,Finance,Gaming,Commerce
-Mexico,MEX,Entertainment,34,19,Utility and Productivity,Gaming,Commerce
-Mexico,MEX,Social,25,18,Social,Utility and Productivity,Gaming
-U.S.,USA,RMG,28,18,Gaming,Utility and Productivity,Social
-U.S.,USA,E-Commerce,21,13,Gaming,Utility and Productivity,Social
-U.S.,USA,On Demand,41,25,Gaming,Utility and Productivity,Social
-U.S.,USA,Travel,36,28,Gaming,Utility and Productivity,Social
-U.S.,USA,Finance,45,32,Gaming,Utility and Productivity,Social
-U.S.,USA,Entertainment,80,54,Gaming,Utility and Productivity,Social
-U.S.,USA,Social,20,28,Social,Utility and Productivity,Gaming
-Vietnam,VNM,RMG,15,6,Social,Gaming,Finance
-Vietnam,VNM,E-Commerce,18,9,Finance,Gaming,Utility and Productivity
-Vietnam,VNM,On Demand,23,9,Finance,Gaming,Social
-Vietnam,VNM,Travel,27,9,Gaming,Utility and Productivity,Finance
-Vietnam,VNM,Finance,33,10,Finance,Social,Utility and Productivity
-Vietnam,VNM,Entertainment,38,12,Gaming,Utility and Productivity,Commerce
-Vietnam,VNM,Social,34,10,Social,Gaming,Utility and Productivity
+Australia,AUS,RMG,41,47,Gaming,Social Media,Health & Fitness
+Australia,AUS,E-Commerce,17,13,Health & Fitness,Gaming,Utility & Productivity
+Australia,AUS,On Demand,21,19,Health & Fitness,Gaming,Utility & Productivity
+Australia,AUS,Travel,13,9,Health & Fitness,Lifestyle,Utility & Productivity
+Australia,AUS,Finance,38,51,Finance,Health & Fitness,Social Media
+Australia,AUS,Entertainment,35,28,Gaming,Health & Fitness,Social Media
+Australia,AUS,Social,21,14,Social Media,Utility & Productivity,Health & Fitness
+Brazil,BRA,RMG,18,9,Social Media,Finance,Lifestyle
+Brazil,BRA,E-Commerce,22,10,Gaming,Health & Fitness,Utility & Productivity
+Brazil,BRA,On Demand,16,11,Health & Fitness,Gaming,Utility & Productivity
+Brazil,BRA,Travel,28,14,Gaming,Utility & Productivity,Health & Fitness
+Brazil,BRA,Finance,38,11,Utility & Productivity,Gaming,Health & Fitness
+Brazil,BRA,Entertainment,43,20,Gaming,Utility & Productivity,Social Media
+Brazil,BRA,Social,41,18,Social Media,Utility & Productivity,Gaming
+Canada,CAN,RMG,18,26,Health & Fitness,Gaming,Lifestyle
+Canada,CAN,E-Commerce,15,16,Health & Fitness,Gaming,Utility & Productivity
+Canada,CAN,On Demand,22,25,Health & Fitness,Utility & Productivity,Gaming
+Canada,CAN,Travel,16,15,Utility & Productivity,Social Media,Health & Fitness
+Canada,CAN,Finance,21,24,Finance,Health & Fitness,Social Media
+Canada,CAN,Entertainment,35,40,Gaming,Health & Fitness,Social Media
+Canada,CAN,Social,15,18,Social Media,Utility & Productivity,Health & Fitness
+Germany,DEU,RMG,18,18,Gaming,Social Media,Lifestyle
+Germany,DEU,E-Commerce,13,19,Gaming,Health & Fitness,Utility & Productivity
+Germany,DEU,On Demand,9,16,Health & Fitness,Gaming,Utility & Productivity
+Germany,DEU,Travel,16,13,Health & Fitness,Social Media,Utility & Productivity
+Germany,DEU,Finance,31,41,Utility & Productivity,Social Media,Finance
+Germany,DEU,Entertainment,33,27,Social Media,Utility & Productivity,Gaming
+Germany,DEU,Social,19,11,Social Media,Utility & Productivity,Health & Fitness
+France,FRA,RMG,16,18,Gaming,Social Media,Health & Fitness
+France,FRA,E-Commerce,14,18,Gaming,Health & Fitness,Utility & Productivity
+France,FRA,On Demand,16,25,Health & Fitness,Gaming,Social Media
+France,FRA,Travel,18,14,Social Media,Utility & Productivity,Health & Fitness
+France,FRA,Finance,27,21,Social Media,Finance,Health & Fitness
+France,FRA,Entertainment,32,25,Social Media,Utility & Productivity,Gaming
+France,FRA,Social,17,14,Social Media,Utility & Productivity,Health & Fitness
+U.K.,GBR,RMG,15,24,Gaming,Health & Fitness,Lifestyle
+U.K.,GBR,E-Commerce,11,22,Gaming,Health & Fitness,Utility & Productivity
+U.K.,GBR,On Demand,10,16,Health & Fitness,Gaming,Social Media
+U.K.,GBR,Travel,15,12,Health & Fitness,Gaming,Utility & Productivity
+U.K.,GBR,Finance,26,31,Social Media,Finance,Health & Fitness
+U.K.,GBR,Entertainment,30,32,Social Media,Gaming,Health & Fitness
+U.K.,GBR,Social,14,11,Social Media,Utility & Productivity,Health & Fitness
+Indonesia,IDN,RMG,17,12,Social Media,Finance,Lifestyle
+Indonesia,IDN,E-Commerce,55,8,Utility & Productivity,Gaming,Social Media
+Indonesia,IDN,On Demand,36,11,Finance,Social Media,Health & Fitness
+Indonesia,IDN,Travel,52,10,Gaming,Utility & Productivity,Social Media
+Indonesia,IDN,Finance,60,10,Gaming,Utility & Productivity,Social Media
+Indonesia,IDN,Entertainment,62,15,Utility & Productivity,Gaming,Social Media
+Indonesia,IDN,Social,52,10,Social Media,Utility & Productivity,Gaming
+India,IND,RMG,54,14,Social Media,Utility & Productivity,Finance
+India,IND,E-Commerce,31,10,Utility & Productivity,Social Media,Gaming
+India,IND,On Demand,28,11,Social Media,Utility & Productivity,Gaming
+India,IND,Travel,23,9,Social Media,Utility & Productivity,Gaming
+India,IND,Finance,19,15,Utility & Productivity,Social Media,Gaming
+India,IND,Entertainment,35,11,Social Media,Utility & Productivity,Gaming
+India,IND,Social,47,13,Social Media,Utility & Productivity,Gaming
+Japan,JPN,RMG,23,12,Social Media,Health & Fitness,Books & Reference
+Japan,JPN,E-Commerce,21,37,Gaming,Health & Fitness,Utility & Productivity
+Japan,JPN,On Demand,23,40,Gaming,Health & Fitness,Utility & Productivity
+Japan,JPN,Travel,19,19,Health & Fitness,Finance,Lifestyle
+Japan,JPN,Finance,30,28,Gaming,Health & Fitness,Utility & Productivity
+Japan,JPN,Entertainment,40,56,Gaming,Health & Fitness,Social Media
+Japan,JPN,Social,34,50,Social Media,Gaming,Health & Fitness
+South Korea,KOR,RMG,89,20,Social Media,Finance,Education
+South Korea,KOR,E-Commerce,83,22,Gaming,Health & Fitness,Utility & Productivity
+South Korea,KOR,On Demand,75,20,Gaming,Health & Fitness,Utility & Productivity
+South Korea,KOR,Travel,83,22,Gaming,Health & Fitness,Utility & Productivity
+South Korea,KOR,Finance,96,25,Gaming,Health & Fitness,Utility & Productivity
+South Korea,KOR,Entertainment,108,27,Gaming,Health & Fitness,Utility & Productivity
+South Korea,KOR,Social,108,23,Social Media,Health & Fitness,Utility & Productivity
+Mexico,MEX,RMG,13,13,Lifestyle,Utility & Productivity,Social Media
+Mexico,MEX,E-Commerce,16,11,Gaming,Health & Fitness,Utility & Productivity
+Mexico,MEX,On Demand,8,10,Health & Fitness,Gaming,Lifestyle
+Mexico,MEX,Travel,9,7,Gaming,Utility & Productivity,Health & Fitness
+Mexico,MEX,Finance,34,20,Utility & Productivity,Health & Fitness,Gaming
+Mexico,MEX,Entertainment,34,19,Utility & Productivity,Gaming,Social Media
+Mexico,MEX,Social,25,18,Social Media,Utility & Productivity,Health & Fitness
+U.S.,USA,RMG,28,18,Gaming,Health & Fitness,Utility & Productivity
+U.S.,USA,E-Commerce,21,13,Gaming,Health & Fitness,News & Magazines
+U.S.,USA,On Demand,41,25,Gaming,Health & Fitness,News & Magazines
+U.S.,USA,Travel,36,28,Gaming,Utility & Productivity,Health & Fitness
+U.S.,USA,Finance,45,32,Gaming,Health & Fitness,Utility & Productivity
+U.S.,USA,Entertainment,80,54,Social Media,Gaming,Utility & Productivity
+U.S.,USA,Social,20,28,Social Media,Utility & Productivity,Gaming
+Vietnam,VNM,RMG,15,6,Social Media,Gaming,Health & Fitness
+Vietnam,VNM,E-Commerce,18,9,Health & Fitness,Lifestyle,Finance
+Vietnam,VNM,On Demand,23,9,Finance,Health & Fitness,Social Media
+Vietnam,VNM,Travel,27,9,Health & Fitness,Gaming,Utility & Productivity
+Vietnam,VNM,Finance,33,10,Gaming,Utility & Productivity,Health & Fitness
+Vietnam,VNM,Entertainment,38,12,Gaming,Social Media,Utility & Productivity
+Vietnam,VNM,Social,34,10,Social Media,Gaming,Utility & Productivity
