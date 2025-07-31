@@ -148,7 +148,7 @@ export function Vis13() {
 
   const width = 1000;
   const height = 800;
-  const margin = { top: 20, right: 20, bottom: 60, left: 160 };
+  const margin = { top: 120, right: 20, bottom: 60, left: 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -179,28 +179,44 @@ export function Vis13() {
     >
       <g transform="translate(${margin.left}, ${margin.top})">
         <g class="x-axis">
-          ${xScale.ticks(7).map((tick, index) => {
-            const x = xScale(tick);
-            return html`<g transform="translate(${x}, 0)">
+          ${xScale.ticks(7).map((tick) => {
+            return html`
               <text
+                transform="translate(${xScale(tick)}, 0)"
                 x="0"
-                y="${innerHeight + 50}"
+                y="${-margin.top + 40}"
                 text-anchor="middle"
                 class="charts-text-body"
               >
                 ${tick}
               </text>
-            </g>`;
+            `;
           })}
           <line
             x1="${xScale(100)}"
             x2="${xScale(100)}"
-            y1="${-20}"
+            y1="${-margin.top + 50}"
             y2="${innerHeight + 20}"
             stroke="#d9d9d9"
             stroke-width="2"
             stroke-dasharray="2 5"
           />
+          <text
+            x="${innerWidth / 2}"
+            y="${-margin.top + 10}"
+            text-anchor="middle"
+            class="charts-text-body-bold"
+          >
+            Indexed CPP
+          </text>
+          <text
+            x="${-margin.left}"
+            y="${-30}"
+            text-anchor="start"
+            class="charts-text-body-bold"
+          >
+            Advertiser category
+          </text>
         </g>
         <g class="y-axis">
           ${advertisers.map((adv) => {
