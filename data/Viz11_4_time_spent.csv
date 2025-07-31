@@ -96,21 +96,21 @@ Australia,AUS,On Demand,Food & Drink,790
 Australia,AUS,Travel,Medical,156
 Australia,AUS,Finance,News,144
 Australia,AUS,Entertainment,Lifestyle,112
-Australia,AUS,Social,Social Networking,243
+Australia,AUS,Social,Social Media,243
 Brazil,BRA,RMG,Casino Games,1182
 Brazil,BRA,E-Commerce,Casino Games,555
 Brazil,BRA,On Demand,Food & Drink,405
 Brazil,BRA,Travel,Travel,1393
 Brazil,BRA,Finance,Casino Games,340
 Brazil,BRA,Entertainment,News,105
-Brazil,BRA,Social,Social Networking,211
+Brazil,BRA,Social,Social Media,211
 Canada,CAN,RMG,Casino Games,1600
 Canada,CAN,E-Commerce,Food & Drink,301
 Canada,CAN,On Demand,Casino Games,391
 Canada,CAN,Travel,Casino Games,259
 Canada,CAN,Finance,Books,58
 Canada,CAN,Entertainment,Medical,129
-Canada,CAN,Social,Social Networking,244
+Canada,CAN,Social,Social Media,244
 Germany,DEU,RMG,Games / Casino,691
 Germany,DEU,E-Commerce,Food & Drink,294
 Germany,DEU,On Demand,Food & Drink,323
@@ -124,14 +124,14 @@ France,FRA,On Demand,Casino Games,501
 France,FRA,Travel,Food & Drink,179
 France,FRA,Finance,Casino Games,491
 France,FRA,Entertainment,Lifestyle,112
-France,FRA,Social,Social Networking,359
+France,FRA,Social,Social Media,359
 U.K.,GBR,RMG,Sports,1659
 U.K.,GBR,E-Commerce,Food & Drink,304
 U.K.,GBR,On Demand,Shopping,155
 U.K.,GBR,Travel,Medical,198
 U.K.,GBR,Finance,Casino Games,379
 U.K.,GBR,Entertainment,Education,155
-U.K.,GBR,Social,Social Networking,277
+U.K.,GBR,Social,Social Media,277
 Indonesia,IDN,RMG,Casino Games,433
 Indonesia,IDN,E-Commerce,Medical,204
 Indonesia,IDN,On Demand,Travel,306
@@ -145,7 +145,7 @@ India,IND,On Demand,Shopping,107
 India,IND,Travel,Food & Drink,202
 India,IND,Finance,Weather,226
 India,IND,Entertainment,Lifestyle,161
-India,IND,Social,Social Networking,228
+India,IND,Social,Social Media,228
 Japan,JPN,RMG,Casino Games,653
 Japan,JPN,E-Commerce,Lifestyle,1303
 Japan,JPN,On Demand,Finance,196
@@ -166,7 +166,7 @@ Mexico,MEX,On Demand,Medical,248
 Mexico,MEX,Travel,Weather,286
 Mexico,MEX,Finance,Casino Games,551
 Mexico,MEX,Entertainment,Casino Games,151
-Mexico,MEX,Social,Social Networking,192
+Mexico,MEX,Social,Social Media,192
 U.S.,USA,RMG,Casino Games,1980
 U.S.,USA,E-Commerce,Casino Games,787
 U.S.,USA,On Demand,Casino Games,332
@@ -180,7 +180,7 @@ Vietnam,VNM,On Demand,Sports,911
 Vietnam,VNM,Travel,Sports,355
 Vietnam,VNM,Finance,Health & Fitness,530
 Vietnam,VNM,Entertainment,Medical,153
-Vietnam,VNM,Social,Social Networking,189
+Vietnam,VNM,Social,Social Media,189
 Australia,AUS,RMG,Finance,143
 Australia,AUS,E-Commerce,Medical,448
 Australia,AUS,On Demand,Casual Games,365
@@ -208,7 +208,7 @@ Germany,DEU,On Demand,Shopping,152
 Germany,DEU,Travel,Food & Drink,105
 Germany,DEU,Finance,News,186
 Germany,DEU,Entertainment,Books,109
-Germany,DEU,Social,Social Networking,372
+Germany,DEU,Social,Social Media,372
 France,FRA,RMG,News,296
 France,FRA,E-Commerce,Lifestyle,255
 France,FRA,On Demand,Sports,312
@@ -243,14 +243,14 @@ Japan,JPN,On Demand,Weather,176
 Japan,JPN,Travel,Food & Drink,214
 Japan,JPN,Finance,Sports,259
 Japan,JPN,Entertainment,Graphics & Design,99
-Japan,JPN,Social,Social Networking,175
+Japan,JPN,Social,Social Media,175
 South Korea,KOR,RMG,Finance,212
 South Korea,KOR,E-Commerce,Weather,615
 South Korea,KOR,On Demand,Travel,191
 South Korea,KOR,Travel,Finance,227
 South Korea,KOR,Finance,Casual Games,341
 South Korea,KOR,Entertainment,Weather,130
-South Korea,KOR,Social,Social Networking,175
+South Korea,KOR,Social,Social Media,175
 Mexico,MEX,RMG,Travel,222
 Mexico,MEX,E-Commerce,Food & Drink,338
 Mexico,MEX,On Demand,Finance,196
