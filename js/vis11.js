@@ -28,7 +28,7 @@ function getCategoryLabel(category) {
     Travel: "Travel",
     // "On Demand": "On Demand",
     "On Demand": "Delivery & Food",
-    Social: "Social",
+    Social: "Social Media",
   };
   return labelMap[category] || category;
 }
