@@ -1,274 +1,274 @@
 Country,Country code,Genre,Growth,Position,Top Growing App
-Australia,AUS,RMG,23%,1,AFL Live
-Australia,AUS,E-Commerce,16%,1,ChatGPT
-Australia,AUS,On Demand,11%,1,Coles
-Australia,AUS,Travel,13%,1,Microsoft Authenticator
-Australia,AUS,Finance,14%,1,ChatGPT
-Australia,AUS,Entertainment,9%,1,Snapchat
-Australia,AUS,Social,13%,1,Temu
-Australia,AUS,RMG,9%,2,footytips
-Australia,AUS,E-Commerce,12%,2,Temu
-Australia,AUS,On Demand,9%,2,Reddit
-Australia,AUS,Travel,13%,2,Microsoft OneDrive
-Australia,AUS,Finance,12%,2,Microsoft Outlook
-Australia,AUS,Entertainment,6%,2,9Now
-Australia,AUS,Social,10%,2,realestate.com.au
-Australia,AUS,RMG,9%,3,Microsoft Word
-Australia,AUS,E-Commerce,9%,3,My Optus
-Australia,AUS,On Demand,7%,3,Adobe Acrobat Reader
-Australia,AUS,Travel,12%,3,Microsoft Outlook
-Australia,AUS,Finance,11%,3,Messenger
-Australia,AUS,Entertainment,5%,3,AFL Live
-Australia,AUS,Social,10%,3,LinkedIn
-Brazil,BRA,RMG,12%,1,ChatGPT
-Brazil,BRA,E-Commerce,14%,1,ChatGPT
-Brazil,BRA,On Demand,13%,1,ChatGPT
-Brazil,BRA,Travel,11%,1,Amazon Prime Video
-Brazil,BRA,Finance,14%,1,ChatGPT
-Brazil,BRA,Entertainment,12%,1,ChatGPT
-Brazil,BRA,Social,10%,1,ChatGPT
-Brazil,BRA,RMG,8%,2,Receita Federal
-Brazil,BRA,E-Commerce,6%,2,gov.br
-Brazil,BRA,On Demand,4%,2,Receita Federal
-Brazil,BRA,Travel,10%,2,ChatGPT
-Brazil,BRA,Finance,4%,2,Temu
-Brazil,BRA,Entertainment,4%,2,Canva
-Brazil,BRA,Social,4%,2,Canva
-Brazil,BRA,RMG,7%,3,Cartola
-Brazil,BRA,E-Commerce,4%,3,Receita Federal
-Brazil,BRA,On Demand,3%,3,Minecraft
-Brazil,BRA,Travel,7%,3,Max
-Brazil,BRA,Finance,4%,3,Threads
-Brazil,BRA,Entertainment,3%,3,Pinterest
-Brazil,BRA,Social,4%,3,gov.br
-Canada,CAN,RMG,6%,1,Just Eat Takeaway.com
-Canada,CAN,E-Commerce,5%,1,Kijiji
-Canada,CAN,On Demand,11%,1,Dairy Queen
-Canada,CAN,Travel,10%,1,PC Optimum
-Canada,CAN,Finance,8%,1,ChatGPT
-Canada,CAN,Entertainment,5%,1,LinkedIn
-Canada,CAN,Social,7%,1,Facebook
-Canada,CAN,RMG,6%,2,Instagram
-Canada,CAN,E-Commerce,4%,2,Disney+
-Canada,CAN,On Demand,11%,2,Subway
-Canada,CAN,Travel,9%,2,TD Bank
-Canada,CAN,Finance,5%,2,Slack
-Canada,CAN,Entertainment,5%,2,Block Blast!
-Canada,CAN,Social,6%,2,Netflix
-Canada,CAN,RMG,6%,3,Sportsnet
-Canada,CAN,E-Commerce,4%,3,QR & Barcode Scanner
-Canada,CAN,On Demand,7%,3,ChatGPT
-Canada,CAN,Travel,7%,3,Strava
-Canada,CAN,Finance,5%,3,Microsoft OneDrive
-Canada,CAN,Entertainment,5%,3,TikTok
-Canada,CAN,Social,5%,3,ChatGPT
-Germany,DEU,RMG,6%,1,komoot
-Germany,DEU,E-Commerce,7%,1,ChatGPT
-Germany,DEU,On Demand,9%,1,ChatGPT
-Germany,DEU,Travel,8%,1,ChatGPT
-Germany,DEU,Finance,8%,1,komoot
-Germany,DEU,Entertainment,6%,1,ChatGPT
-Germany,DEU,Social,9%,1,ChatGPT
-Germany,DEU,RMG,5%,2,ChatGPT
-Germany,DEU,E-Commerce,6%,2,Temu
-Germany,DEU,On Demand,5%,2,Pinterest
-Germany,DEU,Travel,7%,2,komoot
-Germany,DEU,Finance,6%,2,ChatGPT
-Germany,DEU,Entertainment,3%,2,eBay
-Germany,DEU,Social,6%,2,Discord
-Germany,DEU,RMG,5%,3,Kleinanzeigen
-Germany,DEU,E-Commerce,5%,3,DB Navigator
-Germany,DEU,On Demand,4%,3,eBay
-Germany,DEU,Travel,5%,3,Temu
-Germany,DEU,Finance,5%,3,Lidl Plus
-Germany,DEU,Entertainment,2%,3,Post & DHL
-Germany,DEU,Social,5%,3,Temu
-France,FRA,RMG,14%,1,FDJ Loto
-France,FRA,E-Commerce,7%,1,ChatGPT
-France,FRA,On Demand,5%,1,ChatGPT
-France,FRA,Travel,6%,1,Airbnb
-France,FRA,Finance,9%,1,ChatGPT
-France,FRA,Entertainment,8%,1,ChatGPT
-France,FRA,Social,5%,1,Spotify
-France,FRA,RMG,7%,2,leboncoin
-France,FRA,E-Commerce,5%,2,Snapchat
-France,FRA,On Demand,5%,2,Messenger
-France,FRA,Travel,5%,2,Pinterest
-France,FRA,Finance,5%,2,Shazam
-France,FRA,Entertainment,3%,2,Waze
-France,FRA,Social,4%,2,SHEIN
-France,FRA,RMG,5%,3,BlaBlaCar
-France,FRA,E-Commerce,5%,3,Pinterest
-France,FRA,On Demand,4%,3,Domino's Pizza
-France,FRA,Travel,5%,3,ChatGPT
-France,FRA,Finance,4%,3,Yuka
-France,FRA,Entertainment,3%,3,Revolut
-France,FRA,Social,4%,3,Telegram
-U.K.,GBR,RMG,8%,1,ChatGPT
-U.K.,GBR,E-Commerce,7%,1,ChatGPT
-U.K.,GBR,On Demand,6%,1,TikTok
-U.K.,GBR,Travel,7%,1,ChatGPT
-U.K.,GBR,Finance,6%,1,Microsoft Outlook
-U.K.,GBR,Entertainment,9%,1,ChatGPT
-U.K.,GBR,Social,6%,1,Discord
-U.K.,GBR,RMG,5%,2,The National Lottery
-U.K.,GBR,E-Commerce,5%,2,Shazam
-U.K.,GBR,On Demand,5%,2,Instagram
-U.K.,GBR,Travel,6%,2,Hostelworld
-U.K.,GBR,Finance,6%,2,Too Good To Go
-U.K.,GBR,Entertainment,5%,2,Snapchat
-U.K.,GBR,Social,5%,2,Microsoft Outlook
-U.K.,GBR,RMG,5%,3,NHS App
-U.K.,GBR,E-Commerce,4%,3,Disney+
-U.K.,GBR,On Demand,5%,3,ChatGPT
-U.K.,GBR,Travel,5%,3,Temu
-U.K.,GBR,Finance,5%,3,Rightmove
-U.K.,GBR,Entertainment,5%,3,Microsoft OneDrive
-U.K.,GBR,Social,4%,3,Microsoft Teams
-Indonesia,IDN,RMG,11%,1,Roblox
-Indonesia,IDN,E-Commerce,10%,1,ChatGPT
-Indonesia,IDN,On Demand,10%,1,ChatGPT
-Indonesia,IDN,Travel,10%,1,Shopee Indonesia
-Indonesia,IDN,Finance,21%,1,ChatGPT
-Indonesia,IDN,Entertainment,8%,1,Block Blast!
-Indonesia,IDN,Social,17%,1,Block Blast!
-Indonesia,IDN,RMG,11%,2,Grab
-Indonesia,IDN,E-Commerce,7%,2,Threads
-Indonesia,IDN,On Demand,7%,2,Threads
-Indonesia,IDN,Travel,10%,2,ChatGPT
-Indonesia,IDN,Finance,15%,2,Booking.com
-Indonesia,IDN,Entertainment,6%,2,Roblox
-Indonesia,IDN,Social,12%,2,ChatGPT
-Indonesia,IDN,RMG,9%,3,ChatGPT
-Indonesia,IDN,E-Commerce,5%,3,Canva
-Indonesia,IDN,On Demand,6%,3,Discord
-Indonesia,IDN,Travel,8%,3,MyTelkomsel
-Indonesia,IDN,Finance,14%,3,WhatsApp Messenger
-Indonesia,IDN,Entertainment,6%,3,ChatGPT
-Indonesia,IDN,Social,9%,3,Roblox
-India,IND,RMG,25%,1,My11Circle
-India,IND,E-Commerce,14%,1,ChatGPT
-India,IND,On Demand,16%,1,ChatGPT
-India,IND,Travel,12%,1,ChatGPT
-India,IND,Finance,18%,1,Amazon Shopping
-India,IND,Entertainment,13%,1,ChatGPT
-India,IND,Social,13%,1,ChatGPT
-India,IND,RMG,9%,2,ChatGPT
-India,IND,E-Commerce,8%,2,JioHotstar
-India,IND,On Demand,6%,2,JioHotstar
-India,IND,Travel,6%,2,Dream11
-India,IND,Finance,12%,2,Microsoft Authenticator
-India,IND,Entertainment,8%,2,JioHotstar
-India,IND,Social,9%,2,JioHotstar
-India,IND,RMG,7%,3,JioHotstar
-India,IND,E-Commerce,4%,3,Blinkit
-India,IND,On Demand,5%,3,Rapido
-India,IND,Travel,5%,3,JioHotstar
-India,IND,Finance,11%,3,PhonePe
-India,IND,Entertainment,5%,3,Flipkart Online Shopping App
-India,IND,Social,6%,3,X
-Japan,JPN,RMG,6%,1,ChatGPT
-Japan,JPN,E-Commerce,10%,1,ChatGPT
-Japan,JPN,On Demand,7%,1,ChatGPT
-Japan,JPN,Travel,7%,1,SBI証券 スマートアプリ
-Japan,JPN,Finance,10%,1,ChatGPT
-Japan,JPN,Entertainment,6%,1,PayPay-ペイペイ
-Japan,JPN,Social,6%,1,すごい時間割
-Japan,JPN,RMG,5%,2,Amazon Prime Video
-Japan,JPN,E-Commerce,6%,2,McDonald's
-Japan,JPN,On Demand,7%,2,dポイントクラブ：お得情報満載のドコモ公式ポイントクラブ
-Japan,JPN,Travel,6%,2,Netflix
-Japan,JPN,Finance,7%,2,McDonald's
-Japan,JPN,Entertainment,6%,2,ChatGPT
-Japan,JPN,Social,5%,2,Instagram
-Japan,JPN,RMG,5%,3,Coke ON(コークオン)
-Japan,JPN,E-Commerce,5%,3,ウェザーニュース
-Japan,JPN,On Demand,6%,3,Yahoo!ショッピング
-Japan,JPN,Travel,5%,3,Yahoo! JAPAN
-Japan,JPN,Finance,5%,3,おサイフケータイ アプリ
-Japan,JPN,Entertainment,6%,3,すごい時間割
-Japan,JPN,Social,5%,3,Amazon Shopping
-South Korea,KOR,RMG,10%,1,ChatGPT
-South Korea,KOR,E-Commerce,18%,1,ChatGPT
-South Korea,KOR,On Demand,17%,1,ChatGPT
-South Korea,KOR,Travel,9%,1,Trip.com
-South Korea,KOR,Finance,14%,1,ChatGPT
-South Korea,KOR,Entertainment,16%,1,ChatGPT
-South Korea,KOR,Social,14%,1,ChatGPT
-South Korea,KOR,RMG,9%,2,NH콕뱅크(농협)
-South Korea,KOR,E-Commerce,8%,2,하이클래스
-South Korea,KOR,On Demand,7%,2,우리은행 우리WON뱅킹
-South Korea,KOR,Travel,8%,2,ChatGPT
-South Korea,KOR,Finance,9%,2,신한 SOL뱅크-신한은행 스마트폰 뱅킹
-South Korea,KOR,Entertainment,7%,2,T world
-South Korea,KOR,Social,11%,2,T world
-South Korea,KOR,RMG,8%,3,G마켓
-South Korea,KOR,E-Commerce,8%,3,G마켓
-South Korea,KOR,On Demand,7%,3,디지털온누리
-South Korea,KOR,Travel,8%,3,Agoda
-South Korea,KOR,Finance,9%,3,T world
-South Korea,KOR,Entertainment,7%,3,Clash Royale
-South Korea,KOR,Social,9%,3,"KB스타뱅킹-금융, 결제, 통신도 다 되는 은행"
-Mexico,MEX,RMG,7%,1,Sofascore
-Mexico,MEX,E-Commerce,13%,1,ChatGPT
-Mexico,MEX,On Demand,13%,1,McDonald's
-Mexico,MEX,Travel,10%,1,DiDi Rider
-Mexico,MEX,Finance,9%,1,Mercado Pago
-Mexico,MEX,Entertainment,11%,1,ChatGPT
-Mexico,MEX,Social,12%,1,ChatGPT
-Mexico,MEX,RMG,7%,2,Uber Eats
-Mexico,MEX,E-Commerce,7%,2,Amazon Shopping
-Mexico,MEX,On Demand,9%,2,Uber
-Mexico,MEX,Travel,9%,2,X
-Mexico,MEX,Finance,6%,2,Waze
-Mexico,MEX,Entertainment,4%,2,Duolingo
-Mexico,MEX,Social,8%,2,Minecraft
-Mexico,MEX,RMG,6%,3,Banco Azteca
-Mexico,MEX,E-Commerce,6%,3,Uber
-Mexico,MEX,On Demand,8%,3,Mi Browser
-Mexico,MEX,Travel,9%,3,ChatGPT
-Mexico,MEX,Finance,6%,3,Uber Eats
-Mexico,MEX,Entertainment,4%,3,Block Blast!
-Mexico,MEX,Social,6%,3,DiDi Food
-U.S.,USA,RMG,9%,1,ChatGPT
-U.S.,USA,E-Commerce,7%,1,Walmart
-U.S.,USA,On Demand,9%,1,ChatGPT
-U.S.,USA,Travel,5%,1,Hilton Honors
-U.S.,USA,Finance,5%,1,Uber
-U.S.,USA,Entertainment,6%,1,ChatGPT
-U.S.,USA,Social,8%,1,ChatGPT
-U.S.,USA,RMG,5%,2,ESPN
-U.S.,USA,E-Commerce,6%,2,ChatGPT
-U.S.,USA,On Demand,5%,2,Pinterest
-U.S.,USA,Travel,5%,2,Walmart
-U.S.,USA,Finance,5%,2,ChatGPT
-U.S.,USA,Entertainment,4%,2,Indeed Job Search
-U.S.,USA,Social,4%,2,Discord
-U.S.,USA,RMG,5%,3,MLB
-U.S.,USA,E-Commerce,5%,3,Microsoft Authenticator
-U.S.,USA,On Demand,4%,3,Wendys
-U.S.,USA,Travel,4%,3,PayPal
-U.S.,USA,Finance,4%,3,Pinterest
-U.S.,USA,Entertainment,4%,3,Facebook
-U.S.,USA,Social,4%,3,PayPal
-Vietnam,VNM,RMG,36%,1,Messenger
-Vietnam,VNM,E-Commerce,9%,1,ChatGPT
-Vietnam,VNM,On Demand,17%,1,Spotify
-Vietnam,VNM,Travel,12%,1,12Go
-Vietnam,VNM,Finance,18%,1,ChatGPT
-Vietnam,VNM,Entertainment,11%,1,Grab
-Vietnam,VNM,Social,20%,1,ChatGPT
-Vietnam,VNM,RMG,35%,2,Facebook
-Vietnam,VNM,E-Commerce,7%,2,Telegram
-Vietnam,VNM,On Demand,15%,2,Threads
-Vietnam,VNM,Travel,10%,2,Bumble Dating App
-Vietnam,VNM,Finance,15%,2,LinkedIn
-Vietnam,VNM,Entertainment,10%,2,Reddit
-Vietnam,VNM,Social,13%,2,VNeID
-Vietnam,VNM,RMG,33%,3,Zalo
-Vietnam,VNM,E-Commerce,5%,3,Nô Tì
-Vietnam,VNM,On Demand,14%,3,Zalopay Thanh Toán Tích Thưởng
-Vietnam,VNM,Travel,10%,3,Trip.com
-Vietnam,VNM,Finance,12%,3,Messenger
-Vietnam,VNM,Entertainment,9%,3,Instagram
-Vietnam,VNM,Social,8%,3,Locket Widget
+Australia,AUS,RMG,,1,ESPN
+Australia,AUS,E-Commerce,,1,OfferUp
+Australia,AUS,On Demand,,1,Zynga Poker
+Australia,AUS,Travel,,1,Citymapper
+Australia,AUS,Finance,,1,Citymapper
+Australia,AUS,Entertainment,,1,Musi
+Australia,AUS,Social,,1,BBC
+Brazil,BRA,RMG,,1,ESPN
+Brazil,BRA,E-Commerce,,1,OfferUp
+Brazil,BRA,On Demand,,1,Zynga Poker
+Brazil,BRA,Travel,,1,Zynga Poker
+Brazil,BRA,Finance,,1,Yahoo Finance
+Brazil,BRA,Entertainment,,1,Musi
+Brazil,BRA,Social,,1,BBC
+Canada,CAN,RMG,,1,ESPN
+Canada,CAN,E-Commerce,,1,OfferUp
+Canada,CAN,On Demand,,1,Vivino
+Canada,CAN,Travel,,1,Citymapper
+Canada,CAN,Finance,,1,Citymapper
+Canada,CAN,Entertainment,,1,Musi
+Canada,CAN,Social,,1,BBC
+Germany,DEU,RMG,,1,ESPN
+Germany,DEU,E-Commerce,,1,OfferUp
+Germany,DEU,On Demand,,1,Zynga Poker
+Germany,DEU,Travel,,1,Citymapper
+Germany,DEU,Finance,,1,Yahoo Finance
+Germany,DEU,Entertainment,,1,Musi
+Germany,DEU,Social,,1,Vivino
+France,FRA,RMG,,1,Zynga Poker
+France,FRA,E-Commerce,,1,OfferUp
+France,FRA,On Demand,,1,Vivino
+France,FRA,Travel,,1,Citymapper
+France,FRA,Finance,,1,Yahoo Finance
+France,FRA,Entertainment,,1,Musi
+France,FRA,Social,,1,BBC
+U.K.,GBR,RMG,,1,Zynga Poker
+U.K.,GBR,E-Commerce,,1,OfferUp
+U.K.,GBR,On Demand,,1,Vivino
+U.K.,GBR,Travel,,1,Citymapper
+U.K.,GBR,Finance,,1,Yahoo Finance
+U.K.,GBR,Entertainment,,1,Musi
+U.K.,GBR,Social,,1,BBC
+Indonesia,IDN,RMG,,1,ESPN
+Indonesia,IDN,E-Commerce,,1,OfferUp
+Indonesia,IDN,On Demand,,1,Vivino
+Indonesia,IDN,Travel,,1,Citymapper
+Indonesia,IDN,Finance,,1,The Weather Channel
+Indonesia,IDN,Entertainment,,1,The Weather Channel
+Indonesia,IDN,Social,,1,BBC
+India,IND,RMG,,1,ESPN
+India,IND,E-Commerce,,1,OfferUp
+India,IND,On Demand,,1,Vivino
+India,IND,Travel,,1,Citymapper
+India,IND,Finance,,1,MyFitnessPal
+India,IND,Entertainment,,1,Musi
+India,IND,Social,,1,BBC
+Japan,JPN,RMG,,1,ESPN
+Japan,JPN,E-Commerce,,1,OfferUp
+Japan,JPN,On Demand,,1,Vivino
+Japan,JPN,Travel,,1,Citymapper
+Japan,JPN,Finance,,1,Yahoo Finance
+Japan,JPN,Entertainment,,1,Musi
+Japan,JPN,Social,,1,BBC
+South Korea,KOR,RMG,,1,The Weather Channel
+South Korea,KOR,E-Commerce,,1,OfferUp
+South Korea,KOR,On Demand,,1,Vivino
+South Korea,KOR,Travel,,1,Citymapper
+South Korea,KOR,Finance,,1,Yahoo Finance
+South Korea,KOR,Entertainment,,1,Musi
+South Korea,KOR,Social,,1,BBC
+Mexico,MEX,RMG,,1,Zynga Poker
+Mexico,MEX,E-Commerce,,1,OfferUp
+Mexico,MEX,On Demand,,1,Vivino
+Mexico,MEX,Travel,,1,Citymapper
+Mexico,MEX,Finance,,1,Yahoo Finance
+Mexico,MEX,Entertainment,,1,Musi
+Mexico,MEX,Social,,1,BBC
+U.S.,USA,RMG,,1,ESPN
+U.S.,USA,E-Commerce,,1,OfferUp
+U.S.,USA,On Demand,,1,Vivino
+U.S.,USA,Travel,,1,Citymapper
+U.S.,USA,Finance,,1,Zynga Poker
+U.S.,USA,Entertainment,,1,Musi
+U.S.,USA,Social,,1,BBC
+Vietnam,VNM,RMG,,1,ESPN
+Vietnam,VNM,E-Commerce,,1,OfferUp
+Vietnam,VNM,On Demand,,1,Vivino
+Vietnam,VNM,Travel,,1,Citymapper
+Vietnam,VNM,Finance,,1,Citymapper
+Vietnam,VNM,Entertainment,,1,Musi
+Vietnam,VNM,Social,,1,The Weather Channel
+Australia,AUS,RMG,,2,Zynga Poker
+Australia,AUS,E-Commerce,,2,Zynga Poker
+Australia,AUS,On Demand,,2,Vivino
+Australia,AUS,Travel,,2,MyFitnessPal
+Australia,AUS,Finance,,2,BBC
+Australia,AUS,Entertainment,,2,Tinder
+Australia,AUS,Social,,2,X
+Brazil,BRA,RMG,,2,Zynga Poker
+Brazil,BRA,E-Commerce,,2,Zynga Poker
+Brazil,BRA,On Demand,,2,Vivino
+Brazil,BRA,Travel,,2,Citymapper
+Brazil,BRA,Finance,,2,Zynga Poker
+Brazil,BRA,Entertainment,,2,BBC
+Brazil,BRA,Social,,2,X
+Canada,CAN,RMG,,2,Zynga Poker
+Canada,CAN,E-Commerce,,2,Vivino
+Canada,CAN,On Demand,,2,Zynga Poker
+Canada,CAN,Travel,,2,Zynga Poker
+Canada,CAN,Finance,,2,Goodreads
+Canada,CAN,Entertainment,,2,MyFitnessPal
+Canada,CAN,Social,,2,X
+Germany,DEU,RMG,,2,Vivino
+Germany,DEU,E-Commerce,,2,Vivino
+Germany,DEU,On Demand,,2,Vivino
+Germany,DEU,Travel,,2,Yahoo Finance
+Germany,DEU,Finance,,2,The Weather Channel
+Germany,DEU,Entertainment,,2,Vivino
+Germany,DEU,Social,,2,BBC
+France,FRA,RMG,,2,ESPN
+France,FRA,E-Commerce,,2,Vivino
+France,FRA,On Demand,,2,Zynga Poker
+France,FRA,Travel,,2,Vivino
+France,FRA,Finance,,2,Zynga Poker
+France,FRA,Entertainment,,2,Tinder
+France,FRA,Social,,2,X
+U.K.,GBR,RMG,,2,ESPN
+U.K.,GBR,E-Commerce,,2,Vivino
+U.K.,GBR,On Demand,,2,OfferUp
+U.K.,GBR,Travel,,2,MyFitnessPal
+U.K.,GBR,Finance,,2,Zynga Poker
+U.K.,GBR,Entertainment,,2,Duolingo
+U.K.,GBR,Social,,2,X
+Indonesia,IDN,RMG,,2,Zynga Poker
+Indonesia,IDN,E-Commerce,,2,MyFitnessPal
+Indonesia,IDN,On Demand,,2,Citymapper
+Indonesia,IDN,Travel,,2,The Weather Channel
+Indonesia,IDN,Finance,,2,Citymapper
+Indonesia,IDN,Entertainment,,2,Musi
+Indonesia,IDN,Social,,2,ESPN
+India,IND,RMG,,2,Roku
+India,IND,E-Commerce,,2,Vivino
+India,IND,On Demand,,2,OfferUp
+India,IND,Travel,,2,Vivino
+India,IND,Finance,,2,The Weather Channel
+India,IND,Entertainment,,2,Tinder
+India,IND,Social,,2,X
+Japan,JPN,RMG,,2,Zynga Poker
+Japan,JPN,E-Commerce,,2,Tinder
+Japan,JPN,On Demand,,2,Yahoo Finance
+Japan,JPN,Travel,,2,Yahoo Finance
+Japan,JPN,Finance,,2,Citymapper
+Japan,JPN,Entertainment,,2,Duolingo
+Japan,JPN,Social,,2,Roku
+South Korea,KOR,RMG,,2,ESPN
+South Korea,KOR,E-Commerce,,2,Tinder
+South Korea,KOR,On Demand,,2,Yahoo Finance
+South Korea,KOR,Travel,,2,ESPN
+South Korea,KOR,Finance,,2,MyFitnessPal
+South Korea,KOR,Entertainment,,2,MyFitnessPal
+South Korea,KOR,Social,,2,Roku
+Mexico,MEX,RMG,,2,ESPN
+Mexico,MEX,E-Commerce,,2,MyFitnessPal
+Mexico,MEX,On Demand,,2,MyFitnessPal
+Mexico,MEX,Travel,,2,The Weather Channel
+Mexico,MEX,Finance,,2,Zynga Poker
+Mexico,MEX,Entertainment,,2,Zynga Poker
+Mexico,MEX,Social,,2,X
+U.S.,USA,RMG,,2,Zynga Poker
+U.S.,USA,E-Commerce,,2,Zynga Poker
+U.S.,USA,On Demand,,2,Zynga Poker
+U.S.,USA,Travel,,2,Zynga Poker
+U.S.,USA,Finance,,2,Yahoo Finance
+U.S.,USA,Entertainment,,2,The Weather Channel
+U.S.,USA,Social,,2,Vivino
+Vietnam,VNM,RMG,,2,Zynga Poker
+Vietnam,VNM,E-Commerce,,2,Vivino
+Vietnam,VNM,On Demand,,2,ESPN
+Vietnam,VNM,Travel,,2,ESPN
+Vietnam,VNM,Finance,,2,MyFitnessPal
+Vietnam,VNM,Entertainment,,2,MyFitnessPal
+Vietnam,VNM,Social,,2,X
+Australia,AUS,RMG,,3,Yahoo Finance
+Australia,AUS,E-Commerce,,3,MyFitnessPal
+Australia,AUS,On Demand,,3,Block Blast!
+Australia,AUS,Travel,,3,The Weather Channel
+Australia,AUS,Finance,,3,Goodreads
+Australia,AUS,Entertainment,,3,Vivino
+Australia,AUS,Social,,3,Block Blast!
+Brazil,BRA,RMG,,3,The Weather Channel
+Brazil,BRA,E-Commerce,,3,Vivino
+Brazil,BRA,On Demand,,3,MyFitnessPal
+Brazil,BRA,Travel,,3,Vivino
+Brazil,BRA,Finance,,3,ESPN
+Brazil,BRA,Entertainment,,3,Tinder
+Brazil,BRA,Social,,3,Alarmy
+Canada,CAN,RMG,,3,Yahoo Finance
+Canada,CAN,E-Commerce,,3,Tinder
+Canada,CAN,On Demand,,3,MyFitnessPal
+Canada,CAN,Travel,,3,MyFitnessPal
+Canada,CAN,Finance,,3,Yahoo Finance
+Canada,CAN,Entertainment,,3,Tinder
+Canada,CAN,Social,,3,Alarmy
+Germany,DEU,RMG,,3,Vivino
+Germany,DEU,E-Commerce,,3,Tinder
+Germany,DEU,On Demand,,3,OfferUp
+Germany,DEU,Travel,,3,Vivino
+Germany,DEU,Finance,,3,BBC
+Germany,DEU,Entertainment,,3,Goodreads
+Germany,DEU,Social,,3,X
+France,FRA,RMG,,3,BBC
+France,FRA,E-Commerce,,3,Tinder
+France,FRA,On Demand,,3,ESPN
+France,FRA,Travel,,3,Goodreads
+France,FRA,Finance,,3,ESPN
+France,FRA,Entertainment,,3,Goodreads
+France,FRA,Social,,3,Alarmy
+U.K.,GBR,RMG,,3,Yahoo Finance
+U.K.,GBR,E-Commerce,,3,Tinder
+U.K.,GBR,On Demand,,3,Block Blast!
+U.K.,GBR,Travel,,3,ESPN
+U.K.,GBR,Finance,,3,MyFitnessPal
+U.K.,GBR,Entertainment,,3,Roku
+U.K.,GBR,Social,,3,Alarmy
+Indonesia,IDN,RMG,,3,Yahoo Finance
+Indonesia,IDN,E-Commerce,,3,The Weather Channel
+Indonesia,IDN,On Demand,,3,MyFitnessPal
+Indonesia,IDN,Travel,,3,ESPN
+Indonesia,IDN,Finance,,3,ESPN
+Indonesia,IDN,Entertainment,,3,BBC
+Indonesia,IDN,Social,,3,Alarmy
+India,IND,RMG,,3,Yahoo Finance
+India,IND,E-Commerce,,3,Tinder
+India,IND,On Demand,,3,Citymapper
+India,IND,Travel,,3,Yahoo Finance
+India,IND,Finance,,3,Citymapper
+India,IND,Entertainment,,3,Goodreads
+India,IND,Social,,3,Alarmy
+Japan,JPN,RMG,,3,Yahoo Finance
+Japan,JPN,E-Commerce,,3,MyFitnessPal
+Japan,JPN,On Demand,,3,The Weather Channel
+Japan,JPN,Travel,,3,Vivino
+Japan,JPN,Finance,,3,ESPN
+Japan,JPN,Entertainment,,3,Vivino
+Japan,JPN,Social,,3,X
+South Korea,KOR,RMG,,3,Yahoo Finance
+South Korea,KOR,E-Commerce,,3,The Weather Channel
+South Korea,KOR,On Demand,,3,Citymapper
+South Korea,KOR,Travel,,3,Yahoo Finance
+South Korea,KOR,Finance,,3,Block Blast!
+South Korea,KOR,Entertainment,,3,The Weather Channel
+South Korea,KOR,Social,,3,X
+Mexico,MEX,RMG,,3,Citymapper
+Mexico,MEX,E-Commerce,,3,Vivino
+Mexico,MEX,On Demand,,3,Yahoo Finance
+Mexico,MEX,Travel,,3,Vivino
+Mexico,MEX,Finance,,3,MyFitnessPal
+Mexico,MEX,Entertainment,,3,Goodreads
+Mexico,MEX,Social,,3,ESPN
+U.S.,USA,RMG,,3,BBC
+U.S.,USA,E-Commerce,,3,BBC
+U.S.,USA,On Demand,,3,OfferUp
+U.S.,USA,Travel,,3,ESPN
+U.S.,USA,Finance,,3,OfferUp
+U.S.,USA,Entertainment,,3,Tinder
+U.S.,USA,Social,,3,Alarmy
+Vietnam,VNM,RMG,,3,The Weather Channel
+Vietnam,VNM,E-Commerce,,3,MyFitnessPal
+Vietnam,VNM,On Demand,,3,MyFitnessPal
+Vietnam,VNM,Travel,,3,Vivino
+Vietnam,VNM,Finance,,3,Block Blast!
+Vietnam,VNM,Entertainment,,3,Citymapper
+Vietnam,VNM,Social,,3,Vivino
