@@ -76,7 +76,7 @@ const quarterMap = {
 const formatRevenue = (value) => {
   return value > 1e9
     ? `$${d3.format(".3s")(value).replace("G", "B")}`
-    : `$${d3.format(".4s")(value)}`;
+    : `$${d3.format(".4s")(value).replace("k", "K")}`;
 };
 
 export function Vis1() {
@@ -334,26 +334,6 @@ export function Vis1() {
           stroke="#0280FB"
           stroke-width="4"
         />
-        <text
-          transform="translate(${xScaleTimeline(
-            timelineGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineGamingLegendItem.revenue) - 30})"
-          class="charts-text-body-bold"
-          fill="#03004C"
-          text-anchor="middle"
-        >
-          Gaming Apps
-        </text>
-        <text
-          transform="translate(${xScaleTimeline(
-            timelineNonGamingLegendItem.year
-          )}, ${yScaleTimeline(timelineNonGamingLegendItem.revenue) - 30})"
-          class="charts-text-body-bold"
-          fill="#0280FB"
-          text-anchor="middle"
-        >
-          Consumer Apps
-        </text>
         <text
           transform="translate(${xScaleTimeline(
             timelineGamingLatestItem.year
