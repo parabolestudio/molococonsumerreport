@@ -542,7 +542,8 @@ function Tooltip({ hoveredItem, tooltipData }) {
 
   // Temporary tooltip while waiting for real data
   if (hoveredItem) {
-    let shareLabel = hoveredItem.share.toFixed(2);
+    let shareLabel = (hoveredItem.share * 100).toFixed(0);
+
     if (shareLabel < 1) {
       shareLabel = "<1";
     }
