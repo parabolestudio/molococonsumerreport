@@ -34,54 +34,11 @@ export function Vis10() {
       const uniqueCategories = Array.from(
         new Set(data.map((d) => d.category))
       ).sort();
+      console.log("Unique categories:", uniqueCategories);
+
+      //
+
       setCategories(uniqueCategories);
-
-      // Process tooltip data CURRENTLY NO REAL DATA FOR APPS
-      // const copyOfData = data.map((d) => ({ ...d }));
-      // const tooltipProcessedData = [];
-
-      // // Group by country and category
-      // const grouped = d3.group(
-      //   copyOfData,
-      //   (d) => d.Country,
-      //   (d) => d.ategory
-      // );
-
-      // grouped.forEach((categories, country) => {
-      //   categories.forEach((apps, category) => {
-      //     let categoryData = {
-      //       country: country,
-      //       category: category,
-      //       share: 0,
-      //       yearGrowth: null,
-      //       apps: [],
-      //     };
-
-      //     apps.forEach((app) => {
-      //       if (app.app === "Total") {
-      //         // Set the total share and growth from the "Total" row
-      //         categoryData.share = app.share;
-      //         categoryData.yearGrowth = app.yearGrowth;
-      //       } else {
-      //         // Add individual apps
-      //         categoryData.apps.push({
-      //           appName: app.app,
-      //           appShare: app.share,
-      //         });
-      //       }
-      //     });
-
-      //     // Sort apps by share in descending order
-      //     categoryData.apps.sort((a, b) => b.appShare - a.appShare);
-
-      //     tooltipProcessedData.push(categoryData);
-      //   });
-      // });
-
-      // setTooltipData(tooltipProcessedData);
-
-      // filter out total values only
-      // data = data.filter((d) => d["app"] === "Total");
 
       setRawData(data);
 
@@ -244,6 +201,28 @@ export function Vis10() {
           )[0].values;
           // sort values by share in descending order to have larger circles below
           countryData.sort((a, b) => b.share - a.share);
+
+          // sort country data by specific order of categories according the following category order
+          const categoryOrder = [
+            "Books & Reference",
+            "Education",
+            "Entertainment",
+            "Finance",
+            "Gaming",
+            "Generative AI",
+            "Health and Fitness",
+            "News",
+            "Other",
+            "Shopping",
+            "Social Media",
+            "Sports",
+            "Utility & Productivity",
+          ];
+          countryData.sort((a, b) => {
+            const indexA = categoryOrder.indexOf(a.category);
+            const indexB = categoryOrder.indexOf(b.category);
+            return indexA - indexB;
+          });
 
           return html`<g
             class="section"
