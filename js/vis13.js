@@ -110,7 +110,7 @@ export function Vis13() {
     d3.csv(
       "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13-CPP.csv"
     ).then((data) => {
-      data.forEach((d) => {
+      data.forEach((d, i) => {
         d["value"] = +d["CPP"];
       });
 
@@ -118,6 +118,31 @@ export function Vis13() {
       data.forEach((d) => {
         if (d["Publisher Genre"] === "Other Consumer Publishers") {
           d["Publisher Genre"] = "Other Consumer Pubs";
+        }
+      });
+
+      // Assign a stable random offset for value > 200, to avoid perfect overlap in the outlier section of the chart
+      let jitterSeed = 42;
+      function seededRandom(seed) {
+        // Simple LCG
+        let m = 0x80000000,
+          a = 1103515245,
+          c = 12345;
+        seed = (a * seed + c) % m;
+        return seed / m;
+      }
+      data.forEach((d, i) => {
+        if (d["value"] > 200) {
+          // Use a hash of advertiser+publisher for stable seed
+          let str =
+            (d["Advertiser Genre"] || "") + (d["Publisher Genre"] || "") + i;
+          let hash = 0;
+          for (let j = 0; j < str.length; j++) {
+            hash = (hash << 5) - hash + str.charCodeAt(j);
+            hash |= 0;
+          }
+          let rand = seededRandom(hash + jitterSeed);
+          d._xJitter = (rand - 0.5) * 10;
         }
       });
 
@@ -275,7 +300,7 @@ export function Vis13() {
                   <circle
                     cx="${datum["value"] < 200
                       ? xScale(datum["value"])
-                      : xScale(205)}"
+                      : xScale(205) + (datum._xJitter || 0)}"
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
