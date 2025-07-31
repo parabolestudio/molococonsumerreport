@@ -2,7 +2,7 @@ Country code,Country,Category,Demographic Group,Rank,Time Spent/User,Formatted,T
 AUS,Australia,Games / Strategy,18-24,5,1.51x,1.51,0.51
 AUS,Australia,Graphics & Design,18-24,6,1.41x,1.41,0.41
 AUS,Australia,Entertainment,18-24,7,1.30x,1.30,0.3
-AUS,Australia,Social Networking,18-24,9,1.24x,1.24,0.24
+AUS,Australia,Social Media,18-24,9,1.24x,1.24,0.24
 AUS,Australia,Music,18-24,11,1.15x,1.15,0.15
 AUS,Australia,Education,18-24,12,1.12x,1.12,0.12
 AUS,Australia,News,18-24,15,1.04x,1.04,0.04
@@ -32,7 +32,7 @@ AUS,Australia,Utilities,25-44,18,1.04x,1.04,0.04
 AUS,Australia,Music,25-44,19,1.03x,1.03,0.03
 AUS,Australia,Travel,25-44,22,0.98x,0.98,-0.02
 AUS,Australia,Education,25-44,23,0.98x,0.98,-0.02
-AUS,Australia,Social Networking,25-44,25,0.98x,0.98,-0.02
+AUS,Australia,Social Media,25-44,25,0.98x,0.98,-0.02
 AUS,Australia,Entertainment,25-44,26,0.96x,0.96,-0.04
 AUS,Australia,News,25-44,28,0.94x,0.94,-0.06
 AUS,Australia,Graphics & Design,25-44,30,0.89x,0.89,-0.11
@@ -52,7 +52,7 @@ AUS,Australia,Education,45+,21,0.98x,0.98,-0.02
 AUS,Australia,Utilities,45+,23,0.92x,0.92,-0.08
 AUS,Australia,Music,45+,27,0.81x,0.81,-0.19
 AUS,Australia,Graphics & Design,45+,28,0.80x,0.80,-0.2
-AUS,Australia,Social Networking,45+,30,0.70x,0.70,-0.3
+AUS,Australia,Social Media,45+,30,0.70x,0.70,-0.3
 AUS,Australia,Food & Drink,45+,31,0.70x,0.70,-0.3
 AUS,Australia,Entertainment,45+,32,0.69x,0.69,-0.31
 AUS,Australia,Games / Strategy,45+,33,0.62x,0.62,-0.38
@@ -61,7 +61,7 @@ BRA,Brazil,News,18-24,2,1.29x,1.29,0.29
 BRA,Brazil,Music,18-24,6,1.19x,1.19,0.19
 BRA,Brazil,Entertainment,18-24,7,1.19x,1.19,0.19
 BRA,Brazil,Games / Strategy,18-24,8,1.17x,1.17,0.17
-BRA,Brazil,Social Networking,18-24,15,1.09x,1.09,0.09
+BRA,Brazil,Social Media,18-24,15,1.09x,1.09,0.09
 BRA,Brazil,Education,18-24,17,1.07x,1.07,0.07
 BRA,Brazil,Productivity,18-24,18,1.06x,1.06,0.06
 BRA,Brazil,Utilities,18-24,20,0.98x,0.98,-0.02
@@ -88,7 +88,7 @@ BRA,Brazil,Sports,25-44,14,1.07x,1.07,0.07
 BRA,Brazil,Utilities,25-44,15,1.01x,1.01,0.01
 BRA,Brazil,Productivity,25-44,19,0.96x,0.96,-0.04
 BRA,Brazil,Education,25-44,21,0.94x,0.94,-0.06
-BRA,Brazil,Social Networking,25-44,23,0.94x,0.94,-0.06
+BRA,Brazil,Social Media,25-44,23,0.94x,0.94,-0.06
 BRA,Brazil,Games / Strategy,25-44,29,0.87x,0.87,-0.13
 BRA,Brazil,Entertainment,25-44,30,0.86x,0.86,-0.14
 BRA,Brazil,Music,25-44,31,0.85x,0.85,-0.15
@@ -106,7 +106,7 @@ BRA,Brazil,Sports,45+,16,0.98x,0.98,-0.02
 BRA,Brazil,Games / Casino,45+,17,0.95x,0.95,-0.05
 BRA,Brazil,Education,45+,20,0.82x,0.82,-0.18
 BRA,Brazil,Productivity,45+,21,0.78x,0.78,-0.22
-BRA,Brazil,Social Networking,45+,22,0.72x,0.72,-0.28
+BRA,Brazil,Social Media,45+,22,0.72x,0.72,-0.28
 BRA,Brazil,Food & Drink,45+,24,0.65x,0.65,-0.35
 BRA,Brazil,Games / Strategy,45+,25,0.63x,0.63,-0.37
 BRA,Brazil,Music,45+,27,0.61x,0.61,-0.39
@@ -117,7 +117,7 @@ CAN,Canada,Graphics & Design,18-24,3,1.48x,1.48,0.48
 CAN,Canada,Games / Strategy,18-24,6,1.31x,1.31,0.31
 CAN,Canada,Entertainment,18-24,9,1.26x,1.26,0.26
 CAN,Canada,Education,18-24,11,1.22x,1.22,0.22
-CAN,Canada,Social Networking,18-24,13,1.21x,1.21,0.21
+CAN,Canada,Social Media,18-24,13,1.21x,1.21,0.21
 CAN,Canada,Music,18-24,15,1.14x,1.14,0.14
 CAN,Canada,Utilities,18-24,18,1.02x,1.02,0.02
 CAN,Canada,Productivity,18-24,19,0.90x,0.90,-0.1
@@ -144,7 +144,7 @@ CAN,Canada,Sports,25-44,10,1.08x,1.08,0.08
 CAN,Canada,Productivity,25-44,11,1.06x,1.06,0.06
 CAN,Canada,Utilities,25-44,14,1.05x,1.05,0.05
 CAN,Canada,Music,25-44,19,1.00x,1.00,0
-CAN,Canada,Social Networking,25-44,20,1.00x,1.00,0
+CAN,Canada,Social Media,25-44,20,1.00x,1.00,0
 CAN,Canada,Games / Puzzle,25-44,21,1.00x,1.00,0
 CAN,Canada,Entertainment,25-44,26,0.95x,0.95,-0.05
 CAN,Canada,Education,25-44,28,0.93x,0.93,-0.07
@@ -168,12 +168,12 @@ CAN,Canada,Music,45+,23,0.97x,0.97,-0.03
 CAN,Canada,Games / Strategy,45+,26,0.88x,0.88,-0.12
 CAN,Canada,Utilities,45+,28,0.86x,0.86,-0.14
 CAN,Canada,Entertainment,45+,30,0.83x,0.83,-0.17
-CAN,Canada,Social Networking,45+,32,0.76x,0.76,-0.24
+CAN,Canada,Social Media,45+,32,0.76x,0.76,-0.24
 CAN,Canada,Graphics & Design,45+,34,0.66x,0.66,-0.34
 DEU,Germany,Games / Strategy,18-24,2,1.50x,1.50,0.5
 DEU,Germany,Entertainment,18-24,3,1.44x,1.44,0.44
 DEU,Germany,Graphics & Design,18-24,4,1.43x,1.43,0.43
-DEU,Germany,Social Networking,18-24,5,1.43x,1.43,0.43
+DEU,Germany,Social Media,18-24,5,1.43x,1.43,0.43
 DEU,Germany,Education,18-24,11,1.31x,1.31,0.31
 DEU,Germany,Music,18-24,12,1.28x,1.28,0.28
 DEU,Germany,Utilities,18-24,17,1.15x,1.15,0.15
@@ -202,7 +202,7 @@ DEU,Germany,News,25-44,13,1.08x,1.08,0.08
 DEU,Germany,Weather,25-44,16,1.07x,1.07,0.07
 DEU,Germany,Sports,25-44,20,1.03x,1.03,0.03
 DEU,Germany,Music,25-44,22,1.01x,1.01,0.01
-DEU,Germany,Social Networking,25-44,25,0.97x,0.97,-0.03
+DEU,Germany,Social Media,25-44,25,0.97x,0.97,-0.03
 DEU,Germany,Games / Puzzle,25-44,27,0.96x,0.96,-0.04
 DEU,Germany,Education,25-44,29,0.95x,0.95,-0.05
 DEU,Germany,Entertainment,25-44,30,0.94x,0.94,-0.06
@@ -226,9 +226,9 @@ DEU,Germany,Music,45+,29,0.78x,0.78,-0.22
 DEU,Germany,Graphics & Design,45+,30,0.76x,0.76,-0.24
 DEU,Germany,Games / Strategy,45+,33,0.67x,0.67,-0.33
 DEU,Germany,Entertainment,45+,34,0.65x,0.65,-0.35
-DEU,Germany,Social Networking,45+,35,0.51x,0.51,-0.49
+DEU,Germany,Social Media,45+,35,0.51x,0.51,-0.49
 FRA,France,Graphics & Design,18-24,2,1.60x,1.60,0.6
-FRA,France,Social Networking,18-24,5,1.50x,1.50,0.5
+FRA,France,Social Media,18-24,5,1.50x,1.50,0.5
 FRA,France,Games / Strategy,18-24,6,1.45x,1.45,0.45
 FRA,France,Entertainment,18-24,7,1.45x,1.45,0.45
 FRA,France,Education,18-24,10,1.42x,1.42,0.42
@@ -262,7 +262,7 @@ FRA,France,Music,25-44,18,1.07x,1.07,0.07
 FRA,France,Games / Puzzle,25-44,19,1.07x,1.07,0.07
 FRA,France,Graphics & Design,25-44,26,1.00x,1.00,0
 FRA,France,Entertainment,25-44,28,1.00x,1.00,0
-FRA,France,Social Networking,25-44,29,0.99x,0.99,-0.01
+FRA,France,Social Media,25-44,29,0.99x,0.99,-0.01
 FRA,France,Games / Strategy,25-44,30,0.97x,0.97,-0.03
 FRA,France,Education,25-44,33,0.95x,0.95,-0.05
 FRA,France,Games / Casino,45+,2,3.11x,3.11,2.11
@@ -282,11 +282,11 @@ FRA,France,Utilities,45+,25,0.89x,0.89,-0.11
 FRA,France,Music,45+,26,0.85x,0.85,-0.15
 FRA,France,Entertainment,45+,28,0.81x,0.81,-0.19
 FRA,France,Games / Strategy,45+,29,0.81x,0.81,-0.19
-FRA,France,Social Networking,45+,34,0.62x,0.62,-0.38
+FRA,France,Social Media,45+,34,0.62x,0.62,-0.38
 FRA,France,Graphics & Design,45+,35,0.37x,0.37,-0.63
 KOR,South Korea,News,18-24,1,1.72x,1.72,0.72
 KOR,South Korea,Education,18-24,2,1.42x,1.42,0.42
-KOR,South Korea,Social Networking,18-24,4,1.31x,1.31,0.31
+KOR,South Korea,Social Media,18-24,4,1.31x,1.31,0.31
 KOR,South Korea,Music,18-24,6,1.28x,1.28,0.28
 KOR,South Korea,Games / Strategy,18-24,7,1.26x,1.26,0.26
 KOR,South Korea,Graphics & Design,18-24,9,1.23x,1.23,0.23
@@ -316,7 +316,7 @@ KOR,South Korea,Weather,25-44,21,0.99x,0.99,-0.01
 KOR,South Korea,Entertainment,25-44,22,0.99x,0.99,-0.01
 KOR,South Korea,Graphics & Design,25-44,25,0.94x,0.94,-0.06
 KOR,South Korea,Games / Puzzle,25-44,26,0.93x,0.93,-0.07
-KOR,South Korea,Social Networking,25-44,27,0.93x,0.93,-0.07
+KOR,South Korea,Social Media,25-44,27,0.93x,0.93,-0.07
 KOR,South Korea,Games / Casino,25-44,28,0.92x,0.92,-0.08
 KOR,South Korea,Music,25-44,31,0.87x,0.87,-0.13
 KOR,South Korea,Games / Strategy,25-44,32,0.87x,0.87,-0.13
@@ -339,12 +339,12 @@ KOR,South Korea,Graphics & Design,45+,27,0.76x,0.76,-0.24
 KOR,South Korea,Music,45+,29,0.71x,0.71,-0.29
 KOR,South Korea,Education,45+,30,0.66x,0.66,-0.34
 KOR,South Korea,Productivity,45+,31,0.64x,0.64,-0.36
-KOR,South Korea,Social Networking,45+,34,0.52x,0.52,-0.48
+KOR,South Korea,Social Media,45+,34,0.52x,0.52,-0.48
 KOR,South Korea,News,45+,36,0.13x,0.13,-0.87
 JPN,Japan,Education,18-24,5,1.41x,1.41,0.41
 JPN,Japan,Graphics & Design,18-24,6,1.40x,1.40,0.4
 JPN,Japan,Music,18-24,7,1.33x,1.33,0.33
-JPN,Japan,Social Networking,18-24,11,1.23x,1.23,0.23
+JPN,Japan,Social Media,18-24,11,1.23x,1.23,0.23
 JPN,Japan,Entertainment,18-24,13,1.19x,1.19,0.19
 JPN,Japan,Utilities,18-24,15,1.15x,1.15,0.15
 JPN,Japan,Business,18-24,16,1.15x,1.15,0.15
@@ -372,7 +372,7 @@ JPN,Japan,Utilities,25-44,16,0.98x,0.98,-0.02
 JPN,Japan,Games / Strategy,25-44,19,0.96x,0.96,-0.04
 JPN,Japan,Graphics & Design,25-44,20,0.95x,0.95,-0.05
 JPN,Japan,Travel,25-44,21,0.94x,0.94,-0.06
-JPN,Japan,Social Networking,25-44,23,0.93x,0.93,-0.07
+JPN,Japan,Social Media,25-44,23,0.93x,0.93,-0.07
 JPN,Japan,Music,25-44,26,0.88x,0.88,-0.12
 JPN,Japan,Weather,25-44,28,0.85x,0.85,-0.15
 JPN,Japan,Education,25-44,30,0.84x,0.84,-0.16
@@ -395,14 +395,14 @@ JPN,Japan,Entertainment,45+,23,0.78x,0.78,-0.22
 JPN,Japan,Productivity,45+,24,0.76x,0.76,-0.24
 JPN,Japan,Music,45+,25,0.72x,0.72,-0.28
 JPN,Japan,Business,45+,26,0.71x,0.71,-0.29
-JPN,Japan,Social Networking,45+,27,0.69x,0.69,-0.31
+JPN,Japan,Social Media,45+,27,0.69x,0.69,-0.31
 JPN,Japan,Education,45+,28,0.65x,0.65,-0.35
 JPN,Japan,Graphics & Design,45+,32,0.53x,0.53,-0.47
 USA,U.S.,Graphics & Design,18-24,2,1.72x,1.72,0.72
 USA,U.S.,Entertainment,18-24,6,1.32x,1.32,0.32
 USA,U.S.,Music,18-24,9,1.23x,1.23,0.23
 USA,U.S.,Education,18-24,10,1.20x,1.20,0.2
-USA,U.S.,Social Networking,18-24,11,1.17x,1.17,0.17
+USA,U.S.,Social Media,18-24,11,1.17x,1.17,0.17
 USA,U.S.,Utilities,18-24,14,1.13x,1.13,0.13
 USA,U.S.,Games / Strategy,18-24,15,1.13x,1.13,0.13
 USA,U.S.,Productivity,18-24,17,0.87x,0.87,-0.13
@@ -428,7 +428,7 @@ USA,U.S.,Games / Puzzle,25-44,16,1.06x,1.06,0.06
 USA,U.S.,News,25-44,17,1.05x,1.05,0.05
 USA,U.S.,Productivity,25-44,18,1.05x,1.05,0.05
 USA,U.S.,Weather,25-44,19,1.03x,1.03,0.03
-USA,U.S.,Social Networking,25-44,22,1.02x,1.02,0.02
+USA,U.S.,Social Media,25-44,22,1.02x,1.02,0.02
 USA,U.S.,Utilities,25-44,23,1.02x,1.02,0.02
 USA,U.S.,Games / Strategy,25-44,25,1.01x,1.01,0.01
 USA,U.S.,Music,25-44,27,0.99x,0.99,-0.01
@@ -451,7 +451,7 @@ USA,U.S.,Food & Drink,45+,21,1.04x,1.04,0.04
 USA,U.S.,Games / Strategy,45+,22,0.99x,0.99,-0.01
 USA,U.S.,Education,45+,25,0.93x,0.93,-0.07
 USA,U.S.,Music,45+,26,0.86x,0.86,-0.14
-USA,U.S.,Social Networking,45+,28,0.81x,0.81,-0.19
+USA,U.S.,Social Media,45+,28,0.81x,0.81,-0.19
 USA,U.S.,Utilities,45+,29,0.76x,0.76,-0.24
 USA,U.S.,Entertainment,45+,32,0.71x,0.71,-0.29
 USA,U.S.,Graphics & Design,45+,34,0.57x,0.57,-0.43
@@ -461,7 +461,7 @@ VNM,Vietnam,Graphics & Design,18-24,6,1.18x,1.18,0.18
 VNM,Vietnam,Productivity,18-24,10,1.16x,1.16,0.16
 VNM,Vietnam,Shopping,18-24,11,1.15x,1.15,0.15
 VNM,Vietnam,Games / Puzzle,18-24,12,1.13x,1.13,0.13
-VNM,Vietnam,Social Networking,18-24,14,1.12x,1.12,0.12
+VNM,Vietnam,Social Media,18-24,14,1.12x,1.12,0.12
 VNM,Vietnam,Entertainment,18-24,15,1.11x,1.11,0.11
 VNM,Vietnam,Music,18-24,16,1.11x,1.11,0.11
 VNM,Vietnam,Utilities,18-24,18,1.09x,1.09,0.09
@@ -488,7 +488,7 @@ VNM,Vietnam,Utilities,25-44,18,0.94x,0.94,-0.06
 VNM,Vietnam,Music,25-44,20,0.92x,0.92,-0.08
 VNM,Vietnam,Entertainment,25-44,21,0.92x,0.92,-0.08
 VNM,Vietnam,Productivity,25-44,23,0.91x,0.91,-0.09
-VNM,Vietnam,Social Networking,25-44,27,0.90x,0.90,-0.1
+VNM,Vietnam,Social Media,25-44,27,0.90x,0.90,-0.1
 VNM,Vietnam,Education,25-44,28,0.86x,0.86,-0.14
 VNM,Vietnam,Travel,25-44,29,0.86x,0.86,-0.14
 VNM,Vietnam,Games / Strategy,25-44,31,0.84x,0.84,-0.16
@@ -497,7 +497,7 @@ VNM,Vietnam,Games / Casino,45+,1,6.45x,6.45,5.45
 VNM,Vietnam,Sports,45+,2,5.32x,5.32,4.32
 VNM,Vietnam,News,45+,6,1.41x,1.41,0.41
 VNM,Vietnam,Health & Fitness,45+,8,1.05x,1.05,0.05
-VNM,Vietnam,Social Networking,45+,9,0.94x,0.94,-0.06
+VNM,Vietnam,Social Media,45+,9,0.94x,0.94,-0.06
 VNM,Vietnam,Finance,45+,10,0.91x,0.91,-0.09
 VNM,Vietnam,Utilities,45+,12,0.85x,0.85,-0.15
 VNM,Vietnam,Entertainment,45+,13,0.83x,0.83,-0.17
@@ -520,7 +520,7 @@ IDN,Indonesia,Entertainment,18-24,6,1.20x,1.20,0.2
 IDN,Indonesia,News,18-24,9,1.17x,1.17,0.17
 IDN,Indonesia,Productivity,18-24,13,1.13x,1.13,0.13
 IDN,Indonesia,Utilities,18-24,15,1.09x,1.09,0.09
-IDN,Indonesia,Social Networking,18-24,17,1.08x,1.08,0.08
+IDN,Indonesia,Social Media,18-24,17,1.08x,1.08,0.08
 IDN,Indonesia,Games / Puzzle,18-24,19,1.05x,1.05,0.05
 IDN,Indonesia,Health & Fitness,18-24,22,1.01x,1.01,0.01
 IDN,Indonesia,Business,18-24,23,0.97x,0.97,-0.03
@@ -540,7 +540,7 @@ IDN,Indonesia,Travel,25-44,9,1.12x,1.12,0.12
 IDN,Indonesia,Business,25-44,11,1.09x,1.09,0.09
 IDN,Indonesia,Health & Fitness,25-44,12,1.06x,1.06,0.06
 IDN,Indonesia,Weather,25-44,14,1.02x,1.02,0.02
-IDN,Indonesia,Social Networking,25-44,18,0.96x,0.96,-0.04
+IDN,Indonesia,Social Media,25-44,18,0.96x,0.96,-0.04
 IDN,Indonesia,Utilities,25-44,19,0.94x,0.94,-0.06
 IDN,Indonesia,Productivity,25-44,22,0.92x,0.92,-0.08
 IDN,Indonesia,News,25-44,25,0.91x,0.91,-0.09
@@ -559,7 +559,7 @@ IDN,Indonesia,Shopping,45+,13,0.89x,0.89,-0.11
 IDN,Indonesia,Food & Drink,45+,14,0.87x,0.87,-0.13
 IDN,Indonesia,Utilities,45+,16,0.83x,0.83,-0.17
 IDN,Indonesia,Business,45+,20,0.77x,0.77,-0.23
-IDN,Indonesia,Social Networking,45+,21,0.73x,0.73,-0.27
+IDN,Indonesia,Social Media,45+,21,0.73x,0.73,-0.27
 IDN,Indonesia,Health & Fitness,45+,23,0.58x,0.58,-0.42
 IDN,Indonesia,Sports,45+,24,0.58x,0.58,-0.42
 IDN,Indonesia,Productivity,45+,25,0.56x,0.56,-0.44
@@ -573,7 +573,7 @@ GBR,U.K.,Graphics & Design,18-24,1,1.80x,1.80,0.8
 GBR,U.K.,Games / Strategy,18-24,5,1.50x,1.50,0.5
 GBR,U.K.,Entertainment,18-24,7,1.45x,1.45,0.45
 GBR,U.K.,Education,18-24,9,1.38x,1.38,0.38
-GBR,U.K.,Social Networking,18-24,13,1.34x,1.34,0.34
+GBR,U.K.,Social Media,18-24,13,1.34x,1.34,0.34
 GBR,U.K.,Music,18-24,14,1.27x,1.27,0.27
 GBR,U.K.,Utilities,18-24,16,1.17x,1.17,0.17
 GBR,U.K.,Productivity,18-24,19,1.00x,1.00,0
@@ -600,7 +600,7 @@ GBR,U.K.,Weather,25-44,13,1.09x,1.09,0.09
 GBR,U.K.,Productivity,25-44,14,1.09x,1.09,0.09
 GBR,U.K.,Utilities,25-44,15,1.06x,1.06,0.06
 GBR,U.K.,Games / Casino,25-44,18,1.03x,1.03,0.03
-GBR,U.K.,Social Networking,25-44,22,1.01x,1.01,0.01
+GBR,U.K.,Social Media,25-44,22,1.01x,1.01,0.01
 GBR,U.K.,Music,25-44,23,1.01x,1.01,0.01
 GBR,U.K.,Games / Puzzle,25-44,28,0.99x,0.99,-0.01
 GBR,U.K.,Education,25-44,29,0.96x,0.96,-0.04
@@ -623,7 +623,7 @@ GBR,U.K.,Utilities,45+,24,0.90x,0.90,-0.1
 GBR,U.K.,Games / Strategy,45+,25,0.84x,0.84,-0.16
 GBR,U.K.,Education,45+,26,0.81x,0.81,-0.19
 GBR,U.K.,Entertainment,45+,28,0.77x,0.77,-0.23
-GBR,U.K.,Social Networking,45+,29,0.75x,0.75,-0.25
+GBR,U.K.,Social Media,45+,29,0.75x,0.75,-0.25
 GBR,U.K.,Food & Drink,45+,30,0.72x,0.72,-0.28
 GBR,U.K.,Graphics & Design,45+,34,0.47x,0.47,-0.53
 MEX,Mexico,Graphics & Design,18-24,1,1.31x,1.31,0.31
@@ -631,7 +631,7 @@ MEX,Mexico,Games / Strategy,18-24,2,1.28x,1.28,0.28
 MEX,Mexico,Education,18-24,8,1.19x,1.19,0.19
 MEX,Mexico,Music,18-24,9,1.19x,1.19,0.19
 MEX,Mexico,Entertainment,18-24,11,1.15x,1.15,0.15
-MEX,Mexico,Social Networking,18-24,12,1.15x,1.15,0.15
+MEX,Mexico,Social Media,18-24,12,1.15x,1.15,0.15
 MEX,Mexico,Productivity,18-24,14,1.12x,1.12,0.12
 MEX,Mexico,Utilities,18-24,16,1.05x,1.05,0.05
 MEX,Mexico,News,18-24,19,1.03x,1.03,0.03
@@ -658,7 +658,7 @@ MEX,Mexico,Games / Puzzle,25-44,13,1.11x,1.11,0.11
 MEX,Mexico,News,25-44,17,1.04x,1.04,0.04
 MEX,Mexico,Utilities,25-44,19,1.01x,1.01,0.01
 MEX,Mexico,Productivity,25-44,22,0.96x,0.96,-0.04
-MEX,Mexico,Social Networking,25-44,24,0.94x,0.94,-0.06
+MEX,Mexico,Social Media,25-44,24,0.94x,0.94,-0.06
 MEX,Mexico,Entertainment,25-44,25,0.93x,0.93,-0.07
 MEX,Mexico,Music,25-44,28,0.89x,0.89,-0.11
 MEX,Mexico,Education,25-44,31,0.86x,0.86,-0.14
@@ -676,7 +676,7 @@ MEX,Mexico,Utilities,45+,17,0.98x,0.98,-0.02
 MEX,Mexico,News,45+,21,0.81x,0.81,-0.19
 MEX,Mexico,Productivity,45+,22,0.76x,0.76,-0.24
 MEX,Mexico,Education,45+,24,0.70x,0.70,-0.3
-MEX,Mexico,Social Networking,45+,25,0.67x,0.67,-0.33
+MEX,Mexico,Social Media,45+,25,0.67x,0.67,-0.33
 MEX,Mexico,Music,45+,27,0.60x,0.60,-0.4
 MEX,Mexico,Entertainment,45+,28,0.57x,0.57,-0.43
 MEX,Mexico,Games / Casino,45+,29,0.56x,0.56,-0.44
@@ -687,7 +687,7 @@ IND,India,Education,18-24,2,1.33x,1.33,0.33
 IND,India,Games / Strategy,18-24,3,1.24x,1.24,0.24
 IND,India,Music,18-24,5,1.21x,1.21,0.21
 IND,India,Productivity,18-24,7,1.13x,1.13,0.13
-IND,India,Social Networking,18-24,9,1.12x,1.12,0.12
+IND,India,Social Media,18-24,9,1.12x,1.12,0.12
 IND,India,Graphics & Design,18-24,10,1.12x,1.12,0.12
 IND,India,Utilities,18-24,17,1.01x,1.01,0.01
 IND,India,Entertainment,18-24,19,0.94x,0.94,-0.06
@@ -716,7 +716,7 @@ IND,India,Games / Puzzle,25-44,15,1.04x,1.04,0.04
 IND,India,Games / Casino,25-44,19,1.01x,1.01,0.01
 IND,India,Utilities,25-44,20,1.00x,1.00,0
 IND,India,Productivity,25-44,28,0.91x,0.91,-0.09
-IND,India,Social Networking,25-44,29,0.90x,0.90,-0.1
+IND,India,Social Media,25-44,29,0.90x,0.90,-0.1
 IND,India,Graphics & Design,25-44,30,0.90x,0.90,-0.1
 IND,India,Music,25-44,32,0.81x,0.81,-0.19
 IND,India,Games / Strategy,25-44,33,0.80x,0.80,-0.2
@@ -732,7 +732,7 @@ IND,India,Utilities,45+,17,0.97x,0.97,-0.03
 IND,India,Travel,45+,19,0.93x,0.93,-0.07
 IND,India,Shopping,45+,22,0.83x,0.83,-0.17
 IND,India,Graphics & Design,45+,23,0.82x,0.82,-0.18
-IND,India,Social Networking,45+,24,0.75x,0.75,-0.25
+IND,India,Social Media,45+,24,0.75x,0.75,-0.25
 IND,India,Music,45+,25,0.74x,0.74,-0.26
 IND,India,Entertainment,45+,28,0.66x,0.66,-0.34
 IND,India,Food & Drink,45+,29,0.64x,0.64,-0.36
