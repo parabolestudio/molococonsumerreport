@@ -218,10 +218,11 @@ export function Vis1() {
     .sort((a, b) => b.categoryGrowth - a.categoryGrowth)
     .slice(0, 10);
 
+  const labelOffsetX = selectedCountry === "Indonesia" ? 225 : 160;
   const xScaleCategories = d3
     .scaleLinear()
     .domain([0, d3.max(categoryDataByCountry, (d) => d.categoryGrowth)])
-    .range([0, innerWidthCategories - 225]);
+    .range([0, innerWidthCategories - labelOffsetX]);
 
   const yScaleCategories = d3
     .scaleBand()
@@ -394,8 +395,10 @@ export function Vis1() {
                 heightBar=${heightBar}
               />
               <text
-                transform="translate(${xScaleCategories(d.categoryGrowth) +
-                10}, ${yScaleCategories.bandwidth() / 2})"
+                transform="translate(${Math.max(
+                  xScaleCategories(d.categoryGrowth) + 10,
+                  25
+                )}, ${yScaleCategories.bandwidth() / 2})"
                 dominant-baseline="middle"
               >
                 <tspan class="charts-text-body">${d.category}</tspan>
