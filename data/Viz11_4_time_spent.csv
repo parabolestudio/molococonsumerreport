@@ -1,274 +1,274 @@
-Country,Country code,Genre,Segment,Top subcat for time spent,%
-Australia,AUS,E-Commerce,Commerce - E-Commerce,Shopping,2K%
-Australia,AUS,E-Commerce,,Games / Casino,760%
-Australia,AUS,E-Commerce,,Games / Trivia,563%
-Australia,AUS,Entertainment,Content - Entertainment,Music,797%
-Australia,AUS,Entertainment,,Games / Role Playing,182%
-Australia,AUS,Entertainment,,Lifestyle,113%
-Australia,AUS,Finance,Finance - Financial Health,Games / Board,204%
-Australia,AUS,Finance,,Travel,166%
-Australia,AUS,Finance,,News,144%
-Australia,AUS,On Demand,Commerce - On-Demand,Games / Music,1.1K%
-Australia,AUS,On Demand,,Games / Casino,949%
-Australia,AUS,On Demand,,Food & Drink,790%
-Australia,AUS,RMG,RMG - RMG (Casino),Sports,1.9K%
-Australia,AUS,RMG,,Games / Casino,625%
-Australia,AUS,RMG,,Navigation,173%
-Australia,AUS,Social,Social - Social Media,Photo & Video,685%
-Australia,AUS,Social,,Games / Role Playing,472%
-Australia,AUS,Social,,News,444%
-Australia,AUS,Travel,Commerce - Travel,Travel,448%
-Australia,AUS,Travel,,Medical,156%
-Australia,AUS,Travel,,Games / Card,81%
-Brazil,BRA,E-Commerce,Commerce - E-Commerce,Shopping,1.5K%
-Brazil,BRA,E-Commerce,,Games / Casino,555%
-Brazil,BRA,E-Commerce,,Food & Drink,186%
-Brazil,BRA,Entertainment,Content - Entertainment,Music,615%
-Brazil,BRA,Entertainment,,Games / Music,128%
-Brazil,BRA,Entertainment,,News,105%
-Brazil,BRA,Finance,Finance - Financial Health,Finance,463%
-Brazil,BRA,Finance,,Games / Casino,340%
-Brazil,BRA,Finance,,Business,247%
-Brazil,BRA,On Demand,Commerce - On-Demand,Games / Casino,477%
-Brazil,BRA,On Demand,,Food & Drink,405%
-Brazil,BRA,On Demand,,Navigation,178%
-Brazil,BRA,RMG,RMG - RMG (Casino),Sports,1.7K%
-Brazil,BRA,RMG,,Games / Casino,1.2K%
-Brazil,BRA,RMG,,Weather,1.1K%
-Brazil,BRA,Social,Social - Social Media,News,459%
-Brazil,BRA,Social,,Photo & Video,365%
-Brazil,BRA,Social,,Social Networking,211%
-Brazil,BRA,Travel,Commerce - Travel,Games / Casino,3.3K%
-Brazil,BRA,Travel,,Travel,1.4K%
-Brazil,BRA,Travel,,Food & Drink,119%
-Canada,CAN,E-Commerce,Commerce - E-Commerce,Shopping,1.9K%
-Canada,CAN,E-Commerce,,Food & Drink,301%
-Canada,CAN,E-Commerce,,Lifestyle,169%
-Canada,CAN,Entertainment,Content - Entertainment,Music,1K%
-Canada,CAN,Entertainment,,Games / Trivia,319%
-Canada,CAN,Entertainment,,Medical,129%
-Canada,CAN,Finance,Finance - Financial Health,Travel,126%
-Canada,CAN,Finance,,Books,58%
-Canada,CAN,Finance,,Finance,55%
-Canada,CAN,On Demand,Commerce - On-Demand,Food & Drink,653%
-Canada,CAN,On Demand,,Games / Casino,391%
-Canada,CAN,On Demand,,Medical,202%
-Canada,CAN,RMG,RMG - RMG (Casino),Sports,2.6K%
-Canada,CAN,RMG,,Games / Casino,1.6K%
-Canada,CAN,RMG,,Games / Sports,356%
-Canada,CAN,Social,Social - Social Media,Photo & Video,663%
-Canada,CAN,Social,,News,283%
-Canada,CAN,Social,,Social Networking,245%
-Canada,CAN,Travel,Commerce - Travel,Travel,636%
-Canada,CAN,Travel,,Games / Casino,259%
-Canada,CAN,Travel,,Games / Simulation,144%
-Germany,DEU,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
-Germany,DEU,E-Commerce,,Food & Drink,294%
-Germany,DEU,E-Commerce,,Lifestyle,197%
-Germany,DEU,Entertainment,Content - Entertainment,Music,942%
-Germany,DEU,Entertainment,,Graphics & Design,239%
-Germany,DEU,Entertainment,,Games / Role Playing,112%
-Germany,DEU,Finance,Finance - Financial Health,Finance,391%
-Germany,DEU,Finance,,Weather,202%
-Germany,DEU,Finance,,News,186%
-Germany,DEU,On Demand,Commerce - On-Demand,Games / Casino,479%
-Germany,DEU,On Demand,,Food & Drink,323%
-Germany,DEU,On Demand,,Games / Card,160%
-Germany,DEU,RMG,RMG - RMG (Casino),Sports,815%
-Germany,DEU,RMG,,Games / Casino,691%
-Germany,DEU,RMG,,Games / Sports,558%
-Germany,DEU,Social,Social - Social Media,Photo & Video,559%
-Germany,DEU,Social,,Graphics & Design,382%
-Germany,DEU,Social,,News,375%
-Germany,DEU,Travel,Commerce - Travel,Travel,307%
-Germany,DEU,Travel,,Business,148%
-Germany,DEU,Travel,,Finance,124%
-France,FRA,E-Commerce,Commerce - E-Commerce,Shopping,1.9K%
-France,FRA,E-Commerce,,Food & Drink,292%
-France,FRA,E-Commerce,,Lifestyle,254%
-France,FRA,Entertainment,Content - Entertainment,Music,598%
-France,FRA,Entertainment,,Games / Racing,165%
-France,FRA,Entertainment,,Lifestyle,112%
-France,FRA,Finance,Finance - Financial Health,Finance,627%
-France,FRA,Finance,,Games / Casino,491%
-France,FRA,Finance,,Sports,252%
-France,FRA,On Demand,Commerce - On-Demand,Food & Drink,628%
-France,FRA,On Demand,,Games / Casino,501%
-France,FRA,On Demand,,Games / Role Playing,327%
-France,FRA,RMG,RMG - RMG (Casino),Games / Casino,4.1K%
-France,FRA,RMG,,Sports,2.4K%
-France,FRA,RMG,,News,296%
-France,FRA,Social,Social - Social Media,Photo & Video,596%
-France,FRA,Social,,News,509%
-France,FRA,Social,,Social Networking,359%
-France,FRA,Travel,Commerce - Travel,Travel,331%
-France,FRA,Travel,,Food & Drink,179%
-France,FRA,Travel,,Business,167%
-U.K.,GBR,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
-U.K.,GBR,E-Commerce,,Food & Drink,304%
-U.K.,GBR,E-Commerce,,Lifestyle,235%
-U.K.,GBR,Entertainment,Content - Entertainment,Music,869%
-U.K.,GBR,Entertainment,,Education,155%
-U.K.,GBR,Entertainment,,Entertainment,130%
-U.K.,GBR,Finance,Finance - Financial Health,Finance,499%
-U.K.,GBR,Finance,,Games / Casino,379%
-U.K.,GBR,Finance,,Medical,349%
-U.K.,GBR,On Demand,Commerce - On-Demand,Food & Drink,617%
-U.K.,GBR,On Demand,,Business,167%
-U.K.,GBR,On Demand,,Shopping,155%
-U.K.,GBR,RMG,RMG - RMG (Casino),Games / Casino,4K%
-U.K.,GBR,RMG,,Sports,1.7K%
-U.K.,GBR,RMG,,Finance,303%
-U.K.,GBR,Social,Social - Social Media,Photo & Video,585%
-U.K.,GBR,Social,,News,310%
-U.K.,GBR,Social,,Social Networking,277%
-U.K.,GBR,Travel,Commerce - Travel,Travel,463%
-U.K.,GBR,Travel,,Medical,198%
-U.K.,GBR,Travel,,Games / Card,113%
-Indonesia,IDN,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
-Indonesia,IDN,E-Commerce,,Medical,204%
-Indonesia,IDN,E-Commerce,,Weather,183%
-Indonesia,IDN,Entertainment,Content - Entertainment,Weather,1K%
-Indonesia,IDN,Entertainment,,Music,780%
-Indonesia,IDN,Entertainment,,News,238%
-Indonesia,IDN,Finance,Finance - Financial Health,Weather,403%
-Indonesia,IDN,Finance,,Games / Trivia,384%
-Indonesia,IDN,Finance,,Travel,359%
-Indonesia,IDN,On Demand,Commerce - On-Demand,Food & Drink,1.4K%
-Indonesia,IDN,On Demand,,Travel,306%
-Indonesia,IDN,On Demand,,Games / Card,258%
-Indonesia,IDN,RMG,RMG - RMG (Casino),Sports,1.2K%
-Indonesia,IDN,RMG,,Games / Casino,433%
-Indonesia,IDN,RMG,,Finance,231%
-Indonesia,IDN,Social,Social - Social Media,News,318%
-Indonesia,IDN,Social,,Photo & Video,298%
-Indonesia,IDN,Social,,Sports,218%
-Indonesia,IDN,Travel,Commerce - Travel,Travel,350%
-Indonesia,IDN,Travel,,Weather,227%
-Indonesia,IDN,Travel,,Sports,195%
-India,IND,E-Commerce,Commerce - E-Commerce,Shopping,1.4K%
-India,IND,E-Commerce,,Food & Drink,273%
-India,IND,E-Commerce,,Lifestyle,201%
-India,IND,Entertainment,Content - Entertainment,Music,707%
-India,IND,Entertainment,,Lifestyle,162%
-India,IND,Entertainment,,Games / Role Playing,123%
-India,IND,Finance,Finance - Financial Health,Health & Fitness,352%
-India,IND,Finance,,Navigation,255%
-India,IND,Finance,,Weather,226%
-India,IND,On Demand,Commerce - On-Demand,Food & Drink,587%
-India,IND,On Demand,,Navigation,184%
-India,IND,On Demand,,Games / Strategy,153%
-India,IND,RMG,RMG - RMG (Casino),Games / Card,2K%
-India,IND,RMG,,Games / Sports,2K%
-India,IND,RMG,,Games / Casino,974%
-India,IND,Social,Social - Social Media,News,320%
-India,IND,Social,,Photo & Video,294%
-India,IND,Social,,Social Networking,228%
-India,IND,Travel,Commerce - Travel,Travel,395%
-India,IND,Travel,,Navigation,261%
-India,IND,Travel,,Food & Drink,202%
-Japan,JPN,E-Commerce,Commerce - E-Commerce,Shopping,1.8K%
-Japan,JPN,E-Commerce,,Lifestyle,1.3K%
-Japan,JPN,E-Commerce,,Health & Fitness,337%
-Japan,JPN,Entertainment,Content - Entertainment,Music,874%
-Japan,JPN,Entertainment,,Education,117%
-Japan,JPN,Entertainment,,Games / Trivia,105%
-Japan,JPN,Finance,Finance - Financial Health,Finance,486%
-Japan,JPN,Finance,,Travel,403%
-Japan,JPN,Finance,,Medical,286%
-Japan,JPN,On Demand,Commerce - On-Demand,Food & Drink,690%
-Japan,JPN,On Demand,,Finance,196%
-Japan,JPN,On Demand,,Weather,176%
-Japan,JPN,RMG,RMG - RMG (Casino),Sports,826%
-Japan,JPN,RMG,,Games / Casino,653%
-Japan,JPN,RMG,,Finance,221%
-Japan,JPN,Social,Social - Social Media,Photo & Video,520%
-Japan,JPN,Social,,News,317%
-Japan,JPN,Social,,Entertainment,231%
-Japan,JPN,Travel,Commerce - Travel,Travel,1.2K%
-Japan,JPN,Travel,,Finance,289%
-Japan,JPN,Travel,,Business,215%
-South Korea,KOR,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
-South Korea,KOR,E-Commerce,,Lifestyle,630%
-South Korea,KOR,E-Commerce,,Weather,615%
-South Korea,KOR,Entertainment,Content - Entertainment,Music,1.9K%
-South Korea,KOR,Entertainment,,Medical,138%
-South Korea,KOR,Entertainment,,Weather,130%
-South Korea,KOR,Finance,Finance - Financial Health,Finance,1.5K%
-South Korea,KOR,Finance,,Medical,677%
-South Korea,KOR,Finance,,Health & Fitness,605%
-South Korea,KOR,On Demand,Commerce - On-Demand,Food & Drink,447%
-South Korea,KOR,On Demand,,Finance,225%
-South Korea,KOR,On Demand,,Travel,191%
-South Korea,KOR,RMG,RMG - RMG (Casino),Weather,1.1K%
-South Korea,KOR,RMG,,Games / Casino,552%
-South Korea,KOR,RMG,,Games / Word,421%
-South Korea,KOR,Social,Social - Social Media,News,524%
-South Korea,KOR,Social,,Photo & Video,489%
-South Korea,KOR,Social,,Entertainment,301%
-South Korea,KOR,Travel,Commerce - Travel,Business,499%
-South Korea,KOR,Travel,,Travel,417%
-South Korea,KOR,Travel,,Sports,321%
-Mexico,MEX,E-Commerce,Commerce - E-Commerce,Shopping,1.8K%
-Mexico,MEX,E-Commerce,,Medical,423%
-Mexico,MEX,E-Commerce,,Food & Drink,338%
-Mexico,MEX,Entertainment,Content - Entertainment,Music,460%
-Mexico,MEX,Entertainment,,Games / Casino,151%
-Mexico,MEX,Entertainment,,Books,117%
-Mexico,MEX,Finance,Finance - Financial Health,Finance,612%
-Mexico,MEX,Finance,,Games / Casino,551%
-Mexico,MEX,Finance,,Medical,536%
-Mexico,MEX,On Demand,Commerce - On-Demand,Food & Drink,846%
-Mexico,MEX,On Demand,,Games / Card,260%
-Mexico,MEX,On Demand,,Navigation,249%
-Mexico,MEX,RMG,RMG - RMG (Casino),Games / Casino,8.7K%
-Mexico,MEX,RMG,,Sports,3.5K%
-Mexico,MEX,RMG,,Games / Card,375%
-Mexico,MEX,Social,Social - Social Media,News,597%
-Mexico,MEX,Social,,Photo & Video,420%
-Mexico,MEX,Social,,Games / Music,214%
-Mexico,MEX,Travel,Commerce - Travel,Travel,1.4K%
-Mexico,MEX,Travel,,Games / Word,326%
-Mexico,MEX,Travel,,Weather,286%
-U.S.,USA,E-Commerce,Commerce - E-Commerce,Shopping,1.6K%
-U.S.,USA,E-Commerce,,Games / Casino,787%
-U.S.,USA,E-Commerce,,Medical,304%
-U.S.,USA,Entertainment,Content - Entertainment,Music,641%
-U.S.,USA,Entertainment,,Weather,206%
-U.S.,USA,Entertainment,,Productivity,103%
-U.S.,USA,Finance,Finance - Financial Health,Games / Casino,498%
-U.S.,USA,Finance,,Finance,386%
-U.S.,USA,Finance,,Navigation,187%
-U.S.,USA,On Demand,Commerce - On-Demand,Food & Drink,740%
-U.S.,USA,On Demand,,Games / Casino,332%
-U.S.,USA,On Demand,,Shopping,216%
-U.S.,USA,RMG,RMG - RMG (Casino),Sports,2.2K%
-U.S.,USA,RMG,,Games / Casino,2K%
-U.S.,USA,RMG,,Games / Sports,602%
-U.S.,USA,Social,Social - Social Media,Photo & Video,633%
-U.S.,USA,Social,,News,299%
-U.S.,USA,Social,,Graphics & Design,279%
-U.S.,USA,Travel,Commerce - Travel,Travel,855%
-U.S.,USA,Travel,,Games / Casino,321%
-U.S.,USA,Travel,,Navigation,187%
-Vietnam,VNM,E-Commerce,Commerce - E-Commerce,Shopping,2.1K%
-Vietnam,VNM,E-Commerce,,Games / Puzzle,283%
-Vietnam,VNM,E-Commerce,,Food & Drink,258%
-Vietnam,VNM,Entertainment,Content - Entertainment,Music,1.2K%
-Vietnam,VNM,Entertainment,,Games / Trivia,168%
-Vietnam,VNM,Entertainment,,Productivity,161%
-Vietnam,VNM,Finance,Finance - Financial Health,Travel,726%
-Vietnam,VNM,Finance,,Health & Fitness,530%
-Vietnam,VNM,Finance,,Games / Word,332%
-Vietnam,VNM,On Demand,Commerce - On-Demand,Food & Drink,940%
-Vietnam,VNM,On Demand,,Sports,911%
-Vietnam,VNM,On Demand,,Health & Fitness,407%
-Vietnam,VNM,RMG,RMG - RMG (Casino),Sports,847%
-Vietnam,VNM,RMG,,Games / Casino,469%
-Vietnam,VNM,RMG,,Weather,404%
-Vietnam,VNM,Social,Social - Social Media,Navigation,716%
-Vietnam,VNM,Social,,Photo & Video,371%
-Vietnam,VNM,Social,,Weather,350%
-Vietnam,VNM,Travel,Commerce - Travel,Travel,1.1K%
-Vietnam,VNM,Travel,,Games / Trivia,871%
-Vietnam,VNM,Travel,,Sports,355%
+Country,Country code,Genre,Top subcat for time spent,%
+Australia,AUS,RMG,Sports,19.25
+Australia,AUS,E-Commerce,Shopping,20.41
+Australia,AUS,On Demand,Casino Games,9.49
+Australia,AUS,Travel,Travel,4.48
+Australia,AUS,Finance,Travel,1.66
+Australia,AUS,Entertainment,Music,7.97
+Australia,AUS,Social,News,4.44
+Brazil,BRA,RMG,Sports,17.54
+Brazil,BRA,E-Commerce,Shopping,15.24
+Brazil,BRA,On Demand,Casino Games,4.77
+Brazil,BRA,Travel,Casino Games,32.53
+Brazil,BRA,Finance,Finance,4.63
+Brazil,BRA,Entertainment,Music,6.15
+Brazil,BRA,Social,News,4.59
+Canada,CAN,RMG,Sports,26.21
+Canada,CAN,E-Commerce,Shopping,18.87
+Canada,CAN,On Demand,Food & Drink,6.53
+Canada,CAN,Travel,Travel,6.36
+Canada,CAN,Finance,Travel,1.26
+Canada,CAN,Entertainment,Music,10.21
+Canada,CAN,Social,News,2.83
+Germany,DEU,RMG,Sports,8.15
+Germany,DEU,E-Commerce,Shopping,16.41
+Germany,DEU,On Demand,Casino Games,4.79
+Germany,DEU,Travel,Travel,3.07
+Germany,DEU,Finance,Finance,3.91
+Germany,DEU,Entertainment,Music,9.42
+Germany,DEU,Social,Graphics & Design,3.82
+France,FRA,RMG,Casino Games,40.55
+France,FRA,E-Commerce,Shopping,18.96
+France,FRA,On Demand,Food & Drink,6.28
+France,FRA,Travel,Travel,3.31
+France,FRA,Finance,Finance,6.27
+France,FRA,Entertainment,Music,5.99
+France,FRA,Social,News,5.09
+U.K.,GBR,RMG,Casino Games,39.94
+U.K.,GBR,E-Commerce,Shopping,16.31
+U.K.,GBR,On Demand,Food & Drink,6.17
+U.K.,GBR,Travel,Travel,4.63
+U.K.,GBR,Finance,Finance,4.99
+U.K.,GBR,Entertainment,Music,8.69
+U.K.,GBR,Social,News,3.10
+Indonesia,IDN,RMG,Sports,12.19
+Indonesia,IDN,E-Commerce,Shopping,15.70
+Indonesia,IDN,On Demand,Food & Drink,14.22
+Indonesia,IDN,Travel,Travel,3.50
+Indonesia,IDN,Finance,Weather,4.03
+Indonesia,IDN,Entertainment,Weather,1.0k%
+Indonesia,IDN,Social,News,3.18
+India,IND,RMG,Sports,5.00
+India,IND,E-Commerce,Shopping,13.64
+India,IND,On Demand,Food & Drink,5.87
+India,IND,Travel,Travel,3.95
+India,IND,Finance,Health & Fitness,3.52
+India,IND,Entertainment,Music,7.07
+India,IND,Social,News,3.20
+Japan,JPN,RMG,Sports,8.26
+Japan,JPN,E-Commerce,Shopping,18.45
+Japan,JPN,On Demand,Food & Drink,6.90
+Japan,JPN,Travel,Travel,12.03
+Japan,JPN,Finance,Finance,4.86
+Japan,JPN,Entertainment,Music,8.74
+Japan,JPN,Social,News,3.17
+South Korea,KOR,RMG,Weather,11.26
+South Korea,KOR,E-Commerce,Shopping,16.27
+South Korea,KOR,On Demand,Food & Drink,4.47
+South Korea,KOR,Travel,Travel,4.17
+South Korea,KOR,Finance,Finance,14.96
+South Korea,KOR,Entertainment,Music,18.58
+South Korea,KOR,Social,News,5.24
+Mexico,MEX,RMG,Casino Games,86.62
+Mexico,MEX,E-Commerce,Shopping,17.81
+Mexico,MEX,On Demand,Food & Drink,8.46
+Mexico,MEX,Travel,Travel,14.10
+Mexico,MEX,Finance,Finance,6.12
+Mexico,MEX,Entertainment,Music,4.60
+Mexico,MEX,Social,News,5.97
+U.S.,USA,RMG,Sports,22.32
+U.S.,USA,E-Commerce,Shopping,16.39
+U.S.,USA,On Demand,Food & Drink,7.40
+U.S.,USA,Travel,Travel,8.55
+U.S.,USA,Finance,Casino Games,4.98
+U.S.,USA,Entertainment,Music,6.41
+U.S.,USA,Social,News,2.99
+Vietnam,VNM,RMG,Sports,8.47
+Vietnam,VNM,E-Commerce,Shopping,20.85
+Vietnam,VNM,On Demand,Food & Drink,9.40
+Vietnam,VNM,Travel,Travel,11.05
+Vietnam,VNM,Finance,Travel,7.26
+Vietnam,VNM,Entertainment,Music,11.90
+Vietnam,VNM,Social,Weather,3.50
+Australia,AUS,RMG,Casino Games,6.25
+Australia,AUS,E-Commerce,Casino Games,7.60
+Australia,AUS,On Demand,Food & Drink,7.90
+Australia,AUS,Travel,Medical,1.56
+Australia,AUS,Finance,News,1.44
+Australia,AUS,Entertainment,Lifestyle,1.12
+Australia,AUS,Social,Social Networking,2.43
+Brazil,BRA,RMG,Casino Games,11.82
+Brazil,BRA,E-Commerce,Casino Games,5.55
+Brazil,BRA,On Demand,Food & Drink,4.05
+Brazil,BRA,Travel,Travel,13.93
+Brazil,BRA,Finance,Casino Games,3.40
+Brazil,BRA,Entertainment,News,1.05
+Brazil,BRA,Social,Social Networking,2.11
+Canada,CAN,RMG,Casino Games,1.6k%
+Canada,CAN,E-Commerce,Food & Drink,3.01
+Canada,CAN,On Demand,Casino Games,3.91
+Canada,CAN,Travel,Casino Games,2.59
+Canada,CAN,Finance,Books,0.58
+Canada,CAN,Entertainment,Medical,1.29
+Canada,CAN,Social,Social Networking,2.44
+Germany,DEU,RMG,Games / Casino,6.91
+Germany,DEU,E-Commerce,Food & Drink,2.94
+Germany,DEU,On Demand,Food & Drink,3.23
+Germany,DEU,Travel,Finance,1.24
+Germany,DEU,Finance,Weather,2.02
+Germany,DEU,Entertainment,Graphics & Design,2.39
+Germany,DEU,Social,News,3.75
+France,FRA,RMG,Sports,23.55
+France,FRA,E-Commerce,Food & Drink,2.92
+France,FRA,On Demand,Casino Games,5.01
+France,FRA,Travel,Food & Drink,1.79
+France,FRA,Finance,Casino Games,4.91
+France,FRA,Entertainment,Lifestyle,1.12
+France,FRA,Social,Social Networking,3.59
+U.K.,GBR,RMG,Sports,16.59
+U.K.,GBR,E-Commerce,Food & Drink,3.04
+U.K.,GBR,On Demand,Shopping,1.55
+U.K.,GBR,Travel,Medical,1.98
+U.K.,GBR,Finance,Casino Games,3.79
+U.K.,GBR,Entertainment,Education,1.55
+U.K.,GBR,Social,Social Networking,2.77
+Indonesia,IDN,RMG,Casino Games,4.33
+Indonesia,IDN,E-Commerce,Medical,2.04
+Indonesia,IDN,On Demand,Travel,3.06
+Indonesia,IDN,Travel,Weather,2.27
+Indonesia,IDN,Finance,Travel,3.59
+Indonesia,IDN,Entertainment,Music,7.80
+Indonesia,IDN,Social,Sports,2.18
+India,IND,RMG,Entertainment,1.96
+India,IND,E-Commerce,Food & Drink,2.73
+India,IND,On Demand,Shopping,1.07
+India,IND,Travel,Food & Drink,2.02
+India,IND,Finance,Weather,2.26
+India,IND,Entertainment,Lifestyle,1.61
+India,IND,Social,Social Networking,2.28
+Japan,JPN,RMG,Casino Games,6.53
+Japan,JPN,E-Commerce,Lifestyle,13.03
+Japan,JPN,On Demand,Finance,1.96
+Japan,JPN,Travel,Finance,2.89
+Japan,JPN,Finance,Travel,4.03
+Japan,JPN,Entertainment,Education,1.17
+Japan,JPN,Social,Entertainment,2.31
+South Korea,KOR,RMG,Sports,4.14
+South Korea,KOR,E-Commerce,Lifestyle,6.28
+South Korea,KOR,On Demand,Finance,2.25
+South Korea,KOR,Travel,Sports,3.21
+South Korea,KOR,Finance,Health & Fitness,6.05
+South Korea,KOR,Entertainment,Medical,1.38
+South Korea,KOR,Social,Entertainment,3.01
+Mexico,MEX,RMG,Sports,35.37
+Mexico,MEX,E-Commerce,Medical,4.23
+Mexico,MEX,On Demand,Medical,2.48
+Mexico,MEX,Travel,Weather,2.86
+Mexico,MEX,Finance,Casino Games,5.51
+Mexico,MEX,Entertainment,Casino Games,1.51
+Mexico,MEX,Social,Social Networking,1.92
+U.S.,USA,RMG,Casino Games,19.80
+U.S.,USA,E-Commerce,Casino Games,7.87
+U.S.,USA,On Demand,Casino Games,3.32
+U.S.,USA,Travel,Casino Games,3.21
+U.S.,USA,Finance,Finance,3.86
+U.S.,USA,Entertainment,Weather,2.06
+U.S.,USA,Social,Graphics & Design,2.79
+Vietnam,VNM,RMG,Casino Games,4.70
+Vietnam,VNM,E-Commerce,Food & Drink,2.58
+Vietnam,VNM,On Demand,Sports,9.11
+Vietnam,VNM,Travel,Sports,3.55
+Vietnam,VNM,Finance,Health & Fitness,5.30
+Vietnam,VNM,Entertainment,Medical,1.53
+Vietnam,VNM,Social,Social Networking,1.89
+Australia,AUS,RMG,Finance,1.43
+Australia,AUS,E-Commerce,Medical,4.48
+Australia,AUS,On Demand,Casual Games,3.65
+Australia,AUS,Travel,Weather,0.70
+Australia,AUS,Finance,Books,0.67
+Australia,AUS,Entertainment,Graphics & Design,0.92
+Australia,AUS,Social,Casual Games,2.02
+Brazil,BRA,RMG,Weather,10.85
+Brazil,BRA,E-Commerce,Food & Drink,1.86
+Brazil,BRA,On Demand,Medical,1.09
+Brazil,BRA,Travel,Food & Drink,1.19
+Brazil,BRA,Finance,Sports,2.13
+Brazil,BRA,Entertainment,Lifestyle,1.05
+Brazil,BRA,Social,Utilities,1.35
+Canada,CAN,RMG,Finance,2.13
+Canada,CAN,E-Commerce,Lifestyle,1.70
+Canada,CAN,On Demand,Medical,2.02
+Canada,CAN,Travel,Medical,1.36
+Canada,CAN,Finance,Finance,0.55
+Canada,CAN,Entertainment,Lifestyle,1.26
+Canada,CAN,Social,Utilities,1.92
+Germany,DEU,RMG,Games / Sports,5.58
+Germany,DEU,E-Commerce,Lifestyle,1.97
+Germany,DEU,On Demand,Shopping,1.52
+Germany,DEU,Travel,Food & Drink,1.05
+Germany,DEU,Finance,News,1.86
+Germany,DEU,Entertainment,Books,1.09
+Germany,DEU,Social,Social Networking,3.72
+France,FRA,RMG,News,2.96
+France,FRA,E-Commerce,Lifestyle,2.55
+France,FRA,On Demand,Sports,3.12
+France,FRA,Travel,Business,1.67
+France,FRA,Finance,Sports,2.52
+France,FRA,Entertainment,Books,1.07
+France,FRA,Social,Utilities,2.63
+U.K.,GBR,RMG,Finance,3.03
+U.K.,GBR,E-Commerce,Lifestyle,2.35
+U.K.,GBR,On Demand,Casual Games,1.34
+U.K.,GBR,Travel,Sports,1.12
+U.K.,GBR,Finance,Medical,3.49
+U.K.,GBR,Entertainment,Entertainment,1.30
+U.K.,GBR,Social,Utilities,2.62
+Indonesia,IDN,RMG,Finance,2.31
+Indonesia,IDN,E-Commerce,Weather,1.83
+Indonesia,IDN,On Demand,Health & Fitness,1.83
+Indonesia,IDN,Travel,Sports,1.95
+Indonesia,IDN,Finance,Sports,3.08
+Indonesia,IDN,Entertainment,News,2.38
+Indonesia,IDN,Social,Utilities,1.88
+India,IND,RMG,Finance,1.68
+India,IND,E-Commerce,Lifestyle,2.00
+India,IND,On Demand,Travel,0.99
+India,IND,Travel,Finance,1.62
+India,IND,Finance,Travel,1.34
+India,IND,Entertainment,Books,0.99
+India,IND,Social,Utilities,1.60
+Japan,JPN,RMG,Finance,2.21
+Japan,JPN,E-Commerce,Health & Fitness,3.37
+Japan,JPN,On Demand,Weather,1.76
+Japan,JPN,Travel,Food & Drink,2.14
+Japan,JPN,Finance,Sports,2.59
+Japan,JPN,Entertainment,Graphics & Design,0.99
+Japan,JPN,Social,Social Networking,1.75
+South Korea,KOR,RMG,Finance,2.12
+South Korea,KOR,E-Commerce,Weather,6.15
+South Korea,KOR,On Demand,Travel,1.91
+South Korea,KOR,Travel,Finance,2.27
+South Korea,KOR,Finance,Casual Games,3.41
+South Korea,KOR,Entertainment,Weather,1.30
+South Korea,KOR,Social,Social Networking,1.75
+Mexico,MEX,RMG,Travel,2.22
+Mexico,MEX,E-Commerce,Food & Drink,3.38
+Mexico,MEX,On Demand,Finance,1.96
+Mexico,MEX,Travel,Food & Drink,1.40
+Mexico,MEX,Finance,Medical,5.36
+Mexico,MEX,Entertainment,Books,1.17
+Mexico,MEX,Social,Sports,1.79
+U.S.,USA,RMG,News,2.36
+U.S.,USA,E-Commerce,News,2.36
+U.S.,USA,On Demand,Shopping,2.16
+U.S.,USA,Travel,Sports,1.83
+U.S.,USA,Finance,Shopping,1.63
+U.S.,USA,Entertainment,Lifestyle,0.99
+U.S.,USA,Social,Utilities,2.72
+Vietnam,VNM,RMG,Weather,4.04
+Vietnam,VNM,E-Commerce,Medical,1.22
+Vietnam,VNM,On Demand,Health & Fitness,4.07
+Vietnam,VNM,Travel,Food & Drink,3.18
+Vietnam,VNM,Finance,Casual Games,2.30
+Vietnam,VNM,Entertainment,Travel,1.15
+Vietnam,VNM,Social,Food & Drink,1.60
