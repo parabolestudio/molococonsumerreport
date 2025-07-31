@@ -575,7 +575,7 @@ VIZ 11
 
       .vis-11-time-grid {
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 30% 70%;
         grid-template-rows: repeat(3, 30px);
         grid-column-gap: 5px;
         grid-row-gap: 16px;
