@@ -114,6 +114,13 @@ export function Vis13() {
         d["value"] = +d["CPP"];
       });
 
+      // rename fields in column "Publisher Genre" from "Other Consumer Publishers" to "Other Consumer Pubs" to fix highlighting
+      data.forEach((d) => {
+        if (d["Publisher Genre"] === "Other Consumer Publishers") {
+          d["Publisher Genre"] = "Other Consumer Pubs";
+        }
+      });
+
       setData(data);
     });
   }, []);
