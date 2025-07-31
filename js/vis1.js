@@ -65,14 +65,6 @@ function CategoryIcon({ category, heightBar }) {
   </g>`;
 }
 
-const quarterMap = {
-  Q1: "1",
-  Q2: "4",
-  Q3: "7",
-  Q4: "10",
-};
-
-// const formatRevenue = (value) => `$${(value/1e9).toFixed(1)}B`;
 const formatRevenue = (value) => {
   return value > 1e9
     ? `$${d3.format(".3s")(value).replace("G", "B")}`
@@ -83,8 +75,6 @@ export function Vis1() {
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("All countries");
-
-  const parseTime = d3.utcParse("%Y-%m");
 
   // Fetch data on mount
   useEffect(() => {
@@ -100,16 +90,13 @@ export function Vis1() {
 
       timelineData.forEach((d) => {
         d["revenue"] = +d["Revenue"]; //.replace(/,/g, "");
-        // const [year, quarter] = d["Quarter"].split("-");
         d["year"] = +d["Year"];
-        // d["date"] = parseTime(`${year}-${quarterMap[quarter]}`);
         d["category"] = d["Category"];
         d["country"] = d["Country"];
         delete d["Revenue"];
         delete d["Year"];
         delete d["Category"];
         delete d["Country"];
-        // delete d["Quarter"];
       });
 
       setTimelineData(timelineData);
@@ -197,9 +184,6 @@ export function Vis1() {
   const timelineNonGamingLatestItem =
     nonGamingTimelineData[nonGamingTimelineData.length - 1];
 
-  const timelineGamingLegendItem = gamingTimelineData[4];
-  const timelineNonGamingLegendItem = nonGamingTimelineData[4];
-
   /**
    * TIMELINE
    */
@@ -237,7 +221,7 @@ export function Vis1() {
   const xScaleCategories = d3
     .scaleLinear()
     .domain([0, d3.max(categoryDataByCountry, (d) => d.categoryGrowth)])
-    .range([0, innerWidthCategories - 170]);
+    .range([0, innerWidthCategories - 225]);
 
   const yScaleCategories = d3
     .scaleBand()
