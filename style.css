@@ -39,6 +39,9 @@
   &.charts-line-dashed-blue {
     stroke: #0280fb;
   }
+  &.charts-line-dashed-black {
+    stroke: #000;
+  }
 }
 
 /* multi select style*/

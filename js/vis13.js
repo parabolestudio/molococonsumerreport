@@ -168,7 +168,12 @@ export function Vis13() {
     "Utility & Productivity": "Utility & Productivity",
   };
 
-  const xScale = d3.scaleLinear().domain([40, 200]).range([0, innerWidth]);
+  const xScale = d3
+    .scaleLinear()
+    .domain([40, 210])
+    .range([0, innerWidth])
+    .clamp(true);
+
   const yScale = d3.scalePoint(advertisers, [0, innerHeight]);
 
   return html`<div class="vis-container-inner">
@@ -178,46 +183,6 @@ export function Vis13() {
       style="width:100%; height:100%;"
     >
       <g transform="translate(${margin.left}, ${margin.top})">
-        <g class="x-axis">
-          ${xScale.ticks(7).map((tick) => {
-            return html`
-              <text
-                transform="translate(${xScale(tick)}, 0)"
-                x="0"
-                y="${-margin.top + 40}"
-                text-anchor="middle"
-                class="charts-text-body"
-              >
-                ${tick}
-              </text>
-            `;
-          })}
-          <line
-            x1="${xScale(100)}"
-            x2="${xScale(100)}"
-            y1="${-margin.top + 50}"
-            y2="${innerHeight + 20}"
-            stroke="#d9d9d9"
-            stroke-width="2"
-            stroke-dasharray="2 5"
-          />
-          <text
-            x="${innerWidth / 2}"
-            y="${-margin.top + 10}"
-            text-anchor="middle"
-            class="charts-text-body-bold"
-          >
-            Indexed CPP
-          </text>
-          <text
-            x="${-margin.left}"
-            y="${-30}"
-            text-anchor="start"
-            class="charts-text-body-bold"
-          >
-            Advertiser category
-          </text>
-        </g>
         <g class="y-axis">
           ${advertisers.map((adv) => {
             return html`<g transform="translate(0, ${yScale(adv)})">
@@ -246,6 +211,59 @@ export function Vis13() {
             </g>`;
           })}
         </g>
+        <g class="x-axis">
+          ${xScale
+            .ticks(7)
+            .map(
+              (tick) => html`<text
+                transform="translate(${xScale(tick)}, 0)"
+                x="0"
+                y="${-margin.top + 40}"
+                text-anchor="middle"
+                class="charts-text-body"
+              >
+                ${tick}
+              </text>`
+            )}
+          <line
+            x1="${xScale(100)}"
+            x2="${xScale(100)}"
+            y1="${-margin.top + 50}"
+            y2="${innerHeight + 20}"
+            class="charts-line-dashed"
+          />
+          <text
+            x="${innerWidth / 2}"
+            y="${-margin.top + 10}"
+            text-anchor="middle"
+            class="charts-text-body-bold"
+          >
+            Indexed CPP
+          </text>
+          <text
+            x="${-margin.left}"
+            y="${-30}"
+            text-anchor="start"
+            class="charts-text-body-bold"
+          >
+            Advertiser category
+          </text>
+          <g transform="translate(${xScale(200)}, 0)">
+            <path
+              transform="translate(${-15 / 2}, ${-25 - 15 - 5})"
+              stroke="#000"
+              stroke-width=".5"
+              fill="none"
+              d="M0 7.9h3.375L6.19 1l2.612 13.802L11.617 7.9H15"
+            />
+            <line
+              y1="${-25}"
+              y2="${innerHeight + 20}"
+              class="charts-line-dashed charts-line-dashed-black"
+            />
+          </g>
+        </g>
+
         <g class="dots">
           ${advertisers.map((adv) => {
             const advertiserData = data.filter(
@@ -255,7 +273,9 @@ export function Vis13() {
               ${advertiserData.map((datum) => {
                 return html`
                   <circle
-                    cx="${xScale(datum["value"])}"
+                    cx="${datum["value"] < 200
+                      ? xScale(datum["value"])
+                      : xScale(205)}"
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${colors[datum["Publisher Genre"]]}"
@@ -269,14 +289,21 @@ export function Vis13() {
                         selectedCategory === all ||
                         datum["Publisher Genre"] === selectedCategory
                       ) {
+                        let tooltipX =
+                          ((margin.left + xScale(datum["value"]) + 9.5 + 20) /
+                            width) *
+                          100;
+                        if (datum["value"] > 200) {
+                          tooltipX =
+                            ((margin.left + xScale(170) + 9.5 + 20) / width) *
+                            100;
+                        }
+
                         setHoveredItem({
                           advertiser: datum["Advertiser Genre"],
                           publisher: datum["Publisher Genre"],
                           roas: datum["value"],
-                          x:
-                            ((margin.left + xScale(datum["value"]) + 9.5 + 20) /
-                              width) *
-                            100,
+                          x: tooltipX,
                           y: ((margin.top + yScale(adv)) / height) * 100,
                         });
                       }
