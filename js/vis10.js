@@ -184,7 +184,7 @@ export function Vis10() {
                       <p
                         style="color: #000; line-height: 1.25; text-align: center; margin: 0;"
                       >
-                        Choose another country to compare
+                        Add another country to compare
                       </p>
                     </div>
                   </foreignObject>
@@ -275,7 +275,7 @@ export function Vis10() {
                         dominant-baseline="middle"
                         text-anchor="middle"
                       >
-                        Time spent in 2024 vs 2023
+                        Time spent in 2024 vs. 2023
                       </text>`
                   : ""}
                 <text
@@ -529,7 +529,7 @@ function Tooltip({ hoveredItem, tooltipData }) {
     >
       <p class="tooltip-title">${hoveredItem.category}</p>
       <div>
-        <p class="tooltip-label">Total time spent</p>
+        <p class="tooltip-label">Total time spent share</p>
         <p class="tooltip-value">${shareLabel}%</p>
       </div>
       <div>
