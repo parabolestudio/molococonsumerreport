@@ -183,7 +183,7 @@ export function Vis13() {
   const advertisersMapping = {
     Entertainment: "Entertainment",
     Finance: "Finance",
-    "Food & Drink": "Food & Delivery",
+    "Food & Drink": "Delivery & Food",
     Gaming: "Gaming",
     "Other Consumer Advertisers": "Other",
     RMG: "RMG",
