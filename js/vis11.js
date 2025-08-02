@@ -365,8 +365,8 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
   filteredAppData.sort((a, b) => a.Position - b.Position);
 
   return html`<div class="vis-11-app right">
-    <p class="label">Which apps are trending</p>
-    <p class="sublabel">Top 3 ad-supported apps</p>
+    <p class="label">Global ad-supported apps</p>
+    <p class="sublabel">Example publisher inventory</p>
     <div class="app-list">
       ${filteredAppData.map(
         (d) => html`
