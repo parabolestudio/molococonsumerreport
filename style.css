@@ -366,6 +366,10 @@ VIZ 9
 #vis9 {
   .vis-container-inner {
     position: relative;
+
+    svg {
+      overflow: visible;
+    }
   }
 }
 
