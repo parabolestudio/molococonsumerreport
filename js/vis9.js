@@ -48,11 +48,8 @@ export function Vis9() {
       ? vis9Container.offsetWidth
       : 600;
 
-  const height =
-    vis9Container && vis9Container.offsetWidth
-      ? vis9Container.offsetWidth
-      : 600;
-  const margin = { top: 65, right: 10, bottom: 55, left: 90 };
+  const height = width; // make it square
+  const margin = { top: 65, right: 15, bottom: 55, left: 90 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
