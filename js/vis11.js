@@ -5,6 +5,8 @@ const URL =
 const ASSETS_URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/";
 
+const isMobile = window.innerWidth <= 425;
+
 // Map categories to their corresponding icons
 function getCategoryIcon(category) {
   const iconMap = {
@@ -167,7 +169,7 @@ export function Vis11() {
   const iconPath = getCategoryIcon(selectedCategory);
   const svgContent = svgCache[iconPath];
 
-  return html`<div class="vis-container-inner">
+  return html`<div class="vis-container-inner ${isMobile ? "mobile" : ""}">
     <div
       class="vis-11-main-category-icon"
       dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
@@ -251,31 +253,35 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
     <p class="title">${getCategoryLabel(selectedCategory)}</p>
     <div class="vis-11-top-grid">
       <div class="element1">
-        <svg viewBox="0 0 ${sizeDotSvg} ${sizeDotSvg}">
-          ${dots1.map(
-            (dot) => html`<circle
-              class="dot"
-              cx="${dot.x}"
-              cy="${dot.y}"
-              r="${dotRadius}"
-            />`
-          )}
-        </svg>
+        ${isMobile
+          ? ""
+          : html`<svg viewBox="0 0 ${sizeDotSvg} ${sizeDotSvg}">
+              ${dots1.map(
+                (dot) => html`<circle
+                  class="dot"
+                  cx="${dot.x}"
+                  cy="${dot.y}"
+                  r="${dotRadius}"
+                />`
+              )}
+            </svg>`}
         <p class="number">${numberApps}</p>
         <p class="label">IAE apps used</p>
         <p class="sublabel">in a month</p>
       </div>
       <div class="element2">
-        <svg viewBox="0 0 200 200">
-          ${dots2.map(
-            (dot) => html`<circle
-              class="dot"
-              cx="${dot.x}"
-              cy="${dot.y}"
-              r="${dotRadius}"
-            />`
-          )}
-        </svg>
+        ${isMobile
+          ? ""
+          : html`<svg viewBox="0 0 200 200">
+              ${dots2.map(
+                (dot) => html`<circle
+                  class="dot"
+                  cx="${dot.x}"
+                  cy="${dot.y}"
+                  r="${dotRadius}"
+                />`
+              )}
+            </svg>`}
         <p class="number">${numberAdOpportunities}</p>
         <p class="label">Ad opportunities</p>
         <p class="sublabel">in 24 hours</p>

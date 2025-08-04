@@ -566,6 +566,28 @@ VIZ 11
     }
   }
 
+  .vis-container-inner.mobile {
+    .vis-11-bottom-top-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .vis-11-app .app-list {
+      flex-direction: row;
+
+      .app-item {
+        flex-direction: column;
+        flex-basis: 33.33%;
+        flex-grow: 1;
+        gap: 8px;
+
+        .sublabel {
+          text-align: center;
+        }
+      }
+    }
+  }
+
   .vis-11-bottom-top-grid {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -703,8 +725,8 @@ VIZ 11
 
 #vis11_categories .category-list {
   max-width: 736px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
   list-style: none;
