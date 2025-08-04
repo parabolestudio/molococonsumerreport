@@ -800,8 +800,8 @@ VIZ 13
 
 #vis13_categories .category-list {
   max-width: 736px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
   list-style: none;
@@ -831,7 +831,9 @@ VIZ 13
       svg {
         width: 100%;
         height: 100%;
-        /* fill: #666666; */
+        flex-shrink: 0;
+        flex-basis: 34px;
+
         circle {
           transition: fill 0.3s ease-in-out;
         }
