@@ -142,7 +142,8 @@ export function Vis13() {
             hash |= 0;
           }
           let rand = seededRandom(hash + jitterSeed);
-          d._xJitter = (rand - 0.5) * 10;
+          let factor = window.innerWidth <= 425 ? 2.5 : 10;
+          d._xJitter = (rand - 0.5) * factor;
         }
       });
 
@@ -178,7 +179,7 @@ export function Vis13() {
       : 1000;
   const isMobile = width <= 425;
   const height = 800;
-  const margin = { top: 120, right: 20, bottom: 60, left: isMobile ? 25 : 160 };
+  const margin = { top: 120, right: 8, bottom: 60, left: isMobile ? 8 : 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
