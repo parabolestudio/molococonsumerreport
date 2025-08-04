@@ -203,6 +203,8 @@ export function Vis12() {
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
 
+  console.log("selectedCategories", selectedCategories);
+
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
 
@@ -228,6 +230,11 @@ export function Vis12() {
         <path d=${areaGenerator(hourValues)} />
       </g>`;
     }
+
+    let noteText = "No sufficient data for this category";
+    if (selectedCategories.length < NUMBER_CATEGORIES - 1) {
+      noteText = "Add another category to compare";
+    }
     return html`
       <g
         transform="translate(0, ${index *
@@ -250,7 +257,7 @@ export function Vis12() {
           dominant-baseline="middle"
           text-anchor="middle"
           class="charts-text-body charts-text-white"
-          >Add another category to compare</text
+          >${noteText}</text
         >
       </g>
     `;
