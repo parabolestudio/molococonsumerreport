@@ -3,7 +3,8 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 export function Vis10() {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
-  const initialCountries = ["U.S.", "Germany", "South Korea"];
+  // const initialCountries = ["U.S.", "Germany", "South Korea"];
+  const initialCountries = ["Germany", "South Korea"];
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
   const [categories, setCategories] = useState([]);
   const [tooltipData, setTooltipData] = useState([]);
@@ -179,7 +180,7 @@ export function Vis10() {
                   >
                     <div
                       xmlns="http://www.w3.org/1999/xhtml"
-                      style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;"
+                      style="width: 100%; height: ${sectionInnerHeight}px; display: flex; justify-content: center; align-items: center;"
                     >
                       <p
                         style="color: #000; line-height: 1.25; text-align: center; margin: 0;"
