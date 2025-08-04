@@ -738,9 +738,9 @@ VIZ 11
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
+  margin-bottom: 66px;
   list-style: none;
   padding: 0;
-  margin: 0;
 
   .category-item {
     display: flex;
