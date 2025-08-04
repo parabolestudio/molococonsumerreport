@@ -151,25 +151,27 @@ export function Vis1() {
     return html`<div>Loading...</div>`;
   }
 
+  const isMobile = window.innerWidth <= 425;
   const vis1Container = document.querySelector("#vis1");
   const width =
     vis1Container && vis1Container.offsetWidth
       ? vis1Container.offsetWidth
       : 600;
-  const height = 500;
+  const heightTimeline = isMobile ? 350 : 500;
+  const heightCategories = 500;
 
-  const widthTimeline = width * 0.6;
-  const widthCategories = width * 0.4;
+  const widthTimeline = isMobile ? width : width * 0.6;
+  const widthCategories = isMobile ? width : width * 0.4;
 
   const marginTimeline = { top: 20, right: 60, bottom: 25, left: 25 };
   const innerHeightTimeline =
-    height - marginTimeline.top - marginTimeline.bottom;
+    heightTimeline - marginTimeline.top - marginTimeline.bottom;
   const innerWidthTimeline =
     widthTimeline - marginTimeline.left - marginTimeline.right;
 
   const marginCategories = { top: 50, right: 15, bottom: 5, left: 35 };
   const innerHeightCategories =
-    height - marginCategories.top - marginCategories.bottom;
+    heightCategories - marginCategories.top - marginCategories.bottom;
   const innerWidthCategories =
     widthCategories - marginCategories.left - marginCategories.right;
 
@@ -343,7 +345,7 @@ export function Vis1() {
     return html`
       <g
         class="categories"
-        transform="translate(${widthTimeline +
+        transform="translate(${isMobile ? marginCategories.left : widthTimeline +
         marginCategories.left}, ${marginCategories.top})"
       >
         <rect
@@ -390,41 +392,61 @@ export function Vis1() {
       </g>`
   }
 
-  return html`<div class="vis-container-inner">
-    <svg
-      viewBox="0 0 ${width} ${height}"
-      preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%;"
-    >
-      ${getTimeline()}
+  if (isMobile) {
+    return html`<div class="vis-container-inner">
+      <svg
+        viewBox="0 0 ${width} ${heightTimeline}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%;"
+      >
+        ${getTimeline()}
+      </svg>
+        
+      <svg
+        viewBox="0 0 ${width} ${heightCategories}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%;"
+      >
+        ${getCategories()}  
+      </svg>
+    </div>`
+  } else {
+    return html`<div class="vis-container-inner">
+      <svg
+        viewBox="0 0 ${width} ${height}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%;"
+      >
+        ${getTimeline()}
 
-      <g>
-        <line
-          x1="${marginTimeline.left +
-          xScaleTimeline(timelineNonGamingLatestItem.year)}"
-          y1="${marginTimeline.top +
-          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
-          x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginTimeline.top +
-          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
-          class="charts-line-dashed charts-line-dashed-blue"
-        />
-        <line
-          x1="${marginTimeline.left + widthTimeline - 20}"
-          y1="${marginTimeline.top + innerHeightTimeline}"
-          x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginTimeline.top +
-            yScaleTimeline(timelineNonGamingLatestItem.revenue) <
-          marginTimeline.top
-            ? marginTimeline.top +
-              yScaleTimeline(timelineNonGamingLatestItem.revenue)
-            : marginTimeline.top}"
-          class="charts-line-dashed charts-line-dashed-blue"
-        />
-      </g>
+        <g>
+          <line
+            x1="${marginTimeline.left +
+            xScaleTimeline(timelineNonGamingLatestItem.year)}"
+            y1="${marginTimeline.top +
+            yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+            x2="${marginTimeline.left + widthTimeline - 20}"
+            y2="${marginTimeline.top +
+            yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+            class="charts-line-dashed charts-line-dashed-blue"
+          />
+          <line
+            x1="${marginTimeline.left + widthTimeline - 20}"
+            y1="${marginTimeline.top + innerHeightTimeline}"
+            x2="${marginTimeline.left + widthTimeline - 20}"
+            y2="${marginTimeline.top +
+              yScaleTimeline(timelineNonGamingLatestItem.revenue) <
+            marginTimeline.top
+              ? marginTimeline.top +
+                yScaleTimeline(timelineNonGamingLatestItem.revenue)
+              : marginTimeline.top}"
+            class="charts-line-dashed charts-line-dashed-blue"
+          />
+        </g>
 
-      ${getCategories()}
-      
-    </svg>
-  </div>`;
+        ${getCategories()}
+        
+      </svg>
+    </div>`;
+  }
 }
