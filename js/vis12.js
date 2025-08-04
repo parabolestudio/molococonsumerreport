@@ -32,12 +32,12 @@ function updateMultiSelect(categories, initialCategories, callback) {
         .select2("data")
         .map((d) => d.id);
 
-      const limitMessageText = document.querySelector(
-        "#select2-vis12-select-results > li.select2-results__message"
-      );
-      if (limitMessageText) {
-        limitMessageText.innerText = "You can only select 3 categories";
-      }
+      // const limitMessageText = document.querySelector(
+      //   "#select2-vis12-select-results > li.select2-results__message"
+      // );
+      // if (limitMessageText) {
+      //   limitMessageText.innerText = "You can only select 3 categories";
+      // }
       callback(selectedCategories);
     });
   }
