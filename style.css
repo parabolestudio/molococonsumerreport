@@ -376,6 +376,10 @@ VIZ 10
   .vis-container-inner {
     position: relative;
 
+    svg {
+      overflow: visible;
+    }
+
     .circles circle {
       cursor: pointer;
       transition: fill 0.3s ease-in-out;
@@ -738,7 +742,7 @@ VIZ 11
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
-  margin-bottom: 66px;
+  margin-bottom: 32px;
   list-style: none;
   padding: 0;
 
