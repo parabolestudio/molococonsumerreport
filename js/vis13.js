@@ -295,7 +295,6 @@ export function Vis13() {
           </text>
           ${!isMobile
             ? html`<text
-                <text
                 x="${-margin.left}"
                 y="${-30}"
                 text-anchor="start"
