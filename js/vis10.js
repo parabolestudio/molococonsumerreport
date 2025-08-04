@@ -3,11 +3,9 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 export function Vis10() {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
-  // const initialCountries = ["U.S.", "Germany", "South Korea"];
-  const initialCountries = ["Germany", "South Korea"];
+  const initialCountries = ["U.S.", "Germany", "South Korea"];
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
   const [categories, setCategories] = useState([]);
-  const [tooltipData, setTooltipData] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
@@ -473,7 +471,7 @@ export function Vis10() {
         })}
       </g>
     </svg>
-    <${Tooltip} hoveredItem=${hoveredItem} tooltipData=${tooltipData} />
+    <${Tooltip} hoveredItem=${hoveredItem} />
   </div>`;
 }
 
@@ -511,7 +509,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
   }
 }
 
-function Tooltip({ hoveredItem, tooltipData }) {
+function Tooltip({ hoveredItem }) {
   const formatGrowth = (growth) => {
     if (growth === null || growth === undefined) return "N/A";
     return growth > 0 ? `+${growth.toFixed(0)}%` : `${growth.toFixed(0)}%`;
@@ -539,41 +537,4 @@ function Tooltip({ hoveredItem, tooltipData }) {
       </div>
     </div>`;
   }
-
-  // if (!hoveredItem || !tooltipData) return null;
-
-  // // Find the category data in the array
-  // const categoryData = tooltipData.find(
-  //   (d) =>
-  //     d.country === hoveredItem.country && d.category === hoveredItem.category
-  // );
-
-  // if (!categoryData) return null;
-
-  // return html`<div class="tooltip">
-  //   <p class="tooltip-title">${categoryData.category}</p>
-  //   <div>
-  //     <p class="tooltip-label">Total time spent</p>
-  //     <p class="tooltip-value">${categoryData.share.toFixed(2)}%</p>
-  //   </div>
-  //   <div>
-  //     <p class="tooltip-label">Growth (2024 vs 2023)</p>
-  //     <p class="tooltip-value">${formatGrowth(categoryData.yearGrowth)}</p>
-  //   </div>
-  //   <div>
-  //     <p class="tooltip-label">Number of apps</p>
-  //     <p class="tooltip-value">${categoryData.apps.length}</p>
-  //   </div>
-  //   <div>
-  //     <p class="tooltip-label">Apps</p>
-  //     <div class="tooltip-apps">
-  //       ${categoryData.apps.map(
-  //         (app) =>
-  //           html`<p class="tooltip-app">
-  //             ${app.appName} (${app.appShare.toFixed(2)}%)
-  //           </p>`
-  //       )}
-  //     </div>
-  //   </div>
-  // </div>`;
 }
