@@ -171,9 +171,14 @@ export function Vis13() {
     return html`<div>Loading...</div>`;
   }
 
-  const width = 1000;
+  const vis13Container = document.querySelector("#vis13");
+  const width =
+    vis13Container && vis13Container.offsetWidth
+      ? vis13Container.offsetWidth
+      : 1000;
+  const isMobile = width <= 425;
   const height = 800;
-  const margin = { top: 120, right: 20, bottom: 60, left: 160 };
+  const margin = { top: 120, right: 20, bottom: 60, left: isMobile ? 25 : 160 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -210,8 +215,10 @@ export function Vis13() {
       <g transform="translate(${margin.left}, ${margin.top})">
         <g class="y-axis">
           ${advertisers.map((adv) => {
-            return html`<g transform="translate(0, ${yScale(adv)})">
-              <text
+            let textPlacement = "";
+            if (!isMobile) {
+              textPlacement = html`<text
+                transform="translate(0, ${yScale(adv)})"
                 x="-10"
                 y="5"
                 text-anchor="end"
@@ -224,9 +231,29 @@ export function Vis13() {
                 line-height="125%"
               >
                 ${advertisersMapping[adv]}
-              </text>
+              </text>`;
+            } else {
+              textPlacement = html`<text
+                transform="translate(0, ${yScale(adv)})"
+                x="-5"
+                y="-25"
+                text-anchor="start"
+                class="charts-text-body"
+                fill="#000)"
+                font-family="Montserrat"
+                font-size="14px"
+                font-style="normal"
+                font-weight="400"
+                line-height="125%"
+              >
+                ${advertisersMapping[adv]}
+              </text>`;
+            }
+            return html`<g>
+              ${textPlacement}
               <line
-                x1="0"
+                transform="translate(0, ${yScale(adv)})"
+                x1="-5"
                 x2="${innerWidth}"
                 y1="0"
                 y2="0"
@@ -265,14 +292,17 @@ export function Vis13() {
           >
             Indexed CPP
           </text>
-          <text
-            x="${-margin.left}"
-            y="${-30}"
-            text-anchor="start"
-            class="charts-text-body-bold"
-          >
-            Advertiser category
-          </text>
+          ${!isMobile
+            ? html`<text
+                <text
+                x="${-margin.left}"
+                y="${-30}"
+                text-anchor="start"
+                class="charts-text-body-bold"
+              >
+                Advertiser category
+              </text>`
+            : ""}
           <g transform="translate(${xScale(200)}, 0)">
             <path
               transform="translate(${-15 / 2}, ${-25 - 15 - 5})"
