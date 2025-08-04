@@ -1,5 +1,24 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
+const isMobile = window.innerWidth <= 425;
+
+// sort country data by specific order of categories according the following category order
+const categoryOrder = [
+  "Books & Reference",
+  "Education",
+  "Entertainment",
+  "Finance",
+  "Gaming",
+  "Generative AI",
+  "Health and Fitness",
+  "News",
+  "Other",
+  "Shopping",
+  "Social Media",
+  "Sports",
+  "Utility & Productivity",
+];
+
 export function Vis10() {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
@@ -73,7 +92,7 @@ export function Vis10() {
     });
   }, []);
 
-  const NUMBER_COUNTRIES = 3;
+  const NUMBER_COUNTRIES = isMobile ? 1 : 3;
 
   // filter data by selected countries
   const filteredData = data.filter((d) =>
@@ -106,14 +125,26 @@ export function Vis10() {
       ? vis10Container.offsetWidth
       : 600;
   const height = 700;
-  const outerMargin = { top: 100, right: 5, bottom: 5, left: 5 };
+  const outerMargin = {
+    top: 100,
+    right: 5,
+    bottom: 5,
+    left: isMobile ? 45 : 5,
+  };
   const outerWidth = width - outerMargin.left - outerMargin.right;
   const outerHeight = height - outerMargin.top - outerMargin.bottom;
 
-  const sectionMargin = { top: 0, right: 0, bottom: 20, left: 20 };
+  const sectionMargin = {
+    top: 0,
+    right: 0,
+    bottom: 20,
+    left: isMobile ? 20 : 20,
+  };
   const sectionScale = d3
     .scaleBand()
-    .domain([0, 1, 2])
+    .domain(
+      isMobile ? [0] : Array.from({ length: NUMBER_COUNTRIES }, (_, i) => i)
+    )
     .range([0, outerWidth])
     .padding(0.05);
   const sectionInnerWidth =
@@ -134,6 +165,275 @@ export function Vis10() {
 
   const formatShare = (share) => `${(share * 100).toFixed(0)}%`;
 
+  /**
+   * MOBILE: stack SVGs vertically, one per country
+   */
+  if (isMobile) {
+    return html`<div class="vis-container-inner">
+      ${selectedCountries.map((country) => {
+        const countryDataObj = filteredData.find((d) => d.country === country);
+        if (!countryDataObj) return null;
+        const countryData = countryDataObj.values.slice();
+        countryData.sort((a, b) => b.share - a.share);
+        countryData.sort((a, b) => {
+          const indexA = categoryOrder.indexOf(a.category);
+          const indexB = categoryOrder.indexOf(b.category);
+          return indexA - indexB;
+        });
+        return html`
+          <svg
+            viewBox="0 0 ${width} ${height}"
+            preserveAspectRatio="xMidYMid meet"
+            style="width:100%; height:100%; margin-bottom: 32px;"
+          >
+            <g transform="translate(${outerMargin.left}, ${outerMargin.top})">
+              <rect
+                x="0"
+                y="0"
+                width="${outerWidth}"
+                height="${outerHeight}"
+                fill="transparent"
+              />
+              <g
+                transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
+              >
+                <rect
+                  y="${valueScale(0)}"
+                  width="${sectionInnerWidth}"
+                  height="${sectionInnerHeight - valueScale(0)}"
+                  fill="#F2F2F2"
+                />
+                <line
+                  y2="${sectionInnerHeight}"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="${-sectionMargin.left}"
+                  y1="${valueScale(0)}"
+                  x2="${sectionInnerWidth}"
+                  y2="${valueScale(0)}"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <text
+                  transform="translate(${-sectionMargin.left + 5}, ${valueScale(
+                    0
+                  ) - 10}) rotate(-90)"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  Increasing →
+                </text>
+                <text
+                  transform="translate(${-sectionMargin.left + 5}, ${valueScale(
+                    0
+                  ) + 10}) rotate(-90)"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                  text-anchor="end"
+                >
+                  ← Decreasing
+                </text>
+                <text
+                  transform="translate(${-sectionMargin.left -
+                  25}, ${valueScale(0)}) rotate(-90)"
+                  class="charts-text-body-bold"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                >
+                  Time spent in 2024 vs. 2023
+                </text>
+
+                <text
+                  x="${sectionInnerWidth / 2}"
+                  y="${sectionInnerHeight + 15}"
+                  text-anchor="middle"
+                  class="charts-text-body"
+                  fill="black"
+                >
+                  ${country}
+                </text>
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[0])}"
+                  dy="-10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  ${valueScale.domain()[0].toFixed(0)}%
+                </text>
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[1])}"
+                  dy="10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  ${valueScale.domain()[1].toFixed(0)}%
+                </text>
+                <line
+                  x1="20"
+                  y1="${valueScale(valueScale.domain()[1]) - 20}"
+                  x2="${sectionInnerWidth}"
+                  y2="${valueScale(valueScale.domain()[1]) - 20}"
+                  class="charts-line-dashed"
+                />
+                <g
+                  transform="translate(${-15 / 2}, ${valueScale(
+                    valueScale.domain()[1]
+                  ) - 26})"
+                >
+                  <path
+                    fill="none"
+                    stroke="#000"
+                    stroke-width=".5"
+                    d="M7.901 15v-3.374l-6.9-2.815 13.801-2.613-6.9-2.814V0"
+                  />
+                </g>
+              </g>
+              <g
+                class="circles"
+                transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
+              >
+                ${countryData.map((d) => {
+                  let x = xScale(d.category);
+                  if (x - shareRadiusScale(d.share) < 0) {
+                    x = shareRadiusScale(d.share);
+                  } else if (
+                    x + shareRadiusScale(d.share) >
+                    sectionInnerWidth
+                  ) {
+                    x = sectionInnerWidth - shareRadiusScale(d.share);
+                  }
+                  const isCircleBigEnough = shareRadiusScale(d.share) > 45;
+                  const isCircleNotTooSmall = shareRadiusScale(d.share) > 20;
+                  return html` <circle
+                      cx="${x}"
+                      cy="${valueScale(d.yearGrowth)}"
+                      r="${shareRadiusScale(d.share)}"
+                      fill="${hoveredItem && hoveredItem.category === d.category
+                        ? "#C368F9"
+                        : "#040078"}"
+                      data-category="${d.category}"
+                      onmouseover="${() => {
+                        setHoveredItem({
+                          category: d.category,
+                          country,
+                          share: d.share,
+                          yearGrowth: d.yearGrowth,
+                          x: x,
+                          y: valueScale(d.yearGrowth),
+                        });
+                      }}"
+                      onmouseout="${() => {
+                        setHoveredItem(null);
+                      }}"
+                    />
+                    ${isCircleBigEnough
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) - 6}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Montserrat"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="400"
+                            line-height="125%"
+                            style="pointer-events: none;"
+                          >
+                            ${d.category}
+                          </text>
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 14}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                            style="pointer-events: none;"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : isCircleNotTooSmall
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 4}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                            style="pointer-events: none;"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : null}`;
+                })}
+                ${["Generative AI"].map((categoryName) => {
+                  const d = rawData.find(
+                    (d) => d.country === country && d.category === categoryName
+                  );
+                  if (!d) return null;
+                  let x = sectionInnerWidth / 2;
+                  return html`
+                    <g transform="translate(${x}, ${-50})">
+                      <circle
+                        r="${shareRadiusScale(d.share)}"
+                        fill="${hoveredItem &&
+                        hoveredItem.category === d.category
+                          ? "#C368F9"
+                          : "#040078"}"
+                        data-category="${d.category}"
+                        onmouseover="${() => {
+                          setHoveredItem({
+                            category: d.category,
+                            country,
+                            share: d.share,
+                            yearGrowth: d.yearGrowth,
+                            x: x,
+                            y: 0,
+                          });
+                        }}"
+                        onmouseout="${() => {
+                          setHoveredItem(null);
+                        }}"
+                      />
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${-5}"
+                        class="charts-text-body"
+                        >Gen AI
+                      </text>
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${10}"
+                        class="charts-text-value-small"
+                        >${d.yearGrowth.toFixed(0)}%
+                      </text>
+                    </g>
+                  `;
+                })}
+              </g>
+            </g>
+          </svg>
+        `;
+      })}
+    </div>`;
+  }
+  /**
+   * DESKTOP: original layout with sections for each country
+   */
   return html`<div class="vis-container-inner">
     <svg
       viewBox="0 0 ${width} ${height}"
@@ -148,7 +448,6 @@ export function Vis10() {
           height="${outerHeight}"
           fill="transparent"
         />
-
         ${Array.from({ length: NUMBER_COUNTRIES }, (_, index) => {
           const country = selectedCountries[index];
           if (!country) {
@@ -197,23 +496,6 @@ export function Vis10() {
           )[0].values;
           // sort values by share in descending order to have larger circles below
           countryData.sort((a, b) => b.share - a.share);
-
-          // sort country data by specific order of categories according the following category order
-          const categoryOrder = [
-            "Books & Reference",
-            "Education",
-            "Entertainment",
-            "Finance",
-            "Gaming",
-            "Generative AI",
-            "Health and Fitness",
-            "News",
-            "Other",
-            "Shopping",
-            "Social Media",
-            "Sports",
-            "Utility & Productivity",
-          ];
           countryData.sort((a, b) => {
             const indexA = categoryOrder.indexOf(a.category);
             const indexB = categoryOrder.indexOf(b.category);
@@ -409,23 +691,13 @@ export function Vis10() {
                       : null}`;
                 })}
                 ${["Generative AI"].map((categoryName) => {
-                  //get share and yearGrowth for Generative AI from rawData
                   const d = rawData.find(
                     (d) => d.country === country && d.category === categoryName
                   );
-                  if (!d) return null; // Skip if no data for Generative AI
-
-                  let x = 0.5;
-                  if (x - shareRadiusScale(d.share) < 0) {
-                    x = shareRadiusScale(d.share);
-                  } else if (
-                    x + shareRadiusScale(d.share) >
-                    sectionInnerWidth
-                  ) {
-                    x = sectionInnerWidth - shareRadiusScale(d.share);
-                  }
+                  if (!d) return null;
+                  let x = sectionInnerWidth / 2;
                   return html`
-                    <g transform="translate(${sectionInnerWidth / 2}, ${-50})">
+                    <g transform="translate(${x}, ${-50})">
                       <circle
                         r="${shareRadiusScale(d.share)}"
                         fill="${hoveredItem &&
@@ -443,7 +715,7 @@ export function Vis10() {
                               sectionScale(index) +
                               sectionInnerWidth / 2 +
                               sectionMargin.left,
-                            y: 0, //valueScale(d.yearGrowth) + 200,
+                            y: 0,
                           });
                         }}"
                         onmouseout="${() => {
