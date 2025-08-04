@@ -707,11 +707,20 @@ VIZ 11
       text-align: center;
       border-left: 2px solid var(--vis11-secondary-color);
       border-right: 2px solid var(--vis11-secondary-color);
+      &.tiny {
+        display: none;
+      }
     }
     .group {
       display: flex;
       justify-content: center;
       align-items: end;
+      &.tiny {
+        display: none;
+      }
+      &.small {
+        max-width: 35px;
+      }
     }
     .number {
       font-size: 14px;
