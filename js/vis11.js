@@ -436,7 +436,8 @@ const Vis11GenderAge = ({
   const ageGridElements = filteredAgeData.map(
     (d, i) => html`<div
         style="grid-area: 1 / ${i + 1} / 2 / ${i + 1};"
-        class="group ${d.value <= 2 ? "tiny" : ""} ${d.value < 16
+        class="group ${d.value <= 2 && isMobile ? "tiny" : ""} ${d.value < 16 &&
+        isMobile
           ? "small"
           : ""}"
         data-value="${d.value}"
@@ -446,11 +447,16 @@ const Vis11GenderAge = ({
       </div>
       <div
         style="grid-area: 2 / ${i + 1} / 3 / ${i + 1};"
-        class="bar ${d.value < 2 ? "tiny" : ""} ${d.value <= 16 ? "small" : ""}"
+        class="bar ${d.value < 2 && isMobile ? "tiny" : ""} ${d.value <= 16 &&
+        isMobile
+          ? "small"
+          : ""}"
         data-value="${d.value}"
         data-group="${d.group}"
       >
-        <p class="number">${Math.round(d.value)}${d.value >= 8 ? "%" : ""}</p>
+        <p class="number">
+          ${Math.round(d.value)}${d.value >= 8 || !isMobile ? "%" : ""}
+        </p>
       </div>`
   );
 
