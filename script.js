@@ -2,7 +2,7 @@ import { html, renderComponent } from "./js/utils/preact-htm.js";
 
 import { Vis1 } from "./js/vis1.js";
 import { Vis2 } from "./js/vis2.js";
-import { Vis3 } from "./js/vis3.js";
+// import { Vis3 } from "./js/vis3.js";
 import { Vis4Combined } from "./js/vis4.js";
 import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
 import { Vis7 } from "./js/vis7.js";
@@ -30,10 +30,10 @@ const visList = [
     id: "vis2",
     component: Vis2,
   },
-  {
-    id: "vis3",
-    component: Vis3,
-  },
+  // {
+  //   id: "vis3",
+  //   component: Vis3,
+  // },
   {
     id: "vis4",
     component: Vis4Combined,
