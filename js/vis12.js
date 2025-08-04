@@ -172,6 +172,7 @@ export function Vis12() {
   const categoryPadding = 10;
   const valueOvershot = 40;
   const NUMBER_CATEGORIES = 5;
+  const isMobile = window.innerWidth <= 425;
 
   const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =
@@ -202,8 +203,6 @@ export function Vis12() {
     .y0(heightPerCategory)
     .y1((d) => heightPerCategory - valueScale(d.value))
     .curve(d3.curveCatmullRom);
-
-  console.log("selectedCategories", selectedCategories);
 
   const rows = Array.from({ length: NUMBER_CATEGORIES }, (_, index) => {
     const d = dataFilteredWithSelectedCategories[index];
@@ -264,7 +263,7 @@ export function Vis12() {
   });
 
   const tickHours = [5, 8, 11, 14, 17, 20, 23, 2];
-  const xTicks = tickHours.map((d) => {
+  const xTicks = tickHours.map((d, index) => {
     const shiftedHour = shiftHour(d);
     // Format hour to am/pm
     const hour = d % 24;
@@ -281,15 +280,17 @@ export function Vis12() {
       transform="translate(${hourScale(shiftedHour)}, ${-10})"
       class="charts-text-body"
     >
-      <text
-        x="0"
-        y="${innerHeight}"
-        dy="0.5rem"
-        dominant-baseline="hanging"
-        text-anchor="middle"
-        class="charts-text-body charts-text-white"
-        >${ampm}</text
-      >
+      ${isMobile && index % 2 === 0
+        ? ""
+        : html` <text
+            x="0"
+            y="${innerHeight}"
+            dy="0.5rem"
+            dominant-baseline="hanging"
+            text-anchor="middle"
+            class="charts-text-body charts-text-white"
+            >${ampm}</text
+          >`}
       <line
         x1="0"
         y1="0"
