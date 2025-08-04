@@ -319,15 +319,17 @@ export function Vis1() {
           stroke="#0280FB"
           stroke-width="4"
         />
-        <text
-          transform="translate(${xScaleTimeline(
-            timelineGamingLatestItem.year
-          )}, ${yScaleTimeline(timelineGamingLatestItem.revenue) - 10})"
-          text-anchor="middle"
-          class="charts-text-value-small timeline-label"
-        >
-          ${formatRevenue(timelineGamingLatestItem.revenue)}
-        </text>
+        ${selectedCountry !== "Canada"
+          ? html`<text
+              transform="translate(${xScaleTimeline(
+                timelineGamingLatestItem.year
+              )}, ${yScaleTimeline(timelineGamingLatestItem.revenue) - 10})"
+              text-anchor="middle"
+              class="charts-text-value-small timeline-label"
+            >
+              ${formatRevenue(timelineGamingLatestItem.revenue)}
+            </text>`
+          : ""}
         <text
           transform="translate(${xScaleTimeline(
             timelineNonGamingLatestItem.year
