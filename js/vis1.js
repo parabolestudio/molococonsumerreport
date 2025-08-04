@@ -248,13 +248,9 @@ export function Vis1() {
     });
   }
 
-  return html`<div class="vis-container-inner">
-    <svg
-      viewBox="0 0 ${width} ${height}"
-      preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%;"
-    >
-      <g
+  const getTimeline = () => {
+    return html`
+    <g
         class="timeline"
         transform="translate(${marginTimeline.left}, ${marginTimeline.top})"
       >
@@ -340,32 +336,11 @@ export function Vis1() {
           ${formatRevenue(timelineNonGamingLatestItem.revenue)}
         </text>
       </g>
+    `
+  }
 
-      <g>
-        <line
-          x1="${marginTimeline.left +
-          xScaleTimeline(timelineNonGamingLatestItem.year)}"
-          y1="${marginTimeline.top +
-          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
-          x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginTimeline.top +
-          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
-          class="charts-line-dashed charts-line-dashed-blue"
-        />
-        <line
-          x1="${marginTimeline.left + widthTimeline - 20}"
-          y1="${marginTimeline.top + innerHeightTimeline}"
-          x2="${marginTimeline.left + widthTimeline - 20}"
-          y2="${marginTimeline.top +
-            yScaleTimeline(timelineNonGamingLatestItem.revenue) <
-          marginTimeline.top
-            ? marginTimeline.top +
-              yScaleTimeline(timelineNonGamingLatestItem.revenue)
-            : marginTimeline.top}"
-          class="charts-line-dashed charts-line-dashed-blue"
-        />
-      </g>
-
+  const getCategories = () => {
+    return html`
       <g
         class="categories"
         transform="translate(${widthTimeline +
@@ -412,7 +387,44 @@ export function Vis1() {
           })}
         </g>
         <text x="-20" class="charts-text-body-bold">2024 vs. 2023 growth</text>
+      </g>`
+  }
+
+  return html`<div class="vis-container-inner">
+    <svg
+      viewBox="0 0 ${width} ${height}"
+      preserveAspectRatio="xMidYMid meet"
+      style="width:100%; height:100%;"
+    >
+      ${getTimeline()}
+
+      <g>
+        <line
+          x1="${marginTimeline.left +
+          xScaleTimeline(timelineNonGamingLatestItem.year)}"
+          y1="${marginTimeline.top +
+          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginTimeline.top +
+          yScaleTimeline(timelineNonGamingLatestItem.revenue)}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
+        <line
+          x1="${marginTimeline.left + widthTimeline - 20}"
+          y1="${marginTimeline.top + innerHeightTimeline}"
+          x2="${marginTimeline.left + widthTimeline - 20}"
+          y2="${marginTimeline.top +
+            yScaleTimeline(timelineNonGamingLatestItem.revenue) <
+          marginTimeline.top
+            ? marginTimeline.top +
+              yScaleTimeline(timelineNonGamingLatestItem.revenue)
+            : marginTimeline.top}"
+          class="charts-line-dashed charts-line-dashed-blue"
+        />
       </g>
+
+      ${getCategories()}
+      
     </svg>
   </div>`;
 }
