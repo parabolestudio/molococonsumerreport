@@ -201,7 +201,13 @@ export function Vis4Combined() {
                 text-anchor="middle"
                 class="charts-text-body charts-text-white"
               >
-                ${d["Category"]}
+                ${d["Category"].includes("&") && isMobile
+                  ? html`<tspan x="${width / 2}" dy="0"
+                        >${d["Category"].split("&")[0].trim()}</tspan
+                      ><tspan x="${width / 2}" dy="1.2em"
+                        >& ${d["Category"].split("&")[1].trim()}</tspan
+                      >`
+                  : d["Category"]}
               </text> </g
             ><line
               x1="${x}"
