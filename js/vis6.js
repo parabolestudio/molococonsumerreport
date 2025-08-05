@@ -196,7 +196,9 @@ export function Vis6() {
           >
             ${d.percentageChangeFormatted}
           </text>`
-        : html` <text
+        : (isMobile ?
+          null :
+          html` <text
             x="${barStart - 20}"
             dy="2"
             class="charts-text-value"
@@ -205,7 +207,7 @@ export function Vis6() {
             fill="#03004C"
           >
             ${d.percentageChangeFormatted}
-          </text>`}
+          </text>`)}
     </g>`;
   });
 
