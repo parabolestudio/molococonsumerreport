@@ -229,40 +229,22 @@ export function Vis4Combined() {
   };
 
   if (isMobile) {
-    return html`<div class="vis-container-inner">
+    return html`<div class="vis-container-inner" style="margin-top: -110px;">
       <svg
         viewBox="0 0 ${width} ${height}"
         preserveAspectRatio="xMidYMid meet"
-        style="width:100%; height:100%; background-color:#040078"
+        style="width:100%; height:100%;"
       >
         <g transform="translate(${margin.left}, ${margin.top})">
-          <rect
-            x="0"
-            y="0"
-            width="${innerWidth}"
-            height="${innerHeight}"
-            stroke="transparent"
-            fill="#040078"
-          />
-
           ${getColumns(data.slice(0, firstIdx), false)}
         </g>
       </svg>
       <svg
         viewBox="0 0 ${width} ${height}"
         preserveAspectRatio="xMidYMid meet"
-        style="width:100%; height:100%; background-color:#040078"
+        style="width:100%; height:100%;"
       >
         <g transform="translate(${margin.left}, ${margin.top})">
-          <rect
-            x="0"
-            y="0"
-            width="${innerWidth}"
-            height="${innerHeight}"
-            stroke="transparent"
-            fill="#040078"
-          />
-
           ${getColumns(data.slice(firstIdx, lastIdx + 1))}
         </g>
       </svg>
@@ -272,18 +254,9 @@ export function Vis4Combined() {
       <svg
         viewBox="0 0 ${width} ${height}"
         preserveAspectRatio="xMidYMid meet"
-        style="width:100%; height:100%; background-color:#040078"
+        style="width:100%; height:100%;"
       >
         <g transform="translate(${margin.left}, ${margin.top})">
-          <rect
-            x="0"
-            y="0"
-            width="${innerWidth}"
-            height="${innerHeight}"
-            stroke="transparent"
-            fill="#040078"
-          />
-
           ${getColumns(data)}
         </g>
       </svg>
