@@ -52,10 +52,11 @@ export function Vis4Combined() {
     vis4Container && vis4Container.offsetWidth
       ? vis4Container.offsetWidth
       : 600;
+  const isMobile = window.innerWidth <= 425;
 
   const height = 600;
-  const margin = { top: 50, right: 112, bottom: 40, left: 20 };
-  const extraGap = 80; // spacing between 3rd and 4th column
+  const margin = { top: 50, right: isMobile ? 100 : 112, bottom: 40, left: isMobile ? 35 : 30 };
+  const extraGap = isMobile ? 0 : 80; // spacing between 3rd and 4th column
 
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right - extraGap;
@@ -65,43 +66,100 @@ export function Vis4Combined() {
     .scaleLinear()
     .domain([0, d3.max(data, (d) => d["Growth (%)"])])
     .range([innerHeight, 0]);
-  const columnXScale = d3
-    .scaleBand()
-    .domain(data.map((d) => d["Category"]))
-    .range([0, innerWidth])
-    .paddingInner(0.5)
-    .paddingOuter(0);
 
   // Calculate rectangle for columns 4-7 (index 3 to 6)
   const rectPadding = 15;
   const firstIdx = 3;
   const lastIdx = 5; // less categories
-  let rectX1 = columnXScale(data[firstIdx]["Category"]);
-  let rectX2 = columnXScale(data[lastIdx]["Category"]);
-  // Account for extraGap if present after 3rd column
-  if (firstIdx > 2) rectX1 += extraGap;
-  if (lastIdx > 2) rectX2 += extraGap;
-  const rectWidth =
-    rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 110;
-  const rectX = rectX1 - rectPadding - 15;
-  const rectY = -rectPadding - 30;
-  const rectHeight = innerHeight + 2 * rectPadding + 50;
 
-  return html`<div class="vis-container-inner">
-    <svg
-      viewBox="0 0 ${width} ${height}"
-      preserveAspectRatio="xMidYMid meet"
-      style="width:100%; height:100%; background-color:#040078"
-    >
-      <g transform="translate(${margin.left}, ${margin.top})">
-        <rect
-          x="0"
-          y="0"
-          width="${innerWidth}"
-          height="${innerHeight}"
-          stroke="transparent"
-          fill="#040078"
+  const getRectangle = (data, columnXScale) => {
+    let rectX1 = columnXScale(data[firstIdx]["Category"]);
+    let rectX2 = columnXScale(data[lastIdx]["Category"]);
+    // Account for extraGap if present after 3rd column
+    if (firstIdx > 2) rectX1 += extraGap;
+    if (lastIdx > 2) rectX2 += extraGap;
+    const rectWidth =
+      rectX2 - rectX1 + columnXScale.bandwidth() + 2 * rectPadding + 110;
+    const rectX = rectX1 - rectPadding - 15;
+    const rectY = -rectPadding - 30;
+    const rectHeight = innerHeight + 2 * rectPadding + 50;
+
+    return html`
+      <rect
+        x="${rectX}"
+        y="${rectY}"
+        width="${rectWidth}"
+        height="${rectHeight}"
+        fill="none"
+        class="charts-line-dashed charts-line-dashed-blue"
+        rx="10"
+        ry="10"
+      />
+      <line
+        x1="${columnXScale(data[2]["Category"]) + columnXScale.bandwidth()}"
+        y1="${columnHeightScale(data[2]["Growth (%)"]) +
+        (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
+        x2="${rectX}"
+        y2="${columnHeightScale(data[2]["Growth (%)"]) +
+        (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
+        class="charts-line-dashed charts-line-dashed-blue"
+      />`
+  }
+
+  const getBaseline = (data, columnXScale) => {
+    return html`
+      <g>
+        <line
+          x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
+          y1="${columnHeightScale(1.0)}"
+          x2="${columnXScale(data[data.length - 1]["Category"]) +
+          columnXScale.bandwidth() +
+          60 +
+          extraGap}"
+          y2="${columnHeightScale(1.0)}"
+          class="charts-line-dashed charts-line-dashed-white"
         />
+        <g
+          transform="translate(${columnXScale(
+            data[data.length - 1]["Category"]
+          ) +
+          columnXScale.bandwidth() +
+          60 +
+          extraGap}, ${columnHeightScale(1.0) - 10})"
+        >
+          <rect
+            x="-40"
+            y="0"
+            width="80"
+            height="20"
+            fill="white"
+            rx="10"
+            ry="10"
+          />
+          <text
+            x="${0}"
+            y="4"
+            dominant-baseline="hanging"
+            text-anchor="middle"
+            class="charts-text-body"
+            fill="#040078"
+          >
+            Baseline
+          </text>
+        </g>
+      </g>`
+  }
+  
+
+  const getColumns = (data, includeBaseline=true) => {
+    const columnXScale = d3
+      .scaleBand()
+      .domain(data.map((d) => d["Category"]))
+      .range([0, innerWidth])
+      .paddingInner(0.5)
+      .paddingOuter(0);
+
+      return html`
         <g class="columns">
           ${data.map((d, i) => {
             let x = columnXScale(d["Category"]);
@@ -159,68 +217,77 @@ export function Vis4Combined() {
               />`;
           })}
         </g>
-        <g>
-          <line
-            x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
-            y1="${columnHeightScale(1.0)}"
-            x2="${columnXScale(data[data.length - 1]["Category"]) +
-            columnXScale.bandwidth() +
-            60 +
-            extraGap}"
-            y2="${columnHeightScale(1.0)}"
-            class="charts-line-dashed charts-line-dashed-white"
+        ${!isMobile ? getRectangle(data, columnXScale) : null}
+        ${includeBaseline ? getBaseline(data, columnXScale) : null}
+      `
+  }
+
+  if (isMobile) {
+    return html`<div class="vis-container-inner">
+      <svg
+        viewBox="0 0 ${width} ${height}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%; background-color:#040078"
+      >
+        <g transform="translate(${margin.left}, ${margin.top})">
+          <rect
+            x="0"
+            y="0"
+            width="${innerWidth}"
+            height="${innerHeight}"
+            stroke="transparent"
+            fill="#040078"
           />
-          <g
-            transform="translate(${columnXScale(
-              data[data.length - 1]["Category"]
-            ) +
-            columnXScale.bandwidth() +
-            60 +
-            extraGap}, ${columnHeightScale(1.0) - 10})"
-          >
-            <rect
-              x="-40"
-              y="0"
-              width="80"
-              height="20"
-              fill="white"
-              rx="10"
-              ry="10"
-            />
-            <text
-              x="${0}"
-              y="4"
-              dominant-baseline="hanging"
-              text-anchor="middle"
-              class="charts-text-body"
-              fill="#040078"
-            >
-              Baseline
-            </text>
-          </g>
+          
+          ${getColumns(data.slice(0, firstIdx), false)}
+          
         </g>
-        <rect
-          x="${rectX}"
-          y="${rectY}"
-          width="${rectWidth}"
-          height="${rectHeight}"
-          fill="none"
-          class="charts-line-dashed charts-line-dashed-blue"
-          rx="10"
-          ry="10"
-        />
-        <line
-          x1="${columnXScale(data[2]["Category"]) + columnXScale.bandwidth()}"
-          y1="${columnHeightScale(data[2]["Growth (%)"]) +
-          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
-          x2="${rectX}"
-          y2="${columnHeightScale(data[2]["Growth (%)"]) +
-          (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
-          class="charts-line-dashed charts-line-dashed-blue"
-        />
-      </g>
-    </svg>
-  </div>`;
+      </svg>
+      <svg
+        viewBox="0 0 ${width} ${height}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%; background-color:#040078"
+      >
+        <g transform="translate(${margin.left}, ${margin.top})">
+          <rect
+            x="0"
+            y="0"
+            width="${innerWidth}"
+            height="${innerHeight}"
+            stroke="transparent"
+            fill="#040078"
+          />
+          
+          ${getColumns(data.slice(firstIdx, lastIdx + 1))}
+          
+        </g>
+      </svg>
+    </div>`;
+  } else {
+    return html`<div class="vis-container-inner">
+      <svg
+        viewBox="0 0 ${width} ${height}"
+        preserveAspectRatio="xMidYMid meet"
+        style="width:100%; height:100%; background-color:#040078"
+      >
+        <g transform="translate(${margin.left}, ${margin.top})">
+          <rect
+            x="0"
+            y="0"
+            width="${innerWidth}"
+            height="${innerHeight}"
+            stroke="transparent"
+            fill="#040078"
+          />
+          
+          ${getColumns(data)}
+
+          
+          
+        </g>
+      </svg>
+    </div>`;
+  }
 }
 
 export function Vis4(props) {
