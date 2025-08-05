@@ -380,6 +380,10 @@ VIZ 10
   .vis-container-inner {
     position: relative;
 
+    .mobile-section {
+      position: relative;
+    }
+
     svg {
       overflow: visible;
     }

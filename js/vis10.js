@@ -175,7 +175,7 @@ export function Vis10() {
     // On mobile, always show two slots: for each selected country, show its chart; for each missing slot, show the empty rectangle
     const slots = [0, 1].map((i) => selectedCountries[i] || null);
     return html`<div class="vis-container-inner">
-      ${slots.map((country, idx) => {
+      ${slots.map((country) => {
         if (!country) {
           // Show empty rectangle
           return html`<svg
@@ -230,212 +230,137 @@ export function Vis10() {
           const indexB = categoryOrder.indexOf(b.category);
           return indexA - indexB;
         });
-        return html`<svg
-          viewBox="0 0 ${width} ${height}"
-          preserveAspectRatio="xMidYMid meet"
-          style="width:100%; height:100%; margin-bottom: 32px;"
-        >
-          <g transform="translate(${outerMargin.left}, ${outerMargin.top})">
-            <rect
-              x="0"
-              y="0"
-              width="${outerWidth}"
-              height="${outerHeight}"
-              fill="transparent"
-            />
-            <g
-              transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
-            >
+        return html`<div class="mobile-section">
+          <svg
+            viewBox="0 0 ${width} ${height}"
+            preserveAspectRatio="xMidYMid meet"
+            style="width:100%; height:100%; margin-bottom: 32px;"
+          >
+            <g transform="translate(${outerMargin.left}, ${outerMargin.top})">
               <rect
-                y="${valueScale(0)}"
-                width="${sectionInnerWidth}"
-                height="${sectionInnerHeight - valueScale(0)}"
-                fill="#F2F2F2"
-              />
-              <line
-                y2="${sectionInnerHeight}"
-                stroke="black"
-                stroke-width="0.5"
-              />
-              <line
-                x1="${-sectionMargin.left}"
-                y1="${valueScale(0)}"
-                x2="${sectionInnerWidth}"
-                y2="${valueScale(0)}"
-                stroke="black"
-                stroke-width="0.5"
-              />
-              <text
-                transform="translate(${-sectionMargin.left + 5}, ${valueScale(
-                  0
-                ) - 10}) rotate(-90)"
-                class="charts-text-body"
-                dominant-baseline="middle"
-              >
-                Increasing →
-              </text>
-              <text
-                transform="translate(${-sectionMargin.left + 5}, ${valueScale(
-                  0
-                ) + 10}) rotate(-90)"
-                class="charts-text-body"
-                dominant-baseline="middle"
-                text-anchor="end"
-              >
-                ← Decreasing
-              </text>
-              <text
-                transform="translate(${-sectionMargin.left - 25}, ${valueScale(
-                  0
-                )}) rotate(-90)"
-                class="charts-text-body-bold"
-                dominant-baseline="middle"
-                text-anchor="middle"
-              >
-                Time spent in 2024 vs. 2023
-              </text>
-
-              <text
-                x="${sectionInnerWidth / 2}"
-                y="${sectionInnerHeight + 15}"
-                text-anchor="middle"
-                class="charts-text-body"
-                fill="black"
-              >
-                ${country}
-              </text>
-              <text
-                dx="5"
-                y="${valueScale(valueScale.domain()[0])}"
-                dy="-10"
-                class="charts-text-body"
-                dominant-baseline="middle"
-              >
-                ${valueScale.domain()[0].toFixed(0)}%
-              </text>
-              <text
-                dx="5"
-                y="${valueScale(valueScale.domain()[1])}"
-                dy="10"
-                class="charts-text-body"
-                dominant-baseline="middle"
-              >
-                ${valueScale.domain()[1].toFixed(0)}%
-              </text>
-              <line
-                x1="20"
-                y1="${valueScale(valueScale.domain()[1]) - 20}"
-                x2="${sectionInnerWidth}"
-                y2="${valueScale(valueScale.domain()[1]) - 20}"
-                class="charts-line-dashed"
+                x="0"
+                y="0"
+                width="${outerWidth}"
+                height="${outerHeight}"
+                fill="transparent"
               />
               <g
-                transform="translate(${-15 / 2}, ${valueScale(
-                  valueScale.domain()[1]
-                ) - 26})"
+                transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
               >
-                <path
-                  fill="none"
-                  stroke="#000"
-                  stroke-width=".5"
-                  d="M7.901 15v-3.374l-6.9-2.815 13.801-2.613-6.9-2.814V0"
+                <rect
+                  y="${valueScale(0)}"
+                  width="${sectionInnerWidth}"
+                  height="${sectionInnerHeight - valueScale(0)}"
+                  fill="#F2F2F2"
                 />
-              </g>
-            </g>
-            <g
-              class="circles"
-              transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
-            >
-              ${countryData.map((d) => {
-                let x = xScale(d.category);
-                if (x - shareRadiusScale(d.share) < 0) {
-                  x = shareRadiusScale(d.share);
-                } else if (x + shareRadiusScale(d.share) > sectionInnerWidth) {
-                  x = sectionInnerWidth - shareRadiusScale(d.share);
-                }
-                const isCircleBigEnough = shareRadiusScale(d.share) > 45;
-                const isCircleNotTooSmall = shareRadiusScale(d.share) > 20;
-                return html` <circle
-                    cx="${x}"
-                    cy="${valueScale(d.yearGrowth)}"
-                    r="${shareRadiusScale(d.share)}"
-                    fill="${hoveredItem && hoveredItem.category === d.category
-                      ? "#C368F9"
-                      : "#040078"}"
-                    data-category="${d.category}"
-                    onmouseover="${() => {
-                      setHoveredItem({
-                        category: d.category,
-                        country,
-                        share: d.share,
-                        yearGrowth: d.yearGrowth,
-                        x: x,
-                        y: valueScale(d.yearGrowth),
-                      });
-                    }}"
-                    onmouseout="${() => {
-                      setHoveredItem(null);
-                    }}"
+                <line
+                  y2="${sectionInnerHeight}"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <line
+                  x1="${-sectionMargin.left}"
+                  y1="${valueScale(0)}"
+                  x2="${sectionInnerWidth}"
+                  y2="${valueScale(0)}"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <text
+                  transform="translate(${-sectionMargin.left + 5}, ${valueScale(
+                    0
+                  ) - 10}) rotate(-90)"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  Increasing →
+                </text>
+                <text
+                  transform="translate(${-sectionMargin.left + 5}, ${valueScale(
+                    0
+                  ) + 10}) rotate(-90)"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                  text-anchor="end"
+                >
+                  ← Decreasing
+                </text>
+                <text
+                  transform="translate(${-sectionMargin.left -
+                  25}, ${valueScale(0)}) rotate(-90)"
+                  class="charts-text-body-bold"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                >
+                  Time spent in 2024 vs. 2023
+                </text>
+
+                <text
+                  x="${sectionInnerWidth / 2}"
+                  y="${sectionInnerHeight + 15}"
+                  text-anchor="middle"
+                  class="charts-text-body"
+                  fill="black"
+                >
+                  ${country}
+                </text>
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[0])}"
+                  dy="-10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  ${valueScale.domain()[0].toFixed(0)}%
+                </text>
+                <text
+                  dx="5"
+                  y="${valueScale(valueScale.domain()[1])}"
+                  dy="10"
+                  class="charts-text-body"
+                  dominant-baseline="middle"
+                >
+                  ${valueScale.domain()[1].toFixed(0)}%
+                </text>
+                <line
+                  x1="20"
+                  y1="${valueScale(valueScale.domain()[1]) - 20}"
+                  x2="${sectionInnerWidth}"
+                  y2="${valueScale(valueScale.domain()[1]) - 20}"
+                  class="charts-line-dashed"
+                />
+                <g
+                  transform="translate(${-15 / 2}, ${valueScale(
+                    valueScale.domain()[1]
+                  ) - 26})"
+                >
+                  <path
+                    fill="none"
+                    stroke="#000"
+                    stroke-width=".5"
+                    d="M7.901 15v-3.374l-6.9-2.815 13.801-2.613-6.9-2.814V0"
                   />
-                  ${isCircleBigEnough
-                    ? html`
-                        <text
-                          x="${x}"
-                          y="${valueScale(d.yearGrowth) - 6}"
-                          text-anchor="middle"
-                          fill="#fff"
-                          font-family="Montserrat"
-                          font-size="14px"
-                          font-style="normal"
-                          font-weight="400"
-                          line-height="125%"
-                          style="pointer-events: none;"
-                        >
-                          ${d.category}
-                        </text>
-                        <text
-                          x="${x}"
-                          y="${valueScale(d.yearGrowth) + 14}"
-                          text-anchor="middle"
-                          fill="#fff"
-                          font-family="Spacegrotesk"
-                          font-size="14px"
-                          font-style="normal"
-                          font-weight="700"
-                          line-height="100%"
-                          style="pointer-events: none;"
-                        >
-                          ${formatShare(d.share)}
-                        </text>
-                      `
-                    : isCircleNotTooSmall
-                    ? html`
-                        <text
-                          x="${x}"
-                          y="${valueScale(d.yearGrowth) + 4}"
-                          text-anchor="middle"
-                          fill="#fff"
-                          font-family="Spacegrotesk"
-                          font-size="14px"
-                          font-style="normal"
-                          font-weight="700"
-                          line-height="100%"
-                          style="pointer-events: none;"
-                        >
-                          ${formatShare(d.share)}
-                        </text>
-                      `
-                    : null}`;
-              })}
-              ${["Generative AI"].map((categoryName) => {
-                const d = rawData.find(
-                  (d) => d.country === country && d.category === categoryName
-                );
-                if (!d) return null;
-                let x = sectionInnerWidth / 2;
-                return html`
-                  <g transform="translate(${x}, ${-50})">
-                    <circle
+                </g>
+              </g>
+              <g
+                class="circles"
+                transform="translate(${sectionMargin.left}, ${sectionMargin.top})"
+              >
+                ${countryData.map((d) => {
+                  let x = xScale(d.category);
+                  if (x - shareRadiusScale(d.share) < 0) {
+                    x = shareRadiusScale(d.share);
+                  } else if (
+                    x + shareRadiusScale(d.share) >
+                    sectionInnerWidth
+                  ) {
+                    x = sectionInnerWidth - shareRadiusScale(d.share);
+                  }
+                  const isCircleBigEnough = shareRadiusScale(d.share) > 45;
+                  const isCircleNotTooSmall = shareRadiusScale(d.share) > 20;
+                  return html` <circle
+                      cx="${x}"
+                      cy="${valueScale(d.yearGrowth)}"
                       r="${shareRadiusScale(d.share)}"
                       fill="${hoveredItem && hoveredItem.category === d.category
                         ? "#C368F9"
@@ -448,31 +373,112 @@ export function Vis10() {
                           share: d.share,
                           yearGrowth: d.yearGrowth,
                           x: x,
-                          y: 0,
+                          y: valueScale(d.yearGrowth),
                         });
                       }}"
                       onmouseout="${() => {
                         setHoveredItem(null);
                       }}"
                     />
-                    <text
-                      x="${shareRadiusScale(d.share) + 10}"
-                      y="${-5}"
-                      class="charts-text-body"
-                      >Gen AI
-                    </text>
-                    <text
-                      x="${shareRadiusScale(d.share) + 10}"
-                      y="${10}"
-                      class="charts-text-value-small"
-                      >${d.yearGrowth.toFixed(0)}%
-                    </text>
-                  </g>
-                `;
-              })}
+                    ${isCircleBigEnough
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) - 6}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Montserrat"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="400"
+                            line-height="125%"
+                            style="pointer-events: none;"
+                          >
+                            ${d.category}
+                          </text>
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 14}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                            style="pointer-events: none;"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : isCircleNotTooSmall
+                      ? html`
+                          <text
+                            x="${x}"
+                            y="${valueScale(d.yearGrowth) + 4}"
+                            text-anchor="middle"
+                            fill="#fff"
+                            font-family="Spacegrotesk"
+                            font-size="14px"
+                            font-style="normal"
+                            font-weight="700"
+                            line-height="100%"
+                            style="pointer-events: none;"
+                          >
+                            ${formatShare(d.share)}
+                          </text>
+                        `
+                      : null}`;
+                })}
+                ${["Generative AI"].map((categoryName) => {
+                  const d = rawData.find(
+                    (d) => d.country === country && d.category === categoryName
+                  );
+                  if (!d) return null;
+                  let x = sectionInnerWidth / 2;
+                  return html`
+                    <g transform="translate(${x}, ${-50})">
+                      <circle
+                        r="${shareRadiusScale(d.share)}"
+                        fill="${hoveredItem &&
+                        hoveredItem.category === d.category
+                          ? "#C368F9"
+                          : "#040078"}"
+                        data-category="${d.category}"
+                        onmouseover="${() => {
+                          setHoveredItem({
+                            category: d.category,
+                            country,
+                            share: d.share,
+                            yearGrowth: d.yearGrowth,
+                            x: x,
+                            y: 0,
+                          });
+                        }}"
+                        onmouseout="${() => {
+                          setHoveredItem(null);
+                        }}"
+                      />
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${-5}"
+                        class="charts-text-body"
+                        >Gen AI
+                      </text>
+                      <text
+                        x="${shareRadiusScale(d.share) + 10}"
+                        y="${10}"
+                        class="charts-text-value-small"
+                        >${d.yearGrowth.toFixed(0)}%
+                      </text>
+                    </g>
+                  `;
+                })}
+              </g>
             </g>
-          </g>
-        </svg>`;
+          </svg>
+          <${Tooltip} hoveredItem=${hoveredItem} country=${country} />
+        </div>`;
       })}
     </div>`;
   }
@@ -788,7 +794,7 @@ export function Vis10() {
         })}
       </g>
     </svg>
-    <${Tooltip} hoveredItem=${hoveredItem} />
+    <${Tooltip} hoveredItem=${hoveredItem} country=${null} />
   </div>`;
 }
 
@@ -826,14 +832,13 @@ function updateMultiSelect(categories, initialCategories, callback) {
   }
 }
 
-function Tooltip({ hoveredItem }) {
+function Tooltip({ hoveredItem, country }) {
   const formatGrowth = (growth) => {
     if (growth === null || growth === undefined) return "N/A";
     return growth > 0 ? `+${growth.toFixed(0)}%` : `${growth.toFixed(0)}%`;
   };
 
-  // Temporary tooltip while waiting for real data
-  if (hoveredItem) {
+  if (hoveredItem && (country === null || hoveredItem.country === country)) {
     let shareLabel = (hoveredItem.share * 100).toFixed(0);
 
     if (shareLabel < 1) {
