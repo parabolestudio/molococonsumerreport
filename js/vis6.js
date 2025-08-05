@@ -103,6 +103,7 @@ export function Vis6() {
   }
 
   // layout dimensions
+  const isMobile = window.innerWidth <= 425;
   const vis6Container = document.querySelector("#vis6");
   const width =
     vis6Container && vis6Container.offsetWidth
@@ -208,7 +209,9 @@ export function Vis6() {
     </g>`;
   });
 
-  const xTicks1 = valueScale.ticks().map((tick, index) => {
+  const tickValues = isMobile ? valueScale.ticks(4) : valueScale.ticks();
+
+  const xTicks1 = tickValues.map((tick, index) => {
     const x = valueScale(tick);
 
     // format tick text (big numbers as integers should be formatted in billions.)
