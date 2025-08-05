@@ -103,7 +103,7 @@ export function Vis7() {
 
       const y = index * (heightPerCategory + categoryPadding) + categoryPadding;
 
-      const formattedValue = d3.format(".2s")(v.value).replace("G", "B");
+      const formattedValue = d3.format(".2s")(v.value).replace("G", "B").replace("k", "K");
 
       // Create path for selective rounded corners
       const baseRadius = 10;
