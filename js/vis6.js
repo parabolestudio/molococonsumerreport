@@ -344,7 +344,7 @@ export function Vis6LegendGrowth() {
           <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="0">
             Compound Annual
           </tspan>
-          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="1.23rem">
+          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="20">
             Growth Rate (CAGR)
           </tspan>
         </text>

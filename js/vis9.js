@@ -195,7 +195,7 @@ export function Vis9() {
                       </tspan>
                       <tspan
                         x="${xText}"
-                        dy="1.25rem"
+                        dy="20"
                         fill="#12976B"
                         font-size="14"
                         font-weight="700"
