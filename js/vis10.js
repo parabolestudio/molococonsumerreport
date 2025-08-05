@@ -527,7 +527,7 @@ export function Vis10() {
                       <p
                         style="color: #000; line-height: 1.25; text-align: center; margin: 0;"
                       >
-                        Add another country to compare
+                        Add a country to compare
                       </p>
                     </div>
                   </foreignObject>
