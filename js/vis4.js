@@ -57,9 +57,9 @@ export function Vis4Combined() {
   const height = isMobile ? 450 : 600;
   const margin = {
     top: 50,
-    right: isMobile ? 100 : 112,
+    right: isMobile ? 105 : 112,
     bottom: 40,
-    left: isMobile ? 35 : 30,
+    left: isMobile ? 10 : 30,
   };
   const extraGap = isMobile ? 0 : 80; // spacing between 3rd and 4th column
 
