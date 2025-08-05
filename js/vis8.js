@@ -106,6 +106,7 @@ export function Vis8() {
   }
 
   // layout dimensions
+  const isMobile = window.innerWidth <= 425;
   const vis8Container = document.querySelector("#vis8");
   const width =
     vis8Container && vis8Container.offsetWidth
@@ -148,7 +149,7 @@ export function Vis8() {
         class="category-label"
       >
         <div xmlns="http://www.w3.org/1999/xhtml">
-          <span> ${group} years old</span>
+          <span> ${group} ${isMobile ? "" : "years old"}</span>
         </div>
       </foreignObject>
     </g>`;
