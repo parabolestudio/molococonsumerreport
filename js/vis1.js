@@ -252,7 +252,7 @@ export function Vis1() {
 
   const getTimeline = () => {
     return html`
-    <g
+      <g
         class="timeline"
         transform="translate(${marginTimeline.left}, ${marginTimeline.top})"
       >
@@ -338,59 +338,56 @@ export function Vis1() {
           ${formatRevenue(timelineNonGamingLatestItem.revenue)}
         </text>
       </g>
-    `
-  }
+    `;
+  };
 
   const getCategories = () => {
-    return html`
-      <g
-        class="categories"
-        transform="translate(${isMobile ? marginCategories.left : widthTimeline +
-        marginCategories.left}, ${marginCategories.top})"
-      >
-        <rect
-          x="${0}"
-          y="0"
-          width="${innerWidthCategories}"
-          height="${innerHeightCategories}"
-          fill="transparent"
-        />
-        <g class="rows">
-          ${categoryDataByCountry.map((d) => {
-            return html`<g
-              transform="translate(0, ${yScaleCategories(d.category)})"
+    return html` <g
+      class="categories"
+      transform="translate(${isMobile
+        ? marginCategories.left
+        : widthTimeline + marginCategories.left}, ${marginCategories.top})"
+    >
+      <rect
+        x="${0}"
+        y="0"
+        width="${innerWidthCategories}"
+        height="${innerHeightCategories}"
+        fill="transparent"
+      />
+      <g class="rows">
+        ${categoryDataByCountry.map((d) => {
+          return html`<g
+            transform="translate(0, ${yScaleCategories(d.category)})"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="${xScaleCategories(d.categoryGrowth)}"
+              height="${yScaleCategories.bandwidth()}"
+              fill="#0280FB"
+              rx="10"
+              ry="10"
+            />
+            <${CategoryIcon} category="${d.category}" heightBar=${heightBar} />
+            <text
+              transform="translate(${Math.max(
+                xScaleCategories(d.categoryGrowth) + 10,
+                25
+              )}, ${yScaleCategories.bandwidth() / 2})"
+              dominant-baseline="middle"
             >
-              <rect
-                x="0"
-                y="0"
-                width="${xScaleCategories(d.categoryGrowth)}"
-                height="${yScaleCategories.bandwidth()}"
-                fill="#0280FB"
-                rx="10"
-                ry="10"
-              />
-              <${CategoryIcon}
-                category="${d.category}"
-                heightBar=${heightBar}
-              />
-              <text
-                transform="translate(${Math.max(
-                  xScaleCategories(d.categoryGrowth) + 10,
-                  25
-                )}, ${yScaleCategories.bandwidth() / 2})"
-                dominant-baseline="middle"
+              <tspan class="charts-text-body">${d.category}</tspan>
+              <tspan dx="10" dy="1" class="charts-text-value-small"
+                >${formatRevenue(d.categoryGrowth)}</tspan
               >
-                <tspan class="charts-text-body">${d.category}</tspan>
-                <tspan dx="10" dy="1" class="charts-text-value-small"
-                  >${formatRevenue(d.categoryGrowth)}</tspan
-                >
-              </text>
-            </g>`;
-          })}
-        </g>
-        <text x="-20" class="charts-text-body-bold">2024 vs. 2023 growth</text>
-      </g>`
-  }
+            </text>
+          </g>`;
+        })}
+      </g>
+      <text x="-20" class="charts-text-body-bold">2024 vs. 2023 growth</text>
+    </g>`;
+  };
 
   if (isMobile) {
     return html`<div class="vis-container-inner">
@@ -401,19 +398,19 @@ export function Vis1() {
       >
         ${getTimeline()}
       </svg>
-        
+
       <svg
         viewBox="0 0 ${width} ${heightCategories}"
         preserveAspectRatio="xMidYMid meet"
         style="width:100%; height:100%;"
       >
-        ${getCategories()}  
+        ${getCategories()}
       </svg>
-    </div>`
+    </div>`;
   } else {
     return html`<div class="vis-container-inner">
       <svg
-        viewBox="0 0 ${width} ${height}"
+        viewBox="0 0 ${width} ${heightTimeline}"
         preserveAspectRatio="xMidYMid meet"
         style="width:100%; height:100%;"
       >
@@ -445,7 +442,6 @@ export function Vis1() {
         </g>
 
         ${getCategories()}
-        
       </svg>
     </div>`;
   }
