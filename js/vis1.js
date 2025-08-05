@@ -151,7 +151,7 @@ export function Vis1() {
     return html`<div>Loading...</div>`;
   }
 
-  const isMobile = window.innerWidth <= 425;
+  const isMobile = window.innerWidth <= 480;
   const vis1Container = document.querySelector("#vis1");
   const width =
     vis1Container && vis1Container.offsetWidth

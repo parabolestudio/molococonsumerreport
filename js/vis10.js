@@ -1,6 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
 
-const isMobile = window.innerWidth <= 425;
+const isMobile = window.innerWidth <= 480;
 
 // sort country data by specific order of categories according the following category order
 const categoryOrder = [

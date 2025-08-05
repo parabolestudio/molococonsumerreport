@@ -5,7 +5,7 @@ const URL =
 const ASSETS_URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/";
 
-const isMobile = window.innerWidth <= 425;
+const isMobile = window.innerWidth <= 480;
 
 // Map categories to their corresponding icons
 function getCategoryIcon(category) {

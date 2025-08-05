@@ -172,7 +172,7 @@ export function Vis12() {
   const categoryPadding = 10;
   const valueOvershot = 40;
   const NUMBER_CATEGORIES = 5;
-  const isMobile = window.innerWidth <= 425;
+  const isMobile = window.innerWidth <= 480;
 
   const margin = { top: valueOvershot, right: 5, bottom: 20, left: 170 };
   const height =

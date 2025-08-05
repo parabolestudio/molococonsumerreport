@@ -10,7 +10,7 @@ const CUSTOM_COUNTRY_REGION = [
   "Canada",
   "France",
   "Australia",
-  "Brazil"
+  "Brazil",
 ];
 
 const CIRCLE_RADIUS = 19 / 2;
@@ -18,7 +18,9 @@ const CIRCLE_RADIUS = 19 / 2;
 export function Vis6() {
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState("Top 10 mobile app markets");
+  const [selectedRegion, setSelectedRegion] = useState(
+    "Top 10 mobile app markets"
+  );
   const [axisBreak, setAxisBreak] = useState(null);
 
   function filterDataByRegion() {
@@ -48,10 +50,11 @@ export function Vis6() {
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         const value2023 = values.find((v) => v.Year === 2021)?.Value || 0;
         const value2024 = values.find((v) => v.Year === 2024)?.Value || 0;
-        const percentageChange = values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
+        const percentageChange =
+          values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
 
         return {
-          country: key === 'Dominican Republic' ? 'Dom. Republic' : key,
+          country: key === "Dominican Republic" ? "Dom. Republic" : key,
           region: values[0]["Region"],
           value2023,
           value2024,
@@ -103,7 +106,7 @@ export function Vis6() {
   }
 
   // layout dimensions
-  const isMobile = window.innerWidth <= 425;
+  const isMobile = window.innerWidth <= 480;
   const vis6Container = document.querySelector("#vis6");
   const width =
     vis6Container && vis6Container.offsetWidth
@@ -196,9 +199,9 @@ export function Vis6() {
           >
             ${d.percentageChangeFormatted}
           </text>`
-        : (isMobile ?
-          null :
-          html` <text
+        : isMobile
+        ? null
+        : html` <text
             x="${barStart - 20}"
             dy="2"
             class="charts-text-value"
@@ -207,7 +210,7 @@ export function Vis6() {
             fill="#03004C"
           >
             ${d.percentageChangeFormatted}
-          </text>`)}
+          </text>`}
     </g>`;
   });
 
@@ -338,20 +341,13 @@ export function Vis6LegendGrowth() {
           font-weight="400"
           font-family="'Montserrat', sans-serif"
         >
-          <tspan
-            x="${endX + 90 + lineHorizontalLength + 10}"
-            dy="0"
-          >
+          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="0">
             Compound Annual
           </tspan>
-          <tspan
-            x="${endX + 90 + lineHorizontalLength + 10}"
-            dy="1.23rem"
-          >
+          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="1.23rem">
             Growth Rate (CAGR)
           </tspan>
         </text>
-        
       </g>
     </svg>
   `;

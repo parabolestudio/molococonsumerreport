@@ -52,10 +52,15 @@ export function Vis4Combined() {
     vis4Container && vis4Container.offsetWidth
       ? vis4Container.offsetWidth
       : 600;
-  const isMobile = window.innerWidth <= 425;
+  const isMobile = window.innerWidth <= 480;
 
   const height = isMobile ? 450 : 600;
-  const margin = { top: 50, right: isMobile ? 100 : 112, bottom: 40, left: isMobile ? 35 : 30 };
+  const margin = {
+    top: 50,
+    right: isMobile ? 100 : 112,
+    bottom: 40,
+    left: isMobile ? 35 : 30,
+  };
   const extraGap = isMobile ? 0 : 80; // spacing between 3rd and 4th column
 
   const innerHeight = height - margin.top - margin.bottom;
@@ -84,8 +89,7 @@ export function Vis4Combined() {
     const rectY = -rectPadding - 30;
     const rectHeight = innerHeight + 2 * rectPadding + 50;
 
-    return html`
-      <rect
+    return html` <rect
         x="${rectX}"
         y="${rectY}"
         width="${rectWidth}"
@@ -103,55 +107,51 @@ export function Vis4Combined() {
         y2="${columnHeightScale(data[2]["Growth (%)"]) +
         (innerHeight - columnHeightScale(data[2]["Growth (%)"])) * 0.34}"
         class="charts-line-dashed charts-line-dashed-blue"
-      />`
-  }
+      />`;
+  };
 
   const getBaseline = (data, columnXScale) => {
-    return html`
-      <g>
-        <line
-          x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
-          y1="${columnHeightScale(1.0)}"
-          x2="${columnXScale(data[data.length - 1]["Category"]) +
-          columnXScale.bandwidth() +
-          60 +
-          extraGap}"
-          y2="${columnHeightScale(1.0)}"
-          class="charts-line-dashed charts-line-dashed-white"
+    return html` <g>
+      <line
+        x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
+        y1="${columnHeightScale(1.0)}"
+        x2="${columnXScale(data[data.length - 1]["Category"]) +
+        columnXScale.bandwidth() +
+        60 +
+        extraGap}"
+        y2="${columnHeightScale(1.0)}"
+        class="charts-line-dashed charts-line-dashed-white"
+      />
+      <g
+        transform="translate(${columnXScale(data[data.length - 1]["Category"]) +
+        columnXScale.bandwidth() +
+        60 +
+        extraGap}, ${columnHeightScale(1.0) - 10})"
+      >
+        <rect
+          x="-40"
+          y="0"
+          width="80"
+          height="20"
+          fill="white"
+          rx="10"
+          ry="10"
         />
-        <g
-          transform="translate(${columnXScale(
-            data[data.length - 1]["Category"]
-          ) +
-          columnXScale.bandwidth() +
-          60 +
-          extraGap}, ${columnHeightScale(1.0) - 10})"
+        <text
+          x="${0}"
+          y="4"
+          dominant-baseline="hanging"
+          text-anchor="middle"
+          class="charts-text-body"
+          fill="#040078"
         >
-          <rect
-            x="-40"
-            y="0"
-            width="80"
-            height="20"
-            fill="white"
-            rx="10"
-            ry="10"
-          />
-          <text
-            x="${0}"
-            y="4"
-            dominant-baseline="hanging"
-            text-anchor="middle"
-            class="charts-text-body"
-            fill="#040078"
-          >
-            Baseline
-          </text>
-        </g>
-      </g>`
-  }
-  
+          Baseline
+        </text>
+      </g>
+    </g>`;
+  };
 
-  const getColumns = (data, includeBaseline=true) => {
+  const getColumns = (data, includeBaseline = true) => {
     const columnXScale = d3
       .scaleBand()
       .domain(data.map((d) => d["Category"]))
@@ -159,68 +159,68 @@ export function Vis4Combined() {
       .paddingInner(0.5)
       .paddingOuter(0);
 
-      return html`
-        <g class="columns">
-          ${data.map((d, i) => {
-            let x = columnXScale(d["Category"]);
-            // Add extra gap after the third column (i > 2)
-            if (i > 2) x += extraGap;
-            const y = columnHeightScale(d["Growth (%)"]);
-            const height = innerHeight - y;
-            const width = columnXScale.bandwidth();
-            return html`<g transform="translate(${x}, ${y})">
-                <rect
-                  width="${width}"
-                  height="${height}"
-                  fill="${barColors[d.Category]
-                    ? barColors[d.Category]
-                    : "var(--blue-medium)"}"
-                  rx="10"
-                  ry="10"
-                />
-                <rect
-                  y="${height / 2}"
-                  width="${width}"
-                  height="${height / 2}"
-                  fill="${barColors[d.Category]
-                    ? barColors[d.Category]
-                    : "var(--blue-medium)"}"
-                />
+    return html`
+      <g class="columns">
+        ${data.map((d, i) => {
+          let x = columnXScale(d["Category"]);
+          // Add extra gap after the third column (i > 2)
+          if (i > 2) x += extraGap;
+          const y = columnHeightScale(d["Growth (%)"]);
+          const height = innerHeight - y;
+          const width = columnXScale.bandwidth();
+          return html`<g transform="translate(${x}, ${y})">
+              <rect
+                width="${width}"
+                height="${height}"
+                fill="${barColors[d.Category]
+                  ? barColors[d.Category]
+                  : "var(--blue-medium)"}"
+                rx="10"
+                ry="10"
+              />
+              <rect
+                y="${height / 2}"
+                width="${width}"
+                height="${height / 2}"
+                fill="${barColors[d.Category]
+                  ? barColors[d.Category]
+                  : "var(--blue-medium)"}"
+              />
 
-                <text
-                  x="${width / 2}"
-                  y="${-10}"
-                  text-anchor="middle"
-                  class="charts-text-value charts-text-white"
-                >
-                  ${d["Growth Text"]}
-                </text>
-                <text
-                  x="${width / 2}"
-                  y="${height + 20}"
-                  text-anchor="middle"
-                  class="charts-text-body charts-text-white"
-                >
-                  ${d["Category"]}
-                </text> </g
-              ><line
-                x1="${x}"
-                y1="${columnHeightScale(1.0)}"
-                x2="${x + width}"
-                y2="${columnHeightScale(1.0)}"
-                class="${d.Category === "Google & Meta"
-                  ? ""
-                  : "charts-line-dashed charts-line-dashed-white"}"
-                stroke="${d.Category === "Google & Meta"
-                  ? "transparent"
-                  : "white"}"
-              />`;
-          })}
-        </g>
-        ${!isMobile ? getRectangle(data, columnXScale) : null}
-        ${includeBaseline ? getBaseline(data, columnXScale) : null}
-      `
-  }
+              <text
+                x="${width / 2}"
+                y="${-10}"
+                text-anchor="middle"
+                class="charts-text-value charts-text-white"
+              >
+                ${d["Growth Text"]}
+              </text>
+              <text
+                x="${width / 2}"
+                y="${height + 20}"
+                text-anchor="middle"
+                class="charts-text-body charts-text-white"
+              >
+                ${d["Category"]}
+              </text> </g
+            ><line
+              x1="${x}"
+              y1="${columnHeightScale(1.0)}"
+              x2="${x + width}"
+              y2="${columnHeightScale(1.0)}"
+              class="${d.Category === "Google & Meta"
+                ? ""
+                : "charts-line-dashed charts-line-dashed-white"}"
+              stroke="${d.Category === "Google & Meta"
+                ? "transparent"
+                : "white"}"
+            />`;
+        })}
+      </g>
+      ${!isMobile ? getRectangle(data, columnXScale) : null}
+      ${includeBaseline ? getBaseline(data, columnXScale) : null}
+    `;
+  };
 
   if (isMobile) {
     return html`<div class="vis-container-inner">
@@ -238,9 +238,8 @@ export function Vis4Combined() {
             stroke="transparent"
             fill="#040078"
           />
-          
+
           ${getColumns(data.slice(0, firstIdx), false)}
-          
         </g>
       </svg>
       <svg
@@ -257,9 +256,8 @@ export function Vis4Combined() {
             stroke="transparent"
             fill="#040078"
           />
-          
+
           ${getColumns(data.slice(firstIdx, lastIdx + 1))}
-          
         </g>
       </svg>
     </div>`;
@@ -279,11 +277,8 @@ export function Vis4Combined() {
             stroke="transparent"
             fill="#040078"
           />
-          
-          ${getColumns(data)}
 
-          
-          
+          ${getColumns(data)}
         </g>
       </svg>
     </div>`;
