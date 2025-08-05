@@ -250,7 +250,7 @@ export function Vis12() {
           ry="10"
         />
         <text
-          x="${innerWidth / 2}"
+          x="${(0 - margin.left + innerWidth) / 2}"
           y="${heightPerCategory / 2}"
           dy="2"
           dominant-baseline="middle"
