@@ -315,6 +315,9 @@ VIZ 4
 */
 #vis4 {
   background-color: #040078;
+  svg {
+    overflow: visible;
+  }
 }
 
 /*
