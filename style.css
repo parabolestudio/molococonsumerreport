@@ -321,6 +321,15 @@ VIZ 4
 }
 
 /*
+VIZ 6
+*/
+#vis6 {
+  svg {
+    overflow: visible;
+  }
+}
+
+/*
 VIZ 8
 */
 #vis8 {
