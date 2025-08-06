@@ -169,7 +169,7 @@ export function Vis1() {
   const innerWidthTimeline =
     widthTimeline - marginTimeline.left - marginTimeline.right;
 
-  const marginCategories = { top: 50, right: 15, bottom: 5, left: 35 };
+  const marginCategories = { top: 50, right: 25, bottom: 5, left: 35 };
   const innerHeightCategories =
     heightCategories - marginCategories.top - marginCategories.bottom;
   const innerWidthCategories =
