@@ -116,7 +116,7 @@ export function Vis6() {
   const countryPadding = 20;
   const height =
     (heightPerCountry + countryPadding) * filterData.length + countryPadding;
-  const margin = { top: 20, right: 90, bottom: 20, left: 120 };
+  const margin = { top: 24, right: 90, bottom: 20, left: 120 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -267,7 +267,7 @@ export function Vis6() {
         return html`<g transform="translate(${x}, 0)">
           <line y1="0" y2="${innerHeight}" class="charts-line-dashed" />
           <path
-            transform="translate(-11, -23)"
+            transform="translate(-11, ${isMobile ? -36 : -23})"
             stroke="#000"
             stroke-width=".75"
             fill="none"
