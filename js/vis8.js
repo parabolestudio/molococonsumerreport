@@ -15,10 +15,11 @@ export function Vis8() {
   useEffect(() => {
     Promise.all([
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_age_time_spent_change_updated.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_1.csv"
       ),
+      // gender_time_spent_change not used currently
       // d3.csv(
-      //   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_gender_time_spent_change.csv"
+      //   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_2.csv"
       // ),
     ]).then((files) => {
       const [ageData] = files;

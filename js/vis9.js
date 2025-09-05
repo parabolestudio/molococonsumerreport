@@ -8,7 +8,7 @@ export function Vis9() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz9_daily_active_users_updated.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz9.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["DAU"] = parseFloat(d["DAU"].replaceAll(",", ""));
