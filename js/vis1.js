@@ -75,6 +75,7 @@ const formatRevenue = (value) => {
 };
 
 export function Vis1({ locale: loc }) {
+  console.log("Rendering Vis1 with locale:", loc);
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("All countries");

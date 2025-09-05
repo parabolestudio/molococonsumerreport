@@ -13,3 +13,25 @@ export function getDataURL(filename, locale) {
   }
   return `${BASE_URL}/${filename}${localeEnding}.csv`;
 }
+
+export const getLocale = () => {
+  const locales = ["zh", "ko", "ja", "en"];
+  if (
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+  ) {
+    console.log("Running in local testing mode");
+    // local testing with ?testLocale=zh or ko or ja or en
+    const param = new URLSearchParams(window.location.search).get("testLocale");
+    if (locales.includes(param)) return param;
+  } else {
+    // production - determine locale from path
+    console.log("Running in production mode");
+    const urlPath = window.location.pathname;
+    for (const locale of locales) {
+      if (urlPath.includes(`/${locale}/`)) return locale;
+    }
+  }
+  // default to English if no locale found in path
+  return "en";
+};
