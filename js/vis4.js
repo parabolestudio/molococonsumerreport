@@ -69,7 +69,6 @@ export function Vis4Combined({ locale: loc }) {
   const innerWidth = width - margin.left - margin.right - extraGap;
 
   const barColors = getBarsColor(loc);
-  console.log("Bar colors:", barColors);
 
   // data and scales
   const columnHeightScale = d3

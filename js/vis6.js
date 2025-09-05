@@ -1,32 +1,46 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
+// const CUSTOM_COUNTRY_REGION = [
+//   "U.S.",
+//   "Japan",
+//   "South Korea",
+//   "Germany",
+//   "U.K.",
+//   "Taiwan",
+//   "Canada",
+//   "France",
+//   "Australia",
+//   "Brazil",
+// ];
 const CUSTOM_COUNTRY_REGION = [
-  "U.S.",
-  "Japan",
-  "South Korea",
-  "Germany",
-  "U.K.",
-  "Taiwan",
-  "Canada",
-  "France",
-  "Australia",
-  "Brazil",
+  "USA",
+  "JPN",
+  "KOR",
+  "DEU",
+  "GBR",
+  "TWN",
+  "CAN",
+  "FRA",
+  "AUS",
+  "BRA",
 ];
 
 const CIRCLE_RADIUS = 19 / 2;
 
-export function Vis6() {
+export function Vis6({ locale: loc }) {
   const [data, setData] = useState([]);
   const [filterData, setFilteredData] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState(
-    "Top 10 mobile app markets"
+    l(6, loc, "Top 10 mobile app markets")
   );
   const [axisBreak, setAxisBreak] = useState(null);
 
   function filterDataByRegion() {
     let filterData = data.sort((a, b) => b.value2024 - a.value2024);
     filterData = filterData.filter((d) => d.region === selectedRegion);
-    if (selectedRegion === "Top 10 mobile app markets") {
+    if (selectedRegion === l(6, loc, "Top 10 mobile app markets")) {
       filterData = data.filter((d) =>
         CUSTOM_COUNTRY_REGION.includes(d.country)
       );
@@ -35,16 +49,15 @@ export function Vis6() {
   }
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz6.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz6", loc)).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
         d["Year"] = d["Year"] === "CAGR" ? d["Year"] : +d["Year"];
       });
 
       // group data by Country
-      const groupedData = d3.group(data, (d) => d["Country"]);
+      const groupedData = d3.group(data, (d) => d["Country code"]);
+      console.log("groupedData", groupedData);
 
       // convert grouped data to an array of objects
       const groupedArray = Array.from(groupedData, ([key, values]) => {
@@ -54,7 +67,7 @@ export function Vis6() {
           values.find((v) => v.Year === "CAGR")?.Value * 100 || 0;
 
         return {
-          country: key === "Dominican Republic" ? "Dom. Republic" : key,
+          country: key,
           region: values[0]["Region"],
           value2023,
           value2024,
@@ -70,7 +83,7 @@ export function Vis6() {
       // set values for regions dropdown
       const regions = groupedArray.map((d) => d.region);
       const uniqueRegions = Array.from(new Set(regions)).sort();
-      uniqueRegions.unshift("Top 10 mobile app markets");
+      uniqueRegions.unshift(l(6, loc, "Top 10 mobile app markets"));
 
       let regionDropdown = document.querySelector("#vis6_dropdown_regions");
       if (regionDropdown) regionDropdown.innerHTML = "";
@@ -89,9 +102,10 @@ export function Vis6() {
   // filter and sort data based on selected region
   useEffect(() => {
     filterDataByRegion();
+    console.log("selectedRegion", selectedRegion, l(6, loc, "Asia"));
 
     // Set a breakpoint for Asia region
-    if (selectedRegion === "Asia") {
+    if (selectedRegion === l(6, loc, "Asia")) {
       setAxisBreak({
         breakPoint: 340 * 1000000000, // 350 billion
         maxPoint: 1000 * 1000000000,
@@ -169,7 +183,11 @@ export function Vis6() {
       transform="translate(0, ${index * (heightPerCountry + countryPadding) +
       countryPadding})"
     >
-      <text x="${-120}" y="5" class="charts-text-body"> ${d.country} </text>
+      <text x="${-120}" y="5" class="charts-text-body">
+        ${l(6, loc, d.country) === "Dominican Republic" && loc === "en"
+          ? "Dom. Republic"
+          : l(6, loc, d.country)}
+      </text>
       <rect
         x="${barStart}"
         y="${-CIRCLE_RADIUS}"
@@ -292,7 +310,7 @@ export function Vis6() {
   </div>`;
 }
 
-export function Vis6LegendGrowth() {
+export function Vis6LegendGrowth({ locale: loc }) {
   const width = 340;
   const height = 45;
 
@@ -320,7 +338,7 @@ export function Vis6LegendGrowth() {
           font-weight="bold"
           font-family="'Spacegrotesk', 'Space Grotesk', sans-serif"
         >
-          +/-X%
+          ${l(6, loc, "+/-X%")}
         </text>
 
         <line
@@ -341,12 +359,18 @@ export function Vis6LegendGrowth() {
           font-weight="400"
           font-family="'Montserrat', sans-serif"
         >
-          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="0">
+          ${loc === "en" &&
+          html` <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="0">
             Compound Annual
-          </tspan>
-          <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="20">
+          </tspan>`}
+          ${loc === "en" &&
+          html` <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="20">
             Growth Rate (CAGR)
-          </tspan>
+          </tspan>`}
+          ${loc !== "en" &&
+          html` <tspan x="${endX + 90 + lineHorizontalLength + 10}" dy="0">
+            ${l(6, loc, "Compound Annual Growth Rate (CAGR)")}
+          </tspan>`}
         </text>
       </g>
     </svg>

@@ -1193,23 +1193,24 @@ const VIZ4_LABELS = [
 ];
 
 const VIZ6_LABELS = [
+  // year labels are not used in the chart, so commented out
+  // {
+  //   English: "2021",
+  //   Korean: "",
+  //   Japanese: "2021年",
+  //   Chinese: "2021 年",
+  // },
+  // {
+  //   English: "2024",
+  //   Korean: "",
+  //   Japanese: "2024年",
+  //   Chinese: "2024 年",
+  // },
   {
-    English: "2021",
+    English: "+/-X%",
     Korean: "",
-    Japanese: "2021年",
-    Chinese: "2021 年",
-  },
-  {
-    English: "2024",
-    Korean: "",
-    Japanese: "2024年",
-    Chinese: "2024 年",
-  },
-  {
-    English: "\n+/-X%",
-    Korean: "",
-    Japanese: "\n+/-X%",
-    Chinese: "\n+/-X%",
+    Japanese: "+/-X%",
+    Chinese: "+/-X%",
   },
   {
     English: "Compound Annual Growth Rate (CAGR)",
@@ -1222,6 +1223,13 @@ const VIZ6_LABELS = [
     Korean: "",
     Japanese: "",
     Chinese: "",
+  },
+  // added manually to allow axis break filtering for Asia
+  {
+    English: "Asia",
+    Korean: "",
+    Japanese: "アジア",
+    Chinese: "亚洲",
   },
 ];
 const labelMap = {
