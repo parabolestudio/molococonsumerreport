@@ -80,10 +80,10 @@ export function Vis1() {
   useEffect(() => {
     Promise.all([
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1_growth_overview_updated_yearly.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1.csv"
       ),
       d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2_growth_categories_updated.csv"
+        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2.csv"
       ),
     ]).then(function (files) {
       const timelineData = files[0];
