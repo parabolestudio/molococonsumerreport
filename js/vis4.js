@@ -1,4 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
 const barColors = {
   "Google & Meta": "var(--white)",
@@ -143,7 +145,7 @@ export function Vis4Combined({ locale: loc }) {
           class="charts-text-body"
           fill="#040078"
         >
-          Baseline
+          ${l(4, loc, "Baseline")}
         </text>
       </g>
     </g>`;

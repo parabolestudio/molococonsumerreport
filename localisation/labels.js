@@ -1183,42 +1183,12 @@ const VIZ1_LABELS = [
   },
 ];
 
-const VIZ2_LABELS = [
+const VIZ4_LABELS = [
   {
-    English: "Gaming apps",
+    English: "Baseline",
     Korean: "",
-    Japanese: "ゲームアプリ",
-    Chinese: "游戏 App",
-  },
-  {
-    English: "Consumer apps",
-    Korean: "",
-    Japanese: "消費者向けアプリ",
-    Chinese: "消费级 App",
-  },
-  {
-    English: "Independent App Ecosystem",
-    Korean: "",
-    Japanese: "独立系アプリエコシステム",
-    Chinese: "开放互联网",
-  },
-  {
-    English: "Meta",
-    Korean: "",
-    Japanese: "Meta",
-    Chinese: "Meta",
-  },
-  {
-    English: "Google",
-    Korean: "",
-    Japanese: "Google",
-    Chinese: "Google",
-  },
-  {
-    English: "Other Walled Gardens",
-    Korean: "",
-    Japanese: "その他のウォールドガーデン",
-    Chinese: "其他围墙花园",
+    Japanese: "",
+    Chinese: "",
   },
 ];
 
@@ -1255,9 +1225,10 @@ const VIZ6_LABELS = [
   },
 ];
 const labelMap = {
-  1: VIZ1_LABELS.concat(COUNTRIES, CATEGORIES),
-  2: VIZ2_LABELS.concat(COUNTRIES),
-  6: VIZ6_LABELS.concat(COUNTRIES),
+  1: VIZ1_LABELS,
+  // 2: labels for viz 2 only used in Figma, so not needed in code here
+  4: VIZ4_LABELS,
+  6: VIZ6_LABELS,
 };
 
 const localeMap = {
@@ -1269,11 +1240,11 @@ const localeMap = {
 
 export function getLabel(vizId, locale, key) {
   // console.log("getLabel called with:", vizId, locale, key);
-  const labels = labelMap[vizId] || [];
+  const labels = (labelMap[vizId] || []).concat(COUNTRIES, CATEGORIES);
 
   const labelObj = labels.find((label) => Object.values(label).includes(key));
   if (labelObj && labelObj[localeMap[locale]] !== "") {
     return labelObj[localeMap[locale]];
   }
-  return "!!! " + key;
+  return "!" + key;
 }
