@@ -7,7 +7,7 @@ export function Vis7() {
   // Fetch data on mount
   useEffect(() => {
     d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz7_time_spent_change.csv"
+      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz7.csv"
     ).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
@@ -103,7 +103,10 @@ export function Vis7() {
 
       const y = index * (heightPerCategory + categoryPadding) + categoryPadding;
 
-      const formattedValue = d3.format(".2s")(v.value).replace("G", "B").replace("k", "K");
+      const formattedValue = d3
+        .format(".2s")(v.value)
+        .replace("G", "B")
+        .replace("k", "K");
 
       // Create path for selective rounded corners
       const baseRadius = 10;

@@ -5,12 +5,10 @@ const barColors = {
   Gaming: "#5CDEFF",
 };
 
-export function Vis4Combined() {
+export function Vis4Combined({ locale: loc }) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz4_category_growth.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz4", loc)).then((data) => {
       data.forEach((d) => {
         d["Growth Text"] = "+" + Math.round(d["Growth (%)"] * 100) + "%";
       });
