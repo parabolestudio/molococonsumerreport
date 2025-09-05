@@ -1295,6 +1295,50 @@ const VIZ8_LABELS = [
     Chinese: "使用时长与用户总数的对比",
   },
 ];
+const VIZ9_LABELS = [
+  {
+    English: "Independent App Ecosystem",
+    Korean: "",
+    Japanese: "独立系アプリエコシステム",
+    Chinese: "开放互联网",
+  },
+  {
+    English: "DAU",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Time spent",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Country",
+    Korean: "",
+    Japanese: "国名",
+    Chinese: "国家或地区",
+  },
+  {
+    English: "Platform",
+    Korean: "",
+    Japanese: "プラットフォーム",
+    Chinese: "平台",
+  },
+  {
+    English: "Daily active users",
+    Korean: "",
+    Japanese: "デイリーアクティブユーザー数",
+    Chinese: "日活用户",
+  },
+  {
+    English: "Time spent (in hours)",
+    Korean: "",
+    Japanese: "利用時間（時間単位）",
+    Chinese: "使用时长（小时）",
+  },
+];
 
 const labelMap = {
   1: VIZ1_LABELS,
@@ -1303,6 +1347,7 @@ const labelMap = {
   6: VIZ6_LABELS,
   7: [], // no special labels for viz 7
   8: VIZ8_LABELS,
+  9: VIZ9_LABELS,
 };
 
 const localeMap = {

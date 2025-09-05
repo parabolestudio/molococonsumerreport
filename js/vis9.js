@@ -1,44 +1,45 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
-export function Vis9() {
+export function Vis9({ locale: loc }) {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("All countries");
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz9.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz9", loc)).then((data) => {
       data.forEach((d) => {
         d["DAU"] = parseFloat(d["DAU"].replaceAll(",", ""));
         d["Hours"] = parseFloat(d["Hours"].replaceAll(",", ""));
+        d["countryCode"] = d["Country code"];
       });
 
       setData(data);
+
+      // set values for country code dropdown
+      const countries = data.map((d) => d.countryCode);
+      const uniqueCountries = Array.from(new Set(countries)).sort();
+      let countryDropdown = document.querySelector("#vis9_dropdown_countries");
+      if (countryDropdown) {
+        if (countryDropdown) countryDropdown.innerHTML = "";
+        uniqueCountries.forEach((country) => {
+          let option = document.createElement("option");
+          option.text = l(9, loc, country);
+          option.value = country;
+          countryDropdown.add(option);
+        });
+        countryDropdown.value = selectedCountry;
+        countryDropdown.addEventListener("change", (e) => {
+          setSelectedCountry(e.target.value);
+        });
+      }
     });
   }, []);
 
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
-  }
-
-  // set values for country code dropdown
-  // const countries = data.map((d) => d.countryCode);
-  const countries = data.map((d) => d.Country);
-  const uniqueCountries = Array.from(new Set(countries)).sort();
-  let countryDropdown = document.querySelector("#vis9_dropdown_countries");
-  if (countryDropdown) {
-    if (countryDropdown) countryDropdown.innerHTML = "";
-    uniqueCountries.forEach((country) => {
-      let option = document.createElement("option");
-      option.text = country;
-      countryDropdown.add(option);
-    });
-    countryDropdown.value = selectedCountry;
-    countryDropdown.addEventListener("change", (e) => {
-      setSelectedCountry(e.target.value);
-    });
   }
 
   // layout dimensions
@@ -54,7 +55,7 @@ export function Vis9() {
   const innerHeight = height - margin.top - margin.bottom;
 
   // data and scales
-  const dataFiltered = data.filter((d) => d.Country === selectedCountry);
+  const dataFiltered = data.filter((d) => d.countryCode === selectedCountry);
   // sort so "Independent App Ecosystem" is always last
   dataFiltered.sort((a, b) => {
     if (a.App === "Independent App Ecosystem") return 1;
@@ -103,7 +104,7 @@ export function Vis9() {
             x="${innerWidth / 2}"
             y="${innerHeight + 39}"
           >
-            Time spent
+            ${l(9, loc, "Time spent")}
           </text>
           <g class="hour-ticks">
             ${hourScale.ticks(5).map((tick) => {
@@ -136,7 +137,7 @@ export function Vis9() {
             y="${innerHeight / 2}"
             transform="rotate(-90 ${-75} ${innerHeight / 2})"
           >
-            DAU
+            ${l(9, loc, "DAU")}
           </text>
           <g class="dau-ticks">
             ${dauScale.ticks(5).map((tick) => {
@@ -210,11 +211,11 @@ export function Vis9() {
         </g>
       </g>
     </svg>
-    <${Tooltip} hoveredItem=${hoveredItem} />
+    <${Tooltip} hoveredItem=${hoveredItem} loc=${loc} />
   </div>`;
 }
 
-function Tooltip({ hoveredItem }) {
+function Tooltip({ hoveredItem, loc }) {
   if (!hoveredItem) return null;
 
   return html`<div
@@ -222,21 +223,21 @@ function Tooltip({ hoveredItem }) {
     style="left: ${hoveredItem.x}px; top: ${hoveredItem.y}px;"
   >
     <div>
-      <p class="tooltip-label">Country</p>
+      <p class="tooltip-label">${l(9, loc, "Country")}</p>
       <p class="tooltip-value">${hoveredItem.country}</p>
     </div>
     <div>
-      <p class="tooltip-label">Platform</p>
+      <p class="tooltip-label">${l(9, loc, "Platform")}</p>
       <p class="tooltip-value">${hoveredItem.app}</p>
     </div>
     <div>
-      <p class="tooltip-label">Daily active users</p>
+      <p class="tooltip-label">${l(9, loc, "Daily active users")}</p>
       <p class="tooltip-value">
         ${d3.format(".2s")(hoveredItem.dau).replace("G", "B")}
       </p>
     </div>
     <div>
-      <p class="tooltip-label">Time spent (in hours)</p>
+      <p class="tooltip-label">${l(9, loc, "Time spent (in hours)")}</p>
       <p class="tooltip-value">
         ${d3.format(".2s")(hoveredItem.hours).replace("G", "B")}
       </p>
