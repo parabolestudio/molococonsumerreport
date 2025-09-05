@@ -1,11 +1,13 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
-export function Vis8() {
+export function Vis8({ locale: loc }) {
   const [ageData, setAgeData] = useState([]);
   const [countries, setCountries] = useState([]);
   const [categories, setCategories] = useState([]);
   const [groups, setGroups] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [selectedCountry, setSelectedCountry] = useState("USA");
   const [hoveredItem, setHoveredItem] = useState(null);
   const [showMore, setShowMore] = useState(false);
 
@@ -13,33 +15,19 @@ export function Vis8() {
 
   // Fetch data on mount
   useEffect(() => {
-    Promise.all([
-      d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_1.csv"
-      ),
-      // gender_time_spent_change not used currently
-      // d3.csv(
-      //   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz8_2.csv"
-      // ),
-    ]).then((files) => {
+    Promise.all([d3.csv(getDataURL("Viz8_1", loc))]).then((files) => {
       const [ageData] = files;
 
       ageData.forEach((d) => {
         d["value"] = +d["TIme spent change (%)"];
         d["group"] = d["Demographic Group"].trim();
+        d["countryCode"] = d["Country code"];
       });
 
-      // genderData.forEach((d) => {
-      //   d["value"] = +d["TIme spent change (%)"];
-      //   d["group"] = d["Demographic Group"].trim();
-      // });
-
-      const countries = ageData.map((d) => d.Country);
-      const uniqueCountries = Array.from(new Set(countries)).sort((a, b) => {
-        // Sort countries alphabetically
-        return a.localeCompare(b);
-      });
-      // Set the default selected country to the first one in the sorted list
+      const countries = ageData.map((d) => d.countryCode);
+      const uniqueCountries = Array.from(new Set(countries)).sort((a, b) =>
+        a.localeCompare(b)
+      );
       setCountries(uniqueCountries);
 
       const categories = ageData.map((d) => d.Category);
@@ -51,7 +39,7 @@ export function Vis8() {
       setGroups(uniqueGroups);
 
       // age data group by country code and categories
-      const groupedData = d3.group(ageData, (d) => d.Country);
+      const groupedData = d3.group(ageData, (d) => d.countryCode);
 
       const groupedArray = Array.from(groupedData, ([key, values]) => {
         const groupedByCategory = d3.group(values, (d) => d.Category);
@@ -76,6 +64,22 @@ export function Vis8() {
       });
 
       setAgeData(groupedArray);
+
+      // set values for country code dropdown
+      let countryDropdown = document.querySelector("#vis8_dropdown_countries");
+      if (countryDropdown) {
+        if (countryDropdown) countryDropdown.innerHTML = "";
+        uniqueCountries.forEach((country) => {
+          let option = document.createElement("option");
+          option.text = l(8, loc, country);
+          option.value = country;
+          countryDropdown.add(option);
+        });
+        countryDropdown.value = selectedCountry;
+        countryDropdown.addEventListener("change", (e) => {
+          setSelectedCountry(e.target.value);
+        });
+      }
     });
   }, []);
 
@@ -90,21 +94,6 @@ export function Vis8() {
     showMore === true
       ? groupedArrayFiltered
       : groupedArrayFiltered.slice(0, nCategories);
-
-  // set values for country code dropdown
-  let countryDropdown = document.querySelector("#vis8_dropdown_countries");
-  if (countryDropdown) {
-    if (countryDropdown) countryDropdown.innerHTML = "";
-    countries.forEach((country) => {
-      let option = document.createElement("option");
-      option.text = country;
-      countryDropdown.add(option);
-    });
-    countryDropdown.value = selectedCountry;
-    countryDropdown.addEventListener("change", (e) => {
-      setSelectedCountry(e.target.value);
-    });
-  }
 
   // layout dimensions
   const isMobile = window.innerWidth <= 480;
@@ -150,7 +139,11 @@ export function Vis8() {
         class="category-label"
       >
         <div xmlns="http://www.w3.org/1999/xhtml">
-          <span> ${group} ${isMobile ? "" : "years old"}</span>
+          <span>
+            ${loc === "en" && isMobile
+              ? group
+              : l(8, loc, `${group} years old`)}</span
+          >
         </div>
       </foreignObject>
     </g>`;
@@ -308,7 +301,9 @@ export function Vis8() {
         }
       }}"
     >
-      <span> ${showMore === true ? "Show less" : "Show more"} </span>
+      <span>
+        ${showMore === true ? l(8, loc, "Show less") : l(8, loc, "Show more")}
+      </span>
 
       ${showMore === true
         ? html`<svg
@@ -359,11 +354,11 @@ export function Vis8() {
             </g>
           </svg>`}
     </div>
-    <${Tooltip} hoveredItem=${hoveredItem} />
+    <${Tooltip} hoveredItem=${hoveredItem} loc=${loc} />
   </div>`;
 }
 
-function Tooltip({ hoveredItem }) {
+function Tooltip({ hoveredItem, loc }) {
   if (!hoveredItem) return null;
 
   const formatGrowth = (growth) => {
@@ -377,15 +372,17 @@ function Tooltip({ hoveredItem }) {
   >
     <p class="tooltip-title">${hoveredItem.category}</p>
     <div>
-      <p class="tooltip-label">Country</p>
+      <p class="tooltip-label">${l(8, loc, "Country")}</p>
       <p class="tooltip-value">${hoveredItem.country}</p>
     </div>
     <div>
-      <p class="tooltip-label">Age group</p>
+      <p class="tooltip-label">${l(8, loc, "Age group")}</p>
       <p class="tooltip-value">${hoveredItem.group}</p>
     </div>
     <div>
-      <p class="tooltip-label">Time spent vs. general population</p>
+      <p class="tooltip-label">
+        ${l(8, loc, "Time spent vs. general population")}
+      </p>
       <p class="tooltip-value">${formatGrowth(hoveredItem.value * 100)}</p>
     </div>
   </div>`;

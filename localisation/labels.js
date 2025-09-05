@@ -1232,12 +1232,77 @@ const VIZ6_LABELS = [
     Chinese: "亚洲",
   },
 ];
+
+const VIZ8_LABELS = [
+  {
+    English: "Less time",
+    Korean: "",
+    Japanese: "より少ない時間",
+    Chinese: "使用时长更少",
+  },
+  {
+    English: "More time",
+    Korean: "",
+    Japanese: "より多くの時間",
+    Chinese: "使用时长更多",
+  },
+  {
+    English: "Show more",
+    Korean: "",
+    Japanese: "もっと見る",
+    Chinese: "显示更多",
+  },
+  {
+    English: "Show less",
+    Korean: "",
+    Japanese: "表示を減らす",
+    Chinese: "显示更少",
+  },
+  {
+    English: "18-24 years old",
+    Korean: "",
+    Japanese: "18～24歳",
+    Chinese: "18-24",
+  },
+  {
+    English: "25-44 years old",
+    Korean: "",
+    Japanese: "25～44歳",
+    Chinese: "25-44",
+  },
+  {
+    English: "45+ years old",
+    Korean: "",
+    Japanese: "45歳以上",
+    Chinese: "45+",
+  },
+  {
+    English: "Country",
+    Korean: "",
+    Japanese: "国名",
+    Chinese: "国家/地区",
+  },
+  {
+    English: "Age group",
+    Korean: "",
+    Japanese: "年齢層",
+    Chinese: "年龄段",
+  },
+  {
+    English: "Time spent vs. general population",
+    Korean: "",
+    Japanese: "一般人口との利用時間の比較",
+    Chinese: "使用时长与用户总数的对比",
+  },
+];
+
 const labelMap = {
   1: VIZ1_LABELS,
   // 2: labels for viz 2 only used in Figma, so not needed in code here
   4: VIZ4_LABELS,
   6: VIZ6_LABELS,
   7: [], // no special labels for viz 7
+  8: VIZ8_LABELS,
 };
 
 const localeMap = {
