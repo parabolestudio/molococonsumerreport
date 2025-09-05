@@ -4,16 +4,17 @@ import { getLabel as l } from "../localisation/labels.js";
 
 export function Vis7({ locale: loc }) {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [selectedCountry, setSelectedCountry] = useState("USA");
 
   // Fetch data on mount
   useEffect(() => {
     d3.csv(getDataURL("Viz7", loc)).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
+        d["countryCode"] = d["Country code"];
       });
 
-      const groupedData = d3.group(data, (d) => d["Country"]);
+      const groupedData = d3.group(data, (d) => d["Country code"]);
 
       // convert grouped data to an array of objects
       const groupedArray = Array.from(groupedData, ([key, values]) => {
@@ -25,29 +26,29 @@ export function Vis7({ locale: loc }) {
           })),
         };
       });
-
       setData(groupedArray);
+
+      // set values for country dropdown
+      const countries = Array.from(new Set(data.map((d) => d.countryCode)));
+      let countryDropdown = document.querySelector("#vis7_dropdown_countries");
+      if (countryDropdown) {
+        if (countryDropdown) countryDropdown.innerHTML = "";
+        countries.forEach((country) => {
+          let option = document.createElement("option");
+          option.text = l(7, loc, country);
+          option.value = country;
+          countryDropdown.add(option);
+        });
+        countryDropdown.value = selectedCountry;
+        countryDropdown.addEventListener("change", (e) => {
+          setSelectedCountry(e.target.value);
+        });
+      }
     });
   }, []);
 
   if (data.length === 0) {
     return html`<div>Loading...</div>`;
-  }
-
-  // set values for country dropdown
-  const countries = data.map((d) => d.country);
-  let countryDropdown = document.querySelector("#vis7_dropdown_countries");
-  if (countryDropdown) {
-    if (countryDropdown) countryDropdown.innerHTML = "";
-    countries.forEach((country) => {
-      let option = document.createElement("option");
-      option.text = country;
-      countryDropdown.add(option);
-    });
-    countryDropdown.value = selectedCountry;
-    countryDropdown.addEventListener("change", (e) => {
-      setSelectedCountry(e.target.value);
-    });
   }
 
   // data and scales
