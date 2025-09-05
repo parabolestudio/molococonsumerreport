@@ -1,4 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
 const URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/";
@@ -54,7 +56,7 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
   }
 }
 
-export function Vis11() {
+export function Vis11({ locale: loc }) {
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
   const initialCategory = window.vis11_initial_category || "E-Commerce";
 
@@ -86,11 +88,11 @@ export function Vis11() {
 
   useEffect(() => {
     Promise.all([
-      d3.csv(URL + "Viz11_1_genre_overview.csv"),
-      d3.csv(URL + "Viz11_2_gender.csv"),
-      d3.csv(URL + "Viz11_3_demographics.csv"),
-      d3.csv(URL + "Viz11_4_time_spent.csv"),
-      d3.csv(URL + "Viz11_5_top_apps.csv"),
+      d3.csv(getDataURL("Viz11_1_genre_overview", "en")),
+      d3.csv(getDataURL("Viz11_2_gender", "en")),
+      d3.csv(getDataURL("Viz11_3_demographics", "en")),
+      d3.csv(getDataURL("Viz11_4_time_spent", "en")),
+      d3.csv(getDataURL("Viz11_5_top_apps", "en")),
     ]).then(async (files) => {
       const [
         genreDataFile,

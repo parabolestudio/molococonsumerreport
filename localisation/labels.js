@@ -1340,6 +1340,257 @@ const VIZ9_LABELS = [
   },
 ];
 
+const VIZ10_LABELS = [
+  {
+    English: "You can only select 3 countries",
+    Korean: "",
+    Japanese: "最大3つまで選択できます",
+    Chinese: "您只能选择 3 个国家/地区",
+  },
+  {
+    English: "Time spent in-app (% of total)",
+    Korean: "",
+    Japanese: "アプリの利用時間（全体に対する割合）",
+    Chinese: "App 使用时长（占总时间的百分比）",
+  },
+  {
+    English: "Less time",
+    Korean: "",
+    Japanese: "少ない",
+    Chinese: "使用时长更少",
+  },
+  {
+    English: "More time",
+    Korean: "",
+    Japanese: "多い",
+    Chinese: "使用时长更多",
+  },
+  {
+    English: "Time spent in 2024 vs. 2023",
+    Korean: "",
+    Japanese: "2023年と2024年の利用時間の比較",
+    Chinese: "2024 年与 2023 年使用时长对比",
+  },
+  {
+    English: "Increasing",
+    Korean: "",
+    Japanese: "増加",
+    Chinese: "增加",
+  },
+  {
+    English: "Decreasing",
+    Korean: "",
+    Japanese: "減少",
+    Chinese: "减少",
+  },
+  {
+    English: "Add another country to compare",
+    Korean: "",
+    Japanese: "比較する国を追加する",
+    Chinese: "添加另一个国家/地区进行比较",
+  },
+  {
+    English: "",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Tooltip copy",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Total time spent share",
+    Korean: "",
+    Japanese: "総利用時間の割合",
+    Chinese: "总使用时长百分比",
+  },
+  {
+    English: "Growth (2023-2024)",
+    Korean: "",
+    Japanese: "成長率（2023～2024年）",
+    Chinese: "增长率（2023-2024）",
+  },
+];
+const VIZ11_LABELS = [
+  {
+    English: "IAE apps used in a month",
+    Korean: "",
+    Japanese: "1か月間に利用された独立系アプリ",
+    Chinese: "一个月内使用的 IAE 移动应用",
+  },
+  {
+    English: "Ad opportunities in 24 hours",
+    Korean: "",
+    Japanese: "24時間の広告機会",
+    Chinese: "24 小时内的广告机会",
+  },
+  {
+    English: "Where users spend their time",
+    Korean: "",
+    Japanese: "利用しているアプリの種類",
+    Chinese: "用户花费时间的 App",
+  },
+  {
+    English: "Time spent vs. general population",
+    Korean: "",
+    Japanese: "一般人口との利用時間の比較",
+    Chinese: "人群和使用时长的对比",
+  },
+  {
+    English: "Global ad-supported apps",
+    Korean: "",
+    Japanese: "広告に対応しているグローバルアプリ",
+    Chinese: "全球受广告支持的 App",
+  },
+  {
+    English: "Example publisher inventory",
+    Korean: "",
+    Japanese: "パブリッシャー在庫の例",
+    Chinese: "发行商投放示例",
+  },
+  {
+    English: "Age and gender split",
+    Korean: "",
+    Japanese: "年齢・性別による分布",
+    Chinese: "年龄和性别分布",
+  },
+];
+
+const VIZ12_LABELS = [
+  {
+    English: "You can only select 4 categories",
+    Korean: "",
+    Japanese: "最大4つまで選択できます",
+    Chinese: "您最多可选择 4 个类别",
+  },
+  {
+    English: "Add another category to compare",
+    Korean: "",
+    Japanese: "比較するカテゴリーを追加する",
+    Chinese: "添加另一个 App 类别进行比较",
+  },
+  {
+    English: "No sufficient data for this category",
+    Korean: "",
+    Japanese: "このカテゴリーに関する十分なデータがありません",
+    Chinese: "该 App 类别的数据不足",
+  },
+];
+
+const VIZ13_LABELS = [
+  {
+    English: "Indexed CPP",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Advertiser category",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Menu",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "All categories",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Books & Reference",
+    Korean: "",
+    Japanese: "書籍・参考書",
+    Chinese: "图书与工具书",
+  },
+  {
+    English: "Entertainment",
+    Korean: "",
+    Japanese: "エンターテインメント",
+    Chinese: "娱乐",
+  },
+  {
+    English: "Gaming",
+    Korean: "",
+    Japanese: "ゲーム",
+    Chinese: "游戏",
+  },
+  {
+    English: "Health & Fitness",
+    Korean: "",
+    Japanese: "健康・フィットネス",
+    Chinese: "健康与健身",
+  },
+  {
+    English: "Other Consumer",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Photo & Video",
+    Korean: "",
+    Japanese: "写真・動画",
+    Chinese: "照片和视频",
+  },
+  {
+    English: "Social Media",
+    Korean: "",
+    Japanese: "ソーシャルメディア",
+    Chinese: "社交媒体",
+  },
+  {
+    English: "Utility & Productivity",
+    Korean: "",
+    Japanese: "ユーティリティ & 生産性",
+    Chinese: "实用与效率",
+  },
+  {
+    English: "",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Tooltip",
+    Korean: "",
+    Japanese: "",
+    Chinese: "",
+  },
+  {
+    English: "Advertiser category",
+    Korean: "",
+    Japanese: "広告主のカテゴリー",
+    Chinese: "广告主类别",
+  },
+  {
+    English: "Publisher category",
+    Korean: "",
+    Japanese: "パブリッシャーのカテゴリー",
+    Chinese: "发行商类别",
+  },
+  {
+    English: "Indexed cost per payer",
+    Korean: "",
+    Japanese: "コンバージョン単価指標",
+    Chinese: "每付费用户成本指数",
+  },
+];
+
 const labelMap = {
   1: VIZ1_LABELS,
   // 2: labels for viz 2 only used in Figma, so not needed in code here
@@ -1348,6 +1599,10 @@ const labelMap = {
   7: [], // no special labels for viz 7
   8: VIZ8_LABELS,
   9: VIZ9_LABELS,
+  10: VIZ10_LABELS,
+  11: VIZ11_LABELS,
+  12: VIZ12_LABELS,
+  13: VIZ13_LABELS,
 };
 
 const localeMap = {

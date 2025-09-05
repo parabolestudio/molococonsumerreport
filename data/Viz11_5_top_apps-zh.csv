@@ -1,0 +1,274 @@
+Country,Country code,Genre,Growth,Position,Top Growing App
+澳大利亚,AUS,真金游戏,,1,ESPN
+澳大利亚,AUS,电子商务,,1,OfferUp
+澳大利亚,AUS,按需服务,,1,Zynga Poker
+澳大利亚,AUS,旅游,,1,Citymapper
+澳大利亚,AUS,金融,,1,Citymapper
+澳大利亚,AUS,娱乐,,1,Musi
+澳大利亚,AUS,社交,,1,BBC
+巴西,BRA,真金游戏,,1,ESPN
+巴西,BRA,电子商务,,1,OfferUp
+巴西,BRA,按需服务,,1,Zynga Poker
+巴西,BRA,旅游,,1,Zynga Poker
+巴西,BRA,金融,,1,Yahoo Finance
+巴西,BRA,娱乐,,1,Musi
+巴西,BRA,社交,,1,BBC
+加拿大,CAN,真金游戏,,1,ESPN
+加拿大,CAN,电子商务,,1,OfferUp
+加拿大,CAN,按需服务,,1,Vivino
+加拿大,CAN,旅游,,1,Citymapper
+加拿大,CAN,金融,,1,Citymapper
+加拿大,CAN,娱乐,,1,Musi
+加拿大,CAN,社交,,1,BBC
+德国,DEU,真金游戏,,1,ESPN
+德国,DEU,电子商务,,1,OfferUp
+德国,DEU,按需服务,,1,Zynga Poker
+德国,DEU,旅游,,1,Citymapper
+德国,DEU,金融,,1,Yahoo Finance
+德国,DEU,娱乐,,1,Musi
+德国,DEU,社交,,1,Vivino
+法国,FRA,真金游戏,,1,Zynga Poker
+法国,FRA,电子商务,,1,OfferUp
+法国,FRA,按需服务,,1,Vivino
+法国,FRA,旅游,,1,Citymapper
+法国,FRA,金融,,1,Yahoo Finance
+法国,FRA,娱乐,,1,Musi
+法国,FRA,社交,,1,BBC
+英国,GBR,真金游戏,,1,Zynga Poker
+英国,GBR,电子商务,,1,OfferUp
+英国,GBR,按需服务,,1,Vivino
+英国,GBR,旅游,,1,Citymapper
+英国,GBR,金融,,1,Yahoo Finance
+英国,GBR,娱乐,,1,Musi
+英国,GBR,社交,,1,BBC
+印度尼西亚,IDN,真金游戏,,1,ESPN
+印度尼西亚,IDN,电子商务,,1,OfferUp
+印度尼西亚,IDN,按需服务,,1,Vivino
+印度尼西亚,IDN,旅游,,1,Citymapper
+印度尼西亚,IDN,金融,,1,The Weather Channel
+印度尼西亚,IDN,娱乐,,1,The Weather Channel
+印度尼西亚,IDN,社交,,1,BBC
+印度,IND,真金游戏,,1,ESPN
+印度,IND,电子商务,,1,OfferUp
+印度,IND,按需服务,,1,Vivino
+印度,IND,旅游,,1,Citymapper
+印度,IND,金融,,1,MyFitnessPal
+印度,IND,娱乐,,1,Musi
+印度,IND,社交,,1,BBC
+日本,JPN,真金游戏,,1,ESPN
+日本,JPN,电子商务,,1,OfferUp
+日本,JPN,按需服务,,1,Vivino
+日本,JPN,旅游,,1,Citymapper
+日本,JPN,金融,,1,Yahoo Finance
+日本,JPN,娱乐,,1,Musi
+日本,JPN,社交,,1,BBC
+韩国,KOR,真金游戏,,1,The Weather Channel
+韩国,KOR,电子商务,,1,OfferUp
+韩国,KOR,按需服务,,1,Vivino
+韩国,KOR,旅游,,1,Citymapper
+韩国,KOR,金融,,1,Yahoo Finance
+韩国,KOR,娱乐,,1,Musi
+韩国,KOR,社交,,1,BBC
+墨西哥,MEX,真金游戏,,1,Zynga Poker
+墨西哥,MEX,电子商务,,1,OfferUp
+墨西哥,MEX,按需服务,,1,Vivino
+墨西哥,MEX,旅游,,1,Citymapper
+墨西哥,MEX,金融,,1,Yahoo Finance
+墨西哥,MEX,娱乐,,1,Musi
+墨西哥,MEX,社交,,1,BBC
+美国,USA,真金游戏,,1,ESPN
+美国,USA,电子商务,,1,OfferUp
+美国,USA,按需服务,,1,Vivino
+美国,USA,旅游,,1,Citymapper
+美国,USA,金融,,1,Zynga Poker
+美国,USA,娱乐,,1,Musi
+美国,USA,社交,,1,BBC
+越南,VNM,真金游戏,,1,ESPN
+越南,VNM,电子商务,,1,OfferUp
+越南,VNM,按需服务,,1,Vivino
+越南,VNM,旅游,,1,Citymapper
+越南,VNM,金融,,1,Citymapper
+越南,VNM,娱乐,,1,Musi
+越南,VNM,社交,,1,The Weather Channel
+澳大利亚,AUS,真金游戏,,2,Zynga Poker
+澳大利亚,AUS,电子商务,,2,Zynga Poker
+澳大利亚,AUS,按需服务,,2,Vivino
+澳大利亚,AUS,旅游,,2,MyFitnessPal
+澳大利亚,AUS,金融,,2,BBC
+澳大利亚,AUS,娱乐,,2,Tinder
+澳大利亚,AUS,社交,,2,X
+巴西,BRA,真金游戏,,2,Zynga Poker
+巴西,BRA,电子商务,,2,Zynga Poker
+巴西,BRA,按需服务,,2,Vivino
+巴西,BRA,旅游,,2,Citymapper
+巴西,BRA,金融,,2,Zynga Poker
+巴西,BRA,娱乐,,2,BBC
+巴西,BRA,社交,,2,X
+加拿大,CAN,真金游戏,,2,Zynga Poker
+加拿大,CAN,电子商务,,2,Vivino
+加拿大,CAN,按需服务,,2,Zynga Poker
+加拿大,CAN,旅游,,2,Zynga Poker
+加拿大,CAN,金融,,2,Goodreads
+加拿大,CAN,娱乐,,2,MyFitnessPal
+加拿大,CAN,社交,,2,X
+德国,DEU,真金游戏,,2,Vivino
+德国,DEU,电子商务,,2,Vivino
+德国,DEU,按需服务,,2,Vivino
+德国,DEU,旅游,,2,Yahoo Finance
+德国,DEU,金融,,2,The Weather Channel
+德国,DEU,娱乐,,2,Vivino
+德国,DEU,社交,,2,BBC
+法国,FRA,真金游戏,,2,ESPN
+法国,FRA,电子商务,,2,Vivino
+法国,FRA,按需服务,,2,Zynga Poker
+法国,FRA,旅游,,2,Vivino
+法国,FRA,金融,,2,Zynga Poker
+法国,FRA,娱乐,,2,Tinder
+法国,FRA,社交,,2,X
+英国,GBR,真金游戏,,2,ESPN
+英国,GBR,电子商务,,2,Vivino
+英国,GBR,按需服务,,2,OfferUp
+英国,GBR,旅游,,2,MyFitnessPal
+英国,GBR,金融,,2,Zynga Poker
+英国,GBR,娱乐,,2,Duolingo
+英国,GBR,社交,,2,X
+印度尼西亚,IDN,真金游戏,,2,Zynga Poker
+印度尼西亚,IDN,电子商务,,2,MyFitnessPal
+印度尼西亚,IDN,按需服务,,2,Citymapper
+印度尼西亚,IDN,旅游,,2,The Weather Channel
+印度尼西亚,IDN,金融,,2,Citymapper
+印度尼西亚,IDN,娱乐,,2,Musi
+印度尼西亚,IDN,社交,,2,ESPN
+印度,IND,真金游戏,,2,Roku
+印度,IND,电子商务,,2,Vivino
+印度,IND,按需服务,,2,OfferUp
+印度,IND,旅游,,2,Vivino
+印度,IND,金融,,2,The Weather Channel
+印度,IND,娱乐,,2,Tinder
+印度,IND,社交,,2,X
+日本,JPN,真金游戏,,2,Zynga Poker
+日本,JPN,电子商务,,2,Tinder
+日本,JPN,按需服务,,2,Yahoo Finance
+日本,JPN,旅游,,2,Yahoo Finance
+日本,JPN,金融,,2,Citymapper
+日本,JPN,娱乐,,2,Duolingo
+日本,JPN,社交,,2,Roku
+韩国,KOR,真金游戏,,2,ESPN
+韩国,KOR,电子商务,,2,Tinder
+韩国,KOR,按需服务,,2,Yahoo Finance
+韩国,KOR,旅游,,2,ESPN
+韩国,KOR,金融,,2,MyFitnessPal
+韩国,KOR,娱乐,,2,MyFitnessPal
+韩国,KOR,社交,,2,Roku
+墨西哥,MEX,真金游戏,,2,ESPN
+墨西哥,MEX,电子商务,,2,MyFitnessPal
+墨西哥,MEX,按需服务,,2,MyFitnessPal
+墨西哥,MEX,旅游,,2,The Weather Channel
+墨西哥,MEX,金融,,2,Zynga Poker
+墨西哥,MEX,娱乐,,2,Zynga Poker
+墨西哥,MEX,社交,,2,X
+美国,USA,真金游戏,,2,Zynga Poker
+美国,USA,电子商务,,2,Zynga Poker
+美国,USA,按需服务,,2,Zynga Poker
+美国,USA,旅游,,2,Zynga Poker
+美国,USA,金融,,2,Yahoo Finance
+美国,USA,娱乐,,2,The Weather Channel
+美国,USA,社交,,2,Vivino
+越南,VNM,真金游戏,,2,Zynga Poker
+越南,VNM,电子商务,,2,Vivino
+越南,VNM,按需服务,,2,ESPN
+越南,VNM,旅游,,2,ESPN
+越南,VNM,金融,,2,MyFitnessPal
+越南,VNM,娱乐,,2,MyFitnessPal
+越南,VNM,社交,,2,X
+澳大利亚,AUS,真金游戏,,3,Yahoo Finance
+澳大利亚,AUS,电子商务,,3,MyFitnessPal
+澳大利亚,AUS,按需服务,,3,Block Blast!
+澳大利亚,AUS,旅游,,3,The Weather Channel
+澳大利亚,AUS,金融,,3,Goodreads
+澳大利亚,AUS,娱乐,,3,Vivino
+澳大利亚,AUS,社交,,3,Block Blast!
+巴西,BRA,真金游戏,,3,The Weather Channel
+巴西,BRA,电子商务,,3,Vivino
+巴西,BRA,按需服务,,3,MyFitnessPal
+巴西,BRA,旅游,,3,Vivino
+巴西,BRA,金融,,3,ESPN
+巴西,BRA,娱乐,,3,Tinder
+巴西,BRA,社交,,3,Alarmy
+加拿大,CAN,真金游戏,,3,Yahoo Finance
+加拿大,CAN,电子商务,,3,Tinder
+加拿大,CAN,按需服务,,3,MyFitnessPal
+加拿大,CAN,旅游,,3,MyFitnessPal
+加拿大,CAN,金融,,3,Yahoo Finance
+加拿大,CAN,娱乐,,3,Tinder
+加拿大,CAN,社交,,3,Alarmy
+德国,DEU,真金游戏,,3,Vivino
+德国,DEU,电子商务,,3,Tinder
+德国,DEU,按需服务,,3,OfferUp
+德国,DEU,旅游,,3,Vivino
+德国,DEU,金融,,3,BBC
+德国,DEU,娱乐,,3,Goodreads
+德国,DEU,社交,,3,X
+法国,FRA,真金游戏,,3,BBC
+法国,FRA,电子商务,,3,Tinder
+法国,FRA,按需服务,,3,ESPN
+法国,FRA,旅游,,3,Goodreads
+法国,FRA,金融,,3,ESPN
+法国,FRA,娱乐,,3,Goodreads
+法国,FRA,社交,,3,Alarmy
+英国,GBR,真金游戏,,3,Yahoo Finance
+英国,GBR,电子商务,,3,Tinder
+英国,GBR,按需服务,,3,Block Blast!
+英国,GBR,旅游,,3,ESPN
+英国,GBR,金融,,3,MyFitnessPal
+英国,GBR,娱乐,,3,Roku
+英国,GBR,社交,,3,Alarmy
+印度尼西亚,IDN,真金游戏,,3,Yahoo Finance
+印度尼西亚,IDN,电子商务,,3,The Weather Channel
+印度尼西亚,IDN,按需服务,,3,MyFitnessPal
+印度尼西亚,IDN,旅游,,3,ESPN
+印度尼西亚,IDN,金融,,3,ESPN
+印度尼西亚,IDN,娱乐,,3,BBC
+印度尼西亚,IDN,社交,,3,Alarmy
+印度,IND,真金游戏,,3,Yahoo Finance
+印度,IND,电子商务,,3,Tinder
+印度,IND,按需服务,,3,Citymapper
+印度,IND,旅游,,3,Yahoo Finance
+印度,IND,金融,,3,Citymapper
+印度,IND,娱乐,,3,Goodreads
+印度,IND,社交,,3,Alarmy
+日本,JPN,真金游戏,,3,Yahoo Finance
+日本,JPN,电子商务,,3,MyFitnessPal
+日本,JPN,按需服务,,3,The Weather Channel
+日本,JPN,旅游,,3,Vivino
+日本,JPN,金融,,3,ESPN
+日本,JPN,娱乐,,3,Vivino
+日本,JPN,社交,,3,X
+韩国,KOR,真金游戏,,3,Yahoo Finance
+韩国,KOR,电子商务,,3,The Weather Channel
+韩国,KOR,按需服务,,3,Citymapper
+韩国,KOR,旅游,,3,Yahoo Finance
+韩国,KOR,金融,,3,Block Blast!
+韩国,KOR,娱乐,,3,The Weather Channel
+韩国,KOR,社交,,3,X
+墨西哥,MEX,真金游戏,,3,Citymapper
+墨西哥,MEX,电子商务,,3,Vivino
+墨西哥,MEX,按需服务,,3,Yahoo Finance
+墨西哥,MEX,旅游,,3,Vivino
+墨西哥,MEX,金融,,3,MyFitnessPal
+墨西哥,MEX,娱乐,,3,Goodreads
+墨西哥,MEX,社交,,3,ESPN
+美国,USA,真金游戏,,3,BBC
+美国,USA,电子商务,,3,BBC
+美国,USA,按需服务,,3,OfferUp
+美国,USA,旅游,,3,ESPN
+美国,USA,金融,,3,OfferUp
+美国,USA,娱乐,,3,Tinder
+美国,USA,社交,,3,Alarmy
+越南,VNM,真金游戏,,3,The Weather Channel
+越南,VNM,电子商务,,3,MyFitnessPal
+越南,VNM,按需服务,,3,MyFitnessPal
+越南,VNM,旅游,,3,Vivino
+越南,VNM,金融,,3,Block Blast!
+越南,VNM,娱乐,,3,Citymapper
+越南,VNM,社交,,3,Vivino

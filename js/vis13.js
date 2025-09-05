@@ -1,4 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
 const all = "All categories";
 
@@ -100,16 +102,14 @@ const getCategoryIcon = (category) => {
   }
 };
 
-export function Vis13() {
+export function Vis13({ locale: loc }) {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(all);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13-CPP.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz13-CPP", "en")).then((data) => {
       data.forEach((d, i) => {
         d["value"] = +d["CPP"];
       });
@@ -291,7 +291,7 @@ export function Vis13() {
             text-anchor="middle"
             class="charts-text-body-bold"
           >
-            Indexed CPP
+            ${l(13, loc, "Indexed CPP")}
           </text>
           ${!isMobile
             ? html`<text
@@ -300,7 +300,7 @@ export function Vis13() {
                 text-anchor="start"
                 class="charts-text-body-bold"
               >
-                Advertiser category
+                ${l(13, loc, "Advertiser category")}
               </text>`
             : ""}
           <g transform="translate(${xScale(200)}, 0)">
@@ -404,7 +404,7 @@ function Tooltip({ hoveredItem }) {
   </div>`;
 }
 
-export function Vis13Categories() {
+export function Vis13Categories({ locale: loc }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(all);
 

@@ -1,0 +1,274 @@
+Country,Country code,Genre,Growth,Position,Top Growing App
+オーストラリア,AUS,RMG,,1,ESPN
+オーストラリア,AUS,Eコマース,,1,OfferUp
+オーストラリア,AUS,オンデマンド,,1,Zynga Poker
+オーストラリア,AUS,旅行,,1,Citymapper
+オーストラリア,AUS,ファイナンス,,1,Citymapper
+オーストラリア,AUS,エンターテインメント,,1,Musi
+オーストラリア,AUS,ソーシャル,,1,BBC
+ブラジル,BRA,RMG,,1,ESPN
+ブラジル,BRA,Eコマース,,1,OfferUp
+ブラジル,BRA,オンデマンド,,1,Zynga Poker
+ブラジル,BRA,旅行,,1,Zynga Poker
+ブラジル,BRA,ファイナンス,,1,Yahoo Finance
+ブラジル,BRA,エンターテインメント,,1,Musi
+ブラジル,BRA,ソーシャル,,1,BBC
+カナダ,CAN,RMG,,1,ESPN
+カナダ,CAN,Eコマース,,1,OfferUp
+カナダ,CAN,オンデマンド,,1,Vivino
+カナダ,CAN,旅行,,1,Citymapper
+カナダ,CAN,ファイナンス,,1,Citymapper
+カナダ,CAN,エンターテインメント,,1,Musi
+カナダ,CAN,ソーシャル,,1,BBC
+ドイツ,DEU,RMG,,1,ESPN
+ドイツ,DEU,Eコマース,,1,OfferUp
+ドイツ,DEU,オンデマンド,,1,Zynga Poker
+ドイツ,DEU,旅行,,1,Citymapper
+ドイツ,DEU,ファイナンス,,1,Yahoo Finance
+ドイツ,DEU,エンターテインメント,,1,Musi
+ドイツ,DEU,ソーシャル,,1,Vivino
+フランス,FRA,RMG,,1,Zynga Poker
+フランス,FRA,Eコマース,,1,OfferUp
+フランス,FRA,オンデマンド,,1,Vivino
+フランス,FRA,旅行,,1,Citymapper
+フランス,FRA,ファイナンス,,1,Yahoo Finance
+フランス,FRA,エンターテインメント,,1,Musi
+フランス,FRA,ソーシャル,,1,BBC
+イギリス,GBR,RMG,,1,Zynga Poker
+イギリス,GBR,Eコマース,,1,OfferUp
+イギリス,GBR,オンデマンド,,1,Vivino
+イギリス,GBR,旅行,,1,Citymapper
+イギリス,GBR,ファイナンス,,1,Yahoo Finance
+イギリス,GBR,エンターテインメント,,1,Musi
+イギリス,GBR,ソーシャル,,1,BBC
+インドネシア,IDN,RMG,,1,ESPN
+インドネシア,IDN,Eコマース,,1,OfferUp
+インドネシア,IDN,オンデマンド,,1,Vivino
+インドネシア,IDN,旅行,,1,Citymapper
+インドネシア,IDN,ファイナンス,,1,The Weather Channel
+インドネシア,IDN,エンターテインメント,,1,The Weather Channel
+インドネシア,IDN,ソーシャル,,1,BBC
+インド,IND,RMG,,1,ESPN
+インド,IND,Eコマース,,1,OfferUp
+インド,IND,オンデマンド,,1,Vivino
+インド,IND,旅行,,1,Citymapper
+インド,IND,ファイナンス,,1,MyFitnessPal
+インド,IND,エンターテインメント,,1,Musi
+インド,IND,ソーシャル,,1,BBC
+日本,JPN,RMG,,1,ESPN
+日本,JPN,Eコマース,,1,OfferUp
+日本,JPN,オンデマンド,,1,Vivino
+日本,JPN,旅行,,1,Citymapper
+日本,JPN,ファイナンス,,1,Yahoo Finance
+日本,JPN,エンターテインメント,,1,Musi
+日本,JPN,ソーシャル,,1,BBC
+韓国,KOR,RMG,,1,The Weather Channel
+韓国,KOR,Eコマース,,1,OfferUp
+韓国,KOR,オンデマンド,,1,Vivino
+韓国,KOR,旅行,,1,Citymapper
+韓国,KOR,ファイナンス,,1,Yahoo Finance
+韓国,KOR,エンターテインメント,,1,Musi
+韓国,KOR,ソーシャル,,1,BBC
+メキシコ,MEX,RMG,,1,Zynga Poker
+メキシコ,MEX,Eコマース,,1,OfferUp
+メキシコ,MEX,オンデマンド,,1,Vivino
+メキシコ,MEX,旅行,,1,Citymapper
+メキシコ,MEX,ファイナンス,,1,Yahoo Finance
+メキシコ,MEX,エンターテインメント,,1,Musi
+メキシコ,MEX,ソーシャル,,1,BBC
+アメリカ合衆国,USA,RMG,,1,ESPN
+アメリカ合衆国,USA,Eコマース,,1,OfferUp
+アメリカ合衆国,USA,オンデマンド,,1,Vivino
+アメリカ合衆国,USA,旅行,,1,Citymapper
+アメリカ合衆国,USA,ファイナンス,,1,Zynga Poker
+アメリカ合衆国,USA,エンターテインメント,,1,Musi
+アメリカ合衆国,USA,ソーシャル,,1,BBC
+ベトナム,VNM,RMG,,1,ESPN
+ベトナム,VNM,Eコマース,,1,OfferUp
+ベトナム,VNM,オンデマンド,,1,Vivino
+ベトナム,VNM,旅行,,1,Citymapper
+ベトナム,VNM,ファイナンス,,1,Citymapper
+ベトナム,VNM,エンターテインメント,,1,Musi
+ベトナム,VNM,ソーシャル,,1,The Weather Channel
+オーストラリア,AUS,RMG,,2,Zynga Poker
+オーストラリア,AUS,Eコマース,,2,Zynga Poker
+オーストラリア,AUS,オンデマンド,,2,Vivino
+オーストラリア,AUS,旅行,,2,MyFitnessPal
+オーストラリア,AUS,ファイナンス,,2,BBC
+オーストラリア,AUS,エンターテインメント,,2,Tinder
+オーストラリア,AUS,ソーシャル,,2,X
+ブラジル,BRA,RMG,,2,Zynga Poker
+ブラジル,BRA,Eコマース,,2,Zynga Poker
+ブラジル,BRA,オンデマンド,,2,Vivino
+ブラジル,BRA,旅行,,2,Citymapper
+ブラジル,BRA,ファイナンス,,2,Zynga Poker
+ブラジル,BRA,エンターテインメント,,2,BBC
+ブラジル,BRA,ソーシャル,,2,X
+カナダ,CAN,RMG,,2,Zynga Poker
+カナダ,CAN,Eコマース,,2,Vivino
+カナダ,CAN,オンデマンド,,2,Zynga Poker
+カナダ,CAN,旅行,,2,Zynga Poker
+カナダ,CAN,ファイナンス,,2,Goodreads
+カナダ,CAN,エンターテインメント,,2,MyFitnessPal
+カナダ,CAN,ソーシャル,,2,X
+ドイツ,DEU,RMG,,2,Vivino
+ドイツ,DEU,Eコマース,,2,Vivino
+ドイツ,DEU,オンデマンド,,2,Vivino
+ドイツ,DEU,旅行,,2,Yahoo Finance
+ドイツ,DEU,ファイナンス,,2,The Weather Channel
+ドイツ,DEU,エンターテインメント,,2,Vivino
+ドイツ,DEU,ソーシャル,,2,BBC
+フランス,FRA,RMG,,2,ESPN
+フランス,FRA,Eコマース,,2,Vivino
+フランス,FRA,オンデマンド,,2,Zynga Poker
+フランス,FRA,旅行,,2,Vivino
+フランス,FRA,ファイナンス,,2,Zynga Poker
+フランス,FRA,エンターテインメント,,2,Tinder
+フランス,FRA,ソーシャル,,2,X
+イギリス,GBR,RMG,,2,ESPN
+イギリス,GBR,Eコマース,,2,Vivino
+イギリス,GBR,オンデマンド,,2,OfferUp
+イギリス,GBR,旅行,,2,MyFitnessPal
+イギリス,GBR,ファイナンス,,2,Zynga Poker
+イギリス,GBR,エンターテインメント,,2,Duolingo
+イギリス,GBR,ソーシャル,,2,X
+インドネシア,IDN,RMG,,2,Zynga Poker
+インドネシア,IDN,Eコマース,,2,MyFitnessPal
+インドネシア,IDN,オンデマンド,,2,Citymapper
+インドネシア,IDN,旅行,,2,The Weather Channel
+インドネシア,IDN,ファイナンス,,2,Citymapper
+インドネシア,IDN,エンターテインメント,,2,Musi
+インドネシア,IDN,ソーシャル,,2,ESPN
+インド,IND,RMG,,2,Roku
+インド,IND,Eコマース,,2,Vivino
+インド,IND,オンデマンド,,2,OfferUp
+インド,IND,旅行,,2,Vivino
+インド,IND,ファイナンス,,2,The Weather Channel
+インド,IND,エンターテインメント,,2,Tinder
+インド,IND,ソーシャル,,2,X
+日本,JPN,RMG,,2,Zynga Poker
+日本,JPN,Eコマース,,2,Tinder
+日本,JPN,オンデマンド,,2,Yahoo Finance
+日本,JPN,旅行,,2,Yahoo Finance
+日本,JPN,ファイナンス,,2,Citymapper
+日本,JPN,エンターテインメント,,2,Duolingo
+日本,JPN,ソーシャル,,2,Roku
+韓国,KOR,RMG,,2,ESPN
+韓国,KOR,Eコマース,,2,Tinder
+韓国,KOR,オンデマンド,,2,Yahoo Finance
+韓国,KOR,旅行,,2,ESPN
+韓国,KOR,ファイナンス,,2,MyFitnessPal
+韓国,KOR,エンターテインメント,,2,MyFitnessPal
+韓国,KOR,ソーシャル,,2,Roku
+メキシコ,MEX,RMG,,2,ESPN
+メキシコ,MEX,Eコマース,,2,MyFitnessPal
+メキシコ,MEX,オンデマンド,,2,MyFitnessPal
+メキシコ,MEX,旅行,,2,The Weather Channel
+メキシコ,MEX,ファイナンス,,2,Zynga Poker
+メキシコ,MEX,エンターテインメント,,2,Zynga Poker
+メキシコ,MEX,ソーシャル,,2,X
+アメリカ合衆国,USA,RMG,,2,Zynga Poker
+アメリカ合衆国,USA,Eコマース,,2,Zynga Poker
+アメリカ合衆国,USA,オンデマンド,,2,Zynga Poker
+アメリカ合衆国,USA,旅行,,2,Zynga Poker
+アメリカ合衆国,USA,ファイナンス,,2,Yahoo Finance
+アメリカ合衆国,USA,エンターテインメント,,2,The Weather Channel
+アメリカ合衆国,USA,ソーシャル,,2,Vivino
+ベトナム,VNM,RMG,,2,Zynga Poker
+ベトナム,VNM,Eコマース,,2,Vivino
+ベトナム,VNM,オンデマンド,,2,ESPN
+ベトナム,VNM,旅行,,2,ESPN
+ベトナム,VNM,ファイナンス,,2,MyFitnessPal
+ベトナム,VNM,エンターテインメント,,2,MyFitnessPal
+ベトナム,VNM,ソーシャル,,2,X
+オーストラリア,AUS,RMG,,3,Yahoo Finance
+オーストラリア,AUS,Eコマース,,3,MyFitnessPal
+オーストラリア,AUS,オンデマンド,,3,Block Blast!
+オーストラリア,AUS,旅行,,3,The Weather Channel
+オーストラリア,AUS,ファイナンス,,3,Goodreads
+オーストラリア,AUS,エンターテインメント,,3,Vivino
+オーストラリア,AUS,ソーシャル,,3,Block Blast!
+ブラジル,BRA,RMG,,3,The Weather Channel
+ブラジル,BRA,Eコマース,,3,Vivino
+ブラジル,BRA,オンデマンド,,3,MyFitnessPal
+ブラジル,BRA,旅行,,3,Vivino
+ブラジル,BRA,ファイナンス,,3,ESPN
+ブラジル,BRA,エンターテインメント,,3,Tinder
+ブラジル,BRA,ソーシャル,,3,Alarmy
+カナダ,CAN,RMG,,3,Yahoo Finance
+カナダ,CAN,Eコマース,,3,Tinder
+カナダ,CAN,オンデマンド,,3,MyFitnessPal
+カナダ,CAN,旅行,,3,MyFitnessPal
+カナダ,CAN,ファイナンス,,3,Yahoo Finance
+カナダ,CAN,エンターテインメント,,3,Tinder
+カナダ,CAN,ソーシャル,,3,Alarmy
+ドイツ,DEU,RMG,,3,Vivino
+ドイツ,DEU,Eコマース,,3,Tinder
+ドイツ,DEU,オンデマンド,,3,OfferUp
+ドイツ,DEU,旅行,,3,Vivino
+ドイツ,DEU,ファイナンス,,3,BBC
+ドイツ,DEU,エンターテインメント,,3,Goodreads
+ドイツ,DEU,ソーシャル,,3,X
+フランス,FRA,RMG,,3,BBC
+フランス,FRA,Eコマース,,3,Tinder
+フランス,FRA,オンデマンド,,3,ESPN
+フランス,FRA,旅行,,3,Goodreads
+フランス,FRA,ファイナンス,,3,ESPN
+フランス,FRA,エンターテインメント,,3,Goodreads
+フランス,FRA,ソーシャル,,3,Alarmy
+イギリス,GBR,RMG,,3,Yahoo Finance
+イギリス,GBR,Eコマース,,3,Tinder
+イギリス,GBR,オンデマンド,,3,Block Blast!
+イギリス,GBR,旅行,,3,ESPN
+イギリス,GBR,ファイナンス,,3,MyFitnessPal
+イギリス,GBR,エンターテインメント,,3,Roku
+イギリス,GBR,ソーシャル,,3,Alarmy
+インドネシア,IDN,RMG,,3,Yahoo Finance
+インドネシア,IDN,Eコマース,,3,The Weather Channel
+インドネシア,IDN,オンデマンド,,3,MyFitnessPal
+インドネシア,IDN,旅行,,3,ESPN
+インドネシア,IDN,ファイナンス,,3,ESPN
+インドネシア,IDN,エンターテインメント,,3,BBC
+インドネシア,IDN,ソーシャル,,3,Alarmy
+インド,IND,RMG,,3,Yahoo Finance
+インド,IND,Eコマース,,3,Tinder
+インド,IND,オンデマンド,,3,Citymapper
+インド,IND,旅行,,3,Yahoo Finance
+インド,IND,ファイナンス,,3,Citymapper
+インド,IND,エンターテインメント,,3,Goodreads
+インド,IND,ソーシャル,,3,Alarmy
+日本,JPN,RMG,,3,Yahoo Finance
+日本,JPN,Eコマース,,3,MyFitnessPal
+日本,JPN,オンデマンド,,3,The Weather Channel
+日本,JPN,旅行,,3,Vivino
+日本,JPN,ファイナンス,,3,ESPN
+日本,JPN,エンターテインメント,,3,Vivino
+日本,JPN,ソーシャル,,3,X
+韓国,KOR,RMG,,3,Yahoo Finance
+韓国,KOR,Eコマース,,3,The Weather Channel
+韓国,KOR,オンデマンド,,3,Citymapper
+韓国,KOR,旅行,,3,Yahoo Finance
+韓国,KOR,ファイナンス,,3,Block Blast!
+韓国,KOR,エンターテインメント,,3,The Weather Channel
+韓国,KOR,ソーシャル,,3,X
+メキシコ,MEX,RMG,,3,Citymapper
+メキシコ,MEX,Eコマース,,3,Vivino
+メキシコ,MEX,オンデマンド,,3,Yahoo Finance
+メキシコ,MEX,旅行,,3,Vivino
+メキシコ,MEX,ファイナンス,,3,MyFitnessPal
+メキシコ,MEX,エンターテインメント,,3,Goodreads
+メキシコ,MEX,ソーシャル,,3,ESPN
+アメリカ合衆国,USA,RMG,,3,BBC
+アメリカ合衆国,USA,Eコマース,,3,BBC
+アメリカ合衆国,USA,オンデマンド,,3,OfferUp
+アメリカ合衆国,USA,旅行,,3,ESPN
+アメリカ合衆国,USA,ファイナンス,,3,OfferUp
+アメリカ合衆国,USA,エンターテインメント,,3,Tinder
+アメリカ合衆国,USA,ソーシャル,,3,Alarmy
+ベトナム,VNM,RMG,,3,The Weather Channel
+ベトナム,VNM,Eコマース,,3,MyFitnessPal
+ベトナム,VNM,オンデマンド,,3,MyFitnessPal
+ベトナム,VNM,旅行,,3,Vivino
+ベトナム,VNM,ファイナンス,,3,Block Blast!
+ベトナム,VNM,エンターテインメント,,3,Citymapper
+ベトナム,VNM,ソーシャル,,3,Vivino

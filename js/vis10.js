@@ -1,4 +1,6 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
 const isMobile = window.innerWidth <= 480;
 
@@ -19,7 +21,7 @@ const categoryOrder = [
   "Utility & Productivity",
 ];
 
-export function Vis10() {
+export function Vis10({ locale: loc }) {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
   const initialCountries = isMobile
@@ -32,12 +34,8 @@ export function Vis10() {
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz10.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz10", "en")).then((data) => {
       data.forEach((d) => {
-        // d["app"] = d["App"];
-        // delete d["App"];
         d["country"] = d["Country"];
         delete d["Country"];
         d["category"] = d["Category"];
