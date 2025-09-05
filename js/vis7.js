@@ -1,14 +1,14 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
-export function Vis7() {
+export function Vis7({ locale: loc }) {
   const [data, setData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("U.S.");
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(
-      "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz7.csv"
-    ).then((data) => {
+    d3.csv(getDataURL("Viz7", loc)).then((data) => {
       data.forEach((d) => {
         d["Value"] = +d["Value"];
       });
@@ -154,7 +154,7 @@ export function Vis7() {
           text-anchor="${v.value > 0 ? "end" : "start"}"
           class="charts-text-body charts-text-white"
           dominant-baseline="middle"
-          >${v.category}</text
+          >${l(7, loc, v.category)}</text
         >
         <text
           x="${v.value > 0 ? barX + barWidth + 10 : barX - 10}"

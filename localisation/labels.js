@@ -1237,6 +1237,7 @@ const labelMap = {
   // 2: labels for viz 2 only used in Figma, so not needed in code here
   4: VIZ4_LABELS,
   6: VIZ6_LABELS,
+  7: [], // no special labels for viz 7
 };
 
 const localeMap = {

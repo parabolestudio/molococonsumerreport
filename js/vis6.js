@@ -2,18 +2,6 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 import { getDataURL } from "./utils/helper.js";
 import { getLabel as l } from "../localisation/labels.js";
 
-// const CUSTOM_COUNTRY_REGION = [
-//   "U.S.",
-//   "Japan",
-//   "South Korea",
-//   "Germany",
-//   "U.K.",
-//   "Taiwan",
-//   "Canada",
-//   "France",
-//   "Australia",
-//   "Brazil",
-// ];
 const CUSTOM_COUNTRY_REGION = [
   "USA",
   "JPN",
@@ -57,7 +45,6 @@ export function Vis6({ locale: loc }) {
 
       // group data by Country
       const groupedData = d3.group(data, (d) => d["Country code"]);
-      console.log("groupedData", groupedData);
 
       // convert grouped data to an array of objects
       const groupedArray = Array.from(groupedData, ([key, values]) => {
@@ -102,7 +89,6 @@ export function Vis6({ locale: loc }) {
   // filter and sort data based on selected region
   useEffect(() => {
     filterDataByRegion();
-    console.log("selectedRegion", selectedRegion, l(6, loc, "Asia"));
 
     // Set a breakpoint for Asia region
     if (selectedRegion === l(6, loc, "Asia")) {
