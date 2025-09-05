@@ -1,35 +1,38 @@
 import { html, useEffect, useState } from "./utils/preact-htm.js";
+import { getDataURL } from "./utils/helper.js";
+import { getLabel as l } from "../localisation/labels.js";
 
-function CategoryIcon({ category, heightBar }) {
+function CategoryIcon({ category, heightBar, loc }) {
+  // console.log("Rendering CategoryIcon with category:", category);
   // Map your categories to SVG filenames (update as needed)
   const categoryToSvg = {
-    "Social Networking": "social media.svg",
-    Social: "social.svg",
-    Utilities: "utility.svg",
-    Entertainment: "entertainment.svg",
-    "Photo & Video": "photo and video.svg",
-    Productivity: "productivity.svg",
-    Lifestyle: "lifestyle.svg",
-    Education: "education.svg",
-    "Health & Fitness": "health and fitness.svg",
-    Other: "data.svg",
-    Dating: "dating.svg",
-    "Music & Audio": "music.svg",
-    Music: "music.svg",
-    Business: "business.svg",
-    Sports: "sports.svg",
-    Shopping: "shopping.svg",
-    "Books & Reference": "books.svg",
-    Books: "books.svg",
-    "Video Players & Editors": "video players.svg",
-    Communication: "communication.svg",
-    Tools: "tools.svg",
-    Comics: "comics.svg",
-    News: "news.svg",
-    Games: "gaming.svg",
-    Strategy: "gaming.svg",
-    Puzzle: "gaming.svg",
-    Board: "gaming.svg",
+    [l(1, loc, "Social Networking")]: "social media.svg",
+    [l(1, loc, "Social")]: "social.svg",
+    [l(1, loc, "Utilities")]: "utility.svg",
+    [l(1, loc, "Entertainment")]: "entertainment.svg",
+    [l(1, loc, "Photo & Video")]: "photo and video.svg",
+    [l(1, loc, "Productivity")]: "productivity.svg",
+    [l(1, loc, "Lifestyle")]: "lifestyle.svg",
+    [l(1, loc, "Education")]: "education.svg",
+    [l(1, loc, "Health & Fitness")]: "health and fitness.svg",
+    [l(1, loc, "Other")]: "data.svg",
+    [l(1, loc, "Dating")]: "dating.svg",
+    [l(1, loc, "Music & Audio")]: "music.svg",
+    [l(1, loc, "Music")]: "music.svg",
+    [l(1, loc, "Business")]: "business.svg",
+    [l(1, loc, "Sports")]: "sports.svg",
+    [l(1, loc, "Shopping")]: "shopping.svg",
+    [l(1, loc, "Books & Reference")]: "books.svg",
+    [l(1, loc, "Books")]: "books.svg",
+    [l(1, loc, "Video Players & Editors")]: "video players.svg",
+    [l(1, loc, "Communication")]: "communication.svg",
+    [l(1, loc, "Tools")]: "tools.svg",
+    [l(1, loc, "Comics")]: "comics.svg",
+    [l(1, loc, "News")]: "news.svg",
+    [l(1, loc, "Games")]: "gaming.svg",
+    [l(1, loc, "Strategy")]: "gaming.svg",
+    [l(1, loc, "Puzzle")]: "gaming.svg",
+    [l(1, loc, "Board")]: "gaming.svg",
   };
 
   const [svgContent, setSvgContent] = useState(null);
@@ -71,7 +74,8 @@ const formatRevenue = (value) => {
     : `$${d3.format(".4s")(value).replace("k", "K")}`;
 };
 
-export function Vis1() {
+export function Vis1({ locale: loc }) {
+  console.log("Rendering Vis1 with locale:", { loc });
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("All countries");
@@ -79,24 +83,17 @@ export function Vis1() {
   // Fetch data on mount
   useEffect(() => {
     Promise.all([
-      d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_1.csv"
-      ),
-      d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz1_2.csv"
-      ),
+      d3.csv(getDataURL("Viz1_1", loc)),
+      d3.csv(getDataURL("Viz1_2", loc)),
     ]).then(function (files) {
       const timelineData = files[0];
 
       timelineData.forEach((d) => {
-        d["revenue"] = +d["Revenue"]; //.replace(/,/g, "");
+        d["revenue"] = +d["Revenue"];
         d["year"] = +d["Year"];
         d["category"] = d["Category"];
         d["country"] = d["Country"];
-        delete d["Revenue"];
-        delete d["Year"];
-        delete d["Category"];
-        delete d["Country"];
+        d["countryCode"] = d["Country code"];
       });
 
       setTimelineData(timelineData);
@@ -104,21 +101,19 @@ export function Vis1() {
       const categoryData = files[1].filter((d) => d.category !== "");
       categoryData.forEach((d) => {
         d["revenue"] = +d["revenue"];
-        d["country"] = d["Country"];
         d["year"] = +d["year"];
-        delete d["Share of Total Revenue (%)"];
-        delete d["Growth ($B)"];
-        delete d["Category"];
-        delete d["Country"];
+        d["country"] = d["Country"];
+        d["countryCode"] = d["Country code"];
       });
 
-      const countries = Array.from(new Set(categoryData.map((d) => d.country)));
+      const countries = Array.from(
+        new Set(categoryData.map((d) => d.countryCode))
+      );
 
-      const processedData = countries.flatMap((country) => {
+      const processedData = countries.flatMap((countryCode) => {
         const filteredData = categoryData.filter(
           (d) =>
-            d.country === country &&
-            d.category2 !== "Gaming" &&
+            d.countryCode === countryCode &&
             (d.year === 2024 || d.year === 2023)
         );
         const categories = Array.from(
@@ -135,7 +130,7 @@ export function Vis1() {
 
           if (value2023.length === 1 && value2024.length === 1) {
             return {
-              country: country,
+              country: countryCode,
               category: category,
               categoryGrowth: value2024[0].revenue - value2023[0].revenue,
             };
@@ -144,6 +139,22 @@ export function Vis1() {
       });
 
       setCategoryData(processedData.filter((d) => d !== undefined));
+
+      // set values for country code dropdown
+      let countryDropdown = document.querySelector("#vis1_dropdown_countries");
+      if (countryDropdown) {
+        if (countryDropdown) countryDropdown.innerHTML = "";
+        countries.forEach((country) => {
+          let option = document.createElement("option");
+          option.text = l(1, loc, country);
+          option.value = country;
+          countryDropdown.add(option);
+        });
+        countryDropdown.value = selectedCountry;
+        countryDropdown.addEventListener("change", (e) => {
+          setSelectedCountry(e.target.value);
+        });
+      }
     });
   }, []);
 
@@ -176,10 +187,17 @@ export function Vis1() {
     widthCategories - marginCategories.left - marginCategories.right;
 
   const gamingTimelineData = timelineData
-    .filter((d) => d.category === "Gaming" && d.country === selectedCountry)
+    .filter((d) => {
+      return (
+        d.category === l(1, loc, "Gaming") && d.countryCode === selectedCountry
+      );
+    })
     .sort((a, b) => a.year - b.year);
   const nonGamingTimelineData = timelineData
-    .filter((d) => d.category !== "Gaming" && d.country === selectedCountry)
+    .filter(
+      (d) =>
+        d.category !== l(1, loc, "Gaming") && d.countryCode === selectedCountry
+    )
     .sort((a, b) => a.year - b.year);
   const timelineGamingLatestItem =
     gamingTimelineData[gamingTimelineData.length - 1];
@@ -199,10 +217,7 @@ export function Vis1() {
     .range([0, innerWidthTimeline]);
   const yScaleTimeline = d3
     .scaleLinear()
-    .domain([
-      0, // d3.min(timelineData, (d) => d.revenue),
-      yMax,
-    ])
+    .domain([0, yMax])
     .range([innerHeightTimeline, 0])
     .nice();
   const lineGenerator = d3
@@ -220,7 +235,7 @@ export function Vis1() {
     .sort((a, b) => b.categoryGrowth - a.categoryGrowth)
     .slice(0, 10);
 
-  const labelOffsetX = selectedCountry === "Indonesia" ? 225 : 160;
+  const labelOffsetX = selectedCountry === "IDN" ? 225 : 160;
   const xScaleCategories = d3
     .scaleLinear()
     .domain([0, d3.max(categoryDataByCountry, (d) => d.categoryGrowth)])
@@ -232,23 +247,6 @@ export function Vis1() {
     .range([0, innerHeightCategories])
     .padding(0.3);
   const heightBar = yScaleCategories.bandwidth();
-
-  // set values for country code dropdown
-  const countries = timelineData.map((d) => d.country).sort();
-  const uniqueCountries = Array.from(new Set(countries));
-  let countryDropdown = document.querySelector("#vis1_dropdown_countries");
-  if (countryDropdown) {
-    if (countryDropdown) countryDropdown.innerHTML = "";
-    uniqueCountries.forEach((country) => {
-      let option = document.createElement("option");
-      option.text = country;
-      countryDropdown.add(option);
-    });
-    countryDropdown.value = selectedCountry;
-    countryDropdown.addEventListener("change", (e) => {
-      setSelectedCountry(e.target.value);
-    });
-  }
 
   const getTimeline = () => {
     return html`
@@ -285,7 +283,7 @@ export function Vis1() {
             text-anchor="end"
             class="charts-text-body-bold"
           >
-            Revenue
+            ${l(1, loc, "Revenue")}
           </text>
         </g>
         <g>
@@ -317,7 +315,7 @@ export function Vis1() {
           stroke="#0280FB"
           stroke-width="4"
         />
-        ${selectedCountry !== "Canada"
+        ${selectedCountry !== "CAN" && timelineGamingLatestItem
           ? html`<text
               transform="translate(${xScaleTimeline(
                 timelineGamingLatestItem.year
@@ -328,15 +326,17 @@ export function Vis1() {
               ${formatRevenue(timelineGamingLatestItem.revenue)}
             </text>`
           : ""}
-        <text
-          transform="translate(${xScaleTimeline(
-            timelineNonGamingLatestItem.year
-          )}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue) - 10})"
-          text-anchor="middle"
-          class="charts-text-value-small timeline-label"
-        >
-          ${formatRevenue(timelineNonGamingLatestItem.revenue)}
-        </text>
+        ${timelineNonGamingLatestItem
+          ? html`<text
+              transform="translate(${xScaleTimeline(
+                timelineNonGamingLatestItem.year
+              )}, ${yScaleTimeline(timelineNonGamingLatestItem.revenue) - 10})"
+              text-anchor="middle"
+              class="charts-text-value-small timeline-label"
+            >
+              ${formatRevenue(timelineNonGamingLatestItem.revenue)}
+            </text>`
+          : ""}
       </g>
     `;
   };
@@ -369,7 +369,11 @@ export function Vis1() {
               rx="10"
               ry="10"
             />
-            <${CategoryIcon} category="${d.category}" heightBar=${heightBar} />
+            <${CategoryIcon}
+              category="${d.category}"
+              heightBar=${heightBar}
+              loc=${loc}
+            />
             <text
               transform="translate(${Math.max(
                 xScaleCategories(d.categoryGrowth) + 10,
@@ -385,7 +389,9 @@ export function Vis1() {
           </g>`;
         })}
       </g>
-      <text x="-20" class="charts-text-body-bold">2024 vs. 2023 growth</text>
+      <text x="-20" class="charts-text-body-bold"
+        >${l(1, loc, "2024 vs. 2023 growth")}</text
+      >
     </g>`;
   };
 

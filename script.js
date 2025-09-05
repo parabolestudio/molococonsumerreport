@@ -13,11 +13,20 @@ import { Vis11, Vis11Categories } from "./js/vis11.js";
 import { Vis12 } from "./js/vis12.js";
 import { Vis13, Vis13Categories } from "./js/vis13.js";
 
+const getLocale = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const param = urlParams.get("testLocale");
+  if (param === "zh" || param === "ko" || param === "ja") {
+    return param;
+  }
+  return "en";
+};
+
 const Vis = async (props) => {
-  props.country = "ja"; // "en", "zh", "ko"
   console.log("Rendering Vis component with props:", props);
   return html`<div class="vis-container">
-    <${props.component} ...${props} />
+    <${props.component} ...${{ locale: getLocale() }} />
   </div>`;
 };
 
