@@ -3,7 +3,7 @@ import { getDataURL } from "./utils/helper.js";
 import { getLabel as l } from "../localisation/labels.js";
 
 function CategoryIcon({ category, heightBar, loc }) {
-  // console.log("Rendering CategoryIcon with category:", category);
+  // console.log("Rendering CategoryIcon with category:", category, loc);
   // Map your categories to SVG filenames (update as needed)
   const categoryToSvg = {
     [l(1, loc, "Social Networking")]: "social media.svg",
