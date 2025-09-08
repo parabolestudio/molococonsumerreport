@@ -4,40 +4,40 @@ import { getLabel as l } from "../localisation/labels.js";
 
 const isMobile = window.innerWidth <= 480;
 
-// sort country data by specific order of categories according the following category order
-const categoryOrder = [
-  "Books & Reference",
-  "Education",
-  "Entertainment",
-  "Finance",
-  "Gaming",
-  "Generative AI",
-  "Health and Fitness",
-  "News",
-  "Other",
-  "Shopping",
-  "Social Media",
-  "Sports",
-  "Utility & Productivity",
-];
-
 export function Vis10({ locale: loc }) {
   const [rawData, setRawData] = useState([]);
   const [data, setData] = useState([]);
-  const initialCountries = isMobile
-    ? ["U.S.", "Germany"]
-    : ["U.S.", "Germany", "South Korea"];
+  const initialCountries = isMobile ? ["USA", "DEU"] : ["USA", "DEU", "KOR"];
 
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
   const [categories, setCategories] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
+  // sort country data by specific order of categories according the following category order
+  const categoryOrder = [
+    l(10, loc, "Books & Reference"),
+    l(10, loc, "Education"),
+    l(10, loc, "Entertainment"),
+    l(10, loc, "Finance"),
+    l(10, loc, "Gaming"),
+    l(10, loc, "Generative AI"),
+    l(10, loc, "Health and Fitness"),
+    l(10, loc, "News"),
+    l(10, loc, "Other"),
+    l(10, loc, "Shopping"),
+    l(10, loc, "Social Media"),
+    l(10, loc, "Sports"),
+    l(10, loc, "Utility & Productivity"),
+  ];
+
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(getDataURL("Viz10", "en")).then((data) => {
+    d3.csv(getDataURL("Viz10", loc)).then((data) => {
       data.forEach((d) => {
         d["country"] = d["Country"];
         delete d["Country"];
+        d["countryCode"] = d["Country code"];
+        delete d["Country code"];
         d["category"] = d["Category"];
         delete d["Category"];
         // format "38.69%" to 38.69
@@ -59,10 +59,10 @@ export function Vis10({ locale: loc }) {
       setRawData(data);
 
       // filter GenAI due to outlier
-      data = data.filter((d) => d.category !== "Generative AI");
+      data = data.filter((d) => d.category !== l(10, loc, "Generative AI"));
 
       // data group by country
-      const groupedData = d3.group(data, (d) => d.country);
+      const groupedData = d3.group(data, (d) => d.countryCode);
       const groupedArray = Array.from(groupedData, ([key, value]) => {
         return {
           country: key,
@@ -83,14 +83,19 @@ export function Vis10({ locale: loc }) {
   }
 
   // data and scales
-  const countries = data.map((d) => d.country);
+  const countries = data.map((d) => d.countryCode);
 
   // multi select dropdown for countries
   // coded separately in HTML with select2
   useEffect(() => {
-    updateMultiSelect(countries, initialCountries, (newlySelectedCountries) => {
-      setSelectedCountries(newlySelectedCountries);
-    });
+    updateMultiSelect(
+      countries,
+      initialCountries,
+      loc,
+      (newlySelectedCountries) => {
+        setSelectedCountries(newlySelectedCountries);
+      }
+    );
   }, []);
 
   const NUMBER_COUNTRIES = isMobile ? 2 : 3;
@@ -161,7 +166,7 @@ export function Vis10({ locale: loc }) {
 
   const xScale = d3
     .scalePoint()
-    .domain(categories)
+    .domain(categoryOrder)
     .range([0, sectionInnerWidth]);
 
   const formatShare = (share) => `${(share * 100).toFixed(0)}%`;
@@ -209,7 +214,7 @@ export function Vis10({ locale: loc }) {
                       <p
                         style="color: #000; line-height: 1.25; text-align: center; margin: 0;"
                       >
-                        Add a country to compare
+                        ${l(10, loc, "Add a country to compare")}
                       </p>
                     </div>
                   </foreignObject>
@@ -300,7 +305,7 @@ export function Vis10({ locale: loc }) {
                   class="charts-text-body"
                   fill="black"
                 >
-                  ${country}
+                  ${l(10, loc, country)}
                 </text>
                 <text
                   dx="5"
@@ -428,9 +433,10 @@ export function Vis10({ locale: loc }) {
                         `
                       : null}`;
                 })}
-                ${["Generative AI"].map((categoryName) => {
+                ${[l(10, loc, "Generative AI")].map((categoryName) => {
                   const d = rawData.find(
-                    (d) => d.country === country && d.category === categoryName
+                    (d) =>
+                      d.countryCode === country && d.category === categoryName
                   );
                   if (!d) return null;
                   let x = sectionInnerWidth / 2;
@@ -461,7 +467,9 @@ export function Vis10({ locale: loc }) {
                         x="${shareRadiusScale(d.share) + 10}"
                         y="${-5}"
                         class="charts-text-body"
-                        >Gen AI
+                        >${loc === "en"
+                          ? "Gen AI"
+                          : l(10, loc, "Generative AI")}
                       </text>
                       <text
                         x="${shareRadiusScale(d.share) + 10}"
@@ -619,7 +627,7 @@ export function Vis10({ locale: loc }) {
                   class="charts-text-body"
                   fill="black"
                 >
-                  ${country}
+                  ${l(10, loc, country)}
                 </text>
                 <text
                   dx="5"
@@ -743,9 +751,10 @@ export function Vis10({ locale: loc }) {
                         `
                       : null}`;
                 })}
-                ${["Generative AI"].map((categoryName) => {
+                ${[l(10, loc, "Generative AI")].map((categoryName) => {
                   const d = rawData.find(
-                    (d) => d.country === country && d.category === categoryName
+                    (d) =>
+                      d.countryCode === country && d.category === categoryName
                   );
                   if (!d) return null;
                   let x = sectionInnerWidth / 2;
@@ -779,7 +788,9 @@ export function Vis10({ locale: loc }) {
                         x="${shareRadiusScale(d.share) + 10}"
                         y="${-5}"
                         class="charts-text-body"
-                        >Gen AI
+                        >${loc === "en"
+                          ? "Gen AI"
+                          : l(10, loc, "Generative AI")}
                       </text>
                       <text
                         x="${shareRadiusScale(d.share) + 10}"
@@ -800,11 +811,12 @@ export function Vis10({ locale: loc }) {
   </div>`;
 }
 
-function updateMultiSelect(categories, initialCategories, callback) {
+function updateMultiSelect(categories, initialCategories, loc, callback) {
   const selectCategoryData = categories.map((category) => {
     return {
       id: category,
-      text: category,
+      text: l(10, loc, category),
+      value: category,
       defaultSelected: initialCategories.includes(category),
     };
   });
@@ -816,6 +828,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
       const item = selectCategoryData[i];
       const newOption = new Option(
         item.text,
+        item.value,
         item.id,
         item.defaultSelected,
         item.defaultSelected
