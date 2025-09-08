@@ -867,3 +867,16 @@ function Tooltip({ hoveredItem, country, loc }) {
     </div>`;
   }
 }
+
+export function swapLegendSvgForViz10(locale) {
+  const imgElement = document.querySelector("#vis10-legend-time img");
+  if (!imgElement) {
+    console.error("Image element for Viz10 legend not found");
+    return;
+  }
+
+  const ending = locale === "en" ? "" : `-${locale}`;
+  const newSrc = `https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/viz10-legend-embeds/viz10-legend-${ending}.svg`;
+
+  imgElement.src = newSrc;
+}
