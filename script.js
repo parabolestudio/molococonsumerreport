@@ -7,7 +7,7 @@ import { Vis6, Vis6LegendGrowth } from "./js/vis6.js";
 import { Vis7 } from "./js/vis7.js";
 import { Vis8 } from "./js/vis8.js";
 import { Vis9 } from "./js/vis9.js";
-import { Vis10 } from "./js/vis10.js";
+import { Vis10, swapLegendSvgForViz10 } from "./js/vis10.js";
 import { Vis11, Vis11Categories } from "./js/vis11.js";
 import { Vis12 } from "./js/vis12.js";
 import { Vis13, Vis13Categories } from "./js/vis13.js";
