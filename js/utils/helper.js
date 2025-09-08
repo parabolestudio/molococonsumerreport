@@ -19,7 +19,7 @@ export const getLocale = () => {
   if (
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1" ||
-    window.location.pathname.includes("moloco-dev")
+    window.location.hostname.includes("moloco-dev")
   ) {
     console.log("Running in local testing mode");
     // local testing with ?testLocale=zh or ko or ja or en
