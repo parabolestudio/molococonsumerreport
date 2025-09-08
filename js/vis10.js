@@ -10,7 +10,6 @@ export function Vis10({ locale: loc }) {
   const initialCountries = isMobile ? ["USA", "DEU"] : ["USA", "DEU", "KOR"];
 
   const [selectedCountries, setSelectedCountries] = useState(initialCountries);
-  const [categories, setCategories] = useState([]);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // sort country data by specific order of categories according the following category order
@@ -49,13 +48,6 @@ export function Vis10({ locale: loc }) {
         delete d["2024 vs. 2023 Growth"];
       });
 
-      // get unique categories
-      const uniqueCategories = Array.from(
-        new Set(data.map((d) => d.category))
-      ).sort();
-
-      setCategories(uniqueCategories);
-
       setRawData(data);
 
       // filter GenAI due to outlier
@@ -83,7 +75,7 @@ export function Vis10({ locale: loc }) {
   }
 
   // data and scales
-  const countries = data.map((d) => d.countryCode);
+  const countries = data.map((d) => d.country);
 
   // multi select dropdown for countries
   // coded separately in HTML with select2
@@ -811,21 +803,21 @@ export function Vis10({ locale: loc }) {
   </div>`;
 }
 
-function updateMultiSelect(categories, initialCategories, loc, callback) {
-  const selectCategoryData = categories.map((category) => {
+function updateMultiSelect(countries, initialCountries, loc, callback) {
+  const selectCountryData = countries.map((country) => {
     return {
-      id: category,
-      text: l(10, loc, category),
-      value: category,
-      defaultSelected: initialCategories.includes(category),
+      id: country,
+      text: l(10, loc, country),
+      value: country,
+      defaultSelected: initialCountries.includes(country),
     };
   });
 
   if (typeof window !== "undefined" && window.$) {
     // create select2 dropdown options with categories of that country
     window.$("#vis10-select").empty();
-    for (let i = 0; i < selectCategoryData.length; i++) {
-      const item = selectCategoryData[i];
+    for (let i = 0; i < selectCountryData.length; i++) {
+      const item = selectCountryData[i];
       const newOption = new Option(
         item.text,
         item.value,
