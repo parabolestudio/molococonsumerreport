@@ -108,7 +108,6 @@ export function Vis12({ locale: loc }) {
   }
 
   // set values for country code dropdown
-  // const countries = data.map((d) => d.countryCode);
   const countries = data.map((d) => d.country).sort();
   let countryDropdown = document.querySelector("#vis12_dropdown_countries");
   if (countryDropdown) {
