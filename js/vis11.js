@@ -2,51 +2,48 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 import { getDataURL } from "./utils/helper.js";
 import { getLabel as l } from "../localisation/labels.js";
 
-const URL =
-  "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/";
 const ASSETS_URL =
   "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/";
 
 const isMobile = window.innerWidth <= 480;
 
 // Map categories to their corresponding icons
-function getCategoryIcon(category) {
+function getCategoryIcon(category, loc) {
   const iconMap = {
-    "E-Commerce": "shopping.svg",
-    Entertainment: "entertainment.svg",
-    Finance: "finance.svg",
-    RMG: "sport betting.svg",
-    Travel: "travel.svg",
-    "On Demand": "on demand transportation.svg",
-    Social: "social.svg",
+    [l(11, loc, "E-Commerce")]: "shopping.svg",
+    [l(11, loc, "Entertainment")]: "entertainment.svg",
+    [l(11, loc, "Finance")]: "finance.svg",
+    [l(11, loc, "RMG")]: "sport betting.svg",
+    [l(11, loc, "Travel")]: "travel.svg",
+    [l(11, loc, "On Demand")]: "on demand transportation.svg",
+    [l(11, loc, "Social")]: "social.svg",
   };
   return iconMap[category] || "travel.svg";
 }
 
-function getCategoryLabel(category) {
+function getCategoryLabel(category, loc) {
   const labelMap = {
     "E-Commerce": "E-Commerce",
     Entertainment: "Entertainment",
     Finance: "Finance",
-    RMG: "Real Money Gaming",
+    RMG: loc === "en" ? "Real Money Gaming" : "RMG",
     Travel: "Travel",
-    // "On Demand": "On Demand",
     "On Demand": "Delivery & Food",
     Social: "Social Media",
   };
   return labelMap[category] || category;
 }
 
-function setCountryDropdownOptions(countries, selectedCountry, callback) {
+function setCountryDropdownOptions(countries, selectedCountry, loc, callback) {
   // set values for country code dropdown
-  // const countries = ["Australia", "Germany"];
   const uniqueCountries = Array.from(new Set(countries));
   let countryDropdown = document.querySelector("#vis11_dropdown_countries");
   if (countryDropdown) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     uniqueCountries.forEach((country) => {
       let option = document.createElement("option");
-      option.text = country;
+      option.text = l(11, loc, country);
+      option.value = country;
       countryDropdown.add(option);
     });
     countryDropdown.value = selectedCountry;
@@ -57,10 +54,10 @@ function setCountryDropdownOptions(countries, selectedCountry, callback) {
 }
 
 export function Vis11({ locale: loc }) {
-  const [selectedCountry, setSelectedCountry] = useState("U.S.");
-  const initialCategory = window.vis11_initial_category || "E-Commerce";
-
-  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [selectedCountry, setSelectedCountry] = useState("USA");
+  const [selectedCategory, setSelectedCategory] = useState(
+    window.vis11_initial_category || l(11, loc, "E-Commerce")
+  );
   const [genreData, setGenreData] = useState([]);
   const [genderData, setGenderData] = useState([]);
   const [ageData, setAgeData] = useState([]);
@@ -88,11 +85,11 @@ export function Vis11({ locale: loc }) {
 
   useEffect(() => {
     Promise.all([
-      d3.csv(getDataURL("Viz11_1_genre_overview", "en")),
-      d3.csv(getDataURL("Viz11_2_gender", "en")),
-      d3.csv(getDataURL("Viz11_3_demographics", "en")),
-      d3.csv(getDataURL("Viz11_4_time_spent", "en")),
-      d3.csv(getDataURL("Viz11_5_top_apps", "en")),
+      d3.csv(getDataURL("Viz11_1_genre_overview", loc)),
+      d3.csv(getDataURL("Viz11_2_gender", loc)),
+      d3.csv(getDataURL("Viz11_3_demographics", loc)),
+      d3.csv(getDataURL("Viz11_4_time_spent", loc)),
+      d3.csv(getDataURL("Viz11_5_top_apps", loc)),
     ]).then(async (files) => {
       const [
         genreDataFile,
@@ -109,9 +106,9 @@ export function Vis11({ locale: loc }) {
 
       // update country dropdown options
       const uniqueCountries = Array.from(
-        new Set(genreDataFile.map((d) => d.Country))
+        new Set(genreDataFile.map((d) => d["Country code"]))
       );
-      setCountryDropdownOptions(uniqueCountries, selectedCountry, (e) => {
+      setCountryDropdownOptions(uniqueCountries, selectedCountry, loc, (e) => {
         setSelectedCountry(e.target.value);
       });
 
@@ -119,7 +116,9 @@ export function Vis11({ locale: loc }) {
       const uniqueCategories = Array.from(
         new Set(files[0].map((d) => d.Genre))
       ).sort();
-      const iconPaths = uniqueCategories.map((cat) => getCategoryIcon(cat));
+      const iconPaths = uniqueCategories.map((cat) =>
+        getCategoryIcon(cat, loc)
+      );
       const uniqueIcons = [...new Set(iconPaths)];
 
       for (const iconPath of uniqueIcons) {
@@ -149,13 +148,13 @@ export function Vis11({ locale: loc }) {
     // set color variables in css based on selected category, red for first category, green for second
     // and blue for third category
     const colors = {
-      "E-Commerce": { main: "#60e2b7", secondary: "#ccf5e8" },
-      Entertainment: { main: "#C368F9", secondary: "#E8C4FD" },
-      Finance: { main: "#0280FB", secondary: "#ADEFFF" },
-      "On Demand": { main: "#876AFF", secondary: "#CDC2FF" },
-      RMG: { main: "#60e2b7", secondary: "#ccf5e8" },
-      Social: { main: "#C368F9", secondary: "#E8C4FD" },
-      Travel: { main: "#0280FB", secondary: "#ADEFFF" },
+      [l(11, loc, "E-Commerce")]: { main: "#60e2b7", secondary: "#ccf5e8" },
+      [l(11, loc, "Entertainment")]: { main: "#C368F9", secondary: "#E8C4FD" },
+      [l(11, loc, "Finance")]: { main: "#0280FB", secondary: "#ADEFFF" },
+      [l(11, loc, "On Demand")]: { main: "#876AFF", secondary: "#CDC2FF" },
+      [l(11, loc, "RMG")]: { main: "#60e2b7", secondary: "#ccf5e8" },
+      [l(11, loc, "Social")]: { main: "#C368F9", secondary: "#E8C4FD" },
+      [l(11, loc, "Travel")]: { main: "#0280FB", secondary: "#ADEFFF" },
     };
     const selectedColor = colors[selectedCategory] || colors["E-Commerce"];
     document.documentElement.style.setProperty(
@@ -168,7 +167,7 @@ export function Vis11({ locale: loc }) {
     );
   }, [selectedCategory]);
 
-  const iconPath = getCategoryIcon(selectedCategory);
+  const iconPath = getCategoryIcon(selectedCategory, loc);
   const svgContent = svgCache[iconPath];
 
   return html`<div class="vis-container-inner ${isMobile ? "mobile" : ""}">
@@ -180,6 +179,7 @@ export function Vis11({ locale: loc }) {
       genreData=${genreData}
       selectedCountry="${selectedCountry}"
       selectedCategory="${selectedCategory}"
+      loc="${loc}"
     />
     <div class="vis-11-part vis-11-bottom">
       <div class="vis-11-bottom-top-grid">
@@ -187,11 +187,13 @@ export function Vis11({ locale: loc }) {
           timeData="${timeData}"
           selectedCountry="${selectedCountry}"
           selectedCategory="${selectedCategory}"
+          loc="${loc}"
         />
         <${Vis11App}
           appData="${appData}"
           selectedCountry="${selectedCountry}"
           selectedCategory="${selectedCategory}"
+          loc="${loc}"
         />
       </div>
       <${Vis11GenderAge}
@@ -199,6 +201,7 @@ export function Vis11({ locale: loc }) {
         ageData="${ageData}"
         selectedCountry="${selectedCountry}"
         selectedCategory="${selectedCategory}"
+        loc="${loc}"
       />
     </div>
   </div>`;
@@ -228,13 +231,13 @@ const getDotPositions = (numDots, center) => {
   return dots;
 };
 
-const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
+const Vis11Top = ({ genreData, selectedCategory, selectedCountry, loc }) => {
   if (!genreData || genreData.length === 0) {
     return html`<div>Loading...</div>`;
   }
 
   const filteredGenreData = genreData.filter(
-    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+    (d) => d["Country code"] === selectedCountry && d.Genre === selectedCategory
   );
   const numberApps = filteredGenreData[0]["Apps used in the past 30 days"];
   const numberAdOpportunities =
@@ -252,7 +255,7 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
   const dots2 = getDotPositions(numberAdOpportunities, sizeDotSvg / 2);
 
   return html`<div class="vis-11-part vis-11-top">
-    <p class="title">${getCategoryLabel(selectedCategory)}</p>
+    <p class="title">${getCategoryLabel(selectedCategory, loc)}</p>
     <div class="vis-11-top-grid">
       <div class="element1">
         ${isMobile
@@ -268,8 +271,13 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
               )}
             </svg>`}
         <p class="number">${numberApps}</p>
-        <p class="label">IAE apps used</p>
-        <p class="sublabel">in a month</p>
+        ${loc === "en"
+          ? html`<p class="label">IAE apps used</p>
+              <p class="sublabel">in a month</p>`
+          : null}
+        ${loc !== "en"
+          ? html`<p class="label">${l(11, loc, "IAE apps used in a month")}</p>`
+          : null}
       </div>
       <div class="element2">
         ${isMobile
@@ -285,8 +293,15 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
               )}
             </svg>`}
         <p class="number">${numberAdOpportunities}</p>
-        <p class="label">Ad opportunities</p>
-        <p class="sublabel">in 24 hours</p>
+        ${loc === "en"
+          ? html`<p class="label">Ad opportunities</p>
+              <p class="sublabel">in 24 hours</p>`
+          : null}
+        ${loc !== "en"
+          ? html`<p class="label">
+              ${l(11, loc, "Ad opportunities in 24 hours")}
+            </p>`
+          : null}
       </div>
       <div class="element3">
         <p class="label">Top ad opportunities</p>
@@ -298,14 +313,14 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry }) => {
   </div>`;
 };
 
-const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
+const Vis11Time = ({ selectedCountry, selectedCategory, timeData, loc }) => {
   const [barWidths, setBarWidths] = useState({});
 
   if (!timeData || timeData.length === 0) {
     return html`<div>Loading...</div>`;
   }
   const filteredTimeData = timeData.filter(
-    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+    (d) => d["Country code"] === selectedCountry && d.Genre === selectedCategory
   );
   filteredTimeData.forEach((d) => {
     d["value"] = parseFloat(d["%"].replace("%", ""));
@@ -344,8 +359,8 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   }, [selectedCountry, selectedCategory, timeData]);
 
   return html`<div class="vis-11-time left">
-    <p class="label">Where users spend their time</p>
-    <p class="sublabel">Time spent vs. general population</p>
+    <p class="label">${l(11, loc, "Where users spend their time")}</p>
+    <p class="sublabel">${l(11, loc, "Time spent vs. general population")}</p>
     <div class="vis-11-time-grid">
       ${filteredTimeData.map(
         (d, index) => html`<div class="element${index * 2 + 1} sublabel">
@@ -360,12 +375,12 @@ const Vis11Time = ({ selectedCountry, selectedCategory, timeData }) => {
   </div>`;
 };
 
-const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
+const Vis11App = ({ selectedCountry, selectedCategory, appData, loc }) => {
   if (!appData || appData.length === 0) {
     return html`<div>Loading...</div>`;
   }
   const filteredAppData = appData.filter(
-    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+    (d) => d["Country code"] === selectedCountry && d.Genre === selectedCategory
   );
   filteredAppData.forEach((d) => {
     d["Position"] = +d["Position"];
@@ -373,8 +388,8 @@ const Vis11App = ({ selectedCountry, selectedCategory, appData }) => {
   filteredAppData.sort((a, b) => a.Position - b.Position);
 
   return html`<div class="vis-11-app right">
-    <p class="label">Global ad-supported apps</p>
-    <p class="sublabel">Example publisher inventory</p>
+    <p class="label">${l(11, loc, "Global ad-supported apps")}</p>
+    <p class="sublabel">${l(11, loc, "Example publisher inventory")}</p>
     <div class="app-list">
       ${filteredAppData.map(
         (d) => html`
@@ -393,6 +408,7 @@ const Vis11GenderAge = ({
   selectedCategory,
   ageData,
   genderData,
+  loc,
 }) => {
   if (
     !genderData ||
@@ -404,10 +420,10 @@ const Vis11GenderAge = ({
   }
 
   const filteredGenderData = genderData.filter(
-    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+    (d) => d["Country code"] === selectedCountry && d.Genre === selectedCategory
   );
   const filteredAgeData = ageData.filter(
-    (d) => d.Country === selectedCountry && d.Genre === selectedCategory
+    (d) => d["Country code"] === selectedCountry && d.Genre === selectedCategory
   );
 
   filteredGenderData.forEach((d) => {
@@ -461,7 +477,7 @@ const Vis11GenderAge = ({
   );
 
   return html`<div>
-    <p class="label">Age and gender split</p>
+    <p class="label">${l(11, loc, "Age and gender split")}</p>
     <div
       class="vis-11-grid-gender"
       style="grid-template-columns: ${genderTemplateColumns};"
@@ -477,9 +493,11 @@ const Vis11GenderAge = ({
   </div>`;
 };
 
-export function Vis11Categories() {
+export function Vis11Categories({ locale: loc }) {
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("E-Commerce");
+  const [selectedCategory, setSelectedCategory] = useState(
+    l(11, loc, "E-Commerce")
+  );
   const [svgCache, setSvgCache] = useState({});
 
   // Fetch and cache SVG content
@@ -501,7 +519,7 @@ export function Vis11Categories() {
 
   // get categories
   useEffect(() => {
-    Promise.all([d3.csv(URL + "Viz11_1_genre_overview.csv")]).then(
+    Promise.all([d3.csv(getDataURL("Viz11_1_genre_overview", loc))]).then(
       async (files) => {
         const uniqueCategories = Array.from(
           new Set(files[0].map((d) => d.Genre))
@@ -509,7 +527,9 @@ export function Vis11Categories() {
         setCategories(uniqueCategories);
 
         // Pre-fetch all SVG icons
-        const iconPaths = uniqueCategories.map((cat) => getCategoryIcon(cat));
+        const iconPaths = uniqueCategories.map((cat) =>
+          getCategoryIcon(cat, loc)
+        );
         const uniqueIcons = [...new Set(iconPaths)];
 
         for (const iconPath of uniqueIcons) {
@@ -520,7 +540,7 @@ export function Vis11Categories() {
   }, []);
 
   const categoryItems = categories.map((category) => {
-    const iconPath = getCategoryIcon(category);
+    const iconPath = getCategoryIcon(category, loc);
     const svgContent = svgCache[iconPath];
 
     return html`<li
@@ -542,7 +562,7 @@ export function Vis11Categories() {
         class="category-icon"
         dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
       ></div>
-      <span>${getCategoryLabel(category)}</span>
+      <span>${getCategoryLabel(category, loc)}</span>
     </li>`;
   });
 

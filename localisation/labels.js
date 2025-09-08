@@ -1390,18 +1390,6 @@ const VIZ10_LABELS = [
     Chinese: "添加另一个国家/地区进行比较",
   },
   {
-    English: "",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
-    English: "Tooltip copy",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
     English: "Total time spent share",
     Korean: "",
     Japanese: "総利用時間の割合",
