@@ -8,7 +8,8 @@ export function swapSvgForViz2(locale) {
   }
 
   const ending = locale === "en" ? "" : `-${locale}`;
-  const newSrc = `https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/viz2-embeds/viz2-desktop${ending}.svg`;
+  const device = window.innerWidth <= 480 ? "-mobile" : "-desktop";
+  const newSrc = `https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/assets/viz2-embeds/viz2${device}${ending}.svg`;
 
   imgElement.src = newSrc;
 }

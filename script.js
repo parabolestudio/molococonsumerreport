@@ -95,3 +95,6 @@ visList.forEach((vis) => {
 // switch images for viz 2 based on locale
 const locale = getLocale();
 swapSvgForViz2(locale);
+
+// switch legend svg for viz 10 based on locale
+swapLegendSvgForViz10(locale);
