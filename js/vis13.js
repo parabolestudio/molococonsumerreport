@@ -4,33 +4,33 @@ import { getLabel as l } from "../localisation/labels.js";
 
 const all = "All categories";
 
-const colors = {
-  "Books & Reference": "#73e4ff",
-  Entertainment: "#c368f9",
-  Gaming: "#0280f8",
-  "Health & Fitness": "#60e2b7",
-  "Other Consumer Pubs": "#876AFF",
-  "Photo & Video": "#60e2b7",
-  "Social Media": "#876aff",
-  "Utility & Productivity": "#c368f9",
-  "All categories": "#D9D9D9",
+const getColor = (category, loc) => {
+  const colors = {
+    [l(13, loc, "Books & Reference")]: "#73e4ff",
+    [l(13, loc, "Entertainment")]: "#c368f9",
+    [l(13, loc, "Gaming")]: "#0280f8",
+    [l(13, loc, "Health & Fitness")]: "#60e2b7",
+    [l(13, loc, "Other Consumer Publishers")]: "#876AFF",
+    [l(13, loc, "Photo & Video")]: "#60e2b7",
+    [l(13, loc, "Social Media")]: "#876aff",
+    [l(13, loc, "Utility & Productivity")]: "#c368f9",
+    [l(13, loc, "All categories")]: "#D9D9D9",
+  };
+  return colors[category] || "#D9D9D9"; // default color if category not found
 };
 
-const getCategoryIcon = (category) => {
+const getCategoryIcon = (category, loc) => {
   const categoryMapping = {
-    "Books & Reference": "books",
-    Entertainment: "entertainment",
-    Gaming: "gaming",
-    "Health & Fitness": "health_fitness",
-    "Other Consumer Pubs": "data",
-    "Photo & Video": "photo_video",
-    "Social Media": "social",
-    "Utility & Productivity": "utility",
+    [l(13, loc, "Books & Reference")]: "books",
+    [l(13, loc, "Entertainment")]: "entertainment",
+    [l(13, loc, "Gaming")]: "gaming",
+    [l(13, loc, "Health & Fitness")]: "health_fitness",
+    [l(13, loc, "Other Consumer Publishers")]: "data",
+    [l(13, loc, "Photo & Video")]: "photo_video",
+    [l(13, loc, "Social Media")]: "social",
+    [l(13, loc, "Utility & Productivity")]: "utility",
   };
 
-  const iconHeight = 34;
-  const iconOffsetX = iconHeight / -2;
-  const iconOffsetY = iconHeight / -2;
   switch (categoryMapping[category]) {
     case "books":
       return `<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,16 +109,9 @@ export function Vis13({ locale: loc }) {
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(getDataURL("Viz13-CPP", "en")).then((data) => {
+    d3.csv(getDataURL("Viz13-CPP", loc)).then((data) => {
       data.forEach((d, i) => {
         d["value"] = +d["CPP"];
-      });
-
-      // rename fields in column "Publisher Genre" from "Other Consumer Publishers" to "Other Consumer Pubs" to fix highlighting
-      data.forEach((d) => {
-        if (d["Publisher Genre"] === "Other Consumer Publishers") {
-          d["Publisher Genre"] = "Other Consumer Pubs";
-        }
       });
 
       // Assign a stable random offset for value > 200, to avoid perfect overlap in the outlier section of the chart
@@ -186,17 +179,12 @@ export function Vis13({ locale: loc }) {
   const advertisers = Array.from(
     new Set(data.map((d) => d["Advertiser Genre"]))
   );
-  const advertisersMapping = {
-    Entertainment: "Entertainment",
-    Finance: "Finance",
-    "Food & Drink": "Delivery & Food",
-    Gaming: "Gaming",
-    "Other Consumer Advertisers": "Other",
-    RMG: "RMG",
-    Shopping: "Shopping",
-    "Social Media": "Social Media",
-    Travel: "Travel",
-    "Utility & Productivity": "Utility & Productivity",
+
+  const getAdvertiserMapping = (advertiser, loc) => {
+    if (loc === "en" && advertiser === "Other Consumer Advertisers") {
+      return "Other";
+    }
+    return advertiser;
   };
 
   const xScale = d3
@@ -231,7 +219,7 @@ export function Vis13({ locale: loc }) {
                 font-weight="400"
                 line-height="125%"
               >
-                ${advertisersMapping[adv]}
+                ${getAdvertiserMapping(adv, loc)}
               </text>`;
             } else {
               textPlacement = html`<text
@@ -247,7 +235,7 @@ export function Vis13({ locale: loc }) {
                 font-weight="400"
                 line-height="125%"
               >
-                ${advertisersMapping[adv]}
+                ${getAdvertiserMapping(adv, loc)}
               </text>`;
             }
             return html`<g>
@@ -333,7 +321,7 @@ export function Vis13({ locale: loc }) {
                       : xScale(205) + (datum._xJitter || 0)}"
                     cy="${yScale(adv)}"
                     r="9.5"
-                    fill="${colors[datum["Publisher Genre"]]}"
+                    fill="${getColor(datum["Publisher Genre"], loc)}"
                     opacity="${selectedCategory === all
                       ? 1
                       : datum["Publisher Genre"] === selectedCategory
@@ -378,11 +366,11 @@ export function Vis13({ locale: loc }) {
         </g>
       </g>
     </svg>
-    <${Tooltip} hoveredItem=${hoveredItem} />
+    <${Tooltip} hoveredItem=${hoveredItem} loc=${loc} />
   </div>`;
 }
 
-function Tooltip({ hoveredItem }) {
+function Tooltip({ hoveredItem, loc }) {
   if (!hoveredItem) return null;
 
   return html`<div
@@ -390,15 +378,15 @@ function Tooltip({ hoveredItem }) {
     style="left: ${hoveredItem.x}%; top: ${hoveredItem.y}%;"
   >
     <div>
-      <p class="tooltip-label">Advertiser category</p>
+      <p class="tooltip-label">${l(13, loc, "Advertiser category")}</p>
       <p class="tooltip-value">${hoveredItem.advertiser}</p>
     </div>
     <div>
-      <p class="tooltip-label">Publisher category</p>
+      <p class="tooltip-label">${l(13, loc, "Publisher category")}</p>
       <p class="tooltip-value">${hoveredItem.publisher}</p>
     </div>
     <div>
-      <p class="tooltip-label">Indexed cost per payer</p>
+      <p class="tooltip-label">${l(13, loc, "Indexed cost per payer")}</p>
       <p class="tooltip-value">${hoveredItem.roas}</p>
     </div>
   </div>`;
@@ -406,45 +394,42 @@ function Tooltip({ hoveredItem }) {
 
 export function Vis13Categories({ locale: loc }) {
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(all);
+  const [selectedCategory, setSelectedCategory] = useState(l(13, loc, all));
 
   // get categories
   useEffect(() => {
-    Promise.all([
-      d3.csv(
-        "https://raw.githubusercontent.com/parabolestudio/molococonsumerreport/refs/heads/main/data/Viz13.csv"
-      ),
-    ]).then(async (files) => {
+    d3.csv(getDataURL("Viz13-CPP", loc)).then((data) => {
       const uniqueCategories = Array.from(
-        new Set(files[0].map((d) => d["Publisher Genre"]))
+        new Set(data.map((d) => d["Publisher Genre"]))
       ).sort();
       setCategories([all, ...uniqueCategories]);
     });
   }, []);
 
   useEffect(() => {
-    const selectedColor =
-      colors[selectedCategory] || colors["Books & Reference"];
     document.documentElement.style.setProperty(
       "--vis13-main-color",
-      selectedColor
+      getColor(selectedCategory, loc)
     );
   }, [selectedCategory]);
 
-  const categoriesMapping = {
-    "All categories": "All categories",
-    "Books & Reference": "Books & Reference",
-    Entertainment: "Entertainment",
-    Gaming: "Gaming",
-    "Health & Fitness": "Health & Fitness",
-    "Other Consumer Pubs": "Other Consumer",
-    "Photo & Video": "Photo & Video",
-    "Social Media": "Social Media",
-    "Utility & Productivity": "Utility & Productivity",
-  };
+  function getCategoryLabel(category) {
+    const labelMap = {
+      "All categories": "All categories",
+      "Books & Reference": "Books & Reference",
+      Entertainment: "Entertainment",
+      Gaming: "Gaming",
+      "Health & Fitness": "Health & Fitness",
+      "Other Consumer Publishers": "Other Consumer",
+      "Photo & Video": "Photo & Video",
+      "Social Media": "Social Media",
+      "Utility & Productivity": "Utility & Productivity",
+    };
+    return labelMap[category] || category;
+  }
 
   const categoryItems = categories.map((category) => {
-    const svgContent = getCategoryIcon(category);
+    const svgContent = getCategoryIcon(category, loc);
 
     return html`<li
       class="category-item ${selectedCategory === category
@@ -465,7 +450,7 @@ export function Vis13Categories({ locale: loc }) {
         class="category-icon"
         dangerouslySetInnerHTML=${{ __html: svgContent || "" }}
       ></div>
-      <span>${categoriesMapping[category]}</span>
+      <span>${l(13, loc, getCategoryLabel(category))}</span>
     </li>`;
   });
 

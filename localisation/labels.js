@@ -1548,18 +1548,6 @@ const VIZ13_LABELS = [
     Chinese: "实用与效率",
   },
   {
-    English: "",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
-    English: "Tooltip",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
     English: "Advertiser category",
     Korean: "",
     Japanese: "広告主のカテゴリー",
