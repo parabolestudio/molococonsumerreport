@@ -271,7 +271,7 @@ export function Vis10({ locale: loc }) {
                   class="charts-text-body"
                   dominant-baseline="middle"
                 >
-                  Increasing →
+                  ${l(10, loc, "Decreasing")} →
                 </text>
                 <text
                   transform="translate(${-sectionMargin.left + 5}, ${valueScale(
@@ -281,7 +281,7 @@ export function Vis10({ locale: loc }) {
                   dominant-baseline="middle"
                   text-anchor="end"
                 >
-                  ← Decreasing
+                  ← ${l(10, loc, "Decreasing")}
                 </text>
                 <text
                   transform="translate(${-sectionMargin.left -
@@ -290,7 +290,7 @@ export function Vis10({ locale: loc }) {
                   dominant-baseline="middle"
                   text-anchor="middle"
                 >
-                  Time spent in 2024 vs. 2023
+                  ${l(10, loc, "Time spent in 2024 vs. 2023")}
                 </text>
 
                 <text
@@ -475,7 +475,11 @@ export function Vis10({ locale: loc }) {
               </g>
             </g>
           </svg>
-          <${Tooltip} hoveredItem=${hoveredItem} country=${country} />
+          <${Tooltip}
+            hoveredItem=${hoveredItem}
+            country=${country}
+            loc=${loc}
+          />
         </div>`;
       })}
     </div>`;
@@ -587,7 +591,7 @@ export function Vis10({ locale: loc }) {
                         class="charts-text-body"
                         dominant-baseline="middle"
                       >
-                        Increasing →
+                        ${l(10, loc, "Increasing")} →
                       </text>
                       <text
                         transform="translate(${-sectionMargin.left +
@@ -596,7 +600,7 @@ export function Vis10({ locale: loc }) {
                         dominant-baseline="middle"
                         text-anchor="end"
                       >
-                        ← Decreasing
+                        ← ${l(10, loc, "Decreasing")}
                       </text>
                       <text
                         transform="translate(${-sectionMargin.left -
@@ -605,7 +609,7 @@ export function Vis10({ locale: loc }) {
                         dominant-baseline="middle"
                         text-anchor="middle"
                       >
-                        Time spent in 2024 vs. 2023
+                        ${l(10, loc, "Time spent in 2024 vs. 2023")}
                       </text>`
                   : ""}
                 <text
@@ -792,7 +796,7 @@ export function Vis10({ locale: loc }) {
         })}
       </g>
     </svg>
-    <${Tooltip} hoveredItem=${hoveredItem} country=${null} />
+    <${Tooltip} hoveredItem=${hoveredItem} country=${null} loc=${loc} />
   </div>`;
 }
 
@@ -830,7 +834,7 @@ function updateMultiSelect(categories, initialCategories, callback) {
   }
 }
 
-function Tooltip({ hoveredItem, country }) {
+function Tooltip({ hoveredItem, country, loc }) {
   const formatGrowth = (growth) => {
     if (growth === null || growth === undefined) return "N/A";
     return growth > 0 ? `+${growth.toFixed(0)}%` : `${growth.toFixed(0)}%`;
@@ -848,11 +852,11 @@ function Tooltip({ hoveredItem, country }) {
     >
       <p class="tooltip-title">${hoveredItem.category}</p>
       <div>
-        <p class="tooltip-label">Total time spent share</p>
+        <p class="tooltip-label">${l(10, loc, "Total time spent share")}</p>
         <p class="tooltip-value">${shareLabel}%</p>
       </div>
       <div>
-        <p class="tooltip-label">Growth (2023-2024)</p>
+        <p class="tooltip-label">${l(10, loc, "Growth (2023-2024)")}</p>
         <p class="tooltip-value">${formatGrowth(hoveredItem.yearGrowth)}</p>
       </div>
     </div>`;
