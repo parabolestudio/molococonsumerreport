@@ -33,13 +33,6 @@ function updateMultiSelect(categories, initialCategories, callback) {
         .$("#vis12-select")
         .select2("data")
         .map((d) => d.id);
-
-      // const limitMessageText = document.querySelector(
-      //   "#select2-vis12-select-results > li.select2-results__message"
-      // );
-      // if (limitMessageText) {
-      //   limitMessageText.innerText = "You can only select 3 categories";
-      // }
       callback(selectedCategories);
     });
   }
@@ -47,12 +40,12 @@ function updateMultiSelect(categories, initialCategories, callback) {
 
 export function Vis12({ locale: loc }) {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("U.S.");
+  const [selectedCountry, setSelectedCountry] = useState("USA");
   const initialCategories = [
-    "News & Magazines",
-    "Finance",
-    "Sports",
-    "Education",
+    l(12, loc, "News & Magazines"),
+    l(12, loc, "Finance"),
+    l(12, loc, "Sports"),
+    l(12, loc, "Education"),
   ];
   const [selectedCategories, setSelectedCategories] =
     useState(initialCategories);
@@ -64,17 +57,18 @@ export function Vis12({ locale: loc }) {
 
   // Fetch data on mount
   useEffect(() => {
-    d3.csv(getDataURL("Viz12", "en")).then((data) => {
+    d3.csv(getDataURL("Viz12", loc)).then((data) => {
       data.forEach((d) => {
         d["value"] = +d["value"];
         d["hour_of_day"] = +d["hour_of_day"];
         d["shifted_hour_of_day"] = shiftHour(d["hour_of_day"]);
         d["country"] = d["Country"];
+        d["countryCode"] = d["Country code"];
         d["category"] = d["Category"];
       });
 
       // data group by country code and categories
-      const groupedData = d3.group(data, (d) => d.country);
+      const groupedData = d3.group(data, (d) => d.countryCode);
 
       const groupedArray = Array.from(groupedData, ([key, value]) => {
         const groupedByCategory = d3.group(value, (d) => d.category);
@@ -121,7 +115,8 @@ export function Vis12({ locale: loc }) {
     if (countryDropdown) countryDropdown.innerHTML = "";
     countries.forEach((country) => {
       let option = document.createElement("option");
-      option.text = country;
+      option.text = l(12, loc, country);
+      option.value = country;
       countryDropdown.add(option);
     });
     countryDropdown.value = selectedCountry;
@@ -140,12 +135,13 @@ export function Vis12({ locale: loc }) {
   const dataFilteredWithSelectedCategories = dataFiltered
     .filter(
       (d) =>
-        selectedCategories.includes(d.category) || d.category === "Social Media"
+        selectedCategories.includes(d.category) ||
+        d.category === l(12, loc, "Social Media")
     )
     .sort((a, b) => {
       // sort that social media is always first
-      if (a.category === "Social Media") return -1;
-      if (b.category === "Social Media") return 1;
+      if (a.category === l(12, loc, "Social Media")) return -1;
+      if (b.category === l(12, loc, "Social Media")) return 1;
       // rest like in initial order
       return categories.indexOf(a.category) - categories.indexOf(b.category);
     });
@@ -256,7 +252,7 @@ export function Vis12({ locale: loc }) {
           dominant-baseline="middle"
           text-anchor="middle"
           class="charts-text-body charts-text-white"
-          >${noteText}</text
+          >${l(12, loc, noteText)}</text
         >
       </g>
     `;
