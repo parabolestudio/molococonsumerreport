@@ -266,10 +266,10 @@ export function Vis12({ locale: loc }) {
       hour === 0
         ? "12am"
         : hour < 12
-        ? `${hour}am`
+        ? l(12, loc, `${hour}am`)
         : hour === 12
         ? "12pm"
-        : `${hour - 12}pm`;
+        : l(12, loc, `${hour - 12}pm`);
 
     return html` <g
       transform="translate(${hourScale(shiftedHour)}, ${-10})"

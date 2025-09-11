@@ -1157,29 +1157,17 @@ const CATEGORIES = [
 ];
 
 const VIZ1_LABELS = [
-  // {
-  //   English: "Gaming",
-  //   Korean: "",
-  //   Japanese: "ゲーム",
-  //   Chinese: "游戏类 App",
-  // },
-  // {
-  //   English: "Consumer",
-  //   Korean: "",
-  //   Japanese: "消費者向け",
-  //   Chinese: "消费级 App",
-  // },
   {
     English: "2024 vs. 2023 growth",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "2024年の収益成長（2023年との比較）",
+    Chinese: "2024 年增长 vs 2023 年增长",
   },
   {
     English: "Revenue",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "収益",
+    Chinese: "收入",
   },
 ];
 
@@ -1187,8 +1175,8 @@ const VIZ4_LABELS = [
   {
     English: "Baseline",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "ベースライン",
+    Chinese: "基准线",
   },
 ];
 
@@ -1221,8 +1209,8 @@ const VIZ6_LABELS = [
   {
     English: "Top 10 mobile app markets",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "モバイルアプリ市場上位10か国",
+    Chinese: "Top10 移动应用市场",
   },
   // added manually to allow axis break filtering for Asia
   {
@@ -1305,14 +1293,14 @@ const VIZ9_LABELS = [
   {
     English: "DAU",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "DAU",
+    Chinese: "DAU",
   },
   {
     English: "Time spent",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "利用時間",
+    Chinese: "使用时长",
   },
   {
     English: "Country",
@@ -1466,38 +1454,74 @@ const VIZ12_LABELS = [
     Japanese: "このカテゴリーに関する十分なデータがありません",
     Chinese: "该 App 类别的数据不足",
   },
+  {
+    English: "5am",
+    Korean: "",
+    Japanese: "5am",
+    Chinese: "上午 5 点",
+  },
+  {
+    English: "8am",
+    Korean: "",
+    Japanese: "8am",
+    Chinese: "上午 8 点",
+  },
+  {
+    English: "11am",
+    Korean: "",
+    Japanese: "11am",
+    Chinese: "上午 11 点",
+  },
+  {
+    English: "2pm",
+    Korean: "",
+    Japanese: "2pm",
+    Chinese: "下午 2 点",
+  },
+  {
+    English: "5pm",
+    Korean: "",
+    Japanese: "5pm",
+    Chinese: "下午 5 点",
+  },
+  {
+    English: "8pm",
+    Korean: "",
+    Japanese: "8pm",
+    Chinese: "下午 8 点",
+  },
+  {
+    English: "11pm",
+    Korean: "",
+    Japanese: "11pm",
+    Chinese: "下午 11 点",
+  },
+  {
+    English: "2am",
+    Korean: "",
+    Japanese: "2am",
+    Chinese: "上午 2 点",
+  },
 ];
 
 const VIZ13_LABELS = [
   {
     English: "Indexed CPP",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "CPP指数",
+    Chinese: "CPP 指数",
   },
   {
     English: "Advertiser category",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
-    English: "",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
-  },
-  {
-    English: "Menu",
-    Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "広告主カテゴリー",
+    Chinese: "广告主类别",
   },
   {
     English: "All categories",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "すべてのカテゴリー",
+    Chinese: "全部类别",
   },
   {
     English: "Books & Reference",
@@ -1526,8 +1550,8 @@ const VIZ13_LABELS = [
   {
     English: "Other Consumer",
     Korean: "",
-    Japanese: "",
-    Chinese: "",
+    Japanese: "その他の消費者向けアプリ",
+    Chinese: "其他消费类别",
   },
   {
     English: "Photo & Video",
