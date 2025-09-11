@@ -1,0 +1,138 @@
+<!-- Charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script
+  type="module"
+  src="https://parabolestudio.github.io/molococonsumerreport/script.js"
+></script>
+
+<!-- Multi Select Fields (Source: https://webflow.com/made-in-webflow/website/select-box-search?ref=made-in-webflow-search&searchValue=multi%20select)-->
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Viz 12
+    $('[ms-code-custom-select="viz12-select-with-search"]').select2({
+      maximumSelectionLength: 4,
+    });
+    $('[ms-code-custom-select="viz12-select-with-search"]').on(
+      "select2:open",
+      function (e) {
+        setTimeout(function () {
+          var messageElem = $(".select2-results__message");
+          if (messageElem.length) {
+            let messageText = "You can only select 4 categories.";
+            if (
+              window.location &&
+              (window.location.hostname.includes("ja") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("ja"))
+            ) {
+              messageText = "最大4つまで選択できます";
+            }
+            if (
+              window.location &&
+              (window.location.hostname.includes("zh") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("zh"))
+            ) {
+              messageText = "您最多可选择 4 个类别";
+            }
+            if (
+              window.location &&
+              (window.location.hostname.includes("ko") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("ko"))
+            ) {
+              messageText = "!You can only select 4 categories.";
+            }
+            messageElem.text(messageText);
+          }
+        }, 50);
+      }
+    );
+
+    // Viz 10
+    const viz10_numberCountries = window.innerWidth <= 480 ? 2 : 3;
+    $('[ms-code-custom-select="viz10-select-with-search"]').select2({
+      maximumSelectionLength: viz10_numberCountries,
+    });
+    $('[ms-code-custom-select="viz10-select-with-search"]').on(
+      "select2:open",
+      function (e) {
+        setTimeout(function () {
+          var messageElem = $(".select2-results__message");
+          if (messageElem.length) {
+            let messageText1 = "You can only select ";
+            let messageText2 = " countries.";
+            if (
+              window.location &&
+              (window.location.hostname.includes("ja") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("ja"))
+            ) {
+              messageText1 = "最大";
+              messageText2 = "つまで選択できます";
+            }
+            if (
+              window.location &&
+              (window.location.hostname.includes("zh") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("zh"))
+            ) {
+              messageText1 = "您只能选择 ";
+              messageText2 = " 个国家/地区";
+            }
+            if (
+              window.location &&
+              (window.location.hostname.includes("ko") ||
+                new URLSearchParams(window.location.search)
+                  .get("testLocale")
+                  .includes("ko"))
+            ) {
+              messageText1 = "!You can only select ";
+              messageText2 = " countries.";
+            }
+            messageElem.text(
+              messageText1 + viz10_numberCountries + messageText2
+            );
+          }
+        }, 50);
+      }
+    );
+  });
+</script>
+
+<!-- Slider -->
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  window.addEventListener("DOMContentLoaded", () => {
+    // slight delay helps Webflow components render
+
+    setTimeout(() => {
+      const swiper = new Swiper(".cr-intro_slider", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        initialSlide: 1,
+        slideToClickedSlide: true,
+        navigation: {
+          nextEl: ".cr-next",
+          prevEl: ".cr-prev",
+        },
+        pagination: {
+          el: ".cr-slider_pagination",
+          clickable: true,
+        },
+      });
+    }, 100);
+  });
+</script>
