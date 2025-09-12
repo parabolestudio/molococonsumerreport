@@ -5,7 +5,6 @@ import { getLabel as l } from "../localisation/labels.js";
 const all = "All categories";
 
 const getColor = (category, loc) => {
-  console.log("Category:", category, "Locale:", loc);
   const colors = {
     [l(13, loc, "Books & Reference")]: "#73e4ff",
     [l(13, loc, "Entertainment")]: "#c368f9",
