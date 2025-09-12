@@ -5,6 +5,7 @@ import { getLabel as l } from "../localisation/labels.js";
 const all = "All categories";
 
 const getColor = (category, loc) => {
+  console.log("Category:", category, "Locale:", loc);
   const colors = {
     [l(13, loc, "Books & Reference")]: "#73e4ff",
     [l(13, loc, "Entertainment")]: "#c368f9",
@@ -104,7 +105,7 @@ const getCategoryIcon = (category, loc) => {
 
 export function Vis13({ locale: loc }) {
   const [data, setData] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(all);
+  const [selectedCategory, setSelectedCategory] = useState(l(13, loc, all));
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
@@ -322,7 +323,7 @@ export function Vis13({ locale: loc }) {
                     cy="${yScale(adv)}"
                     r="9.5"
                     fill="${getColor(datum["Publisher Genre"], loc)}"
-                    opacity="${selectedCategory === all
+                    opacity="${selectedCategory === l(13, loc, all)
                       ? 1
                       : datum["Publisher Genre"] === selectedCategory
                       ? 1
@@ -402,7 +403,7 @@ export function Vis13Categories({ locale: loc }) {
       const uniqueCategories = Array.from(
         new Set(data.map((d) => d["Publisher Genre"]))
       ).sort();
-      setCategories([all, ...uniqueCategories]);
+      setCategories([l(13, loc, all), ...uniqueCategories]);
     });
   }, []);
 
