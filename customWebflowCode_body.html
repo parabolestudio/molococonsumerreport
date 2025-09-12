@@ -50,7 +50,7 @@
                   .get("testLocale")
                   .includes("ko"))
             ) {
-              messageText = "!You can only select 4 categories.";
+              messageText = "4개 카테고리까지 선택 가능";
             }
             messageElem.text(messageText);
           }
@@ -74,9 +74,9 @@
             if (
               window.location &&
               (window.location.hostname.includes("ja") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("ja"))
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "ja")
             ) {
               messageText1 = "最大";
               messageText2 = "つまで選択できます";
@@ -84,9 +84,9 @@
             if (
               window.location &&
               (window.location.hostname.includes("zh") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("zh"))
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "zh")
             ) {
               messageText1 = "您只能选择 ";
               messageText2 = " 个国家/地区";
@@ -94,12 +94,12 @@
             if (
               window.location &&
               (window.location.hostname.includes("ko") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("ko"))
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "ko")
             ) {
-              messageText1 = "!You can only select ";
-              messageText2 = " countries.";
+              messageText1 = "";
+              messageText2 = "3개국만 선택할 수 있습니다.";
             }
             messageElem.text(
               messageText1 + viz10_numberCountries + messageText2
