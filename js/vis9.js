@@ -62,8 +62,8 @@ export function Vis9({ locale: loc }) {
   const dataFiltered = data.filter((d) => d.countryCode === selectedCountry);
   // sort so "Independent App Ecosystem" is always last
   dataFiltered.sort((a, b) => {
-    if (a.App === "Independent App Ecosystem") return 1;
-    if (b.App === "Independent App Ecosystem") return -1;
+    if (a.App === l(9, loc, "Independent App Ecosystem")) return 1;
+    if (b.App === l(9, loc, "Independent App Ecosystem")) return -1;
     return a.App.localeCompare(b.App);
   });
 
@@ -180,8 +180,9 @@ export function Vis9({ locale: loc }) {
                   setHoveredItem(null);
                 }}"
               >
-                <${SocialMediaIcon} category="${d.App}" />
-                ${d.App === "Independent App Ecosystem"
+                <${SocialMediaIcon} category="${d.App}" loc="${loc}" />
+                ${d.App === l(9, loc, "Independent App Ecosystem") &&
+                loc === "en"
                   ? html` <text
                       x="${xText}"
                       y="40.5"
@@ -206,6 +207,24 @@ export function Vis9({ locale: loc }) {
                         font-weight="700"
                       >
                         App Ecosystem
+                      </tspan>
+                    </text>`
+                  : d.App === l(9, loc, "Independent App Ecosystem")
+                  ? html`<text
+                      x="0"
+                      y="40.5"
+                      dy="0"
+                      text-anchor="middle"
+                      class="charts-text-body"
+                    >
+                      <tspan
+                        x="0"
+                        dy="0"
+                        fill="#12976B"
+                        font-size="14"
+                        font-weight="700"
+                      >
+                        ${l(9, loc, "Independent App Ecosystem")}
                       </tspan>
                     </text>`
                   : null}
@@ -249,7 +268,7 @@ function Tooltip({ hoveredItem, loc }) {
   </div>`;
 }
 
-function SocialMediaIcon({ category }) {
+function SocialMediaIcon({ category, loc }) {
   const iconHeight = 35;
   const iconOffsetX = iconHeight / -2;
   const iconOffsetY = iconHeight / -2;
@@ -334,7 +353,7 @@ function SocialMediaIcon({ category }) {
           fill="white"
         />
       </g>`;
-    case "Independent App Ecosystem":
+    case l(9, loc, "Independent App Ecosystem"):
       return html` <g transform="translate(${iconOffsetX}, ${iconOffsetY})">
         <circle cx="17.5" cy="17.5" r="17.5" fill="#60E2B7" />
       </g>`;
