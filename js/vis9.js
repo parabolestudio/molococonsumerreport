@@ -2,9 +2,12 @@ import { html, useEffect, useState } from "./utils/preact-htm.js";
 import { getDataURL } from "./utils/helper.js";
 import { getLabel as l } from "../localisation/labels.js";
 
+const allValue = "All countries";
+const allLabel = "Global";
+
 export function Vis9({ locale: loc }) {
   const [data, setData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("All countries");
+  const [selectedCountry, setSelectedCountry] = useState(allValue);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   // Fetch data on mount
@@ -26,7 +29,8 @@ export function Vis9({ locale: loc }) {
         if (countryDropdown) countryDropdown.innerHTML = "";
         uniqueCountries.forEach((country) => {
           let option = document.createElement("option");
-          option.text = l(9, loc, country);
+          option.text =
+            country === allValue ? l(9, loc, allLabel) : l(9, loc, country);
           option.value = country;
           countryDropdown.add(option);
         });

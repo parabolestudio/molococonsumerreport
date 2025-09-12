@@ -74,11 +74,13 @@ const formatRevenue = (value) => {
     : `$${d3.format(".4s")(value).replace("k", "K")}`;
 };
 
+const allValue = "All countries";
+const allLabel = "Global";
+
 export function Vis1({ locale: loc }) {
-  console.log("Rendering Vis1 with locale:", loc);
   const [timelineData, setTimelineData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("All countries");
+  const [selectedCountry, setSelectedCountry] = useState(allValue);
 
   // Fetch data on mount
   useEffect(() => {
@@ -146,7 +148,8 @@ export function Vis1({ locale: loc }) {
         if (countryDropdown) countryDropdown.innerHTML = "";
         countries.forEach((country) => {
           let option = document.createElement("option");
-          option.text = l(1, loc, country);
+          option.text =
+            country === allValue ? l(1, loc, allLabel) : l(1, loc, country);
           option.value = country;
           countryDropdown.add(option);
         });

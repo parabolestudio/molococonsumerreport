@@ -1154,6 +1154,13 @@ const CATEGORIES = [
     Japanese: "その他の消費者向けパブリッシャー",
     Chinese: "其他消费者发行商",
   },
+  // added manually to cover "All countries" option in the chart
+  {
+    English: "Global",
+    Korean: "글로벌",
+    Japanese: "グローバル",
+    Chinese: "全球",
+  },
 ];
 
 const VIZ1_LABELS = [
