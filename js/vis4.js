@@ -77,7 +77,7 @@ export function Vis4Combined({ locale: loc }) {
     .range([innerHeight, 0]);
 
   // Calculate rectangle for columns 4-7 (index 3 to 6)
-  const rectPadding = 15;
+  const rectPadding = loc === "ja" ? 15 : 15;
   const firstIdx = 3;
   const lastIdx = 5; // less categories
 
@@ -115,6 +115,7 @@ export function Vis4Combined({ locale: loc }) {
   };
 
   const getBaseline = (data, columnXScale) => {
+    const baselineWidth = loc === "ja" ? 90 : 80;
     return html` <g>
       <line
         x1="${columnXScale(data[data.length - 1]["Category"]) + extraGap}"
@@ -133,9 +134,9 @@ export function Vis4Combined({ locale: loc }) {
         extraGap}, ${columnHeightScale(1.0) - 10})"
       >
         <rect
-          x="-40"
+          x="-${baselineWidth / 2}"
           y="0"
-          width="80"
+          width="${baselineWidth}"
           height="20"
           fill="white"
           rx="10"
@@ -201,6 +202,9 @@ export function Vis4Combined({ locale: loc }) {
               </text>
               <text
                 x="${width / 2}"
+                dx=${d["Category"] === "健康・フィットネス" && !isMobile
+                  ? "8"
+                  : "0"}
                 y="${height + 20}"
                 text-anchor="middle"
                 class="charts-text-body charts-text-white"
