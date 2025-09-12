@@ -27,28 +27,28 @@
             let messageText = "You can only select 4 categories.";
             if (
               window.location &&
-              (window.location.hostname.includes("ja") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("ja"))
+              (window.location.pathname.includes("ja") ||
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "ja")
             ) {
               messageText = "最大4つまで選択できます";
             }
             if (
               window.location &&
-              (window.location.hostname.includes("zh") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("zh"))
+              (window.location.pathname.includes("zh") ||
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "zh")
             ) {
               messageText = "您最多可选择 4 个类别";
             }
             if (
               window.location &&
-              (window.location.hostname.includes("ko") ||
-                new URLSearchParams(window.location.search)
-                  .get("testLocale")
-                  .includes("ko"))
+              (window.location.pathname.includes("ko") ||
+                new URLSearchParams(window.location.search).get(
+                  "testLocale"
+                ) === "ko")
             ) {
               messageText = "4개 카테고리까지 선택 가능";
             }
@@ -73,7 +73,7 @@
             let messageText2 = " countries.";
             if (
               window.location &&
-              (window.location.hostname.includes("ja") ||
+              (window.location.pathname.includes("ja") ||
                 new URLSearchParams(window.location.search).get(
                   "testLocale"
                 ) === "ja")
@@ -83,7 +83,7 @@
             }
             if (
               window.location &&
-              (window.location.hostname.includes("zh") ||
+              (window.location.pathname.includes("zh") ||
                 new URLSearchParams(window.location.search).get(
                   "testLocale"
                 ) === "zh")
@@ -93,7 +93,7 @@
             }
             if (
               window.location &&
-              (window.location.hostname.includes("ko") ||
+              (window.location.pathname.includes("ko") ||
                 new URLSearchParams(window.location.search).get(
                   "testLocale"
                 ) === "ko")
