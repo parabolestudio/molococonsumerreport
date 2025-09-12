@@ -1,0 +1,274 @@
+Country,Country code,Genre,Growth,Position,Top Growing App
+호주,AUS,RMG,,1,ESPN
+호주,AUS,이커머스,,1,OfferUp
+호주,AUS,주문형,,1,Zynga Poker
+호주,AUS,여행,,1,Citymapper
+호주,AUS,금융,,1,Citymapper
+호주,AUS,엔터테인먼트,,1,Musi
+호주,AUS,소셜,,1,BBC
+브라질,BRA,RMG,,1,ESPN
+브라질,BRA,이커머스,,1,OfferUp
+브라질,BRA,주문형,,1,Zynga Poker
+브라질,BRA,여행,,1,Zynga Poker
+브라질,BRA,금융,,1,Yahoo Finance
+브라질,BRA,엔터테인먼트,,1,Musi
+브라질,BRA,소셜,,1,BBC
+캐나다,CAN,RMG,,1,ESPN
+캐나다,CAN,이커머스,,1,OfferUp
+캐나다,CAN,주문형,,1,Vivino
+캐나다,CAN,여행,,1,Citymapper
+캐나다,CAN,금융,,1,Citymapper
+캐나다,CAN,엔터테인먼트,,1,Musi
+캐나다,CAN,소셜,,1,BBC
+독일,DEU,RMG,,1,ESPN
+독일,DEU,이커머스,,1,OfferUp
+독일,DEU,주문형,,1,Zynga Poker
+독일,DEU,여행,,1,Citymapper
+독일,DEU,금융,,1,Yahoo Finance
+독일,DEU,엔터테인먼트,,1,Musi
+독일,DEU,소셜,,1,Vivino
+프랑스,FRA,RMG,,1,Zynga Poker
+프랑스,FRA,이커머스,,1,OfferUp
+프랑스,FRA,주문형,,1,Vivino
+프랑스,FRA,여행,,1,Citymapper
+프랑스,FRA,금융,,1,Yahoo Finance
+프랑스,FRA,엔터테인먼트,,1,Musi
+프랑스,FRA,소셜,,1,BBC
+영국,GBR,RMG,,1,Zynga Poker
+영국,GBR,이커머스,,1,OfferUp
+영국,GBR,주문형,,1,Vivino
+영국,GBR,여행,,1,Citymapper
+영국,GBR,금융,,1,Yahoo Finance
+영국,GBR,엔터테인먼트,,1,Musi
+영국,GBR,소셜,,1,BBC
+인도네시아,IDN,RMG,,1,ESPN
+인도네시아,IDN,이커머스,,1,OfferUp
+인도네시아,IDN,주문형,,1,Vivino
+인도네시아,IDN,여행,,1,Citymapper
+인도네시아,IDN,금융,,1,The Weather Channel
+인도네시아,IDN,엔터테인먼트,,1,The Weather Channel
+인도네시아,IDN,소셜,,1,BBC
+인도,IND,RMG,,1,ESPN
+인도,IND,이커머스,,1,OfferUp
+인도,IND,주문형,,1,Vivino
+인도,IND,여행,,1,Citymapper
+인도,IND,금융,,1,MyFitnessPal
+인도,IND,엔터테인먼트,,1,Musi
+인도,IND,소셜,,1,BBC
+일본,JPN,RMG,,1,ESPN
+일본,JPN,이커머스,,1,OfferUp
+일본,JPN,주문형,,1,Vivino
+일본,JPN,여행,,1,Citymapper
+일본,JPN,금융,,1,Yahoo Finance
+일본,JPN,엔터테인먼트,,1,Musi
+일본,JPN,소셜,,1,BBC
+대한민국,KOR,RMG,,1,The Weather Channel
+대한민국,KOR,이커머스,,1,OfferUp
+대한민국,KOR,주문형,,1,Vivino
+대한민국,KOR,여행,,1,Citymapper
+대한민국,KOR,금융,,1,Yahoo Finance
+대한민국,KOR,엔터테인먼트,,1,Musi
+대한민국,KOR,소셜,,1,BBC
+멕시코,MEX,RMG,,1,Zynga Poker
+멕시코,MEX,이커머스,,1,OfferUp
+멕시코,MEX,주문형,,1,Vivino
+멕시코,MEX,여행,,1,Citymapper
+멕시코,MEX,금융,,1,Yahoo Finance
+멕시코,MEX,엔터테인먼트,,1,Musi
+멕시코,MEX,소셜,,1,BBC
+미국,USA,RMG,,1,ESPN
+미국,USA,이커머스,,1,OfferUp
+미국,USA,주문형,,1,Vivino
+미국,USA,여행,,1,Citymapper
+미국,USA,금융,,1,Zynga Poker
+미국,USA,엔터테인먼트,,1,Musi
+미국,USA,소셜,,1,BBC
+베트남,VNM,RMG,,1,ESPN
+베트남,VNM,이커머스,,1,OfferUp
+베트남,VNM,주문형,,1,Vivino
+베트남,VNM,여행,,1,Citymapper
+베트남,VNM,금융,,1,Citymapper
+베트남,VNM,엔터테인먼트,,1,Musi
+베트남,VNM,소셜,,1,The Weather Channel
+호주,AUS,RMG,,2,Zynga Poker
+호주,AUS,이커머스,,2,Zynga Poker
+호주,AUS,주문형,,2,Vivino
+호주,AUS,여행,,2,MyFitnessPal
+호주,AUS,금융,,2,BBC
+호주,AUS,엔터테인먼트,,2,Tinder
+호주,AUS,소셜,,2,X
+브라질,BRA,RMG,,2,Zynga Poker
+브라질,BRA,이커머스,,2,Zynga Poker
+브라질,BRA,주문형,,2,Vivino
+브라질,BRA,여행,,2,Citymapper
+브라질,BRA,금융,,2,Zynga Poker
+브라질,BRA,엔터테인먼트,,2,BBC
+브라질,BRA,소셜,,2,X
+캐나다,CAN,RMG,,2,Zynga Poker
+캐나다,CAN,이커머스,,2,Vivino
+캐나다,CAN,주문형,,2,Zynga Poker
+캐나다,CAN,여행,,2,Zynga Poker
+캐나다,CAN,금융,,2,Goodreads
+캐나다,CAN,엔터테인먼트,,2,MyFitnessPal
+캐나다,CAN,소셜,,2,X
+독일,DEU,RMG,,2,Vivino
+독일,DEU,이커머스,,2,Vivino
+독일,DEU,주문형,,2,Vivino
+독일,DEU,여행,,2,Yahoo Finance
+독일,DEU,금융,,2,The Weather Channel
+독일,DEU,엔터테인먼트,,2,Vivino
+독일,DEU,소셜,,2,BBC
+프랑스,FRA,RMG,,2,ESPN
+프랑스,FRA,이커머스,,2,Vivino
+프랑스,FRA,주문형,,2,Zynga Poker
+프랑스,FRA,여행,,2,Vivino
+프랑스,FRA,금융,,2,Zynga Poker
+프랑스,FRA,엔터테인먼트,,2,Tinder
+프랑스,FRA,소셜,,2,X
+영국,GBR,RMG,,2,ESPN
+영국,GBR,이커머스,,2,Vivino
+영국,GBR,주문형,,2,OfferUp
+영국,GBR,여행,,2,MyFitnessPal
+영국,GBR,금융,,2,Zynga Poker
+영국,GBR,엔터테인먼트,,2,Duolingo
+영국,GBR,소셜,,2,X
+인도네시아,IDN,RMG,,2,Zynga Poker
+인도네시아,IDN,이커머스,,2,MyFitnessPal
+인도네시아,IDN,주문형,,2,Citymapper
+인도네시아,IDN,여행,,2,The Weather Channel
+인도네시아,IDN,금융,,2,Citymapper
+인도네시아,IDN,엔터테인먼트,,2,Musi
+인도네시아,IDN,소셜,,2,ESPN
+인도,IND,RMG,,2,Roku
+인도,IND,이커머스,,2,Vivino
+인도,IND,주문형,,2,OfferUp
+인도,IND,여행,,2,Vivino
+인도,IND,금융,,2,The Weather Channel
+인도,IND,엔터테인먼트,,2,Tinder
+인도,IND,소셜,,2,X
+일본,JPN,RMG,,2,Zynga Poker
+일본,JPN,이커머스,,2,Tinder
+일본,JPN,주문형,,2,Yahoo Finance
+일본,JPN,여행,,2,Yahoo Finance
+일본,JPN,금융,,2,Citymapper
+일본,JPN,엔터테인먼트,,2,Duolingo
+일본,JPN,소셜,,2,Roku
+대한민국,KOR,RMG,,2,ESPN
+대한민국,KOR,이커머스,,2,Tinder
+대한민국,KOR,주문형,,2,Yahoo Finance
+대한민국,KOR,여행,,2,ESPN
+대한민국,KOR,금융,,2,MyFitnessPal
+대한민국,KOR,엔터테인먼트,,2,MyFitnessPal
+대한민국,KOR,소셜,,2,Roku
+멕시코,MEX,RMG,,2,ESPN
+멕시코,MEX,이커머스,,2,MyFitnessPal
+멕시코,MEX,주문형,,2,MyFitnessPal
+멕시코,MEX,여행,,2,The Weather Channel
+멕시코,MEX,금융,,2,Zynga Poker
+멕시코,MEX,엔터테인먼트,,2,Zynga Poker
+멕시코,MEX,소셜,,2,X
+미국,USA,RMG,,2,Zynga Poker
+미국,USA,이커머스,,2,Zynga Poker
+미국,USA,주문형,,2,Zynga Poker
+미국,USA,여행,,2,Zynga Poker
+미국,USA,금융,,2,Yahoo Finance
+미국,USA,엔터테인먼트,,2,The Weather Channel
+미국,USA,소셜,,2,Vivino
+베트남,VNM,RMG,,2,Zynga Poker
+베트남,VNM,이커머스,,2,Vivino
+베트남,VNM,주문형,,2,ESPN
+베트남,VNM,여행,,2,ESPN
+베트남,VNM,금융,,2,MyFitnessPal
+베트남,VNM,엔터테인먼트,,2,MyFitnessPal
+베트남,VNM,소셜,,2,X
+호주,AUS,RMG,,3,Yahoo Finance
+호주,AUS,이커머스,,3,MyFitnessPal
+호주,AUS,주문형,,3,Block Blast!
+호주,AUS,여행,,3,The Weather Channel
+호주,AUS,금융,,3,Goodreads
+호주,AUS,엔터테인먼트,,3,Vivino
+호주,AUS,소셜,,3,Block Blast!
+브라질,BRA,RMG,,3,The Weather Channel
+브라질,BRA,이커머스,,3,Vivino
+브라질,BRA,주문형,,3,MyFitnessPal
+브라질,BRA,여행,,3,Vivino
+브라질,BRA,금융,,3,ESPN
+브라질,BRA,엔터테인먼트,,3,Tinder
+브라질,BRA,소셜,,3,Alarmy
+캐나다,CAN,RMG,,3,Yahoo Finance
+캐나다,CAN,이커머스,,3,Tinder
+캐나다,CAN,주문형,,3,MyFitnessPal
+캐나다,CAN,여행,,3,MyFitnessPal
+캐나다,CAN,금융,,3,Yahoo Finance
+캐나다,CAN,엔터테인먼트,,3,Tinder
+캐나다,CAN,소셜,,3,Alarmy
+독일,DEU,RMG,,3,Vivino
+독일,DEU,이커머스,,3,Tinder
+독일,DEU,주문형,,3,OfferUp
+독일,DEU,여행,,3,Vivino
+독일,DEU,금융,,3,BBC
+독일,DEU,엔터테인먼트,,3,Goodreads
+독일,DEU,소셜,,3,X
+프랑스,FRA,RMG,,3,BBC
+프랑스,FRA,이커머스,,3,Tinder
+프랑스,FRA,주문형,,3,ESPN
+프랑스,FRA,여행,,3,Goodreads
+프랑스,FRA,금융,,3,ESPN
+프랑스,FRA,엔터테인먼트,,3,Goodreads
+프랑스,FRA,소셜,,3,Alarmy
+영국,GBR,RMG,,3,Yahoo Finance
+영국,GBR,이커머스,,3,Tinder
+영국,GBR,주문형,,3,Block Blast!
+영국,GBR,여행,,3,ESPN
+영국,GBR,금융,,3,MyFitnessPal
+영국,GBR,엔터테인먼트,,3,Roku
+영국,GBR,소셜,,3,Alarmy
+인도네시아,IDN,RMG,,3,Yahoo Finance
+인도네시아,IDN,이커머스,,3,The Weather Channel
+인도네시아,IDN,주문형,,3,MyFitnessPal
+인도네시아,IDN,여행,,3,ESPN
+인도네시아,IDN,금융,,3,ESPN
+인도네시아,IDN,엔터테인먼트,,3,BBC
+인도네시아,IDN,소셜,,3,Alarmy
+인도,IND,RMG,,3,Yahoo Finance
+인도,IND,이커머스,,3,Tinder
+인도,IND,주문형,,3,Citymapper
+인도,IND,여행,,3,Yahoo Finance
+인도,IND,금융,,3,Citymapper
+인도,IND,엔터테인먼트,,3,Goodreads
+인도,IND,소셜,,3,Alarmy
+일본,JPN,RMG,,3,Yahoo Finance
+일본,JPN,이커머스,,3,MyFitnessPal
+일본,JPN,주문형,,3,The Weather Channel
+일본,JPN,여행,,3,Vivino
+일본,JPN,금융,,3,ESPN
+일본,JPN,엔터테인먼트,,3,Vivino
+일본,JPN,소셜,,3,X
+대한민국,KOR,RMG,,3,Yahoo Finance
+대한민국,KOR,이커머스,,3,The Weather Channel
+대한민국,KOR,주문형,,3,Citymapper
+대한민국,KOR,여행,,3,Yahoo Finance
+대한민국,KOR,금융,,3,Block Blast!
+대한민국,KOR,엔터테인먼트,,3,The Weather Channel
+대한민국,KOR,소셜,,3,X
+멕시코,MEX,RMG,,3,Citymapper
+멕시코,MEX,이커머스,,3,Vivino
+멕시코,MEX,주문형,,3,Yahoo Finance
+멕시코,MEX,여행,,3,Vivino
+멕시코,MEX,금융,,3,MyFitnessPal
+멕시코,MEX,엔터테인먼트,,3,Goodreads
+멕시코,MEX,소셜,,3,ESPN
+미국,USA,RMG,,3,BBC
+미국,USA,이커머스,,3,BBC
+미국,USA,주문형,,3,OfferUp
+미국,USA,여행,,3,ESPN
+미국,USA,금융,,3,OfferUp
+미국,USA,엔터테인먼트,,3,Tinder
+미국,USA,소셜,,3,Alarmy
+베트남,VNM,RMG,,3,The Weather Channel
+베트남,VNM,이커머스,,3,MyFitnessPal
+베트남,VNM,주문형,,3,MyFitnessPal
+베트남,VNM,여행,,3,Vivino
+베트남,VNM,금융,,3,Block Blast!
+베트남,VNM,엔터테인먼트,,3,Citymapper
+베트남,VNM,소셜,,3,Vivino
