@@ -140,9 +140,9 @@ export function Vis8({ locale: loc }) {
       >
         <div xmlns="http://www.w3.org/1999/xhtml">
           <span>
-            ${loc === "en" && isMobile
-              ? group
-              : l(8, loc, `${group} years old`)}</span
+            ${loc === "en" && !isMobile
+              ? l(8, loc, `${group} years old`)
+              : group}</span
           >
         </div>
       </foreignObject>
