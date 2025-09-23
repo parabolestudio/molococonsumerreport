@@ -275,8 +275,12 @@ const Vis11Top = ({ genreData, selectedCategory, selectedCountry, loc }) => {
           ? html`<p class="label">IAE apps used</p>
               <p class="sublabel">in a month</p>`
           : null}
-        ${loc !== "en"
+        ${loc !== "en" && loc !== "ja"
           ? html`<p class="label">${l(11, loc, "IAE apps used in a month")}</p>`
+          : null}
+        ${loc === "ja"
+          ? html`<p class="label">1か月間に利用された</p>
+              <p class="sublabel">独立系アプリ</p>`
           : null}
       </div>
       <div class="element2">

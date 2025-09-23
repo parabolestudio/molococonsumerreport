@@ -1329,7 +1329,7 @@ const VIZ9_LABELS = [
   },
   {
     English: "Time spent (in hours)",
-    Korean: "사용 시간(시간 단위)",
+    Korean: "사용 시간(단위: 시간)",
     Japanese: "利用時間（時間単位）",
     Chinese: "使用时长（小时）",
   },
@@ -1400,7 +1400,7 @@ const VIZ10_LABELS = [
 const VIZ11_LABELS = [
   {
     English: "IAE apps used in a month",
-    Korean: "월간 IAE (독립 광고 생태계) 앱 사용 수",
+    Korean: "월간 독립 광고 생태계 내 앱 수",
     Japanese: "1か月間に利用された独立系アプリ",
     Chinese: "一个月内使用的 IAE 移动应用",
   },
@@ -1430,7 +1430,7 @@ const VIZ11_LABELS = [
   },
   {
     English: "Example publisher inventory",
-    Korean: "퍼블리셔 광고 지면 예시",
+    Korean: "광고 노출 지면 예시",
     Japanese: "パブリッシャー在庫の例",
     Chinese: "发行商投放示例",
   },
