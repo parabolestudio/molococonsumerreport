@@ -1575,7 +1575,7 @@ const VIZ13_LABELS = [
   {
     English: "Utility & Productivity",
     Korean: "유틸리티 및 생산성",
-    Japanese: "ユーティリティ & 生産性",
+    Japanese: "ユーティリティ＆生産性",
     Chinese: "实用与效率",
   },
   {

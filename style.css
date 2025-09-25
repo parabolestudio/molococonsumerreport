@@ -851,6 +851,9 @@ VIZ 13
 */
 
 #vis13 {
+  svg {
+    overflow: visible;
+  }
   .vis-container-inner {
     position: relative;
   }
